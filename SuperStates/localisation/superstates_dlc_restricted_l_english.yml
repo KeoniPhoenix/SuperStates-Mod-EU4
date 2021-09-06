@@ -1,0 +1,15 @@
+﻿l_english:
+ #PLEASE RESPECT PARADOX DEVELOPMENT STUDIOS DLC, DO NOT CIRCUMVENT THESE DECISIONS AND EVENTS WITHOUT THE DLC!
+ 
+ #DLC Restricted Decisions
+ hold_constitutional_convention_title:0 "Hold Constitutional Convention"
+ hold_constitutional_convention_desc:0 "There are times where it might be useful to hold a constitutional convention to make beneficial changes to our republican government."
+ 
+ #DLC Restricted Events
+ usa_dlc_superstates.100.t:0 "Constituional Convention"
+ usa_dlc_superstates.100.d:0 "The public and members of the government took great interest in discussing possible reform to bring beneficial improvements to our system of government.  The proposed ideas resulted in a resolution to proclaim a constitutional convention, at which the assembled convention delegates deliberated on the reforms to the government and took a formal final vote on adoption."
+ usa_dlc_superstates.100.opta:0 "Reform to a Confederation with a decentralized government with limited central powers."
+ usa_dlc_superstates.100.optb:0 "Reform to a Federation with defined national government powers delegated from the subnational governments."
+ usa_dlc_superstates.100.optc:0 "Reform to a balanced centralized Constitutional Republic."
+ usa_dlc_superstates.100.optd:0 "Reform to a strongly centralized Administrative republic."
+ usa_dlc_superstates.100.opte:0 "Decline reforming the government and adjurn preserving the status quo."

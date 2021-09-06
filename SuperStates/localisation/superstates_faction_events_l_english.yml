@@ -1,0 +1,542 @@
+﻿l_english:
+ superstates_amer_mil:0 "REPLACE_ME"
+ superstates_amer_mil_FACTION_DESC:0 "REPLACE_ME"
+ superstates_amer_mil_influence:0 "REPLACE_ME"
+ superstates_amer_adm:0 "REPLACE_ME"
+ superstates_amer_adm_FACTION_DESC:0 "REPLACE_ME"
+ superstates_amer_adm_influence:0 "REPLACE_ME"
+ superstates_amer_dip:0 "REPLACE_ME"
+ superstates_amer_dip_FACTION_DESC:0 "REPLACE_ME"
+ superstates_amer_dip_influence:0 "REPLACE_ME"
+ superstates_dominion_mil:0 "REPLACE_ME"
+ superstates_dominion_mil_FACTION_DESC:0 "REPLACE_ME"
+ superstates_dominion_mil_influence:0 "REPLACE_ME"
+ superstates_dominion_adm:0 "REPLACE_ME"
+ superstates_dominion_adm_FACTION_DESC:0 "REPLACE_ME"
+ superstates_dominion_adm_influence:0 "REPLACE_ME"
+ superstates_dominion_dip:0 "REPLACE_ME"
+ superstates_dominion_dip_FACTION_DESC:0 "REPLACE_ME"
+ superstates_dominion_dip_influence:0 "REPLACE_ME"
+ superstates_mex_mil:0 "REPLACE_ME"
+ superstates_mex_mil_FACTION_DESC:0 "REPLACE_ME"
+ superstates_mex_mil_influence:0 "REPLACE_ME"
+ superstates_mex_dip:0 "REPLACE_ME"
+ superstates_mex_dip_FACTION_DESC:0 "REPLACE_ME"
+ superstates_mex_dip_influence:0 "REPLACE_ME"
+ superstates_mex_adm:0 "REPLACE_ME"
+ superstates_mex_adm_FACTION_DESC:0 "REPLACE_ME"
+ superstates_mex_adm_influence:0 "REPLACE_ME"
+
+ #OLD AND LIKELY TO BE REMOVED
+ #Events for American Factions
+ #Bureaucratic
+ american_factions.1t:0 "Bureaucrats Seek More Power and Privilege"
+ american_factions.1d:0 "The Bureaucratic faction is seeking dramatic changes in powers and privileges, over the lack of authority to tackle important issues that are of grave concern to them and the safety and stability of the state."
+ american_factions.1opta:0 "We must protect the state with these needed powers and privileges."
+ #Increase Bureacatic, Decrease Others; Decrease Stability Cost, Decrease global tax income.
+ american_factions.1optb:0 "We must protect our liberities!"
+ #Increas Others, Decrease Faction; Increase Stability Cost, Increase Global Trade Income
+ 
+ american_factions.2t:0 "Bureaucratic Faction Resolves Inter-Faction Dispute"
+ american_factions.2d:0 "A dispute between the theocratic faction and plutocratic faction over the insinuatation that some members of the plutocratic faction are not sincere with their religious faith was resolved skillfully and diplomatically by members of the bureaucratic faction.  Had these men from the bureaucratic faction not stepped in, the dispute could have erupted into a large public controversy."
+ american_factions.2opta:0 "Give them many thanks for stepping in."
+ #Increase Bureacatic, Decrease Theocratic
+ 
+ american_factions.3t:0 "Bureaucratic Faction in Conflict with Plutocratic Faction"
+ american_factions.3d:0 "The bureaucratic faction is accusing the plutocratic faction of not being honest and straight forward with their tax payments to the state.  The plutocrats are arguing they are being over taxed by the bureaucrats."
+ american_factions.3opta:0 "I think we need to look closer at those reciepts."
+ #Increase Bureaucratic, Decrease Plutocratic; Decrease Trade Income, Increase Global Tax Income
+ american_factions.3optb:0 "These tax ledgers look like they have been cooked."
+ #Increase Plutocratic, Decrease Bureaucratic; Increase Trade Income, Decrease Global Tax income
+ 
+ american_factions.4t:0 "Bureaucratic Faction in Conflict with Theocratic Faction"
+ american_factions.4d:0 "The bureaucratic faction is accusing the theocratic faction of unauthorized appropriation of state property for religious purposes. The theocrats are countering that they have been issued clear title to the land in question."
+ american_factions.4opta:0 "The property in question has a resolution appropriating from treasury the costs to build a secular court."
+ #Increase Bureaucratic, Decrease Theocratic; Reduce missionary strength, Increase Republic Tradition
+ american_factions.4optb:0 "The deed appears to be valid for this religious building."
+ #Increase Theocratic, Decrease Bureaucratic; Increase missionary strength; Decrease Republic Tradition
+ 
+ american_factions.5t:0 "Bureaucratic Faction Seeks Alliance with Plutocratic Faction"
+ american_factions.5d:0 "In order to weaken the position of the theocratic faction, the bureaucratic faction seeks to ally with the plutocratic faction.  This new alliance may just tip the balance of power."
+ american_factions.5opta:0 "It might be wise to intercede against this bureaucratic push for power."
+ #Increase Theocratic, Decrease Bureaucratic; 
+ american_factions.5optb:0 "This should bring needed reform to the state."
+ #Increase Bureaucratic, Decrese Theocratic; 
+ 
+ american_factions.6t:0 "Bureaucratic Faction Seeks Alliance with Theocratic Faction"
+ american_factions.6d:0 "The plutocratic faction has recently had a number of strong political gains at the expense of the other factions in the State causing the bureaucratic faction to seek an alliance with the theocratic faction in order to reverse some of their political losses."
+ american_factions.6opta:0 "I openly support the reforms of the plutocratic faction."
+ #Increase Plutocratic, Decrease Bureaucratic
+ american_factions.6optb:0 "Agreed, the bureaucratic faction is morally justified to end the privileges to the plutocrats."
+ #Increase Bureaucratic, Decrease Plutocratic
+ 
+ american_factions.7t:0 "Bureacrats Implicated in Crimes Against State"
+ american_factions.7d:0 "A large sum of state funds has gone missing from the treasury and number of members of the bureaucratic faction have been implicated.  The other factions are whipping up heated rhetoric speeches to the public demanding the people responsible be punished and to reform the state political apparatus to prevent this from happening again."
+ american_factions.7opta:0 "Well, I think a pardon might serve to help the situation."
+ #Increase Bureaucratic, Decrease Others, Increase Corruption, Lose 30% yearly income
+ american_factions.7optb:0 "Get a warrant for their arrest!"
+ #Decrease Bureaucratic, Increase Others; Lose 33% yearly income
+ 
+ american_factions.8t:0 "Bureaucrat Offers Assistance For a Price."
+ american_factions.8d:0 "From time to time a prominent bureaucrat offers to those in need of assistance in dealings with the political machinary within the state.  He offers a reasonable price but it might come at the expense of your soul's eternal damnation or the loss of your political career."
+ american_factions.8opta:0 "Nobody ever died because they 'sinned'."
+ #Increase Theocratic and Bureaucratic; Increase Corruption; Increase Random Monarch Power +100
+ american_factions.8optb:0 "The wrath of God is not worth provoking."
+ #Increase Theocratic, Decrease Bureaucratic; Increase Prestige; 
+ 
+ #Plutocratic
+ american_factions.9t:0 "Plutocrats Ask for Trade and Business Privileges"
+ american_factions.9d:0 "The plutocratic faction is concerned that there is a serious problem with our state economy.  Asking for a number of new privileges in improving their trading and business positions and a reduction in the number of taxes they need to pay.  The other factions are concerned as well but they're not as hysterical over the sitaution as the plutocrats are, and believe that other alternatives could be use besides cutting taxes and granting monopolies."
+ american_factions.9opta:0 "I think the state could benefit from these proposals."
+ #Increase Plutocratic, Decrease Others; Increase Global Trade income, Decrease Global Tax income
+ american_factions.9optb:0 "These privileges go against everything this state stands for!"
+ #Increase Others, Decrease Plutocratic; Increase Global Tax income, Decrease Global Trade Income
+ 
+ american_factions.10t:0 "Commerical Interests Rule Over State Policy"
+ american_factions.10d:0 "Several important members of the Plutocratic faction using their business ties have made lucrative deals with members of a nearby enemy state.  Their business dealings is against our state's policy and seriously undermines our foreign policy of isolating our sworn enemy."
+ american_factions.10opta:0 "Convene a meeting so we can work out mutual arrangements."
+ #Increase Plutocratic; Increase Global Trade Income
+ american_factions.10optb:0 "Notify Customs and seize their illicit gains."
+ #Decrease Plutocratic; Decrease Global Trade Income
+ 
+ american_factions.11t:0 "Heated Accusations Between Plutocrats and Bureaucrats"
+ american_factions.11d:0 "The bureacrats have been accused by the plutocrats of bending state policies to benefit themselves at the expense of others.  The bureaucrats contend that the plutocrats are lying to cover up their unpaid taxes."
+ american_factions.11opta:0 "Our laws can't be twisted for political gains."
+ #Increae Plutocratic, Decrease Bureaucratic; Increase Republican Tradition
+ american_factions.11optb:0 "I think they might be on to something, our state budget isn't balancing."
+ #Increase Bureaucratic, Decrease Plutocratic; Increase Global Tax Income
+ 
+ american_factions.12t:0 "Plutocrats and Theocrats are Exchanging Heated Accusations."
+ american_factions.12d:0 "The plutocrats are alleged by the theocrats of have been supporting several plutocrat members of illegally raising prices of important goods to the religious order that members of the theocratic faction operate and has to purchase.  The plutocrats contend that the prices are high because of restrictions on obtaining the neccessary products making them harder to obtain."
+ american_factions.12opta:0 "I don't see what the issue is here."
+ #Increase Plutocratic, Decrease Theocratic; Decrease Missionary Strength
+ american_factions.12optb:0 "Price gouging is immoral!"
+ #Increase Theocratic, Decrease Plutocratic; Increase Missionary Strength
+ 
+ american_factions.13t:0 "Plutocrats form alliance with Bureaucrats"
+ american_factions.13d:0 "The theocratic faction has considerable success lately in getting its policy ideas getting accepted in the government.  This recent show of political strength has caused the plutocratic and bureacratic factions to form an alliance to push back and reimpliment policies not dominated by religious idealism and theory."
+ american_factions.13opta:0 "Why the fuss? Our sins are being washed away."
+ #Increase Theocratic; Decrease Plutocatic;
+ american_factions.13optb:0 "Its one thing to preach the sermon in church, its another to proselytize by color of law."
+ #Increase Plutocratic; Decrease Theocratic
+ 
+ american_factions.14t:0 "Plutocrats form alliance with Theocrats"
+ american_factions.14d:0 "Bureacrats have gain considerable political influence by having a number of their policy ideas enacted in a short order of time.  Many of the policies are in direct oppositition to much of the plutocrats and theocrats interests and has them alarmed.  With this development, the plutocratic faction has negotiated an alliance with the theocratic faction to reverse many of these policies."
+ american_factions.14opta:0 "The interests in advancing the state includes pushing back against the those who want to profit from it!"
+ #Increase Bureaucratic; Decrease Plutocratic
+ american_factions.14optb:0 "These policies are punitive, not constructive, and hazardous to our constitutional order."
+ #Increase Plutocratic; Decrease Bureaucratic
+ 
+ american_factions.15t:0 "Plutocrat Implicated in Crimes Against the State"
+ american_factions.15d:0 "A recent examination of the state reciepts of materials and services recieved from a prominant Plutocrat within the administration has determined that there's considerable discrepency between the what recieved and what was delivered.  This expensive rip-off has the bureaucratic and theocratic factions in an uproar demanding an explanation in the legislative chamber."
+ american_factions.15opta:0 "The State can't be getting ripped off, I signed the agreement myself!"
+ #Increase Plutocratic, Decrease Others; Increase Corruption; Lose 33% Yearly Income
+ american_factions.15optb:0 "These reports show we are getting ripped off!"
+ #Increase Others, Decrease Plutocratic; Lose 33% Yearly Income
+ 
+ american_factions.16t:0 "Plutocrat Tycoon Offers Assistance For a Price"
+ american_factions.16d:0 "A prominant plutocrat with a history of success, described as a tycoon, has come to the [Root.Monarch.GetTitle]'s chambers to discuss a proposal to service the administration with conducting state business with the various members of the plutocracy.  His services could be a great help to the state but they put a high risk for being condemned for the appearance of impropriety and impeached for corruption."
+ american_factions.16opta:0 "I'm sure we can transact business to benefit everybody."
+ #Increase Plutocratic and Bureaucratic; Increase Corruption; Increase Random Monarch Power +100
+ american_factions.16optb:0 "His proposed state ventures seem to carry a substantial chance of failure."
+ #Increase Theocratic, Decrease Plutocratic; Increase Prestige
+ 
+ #Theocratic
+ american_factions.17t:0 "Theocrat Suggests the Need For Sprititual Services in Our Government"
+ american_factions.17d:0 "A highly versed and popular member of the theocratic faction is proposing that the state recognize the need for spritial services to be an integral part of our government.  This proposal is innocent in wording but is of grave concern for those not amongst the [Root.Religion.GetName] faith in our State."
+ american_factions.17opta:0 "This will only benefit our spiritual well being as a great nation!"
+ #Increase Theocratic; Decrease Others; Increase Missionary Strength, Increase Stability Cost
+ american_factions.17optb:0 "Religion is a matter which lies solely between Man and his God, that he owes account to none other for his faith or his worship."
+ #Increase Bureacratic and Plutocatic, Decrease Theocratic; Decrease Missionary Strength, Decrease Stability Cost
+ 
+ american_factions.18t:0 "Theocratic Faction Resolves Inter-faction Dispute"
+ american_factions.18d:0 "The bureacratic faction often opposes the plutocratic faction on many policy ideas on principles but on this occation it erupted into a large political dispute.  The bureacratic faction original disagreement has devolved into accusations launched at the plutocractic faction of committing major sins against the state. To avoid this disupte from escaping the legislative chambers into greater populous, the theocrats used considerable patience and skill in parliamentry procedure to intercede and help put an end to the matter."
+ american_factions.18opta:0 "Their spiritual guidance is very much needed in our legislative chamber."
+ #Increase Theocracy; Decrease Bureacatic, Increase diplomatic reputation
+ american_factions.18optb:0 "Inform the theocratic faction that attempting to play the referee will not be tolerated."
+ #Decrease Theocracy, Increase Bureacratic, national unrest increases, yearly prestige increase
+ 
+ american_factions.19t:0 "Theocratic Faction in Dispute with Bureacratic Faction"
+ american_factions.19d:0 "Members of the theocratic faction feel that the bureaucratic faction has been encroaching on the faith-based policies for our state.  The theocrats feel as if the bureaucrats are deliberately restricting the type of faith-based services the state may support.  The bureaucrats are countering that the theocrats are deliberately sabotaging their secular efforts provided by the state and that they are very interested in separating church and state."
+ american_factions.19opta:0 "Now faith is being sure of what we hope for and certain of what we do not see."
+ #Increase Theocratic, Decrease Bureaucratic; Increase Missionary Strength, Decrease Global Tax Income
+ american_factions.19optb:0 "I don't like this union of church and state, it has the potential to go wrong."
+ #Increase Bureacatic, Decrease Theocratic; Decrease Stability Cost, Increase Global Tax Income
+ 
+ american_factions.20t:0 "Theocratic Faction in Dispute with Plutocatic Faction "
+ american_factions.20d:0 "Usually the plutocratic faction and the theocratic faction are neutral to one another, unforutnately this is not the case any more.  The plutocratic faction is upset and demanding that a recently enacted policy promoted by the theocratic faction is outright hostile to the trade and business interests in the state.  The theocratic faction retorts that the trade and business interests are sponsoring harmful enemies both in the physical and spritiual sense who are sworn enemies to our great country."
+ american_factions.20opta:0 "Religious restrictions really do get cumbersome when they're strictly applied."
+ #Increase Plutocatic, Decrease Theocratic; Increase Global Base Production, Decrease Missionary Strength 
+ american_factions.20optb:0 "There's no issue with resolving the important spritual and temporal wellbeing of our great country."
+ #Increase Theocratic, Decrease Plutocratic; Decrease  Global Base Production. Increase Missionary Strength
+ 
+ american_factions.21t:0 "Theocrats Demand Ban on Gambling and Protitution"
+ american_factions.21d:0 "While tension between the plutocrats and theocrats typically remains low, business and regulation seldom go toegether. Gambling and prostitution is big business among certain men represented in the plutocratic faction. But this behavior is frowned upon by the theocratic faction who state that gambling takes advantage of a poor man's weakness, and prostitution enslaves women in a state they rarely recover. Plutocrats state that what a person wants to do with their wallet, and body should be up to the individual."
+ american_factions.21opta:0 "We need to look beyond wealth, and look to better humanity."
+ #Increase theocratic, decrease plutocratic, +2 tolerance of the true faith
+ american_factions.21opta:0 "Everybody has to solve their own problems. It is not our place to enforce morality"
+ #Increase plutocratic, decrease theocratic, -1 tolerance of the true faith, +10% Global tax income
+ 
+ american_factions.22t:0 "Theocrats demand destruction of obscene mural"
+ american_factions.22d:0 "A mural was painted by the son of a prominent figurehead of the beaurocratic faction, and given as a gift to the capital building. The content of the mural depicts sexuality, and lasciviousness on a scale that makes even the more questional members of the plutocratic faction uneasy. Rumors fly that the mural was designed as an attack on the theocratic faction, but there is no factual evidence for this."
+ american_factions.22opta:0 "Send for a contractor to paint over the mural. We don't want to set a bad impression with our neighbors, and society"
+ #Increase theocratic, decrease beaurocratic, +1 diplo rep, +50 dip points
+ american_factions.22optb:0 "If people don't like the mural, they don't have to look at it."
+ #Decrease beaurocratic, increase theocratic, +100 adm points
+ 
+ american_factions.23t:0 "Theocrats call for prison reform"
+ american_factions.23d:0 "Beaurocrats have passed several laws over the years to make conditions more and more intolerable, acting on the belief that it helps the state control the population through fear. The theocratic faction believes a more humane solution can be enforced. Their proposal is to change a person's heart, and character through mandatory acts of servitude to the public, as well as submitting to religious observance." 
+ american_factions.23opta:0 "Attempt to reform prisoners."
+ #Increase theocratic, decrease beaurocratic, decrease stab cost. 
+ american_factions.23opta:0 "Our policy toward lawbreakers must not weaken"
+ #Increase beaurocratic, decrease theocratic, decrease global revolt risk
+ 
+ american_factions.24t:0 "Theocrats call for education reform"
+ american_factions.24d:0 "The theocrats have long accused the beaurocrats of taking God out of the education system, while the bureacrats have accused the theocrats of forcing their beliefs on young minds. The theocrats propose we re-introduce morning chapel in the public districts, and that we recognize religious studies as school credit. The beaurocrats offer an altnerative that schools which receieve public funding be barred from any form of religious activity."
+ american_factions.24opta:0 "Without God, our society will surely crumble"
+ #increase theocratic, decrease beaurocratic, increase tolerance of the true faith +1, missionary strength +0.5.
+ american_factions.24optb:0 "Matters of religion must be up to the parents."
+ #increase beaurocratic, decrease theocratic, 200 adm points. 
+ 
+ 
+ 
+ #Events for Australian/Canadian Factions
+ #Bureaucratic
+ auscan_factions.1t:0 "Bureaucrats Seek More Power and Privilege"
+ auscan_factions.1d:0 "The Bureaucratic faction is seeking dramatic changes in powers and privileges, over the lack of authority to tackle important issues that are of grave concern to them and the safety and stability of the state."
+ auscan_factions.1opta:0 "We must protect the state with these needed powers and privileges."
+ #Increase Bureacatic, Decrease Others; Decrease Stability Cost, Decrease global tax income.
+ auscan_factions.1optb:0 "We must protect our liberities!"
+ #Increas Others, Decrease Faction; Increase Stability Cost, Increase Global Trade Income
+ 
+ auscan_factions.2t:0 "Bureaucratic Faction in Conflict with Theocratic Faction"
+ auscan_factions.2d:0 "The bureaucratic faction is accusing the theocratic faction of unauthorized appropriation of state property for religious purposes. The theocrats are countering that they have been issued clear title to the land in question."
+ auscan_factions.2opta:0 "The property in question has a resolution appropriating from treasury the costs to build a secular court."
+ #Increase Bureaucratic, Decrease Theocratic; Reduce missionary strength, Increase Republic Tradition
+ auscan_factions.2optb:0 "The deed appears to be valid for this religious building."
+ #Increase Theocratic, Decrease Bureaucratic; Increase missionary strength; Decrease Republic Tradition
+ 
+ auscan_factions.3t:0 "National Preserve Act"
+ auscan_factions.3d:0 "An ancient structure has been accidently destroyed by a mining company. Bureaucrats propse we pass legislation which would allow the government to protect historical monuments, and iconic natural landscapes, completely outlawing any form of industry to be practiced within the exlcusion zone set. Plutocrats disagree with the Bureaucrats, as their mining, and timber industries would be compromised, which would negatively affect our national exports."
+ auscan_factions.3opta:0 "We shall not sell our history for ducats."
+ #Increase Bureaucratic, Decrease plutocratic, -10% global trade, 
+ auscan_factions.3optb:0 "Sometimes sacrifices must be made to defend the livlihood of the citizens."
+ #Increase Plutocratic, Decrease Bureaucratic, -200 diplo points
+ 
+ auscan_factions.4t:0 "Expanding our Borders"
+ auscan_factions.4d:0 "Generally the Bureaucratic Faction focuses on internal matters such as development of our provinces, and the laws of the land. But at times, it may become interested in securing nearby provinces, and destabilizing our enemies. The faction feels it is time for us to expand our influence in the region by force. The theocrats stand in direct opposition stating that taking land from another is not a justification to do battle, and that we will be judged for murder, and theft."
+ auscan_factions.4opta:0 "This nation needs the resources of other provinces to survive." #Increase bureaucratic faction, decrease theocratic, lowered cost of coring provinces
+ auscan_factions.4optb:0 "A nation that lives by the sword will perish by the sword."
+ #Increase theocratic, decrease bureaucratic, lowered cost of developing provinces
+ 
+ auscan_factions.5t:0 "Bread and Circuses"
+ auscan_factions.5d:0 "Unrest and riots are always a threat to the security of a nation. Bureaucrats have introduced radical bills that would pacify the public, and keep their minds occupied with entertainment. Under the plan, we would allocate funds from our treasury to build stadiums, and provide free amusement. The Plutocrats oppose the measure, as it would be disasterous to businessmen in the field."
+ auscan_factions.5opta:0 "Keeping the masses content is vital."
+ #Increase bureaucratic, decrease plutocratic, -1 unrest, -5% global trade
+ auscan_factions.5optb:0 "The free market is not a concern of the state."
+ #Decrease bureaucratic, increase plutocratic, 
+ 
+ auscan_factions.6t:0 "Bureaucratic Faction Seeks Alliance with Plutocratic Faction"
+ auscan_factions.6d:0 "In order to weaken the position of the theocratic faction, the bureaucratic faction seeks to ally with the plutocratic faction.  This new alliance may just tip the balance of power."
+ auscan_factions.6opta:0 "It might be wise to intercede against this bureaucratic push for power."
+ #Increase Theocratic, Decrease Bureaucratic; 
+ auscan_factions.6optb:0 "This should bring needed reform to the state."
+ #Increase Bureaucratic, Decrese Theocratic; 
+ 
+ auscan_factions.7t:0 "Bureacrats Implicated in Crimes Against State"
+ auscan_factions.7d:0 "A large sum of state funds has gone missing from the treasury and number of members of the bureaucratic faction have been implicated.  The other factions are whipping up heated rhetoric speeches to the public demanding the people responsible be punished and to reform the state political apparatus to prevent this from happening again."
+ auscan_factions.7opta:0 "Well, I think a pardon might serve to help the situation."
+ #Increase Bureaucratic, Decrease Others, Increase Corruption, Lose 30% yearly income
+ auscan_factions.7optb:0 "Get a warrant for their arrest!"
+ #Decrease Bureaucratic, Increase Others; Lose 33% yearly income
+ 
+ auscan_factions.8t:0 "Bureaucrat Offers Assistance For a Price."
+ auscan_factions.8d:0 "From time to time a prominent bureaucrat offers his assistance to those in need of assistance in dealings with the political machinary within the state.  He offers a reasonable price but it might come at the expense of your soul's eternal damnation or the loss of your political career."
+ auscan_factions.8opta:0 "Nobody ever died because they 'sinned'."
+ #Increase Theocratic and Bureaucratic; Increase Corruption; Increase Random Monarch Power +100
+ auscan_factions.8optb:0 "The wrath of God is not worth provoking."
+ #Increase Theocratic, Decrease Bureaucratic; Increase Prestige; 
+ 
+ #Plutocratic
+ auscan_factions.9t:0 "Education Focus"
+ auscan_factions.9d:0 "The education of youth can have consequences that will affect the nation for decades. Plutocrats believe training young citizens in phsyical trades such as carpentry, and smithing will give them an advantage in their careers. Bureaucrats believe the youth ought to be taught in fine arts, and music to enhance the nation's culture."
+ auscan_factions.9opta:0 "Music and art is of no use against a hungry stomach, and an invading army."
+ #Increase plutocratic, decrease bureaucratic, +10% global trade.
+ auscan_factions.9optb:0 "Without culture, we are just a mindless collective."
+ #Increase Bureaucratic, decrease plutocratic, +100 Diplo points
+ 
+ auscan_factions.10t:0 "Commerical Interests Rule Over State Policy"
+ auscan_factions.10d:0 "Several important members of the Plutocratic faction using their business ties have made lucrative deals with members of a nearby enemy state.  Their business dealings is against our state's policy and seriously undermines our foreign policy of isolating our sworn enemy."
+ auscan_factions.10opta:0 "Convene a meeting so we can work out mutual arrangements."
+ #Increase Plutocratic; Increase Global Trade Income
+ auscan_factions.10optb:0 "Notify Customs and seize their illicit gains."
+ #Decrease Plutocratic; Decrease Global Trade Income
+ 
+ auscan_factions.11t:0 "Right to Work"
+ auscan_factions.11d:0 "A number of businesses in this nation require their workers to join the labor union they have a contract with. While some of these unions offer protections to workers, others simply appropriate income from employees, while not following through on their promises. Plutocrats have introduced a bill called 'Right to Work,' which, if passed, would give each citizen the right to opt out of joining a union, regardless of contracts. Bureaucrats oppose this measure, stating that unions are easier for the state to do businsess with."
+ auscan_factions.11opta:0 "Citizens deserve the freedom of choice."
+ #Increase Plutocratic, decrease Bureaucratic, -1 unrest
+ auscan_factions.11optb:0 "Centralizing the labor force will guaruntee protection."
+ #Increase Bureaucratic, decrease Plutocratic, +10% tariff
+ 
+ auscan_factions.12t:0 "Privitise Prison Facilities"
+ auscan_factions.12d:0 "Our prisons have become the laughing-stock of the world. Plutocrats believe judicial effectiveness can be incresed if we hand them over to businessmen, rather than sitting in a box, surrounded by incompetent guards. Bueaucrats strongly disagree with privitization, citing it to little more than slave labor, and the potential for the system to be abused."
+ auscan_factions.12opta:0 "Why should the taxpayers be expected to pay for the crimes of others?"
+ #increase plutocratic, decrease bureaucratic, +10 production effiency, unrest +1
+ auscan_factions.12optb:0 "Reform, and remodel our prisons."
+ #increase bureaucratic, decrease plutocratic, -500 ducats, unrest -1
+ 
+ auscan_factions.13t:0 "Plutocrats form alliance with Bureaucrats"
+ auscan_factions.13d:0 "The theocratic faction has considerable success lately in getting its policy ideas getting accepted in the government.  This recent show of political strength has caused the plutocratic and bureacratic factions to form an alliance to push back and reimpliment policies not dominated by religious idealism and theory."
+ auscan_factions.13opta:0 "Why the fuss? Our sins are being washed away."
+ #Increase Theocratic; Decrease Plutocatic;
+ auscan_factions.13optb:0 "Its one thing to preach the sermon in church, its another to proselytize by color of law."
+ #Increase Plutocratic; Decrease Theocratic
+ 
+ auscan_factions.14t:0 "Plutocrats form alliance with Theocrats"
+ auscan_factions.14d:0 "Bureacrats have gain considerable political influence by having a number of their policy ideas enacted in a short order of time.  Many of the policies are in direct oppositition to much of the plutocrats and theocrats interests and has them alarmed.  With this development, the plutocratic faction has negotiated an alliance with the theocratic faction to reverse many of these policies."
+ auscan_factions.14opta:0 "The interests in advancing the state includes pushing back against the those who want to profit from it!"
+ #Increase Bureaucratic; Decrease Plutocratic
+ auscan_factions.14optb:0 "These policies are punitive, not constructive, and hazardous to our constitutional order."
+ #Increase Plutocratic; Decrease Bureaucratic
+ 
+ auscan_factions.15t:0 "Give a Man a Fish"
+ auscan_factions.15d:0 "Plutocrats want to deal with the homelessness problem in this nation. They suggest that we set up a monetary fund to give them the necessary tools to feed, clothes, and perhaps earn for themselves. Distributing fishing rods, hunting knives, and almanacs on basic economics would stimulate the economy, according to one of the top businessman reporting in our court. However, Bureaucrats state this would directly threaten the country. They believe we ought to set aside a fund as well, but to use it to feed, and clothe people, instead of giving them the ability to do so themselves. This, they say, will help to maintain loyalty on the central government."
+ auscan_factions.15opta:0 "Helping citizens to be free, and independent will ensure our economic supremecy."
+ #increase plutocratic, #decrease bureaucratic, +10% global trade, 50 dip, 50, admn, 50 mil.
+ auscan_factions.15optb:0 "The public's focus should be on serving the nation, not on themselves.."
+ #increase bureaucratic, decrease plutocratic, -0.010 autonomy per month, -1 unrest, -.25 stab cost.
+ 
+ auscan_factions.16t:0 "Plutocrat Tycoon Offers Assistance For a Price"
+ auscan_factions.16d:0 "A prominant plutocrat with a history of success, described as a tycoon, has come to the [Root.Monarch.GetTitle]'s chambers to discuss a proposal to service the administration with conducting state business with the various members of the plutocracy.  His services could be a great help to the state but they put a high risk for being condemned for the appearance of impropriety and impeached for corruption."
+ auscan_factions.16opta:0 "I'm sure we can transact business to benefit everybody."
+ #Increase Plutocratic and Bureaucratic; Increase Corruption; Increase Random Monarch Power +100
+ auscan_factions.16optb:0 "His proposed state ventures seem to carry a substantial chance of failure."
+ #Increase Theocratic, Decrease Plutocratic; Increase Prestige
+ 
+ auscan_factions.23t:0 "Theocrats call for prison reform"
+ auscan_factions.23d:0 "Beaurocrats have passed several laws over the years to make conditions more and more intolerable, acting on the belief that it helps the state control the population through fear. The theocratic faction believes a more humane solution can be enforced. Their proposal is to change a person's heart, and character through mandatory acts of servitude to the public, as well as submitting to religious observance." 
+ auscan_factions.23opta:0 "Attempt to reform prisoners." #Increase theocratic, decrease beaurocratic, decrease stab cost. 
+ auscan_factions.23opta:0 "Our policy toward lawbreakers must not weaken"
+ #Increase beaurocratic, decrease theocratic, decrease global revolt risk
+ 
+ auscan_factions.24t:0 "Free Bibles"
+ auscan_factions.24d:0 "Theocrats desire the state to use tax dollars, and mass produce Bibles, and ensure every citizen receives a copy, so that the highest ruler, down to the boy plowing a field may be able to read what God expects from him. Bureaucrats say this is not in the public's best interest to increase taxes, and that if a citizen wants a Bible, he can pay for one like all the other books."
+ auscan_factions.24opta:0 "God's Word is the only way mankind can truly understand wisdom, and morality."
+ #increase theocratic, decrease bureaucratic, -2 unrest, -10% taxes
+ auscan_factions.24optb:0 "The State is not a publishing organization."
+ #increase bureaucratic, increase plutocratic, decrease theocratic, 
+ 
+ #Theocratic
+ auscan_factions.17t:0 "Decrease the power of the state church"
+ auscan_factions.17d:0 "Theocrats recognize God, and the Bible as the final authority. The fact that we have a centralized church headed by a hand picked chief leader alienates the faction. They state we must reduce the powers of the state church, and incentivise local populations to lead their congregations. Bureaucrats on the other hand, have a profound love for the state church, as it helps us to control the masses. They say we must crack down on any assembly outside of the state church."
+ auscan_factions.17opta:0 "Call for national repentance, for our sin of placing a man above God."
+ #increase theocrat, decrease bureaucrat, tolerance of heretics +1, +.50 stab cost
+ auscan_factions.17optb:0 "We need to maintain close ties to this family."
+ #decrease theocrat, increase bureaucrat, tolerance of heretics -2, -.30 stab cost
+ 
+ auscan_factions.18t:0 "Theocratic Faction Resolves Inter-faction Dispute"
+ auscan_factions.18d:0 "The bureacratic faction often opposes the plutocratic faction on many policy ideas on principles but on this occation it erupted into a large political dispute.  The bureacratic faction original disagreement has devolved into accusations launched at the plutocractic faction of committing major sins against the state. To avoid this disupte from escaping the legislative chambers into greater populous, the theocrats used considerable patience and skill in parliamentry procedure to intercede and help put an end to the matter."
+ auscan_factions.18opta:0 "Their spiritual guidance is very much needed in our legislative chamber."
+ #Increase Theocracy; Decrease Bureacatic, Increase diplomatic reputation
+ auscan_factions.18optb:0 "Inform the theocratic faction that attempting to play the referee will not be tolerated."
+ #Decrease Theocracy, Increase Bureacratic, national unrest increases, yearly prestige increase
+ 
+ auscan_factions.19t:0 "Weekly Day of Rest"
+ auscan_factions.19d:0 "Theocrats propose a day of rest be enforced, and that all non-essential businesses, and services be closed on Sunday. Plutocrats disagree, stating the loss of profits will greatly hurt the businessmen that represent their party."
+ auscan_factions.19opta:0 "Everyone deserves time off from work."
+ #increase theo, decrease pluto, -2 unrest, -10% taxes.
+ auscan_factions.19optb:0 "Idle hands are of the devil."
+ #increase pluto, decrease theo, +100 ducats.
+ 
+ auscan_factions.20t:0 "Theocratic Faction in Dispute with Plutocatic Faction "
+ auscan_factions.20d:0 "Usually the plutocratic faction and the theocratic faction are neutral to one another, unforutnately this is not the case any more.  The plutocratic faction is upset and demanding that a recently enacted policy promoted by the theocratic faction is outright hostile to the trade and business interests in the state.  The theocratic faction retorts that the trade and business interests are sponsoring harmful enemies both in the physical and spritiual sense who are sworn enemies to our great country."
+ auscan_factions.20opta:0 "Religious restrictions really do get cumbersome when they're strictly applied."
+ #Increase Plutocatic, Decrease Theocratic; Increase Global Base Production, Decrease Missionary Strength 
+ auscan_factions.20optb:0 "There's no issue with resolving the important spritual and temporal wellbeing of our great country."
+ #Increase Theocratic, Decrease Plutocratic; Decrease  Global Base Production. Increase Missionary Strength
+ 
+ auscan_factions.21t:0 "Modest Clothing"
+ auscan_factions.21d:0 "A generation comes, and a generation goes, and with the new generation, comes new styles of clothing. Theocrats are concerned with some of these choices, namely the amount of exposure on the young women, and they would like the state to mandate a new set of laws on dress code in the nation. Bureaucrats state that laws such as these are of no concern to the state, and that we ought to be trying to connect to the youth, by giving them concessions."
+ auscan_factions.21opta:0 "Moral behavior is not decided by the masses."
+ #increase theo, decrease bureau, tolerance of the true faith +2
+ auscan_factions.21optb:0 "Our culture must be shaped by the generations."
+ #increase bureau, decrease theo, increase missionary strength +1
+ 
+ auscan_factions.22t:0 "Theocrats demand destruction of obscene mural"
+ auscan_factions.22d:0 "A mural was painted by the son of a prominent figurehead of the beaurocratic faction, and given as a gift to the capital building. The content of the mural depicts sexuality, and lasciviousness on a scale that makes even the more questional members of the plutocratic faction uneasy. Rumors fly that the mural was designed as an attack on the theocratic faction, but there is no factual evidence for this."
+ auscan_factions.22opta:0 "Send for a contractor to paint over the mural. We don't want to set a bad impression with our neighbors, and society" #Increase theocratic, decrease beaurocratic, +1 diplo rep, +50 dip points
+ auscan_factions.22optb:0 "If people don't like the mural, they don't have to look at it." #Decrease beaurocratic, increase theocratic, +100 adm points
+ 
+ #Events for Mexican Factions
+ #Bureaucratic
+ mexican_factions.1t:0 "Bureaucratic Faction Demands Centralization of Powers"
+ mexican_factions.1d:0 "The argument of whether power lying among a local government, or centralized in one governing body is as old as time itself. It is clear that at this time, the bureaucrats are strongly in favor of reducing local powers, and increasing the responsibility of the central government. The theocracy stands opposed to removing local power, fearing that one immoral ruler could destroy the principles of the nation, and by in part, who we are. Keeping local governments strong ensures leaders stay accountable."
+ mexican_factions.1opta:0 "Unification must be our end goal to achieve peace"
+ #Increase bureaucratic faction, decrease theocratic faction, decreasing autonomy, increased unrest
+ mexican_factions.1optb:0 "Too much power corrupts those who weild it"
+ #Decrease theocratic faction, increase bureaucratic faction, increasing autonomy, decrease unrest
+ 
+ mexican_factions.2t:0 "Expanding our Borders"
+ mexican_factions.2d:0 "Generally the Bureaucratic Faction focuses on internal matters such as development of our provinces, and the laws of the land. But at times, it may become interested in securing nearby provinces, and destabilizing our enemies. The faction feels it is time for us to expand our influence in the region by force. The theocrats stand in direct opposition stating that taking land from another is not a justification to do battle, and that we will be judged for murder, and theft."
+ mexican_factions.2opta:0 "This nation needs the resources of other provinces to survive." #Increase bureaucratic faction, decrease theocratic, lowered cost of coring provinces
+ mexican_factions.2optb:0 "A nation that lives by the sword will perish by the sword."
+ #Increase theocratic, decrease bureaucratic, lowered cost of developing provinces
+ 
+ mexican_factions.3t:0 "State Emergency Powers"
+ mexican_factions.3d:0 "In times of disaster, and calamaty, the state needs to continue to operate, and keep order. The Bureaucracy argues this could be a lot easier, if laws were enacted to grant the central government extra power should this nation enter crisis. The Plutocrats strongly oppose this measure, stating that the laws are too vague, and that the government would be able to tax, and control the free market whenever it chooses to, for however it wants."
+ mexican_factions.3opta:0 "The safety and well being of our citizens will not be neglected for the loss of a little convenience." #Increase bureaucratic, decrease plutocratic, 160 adm, 160 dip, 160 mil, -25 republic tradition,
+ mexican_factions.3optb:0 "Those who would sacrifice liberty for security deserve neither." #Decrease bureaucratic, increase plutocratic, +10 republican tradition
+ 
+ mexican_factions.4t:0 "Burn controversial books"
+ mexican_factions.4d:0 "A few dozen books were recently discovered in circulation which are extremely critical of several high governing officials. The material could be considered damaging, because it provides clear evidence of misconduct among these leaders. Bureaucrats are asking the state to destroy any, and all material damaging to the central government, and our way of governing, while severely punishing those who publish it. The Theocrats accuse the Bureaucrats of trying to cover up truth, and should be punished themselves. Insults have been exchanged both ways, and the court is in deadlock over the matter."
+ mexican_factions.4opta:0 "Education is a weapon, whose effect depends on who holds it in his hands and at whom it is aimed."
+ #Increase bureaucratic, decrease theocratic, 50% chance -1 stab.
+ mexican_factions.4optb:0 "Three things cannot be long hidden, which are the sun, the moon, and the truth."
+ #Increase theocratic, increase bureaucratic, -20 prestige.
+ 
+ mexican_factions.5t:0 "Single Minded Military"
+ mexican_factions.5d:0 "Control over our armies and sailors can sometimes be a challenge. Especially when our men come from provinces of a different culture. Bureaucrats state that it would be much easier to indoctrinate all recruits into one single culture. While this would have some great advantages in helping to stop division within our own camp, the Theocrats argue that this would take away who the soldier is, and transform them into mindless drones."
+ 
+ mexican_factions.5opta:0 "Our lack of harmony, unity, and oneness will be our undoing, and downfall."
+ #Increase bureaucratic, decrease theocratic, +5% discipline
+ mexican_factions.5optb:0 "An army without culture is a dull-witted army, and a dull-witter army cannot defeat the enemy."
+ #Increase theocratic, decrease bureaucratic, +10% morale
+ 
+ mexican_factions.6t:0 "Bread and Circuses"
+ mexican_factions.6d:0 "Unrest and riots are always a threat to the security of a nation. Bureaucrats have introduced radical bills that would pacify the public, and keep their minds occupied with entertainment. Under the plan, we would allocate funds from our treasury to build stadiums, and provide free amusement. The Plutocrats oppose the measure, as it would be disasterous to businessmen in the field."
+ mexican_factions.6opta:0 "Keeping the masses content is vital."
+ #Increase bureaucratic, decrease plutocratic, -1 unrest, -5% global trade
+ mexican_factions.6optb:0 "The free market is not a concern of the state."
+ #Decrease bureaucratic, increase plutocratic, 
+ 
+ mexican_factions.7t:0 "Weapons Control Act"
+ mexican_factions.7d:0 "Bureaucrats have a long tradition of defending the state, using any and all means. They believe the Plutocrats represent a threat to the balance of power in the nation, as they represent businessmen who manufacture personal weapons for the public market. However Plutocrats believe this is merely a ruse by the Bureaucrats to weaken the force of merchants, and the public, in order to increase their own strength."
+ mexican_factions.7opta:0 "We have to face the fact that meaningful gun control has to be a part of homeland security."
+ #Increase Bureaucratic, decrease plutocratic, enemy attrition lowered, lowered stability cost 
+ mexican_factions.7optb:0 "One man with a gun can control a hundred without one."
+ #Increase Plutocratic, decrease Bureaucratic, enemy attrition raised, increased stability cost
+ 
+ mexican_factions.8t:0 "National Preserve Act"
+ mexican_factions.8d:0 "An ancient structure has been accidently destroyed by a mining company. Bureaucrats propse we pass legislation which would allow the government to protect historical monuments, and iconic natural landscapes, completely outlawing any form of industry to be practiced within the exlcusion zone set. Plutocrats disagree with the Bureaucrats, as their mining, and timber industries would be compromised, which would negatively affect our national exports."
+ mexican_factions.8opta:0 "We shall not sell our history for ducats."
+ #Increase Bureaucratic, Decrease plutocratic, -10% global trade, 
+ mexican_factions.8optb:0 "Sometimes sacrifices must be made to defend the livlihood of the citizens."
+ #Increase Plutocratic, Decrease Bureaucratic, -200 diplo points
+ mexican_factions.8obtc:0 "Allow industry to continue, with the ultimatum that they must fund charities which "
+ #Increase Plutocratic slightly, Decrease Bureaucratic slightly, -5% global trade, -100 diplo points
+ 
+ #Plutocratic
+ mexican_factions.9t:0 "Education Focus"
+ mexican_factions.9d:0 "The education of youth can have consequences that will affect the nation for decades. Plutocrats believe training young citizens in phsyical trades such as carpentry, and smithing will give them an advantage in their careers. Bureaucrats believe the youth ought to be taught in fine arts, and music to enhance the nation's culture."
+ mexican_factions.9opta:0 "Music and art is of no use against a hungry stomach, and an invading army."
+ #Increase plutocratic, decrease bureaucratic, +10% global trade.
+ mexican_factions.9optb:0 "Without culture, we are just a mindless collective."
+ #Increase Bureaucratic, decrease plutocratic, +100 Diplo points
+ 
+ mexican_factions.10t:0 "Minimum Working Age"
+ mexican_factions.10d:0 "The workforce of the nation is the flesh and blood of our nation's economy. Plutocrats argue that the minimum working age needs to be lowered, so more hands can participate in labor. On the other hand, Bureaucrats want a higher minimum age, as they say young people ought to be studying, not working in the mines."
+ mexican_factions.10opta:0 "Knowledge will give you power, but character respect."
+ #Increase Plutocratic Faction, Decrease Bureaucratic Faction, production yield increased, research speed +5%
+ mexican_factions.10optb:0 "An investment in knowledge pays the best interest."
+ #Increase Bureaucratic Faction, Decrease Plutocratic Faction, production yield lowered, research speed -5%
+ 
+ mexican_factions.11t:0 "Right to Work"
+ mexican_factions.11d:0 "A number of businesses in this nation require their workers to join the labor union they have a contract with. While some of these unions offer protections to workers, others simply appropriate income from employees, while not following through on their promises. Plutocrats have introduced a bill called 'Right to Work,' which, if passed, would give each citizen the right to opt out of joining a union, regardless of contracts. Bureaucrats oppose this measure, stating that unions are easier for the state to do businsess with."
+ mexican_factions.11opta:0 "Citizens deserve the freedom of choice."
+ #Increase Plutocratic, decrease Bureaucratic, -1 unrest
+ mexican_factions.11optb:0 "Centralizing the labor force will guaruntee protection."
+ #Increase Bureaucratic, decrease Plutocratic, +10% tariff
+ 
+ mexican_factions.12t:0 "Privitise Prison Facilities"
+ mexican_factions.12d:0 "Our prisons have become the laughing-stock of the world. Plutocrats believe judicial effectiveness can be incresed if we hand them over to businessmen, rather than sitting in a box, surrounded by incompetent guards. Bueaucrats strongly disagree with privitization, citing it to little more than slave labor, and the potential for the system to be abused."
+ mexican_factions.12opta:0 "Why should the taxpayers be expected to pay for the crimes of others?"
+ #increase plutocratic, decrease bureaucratic, +10 production effiency, unrest +1
+ mexican_factions.12optb:0 "Reform, and remodel our prisons."
+ #increase bureaucratic, decrease plutocratic, -500 ducats, unrest -1
+ 
+ mexican_factions.13t:0 "Deregulate the markets"
+ mexican_factions.13d:0 "Business owners of this nation are tired of increasing taxes, and red tape. Plutocrats suggest the state backs off of the market, and allow it to grow, and shrink on its own. Bureaucrats state we must double down, and increase our attempts to control the market to prevent economic decline."
+ mexican_factions.13opta:0 "The economy is too violile to be controlled"."
+ #Increase plutocratic, decrease bureaucratic, +20% global trade
+ mexican_factions.13optb:0 "The state will only be safer when all assets are under our control."
+ #increase plutocratic, decrease bureaucratic, -0.025 autonomy per month
+ 
+ mexican_factions.14t:0 "Expand our Industry"
+ mexican_factions.14d:0 "Eminent Domain is a term used by state officials when confiscating private land for public purposes, or sometimes for their own uses. Several locations have been determinted to be prime real estate to expand the nation's industry by the Plutocrats, and they are preapred to offer a great sum of money to appropriate the land. Theocrats believe that this is akin to stealing, and that any aquisition of land by the government should be dealt just like any regular private transaction. While land for new industrial facilities could be gained in this way, it would take far longer to do so."
+ mexican_factions.14opta:0 "For the right price, we can avoid any potential unrest."
+ #increase plutocratic, decrease theocratic, -2000 ducats, +400 admin points
+ mexican_factions.14optb:0 "Our nation is supposed to protect rights, not act like the Mafia."
+ #increase theocratic, decrease plutocratic, -10% taxes, +150 admin points
+ 
+ mexican_factions.15t:0 "Give a Man a Fish"
+ mexican_factions.15d:0 "Plutocrats want to deal with the homelessness problem in this nation. They suggest that we set up a monetary fund to give them the necessary tools to feed, clothes, and perhaps earn for themselves. Distributing fishing rods, hunting knives, and almanacs on basic economics would stimulate the economy, according to one of the top businessman reporting in our court. However, Bureaucrats state this would directly threaten the country. They believe we ought to set aside a fund as well, but to use it to feed, and clothe people, instead of giving them the ability to do so themselves. This, they say, will help to maintain loyalty on the central government."
+ mexican_factions.15opta:0 "Helping citizens to be free, and independent will ensure our economic supremecy."
+ #increase plutocratic, #decrease bureaucratic, +10% global trade, 50 dip, 50, admn, 50 mil.
+ mexican_factions.15optb:0 "The public's focus should be on serving the nation, not on themselves.."
+ #increase bureaucratic, decrease plutocratic, -0.010 autonomy per month, -1 unrest, -.25 stab cost.
+ 
+ mexican_factions.16t:0 "Legalize Narcotics"
+ mexican_factions.16d:0 "Drugs have always been a sensitive issue within our borders. Plutocrats believe it is time that we loosen up regulations, and allow the markets to freely trade a pre-arranged list of controlled substinces. Theocrats have their own list. And they believe we ought to toughen up on products that compromise soberity."
+ mexican_factions.16opta:0 "We could always use some extra tax money."
+ #increase plutocratic, decrease theocratic, +10% taxes, -6% discipline
+ mexican_factions.16optb:0 "Prohibition will aid in keeping our society pure, and alert."
+ #increase theocratic, decrease plutocratic, -10% taxes, +6% discipline, 
+ 
+ #Theocratic
+ mexican_factions.17t:0 "Decrease the power of the state church"
+ mexican_factions.17d:0 "The theocratic faction recognizes God, and the Bible as the final authority. The fact that we have a centralized church headed by a hand picked chief leader alienates the faction. They state we must reduce the powers of the state church, and incentivise local populations to lead their congregations. Bureaucrats on the other hand, have a profound love for the state church, as it helps us to control the masses. They say we must crack down on any assembly outside of the state church."
+ mexican_factions.17opta:0 "Call for national repentance, for our sin of placing a man above God."
+ #increase theocratic, decrease bureaucratic, tolerance of heretics +1, +.50 stab cost
+ mexican_factions.17optb:0 "We need to maintain close ties to this family."
+ #decrease theocratic, increase bureaucratic, tolerance of heretics -2, -.30 stab cost
+ 
+ mexican_factions.18t:0 "Biblical Monuments"
+ mexican_factions.18d:0 "From Noah and the Flood, to King David, to Jesus Christ, there are many characters in the Bible who some of our most profound artists use to carve their statues. Theocrats would like the state to purchase some of these statues, and place them in public offices around the nation to remind our rulers of their obligations to God. Bureaucrats state this is a violation of civil liberties, as they state it would force religious icons on our public servants."
+ mexican_factions.18opta:0 "Let these carvings be a reminder to our officials that God is over all"
+ #increase theo, decrease bureau, -.5 corruption per year
+ mexican_factions.18optb:0 "Leave religious statues to the cathedrals."
+ #increase bureau, increase theo, +100 dip
+ 
+ mexican_factions.19t:0 "Weekly Day of Rest"
+ mexican_factions.19d:0 "Theocrats propose a day of rest be enforced, and that all non-essential businesses, and services be closed on Sunday. Plutocrats disagree, stating the loss of profits will greatly hurt the businessmen that represent their party."
+ mexican_factions.19opta:0 "Everyone deserves time off from work."
+ #increase theo, decrease pluto, -2 unrest, -10% taxes.
+ mexican_factions.19optb:0 "Idle hands are of the devil."
+ #increase pluto, decrease theo, +100 ducats.
+ 
+ mexican_factions.20t:0 "Ethical Standards on Entertainment"
+ mexican_factions.20d:0 "We have complaints of religious families around the nation who express their continued animosity toward our lack of policy concerning questionable entertainment. Theocrats want the state to drop the fist, and enforce harsh penalties on citizens publishing, and possessing material based on pornography, occultism, etc. Plutocrats believe we need to make a loud voice concerning the protections of the press, but this will alienate the families, and churches sending these complaints."
+ mexican_factions.20opta:0 "Immorality in our society will not be tolerated!"
+ #increase theo, decrease, pluto, +1 missionary power, -5% production
+ mexican_factions.20optb:0 "Matters of morality is up to the individual, not the state."
+ #increase pluto, decrease theo, +1 unrest, +10 production
+ 
+ mexican_factions.21t:0 "Modest Clothing"
+ mexican_factions.21d:0 "A generation comes, and a generation goes, and with the new generation, comes new styles of clothing. Theocrats are concerned with some of these choices, namely the amount of exposure on the young women, and they would like the state to mandate a new set of laws on dress code in the nation. Bureaucrats state that laws such as these are of no concern to the state, and that we ought to be trying to connect to the youth, by giving them concessions."
+ mexican_factions.21opta:0 "Moral behavior is not decided by the masses."
+ #increase theo, decrease bureau, tolerance of the true faith +2
+ mexican_factions.21optb:0 "Our culture must be shaped by the generations."
+ #increase bureau, decrease theo, increase missionary strength +1
+ 
+ 
+ mexican_factions.22t:0 "Public funding for campuses"
+ mexican_factions.22d:0 "All of our factions praise education, but the bureaucrats, and theocrats have the strongest disagreements in these educational methods, specifically, what the state funding should go to. Theocrats want finnancial packages to go toward enhancing religious education, and instill moral, and historical values into the students. Bureaucrats believe this money should be used to expand our sciences, and culture."
+ mexican_factions.22opta:0 "If we make science our god, and culture our master, they shall both enslave us."
+ #increase theo, decrease bureau, +2 tolerance of the truth faith, +1 missionary strength
+ mexican_factions.22optb:0 "Religion belongs in church buildings, not in academies."
+ #increase bureau, derease theo, -2 tolerance of the true faith, +150 adm, +150 dip, +150, mil
+ 
+ mexican_factions.23t:0 "Prominent cultural figures reject faith in God"
+ mexican_factions.23d:0 "Several leaders in music, and in best selling books have made it publically known that they do not believe in God, and their works reflect these thoughts. Theocrats want their rights to the printing press terminated, and their existing works scrapped, as they state it is the beginning of a slipperly slope that would poison the minds of the youth to rebelling against God. Bureaucrats wish the state to sanction these acts, as it represents a turning point in our soceity."
+ mexican_factions.23opta:0 "A turning point in our society, would steer us onto the path that leads to destruction."
+ #increase theo, decrease bureau, +.5 stab cost, increase prestige
+ mexican_factions.23optb:0 "The youth will be our future voting bloc, of course the state endorses these beautiful masterpieces."
+ #increase bureau, decrease pluto, -.5 stab cost, decrease prestige
+ 
+ mexican_factions.24t:0 "Free Bibles"
+ mexican_factions.24d:0 "Theocrats desire the state to use tax dollars, and mass produce Bibles, and ensure every citizen receives a copy, so that the highest ruler, down to the boy plowing a field may be able to read what God expects from him. Bureaucrats say this is not in the public's best interest to increase taxes, and that if a citizen wants a Bible, he can pay for one like all the other books."
+ mexican_factions.24opta:0 "God's Word is the only way mankind can truly understand wisdom, and morality."
+ #increase theocratic, decrease bureaucratic, -2 unrest, -10% taxes
+ mexican_factions.24optb:0 "The State is not a publishing organization."
+ #increase bureaucratic, increase plutocratic, decrease theocratic, 

@@ -1,0 +1,14 @@
+﻿l_english:
+ string_hurricane:0 "Hurricane"
+ string_tropical_storm:0 "Tropical Storm"
+ string_cyclone:0 "Cyclone"
+ string_typhoon:0 "Typhoon"
+ 
+ # Tooltips
+ ## Florida
+ flo_defend_against_texas_tooltip:0 "§YTexas§! loses all §Rclaims§! on any provinces in the §YAcadiana§!, §YLouisiana§!, and §YWest Florida§! areas, and loses any §Rcores§! on provinces owned by §Yus§!."
+ flo_evict_cubans_tooltip:0 "All owned §YAmero-Catholic§! and §YMiamian§! provinces will be converted to the §Ytrue faith§! and §Yculture§!. All provinces in the §YEast Cuba§! and §YWest Cuba§! areas will gain §Rdevelopment§! and become §YCuban§! culture. Gain §YCuban§! as an accepted culture.
+ flo_settle_cubans_tooltip:0 "All provinces in §YSouth Florida§! region will adopt §YMiamian§! culture and gain §Rdevelopment§!. All owned provinces in the §YEast Cuba§! and §YWest Cuba§! areas will become §Your culture§!.
+ 
+ ## Texas
+ tex_germans_tooltip:0 "The German refugees might expect more in the future."

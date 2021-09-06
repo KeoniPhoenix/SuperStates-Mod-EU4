@@ -1,0 +1,41 @@
+﻿l_english:
+ #Trade Companies
+ TRADE_COMPANY_MOLUCCAS_Indonesia_Trade_Company:0 "Moluccas Trade Company"
+ # America
+ trade_company_new_york:0 "New York Charter"
+ trade_company_chesapeake:0 "Chesapeake Bay Company"
+ trade_company_ohio_river:0 "Appalachian Charter"
+ trade_company_dixie:0 "Dixie Company"
+ trade_company_mississippi_delta:0 "Mississippi Charter"
+ trade_company_texas:0 "Texan Company"
+ trade_company_ontario:0 "Great Lakes Charter"
+ trade_company_new_england:0 "Massachusetts Bay Company"
+ trade_company_great_plains:0 "Great Plains Charter"
+ trade_company_midwest:0 "Midwestern Charter"
+ trade_company_rocky_mountains:0 "Rocky Mountain Charter"
+ trade_company_san_francisco_bay:0 "San Francisco Bay Company"
+ trade_company_california:0 "Californian Charter"
+ trade_company_sonoran_desert:0 "Mojave Charter"
+ trade_company_alaska:0 "Alaskan Charter"
+ # Canada
+ trade_company_maritimes:0 "Maritime Charter"
+ trade_company_ruperts_land:0 "Hudson's Bay Company"
+ trade_company_quebec:0 "North West Company"
+ trade_company_prairies:0 "Calgary Company"
+ trade_company_casacadia:0 "Cascadian Charter"
+ # Caribbean
+ trade_company_greater_antilles:0 "West Indies Company"
+ trade_company_lesser_antilles:0 "Antilles Company"
+ # Mexico
+ trade_company_gulf_mexico:0 "Veracruz Company"
+ trade_company_pacific_mexico:0 "Manzanillo Company"
+ trade_company_altiplano:0 "Mexican Charter"
+ # Australia
+ trade_company_western_australia:0 "Perth Company"
+ trade_company_eastern_australia:0 "Sydney Charter"
+ trade_company_new_zealand:0 "Kiwi Company"
+ 
+ # Unused
+ # trade_company_greenland:0 "Greenland Company"
+ # trade_company_new_guinea:0 "Papuan Charter"
+ # trade_company_east_siberia:0 "Far East Company"

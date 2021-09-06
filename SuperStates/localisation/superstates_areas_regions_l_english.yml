@@ -1,0 +1,1321 @@
+﻿l_english:
+#SuperStates Areas
+#UNITED STATES
+ alabama_area:1 "Alabama"
+ alabama_area_name:1 "Alabama"
+ alabama_area_adj:1 "Alabaman"
+ 
+ nickajack_area:1 "Nickajack"
+ nickajack_area_name:1 "Nickajack"
+ nickajack_area_adj:1 "Nickajacker"
+ 
+ # Alaska
+ alaska_area:1 "Alaska"
+ alaska_area_name:1 "Alaska"
+ alaska_area_adj:1 "Alaskan"
+ 
+ aleutia_area:1 "Aleutia"
+ aleutia_area_name:1 "Aleutia"
+ aleutia_area_adj:1 "Aleutian"
+ 
+ inside_passage_area:1 "Inside Passage"
+ inside_passage_area:1 "Inside Passage"
+ inside_passage_area_adj:1 "Inside Passenger"
+ 
+ #Arizona
+ arizona_area:1 "Arizona"
+ arizona_area_name:1 "Arizona"
+ arizona_area_adj:1 "Arizonan"
+ 
+ baja_arizona_area:1 "Baja Arizona"
+ baja_arizona_area:1 "Baja Arizona"
+ baja_arizona_area:1 "Baja Arizona"
+ 
+ #Arkansas
+ ozarks_area:1 "Ozarks"
+ ozarks_area_name:1 "Ozarks"
+ ozarks_area_adj:1 "Ozarkian"
+ 
+ white_river_area:1 "White River"
+ white_river_area_name:1 "White River"
+ white_river_area_adj:1 "White Riverian"
+ 
+ texarkana_area:1 "Texarkana"
+ texarkana_area:1 "Texarkana"
+ texarkana_area:1 "Texarkanian"
+ 
+ # California
+ central_valley_area:1 "Central Valley"
+ central_valley_area_name:1 "Central Valley"
+ central_valley_area_adj:1 "Central Valleyard"
+
+ san_francisco_area:1 "San Francisco Bay"
+ san_francisco_area_name:1 "San Francisco Bay"
+ san_francisco_area_adj:1 "San Francisco Bayite"
+ 
+ san_pablo_area:1 "San Pablo"
+ san_pablo_area_name:1 "San Pablo"
+ san_pablo_area_adj:1 "San Pabloian"
+
+ central_coast_area:1 "Central Coast"
+ central_coast_area_name:1 "Central Coast"
+ central_coast_area_adj:1 "Central Coaster"
+ 
+ mojave_area:1 "Mojave"
+ mojave_area_name:1 "Mojave"
+ mojave_area_adj:1 "Mojaveno"
+ 
+ san_diego_area:1 "San Diego"
+ san_diego_area_name:1 "San Diego"
+ san_diego_area_adj:1 "San Diegan"
+ 
+ #Colorado
+ colorado_area:1 "Colorado"
+ colorado_area_name:1 "Colorado"
+ colorado_area_adj:1 "Coloradan"
+ 
+ north_colorado_area:1 "North Colorado"
+ north_colorado_area_name:1 "North Colorado"
+ north_colorado_area_adj:1 "North Coloradan"
+ 
+ #Connecticut
+ connecticut_area:1 "Connecticut"
+ connecticut_area_name:1 "Connecticut"
+ connecticut_area_adj:1 "Connecticuter"
+ 
+ #Delaware
+ delaware_area:1 "Delaware"
+ delaware_area_adj:1 "Delaware"
+ delaware_area_name:1 "Delawarean"
+ 
+ delmarva_area:1 "Delmarva"
+ delmarva_area_name:1 "Delmarva"
+ delmarva_area_adj:1 "Delmarvan"
+ 
+ #Florida
+ north_florida_area:1 "North Florida"
+ north_florida_area_name:1 "North Florida"
+ north_florida_area_adj:1 "North Floridian"
+  
+ south_florida_area:1 "South Florida"
+ south_florida_area_name:1 "South Florida"
+ south_florida_area_adj:1 "South Floridian"
+ 
+ suncoast_area:1 "Suncoast"
+ suncoast_area_name:1 "Suncoast"
+ suncoast_area_adj:1 "Suncoaster"
+ 
+ st_johns_area:1 "Saint Johns"
+ st_johns_area_name:1 "Saint Johns"
+ st_johns_area_adj:1 "Saint Johnnies"
+ 
+ #Georgia
+ georgia_us_area:1 "Georgia"
+ georgia_us_area_name:1 "Georgia"
+ georgia_us_area_adj:1 "Georgian"
+ 
+ savannah_area:1 "Savannah"
+ savannah_area_name:1 "Savannah"
+ savannah_area_adj:1 "Savannahian"
+ 
+ #Idaho
+ idaho_area:1 "Idaho"
+ idaho_area_name:1 "Idaho"
+ idaho_area_adj:1 "Idahoan"
+ 
+ #Illinois
+ illinois_area:1 "Illinois"
+ illinois_area_name:1 "Illinois"
+ illinois_area_adj:1 "Illinoisan"
+ 
+ little_egypt_area:1 "Little Egypt"
+ little_egypt_area_name:1 "Little Egypt"
+ little_egypt_area_adj:1 "Little Egyptian"
+ 
+ chicagoland_area:1 "Chicagoland"
+ chicagoland_area_name:1 "Chicagoland"
+ chicagoland_area_adj:1 "Chicagoland"
+ 
+ sangamon_area:1 "Sangamon"
+ sangamon_area_name:1 "Sangamon"
+ sangamon_area_adj:1 "Sangamonite"
+ 
+ #Indiana
+ wabash_area:1 "Wabash"
+ wabash_area_name:1 "Wabash"
+ wabash_area_adj:1 "Wabashian"
+ 
+ #Iowa
+ iowa_area:1 "Iowa"
+ iowa_area_name:1 "Iowa"
+ iowa_area_adj:1 "Iowan"
+ 
+ #Kansas
+ kansas_area:1 "Kansas"
+ kansas_area_name:1 "Kansas"
+ kansas_area_adj:1 "Kansan"
+ 
+ west_kansas_area:1 "West Kansas"
+ west_kansas_area_name:1 "West Kansas"
+ west_kansas_area_adj:1 "West Kansan"
+ 
+ #Kentucky
+ kentucky_area:1 "Kentucky"
+ kentucky_area_name:1 "Kentucky"
+ kentucky_area_adj:1 "Kentuckian"
+ 
+ pennyroyal_area:1 "Pennyroyal"
+ pennyroyal_area_name:1 "Pennyroyal"
+ pennyroyal_area_adj:1 "Pennyroyaler"
+ 
+ #Louisiana
+ acadiana_area:1 "Acadiana"
+ acadiana_area_name:1 "Acadiana"
+ acadiana_area_adj:1 "Cajun"
+ 
+ louisiana_area:1 "Louisiana"
+ louisiana_area_name:1 "Louisiana"
+ louisiana_area_adj:1 "Louisianan"
+ 
+ mississippi_delta_area:1 "Mississippi Delta"
+ mississippi_delta_area_name:1 "Mississippi Delta"
+ mississippi_delta_area_adj:1 "Mississippi Deltanian"
+ 
+ #Maine
+ maine_area:1 "Maine"
+ maine_area_name:1 "Maine"
+ maine_area_adj:1 "Mainer"
+ 
+ #Maryland
+ potomac_area:1 "Potomac"
+ potomac_area_name:1 "Potomac"
+ potomac_area:1 "Potomacker"
+ 
+ #Massachusetts
+ massachusetts_area:1 "Massachusetts"
+ massachusetts_area_name:1 "Massachusetts"
+ massachusetts_area_adj:1 "Massachusettsan"
+ 
+ cape_cod_area:1 "Cape Cod"
+ cape_cod_area_name:1 "Cape Cod"
+ cape_cod_area_adj:1 "Cape Codder"
+ 
+ #Michigan
+ upper_peninsula_area:1 "Upper Peninsula"
+ upper_peninsula_area_name:1 "Upper Peninsula"
+ upper_michigan_area_adj:1 "Yooper"
+ 
+ michigan_area:1 "Michigan"
+ michigan_area_name:1 "Michigan"
+ michigan_area_adj:1 "Michigander"
+ 
+ maumee_area:1 "Maumee"
+ maumee_area_name:1 "Maumee"
+ maumee_area_adj:1 "Maumanian"
+ 
+ #Minnesota
+ twin_cities_area:1 "Twin Cities"
+ twin_cities_area_name:1 "Twin Cities"
+ twin_cities_area_adj:1 "Twinner"
+ 
+ the_lakes_area:1 "The Lakes"
+ the_lakes_area_name:1 "The Lakes"
+ the_lakes_area_adj:1 "Laker"
+ 
+ superior_area:1 "Superior"
+ superior_area_name:1 "Superior"
+ superior_area_adj:1 "Superiorite"
+ 
+ #Mississippi 
+ black_prairie_area:1 "Black Prairie"
+ black_prairie_area_name:1 "Black Prairie"
+ black_prairie_area_adj:1 "Black Prairier"
+ 
+ pearl_river_area:1 "Pearl River"
+ pearl_river_area_name:1 "Pearl River"
+ pearl_river_area_adj:1 "Pearlian"
+ 
+ #Missouri
+ missouri_area:1 "Missouri"
+ missouri_area_name:1 "Missouri"
+ missouri_area_adj:1 "Missourian"
+ 
+ salem_area:1 "Salem"
+ salem_area_name:1 "Salem"
+ salem_area_adj:1 "Salemite"
+ 
+ #Montana
+ west_montana_area:1 "West Montana"
+ west_montana_area_name:1 "West Montana"
+ west_montana_area_adj:1 "West Montanan"
+ 
+ montana_area:1 "Montana"
+ montana_area_name:1 "Montana"
+ montana_area_adj:1 "Montanan"
+ 
+ east_montana_area:1 "East Montana"
+ east_montana_area_name:1 "East Montana"
+ east_montana_area_adj:1 "East Montanan"
+ 
+ #Nebraska
+ nebraska_area:1 "Nebraska"
+ nebraska_area_name:1 "Nebraska"
+ nebraska_area_adj:1 "Nebraskan"
+ 
+ loess_area:1 "Loess"
+ loess_area_name:1 "Loess"
+ loess_area_adj:1 "Loessian"
+ 
+ sioux_area:1 "Sioux"
+ sioux_area_name:1 "Sioux"
+ sioux_area_adj:1 "Sioux"
+ 
+ #Nevada
+ black_rock_area:1 "Black Rock"
+ black_rock_area_name:1 "Black Rock"
+ black_rock_area_adj:1 "Black Rocker"
+ 
+ #New Hampshire
+ new_hampshire_area:1 "New Hampshire"
+ new_hampshire_area_name:1 "New Hampshire"
+ new_hampshire_area_adj:1 "New Hampshirite"
+ 
+ #New Jersey
+ north_jersey_area:1 "North Jersey"
+ north_jersey_area_name:1 "North Jersey"
+ north_jersey_area_adj:1 "North Jerseyan"
+ 
+ south_jersey_area:1 "South Jersey"
+ south_jersey_area_name:1 "South Jersey"
+ south_jersey_area_adj:1 "South Jerseyan"
+ 
+ #New Mexico
+ new_mexico_area:1 "New Mexico"
+ new_mexico_area_name:1 "New Mexico"
+ new_mexico_area_adj:1 "New Mexican"
+ 
+ #New York
+ hudson_valley_area:1 "Hudson Valley"
+ hudson_valley_area_name:1 "Hudson Valley"
+ hudson_valley_area_adj:1 "Hudson Valleyite"
+ 
+ adirondack_area:1 "Adirondack"
+ adirondack_area_name:1 "Adirondack"
+ adirondack_area_adj:1 "Adirondackian"
+ 
+ long_island_area:1 "Long Island"
+ long_island_area_name:1 "Long Island"
+ long_island_area_adj:1 "Long Islander"
+ 
+ new_york_area:1 "New York"
+ new_york_area_name:1 "New York"
+ new_york_area_adj:1 "New Yorker"
+ 
+ erie_area:1 "Erie"
+ erie_area_name:1 "Erie"
+ erie_area_adj:1 "Erien"
+ 
+ #North Carolina
+ north_carolina_area:1 "North Carolina"
+ north_carolina_area_name:1 "North Carolina"
+ north_carolina_area_adj:1 "North Carolinian"
+ 
+ blue_ridge_area:1 "Blue Ridge"
+ blue_ridge_area_name:1 "Blue Ridge"
+ blue_ridge_area_adj:1 "Blue Ridger"
+ 
+ #North Dakota
+ red_river_area:1 "Red River"
+ red_river_area_name:1 "Red River"
+ red_river_area_adj:1 "Red Riverite"
+ 
+ sakakawea_area:1 "Sakakawea"
+ sakakawea_area_name:1 "Sakakawea"
+ sakakawea_area_adj:1 "Sakakawean"
+ 
+ #Ohio
+ ohio_area:1 "Ohio"
+ ohio_area_name:1 "Ohio"
+ ohio_area_adj:1 "Ohioan"
+ 
+ #Oklahoma
+ oklahoma_area:1 "Oklahoma"
+ oklahoma_area_name:1 "Oklahoma"
+ oklahoma_area_adj:1 "Oklahoman"
+ 
+ high_plains_area:1 "High Plains"
+ high_plains_area_name:1 "High Plains"
+ high_plains_area_adj:1 "High Plainer"
+ 
+ #Oregon
+ oregon_area:1 "Oregon"
+ oregon_area_name:1 "Oregon"
+ oregon_area_adj:1 "Oregonian"
+ 
+ high_desert_area:1 "High Desert"
+ high_desert_area_name:1 "High Desert"
+ high_desert_area_adj:1 "High Desertian"
+ 
+ jefferson_area:1 "Jefferson"
+ jefferson_area_name:1 "Jefferson"
+ jefferson_area_adj:1 "Jeffersonian"
+ 
+ #Pennsylvania
+ allegheny_area:1 "Allegheny"
+ allegheny_area_name:1 "Allegheny"
+ allegheny_area_adj:1 "Yinzer"
+  
+ central_pennsylvania_area:1 "Central Pennsylvania"
+ central_pennsylvania_area_name:1 "Central Pennsylvania"
+ central_pennsylvania_area_adj:1 "Central Pennsylvanian"
+ 
+ delaware_valley_area:1 "Delaware Valley"
+ delaware_valley_area_name:1 "Delaware Valley"
+ delaware_valley_area_adj:1 "Delaware Valleyite"
+
+ #Puerto Rico
+ puerto_rico_area:1 "Puerto Rico"
+ puerto_rico_area_name:1 "Puerto Rico"
+ puerto_rico_area_adj:1 "Puerto Rican"
+ 
+ #Rhode Island
+ rhode_island_area:1 "Rhode Island"
+ rhode_island_area_name:1 "Rhode Island"
+ rhode_island_area_adj:1 "Rhode Islander"
+ 
+ #South Carolina
+ south_carolina_area:1 "South Carolina"
+ south_carolina_area_name:1 "South Carolina"
+ south_carolina_area_adj:1 "South Carolinian"
+ 
+ #South Dakota
+ east_river_area:1 "East River"
+ east_river_area_name:1 "East River"
+ east_river_area_adj:1 "East Riverite"
+ 
+ absaroka_area:1 "Absaroka"
+ absaroka_area_name:1 "Absaroka"
+ absaroka_area_adj:1 "Absarokan"
+ 
+ #Tennessee
+ tennessee_area:1 "Tennessee"
+ tennessee_area_name:1 "Tennessee"
+ tennessee_area_adj:1 "Tennessean"
+ 
+ # Texas 
+ texas_area:1 "Texas"
+ texas_area_name:1 "Texas"
+ texas_area_adj:1 "Texan"
+ 
+ texas_gulf_area:1 "Texas Gulf"
+ texas_gulf_area_name:1 "Texas Gulf"
+ texas_gulf_area_adj:1 "Texas Gulfer"
+ 
+ rio_grande_area:1 "Rio Grande"
+ rio_grande_area:1 "Rio Grande"
+ rio_grande_area_adj:1 "Rio Grandenos"
+ 
+ trans_pecos_area:1 "Trans-Pecos"
+ trans_pecos_area_name:1 "Trans-Pecos"
+ trans_pecos_area_adj:1 "Trans-Pecosan"
+ 
+ #Utah
+ salt_lake_area:1 "Salt Lake"
+ salt_lake_area_name:1 "Salt Lake"
+ salt_lake_area_adj:1 "Salt Laker"
+ 
+ south_utah_area:1 "South Utah"
+ south_utah_area_name:1 "South Utah"
+ south_utah_area_adj:1 "South Utahn"
+ 
+ #Virginia
+ virginia_area:1 "Virginia"
+ virginia_area_name:1 "Virginia"
+ virginia_area_adj:1 "Virginian"
+ 
+ shenandoah_area:1 "Shenandoah"
+ shenandoah_area_name:1 "Shenandoah"
+ shenandoah_area_adj:1 "Shenandoahnian"
+ 
+ chesapeake_area:1 "Cheasapeake"
+ chesapeake_area_name:1 "Cheasapeake"
+ chesapeake_area_adj:1 "Cheasapeaker"
+ 
+ #Vermont
+ vermont_area:1 "Vermont"
+ vermont_area_name:1 "Vermont"
+ vermont_area_adj:1 "Vermonter"
+ 
+ #Washington
+ puget_sound_area:1 "Puget Sound"
+ puget_sound_area_name:1 "Puget Sound"
+ puget_sound_area_adj:1 "Puget Sounder"
+ 
+ lincoln_area:1 "Lincoln"
+ lincoln_area_name:1 "Lincoln"
+ lincoln_area_adj:1 "Lincolnite"
+ 
+ gulf_islands_area:1 "Gulf Islands"
+ gulf_islands_area_name:1 "Gulf Islands"
+ gulf_islands_area_adj:1 "Gulf Islander"
+ 
+ #West Virginia
+ monongahela_area:1 "Monongahela"
+ monongahela_area_name:1 "Monongahela"
+ monongahela_area_adj:1 "Monongahelan"
+ 
+ #Wisconsin
+ wisconsin_area:1 "Wisconsin"
+ wisconsin_area_name:1 "Wisconsin"
+ wisconsin_area_adj:1 "Wisconsinite"
+ 
+ green_bay_area:1 "Green Bay"
+ green_bay_area_name:1 "Green Bay"
+ green_bay_area_adj:1 "Green Bayite"
+ 
+ #Wyoming
+ wyoming_area:1 "Wyoming"
+ wyoming_area_name:1 "Wyoming"
+ wyoming_area_adj:1 "Wyomingite"
+
+ #CANADA
+ #Alberta
+ alberta_area:1 "Alberta"
+ alberta_area_name:1 "Alberta"
+ alberta_area_adj:1 "Albertan"
+ 
+ peace_river_area:1 "Peace River"
+ peace_river_area_name:1 "Peace River"
+ peace_river_area_adj:1 "Pacifists"
+ 
+ north_saskatchewan_area:1 "North Saskatchewan"
+ north_saskatchewan_area:1 "North Saskatchewan"
+ north_saskatchewan_area:1 "North Saskatchewanian"
+
+ #British Columbia
+ columbia_area:1 "Columbia"
+ columbia_area_name:1 "Columbia"
+ columbia_area_adj:1 "Columbian"
+ 
+ kootenay_area:1 "Kootenay"
+ kootenay_area_name:1 "Kootenay"
+ kootenay_area_adj:1 "Kootenanian"
+ 
+ strait_of_georgia_area:1 "Strait of Georgia"
+ strait_of_georgia_area_name:1 "Strait of Georgia"
+ strait_of_georgia_area_adj:1 "Georgian Straiter"
+ 
+ vancouver_area:1 "Vancouver"
+ vancouver_area_name:1 "Vancouver"
+ vancouver_area_adj:1 "Vancouverite"
+ 
+ #Manitoba
+ manitoba_area:1 "Manitoba"
+ manitoba_area_name:1 "Manitoba"
+ manitoba_area_adj:1 "Manitoban"
+ 
+ mantario_area:1 "Mantario"
+ mantario_area_name:1 "Mantario"
+ manitoba_area_adj:1 "Mantarioan"
+ 
+ #New Brunswick 
+ new_brunswick_area:1 "New Brunswick"
+ new_brunswick_area_name:1 "New Brunswick"
+ new_brunswick_area_adj:1 "New Brunswicker"
+ 
+ #Nunavut
+ nunavut_area:1 "Nunavut"
+ nunavut_area_name:1 "Nunavut"
+ nunavut_area_adj:1 "Nunavummiut"
+ 
+ hudson_islands_area:1 "Hudson Islands"
+ hudson_islands_area_name:1 "Hudson Islands"
+ hudson_islands_area_adj:1 "Hudson Islander"
+ 
+ #Prince Edward Island
+ prince_edward_island_area:1 "Prince Edward Island"
+ prince_edward_island_area_name:1 "Prince Edward Island"
+ prince_edward_island_area_adj:1 "Prince Edward Islander"
+ 
+ #Newfoundland and Labrador
+ newfoundland_area:1 "Newfoundland"
+ newfoundland_area_name:1 "Newfoundland"
+ newfoundland_area_adj:1 "Newfoundlander"
+ 
+ labrador_area:1 "Labrador"
+ labrador_area_name:1 "Labrador"
+ labrador_area_adj:1 "Labradorian"
+ 
+ #Northwest Territories
+ northwest_territories_area:1 "Northwest Territories"
+ northwest_territories_area_name:1 "Northwest Territories"
+ northwest_territories_area_adj:1 "Northwest Territorian"
+ 
+ #Nova Scotia
+ nova_scotia_area:1 "Nova Scotia"
+ nova_scotia_area_name:1 "Nova Scotia"
+ nova_scotia_area_adj:1 "Nova Scotian"
+ 
+ #Prince Edward Island and Cape Breton
+ saint_george_area:1 "Saint George"
+ saint_george_area_name:1 "Saint George"
+ saint_george_area_adj:1 "Saint Georgian"
+ 
+ #Ontario
+ northern_ontario_area:1 "Northern Ontario"
+ northern_ontario_area_name:1 "Northern Ontario"
+ northern_ontario_area_adj:1 "Northern Ontarian"
+ 
+ ontario_area:1 "Ontario"
+ ontario_area_name:1 "Ontario"
+ ontario_area_adj:1 "Ontarian"
+ 
+ #toronto_area:1 "Toronto"
+ #toronto_area_name:1 "Toronto"
+ #toronto_area_adj:1 "Torontonian"
+ 
+ southwest_ontario_area:1 "Toronto"
+ southwest_ontario_area_name:1 "Toronto"
+ southwest_ontario_area_adj:1 "Torontoan"
+ 
+ #Quebec
+ nord_du_quebec_area:1 "Nord du Quebec"
+ nord_du_quebec_area:1 "Nord du Quebec"
+ nord_du_quebec_area:1 "Nord du Québécois"
+ 
+ bois_francs_area:1 "Bois Francs"
+ bois_francs_area_name:1 "Bois Francs"
+ bois_francs_area_adj:1 "Bois Francois"
+  
+ quebec_area:1 "Quebec"
+ quebec_area_name:1 "Quebec"
+ quebec_area_adj:1 "Québécois"
+ 
+ baie_des_chaleurs_area:1 "Baie des Chaleurs"
+ baie_des_chaleurs_area_name:1 "Baie des Chaleurs"
+ baie_des_chaleurs_area_adj:1 "Chaleurian"
+ 
+ iles_saint_laurent_area:1 "Iles Saint Laurent"
+ iles_saint_laurent_area_name:1 "Iles Saint Laurent"
+ iles_saint_laurent_area_adj:1 "Iles Saint Laurentian"
+ 
+ #Saskatchewan
+ saskatchewan_area:1 "Saskatchewan"
+ saskatchewan_area_name:1 "Saskatchewan"
+ saskatchewan_area_adj:1 "Saskatchewanian"
+ 
+ athabasca_area:1 "Athabasca"
+ athabasca_area_name:1 "Athabasca"
+ athabasca_area_adj:1 "Athabascan"
+ 
+ #Yukon
+ yukon_area:1 "Yukon"
+ yukon_area_name:1 "Yukon"
+ yukon_area_adj:1 "Yukoner"
+ 
+#MEXICO
+ baja_california_area:1 "Baja California"
+ baja_california_area_name:1 "Baja California"
+ baja_california_area_adj:1 "Baja Californian"
+ 
+ baja_california_sur_area:1 "Baja California Sur"
+ baja_california_sur_area_name:1 "Baja California Sur"
+ baja_california_sur_area_adj:1 "South Baja Californian"
+ 
+ chiapas_oaxaca_area:1 "Chiapas-Oaxaca"
+ chiapas_oaxaca_area_name:1 "Chiapas-Oaxaca"
+ chiapas_oaxaca_area_adj:1 "Chiapas-Oaxacan"
+ 
+ chihuahua_area:1 "Chihuahua"
+ chihuahua_area_name:1 "Chihuahua"
+ chihuahua_area_adj:1 "Chihuahuan"
+ 
+ coahuila_area:1 "Coahuila"
+ coahuila_area_name:1 "Coahuila"
+ coahuila_area_adj:1 "Coahuilan"
+ 
+ durango_area:1 "Durango"
+ durango_area_name:1 "Durango"
+ durango_area_adj:1 "Durangoan"
+ 
+ guanajuanto_area:1 "Guanajuanto"
+ guanajuanto_area_name:1 "Guanajuanto"
+ guanajuanto_area_adj:1 "Guanajuantoan"
+  
+ guerrero_area:1 "Guerrero"
+ guerrero_area_name:1 "Guerrero"
+ guerrero_area_adj:1 "Guerreroan"
+ 
+ hidalgo_queretaro_area:1 "Hidalgo-Queretaro"
+ hidalgo_queretaro_area_name:1 "Hidalgo-Queretaro"
+ hidalgo_queretaro_area_adj:1 "Hidalgoan-Queretan"
+ 
+ jalisco_area:1 "Jalisco"
+ jalisco_area_name:1 "Jalisco"
+ jalisco_area_adj:1 "Jaliscan"
+ 
+ mexico_area:1 "Mexico"
+ mexico_area_name:1 "Mexico"
+ mexico_area_adj:1 "Mexican"
+ 
+ michoacan_area:1 "Michoacan"
+ michoacan_area_name:1 "Michoacan"
+ michoacan_area_adj:1 "Michoacanian"
+ 
+ nayarit_area:1 "Nayarit"
+ nayarit_area_name:1 "Nayarit"
+ nayarit_area_adj:1 "Nayaritian"
+ 
+ nuevo_leon_area:1 "Nuevo Leon"
+ nuevo_leon_area_name:1 "Nuevo Leon"
+ nuevo_leon_area_adj:1 "Nuevo Leonian"
+ 
+ puebla_tlaxcala_area:1 "Puebla-Tlaxcala"
+ puebla_tlaxcala_area_name:1 "Puebla-Tlaxcala"
+ puebla_tlaxcala_area_adj:1 "Pueblan-Tlaxcalan"
+ 
+ quintana_roo_area:1 "Quintana Roo"
+ quintana_roo_area_name:1 "Quintana Roo"
+ quintana_roo_area_adj:1 "Quintanarroense"
+ 
+ san_luis_potosi_area:1 "San Luis Potosi"
+ san_luis_potosi_area_name:1 "San Luis Potosi"
+ san_luis_potosi_area_adj:1 "San Luis Potosian"
+ 
+ sinaloa_area:1 "Sinaloa"
+ sinaloa_area_name:1 "Sinaloa"
+ sinaloa_area_adj:1 "Sinaloan"
+ 
+ sonora_area:1 "Sonora"
+ sonora_area_name:1 "Sonora"
+ sonora_area_adj:1 "Sonoran"
+ 
+ tabasco_area:1 "Tabasco"
+ tabasco_area_name:1 "Tabasco"
+ tabasco_area_adj:1 "Tabascan"
+ 
+ tamaulipas_area:1 "Tamaulipas"
+ tamaulipas_area_name:1 "Tamaulipas"
+ tamaulipas_area_adj:1 "Tamaulipasian"
+ 
+ veracruz_area:1 "Veracruz"
+ veracruz_area_name:1 "Veracruz"
+ veracruz_area_adj:1 "Veracruzian"
+ 
+ western_yucatan_area:1 "Western Yucatan"
+ western_yucatan_area_name:1 "Western Yucatan"
+ western_yucatan_area_adj:1 "Western Yucatanian"
+ 
+ yucatan_area:1 "Yucatan"
+ yucatan_area_name:1 "Yucatan"
+ yucatan_area_adj:1 "Yucatanian"
+ 
+ zacatecas_area:1 "Zacatecas"
+ zacatecas_area_name:1 "Zacatecas"
+ zacatecas_area_adj:1 "Zacatecan"
+ 
+ #AUSTRALIA AND OCEANIA
+ 
+ # New South Wales
+ sydney_area:1 "Sydney"
+ sydney_area_name:1 "Sydney"
+ sydney_area_adj:1 "Sydneysider"
+ 
+ canberra_area:1 "Canberra"
+ canberra_area_name:1 "Canberra"
+ canberra_area_adj:1 "Canberran"
+ 
+ hunter_area:1 "Hunter"
+ hunter_area_name:1 "Hunter"
+ hunter_area_adj:1 "Hunterian"
+ 
+ murray_darling_area:1 "Murray-Darling"
+ murray_darling_area_name:1 "Murray-Darling"
+ murray_darling_area_adj:1 "Murray-Darlinger"
+ 
+ #Northern Territory
+ north_australia_area:1 "North Australia"
+ north_australia_area_name:1 "North Australia"
+ north_australia_area_adj:1 "North Australian"
+ 
+ centralia_area:1 "Centralia"
+ centralia_area_name:1 "Centralia"
+ centralia_area_adj:1 "Centarlian"
+ 
+ #Queensland
+ queensland_area:1 "Queensland"
+ queensland_area_name:1 "Queensland"
+ queensland_area_adj:1 "Queenslander"
+ 
+ carpentaria_area:1 "Carpentaria"
+ carpentaria_area_name:1 "Carpentaria"
+ carpentaria_area_adj:1 "Carpentaria"
+ 
+ north_queensland_area:1 "North Queensland"
+ north_queensland_area_name:1 "North Queensland"
+ north_queensland_area_adj:1 "North Queenslander"
+ 
+ central_queensland_area:1 "Central Queensland"
+ central_queensland_area_name:1 "Central Queensland"
+ central_queensland_area_adj:1 "Central Queensland"
+ 
+ cooksland_area:1 "Cooksland"
+ cooksland_area_name:1 "Cooksland"
+ cooksland_area_adj:1 "Cookslander"
+ 
+ #South Australia 
+ south_australia_area:1 "South Australia"
+ south_australia_area_name:1 "South Australia"
+ south_australia_area_adj:1 "South Australian"
+
+ south_coast_area:1 "South Coast"
+ south_coast_area_name:1 "South Coast"
+ south_coast_area_adj:1 "South Coaster"
+ 
+ #Victoria
+ bass_strait_area:1 "Bass Strait"
+ bass_strait_area_name:1 "Bass Strait"
+ bass_strait_area_adj:1 "Bass Straiter"
+ 
+ murray_area:1 "Murray"
+ murray_area_name:1 "Murray"
+ murray_area_adj:1 "Murrayaner"
+ 
+ 
+ #Tasmania
+ tasmania_area:1 "Tasmania"
+ tasmania_area_name:1 "Tasmania"
+ tasmania_area_adj:1 "Tasmanian"
+ 
+ #Western Australian
+ western_australia_area:1 "Western Australia"
+ western_australia_area_name:1 "Western Australia"
+ western_australia_area_adj:1 "Western Australian"
+ 
+ goldfields_area:1 "Goldfields"
+ goldfields_area_name:1 "Goldfields"
+ goldfields_area_adj:1 "Goldfielder"
+ 
+ perth_area:1 "Perth"
+ perth_area_name:1 "Perth"
+ perth_area_adj:1 "Perthite"
+ 
+ aus_indian_ocean_islands_area:1 "Indian Ocean Islands"
+ aus_indian_ocean_islands_area_name:1 "Indian Ocean Islands"
+ aus_indian_ocean_islands_area_adj:1 "Indian Ocean Islander"
+ 
+ #New Zealand
+ auckland_area:1 "Auckland"
+ auckland_area_name:1 "Auckland"
+ auckland_area_adj:1 "Aucklander"
+ 
+ new_ulster_area:1 "New Ulster"
+ new_ulster_area_name:1 "New Ulster"
+ new_ulster_area_adj:1 "New Ulsterman"
+ 
+ nelson_area:1 "Nelson"
+ nelson_area_name:1 "Nelson"
+ nelson_area_adj:1 "Nelsoner"
+ 
+ south_island_area:1 "South Island"
+ south_island_area_name:1 "South Island"
+ south_island_area_adj:1 "South Islander"
+ 
+ #Marianas Island Chain 
+ marianas_area:1 "Northern Marianas"
+ marianas_area_name:1 "Northern Marianas"
+ marianas_area_adj:1 "Northern Marianas Islander"
+ 
+ #Hawaiian
+ hawaii_area:1 "Hawaii"
+ hawaii_area_name:1 "Hawaii"
+ hawaii_area_adj:1 "Hawaiian"
+ 
+ leeward_hawaiian_islands_area:1 "Leeward Hawaii"
+ leeward_hawaiian_islands_area_name:1 "Leeward Hawaii"
+ leeward_hawaiian_islands_area_adj:1 "Leeward Hawaiian"
+ 
+ #Papua New Guinea
+ papua_area:1 "Papua"
+ papua_area_name:1 "Papua"
+ papua_area_adj:1 "Papuan"
+ 
+ vogelkop_area:1 "Vogelkop"
+ vogelkop_area_name:1 "Vogelkop"
+ vogelkop_area_adj:1 "Vogelkopian"
+ 
+ #Melanesia
+ melanesia_area:1 "Melanesia"
+ melanesia_area_name:1 "Melanesian"
+ melanesia_area_adj:1 "Melanesian"
+ 
+ southeastern_melanesia_area:1 "Southeastern Melanesia"
+ southeastern_melanesia_area_name:1 "Southeastern Melanesia"
+ southeastern_melanesia_area_adj:1 "Southeastern Melanesian"
+ 
+ #Micronesia
+ micronesia_area:1 "Microneasia"
+ micronesia_area_name:1 "Micronesia"
+ micronesia_area_adj:1 "Micronesian"
+ 
+ eastern_micronesia_area:1 "Eastern Micronesia"
+ eastern_micronesia_area_name:1 "Eastern Micronesia"
+ eastern_micronesia_area_adj:1 "Eastern Micronesian"
+
+ #Polynesia
+ western_polynesia_area:1 "Western Polynesia"
+ western_polynesia_area_name:1 "Western Polynesia"
+ western_polynesia_area_adj:1 "Western Polynesian"
+ 
+ central_polynesia_area:1 "Central Polynesia"
+ central_polynesia_area_name:1 "Central Polynesia"
+ central_polynesia_area_adj:1 "Central Polynesian"
+ 
+ eastern_polynesia_area:1 "Eastern Polynesia"
+ eastern_polynesia_area_name:1 "Eastern Polynesia"
+ eastern_polynesia_area_adj:1 "Eastern Polynesian"
+ 
+ #CARIBBEAN
+ #Cuba
+ west_cuba_area:1 "West Cuba"
+ west_cuba_area_name:1 "West Cuba"
+ west_cuba_area_adj:1 "West Cuban"
+ 
+ east_cuba_area:1 "East Cuba"
+ east_cuba_area_name:1 "East Cuba"
+ east_cuba_area_adj:1 "East Cuban"
+ 
+ #Cayman Islands
+ cayman_islands_area:1 "Cayman Islands"
+ cayman_islands_area_name:1 "Cayman Islands"
+ cayman_islands_area_adj:1 "Cayman Islander"
+ 
+ #Jamaica
+ jamaica_area:1 "Jamaica"
+ jamaica_area_name:1 "Jamaica"
+ jamaica_area_adj:1 "Jamaican"
+ 
+ #Bahamas
+ bahamas_area:1 "Bahamas"
+ bahamas_area_name:1 "Bahamas"
+ bahamas_area_adj:1 "Bahamian"
+ 
+ lower_lucaya_area:1 "Lower Lucaya"
+ lower_lucaya_area_name:1 "Lower Lucaya"
+ lower_lucaya_area_adj:1 "Lower Lucayan"
+ 
+ #Hispanola
+ santo_domingo_area:1 "Santo Domingo"
+ santo_domingo_area_name:1 "Santo Domingo"
+ santo_domingo_area_adj:1 "Dominicano"
+ 
+ north_haiti_area:1 "North Haiti"
+ north_haiti_area_name:1 "North Haiti"
+ north_haiti_area_adj:1 "North Haitian"
+ 
+ south_haiti_area:1 "South Haiti"
+ south_haiti_area_name:1 "South Haiti"
+ south_haiti_area_adj:1 "South Haitian"
+ 
+ #Virgin Islands
+ west_virgin_islands_area:1 "Western Virgin Islands"
+ west_virgin_islands_area_name:1 "Western Virgin Islands"
+ west_virgin_islands_area_adj:1 "Western Virgin Islander"
+ 
+ east_virgin_islands_area:1 "Eastern Virgin Islands"
+ east_virgin_islands_area_name:1 "Eastern Virgin Islands"
+ east_virgin_islands_area_adj:1 "Eastern Virgin Islander"
+ 
+ #Antillies
+ leeward_antilles_area:1 "Leeward Antillies"
+ leeward_antilles_area_name:1 "Leeward Antillies"
+ leeward_antilles_area_adj:1 "Leeward Antillian"
+ 
+ south_windward_area:1 "South Windward Islands"
+ south_windward_area_name:1 "South Windward Islands"
+ south_windward_area_adj:1 "South Windward Islander"
+ 
+ barlovento_area:1 "Barlovento"
+ barlovento_area_name:1 "Barlovento"
+ barlovento_area_adj:1 "Barloventoan"
+ 
+ central_leeward_area:1 "Central Leeward Islands"
+ central_leeward_area_name:1 "Central Leeward Islands"
+ central_leeward_area_adj:1 "Central Leeward Islander"
+ 
+ south_leeward_area:1 "South Leeward Islands"
+ south_leeward_area_name:1 "South Leeward Islands"
+ south_leeward_area_adj:1 "South Leeward Islander"
+ 
+ basseterre_bay_area:1 "Basseterre Bay"
+ basseterre_bay_area_name:1 "Basseterre Bay"
+ basseterre_bay_area_adj:1 "Basseterrois"
+ 
+ anguilla_channel_area:1 "Anguilla Channel"
+ anguilla_channel_area_name:1 "Anguilla Channel"
+ anguilla_channel_area_adj:1 "Anguilla Channeler"
+ 
+#SuperStates Regions
+ greater_antilles_region:1 "Greater Antilles"
+ lesser_antilles_region:1 "Lesser Antilles"
+
+ pacific_coast_region:1 "Pacific Coast"
+ pacific_coast_region_name:1 "Pacific Coast"
+ pacific_coast_region_adj:1 "Pacific Coastal"
+ 
+ intermountain_west_region:1 "Intermountain West"
+ intermountain_west_region_name:1 "Intermountain West"
+ intermountain_west_region_adj:1 "Intermountain Western"
+ 
+ american_southwest_region:1 "American Southwest"
+ american_southwest_region_name:1 "American Southwest"
+ american_southwest_region_adj:1 "Southwestern"
+ 
+ great_plains_region:1 "Great Plains"
+ great_plains_region_name:1 "Great Plains"
+ great_plains_region_adj:1 "American Midwestern"
+ 
+ american_midwest_region:1 "American Midwest"
+ american_midwest_region_name:1 "American Midwest"
+ american_midwest_region_adj:1 "American Midwesterner"
+ 
+ appalachia_region:1 "Appalachia"
+ appalachia_region_name:1 "Appalachia"
+ appalachia_region_adj:1 "Appalachian"
+ 
+ old_southwest_region:1 "Old Southwest"
+ old_southwest_region_name:1 "Old Southwest"
+ old_southwest_region_adj:1 "Old Southwesterner"
+ 
+ #dixie_region:1 "Dixie"
+ #dixie_region_name:1 "Dixie"
+ #dixie_region_adj:1 "Southerner"
+ 
+ deep_south_region:1 "Deep South"
+ deep_south_region_name:1 "Deep South"
+ deep_south_region_adj:1 "Deep Southerner"
+ 
+ great_lakes_region:1 "Great Lakes"
+ great_lakes_region_name:1 "Great Lakes"
+ great_lakes_region_adj:1 "Great Laker"
+ 
+ mid_atlantic_region:1 "Mid-Atlantic"
+ mid_atlantic_region_name:1 "Mid-Atlantic"
+ mid_atlantic_region_adj:1 "Mid-Atlantic"
+ 
+ new_england_region:1 "New England"
+ new_england_region_name:1 "New England"
+ new_england_region_adj:1 "New Englander"
+ 
+ arctic_region:1 "Arctic"
+ arctic_region_name:1 "Arctic"
+ arctic_region_adj:1 "Arcticker"
+ 
+ western_canada_region:1 "Western Canada"
+ western_canada_region_name:1 "Western Canada"
+ western_canada_region_adj:1 "Western Canadian"
+ 
+ central_canada_region:1 "Central Canada"
+ central_canada_region_name:1 "Central Canada"
+ central_canada_region_adj:1 "Central Canadian"
+ 
+ maritimes_region:1 "Canadian Maritimes"
+ maritimes_region_name:1 "Canadian Maritimes"
+ maritimes_region_adj:1 "Maritime Canadian"
+ 
+ mexico_region:1 "Mexico"
+ mexico_region_name:1 "Mexico"
+ mexico_region_adj:1 "Mexican"
+ 
+ mexican_gulf_coast_region:1 "Mexican Gulf Coast"
+ mexican_gulf_coast_region_name:1 "Mexican Gulf Coast"
+ mexican_gulf_coast_region_adj:1 "Mexican Gulf Coaster"
+ 
+ costa_oeste_region:1 "Costa Oeste"
+ costa_oeste_region_name:1 "Costa Oeste"
+ costa_oeste_region_adj:1 "Costero Oeste"
+ 
+ central_america_region:1 "Central America"
+ central_america_region_name:1 "Central America"
+ central_america_region_adj:1 "Central American"
+ 
+ eastern_siberia_region:1 "Eastern Siberia"
+ eastern_siberia_region_name:1 "Eastern Siberia"
+ eastern_siberia_region_adj:1 "Eastern Siberian"
+ 
+ hawaii_region:1 "Hawaii"
+ hawaii_region_name:1 "Hawaii"
+ hawaii_region_adj:1 "Hawaiian"
+ 
+ polynesia_region:1 "Polynesia"
+ polynesia_region_name:1 "Polynesia"
+ polynesia_region_adj:1 "Polynesian"
+ 
+ micronesia_region:1 "Micronesia"
+ micronesia_region_name:1 "Micronesia"
+ micronesia_region_adj:1 "Micronesian"
+ 
+ melanesia_region:1 "Melanesia"
+ melanesia_region_name:1 "Melanesia"
+ melanesia_region_adj:1 "Melanesian"
+ 
+ pacific_islands_region:1 "Pacific Islands"
+ pacific_islands_region_name:1 "Pacific Islands"
+ pacific_islands_region_adj:1 "Pacific Islander"
+ 
+ west_australia_region:1 "Western Australia"
+ west_australia_region_name:1 "Western Australia"
+ west_australia_region_adj:1 "Western Australian"
+ 
+ east_australia_region:1 "Eastern Australia"
+ east_australia_region_name:1 "Eastern Australia"
+ east_australia_region_adj:1 "Eastern Australian"
+ 
+ lesser_antilles_region:1 "Lesser Antilles"
+ lesser_antilles_region_name:1 "Lesser Antilles"
+ lesser_antilles_region_adj:1 "Lesser Antillian"
+ 
+ hispaniola_region:1 "Hispaniola"
+ hispaniola_region_name:1 "Hispaniola"
+ hispaniola_region_adj:1 "Hispanic"
+ 
+ lucaya_region:1 "Lucaya"
+ lucaya_region_name:1 "Lucaya"
+ lucaya_region_adj:1 "Lucayan"
+ 
+ jamaica_region:1 "Jamaica"
+ jamaica_region_name:1 "Jamaica"
+ jamaica_region_adj:1 "Jamaican"
+ 
+ cuba_region:1 "Cuba"
+ cuba_region_name:1 "Cuba"
+ cuba_region_adj:1 "Cuban"
+ 
+#SuperStates Mod SuperRegions
+ canada_superregion:1 "Canada"
+ canada_superregion_name:1 "Canada"
+ canada_superregion_adj:1 "Canadian"
+ 
+ america_superregion:1 "America"
+ america_superregion_name:1 "America"
+ america_superregion_adj:1 "American"
+ 
+ central_america_superregion:1 "Central America"
+ central_america_superregion_name:1 "Mexico"
+ central_america_superregion_adj:1 "Mexican"
+ 
+ australia_superregion:1 "Australia"
+ australia_superregion_name:1 "Australia"
+ australia_superregion_adj:1 "Australian"
+ 
+ oceania_superregion:1 "Oceania"
+ oceania_superregion_name:1 "Oceania"
+ oceania_superregion_adj:1 "Oceanian"
+ 
+ new_world_superregion_name:1 "New World"
+ new_world_superregion_adj:1 "New World"
+ 
+ caribbean_superregion:1 "Caribbean"
+ caribbean_superregion_name:1 "Caribbean"
+ caribbean_superregion_adj:1 "Caribbean"
+ 
+ #SuperStates Mod Continents
+ australia_continent:1 "Australia"
+ 
+ #SuperStates Mod Province Groups
+  ## Confederacy
+ confederate_states_provincegroup:1 "Confederate States"
+ confederate_claims_provincegroup:1 "Confederate Claims"
+  ## Lakes
+ lake_erie_provincegroup:1 "Lake Erie"
+ lake_ontario_provincegroup:1 "Lake Ontario"
+ lake_huron_provincegroup:1 "Lake Huron"
+ lake_michigan_provincegroup:1 "Lake Michigan"
+ lake_superior_provincegroup:1 "Lake Superior"
+ lake_champlain_provincegroup:1 "Lake Champlain"
+  ## Caribbean
+ yucatan_peninsula_provincegroup:1 "Yucatan Peninsula"
+ cuba_provincegroup:1 "Cuba"
+ hispaniola_provincegroup:1 "Hispaniola"
+ haiti_provincegroup:1 "Haiti"
+ virgin_islands_provincegroup:1 "Virgin Islands"
+ lucaya_provincegroup:1 "Lucaya"
+ abc_islands_provincegroup:1 "ABC Islands"
+ grenadines_provincegroup:1 "Grenadines"
+ trinidad_tobago_provincegroup:1 "Trinidad & Tobago"
+ st_vincent_grenadines_provincegroup:1 "St. Vincent & the Grenadines"
+ antigua_barbuda_provincegroup:1 "Antigua & Barbuda"
+ st_martin_provincegroup:1 "St. Martin"
+ netherlands_antilles_provincegroup:1 "Netherlands Antilles"
+ saba_sint_eustatius_provincegroup:1 "Saba & Sint Eustatius"
+ st_kitts_nevis_provincegroup:1 "St. Kitts & Nevis"
+ guadeloupe_provincegroup:1 "Guadeloupe"
+ turks_caicos_provincegroup:1 "Turks & Caicos"
+ bahamas_provincegroup:1 "Bahamas"
+ grenada_provincegroup:1 "Grenada"
+  ## Canada
+ cape_breton_provincegroup:1 "Cape Breton"
+ prince_edward_island_provincegroup:1 "Prince Edward Island"
+ st_pierre_miquelon_provincegroup:1 "St. Pierre & Miquelon"
+ greenland_provincegroup:1 "Greenland"
+  ## Pacific
+ micronesia_states_provincegroup:1 "Micronesian States"
+ associated_states_provincegroup:1 "Associated States"
+ us_pacific_territories_provincegroup:1 "Pacific Territories"
+ nmi_guam_provincegroup:1 "Northern Marina Islands & Guam"
+ american_samoa_provincegroup:1 "American Samoa"
+ samoa_islands_provincegroup:1 "Samoan Islands"
+ northern_mariana_islands_provincegroup:1 "Northern Mariana Islands"
+ guam_provincegroup:1 "Guam"
+ marshall_islands_provincegroup:1 "Marshall Islands"
+  ## America
+ alabama_provincegroup:1 "Alabama"
+ alaska_provincegroup:1 "Alaska"
+ aleutia_provincegroup:1 "Aleutia"
+ arizona_provincegroup:1 "Arizona"
+ arkansas_provincegroup:1 "Arkansas"
+ california_provincegroup:1 "California"
+ connecticut_provincegroup:1 "Connecticut"
+ #delaware_provincegroup:1 "Delaware"
+ northern_california_provincegroup:1 "Northern California"
+ southern_california_provincegroup:1 "Southern Califoria"
+ san_francisco_bay_provincegroup:1 "San Francisco Bay"
+ colorado_provincegroup:1 "Colorado"
+ delmarva_provincegroup:1 "Delmarva"
+ florida_provincegroup:1 "Florida"
+ south_florida_provincegroup:1 "South Florida"
+ miami_provincegroup:1 "Miami"
+ georgia_provincegroup:1 "Georgia"
+ leeward_hawaii_provincegroup:1 "Leeward Hawaii"
+ hawaii_provincegroup:1 "Hawaii"
+ idaho_provincegroup:1 "Idaho"
+ idaho_panhandle_provincegroup:1 "Idaho Panhandle"
+ illinois_provincegroup:1 "Illinois"
+ indiana_provincegroup:1 "Indiana"
+ iowa_provincegroup:1 "Iowa"
+ kansas_provincegroup:1 "Kansas"
+ kentucky_provincegroup:1 "Kentucky"
+ louisiana_provincegroup:1 "Louisiana"
+ maine_provincegroup:1 "Maine"
+ maryland_provincegroup:1 "Maryland"
+ massachusetts_provincegroup:1 "Massachusetts"
+ massachusetts_islands_provincegroup:1 "Massachusetts Islands"
+ west_massachusetts_provincegroup:1 "West Massachusetts"
+ michigan_provincegroup:1 "Michigan"
+ lower_michigan_provincegroup:1 "Lower Michigan"
+ minnesota_provincegroup:1 "Minnesota"
+ mississippi_provincegroup:1 "Mississippi"
+ yazoo_provincegroup:1 "Yazoo"
+ missouri_provincegroup:1 "Missouri"
+ ozarks_provincegroup:1 "Ozarks"
+ montana_provincegroup:1 "Montana"
+ nebraska_provincegroup:1 "Nebraska"
+ nevada_provincegroup:1 "Nevada"
+ new_jersey_provincegroup:1 "New Jersey"
+ new_mexico_provincegroup:1 "New Mexico"
+ new_york_provincegroup:1 "New York"
+ long_island_provincegroup:1 "Long Island"
+ new_york_city_provincegroup:1 "New York City"
+ #new_hampshire_provincegroup:1 "New Hampshire"
+ downstate_new_york_provincegroup:1 "Downstate New York"
+ upstate_new_york_provincegroup:1 "Upstate New York"
+ north_carolina_provincegroup:1 "North Carolina"
+ north_dakota_provincegroup:1 "North Dakota"
+ dakota_provincegroup:1 "Dakota"
+ ohio_provincegroup:1 "Ohio"
+ oklahoma_provincegroup:1 "Oklahoma"
+ oregon_provincegroup:1 "Oregon"
+ pennsylvania_provincegroup:1 "Pennsylvania"
+ west_pennsylvania_provincegroup:1 "West Pennsylvania"
+ south_dakota_provincegroup:1 "South Dakota"
+ south_carolina_provincegroup:1 "South Carolina"
+ tennessee_provincegroup:1 "Tennessee"
+ west_tennessee_provincegroup:1 "West Tennessee"
+ east_tennessee_provincegroup:1 "East Tennessee"
+ central_tennessee_provincegroup:1 "Central Tennessee"
+ texas_provincegroup:1 "Texas"
+ metroplex_provincegroup:1 "Metroplex"
+ north_texas_provincegroup:1 "North Texas"
+ texas_panhandle_provincegroup:1 "Texas Panhandle"
+ rio_grande_provincegroup:1 "Rio Grande"
+ #rhode_island_provincegroup:1 "Rhode Island"
+ central_texas_provincegroup:1 "Central Texas"
+ east_texas_provincegroup:1 "East Texas"
+ utah_provincegroup:1 "Utah"
+ vermont_new_hampshire_provincegroup:1 "Vermont & New Hampshire"
+ virginia_provincegroup:1 "Virginia"
+ northern_virginia_provincegroup:1 "Northern Virginia"
+ washington_dc_metro_provincegroup:1 "D.C Metro"
+ district_of_columbia_provincegroup:1 "District of Columbia"
+ washington_provincegroup:1 "Washington"
+ washington_islands_provincegroup:1 "Washington Islands"
+ west_virginia_provincegroup:1 "West Virginia"
+ wisconsin_provincegroup:1 "Wisconsin"
+ wyoming_provincegroup:1 "Wyoming"
+ puerto_rico_provincegroup:1 "Puerto Rico"
+ #vermont_provincegroup:1 "Vermont"
+ ## Canada Provinces
+ alberta_provincegroup:1 "Alberta"
+ british_columbia_provincegroup:1 "British Columbia"
+ manitoba_provincegroup:1 "Manitoba"
+ new_brunswick_provincegroup:1 "New Brunswick"
+ newfoundland_labrador_provincegroup:1 "Newfoundland & Labrador"
+ nova_scotia_provincegroup:1 "Nova Scotia"
+ nunavut_provincegroup:1 "Nunavut"
+ nunavut_islands_provincegroup:1 "Nunavut Islands"
+ ontario_provincegroup:1 "Ontario"
+ toronto_provincegroup:1 "Toronto"
+ northern_ontario_provincegroup:1 "Northern Ontario"
+ quebec_provincegroup:1 "Quebec"
+ ottawa_gatineau_provincegroup:1 "Ottawa-Gatineau"
+ saskatchewan_provincegroup:1 "Saskatchewan"
+ buffalo_provincegroup:1 "Buffalo"
+ northwest_territories_provincegroup:1 "Northwest Territories"
+ yukon_provincegroup:1 "Yukon"
+ ## Mexico States
+ aguascalientes_provincegroup:1 "Aguascalientes"
+ chiapas_provincegroup:1 "Chiapas"
+ dfm_provincegroup:1 "Distrito Federal"
+ mexico_city_provincegroup:1 "Mexico City"
+ coahuila_provincegroup:1 "Coahuila"
+ hidalgo_provincegroup:1 "Hidalgo"
+ queretaro_provincegroup:1 "Queretaro"
+ jalisco_provincegroup:1 "Jalisco"
+ state_of_mexico_provincegroup:1 "Mexico State"
+ morelos_provincegroup:1 "Morelos"
+ michoacan_provincegroup:1 "Michoacan"
+ colima_provincegroup:1 "Colima"
+ nayarit_provincegroup:1 "Nayarit"
+ puebla_provincegroup:1 "Puebla"
+ tlaxcala_provincegroup:1 "Tlaxcala"
+ zacatecas_provincegroup:1 "Zacatecas"
+ northern_mexico_provincegroup:1 "Northern Mexico"
+ republic_of_sonora_provincegroup:1 "Republic of Sonora"
+ jalisco_provincegroup:1 "Jalisco"
+ baja_california_provincegroup:1 "Baja California"
+ baja_california_north_provincegroup:1 "Baja California State"
+ republic_of_rio_grande_provincegroup:1 "Rio Grande Republic"
+ ## Australia States
+ new_south_wales_provincegroup:1 "New South Wales"
+ princeland_provincegroup:1 "Princeland"
+ queensland_provincegroup:1 "Queensland"
+ north_queensland_provincegroup:1 "North Queensland"
+ south_australia_provincegroup:1 "South Australia"
+ western_australia_provincegroup:1 "Western Australia"
+ australian_capital_territory_provincegroup:1 "Australian Capital Territory"
+ jervis_bay_provincegroup:1 "Jervis Bay"
+ act_jbt_provincegroup:1 "ACT & Jervis Bay"
+ tasmania_islands_provincegroup:1 "Tasmanian Islands"
+ tasmania_proper_provincegroup:1 "Tasmania Proper"
+ aus_indian_ocean_islands_provincegroup:1 "Australian Indian Ocean Islands"
+ northern_territory_provincegroup:1 "Northern Territory"
+ central_australia_provincegroup:1 "Central Australia"
+ australian_capital_territory_provincegroup:1 "Australian Capital Territory"
+ long_island_provincegroup:1 "Long Island"
+ south_australia_provincegroup:1 "South Australia"
+ western_australia_provincegroup:1 "Western Australia"
+ ## New Zealand
+ south_island_provincegroup:1 "South Island"
+ north_island_provincegroup:1 "North Island"
+ nz_islands_provincegroup:1 "New Zealand Islands"
+ norfolk_island_provincegroup:1 "Norfolk Island"

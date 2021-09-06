@@ -1,0 +1,1311 @@
+﻿l_english:
+
+ ##############################################################################
+ #Currently writing new events here, please avoid making changes here. Suggestions are appreciated.
+ #
+ #Will start with Discovery of Europe event notice, then other events will fire, especially for religion unifications, but solely won't be limited to that.
+
+ #Discovery of Europe!
+ superstates_europe.101t:0 "Discovery of Europe!"
+ superstates_europe.101d:0 "Far across the Atlantic Ocean to the East is the European Continent and its numerous kingdoms and the bastian of Christianity.  Having established a connection to Europe, we are now faced with adapting to the European ways or continuing our own ways."
+ superstates_europe.101opta:0 "This could get interesting."
+ #The discovery of Europe is revealed to all North American.
+ 
+ #Discovery of Rome for American Catholics
+ superstates_europe.2t:0 "Mission from the Holy See"
+ superstates_europe.2d:0 "We have recently learned of the great seat of the European Catholic Church in ancient European city of Rome and have recieved a number of cardinals on a diplomatic mission to learn of our ways.  They were ecstatic at learning much of our faith is of the same Chrisitan traditon but lacks a central authority that was lost in the distant past.  Within hours they presented much of their religious writings, informed us of their structure, and suggested that much of it could be made compatible with our traditions just by aligning ourselves to the Papal Authority."
+ superstates_europe.2opta:0 "We belong with all Catholics and the one true church."
+ #Only for American Catholics: Convert national religion and all owned American Catholic provinces to Catholic; receive 30 papal authority
+ superstates_europe.2optb:0 "It would be unwise to become beholdened to this foreign religious figure so far away."
+ #Only for American Catholics: Set Permanent Opinion Modifier to -50 with the Papal State, European Catholic states get American Heresy CB if they have the Religious Ideas.
+ 
+ #For owning American Catholic provinces as Roman Catholic state that were not converted instantly with the previous event, this event may fire at random 9 months after coring the province.
+ superstates_europe.3t:0 "Integration of New Territorial Acquisitions Into Full Communion"
+ superstates_europe.3d:0 "The recently acquired territory of [Root.GetName] has become an important part of our nation, however its local demonination is not in full communion with the greater church since the unification with the Bishop of Rome.  If it is to be permitted, the local parishes are to be incorporated into the church administration; however it may upset members of the clergy who are unaccustomed to such a high authority figure in the Church."
+ superstates_europe.3opta:0 "Of course, the Roman Bishop is brining needed guidance such as a shepherd guides his flock."
+ #Allows for instant conversion without requiring a missionary to convert, but costs 50 ADM points and 50 DIP points and 5% yearly income. Gain token amount of Papal Influence; set provincial modifier for 5 years +1 unrest.
+ superstates_europe.3optb:0 "No, leave them be, nobody can force the issue of unification upon them."
+ #Does nothing, however this now requires a missionary and its associated costs to convert.
+ 
+ #Discover of European Reformation for American Protestants
+ superstates_europe.4t:0 "The European Reformation Reaches Across the Sea"
+ superstates_europe.4d:0 "The European Catholic Church has become divided by the theological challenges of reformers creating a division of the Church of Rome.  The Papacy and its cardinals in support of the traditional ways view these reformers and desenters as Protestants for protesting the infalibility of the Pope.  Missionaries sent by the leaders of the new Protestant faith from their centers of theological."
+ 
+ #Discovery of Protestant Reformation for Australian Protestants
+ 
+ # Great Awakening Events
+ superstates_greatawakening.1t:0 "A New Faith Emerges" # Lutheran
+ superstates_greatawakening.1d:0 "As time has gone on, our people have lost touch with their religious beliefs, possessing a nostalgic yearning. Despite those across the continent sharing the same faith in name, for many years now this has been drastically different in practice, varying from location to location. These differences have given rise to fractures in the American Protestant faith, and our people are now declaring themselves to be Lutheran."
+ superstates_greatawakening.1opta:0 "Blasphemy!"
+ superstates_greatawakening.2t:0 "A New Faith Emerges" # Methodist
+ superstates_greatawakening.2d:0 "As time has gone on, our people have lost touch with their religious beliefs, possessing a nostalgic yearning. Despite those across the continent sharing the same faith in name, for many years now this has been drastically different in practice, varying from location to location. These differences have given rise to fractures in the American Protestant faith, and our people are now declaring themselves to be Methodist."
+ superstates_greatawakening.2opta:0 "Blasphemy!"
+ superstates_greatawakening.3t:0 "A New Faith Emerges" # Baptist
+ superstates_greatawakening.3d:0 "As time has gone on, our people have lost touch with their religious beliefs, possessing a nostalgic yearning. Despite those across the continent sharing the same faith in name, for many years now this has been drastically different in practice, varying from location to location. These differences have given rise to fractures in the American Protestant faith, and our people are now declaring themselves to be Baptist."
+ superstates_greatawakening.3opta:0 "Blasphemy!"
+ superstates_greatawakening.4t:0 "A New Faith Emerges" # Anglican
+ superstates_greatawakening.4d:0 "As time has gone on, our people have lost touch with their religious beliefs, possessing a nostalgic yearning. Despite those across the continent sharing the same faith in name, for many years now this has been drastically different in practice, varying from location to location. These differences have given rise to fractures in the Protestant faith, and our people are now declaring themselves to be Anglican."
+ superstates_greatawakening.4opta:0 "Blasphemy!"
+ superstates_greatawakening.5t:0 "A New Faith Emerges" # Australian Protestant
+ superstates_greatawakening.5d:0 "As time has gone on, our people have lost touch with their religious beliefs, possessing a nostalgic yearning. Despite those across the continent sharing the same faith in name, for many years now this has been drastically different in practice, varying from location to location. These differences have given rise to fractures in the Australian Protestant faith, and our people are now declaring themselves to be Anglican."
+ superstates_greatawakening.5opta:0 "Blasphemy!"
+ 
+ ##############################################################################
+ 
+ #Political Scandals
+ #Governor Scandal/Impeachment
+ superstates_scandal.1t:0 "[Root.Monarch.GetTitle] Faces Scandal!"
+ superstates_scandal.1d:0 "News of a scandal that has ties to the Administration has surfaced and the Legislature is convening to empanel a committee to investigate the claims.  Unfortunately, the scandal has direct links to the [Root.Monarch.GetTitle]."
+ superstates_scandal.1opta:0 "The [Root.Monarch.GetTitle] resigns to escape serious charges."
+ superstates_scandal.1optb:0 "The [Root.Monarch.GetTitle] resigns as the lies have disillusioned [Root.Monarch.GetHerHim]."
+ superstates_scandal.1optc:0 "The [Root.Monarch.GetTitle] resigns after conversing with [Root.Monarch.GetHerHim] cabinet."
+ superstates_scandal.1optd:0 "The [Root.Monarch.GetTitle] denies any misdeeds and defends the actions taken."
+ superstates_scandal.2t:0 "[Root.Monarch.GetTitle] Impeached"
+ superstates_scandal.2d:0 "Articles of Impeachment have been passed by the Lower House and the Senate is trying the Governor, and others in the Administration involved, with the specific abuses of office.  Numerous peices of evidence have been presented in the Senate chambers on the matter bringing considerably political emotion.  A supermajority is required to convict through impeachement and remove [Root.Monarch.GetTitle] from office."
+ superstates_scandal.2opta:0 "The supermajority vote fails by a large margin."
+ superstates_scandal.2optb:0 "The supermajority vote fails by a large margin."
+ superstates_scandal.2optc:0 "The supermajority vote fails by a large margin."
+ superstates_scandal.tooltip2a:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.tooltip2b:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.tooltip2c:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.2optd:0 "The supermajority vote fails by a small margin."
+ superstates_scandal.2opte:0 "The supermajority vote fails by a small margin."
+ superstates_scandal.2optf:0 "The supermajority vote fails by a small margin."
+ superstates_scandal.tooltip2d:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.tooltip2e:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.tooltip2f:0 "The [Root.Monarch.GetTitle] keeps his office. The Senate failed to obtain a supermajority."
+ superstates_scandal.2optg:0 "The supermajority vote succeeds by a small margin."
+ superstates_scandal.2opth:0 "The supermajority vote succeeds by a small margin."
+ superstates_scandal.2opti:0 "The supermajority vote succeeds by a small margin."
+ superstates_scandal.tooltip2g:0 "The [Root.Monarch.GetTitle] is convicted of the charges and removed from office."
+ superstates_scandal.tooltip2h:0 "The [Root.Monarch.GetTitle] is convicted of the charges and removed from office."
+ superstates_scandal.tooltip2i:0 "The [Root.Monarch.GetTitle] is convicted of the charges and removed from office."
+ superstates_scandal.2optj:0 "The supermajority vote succeds by a large margin."
+ superstates_scandal.2optk:0 "The supermajority vote succeds by a large margin."
+ superstates_scandal.2optl:0 "The supermajority vote succeds by a large margin."
+ superstates_scandal.tooltip2j:0 "The [Root.Monarch.GetTitle] is removed from office utterly ruined and to face criminal felony charges before a judge and an angry courtroom."
+ superstates_scandal.tooltip2k:0 "The [Root.Monarch.GetTitle] is removed from office utterly ruined and to face criminal felony charges before a Judge and an angry courtroom."
+ superstates_scandal.tooltip2l:0 "The [Root.Monarch.GetTitle] is removed from office utterly ruined and to face criminal felony charges before a Judge and an angry courtroom."
+ 
+ #Premiership Scandal
+ superstates_scandal.3t:0 "[Root.Monarch.GetTitle] Scandal!"
+ superstates_scandal.3d:0 "The opposition in Parliament has been given a report on the misdeeds of a member of the cabinet for corruption and abuses of office and position.  Much worse is that this scandal is linked to the [Root.Monarch.GetTitle].  There is talk of the opposition of calling for a vote on a motion of no confidence."
+ superstates_scandal.3opta:0 "The [Root.Monarch.GetTitle] resigns to save face and go out peacefully."
+ superstates_scandal.3optb:0 "The [Root.Monarch.GetTitle] defends himself and the cabinet against the accusation."
+ superstates_scandal.4t:0 "Motion of No Confidence" 
+ superstates_scandal.4d:0 "The report accusing a major scandal in the [Root.Monarch.GetTitle]'s cabinet has been submitted along with a Motion of No Confidence.  The [Root.Monarch.GetTitle] disputes the accusations, however the opposition is united against the current Government.  A majority is required to sustain the Motion of No confidence and remove the [Root.Monarch.GetTitle]."
+ superstates_scandal.4opta:0 "The vote fails by a large number of votes."
+ superstates_scandal.4optb:0 "The vote fails by a small number of votes."
+ 
+ superstates_scandal.4optc:0 "The vote passes by a small number of votes."
+ superstates_scandal.4optd:0 "The vote passes by a large number of votes."
+ 
+ #Potato Famine (Idaho/Prince Edward Island)
+ potato_famine.1t:0 "Potato Famine"
+ potato_famine.1d:0 "Our most important crop, the potato, has experience large scale crop failures from the potato blight.  Reports have been received of potato blights damage across much of the state, often with entire fields of potatoes rendered inedible.  Bringing along with it famine and human suffering.  Food riots are increasing."
+ potato_famine.1opta:0 "Famine?  I'll believe it when I see it."
+ potato_famine.1optb:0 "Do what ever it takes to help the people."
+ potato_famine.2t:0 "Continued Potato Famine"
+ potato_famine.2d:0 "Relief from the Potato Famine in erradication of the potato blight or in the availability of cheap alternative food sources has not arrived.  What should we do?"
+ potato_famine.2opta:0 "Put the full weight of the administration in erradicating the potato blight while reimbursing the finanically ruined farmers."
+ potato_famine.2optb:0 "Warn neighboring nations of potato blight spreading while spending money abroad to import alternative food sources to be distributed amongst the people."
+ potato_famine.2optc:0 "Moblize the military to squash rebellions and burn the lands of rebellious farmers."
+ potato_famine.2optd:0 "When the dead are lying before my feet will I accept there is a famine!"
+ potato_famine.3t:0 "The Potato Famine is Real!"
+ potato_famine.3d:0 "Piles of dead and dying are placed in the Capital Square in full view of the [Root.Monarch.GetTitle]'s office window. The citizens and the lesser members of the administration have become disgusted for such disregard of the situation."
+ potato_famine.3opta:0 "A foul stench..."
+ potato_famine.3optb:0 "... of life quenched..."
+ potato_famine.3optc:0 "... amongst senses clenched."
+ potato_famine.4t:0 "[Root.Monarch.GetTitle], the famine has ended."
+ potato_famine.4d:0 "The report has come in the famine has ended through adaptation at the farm and in the city.  While the people may have full bellies, faith in their leader has dried up; and with it a great damage has been inflicted to our nation."
+ potato_famine.4opta:0 "Thanks [Root.Monarch.GetName]!"
+ potato_famine.5t:0 "The administration has ended the famine!"
+ potato_famine.5d:0 "Through the hardwork of government officials and strong civil leadership was the famine brought under control and the blight erradicated."
+ potato_famine.5opta:0 "God Bless Our Nation!"
+ potato_famine.6t:0 "Diplomacy and Traders have ended the famine!"
+ potato_famine.6d:0 "By informing our neighbors of the blight and cooperating on interstate control of the agricultural pest, we were able to secure, pay for, and transport the imported food stock supplies from plentiful lands abroad."
+ potato_famine.6opta:0 "And with it came the first Interstate Highway!"
+ potato_famine.7t:0 "The Military has ended the famine!"
+ potato_famine.7d:0 "By putting down the unrest amongst the various sections of society, the military discovered that the land recovered and blight was eliminated through the destruction of the crops by fire; leading to all the farmers to destroy their crops and plant resistant varieties in their place."
+ potato_famine.7opta:0 "A miserable, but necessary, struggle."
+ 
+ #New Zealand Culture Event
+ new_zealand_culture.1t:0 "New Zealand Culture Arises"
+ new_zealand_culture.1d:0 "The intermixing of our settlers on the South Island and the native population has resulted in a unique culture that does not immediately identify with our national culture. A growing sentiment is that of a New Zealand nation."
+ new_zealand_culture.1opta:0 "Oh."
+ new_zealand_culture.2t:0 "New Zealand Culture Arises"
+ new_zealand_culture.2d:0 "The intermixing of our settlers on the North Island and the native population has resulted in a unique culture that does not immediately identify with our national culture. A growing sentiment is that of a New Zealand nation."
+ new_zealand_culture.2opta:0 "Oh."
+ 
+ #Culture Spread Events
+ superstates_culture.1t:0 "Cultural Assimilation in $PROVINCENAME$"
+ superstates_culture.1d:0 "Over the years, our language and traditions have become so dominant among the people of $PROVINCENAME$ that their cultural identity has shifted."
+ superstates_culture.1opta:0 "Excellent."
+ 
+ #####Random Events
+ #Furries
+ superstates_random_events.1t:0 "Invasion of an Army dressed in Animal Costumes"
+ superstates_random_events.1d:0 "Some sort of mad scientist has proclaimed a congress for Furries and suddenly thousands of animal costumers have invaded our capital city, [Root.Capital.GetCapitalName].  They have brought large sums of money with them as well as numerous forms of art and entertainment.  While they get along with the locals in the area inns and eating establishments, there are many who are deeply suspicious."
+ superstates_random_events.1opta:0 "But they bring money and are having such a good time with our people."
+ superstates_random_events.1optb:0 "This is a travesty that must be resisted, who knows what kind of misdeeds they are up to."
+ FURRIES_DEMAND_FUR:0 "Fursuits are in Demand."
+ superstates_random_events.2t:0 "Anthropromorphic Fox Seeks Assistance"
+ superstates_random_events.2d:0 "[Root.Monarch.GetTitle], a person dressed as a fox has requested assistance in funds for lodging, food, and entertainment at the furry congress in [Root.Capital.GetCapitalName].  He seems sincere, however, some other peoples dressed as animals say he's just a lazy bum who lives in his parents basement and has squandered all of his money just to get here."
+ superstates_random_events.2opta:0 "Give him assistance, he's so adorable."
+ superstates_random_events.2optb:0 "Make him a guest of state, we need more interesting characters around for a while."
+ superstates_random_events.2optc:0 "No way and keep him away from my sight!"
+ superstates_random_events.3t:0 "Furries expelled from [Root.Capital.GetCapitalName]"
+ superstates_random_events.3d:0 "We finally removed the furry scurge from our glorious capital city.  While the population doesn't seem to care, we might have to be worried as they could convert our own people to their alternate way of life eventually."
+ superstates_random_events.3opta:0 "On second thought, I fear L. Ron Hubbard's followers more than these furries."
+ superstates_random_events.3optb:0 "Oh good!  Have the army take a flea and tick bath before returning to the barracks."
+ #Landslide (Bohemian Rhapsody nod)
+ superstates_random_events.4t:0 "Is this the real life? Is this just fantasy?"
+ superstates_random_events.4d:0 "$PROVINCENAME$ caught in a landslide."
+ superstates_random_events.4opta:0 "No escape from reality."
+ superstates_random_events.4optb:0 "Open your eyes."
+ superstates_random_events.4optc:0 "Look up to the skies and see."
+ landslide_damage:0 "Landslide Damage"
+ desc_landslide_damage:0 "This province was damaged by a landside."
+ #Lights over [Root.Capital.GetName]
+ superstates_random_events.5t:0 "Lights over [Root.Capital.GetName]"
+ superstates_random_events.5d:0 "On a silent, calm, clear, and moonless night came a strange sight for those outside at about midnight.  A number of floating lights, between five and seven silently moved across the night sky from the north and traveled silently across the city until they disappeared to the south.  Among the witnesses was our [Root.Monarch.GetTitle], taking a late night stroll in the gardens near the capitol building."
+ superstates_random_events.5opta:0 "The Heavens Are Preparing for War!"
+ superstates_random_events.5optb:0 "It's a sign that God's wrath is to come!"
+ superstates_random_events.5optc:0 "Astrologers are fleeing the capital!"
+ superstates_random_events.5optd:0 "The Four Horsemen of the Apocalypse are decending!"
+ superstates_random_events.5opte:0 "Russian Preemptive Nuclear Strike!"
+ superstates_random_events.5optf:0 "Why are we panicking over visitors from Stellaris?!"
+ 
+ 
+ ##########American States Flavor
+ #####Flavor for Alabama
+ flavorALA.1t:0 "The Jubilee" #Beneficial Event
+ flavorALA.1d:0 "The Jubilee is a mysterious event where large amount of fish and crustacean gather in large numbers along the shallow waters of Mobile Bay esutary.  This Jubilee is one of the best and numerous fish and crab have been caught."
+ flavorALA.1opta:0 "Good this will have a positive effect."
+ flavorALA.2t:0 "The Jubilee" #Detrimental Event
+ flavorALA.2d:0 "The Jubilee is a mysterious event that normally results in large number of fish and crustacean gathering in the shallow waters of Mobile Bay esutary.  Unfortunately, the Jubilee has been absent with very few fish and crustacean seen and even fewer caught.  Nobody knows what's going on as its been long overdue."
+ flavorALA.2opta:0 "This is not going to be easy for us to take."
+ jubilee_good:0 "Good Jubilee"
+ desc_jubilee_good:0 "The Jubilee was very good."
+ jubilee_bad:0 "Bad Jubilee"
+ desc_jubilee_bad:0 "The Jubilee never came."
+ JUBILEE_FISH_DECREASE:0 "Price of fish decreased from very good Jubilee harvest."
+ JUBILEE_FISH_INCREASE:0 "Price of fish increased from very bad Jubilee harvest."
+ 
+ #####Flavor for Alaska
+ #Emergency Transport to Nome
+ flavorASK.1t:0 "Epidemic Breaks Out in Isolated Town"
+ flavorASK.1d:0 "An epidemic of diphtheria has broken out in an islated town.  They request we send them necessary medicines as they're running dangerously low, but with the condition of the trails to and from the town, its a very hazardous task.  Should we mount an expedition to deliver the requested medicines?"
+ flavorASK.1opta:0 "It may be dangerous, but there will be glory!"
+ flavorASK.1optb:0 "No, the town is too far away and isolated for us to attempt such."
+ #Valuable Resource
+ flavorASK.2t:0 "Discovery of Valuable Resource"
+ flavorASK.2d:0 "A minor but highly profitable resource was recently discovered in our lands, people are rushing to our state to attempt to make their fortune."
+ flavorASK.2opta:0 "Invest in keeping them here long term."
+ flavorASK.2optb:0 "Invest in improving their economy."
+ flavorASK.2optc:0 "Invest in their local security."
+ flavorASK.2optd:0 "They're not likely to stay very long, so lets just profit from them in the short term."
+ #Orthodox Alaska
+ #flavorASK.3t:0 "Orthodoxy Springs Up"
+ #flavorASK.3d:0 "With the local Catholic heirarchy unsure what to do with out reliable guidance from the Papacy, the disarray has caused a number of priests on Kodiak Island to align their doctrines with the Orthodox church that has been a small minority over the last several generations."
+ #flavorASK.3opta:0 "A welcomed revival of Orthodoxy in Alaska."
+ #flavorASK.3optb:0 "Worrisome for the Catholic clergy."
+ #flavorASK.4t:0 "Disarray with the Catholic Parishes"
+ #flavorASK.4d:0 "After the rejection of proper Roman Catholic doctrine on Kodiak Island, the remaining Catholic parishes have become divided on practically every doctrinal issue.  The dispute is leading to other parishes of the state to convert."
+ #flavorASK.4opta:0 "Another province converts to Orthodoxy."
+ #flavorASK.5t:0 "Doctrinal Dispute Involves State"
+ #flavorASK.5d:0 "The dispute between the Catholic parishes has reached a point where it now divides the state.  There's a call for the state to side with the Orthodox position and there is a counter-call to side with the Catholic position."
+ #flavorASK.5opta:0 "Officially Support the Orthodox doctrine."
+ #flavorASK.5optb:0 "Officially Support the Catholic doctrine."
+ #flavorASK.5optc:0 "Officially Support neutrality between doctrines."
+ #flavorASK.6t:0 "Catholic Doctrine Prevails"
+ #flavorASK.6d:0 "The parishes that rejected Catholic doctrine in favor of the Orthodox position have been restored and the divisions of doctrine mended so as to promote a unified Catholic position in the state."
+ #flavorASK.6opta:0 "I'm glad its over."
+ #flavorASK.7t:0 "Orthodox Doctrine Prevails"
+ #flavorASK.7d:0 "The Catholic parishes having been in dispute and disorder succumbed to the pressures and have been abandoned their doctrine for Orthodoxy.  Our great state has returned to a faith it hasn't seen in generations."
+ #flavorASK.7opta:0 "A new glory for Alaska." 
+ 
+ 
+ 
+ #####Flavor for American Samoa
+ flavorASM.1t:0 "Tropical Cyclone Strikes Island"
+ flavorASM.1d:0 "The preceeding days were tranquil with clear skies and slight breeze, but then came in the distance a towering wall of clouds that steadily creeped closer and closer to the island.  Merchant sailors, recognizing the weather pattern quickly secured their ships and made for high ground.  As the clouds crept over the island, the heavy wind and rain began to pelt everything in the surrounding environs, leading to the destruction of buildings and ships in the harbor."
+ flavorASM.1opta:0 "It could have been worse."
+ flavorASM.1optb:0 "Utterly devastating to our home."
+ 
+ 
+ #####Flavor for Arizona/Baja Arizona
+ #Mormon Arizona Event Chain
+ flavorARZ.1t:0 "Mormom Upheaval!"
+ flavorARZ.1d:0 "Mormon settlers centuries ago established a number of important cities in Arizona, but over time migrants of other faiths into these cities outnumbered the Mormon pioneers.  They've never forgotten their important contributions to Arizona, but have seen their acceptance wane in the wake of demographic change.  Large portions of the Mormons population have been provoked over the tension between the faiths in society and in the administration causing widespread turmoil across the state with significant consequences."
+ flavorARZ.1opta:0 "Governor, our people have been silently Mormon all along!"
+ flavorARZ.1optb:0 "This heresy shall be resisted."
+ flavorARZ.2t:0 "Continued Mormon Unrest!"
+ flavorARZ.2d:0 "With a number of our institutions being managed by Mormons, they see it only be fair that the state's religion be Mormonism and until then they will continue to create disorder and destruction."
+ flavorARZ.2opta:0 "Never!  This disorder is most unbecoming of supposed peaceful people!"
+ flavorARZ.2optb:0 "We must accept the inevitable reality."
+ flavorARZ.3t:0 "Catholic Unrest!"
+ flavorARZ.3d:0 "With Mormonism officially declared the State reigion, Catholics fearing the loss of their status have threaten revolt."
+ flavorARZ.3opta:0 "Continued turmoil..."
+ flavorARZ.3optb:0 "Placate them with monetary and political reassurances."
+ flavorARZ.4t:0 "State Returns to Peace"
+ flavorARZ.4d:0 "With the rebellions over and the people exhausted from the religious strife, a peace settles over the land..."
+ flavorARZ.4opta:0 "If we can make it a permanent peace, do so."
+ flavorARZ.4optb:0 "Any internal peace is welcomed peace."
+ #Gunfight at the OK Corral
+ flavorARZ.5t:0 "Gunfight at the O.K. Corral"
+ flavorARZ.5d:0 "Dateline - Tombstone\n\nShootout amongst federal marshals and gang known as the \"Cowboys\" broke out in the streets of Tombstone.  Three men are dead and a massive manhunt is on for the other members of the Cowboys gang.  The town is seeking witnesses to help determining the events and criminal charges."
+ flavorARZ.5opta:0 "There is going to be intense media attention for a long period of time."
+ flavorARZ.6t:0 "[Root.Monarch.GetTitle] assassinated at O.K. Corral Reenactment"
+ flavorARZ.6d:0 "Dateline - Tombstone\n\n[Root.Monarch.GetTitle] [Root.Monarch.GetName] was making a good will tour when [Root.Monarch.GetSheHe] passed through Tombstone to partake in the renancement of the famed \"Gunfight at the O.K. Corral\".  The reenactment performance proceeded at normal until the shootout scene when an unknown assailant shot the [Root.Monarch.GetTitle].  In the confusion, people watching on the street scrambled making identifying the assailant impossible.  However, the reenactment performers where held for questioning and searched which turned up no identifible clues.  With it comes great uncertainty and a number of questions for the people of Arizona."
+ flavorARZ.6opta:0 "Damn them! Why to such a great statesman?"
+ flavorARZ.6optb:0 "Oh great, anarchy in our own cities and towns."
+ flavorARZ.6optc:0 "Couldn't have happened to a nicer person."
+ flavorARZ.7t:0 "Establish Lee's Ferry"
+ flavorARZ.7d:0 "John D. Lee, a member of the local fundamentalist Mormon cult in the Arizona Strip and Southern Utah, discovered a natural break in otherwise impassible vertical canyon walls.  The confluence of the Paria and Colorado Rivers just happens to be crucial geological junction where the Kaibab Plateau gently slopes down to meet a calm river and a ascent the short walls of Colorado Plateau side of Northern Marble Canyon.  John D. Lee has secured the site and is looking for financing to construct the ferry crossing."
+ flavorARZ.7opta:0 "Yes! This is an important crossing!"
+ flavorARZ.7optb:0 "No, we can't spare the resources."
+ 
+ 
+ #####Flavor for Arkansas
+ flavorARS.01t:0 "Ozarks Economically Depressed"
+ flavorARS.01d:0 "The Ozarks were colonized by families generations ago from the states to the East however because of the remoteness of the region the people have been cut off from the typical trade routes.  While the Ozarks have developed a distinct and celebrated culture, it has fostered resentment amongst some who travel into the more economically developed parts near nearby."
+ flavorARS.01opta:0 "Survey and construct improvements to increase local trade."
+ flavorARS.01optb:0 "Increase military recruitment here to reduce unemployment."
+ flavorARS.01optc:0 "Passively allow them to go back to distilling hard liquor."
+ flavorARS.02t:0 "Pursuit of Tom Chaney"
+ flavorARS.02d:0 "Marshal Rooster Cogburn hired by Mattie Ross to find and capture the man accused her father, Frank Ross in Fort Smith.  After Rooster accepted the job for 100¤, was joined up by a Texas Ranger named La Boeuf in search for a man who goes by the name Theron Chelmsworth and matches Tom Chaney's description for the murder of a Texas Senator and his dog.  The three traveled through the neighboring territory outside the normal law of the Western District. Having caught up with suspect hiding out with other outlaws, he was fatally shot and presented to Fort Smith and Waco for the appropriate claims of the reward."
+ flavorARS.02opta:0 "The young girl has avenged her father's murder." #Prestige +1
+ flavorARS.03t:0 "The Hanging Judge"
+ flavorARS.03d:0 "A judge in our Western District has become famous for his long tenure and his committment to our common law ideals.  He's not quick to sentence to death, however when the law requires it he does so, earning him the moniker \"The Hanging Judge\".  As such he's become a respective member of society in his district and feared by criminals caught up in his courtroom."
+ flavorARS.03opta:0 "Isaac Charles Parker is his name." #Prestige +5, Permanent -5 Unrest in Sebastian prov; Fires anytime after 1500.
+ flavorARS.04t:0 "The End of an Era in the Western District"
+ flavorARS.04d:0 "Our esteemed leading judge in the courts of our Western District has passed away. He was given the moniker \"The Hanging Judge\". Where he dispensed justice all through the Western district of our state and has been a celebrated member of the Western District.  His death brings much change to the courtroom and to the people of the Western District."
+ flavorARS.04opta:0 "May Judge Parker rest in peace." #Remove -5 Unrest in Sebastian prov; Event fires no sooner than 25 years and no later than 45 years after the event "The Hanging Judge"
+ flavorARS.05t:0 "Discovery of Diamonds"
+ flavorARS.05d:0 "Plowing a field in an unassuming plot of land turned up in the [Root.GetName] sun a shimmer on the tilled earth.  A farmer of the name of Zebulon noticed the unusual sight and discovered it to be a rough gemstone.  The local assayer requested he travel to the capital and have a gemstone specialist investigate it.  Once in the capital, he met with the most important gemologist in all of [Root.GetName], who informed him he had discovered a natural flawless diamond.  Upon his rush back home, further diamonds were discovered in neighboring fields creating a rush of prospectors for the rare gemstone."
+ flavorARS.05opta:0 "An amazing find in such an unassuming region." #Miller prov tradegood changes to Gems.
+ flavorARS.06t:0 "Fields of Diamonds Are No More"
+ flavorARS.06d:0 "The fields of Diamonds that have supplied large quantities of gemstones, especially diamonds have been depleted. And the local economy has crashed as residents switch from mining to agriculture.  It will be tough, but the locals are adjusting to the new economic reality."
+ flavorARS.06opta:0 "Return to raising livestock seems to be the accepted norm now." #Miller prov tradegood changes to Livestock, fires if there is more than 50 dev in Millar prov and is guaranteed to fire if there is more than 150 dev
+
+ #####Flavor for California/San Francisco Bay/San Joaquin Valley/Southern California
+ #The A-Team
+ flavorCAL.1t:0 "§RThe A-Team!§!"
+ flavorCAL.1d:0 "Ten years ago, a crack commando unit was sent to prison by a military court for a crime they didn't commit.  These men promptly escaped from a maximum security stockade to the Los Angeles underground.  Today, still wanted by §Ytheir§! government, they survive as soldiers of fortune.  If you have a problem, if no one else can help, and if you can find them, maybe you can hire... the §RA-Team§!.\n\nWell now you found them and can pick one to lead your army.  Just ask them to leave the custom GMC wagon in storage, we don't need to be that obvious on the battlefield."
+ flavorCAL.1opta:0 "Bosco \"B.A\" Baracas"
+ flavorCAL.1optb:0 "John \"Hannibal\" Smith"
+ flavorCAL.1optc:0 "H.M. \"Howling Mad\" Murdock"
+ flavorCAL.1optd:0 "Templeton \"Faceman\" Peck"
+ flavorCAL.1opte:0 "We can't afford any of them."
+ #Earthquake
+ #NOTE THAT THE EVENT NUMBER 02 IS SPLIT BETWEEN TWO POSSIBLE EVENTS, ONE FOR LOS ANGELES (21) OR ONE FOR SAN FRANCISCO (22)! THEY BOTH SHARE THE SAME OPTIONS.
+ flavorCAL.21t:0 "Earthquake The Shakening!"
+ flavorCAL.21d:0 "A powerful earthquake has struck Los Angeles, causing destruction and mayhem through the region affected.  Scores of people are homeless, have been injuried, or killed.  It may take some time to rebuild from this natural disaster, however it may be prudent to send help immediately."
+ flavorCAL.22t:0 "The Great Earthquake of [GetYear]!"
+ flavorCAL.22d:0 "Our most important city by the bay has been struck by an earthquake.  Numerous buildings have been destroyed along with many injuried or killed.  This is major set back for our people and their culture, however we can rebuild sooner if the city receives immediate help."
+ flavorCAL.2opta:0 "Send our administors to help."
+ flavorCAL.2optb:0 "Send our troops to help."
+ flavorCAL.2optc:0 "Request help from abroad."
+ opinion_earthquake:0 "Earthquake Disaster Assistance"
+ #Others
+ flavorCAL.3t:0 "Criminal Choas requires Choatic Police Response"
+ flavorCAL.3d:0 "Los Angeles has decended into a den of criminal anarchy and the only man who has been able to apprehend the worst of the worst has been Officer John Spartan.  Unfortunately he's also the reason why our courts are overrun with insurance claims, he's a nightmare to insurers over property damage claims."
+ flavorCAL.3opta:0 "He's just doing his job... and things get demolished."
+ flavorCAL.4t:0 "Bad Guy Dropped From Nakatomi Plaza"
+ flavorCAL.4d:0 "In an attempt to rob the vault of Nakatomi Plaza, Hans Gruber lead his band of mercenaries through the building holding hostages but an unknown officer was in the building and in an exciting display of cunning and daring, the plot to steal the contents of the building's vault was foiled; though, at the cost of some collateral damage to the building.  However, Gruber was subdued when he was dropped from a broken window holding the officier's wife, Holly, as hostage."
+ flavorCAL.4opta:0 "Yippee ki-yay! John McClane!"
+ #California Mission events
+ flavorCAL.1000t:0 "Gold Mining"
+ flavorCAL.1000d:0 "Our State has a long history of mining for gold, with the Californian Gold Rush bringing a significant amount of settlers and mineral wealth to California. It would prudent to expand mining operations in our hills to assist the economy."
+ flavorCAL.1000opta:0 "We should honor our heritage as the "Golden State" by digging deeper!"
+ flavorCAL.1000opta.tt:0 "Every §YGold§! producing province in §YCalifornia§! and §YNevada§! will receive the following modifier:"
+ flavorCAL.1001t:0 "Las Californias"
+ flavorCAL.1001d:0 "The Californias have been reunited and now its time to govern them as one!"
+ flavorCAL.1001opta:0 "Forward as Las Californias!"
+ flavorCAL.1001optb:0 "Keep our current name."
+ flavorCAL.1002t:0 "Silicon Valley"
+ flavorCAL.1002d:0 "Silicon Valley, the center of innovation, technological developments and high-tech research. The area is home to many of the world's largest high-tech corporations and start-up companies.\n\nWe should specialize Silicon Valley's direction to suit our needs."
+ flavorCAL.1002opta:0 "Direct them towards military technology."
+ flavorCAL.1002optb:0 "Allow them to continue on consumer tech."
+ flavorCAL.1002optc:0 "Assistance managing our State would be useful."
+ flavorCAL.1002optd:0 "We should support innovation in Silicon Valley."
+ 
+ #####Flavor for Colorado
+ flavorCLO.01t:0 "Avalanche"
+ flavorCLO.01d:0 "An avalanche in an important mountain pass has distrupted our trade from one side of the Rocky Mountains to the other and its diverted trade through neighboring states to our detriment."
+ flavorCLO.01opta:0 "This is not good."
+ 
+ #####Flavor for Connecticut
+ #flavorCUT.1t:0 "Pequot War"
+ #flavorCUT.1d:0 "One of our most prestigious merchants, John Oldham, has been murdered, his crew slaughtered mercilessly, and his two children kidnapped. Sailors tell us that Narragansett Indians were sited looting his boat, and they drove the savages off. They now hide like dogs among the Pequots. 
+ #flavorCUT.1opta:0 "The merchent just met with some bad luck. Let the situation slide."
+ #flavorCUT.1optb:0 "An outrage! We must teach them a lesson." 
+ #flavorCUT.2t:0 "Lux et veritas"
+ #flavorCUT.2d:0 "Prepare the caps and gowns, the University of Yale has officially opened! Our children and grandchildren shall make Connecticut the enlightened apple of the Americas. What shall the theme of the college be?
+ #(all three options give permenant increase to 1 each of monarch power.)
+ #flavorCUT.2opta:0 "Preaching school. The Word of God must be preached to all nations!"           
+ #-30% stab cost, +2 yearly prestige, -10% diplo tech cost. 
+ #flavorCUT.2optb:0 "Liberal arts, and economics. Our literature, drama, and mathematics shall be the pride of the world!"
+ #+20 tax; +3 max promoted cultures; -10% adm tech cost.
+ #flavorCUT.2optc:0 "Military academy. May the drums of war play from dawn to dusk."
+ #+10% discipline, +1 yearly army tradition, -10% mil tech cost. 
+ 
+ #####Flavor for Delaware
+ #flavorDEL.1t:0 "Student funding"
+ #flavorDEL.1d:0 "The idea of government funding students to attend college is not new. In 1957, the state of Deleware started to provide for the poor, so they could go to school. For years, the magistrates, and governors have bickered over what should be done about education welfare. But now a decision must be made. 
+ #flavorDEL.1opta:0 "Invest in the students"
+ #lose 200 ducats, -5% requirement on each Monarch power, gain 100 each Monarch power."
+ #flavorDEL.1optb:0 "Invest in the schools"
+ #lose 200 ducats, -10% unrest in all provinces"
+ #flavorDEL.1optc:0 "Invest in nothing, incentivize competition"
+ #+20 Production efficiency, -10% build cost
+ #flavorDEL.2t: Hurricane
+ #flavorDEL.2d: A hurricane has destroyed all of our major ports. It would be very expensive to pay for the damages out of pocket, but the long term recovery could be far worse if we do nothing. 
+ #flavorDEL.2opta:0 "Spare no expense"
+ #lose 500 ducats, +5 intrest per annum. 10 years.
+ #flavorDEL.2optb:0 "Budget accordingly"
+ #lose 200 ducats, -20% trade efficiency. 10 years.
+ #flavorDEL.2optc:0 "What Hurricane?"
+ #-50% trade efficiency. 10 years.
+ 
+ #####Flavor for District of Columbia
+
+ 
+ #####Flavor for Florida/West Florida
+ #flavorFLO.1t:0 "Religious shift!"
+ #flavorFLO.1t:0 "Catholocism has historically been deeply engrained in Florida. Several prominent leaders have been strongly advocating that Catholocism become the state religion, with heavy persecutions for anyone who does not comply. Accepting these demands could destabilize Florida, but refusing them could trigger an uprising.
+ #flavorFLO.1opta:0 "Nobody expects the Spanish Inquisition"
+ #stab - 2, state religion becomes catholic, +2 extra missionaries, +4% missionary strength 
+ #flavorFLO.2optb:0 "The people must have the freedom to choose their religion."
+ #"x" rebels regiments rise up, -5% tech cost, -10% stability cost
+ flavorFLO.1t:0 "Cuban Diaspora"
+ flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture.GetName] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
+ flavorFLO.1opta:0 "Evict the Cuban Exiles"
+ flavorFLO.1optb:0 "Settle all Cubans in Florida"
+ flavorFLO.1optc:0 "We have no business in this. Let it be."
+ flavorFLO.2t:0 "The Big Peach"
+ flavorFLO.2d:0 "If the city of Miami is the jewel of the Caribbean, Atlanta is the jewel of the South. While [Root.GetName] commands considerable economic power in the region, the prime position of Atlanta makes it a strong competitor to our own cities. Now that we have captured the city, what should we do with it?"
+ flavorFLO.2opta:0 "Atlanta will be the jewel of the South!"
+ flavorFLO.2optb:0 "Claim its wealth for [Root.GetCapitalName]!"
+ flavorFLO.2optd:0 "Burn it to the ground!"
+ flavorFLO.2optc:0 "Well, I didn't like [Root.GetCapitalName] anyways..."
+ 
+ #flo_cuba_opt1_tooltip:0 "Own §YTenerife§! as a core province or own any province on the §YNorth America§!, §YSouth America§!, or §YNew World§! continents."
+ 
+ #####Flavor for Georgia (state)
+ #flavorGRG.01t:0 "GOLD RUSH!"
+ #flavorGRG.01d:0 "The first major U.S. gold rush did not take place in California. It began in the hills of Dahlonega. The unexploited treasure waits to be mined out, but first we must decide how the treasurey can benefit from this discovery.
+ #flavorGRG.1opta:0 "Seize the mines, and all their assets!"
+ #For next 30 years... national unrest increases by 3, 20% raw income increase
+ #flavorGRG.1optb:0 "Regulate the market, and impose a one time fee for opening a mine.
+ #lump sum of 300 ducats, inflation increases by 3.
+ #flavorGRG.1optc:0 "Bribe the company owners"
+ #For next 30 years... Increase global trade by 10%, +2 corruption
+ 
+ #####Flavor for Hawaii
+ #flavorHAW.1t:0 "Fire and Water"
+ #flavorHAW.1d:0 "Disaster governor! A massive volcanic eruption on the Big Island has shaken, and damaged our infrastructure. To make things worse, several tidal waves have devistated our coasts. What will we do to aid in the recovery?"
+ #flavorHAW.1opta:0 "Open the coffers, and keep the economy afloat until we rebuild."
+ #lose 500 ducats, +5 interest per annum. 10 years.
+ #flavorHAW.1optb:0 "Invest the money in certain markets which will pay into our private fund."
+ #lose 200 ducats, corruption +2. 10 years.
+ #flavorHAW.1optc:0 "All governing members get a free vaccation to California. Let the little people do the work."
+ #unrest +5. 10 years.
+ #flavorHAW.2t:0 "Pineapple Party!"
+ #flavorHAW.2d:0 "This year's harvest in pineapple, and other luxurious tropical fruits has been like no other. We can either benefit from this now, or reap a bigger reward later.
+ #flavorHAW.2a:0 "Let there be Luaus!"
+ #gain 300 gold immediately
+ #flavorHAW.2b:0 "Invest in canning"
+ #30% increase in trade range
+ 
+ 
+ #####Flavor for Idaho
+ flavorIDA.1t:0 "Mining Dispute"
+ flavorIDA.1d:0 "Quarrels have arisen between unionized miners, and non unions. Violence is spreading like wildfire with some disputes ending with much blood. Several dozen union members are threatening to rise up if we do not give in to their demands which are to forcefully remove the non union workers."
+ flavorIDA.opt1:0 "Side with the unions"
+ #pretige -10, repub tradition -20
+ flavorIDA.opt2:0 "Side with the non unions"
+ #x number of regiment rebels rise up in Nez Perce
+  
+ #####Flavor for Illinois
+ flavorILI.1t:0 "Great Chicago Fire"
+ flavorILI.1d:0 "Disaster! The shining jewel of Illinois has been destroyed in night and a day. The social and economic unrest will impact our country for years to come. ""
+ flavorILI.1opta:0 "Grant tax relief"
+ #-500 ducats, trade reduced 20% for next 5 years.
+ flavorILI.1optb:0 "Permenantly relocate military members to Chicago to rebuild"
+ #-40,000 manpower, trade reduced 20% for next 5 years.
+ flavorILI.1optc:0 "Restructure government to compensate for loss"
+ #-1 stab, -20 republican tradition, trade reduced 20% for next 5 years
+ flavorILI.2t:0 "Steel Plow"
+ flavorILI.2d:0 "One of our most esteemed citizens has just made a major advancement in crop harvesting. With his technology, farms can expand many times their current size. He seeks investors to assist in his long term endeavor of manufacturing the steel plow."
+ flavorILI.2opta:0 "Invest liberally"
+ #-500 ducats, +750 adm points
+ flavorILI.2optb:0 "Invest moderately"
+ #-200 ducats, +250 adm points
+ flavorILI.3optc:0 "Invest sparingly"
+ #-50 ducats, +50 adm points
+ 
+ #####Flavor for Indiana
+ flavorIND.1t:0 "EARTHQUAKES IN THE MIDWEST!"
+ flavorIND.1d:0 "In 1811, the New Madrid fault line shifted, creating a 7.9 magnitude earthquake. The effects were felt over 1,000 miles away."
+ flavorIND.opt1:0 "The people go wild in the streets! #lose 1 stab"
+ flavorIND.2t:0 "University of Notre Dame"
+ flavorIND.2d:0 "Founded in 1842, it was one of the first major universities in Indiana. Despite major damage due to fire, it became one of the most important educational facilities in the state."
+ flavorIND.1opt:0 "To God be the glory!"
+ #university, if catholic +5 Papal
+ 
+ #####Flavor for Iowa
+ flavorIOW.1t:0 "Corn, Corn Corn." 
+ flavorIOW.1d:0 "My governor, every day, and every night, all there is to see is corn, and more corn. All we eat is corn. All we work is corn. Even my dreams are about corn."
+ flavorIOW.1opta:0 "Resistance is futile. You will become one with the Corn"
+ flavorIOW.2t:0 "Eye to I"
+ flavorIOW.2d:0 "Governor, the people are bored. We must prove to the world that Iowa can be just as good a tourist trap as any other state."
+ flavorIOW.2opta:0 "Fantastic idea! Build the world's largest corn maze!"
+ flavorIOW.2optb:0 "This peace is what all true warriors strive for!"
+ 
+ #####Flavor for Kansas
+ flavorKNS.1t:0 "The Gunfight at Hide Park"
+ flavorKNS.1d:0 "An argument over local politics turned two lawmen, William Bailey and Michael McCluskie, against each other and what was a fist fight esclated into to a shooting.  Fearing arrest McCluskie fled town, however returned several days later after getting word the shooting was likely to be deemed self-defense.  However unbeknownst to McCluskie, Bailey had three of his Texan cowboy friends in town who sought to avenge his death.  McCluskie went into to the Hide Park district of Newtown, Kansas and gambled in the Tuttles Dance Hall.  During McCluskie time gambling the three cowboys, William Garrett, Henry Kearnes, and James Wilkerson entered the saloon along with Hugh Anderson.  Anderson approached McCluskie and exchanged words resulting in McCluskie's friend James Martin to intervene.  In the ensuing scuffle, Anderson shot McCluskie in the neck who fell to the floor.  Attempting to respond in kind with fire McCluskie tired to fire back but his weapon misfired and in the following seconds was gunned down by Anderson.  All while the three cowboys (Garrett, Kearnes, and Wilkerson) intervened to also shoot at McCluskie on the floor and keep the crowd back.\n\nIntervening in all of it was a young man suffering of Tuberculosis named James Riley who fired upon the assailing men in the cloud of smoke, in the end he ended up hitting seven people including all four assailants, killing them all.  After the shooting stopped Riley walked away, mysteriously disappeared leading to much speculation as to who he really was and where he went."
+ flavorKNS.1opta:0 "The townsfolk and reporters want to know about James Riley."
+ 
+ #####Flavor for Kentucky
+ flavorKEN.1t:0 "The Wilderness Road"
+ flavorKEN.1d:0 "The opening of the Wilderness Road led to massive economic and urban development in western Kentucky. Now we must decide the direction the state will take from this benefit"
+ flavorKEN.1opta:0 "We must strengthen the backbone of our military and defenses."
+ flavorKEN.1optb:0 "Invest in a strong economy."
+ 
+ #####Flavor for Louisiana
+ flavorLOU.1t:0 "YELLOW FEVER!"
+ flavorLOU.1d:0 "In 1853, an outbreak of Yellow Fever killed over 7,500 people. The reason the disaster was so deadly was due to shady business owners not wanting the mouth of the Mississippi to be quarentined."
+ flavorLOU.opta:0 "Quarentine the Port! Leave the dead to contend with their Maker."
+ flavorLOU.optb:0 "Silence the fear mongerers. No one need know about this."
+ #(50/50 chance of lowered relations with other nations
+ 
+ #####Flavor for Maine 
+ flavorMNE.1t:0 "Prohibition"
+ flavorMNE.1d:0 "Bans on alcohol began at a state level in Maine. For nearly 100 years, the law stood firm. Now we have the chance to decide history for ourselves."
+ flavorMNE.opta:0 "Never shall this poison be consumed within our borders."
+ flavorMNE.optb:0 "Let the casks flow!"
+ 
+ #####Flavor for Maryland
+ flavorMYD.1t:0 "Baltimore Basilica"
+ flavorMYD.1d:0 "A gem of Maryland. It is considered to be the greatest work of Ben Latrobe, who was known as developing the standards for American Architecture."
+ flavorMYD.opta:0 "A tribute to the people of Maryland, and all those who yearn to be part of her."
+ 
+ #####Flavor for Massachusetts
+ flavorMSS.5t:0 "The Boston Light"
+ flavorMSS.5d:0 "The first lighthouse in America was constructed in Boston Harbor. Destroyed by the British in 1776, it was rebuilt in 1783, and is the only light to be manned by the US Coast Guard."
+ flavorMSS.5opta:0 "A light to the outer darkness which lies beyond our coasts. May it forever shine as a beacon of freedom."
+ flavorMSS.6t:0 "Middlesex Canal"
+ flavorMSS.6d:0 "Massachusetts, like the rest of the states, experienced many economic problems in their early years of independence. One of these issues was a lack of reliable roads. Timber, fur, and other goods cost merchantmen much money to transport over long distances to the ports along the Atlantic. Thus, water transit was usually the preferred method, but rivers could not be expected to travel exactly the way businesses wanted them to. Sometimes, canals would be dug to connect two rivers together, or to create a passage to the sea. Such was the case of the Middlesex Canal. Built in 1803, it was the first great civil engineering project in the USA, and would become a subject of study for future canal projects. The canal was designed to connect Boston to the Merrimack river, which was a major trade highway. The contruction of the canal would see the inventions of a crude dump truck, watertight locks. The canal's contruction, while expensive, was very successful, and remained so until replaced by the railroad. Today, parts of the canal still stand as a testimony to the ingenuity of Colonial Massachusites."
+ flavorMSS.6opta:0 "Our canals shall be rivers of gold!"
+ flavorMSS.1t:0 "The Maine Question"
+ flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root.GetName]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine\: In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
+ flavorMSS.1opta:0 "Very well. Send an envoy immediately."
+ flavorMSS.2t:0 "Reunite with $FROMCOUNTRY$?"
+ flavorMSS.2d:0 "$FROMCOUNTRY$ has sent us an envoy, offering us their superior economic and military assistance in exchange for 'reunification' with their state. They claim that [Root.GetName] used to be a part of their territory, and that our modern success is owed to them. As ludicrous as this claim is, the proposal is not without merit. How shall we respond?"
+ flavorMSS.2opta:0 "We are a natural part of $FROMCOUNTRY$. Let us reunite our states."
+ flavorMSS.2optb:0 "Remove this scoundrel from my sight!"
+ flavorMSS.3t:0 "$FROMCOUNTRY$ Accepts!"
+ flavorMSS.3d:0 "[Root.Monarch.GetTitle] [Root.Monarch.Dynasty.GetName]! $FROMCOUNTRY$ has accepted our offer and now swears fealty to us!"
+ flavorMSS.3opta:0 "Excellent!"
+ flavorMSS.4t:0 "$FROMCOUNTRY$ Refuses!"
+ flavorMSS.4d:0 "[Root.Monarch.GetTitle] [Root.Monarch.Dynasty.GetName]! $FROMCOUNTRY$ has rejected our offer and spurned our envoy! How dare they?!"
+ flavorMSS.4opta:0 "Outrageous! I will show them proper diplomacy!"
+ 
+ 
+ #####Flavor for Michigan/Superior
+ #Detroit Goes Bankrupt
+ flavorMIC.01t:0 "City of Detroit is Broke!"
+ flavorMIC.01d:0 "For years the largest and most economically important city in the state, Detroit, has been mismanaged by unsound political and economic theory.  Spending they say can revitalize the economy.  Enacting policies that sound good on paper but are really just political sleaze hurting the people and business we need the most.  All of this combined has lead to a changing demographic and a population that wishes to flee to better places. As a result the city has spent all of its money and as a result now has more debts than it can ever concievably repay through local taxes.  What should we do?"
+ flavorMIC.01opta:0 "Leave them to their own devices." #Trade good changes to Grain, -3 base tax.
+ flavorMIC.01optb:0 "Bail out the city government." 
+ #Lose 1/2 year income, -1 base tax.
+ flavorMIC.01optc:0 "Arrest the Mayor and Council for corruption and run the city directly."
+ #Stability -1, +2 base tax.
+ #Omni Consumer Products and Detroit
+ flavorMIC.02t:0 "Omni wants to operate the Detroit Police"
+ flavorMIC.02d:0 "Omni Consumer Products has formed a private security force division and is requesting permission of the state government to take over the Detroit police department.  Most of the administration seem to believe its worth a shot, but some are reserved."
+ flavorMIC.02opta:0 "Let's fill out the paper work."
+ #Gain 1 base tax, +50% Autonomy in Detroit
+ flavorMIC.02optb:0 "No way!  Their corporate board is shady, I saw the Robocop movies!"
+ #+15 Prestige
+ #Summer Games in Detroit
+ flavorMIC.03t:0 "Request for State Aid to Fund Bid for the Summer Games"
+ flavorMIC.03d:0 "The Summer Games are a glorious event to showcase our famous city, Detroit.  However, the bids are won by larger or more famous cities elsewhere in the Americas.  Having the state help we can finally show the Summer Games why they shouldn't have pass us up so many times before."
+ flavorMIC.03opta:0 "No.  It will never bring the Summer Games here." #+50 ADM power, +50 DIP power
+ flavorMIC.03optb:0 "Sure!"  #+1 Stability, +10 prestige, -1 years income, -100 ADM power, -100 DIP power.
+ 
+ 
+ #####Flavor for Minnesota
+ flavorMNN.1t:0 "Burial Mounds Discovered"
+ flavorMNN.1d:0 "Governor, several tombs have been discovered in the east part of the state. While they may make a large contribution to our prestige and glory as a nation, they could also be full of great riches."
+ flavorMNN.opta:0 "Protect the mounds, and compose an epic about this discovery!"
+ flavorMNN.optb:0 "Do what you want 'cuz a pirate is free!"
+ 
+ #####Flavor for Mississippi
+ flavorMIS.1t:0 "Mississippi River Delta"
+ flavorMIS.1d:0 "Before the Mississippi River Delta was usable, 310 miles of levees had to be contructed to keep the Mississippi River contained."
+ flavorMIS.opta:0 "Allocate neccessary funds"
+ flavorMIS.optb:0 "Preposterous! The basin will never be able to grow any more than moss!"
+ 
+ #####Flavor for Missouri
+ flavorMOU.1t:0 "The Duel between Wild Bill Hickok and Davis Tutt"
+ flavorMOU.1d:0 "Davis Tutt and William Hickok were notorious gamblers of their times, but they were also at one point good friends.  However their relationship eventually soured.  Tutt in an attempt to bankrupt Hickok provided the funds for gamblers to play against him.  However Hickok was up several hundred dollars on what was Tutt's own money and became inpatient and infuriated at Hickok's ability to not commit error.  In a tense but heated moment, Tutt approached the table Hickok was sitting at and demanded an outstanding debt of 40 dollars and a gambling debt of 35 dollars.  Hickok balked stating he has a memorandum stating he honestly only owes him only 25 dollars for the gambling debt.  In the ensuing argument over the remaining 10 dollars seized Hickok's prized pocket watch and humiliated him with little recourse.  Hickok then reminded Tutt and most of the witnesses not to catch Tutt in the square with his pocket watch.\n\nAfter an uneventful night the two men eventually found themselves the next day at about noon in the main street through the square and with further exchange of words the two men fire shots at one another at the exact same time.  Tutt being struck and Hickok being spared won the duel and with it much attention."
+ flavorMOU.1opta:0 "Harper's Weekly has agents in town looking to get information on Hickok's story."
+ 
+ #####Flavor for Montana
+ flavorMNT.1t:0 "Great Mystery of Alder Gulch"
+ flavorMNT.1d:0 "Henry Plummer was a sheriff, and gold mine owner who had a very dark history connected to him. Although not proven by any documented source, the story goes that Plummer's wealth and power began in the California Gold Rush, which led him to become town sheriff. But in 1857, a duel ensued. The fight was over an enraged husband who accused Plummer of cheating on his wife, but Plummer won the duel. Convicted of murder, sentenced to prison, he was released 6 months later due to public support. Soon after, Plummer killed a man after a brawl broke out. Arrested, and thrown in jail, he bribed the guard, and fled to Oregon. On his way, he joined forces with Jim Mayfield, a bandit, believed to have murdered a sheriff in a nearby town. Plummer dispatched a message to California that he, and Mayfield were hung in Washington. The media published the story, and law stopped looking for the men. Meanwhile, Plummer's forces grew to a gang. Plummer and his gang robbed families, and caravans carrying gold. But after a string of bad luck, Plummer gave up, and began heading home. But about halfway there, Gold Fever bit him and drove him to prospect for more wealth in the town of Bannack, Montana. Full of Civil War deserters, river pirates, and sorts of vile people of the nation, it was easy for Plummer to form a new gang, this one called 'The Innocents.' Plummer's gang grew, an grew, increasing lawlessness and terror among the citizens of the town. They held an election for sheriff, which a local butcher and Plummer both participated in. The butcher won by a landslide, and in a hasty act of revenge, Plummer attempted to kill the new sheriff with a shotgun, but was shot himself in the arm by the sheriff. Retreating back to safe lines, he began to practice shooting with his other hand. The sheriff resigned, and fled town. In a new election for the town's sheriff, Plummer won, and appointed his top two thugs as his henchmen. Over the course of the next few months, 100 citizens were slain. Because his gang operated so perfectly, he was able to kill and/or silence anyone who could speak against him. Soon, his lust for power would drive him to become Deputy US Marshall for the entire region east of the mountains in Idaho Territory. Angered, and furious, the townspeople of Virginia City, Nevada City, and Bannack formed a milita to put down 'The Innocents.' One by one, the gang was weeded out, until one man about to be hung claimed Plummer was the ringleader. Based on this one accusation alone, the milita brutally executed Plummer without trial or jury. No written evidence is recorded of Plummer doing evil."
+ flavorMNT.1opta:0 "The arrows of justice has rightfully piereced the dark soul of Plummer. May all our enemies hear, and fear."
+ flavorMNT.1optb:0 "We have failed to uphold due process in the best of times. We all stand dooomed to reap God's curses."
+ 
+ #####Flavor for Nebraska
+ flavorNEB.1t:0 "Gratten Massacre"
+ flavorNEB.1d:0 "It all began with a dead cow. A certain settler was travelling west via the Oregon Trail when his cow wandered, and was killed by a visiting Miniconjou. Several troops were dispatched to arrest the man, in direct violation of a treaty forged in 1851 in which matters such as these were to be handled through channels other than the military. The Sioux resisted handing over the perpetrator, so the regiment returned to the fort, and prepared for battle. Upon return to the Sioux, further talks were futile, and the negotiation party returned to the regiment standing by. Suddenly, all Hell broke loose when a nervous soldier discharged his weapon, hitting a Sioux. The Sioux struck down the regiment, even the men who were clearly unarmed. They they proceeded to attack Fort Laramie, but quickly retreated, then looted the trading post. When word of this reached Washington, a large task force sent to dole out justice upon the Sioux, which would be led by Col. Harney. Harney did his job quickly, and effectively in the Battle of Ash Hollow. While battles, and massacres would continue up until the late 19th century, there would be none deadlier than the Gratten Massacre, and its resulting war."
+ flavorNEB.1opta:0 "Harper's men return to the capital with a glorious tale of victory."
+ 
+ #####Flavor for Nevada
+ # #Silver Strike in Carson City
+ # flavorNVA.01t:0 "Silver Strike!"
+ # flavorNVA.01d:0 "The Comstock Lode was just recently discovered outside of the capital city, Carson City, in a place named Virginia City.  The miners believe there's millions upon millions in untapped wealth."
+ # flavorNVA.01opta:0 "Lets get our share of it!" #1 years income and +25% local tax modifier.
+ # #Mormons and Gambling
+ # flavorNVA.02t:0 "Mormons Against the Sin in the City"
+ # flavorNVA.02d:0 "The Mormons were the original settlers of Las Vegas but were soon outnumbered by other immigrants from across the continent, leading the city to adopt its rather free-wheeling ways, including legalized gambling, as its so isolated from authorities.  Now there is concern amonst the Mormons that the city has grown too lawless and enlisting local support to enact a local ordinance to heavily restrict gambling.  The current business leaders are heavily invested in gambling and worried this will force them to close."
+ # flavorNVA.02opta:0 "No way, we'll just override the local law."		#Gold remains the province trade good, gain +33% yearly income, lose -1 base tax and -1 base production
+ # flavorNVA.02optb:0 "Let them govern as they see fit."				#Gold replaced as province trade good, changed to copper, gain +1 base tax and +1 base production, inflation reduced to 0%/year
+ 
+ #####Flavor for New Hampshire
+ flavorNWH.1t:0 "The Old Man of the Mountain"
+ flavorNWH.1d:0 "A pretigious icon to New Hampshire was its 'Old Man of the Mountain' which was a giant rock face sitting over 1,000 feet above the valley floor. It is believed the rock was carved out by glaciers, being first discovered in 1805. It was largely popularized by statesman Daniel Webster who once wrote 'Men hang out their signs indicative of their respective trades; shoe makers hang out a gigantic shoe; jewelers a monster watch, and the dentist hangs out a gold tooth; but up in the Mountains of New Hampshire, God Almighty has hung out a sign to show that there He makes men.' The Old Man of the Mountain would become New Hampshire's state emblem, licence plate, state route signs, and even made it on US Currency as a Statehood Quarter. Alas, New Hampshire's icon came to a bitter end on a cold, snowy night, when it broke away from the cliff face smashing to dust at the bottom. Citizens of New Hampshire strove to build a replica of the head, but the governor blocked the idea. Nevertheless, 7 years later, the citizens would try again, and to this day, an organization is working to build a memorial, and possibly a replica."
+ flavorNWH.1opta:0 "Allocate funds for recontruction, and designate the site a national landmark."
+ flavorNWH.1optb:0 "We cannot afford reconstruction. It's just a rock!"
+ 
+ #####Flavor for New Jersey
+ flavorNJY.5t:0 "Take Me Out to the Ballgame"
+ flavorNJY.5d:0 "In the early years of baseball, games were usually casual, and disorganized. But this was not so with New Jersey. The bustling town of Hoboken would become known to fans across the world as the birthplace of formal baseball. While New Jersey itself did not have the same types of baseball clubs New York did, the New Yorker clubs began to steadily assemble in Hoboken for their games. The spot was named Elysian Fields, and grew steadily over the next 20 years, with 20,000 people attending the championship game between the Mutual Club of New York and the Atlantic Club of Brooklyn. Eventually, more formal parks would be constructed in New York State, and Elysian Fields would be abandoned. But its legacy would live on throughout the ages as the birthplace of organized baseball."
+ flavorNJY.5opta:0 "May outsiders remember that it's our game, the New Jerseyan Game."
+ flavorNJY.1t:0 "Captain Billopp's Race"
+ flavorNJY.1d:0 "In a distant past, it is said the 'Duke of York' decreed that any islands in the New York Harbor that could be circumnavigated in a day's time would be part of New York, but if this was not accomplished, they would be part of New Jersey. Christopher Billopp was chosen for this challenge, and aboard his humble vessel the 'Bentley,' Billopp embarked on his quest. In order to finish this task, the Captain equipped his ship with empty barrels to achieve a boost in speed due to the wind drafts. This cheap tactic worked, and he circumnavigated Staten Island in just under a day's time, and thus the island was awarded to New York. This outraged the residents of New Jersey, and to this day, they are demanding this choice be reversed. Perhaps we should petition for its cession to us?"
+ flavorNJY.1opta: "Dispute the results"
+ flavorNJY.1optb: "Accept the results"
+ flavorNJY.2t:0 "New Jersey Disputes Captain Billopp's Race"
+ flavorNJY.2d:0 "In a distant past, it is said the 'Duke of York' decreed that any islands in the New York Harbor that could be circumnavigated in a day's time would be part of New York, but if this was not accomplished, they would be part of New Jersey. Christopher Bollopp was chosen for this challenge, and on board his humble vessel the 'Bentley,' Billopp embarked on his quest. In order to finish this task, the Captain equipped his ship with empty barrels to achieve a boost in speed due to the wind drafts. This clever tactic worked, and he circumnavigated Staten Island in just under a day's time, and thus the island was awarded to us. This outraged the residents of New Jersey, and to this day, they are demanding this choice be reversed. To this effect, they have sent an envoy requesting that we cede the island to them. How do we respond?"
+ flavorNJY.2opta:0 "Relinquish Staten Island"
+ flavorNJY.2optb:0 "We have rightfully won the rights to Staten Island. It is ours to keep."
+ flavorNJY.3t:0 "New York refuses to cede Staten Island!"
+ flavorNJY.3d:0 "Despite our reasonable request, New York has rejected our request for us to control Staten Island."
+ flavorNJY.3opta:0 "Outrageous!"
+ flavorNJY.4t:0 "New York Cedes Staten Island"
+ flavorNJY.4d:0 "New York has agreed to our proposal, and relinquished control of Staten Island to us."
+ flavorNJY.4opta:0 "Excellent."
+ flavorNJY.1000t: "A New Capital?"
+ flavorNJY.1000d: "We have solidified our position in the area and can choose a new capital from America's greatest cities."
+ flavorNJY.1000opta: "Keep our current capital"
+ flavorNJY.1000optb: "New York City"
+ flavorNJY.1000optc: "Philadelphia"
+ flavorNJY.1000optd: "Columbia"
+ flavorNJY.1000opte: "Baltimore"
+ flavorNJY.1001t: "Captain Billopp's Race Debunked"
+ flavorNJY.1001d: "Captain Billopp is said to have famously sailed around Staten Island in an impossible 23 hours, granting it to New York. Recently our historians have debunked this outrageous fairy tale."
+ flavorNJY.1001opta: "Our admirals will sail around Staten Island in a mere 22 hours..."
+ flavorNJY.1002t: "The Empire City"
+ flavorNJY.1002d: "New York, a grand and important city, has fallen into our hands. Its influence over the region is massive and will benefit us greatly."
+ flavorNJY.1002opta: "The Empire City prospers."
+ flavorNJY.1002optb: "Redirect the wealth to [Root.Capital.GetName]."
+ 
+ #####Flavor for New Mexico
+ #Lincoln County War
+ flavorNMX.1t:0 "Lincoln County War"
+ flavorNMX.1d:0 "A legal dispute over the assets of an upstart dry good store merchant has involved Lincoln County politics.  As the Sheriff of Lincoln County seeks to properly execute the warrant to seize the assets of the people named they also seize John Tunstall's assets.  The Sheriff caught up with Tunstall while he was moving his last nine horses back to town.  Taken into custody, an argument between members of the Sheriff posse lead to the murder of the Tunstall outside of town.  This sparked a feud between the established local merchant Lawrence Murphy who ran the monopoly of dry good stores in rural New Mexico and those who supported Tunstall and his attempts to break the monopoly.\n\nThe outbreak of the Lincoln County War require us to pick a side in order to put an end in the lawlessness that has begun."
+ flavorNMX.1opta:0 "Support the Regulators"
+ flavorNMX.1optb:0 "Support the Monopoly"
+ flavorNMX.2t:0 "The Murphy Monopoly Finances Revolt"
+ flavorNMX.2d:0 "The dry goods store monopoly run by Lawrence Murphy and associates have financed a revolt for more regional autonomy in order to keep the monopoly in business through the protection of the local government."
+ flavorNMX.2opta:0 "These people must have a lot at stake to spend this much money."
+ flavorNMX.3t:0 "The Regulators Incite Rebellion"
+ flavorNMX.3d:0 "The supporters of the slain Tunstall for his attempt to break the regional dry goods monopoly have gathered support from a number of commoners and they've hastily assembled into a militia to revolt against the corruption brought on by the monopoly."
+ flavorNMX.3opta:0 "Deny them quarter!"
+ flavorNMX.4t:0 "Lincoln County War Ends"
+ flavorNMX.4d:0 "The war between the dry goods store monopoly of Lawrence Murphy and those who seek to break the monopoly have exhausted themselves with the intervention of the state.  Leading to both sides to eventually collapse from exhausting their resources, leading the state the only party remaining to restore the order."
+ flavorNMX.4opta:0 "The state had to put an end to this wasteful conflict."
+ 
+ #####Flavor for New York/New York City/Niagara
+ flavorNYS.1t:0 "New York Bank Gold Heist"
+ flavorNYS.1d:0 "The greatest financial center in the Americas is in New York City and the numerous banks store large sums of gold bullion.  A man who only calls himself Simon rained terror over the City of New York with riddles and threats of terrorism including destroying a school with explosives.  As government agents search everywhere for the schools for explosives, a bank heist results in large sums of gold bullion being stolen from the premier government bank in the financial district.  Yet, Simon met his match with John McClane, the hero of Nakatomi Plaza in California, and the gold stolen is recovered and many of the perpetrators are arrested."
+ flavorNYS.1opta:0 "Seriously John McClane is all over the place stopping criminals."
+ #Niagara Reservation
+ flavorNYS.2t:0 "The Future of Niagara Falls"
+ flavorNYS.2d:0 "The majestic site of Niagara Falls on the Niagara River is an awesome site to behold.  However while most of the falls can be better seen from the Ontario side of the river, there's been a number of land owners next to the falls who have decided to fence it off on our side and charge unimaginably high rates just to look through a hole in the fence.  By setting aside the land around the falls we can preserve the immense natural beauty of the Niagara Falls."
+ flavorNYS.2opta:0 "Yes, we can attract travellers and their money."
+ flavorNYS.2optb:0 "Nah, Niagara Falls is to be harnessed for our industry."
+ #Jewish New York City
+ flavorNYS.3t:0 "Center of Jewish faith and culture in the Americas"
+ flavorNYS.3d:0 "A combination of shifting demographics, changes in birthrates, and immigration of many American Jews to the City of New York has caused the population to silently and peacefully become primarily Jewish."
+ flavorNYS.3opta:0 "I didn't notice anything."
+ 
+ #####Flavor for North Carolina
+ flavorNCR.1t:0 "CROATAN"
+ flavorNCR.1d:0 "Several hunters were gathering food near the coast, when one of them spotted the ruins of an ancient wall. Turns out, the wall was protecting what was at one point, a settlement. Our records indicate that at one point in our long history, a colony was established on our coast, but then we lost all contact with it. The only signs of human activity in the area was a tree carved with the word 'CROATAN.' The Croatan were an ancient people living in the area of Roanoke, but they were largely peaceful, and accounts of interrogations with the populace reveals the knew nothing of the disappearance of the colony. Nobody seems to know what happened to the town of Roanoke, but it is generating quite the discussion among the people of North Carolina."
+ flavorNCR.1opta:0 "Must've been aliens!"
+ flavorNCR.1optb:0 "And any town who rebels against the might of the state will disappear too!"
+ flavorNCR.1optc:0 "Make the story a novel, and sell it far and wide!"
+ 
+ #####Flavor for North Dakota
+ 
+ #####Flavor for Northern Marianas Islands
+ flavorNMI.1t:0 "Scandal in the Court!"
+ flavorNMI.1d:0 "Benigno Fitial was a politician who served for 7 years as governor of Northern Marianas Islands. He was charged with corruption, abust of power, and neglect of the island. Among some of his decisions that landed him in hot water was cutting funding from the only hospital on the island, and interfering with funds to local schools."
+ flavorNMI.1opta:0 "Impeach the fool, and let this be a lesson to all who threaten our stability!"
+ flavorNMI.1optb:0 "Everybody makes mistakes, besides, impeaching him could be a threat to our stability!"
+ 
+ #####Flavor for Ohio
+ flavorOHI.1t:0 "Johnny Appleseed"
+ flavorOHI.1d:0 "John Chapman ALA Johnny Appleseed was an early pioneer who collected apple seeds from west Pennsylvania, and planted trees from Ohio to Indiana. Known for wearing a metal pot on his head, and walking around barefoot, he was known far and wide for respecting life, no matter how insignificant. Legend says he even put out his own fire so as not to burn the nearby mosquitos. Local Indian groups were so impressed, even the most hostile tribes didn't bother him. John's legacy of spreading the apple across the early nation still stands to this day as a testimony of his hard work."
+ flavorOHI.1opta:0 "There'll be no hippies in my neighborhood! Tell that street bum to take his apple seeds, and sell them for a dairy cow!"
+ flavorOHI.1optb:0 "Designate this day as National Apple Pie Day, and plant the apples across the state!" #triggers applestalk event
+ flavorOHI.2t:0 "John and the Applestalk"
+ flavorOHI.2d:0 "It seems that planting Johnny's appleseeds has caused a giant apple tree to grow. It's branches seem to extend far beyond the clouds, far out of sight. Shall we send some fool to see what's up there?"
+ flavorOHI.2opta:0 "Fee-Fi-Fo-Fum. Send a whole regiment up there, and capture the Apple tree that grows the Golden Watch."
+ flavorOHI.2optb:0 "Nah, just chop it down and make a few wardrobes out of it. I've had enough fairy tales for one day."
+ 
+ #####Flavor for Oklahoma
+ flavorOKL.1t:0 "Dustbowl"
+ flavorOKL.1d:0 "For years, the Great Plains were protected by deep grass which locked loose soil into the ground, allowing for even the strongest winds to blow without damaging the ecology. But due to mistreatment of the land by farmers from abroad, the grasses were uprooted, and the soil was free to blow, and gather into large dust clouds. These dust storms, coupled with an ongoing drought, caused crops to fail which left many farmer families with a doom of starvation."
+ flavorOKL.1opta:0 "Plant trees to slow the high winds, and try to restore the grasslands."
+ flavorOKL.1obtb:0 "Educate farmers in dry-farming methods, and how to conserve the soil."
+ flavorOKL.1optc:0 "Import food, and try to diversify the economy."
+ 
+ #####Flavor for Oregon
+ flavorORE.1t:0 "A wild hippie appears"
+ flavorORE.1d:0 "A bunch of crazy folk with long, odd colored hair and strange clothing are marching through are cities singing Johnny B. Goode. When nightfall comes, they all sit around a fire wearing blue night garments chanting 'happy, happy, blue, blue', while smoking what appears to be... green herbs... rolled up in paper. Some of our citizens are joining their ranks demanding 'happy happyism' be accepted by all, and that we paint the entire state blue. Others are not so amused, and are attacking the hippies with soap, hair clippers, and job applications. We need to put an end to this before it gets out of control."
+ flavorORE.1opta:0 "Bash."
+ #leads to event 2
+ flavorORE.1optb:0 "Multibottle Rocket."
+ #leads to event 3
+ flavorORE.1optc:0 "PSI Rockin."
+ #leads to event 4
+ flavorORE.2t:0 "Governor takes a swing... SMAAAAASH!"
+ flavorORE.2d:0 "With cracked teeth, and bruised heads, the insane cultists fled far from our borders."
+ flavorORE.2opta:0 "The enemy dropped a present! Inside the present was a wad of bills!" 
+ flavorORE.3t:0 "Governor fires the multi-bottle rocket... BOOM!"
+ flavorORE.3d:0 "Some say it was designed by Brother Maynard. Others say it was fabricated by a genius in a cold, wintry nation to the far north. Either way, it totally obliterated the enemy."
+ flavorORE.3opta:0 "The enemy dropped a present! Inside the present was a legendary sword!"
+ flavorORE.4t:0 "Governor tries PSI Rockin B. The cultists disappeared!"
+ flavorORE.4d:0 "The governor smells a whiff of steak, but just for a second."
+ flavorORE.4opta:0 "The enemy dropped a present! Inside the present was a box of rock candy!"
+ 
+ #####Flavor for Pennsylvania
+ flavorPNN.1t:0 "Trouble in West Philadelphia"
+ flavorPNN.1d:0 "A disturbance in West Philadelphia has resulted in a number of serious consequences for one young man. Instead of a life of numerous troubles, it has been suggested that he be sent to live with his Uncle far away in the western lands of our continent."
+ flavorPNN.1opta:0 "Keep the boy here, it was just one little fight." 	#Does nothing
+ flavorPNN.1optb:0 "Who knows, he might just become royalty."			#Sets Flag for future event.
+ flavorPNN.2t:0 "California Ambassador Returns to Hometown."
+ flavorPNN.2d:0 "Years ago, a young mischevious teenager of West Philadelphia was given a rare opportunity to escape the troubles of that neighborhood to a place far to the west known only as 'Bel-Air'.  His experiences in the services of his uncle enriched his spirit and life to where he has become educated and respectful to our society's institutions."
+ flavorPNN.2opta:0 "He's the Prince of Bel-Air."
+ flavorPNN.3t:0 "Arrival of the Amish"
+ flavorPNN.3d:0 "With most of Germany embroiled in religious turmoil, many Germans find themselves caught in the middle of the strife. A significant number of them have fled the continent, seeking a peaceful life in the New World. To this extent, they have arrived in [Root.GetName] and are requesting asylum, declaring that they are fellow followers of Christ and reminding us of the virtues of Jesus Christ. This particular group claims to be a mixture of Alsatian and Swiss Germans, following a doctrine of Christianity they call Anabaptism. Shall we allow these refugees into our country?"
+ flavorPNN.3opta:0 "We must remember our origins, and welcome these refugees with open arms."
+ flavorPNN.3optb:0 "This is none of our business. Turn them away."
+ flavorPNN.4t:0 "Amish Influence Spreads"
+  
+ 
+ #####Flavor for Puerto Rico
+ 
+ 
+ #####Flavor for Rhode Island
+ flavorRIS.1t:0 "Slater's Mill"
+ flavorRIS.1d:0 "An important invention in America's industrial development was headed by a man name Samuel Slater. Harnessing the waters of a local river, he built a mill that was powered off the stream, which meant that cotton could be processed by machine, instead of slave. Slater's Mill is a fine example of early hydropower. Although the mill did not make electricity, it did inspire new ideas, and helped to pave the way for factorization in the United States."
+ flavorRIS.1opta:0 "Modify the mills for iron, and shot for our military."
+ flavorRIS.1optb:0 "Modify the mills for brick, and mortar for our cities."
+ flavorRIS.1optc:0 "Modify the mills for consumable goods for our merchants."
+ 
+ #####Flavor for South Carolina
+ flavorSCR.1t:0 "Dance Dance Revolution"
+ flavorSCR.1d:0 "For many generations, the people of the United States upheld a strict moral code concerning dancing, and modesty. But around the 1920's, dissension from this code resulted in a new dance style called "The Charleston." It's primary demographic of users were young men and women who sought rebellion against issues such as the Prohibition Act. The dance spread like wildfire across the country, finding its way into movies, and musicals which would no doubt continue to create controversy."
+ flavorSCR.1opta:0 "Step up enforcement against these shameful acts."
+ flavorSCR.1optb:0 "Slacken off on some laws, people will forget about this soon enough."
+ flavorSCR.1optc:0 "FIX ME MY EVENT DESCRIPTION DOESN'T MATCH THE EVENT COMMENTS"
+ governor_affair:0 "Governor Affair"
+ desc_governor_affair:0 "Our governor has been discovered having an affair and being immoral and unfaithful to his family and his nation."
+
+ #####Flavor for South Dakota
+ flavorSDK.1t:0 "Wounded Knee"
+ flavorSDK.1d:0 "On a cold December morning of 1890, a detachment of the 7th Cavalry marched in to a Lakotan encampment. Their orders were to disarm the populace, due to several near-uprisings which were making the settlers and military uncomfortable. 38 rifles were initially confiscated, with more being taken from searches conducted on the Indians themselves. All went well until they came to a man named Yellow Bird. Yellow Bird became agitated, and refused to give up his rifle. Several other Indians shouted that Yellow Bird was deaf, which did not help tensions. Two soldiers siezed Yellow Bird from behind, and in an instant, his rifle discharged. Immediately, Yellow Bird threw dust into the air, and 5 young Indian men fired into the 7th. Now there was no turning the clock back. In a few moments, half the camp of Indians would be dead, or dying. Some Indians fled, others grabbed weapons and engaged the American Army. It soon become clear the Indians would be defeated. Officers lost control of the men, who began firing at women and children who had taken refuge in a small ditch outside the camp. Over 300 Indians would be dead by day's end. Major Forsythe, who was in charge of the outfit, was dismissed by his superior officer, but reinstated by Washington, and went on to become a major general. To this day, Wounded Knee is still a hotly debated issue. Was it a massacre? Was it a battle? This is merely just one of history's tough issues that will probably never be settled."
+ flavorSDK.1opta:0 "Only the sweet waters of baptism, shall wipe away the debt from Wounded Knee."
+ flavorSDK.1optb:0 "Build a Hall of Heroes that will remind the generations of our soldiers' honor and duty to the defense of this nation."
+ 
+ #####Flavor for Tennessee
+ flavorTEN.1t:0 "Scopes 'Monkey' Trial"
+ flavorTEN.1d:0 "It all began as just a simple courtroom in a backwoods town of Tennessee. The case? If John Scopes, a high school teacher, had taught evolution in his classroom. If he did, then he had violated a newly incorporated law in Tennessee which forbade the teaching of evolution. The ACLU, who had been opposed to the state's law, in conjunction with George Rappelya who was a miner from Dayton, convinced Scopes to plead guilty in order to challenge the law. Lawyers Clarence Darrow, and William Jennings Bryan came to the case to represent the two parties. Bryan, former secretary of state, had not practiced law for 30 years, but was still active as an author, and a spokesman for fundamentalism. Darrow had just finished a case in Chicago, where he was able to prevent two murderers from receiving the death penalty by reason of insanity. Darrow, and Bryan were both outspoken, but Bryan in religious matters, and Darrow in agnosticism. The media failed to remain unbalanced, calling Bryan a symbol of narrowmindedness, and tribalism, while promoting Darrow as tolerant, and clear-headed. As the trial progressed, it would soon become clear that this was not a matter of whether Scopes broke the law or not, but became a matter of whether the religious and the scientific were unified, or divided. Darrow pressed Bryan on the stand with a battery of tough questions concerning the origin of life, and mankind. However, before Bryan was permitted to question Darrow, Scopes pleaded guilty, which meant Bryan was never able to launch an offensive against Bryan. The significance of this, is that many people were listening to this event over the radio. Many people were swayed by Darrow's perspective, but were never given the option of hearing Bryan's point of view. But who truly has the correct point of view? This event shaped the people of Tennessee, and many other states' world view, with its legacy still ringing out to this day."
+ flavorTEN.1opta:0 "Mandate textbooks supporting evolution." 
+ #(recommend lose 1 stab, tolerance of heathens/heretics +2)
+ flavorTEN.1optb:0 "Mandate textbooks supporting creation." 
+ #(recommend lose 1 stab, missionary strength +2)
+ flavorTEN.1optc:0 "Mandate individual schools decide." 
+ #(recommend lose 1 stab, tolerance of heathens/heretics +1 and missionary strength +1)
+ flavorTEN.1t:0 "Festival of Music"
+ flavorTEN.1d:0 "Tennessee is often referred to as the 'Birthplace of Country Music.' From Blues to Southern Rock, from classical to Gospel music, Tennessee has its own unique flair of artists, which contributes greatly to its culture."
+ flavorTEN.1opta:0 "Nashville wouldn't be Nashville without you!" 
+ # Rise of East Tennessee
+ TNflavor.1tit:0 "Rise of East Tennessee..."
+ TNflavor.1desc:0 "It would be hard to ignore the economic progress of East Tennessee, particularly the great city of Knoxville which has become the subject of recent debate. Representatives from East Tennessee argue that they carry an unfair economic burden relative to their political repreesntation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyranical', and 'having very poor manners'. While obviously none of this is true, the East Tennesseeans have reached a breaking point and are threatening secesion if things aren't changed. How shall we respond?"
+ TNflavor.1a:0 "We will concede to their demands."
+ TNflavor.1b:0 "We need to subdue these people before they become a bigger problem."
+ TNflavor.1c:0 "We will grant increased autonomy but Tennessee must remain united."
+ TNflavor.1d:0 "Perhaps we can work out a deal to benefit us both..."
+ # Rise of West Tennessee
+ TNflavor.2tit:0 "Rise of West Tennessee..."
+ TNflavor.2desc:0 "It would be hard to ignore the economic progress of West Tennessee, particularly the great city of Memphis which has become the subject of recent debate. Representatives from West Tennessee argue that they carry an unfair economic burden relative to their political repreesntation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyranical', and 'having very poor manners'. While obviously none of this is true, the West Tennesseeans have reached a breaking point and are threatening secesion if things aren't changed. How shall we respond?"
+ TNflavor.2a:0 "We will concede to their demands."
+ TNflavor.2b:0 "We need to subdue these people before they become a bigger problem."
+ TNflavor.2c:0 "We will grant increased autonomy but Tennessee must remain united."
+ TNflavor.2d:0 "Perhaps we can work out a deal to benefit us both..."
+ 
+ #####Flavor for Texas/East Texas/North Texas/Commanche/Lipan
+ flavorTEX.1t:0 "In El Paso, Four Dead in Five Seconds"
+ flavorTEX.1d:0 "A disturbance after an inquiry in the death of two Mexicans caused by a dispute on the translation of the proceedings into Spanish between the Constable and two disgruntled attendees of the inqury lead to the Constable being shot.  The shooting of the Constable alerted Marshal Stoudenmire who in a hasty exit from his dinner at the Globe Restaurant, at first shot wildly accidently killing an innocent bystander, engaged the two heated men. Within 5 seconds of the first shot Mashal Stoudenmire had killed them both.  The Constable, innocent bystander, and both assailants of the Constable were dead."
+ flavorTEX.1opta:0 "Well, let's hope this doesn't become a media circus."
+ flavorTEX.2t:0 "Arrival of the Germans"
+ flavorTEX.2d:0 "With the increasing global prominence of German nations in Europe and around the world, many parts of the New World have observed German immigrants arriving within their lands. There has been a recent influx of German immigrants migrating to [Root.GetName], however, and it has not gone unnoticed. Some in our government are clamoring at the idea, suggesting we offer incentives for them to come to our country. Others suggest that this is folly, and we should reject them outright. What shall we do?"
+ flavorTEX.2opta:0 "We as a nation of immigrants have no business rejecting those in need. Invite them to [Root.GetName]!"
+ flavorTEX.2optb:0 "Bah! I will have none of that!"
+ flavorTEX.3t:0 "Adelsverein Requests Land Grants"
+ flavorTEX.3d:0 "As the German communities in [Root.GetName] continue to grow, they have established a group known as the Adelsverein. This group sees [Root.GetName] as a natural next step in forming a new Germany, and as such, they are petitioning our government for the right to land grants across broader parts of our territory."
+ flavorTEX.3opta:0 "Accept their request"
+ flavorTEX.3optb:0 "[Root.GetName] is for the [Root.GetAdjective]!"
+
+ waco_events.1.title:0 "The Branch Davidians"
+ waco_events.1.desc:0 "The South has always been a rife with religious fundamentalism, and Texas is no exception. Indeed, there is perhaps no better example than the town of Waco. Situated between Austin and Dallas, the area seems to attract those that find themselves disillusioned with society and city life. Chief among these people is a man by the name of David Koresh, who has cultivated a small but devout flock that call themselves the Branch Dividians. Claiming Divine inspiration, Koresh preaches the nearing of the end times, and inspires in his followers a distrust in longstanding institutions like the Church and Crown. Local governors fear that Koresh may incite revolt if we allow this to continue."
+ waco_events.1.a:0 "We would do well to investigate these strange people."
+ waco_events.1.b:0 "Leave them be. What harm could come of it?"
+ waco_events.2.title:0 "Branch Davidians Seek War With the State"
+ waco_events.2.desc:0 "Recent reports are quite clear, David Koresh no longer recognizes our [Monarch.GetTitle] as his proper head of government. Worse yet, it seems his people have spent these last months stockpiling arms and building fortifications at their compound in Waco. They claim these activities are meant to protect themselves in the end times, but how can we be sure?"
+ waco_events.2.a:0 "I will not have armed zealots challenging my authority!"
+ waco_events.2.b:0 "I'm sure they mean us no harm. Continue to observe them for now."
+ waco_events.3.title:0 "Branch Davidians Clash With State Agents"
+ waco_events.3.desc:0 "I bring grave news, my [Monarch.GetTitle]. A small skirmish has broken out between the Branch Davidians and some of our agents at the edge of their compound. While we are unsure of how this happened, we can be certain that David Koresh will interpret this as an act of war."
+ waco_events.3.a:0 "So be it."
+ waco_events.4.title:0 "The Branch Davidians Revolt"
+ waco_events.4.desc:0 "As expected, David Koresh has called his followers home and has raised his banner in open rebellion. There can be no doubt that they will fight to the bitter end."
+ waco_events.4.a:0 "Bring me his head!"
+ 
+ #####Flavor for Utah/Deseret
+ #Utah Mormon Paranoia - Currently Postponed
+ 
+ #####Flavor for Virgin Islands
+ 
+ 
+ #####Flavor for Vermont
+ flavorVRM.1t:0 "Lax State Police"
+ flavorVRM.1d:0 "The local highway police have been keeping things interesting with their attitude towards their career, it's lead to a more relaxed local population."
+ flavorVRM.1opta:0 "I could have sworn he said meow."
+ flavorVRM.2t:0 "Dimpus Burger Incident"
+ flavorVRM.2d:0 "An incident between a state officer and a restaurant employee has caused a public relations crisis over a liter of cola."
+ flavorVRM.2opta:0 "Also heard something about a school bus."
+ flavorVRM.3t:0 "The Mayor of Burlington"
+ flavorVRM.3d:0 "A Vermont native and the former Mayor of Burlington who later went on to become a loyal Senator to our [Root.GovernmentName] for over a decade has received popularity and a following across the continent. He has preached his views far and wide, east and west, converting many to his teachings. His speeches and political activism has many, in their words, starting to 'feel the Bern.'"
+ flavorVRM.3opta:0 "Let the world know where he came from!"
+ flavorVRM.3optb:0 "Invite him back to [Root.GetName] to advise the [Root.Monarch.GetTitle]"
+ flavorVRM.3optc:0 "He can spread the word of our great nation across the continent!"
+ 
+ #####Flavor for Virginia/Northern Virginia
+ flavorVIR.1t:0 "The Richmond Calamity"
+ flavorVIR.1d:0 "On April 27th, 1870, the court-room on the second story of the Capitol building collapsed onto the floor below, killing 50 people, and gravely injuring 100 more. The building was originally constructed as a simple one story complex. But increasing administration meant a second story would have to be added. As the second floor was being built, the architect rested the floor beams on a narrow ledge just a few inches across. The ledge was never meant to support the weight of a second story, but even still, they would probably have resisted the load. But several years after the upgrade, improvements to the building's appearance were desired, and thus, the central pillars were removed. The floor beams supporting the second story had only the ledges to rest on which were already past their safe limits. Over the course of the next several years, the floor sagged, meaning even more load was being put on the middle part of the floor, snowballing the condition. It was just past 11:00 in the morning on that fateful April day when hundreds of people packed on to the second floor. The clerk entered the courtroom, placing his books on the table. One judge was already seated, with his associates still in the conference room. From the media, to the spectators, to the counsel, all were having a merry time, enjoying each other's company in friendly conversation. Suddenly, without rhyme, without warning, a major floorboard running underneath the courtroom broke away, causing the load to cascade to other supports, breaking them as well. In a heart-beat, the second story collapsed into the second sending its screaming occupents with it. Most people survived the incident, no doubt to the quick response from rescue teams. Greater loss of life could have happened if the Hall of Delegates below the courtroom was in session. The day after the disaster, most of the dead would be buried, and the day would be dedicated to mourning, and prayer."
+ flavorVIR.opta:0 "This surely is only an isolated incident... right?"
+ flavorVIR.optb:0 "Investigate all public buildings in the state, and reform our building code."
+ 
+ #####Flavor for Washington (state)/Lincoln
+ flavorWAS.1t:0 "Beneath the Shadow"
+ flavorWAS.1d:0 "Washington State sits on the ring of fire, which means it is home to several active volcanoes, the most notable being Mt. St. Helens. While the site makes a great opportunity to make an income off of tourism, and forestry, there is always the potential threat of an eruption."
+ #chance for mountain to erupt every 100 years or so. 
+ flavorWAS.1opta:0 "Limit use of the region to science only" 
+ #(science boost if volcano erupts, reduced economic consequences)
+ flavorWAS.1optb:0 "Developing timber and tourism will benefit the Washington economy greatly" 
+ #(major boost to economy, temporary economic disaster if volcano erupts) 
+ #below's consequences dependent on above's choice
+ flavorWAS.2t:0 "ERUPTION!"
+ flavorWAS.2d:0 "On March 18th, 1980, a piercing blast broke the silence of the misty Sunday morning. Colossal amounts of magma and ash poured out of Mt. St. Helens, flattening forests and buildings as far as 50 miles out. Rivers were suddenly overwhelmed with massive amounts of snowmelt from the mountain, destroying bridges and lumber camps. Fallout from the ash would be reported from Idaho to North Dakota to Oklahoma. Many lives were lost, and much property was destroyed. Yet human knowledge of volcanoes also increased greatly after the erupting, making future eruptions around the world safer for all."
+ flavorWAS.2opta:0 "May we never forget the true power of this world."
+ 
+ #####Flavor for West Virginia
+ #New Coal Seam Found
+ 
+ #Coal Mine Fire
+ 
+ flavorWVA.1t:0 "West Virginia Coal Wars"
+ flavorWVA.1d:0 "Between 1912 and 1921, work conditions in coal mines dropped to such a low level, that large groups of workers threatened to strike if their demands for safety, and better pay were not met. Instead, they were met with the barrel of a gun, and strikebreakers. Miners were forced out of the homes they were renting from the coal companies, and put into camps supported by the newly formed United Mine Workers Union. The situation escalated when strikebreaker agents provoked the miners, which in turn, caused the union to retaliate by supplying miners with high powered weapons, and ammunition. On September 1st, 1912, 6,000 miners set out with intent to kill the strikebreakers, and destroy company equipment. The Governor proclaimed martial law, and siezed many of the miners' weapons. However, this did nothing to solve the problem. Resentment festered within the mining community. On May 19th, 1920, a massive insurrection rose up, not seen since the beginning of the Civil War. One decisive battle was fought in Logan County, which consisted of 10,000 miners against 3,000 strikebreakers and lawmen. The president of the United States sent in the army, and several bombers to destroy the miners. After a bloody, and grueling exchange, the miners were routed by the US Army. A victory for the US military, and a defeat for an already alienated mining guild. Mining companies celebrated, as union membership fell to all time lows. It was however, a pyrrhic victory for the mining companies. Company owners had succeeded in keeping miners in 'their place,' but public support would gradually increase against the mining companies. Just like the Alamo, the spirit of the miners was not destroyed, but only gave them a louder voice to be heard by the general public. Franklin D Roosevelt would later sign the New Deal, fully recognizing the United Mine Workers Union, which allowed workers of the time, to mine safer, and receive better pay."
+ flavorWVA.1opta:0 "Striking miners? We should strike them back!" 
+ #(Recommend unrest increase, but boost to monthly ducats)
+ flavorWVA.1optb:0 "No citizen of West Virginia should feel they need a union to protect their rights" 
+ #(lost autonomy, but boost to diplo points)
+ 
+ #####Flavor for Wisconsin
+ flavorWIS.1t:0 "Promote Dairy Industry"
+ flavorWIS.1d:0 "Our pastures and fields run green with mildew, and potential. So why do we let it sit untamed? Investing in agrarian industry will bring profit and development to Wisconsin much faster than our rivals. We could import cows, and monopolize in the dairy field, or we could use the fertile land to plant crops, and try to expand into the vegetable market."
+ flavorWIS.1opta:0 "Bring in cows from abroad, and offer tax benefits for businesses to invest in dairy."
+ flavorWIS.1optb:0 "Simply use grain and vegetable seeds from our own supplies."
+ 
+ 
+ #####Flavor for Wyoming
+ flavorWYO.1t:0 "Johnson County War"
+ flavorWYO.1d:0 "The Johnson County War was a dispute fought between the Wyoming Stock Growers Association, and a posse of men made up of homesteaders, and farmers. The Wyoming Stock Growers Association, or WSGA was originally started to organize the cattle industry. However, any sense of strict business quickly went down the pipe as it sought to establish itself as the political strongarm of Wyoming. As more and more people began to settle west, wealthy, well established cattle ranchers saw them as a threat to their money and resources. Normally, cattle was allowed to roam free in lands belonging to the government. But seeing an opportunity, members of the WSGA bought up this land from the government, and forbade anyone from using it. But this was only the start. After a brutal summer and winter cycle, resources became very scarce. The WSGA began aggressively trying to remove other farmers and ranchers from their lands. Some acts involved setting fire to their homes, or stealing their cattle even though it was illegal to do so. WSGA bribed the local politicians into passing law which mandated all unbranded cattle in open range automatically became property of WSGA. Even to this point, the WSGA was not satisfied. They began to bribe, and hire anyone who would do their dirty work for them. Innocent men and women who were accused of cattle rustling could, and would be hung without trial. This was, however, not without repercussion. People who were not aligned with WSGA saw the corruption, and saw what the elite's wrongdoing going by unpunished. But any amount of opposition to the WSGA was met with relentless bloodshed. Finally, the public had had enough, and a local soon to be hero named Nate Champion became the backbone of the resistance toward WSGA. Forming the Northern Wyoming Farmers and Stock Grower's Association, or NWFSGA, Champion spearheaded a direct economic competition with WSGA. WSGA immediately ordered Champion to break up the organization. When he refused, WSGA sent assassins to murder Champion in his sleep. The assassination attempt was a disaster for WSGA. Champion was able repel the attack, which only strengthened public morale for the man, and for the cause against WSGA. It was at this point, that hostility on both sides had reached its peak levels. The talk of war was in the air and on the newspapers. Politicians began choosing sides, and the WSGA began to arm itself to destroy their opposition, and anyone tied to the NWFSGA. In March of 1982, 50 men were hired from across the country by WSGA to exterminate the homesteaders. Their first target was Nate Champion. After surrounding his house, they then set fire to it, gunning him down mercilessly as he fled. But the bloodshed did not end there. They began to rampage through the land, to show their force and prove to the citizens of Wyoming that WSGA was in charge. In response, a force of 200 men were organized to put down the WSGA regiment. Outnumbered, the WSGA outlaws took cover inside a barn. For the next two days, a grueling gunfight took place. 20 of the 50 WSGA men tried to escape from the barn, but 5 were killed in the attempt, with the others retreating back to the barn, save for one who ran to the corrupt governor of Wyoming for help. The governor sent a frantic message to the president asking for military assistance, with seemingly little regard to his old allies. The US Cavalry arrived just as the sheriff and his posse were about to blow up the barn. The WSGA men were arrested, and then later set free of all charges. The state would continue to see corruption like this until 1883 when presumably, by political pressure of a newly elected government, the WSGA was forced to revoke its monopoly and open the organization to all people equally."
+ flavorWYO.1opta:0 "Enforce the law for rich and poor."
+ #(suggest small decrease in national unrest, increase in prestige)
+ flavorWYO.1optb:0 "Money and power can be difficult to argue with."
+ #(Suggest large amounts of money, and monarch points)
+ 
+ 
+ ##########Canadian State Flavor
+ #####Flavor for Alberta
+ 
+ 
+ #####Flavor for British Columbia
+ 
+ 
+ #####Flavor for Manitoba
+ 
+ 
+ #####Flavor for New Brunswick/Madawaska/Acadia
+ 
+ 
+ #####Flavor for Newfoundland and Labrador/Newfoundland/Labrador
+ 
+ 
+ #####Flavor for Northwest Territories
+ 
+ 
+ #####Flavor for Nova Scotia
+ 
+ 
+ #####Flavor for Nunavut
+ # nunavut can't have flavor if it's all sheets of nice!
+ 
+ 
+ #####Flavor for Ontario/Toronto
+ 
+ 
+ #####Flavor for Prince Edward Island
+ 
+ 
+ #####Flavor for Quebec/Montreal
+ 
+ 
+ #####Flavor for Saskatchewan
+ 
+ 
+ #####Flavor for Yukon
+ #Gold Rush
+ 
+ ##########Australian States Flavor
+ #####Flavor for Australian Capital Territory
+ 
+ 
+ #####Flavor for New South Wales
+ 
+ 
+ #####Flavor for Northern Territory
+ 
+ 
+ #####Flavor for Queensland
+ 
+ 
+ #####Flavor for South Australia
+ 
+ 
+ #####Flavor for Victoria
+ 
+ 
+ #####Flavor for Western Australia
+ 
+ 
+ ##########Mexican States Flavor 
+ #####Flavor for Mexican Region
+ 
+ 
+ ##########Formable Nation Flavor Events
+ #####Flavor for Arctic Union
+ 
+ 
+ #####Flavor for Atlantic Union/Maritime Union
+ 
+ 
+ #####Flavor for Australia
+ 
+ 
+ #####Flavor for Canada
+ 
+ 
+ #####Flavor for Confederate States
+ 
+ 
+ #####Flavor for Great Lakes Republic
+ 
+ 
+ #####Flavor for Great Plains Federation
+ flavorGPF.1t:0 "Farming Debt Creating Land Crisis"
+ flavorGPF.1d:0 "Not every farmer is successful. Sometimes, disaster may ruin months of hard work, or bad business practice may lead to financial ruin. Either way, every year there are farmers unable to pay their bills, and taxes. Bankers are buying up lands left, and right. Some are honest folk, but many others care nothing for this nation or its people. Consequently, we are now finding that much of the land in this nation is now owned by private banks, with much political power. We can try to wrestle away the land from their grasp, but this will alienate the bankers, and it may lead to stability issues down the road from subversive elements. Another option is to lower the tax burden on farmers, and try to incentives businesses such as insurance companies, but this may lower our control over the nation, and increase autonomy in our provinces to some degree. Yet another option is to simply give in to the bankers... for a price."
+ flavorGPF.1opta:0 "Allow the situation to continue."
+ #(lump sum of x ducats, but republic tradition will take a major hit.) #At a later point, I'll add events to the events. In this situation, if the problem is not corrected, it will lead to republic collapse
+ flavorGPF.1optb:0 "Confiscate the lands from the bankers, and redestribute it among the public."
+ #(Big prestige, and mil tradition boost, but stability drop) #Got plans to write events to drop stability at random, unless an expensive quest is taken to eliminate the bankers)
+ flavorGPF.1optc:0 "Drop taxes, and incentivise business that deals with agriculture."
+ #Coring costs become lower, and boost to adm points, but autonomy in random provinces will gradually rise) #I don't know how we can work this one. If it is too complicated, let me know and I'll try to figure out a different penalty
+ 
+ 
+ #####Flavor for Golden Circle
+ 
+ 
+ #####Flavor for Las Californias
+ 
+ 
+ #####Flavor for Mexico (United Mexican States/Mexican Empire)
+ 
+ 
+ #####Flavor for Mid-Atlantic League
+ 
+ 
+ #####Flavor for New England
+ 
+ 
+ #####Flavor for New France
+ 
+ 
+ #####Flavor for New Zealand
+ 
+ 
+ #####Flavor for North American Union
+ 
+ 
+ #####Flavor for Pacifica
+ 
+ 
+ #####Flavor for Rio Grande
+ 
+ 
+ #####Flavor for Rocky Mountain Republic
+ 
+ 
+ #####Flavor for United Provinces of Central America (UPCA)
+ 
+ 
+ #####Flavor for United States
+ 
+ 
+ #####Flavor for Western Canada
+ 
+ ##############################################################################
+ #####Caribbean Nations Events
+ 
+ #Antigua
+ AntiguanFlavor.1t:0 "Antiguan Culture Awakens"
+ AntiguanFlavor.1d:0 "The locals in Antigua view themselves as being different than us and recognize themselves as their own culture."
+ AntiguanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Anguilla
+ AnguillianFlavor.1t:0 "Anguillian Culture Arises"
+ AnguillianFlavor.1d:0 "The locals in Anguilla view themselves as being different than us and recognize themselves as their own culture."
+ AnguillianFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Aruba
+ ArubanFlavor.1t:0 "Aruban Culture Arises"
+ ArubanFlavor.1d:0 "The locals in Aruba view themselves as being different than us and recognize themselves as their own culture."
+ ArubanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Bahamas
+ BahamasFlavor.1t:0 "Bahamas Cultural Beginnings"
+ BahamasFlavor.1d:0 "The Bahamas have begun identifying itself as being unique in our nation and have begat their own Bahamanian culture."
+ BahamasFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Barbados
+ BarbadosFlavor.1t:0 "Barbados Culture Blossoms"
+ BarbadosFlavor.1d:0 "The people of Barbados have come to see themselves unique in our vast nation and have proclaimed their own culture."
+ BarbadosFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Barbuda
+ BarbudaFlavor.1t:0 "Barbudan Culture Bounces Forward"
+ BarbudaFlavor.1d:0 "The locals in Barbuda view themselves as being different than us and recognize themselves as their own culture."
+ BarbudaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Bermuda
+ BermudaFlavor.1t:0 "Bermudian Cultural Beginnings"
+ BermudaFlavor.1d:0 "Bermuda has begun identifying itself as being unique in our nation and have begat their own Bermudian culture."
+ BermudaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Bonaire
+ BonaireFlavor.1t:0 "Bonairean Culture Bursts Forth"
+ BonaireFlavor.1d:0 "The locals in Bonaire view themselves as being different than us and recognize themselves as their own culture."
+ BonaireFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #British Virgin Islands/Tortola
+ BritishVirginIslandsFlavor.1t:0 "Virgin Islander Culture Bursts Forth"
+ BritishVirginIslandsFlavor.1d:0 "The locals in the Virgin Islands view themselves as being different than us and recognize themselves as their own culture."
+ BritishVirginIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Cayman Islands
+ CaymanIslandsFlavor.1t:0 "Cayman Islander Culture Commences"
+ CaymanIslandsFlavor.1d:0 "Cayman Island has become culturally unique and they have commensed with identifying as Cayman Islanders."
+ CaymanIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Cuba
+ CubaFlavor.1t:0 "Cuban Culuture Created"
+ CubaFlavor.1d:0 "The people of the island of Cuba have created for themselves their own culture and are now calling themselves Cubans."
+ CubaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Curacao
+ CuracaoanFlavor.1t:0 "Curaçaoan Culuture Created"
+ CuracaoanFlavor.1d:0 "The people of the island of Curaçao have created for themselves their own culture and are now calling themselves Curaçaoan."
+ CuracaoanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Dominica (Small Island Nation, for Dominican Republic see Santo Domingo below.)
+ DominicaIslandFlavor.1t:0 "Dominica Culture Debuts"
+ DominicaIslandFlavor.1d:0 "The small island of Dominica has had a long history in our nation, however they have begun distributing the idea that they are their own culture and stress themselves that they are not Domini-CANS but instead Domin-EE-cans."
+ DominicaIslandFlavor.1opta:0 "Probably a good idea to never get the two confused."
+ 
+ #Guadeloupe
+ GuadeloupeFlavor.1t:0 "Guadeloupe Culture Germinates"
+ GuadeloupeFlavor.1d:0 "The island people of Guadeloupe seem to have fancied themselves and are now identifying themselves not as one of us but as part of their own Guadeloupean culture."
+ GuadeloupeFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Grenada
+ GrenadaFlavor.1t:0 "Grenadian Culture Grows"
+ GrenadaFlavor.1d:0 "The island people of Grenada and Carriacou seem to have fancied themselves and are now identifying themselves not as one of us but as part of their own Grenadian culture."
+ GrenadaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Haiti
+ HaitiFlavor.1t:0 "Haitian Culture Has Hit"
+ HaitiFlavor.1d:0 "The people of Haiti have become restless in dealing with the rest of the state and have adopted their own culture and identity."
+ HaitiFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+
+ #Jamaica
+ JamaicaFlavor.1t:0 "Jamaican Culture Jumps"
+ JamaicaFlavor.1d:0 "The people of Jamaica have jumped at the idea that they are of their own culture and identity."
+ JamaicaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Martinique
+ MartiniqueFlavor.1t:0 "Martinique Culture Matures"
+ MartiniqueFlavor.1d:0 "The people of the island of Martinique have developed a mature culture and identity for themselves."
+ MartininqueFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Montserrat
+ MontserratFlavor.1t:0 "Montserratian Culture Makes An Entrance"
+ MontserratFlavor.1d:0 "The people of the island of Montserrat have developed a mature culture and identity for themselves."
+ MontserratFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Saba
+ SabaFlavor.1t:0 "Saban Culture Solidifies"
+ SabaFlavor.1d:0 "The people of the island of Saba have developed their own culture and indenty, calling themselves Sabans."
+ SabaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Sint Eustasius
+ SintEustasiusFlavor.1t:0 "Statian Culture Sprouts"
+ SintEustasiusFlavor.1d:0 "The people of the island of Sint Eustasius have developed their own culture and indenty, calling themselves Statians."
+ SintEustasiusFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Santo Domingo (Dominican Republic)
+ SantoDomingoFlavor.1t:0 "Santo Domingo Culture Springs"
+ SantoDomingoFlavor.1d:0 "The people of the eastern portion of the island of Hispanola have developed their own culture and indenty in the name of Santo Domingo"
+ SantoDomingoFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #St. Barts
+ StBartsFlavor.1t:0 "Saint Barthélemy Culture Brings Attention"
+ StBartsFlavor.1d:0 "The island of Saint Barthélemy has developed itself into a matured culture and identity."
+ StBartsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #St. Kitts
+ StKittsFlavor.1t:0 "St. Kitts Culture Shoots Forth"
+ StKittsFlavor.1d:0 "The island of St. Kitts has developed itself into a matured culture and identity."
+ StKittsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Nevis
+ NevisFlavor.1t:0 "Nevis Culture Shoots Forth"
+ NevisFlavor.1d:0 "The island of Nevis has developed itself into a matured culture and identity."
+ NevisFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #St. Lucia
+ StLuciaFlavor.1t:0 "St. Lucia Culture Streams Out"
+ StLuciaFlavor.1d:0 "The island of St. Lucia has developed into a mature and distinct society with their own cultural identity as a people."
+ StLuciaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #St. Martin
+ StMartinFlavor.1t:0 "St. Martin Culture Storms Forth"
+ StMartinFlavor.1d:0 "The locals of St. Martin have developed for themselves a distinct and celebrated culture and society as a people, but stress their difference between themselves and Sint Maarten on the other half of the island."
+ StMartinFlavor.1opta:0 "There's two halves of that tiny island?"
+ 
+ #Sint Maarten
+ SintMaartenFlavor.1t:0 "Sint Maarten Culture Sallies Forth"
+ SintMaartenFlavor.1d:0 "The locals of Sint Maarten have developed for themselves a distinct and celebrated culture and society as a people, but stress their difference between themselves and St. Martin on the other half of the island."
+ SintMaartenFlavor.1opta:0 "There's two halves of that tiny island?"
+ 
+ #St. Vincent
+ StVincentFlavor.1t:0 "St. Vincent Envisions Good Favors"
+ StVincentFlavor.1d:0 "St. Vincent and the Grenadines, our island territory, has created itself a distinct culture and views itself as its own society."
+ StVincentFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Turk and Caicos Islands
+ TurkCaicosFlavor.1t:0 "Turk & Caicos Islander Cultures Appears"
+ TurkCaicosFlavor.1d:0 "Our island depedency of Turk & Caicos Islands has developed its own societial identity and culture."
+ TurkCaicosFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Trinidad
+ TrinidadFlavor.1t:0 "Trinidad Culture Triggers"
+ TrinidadFlavor.1d:0 "Our island of Trinidad has gradually adopted its own culture and identity as a society."
+ TrinidadFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Tobago
+ TobagoFlavor.1t:0 "Tobago Culture Tribulates"
+ TobagoFlavor.1d:0 "Our island of Tobago has gradually adopted its own culture and identity as a society."
+ TobagoFlavor.1opta:0 "Oh well, I heard they're all cannibals anyhow."
+ 
+ #West Indies Federation (Formable)
+ 
+ #Other Nation Events
+ #Saint Pierre and Miquelon
+ StPierreFlavor.1t:0 "Saint Pierre Culture Spawns"
+ StPierreFlavor.1d:0 "Our islands of Saint Pierre and Miquelon have developed their own unique cultural identity, separate from our own."
+ StPierreFlavor.1opta:0 "Where did they learn to speak like that?"
+ 
+ #Greenland
+ GreenlandFlavor.1t:0 "Greenlandic Culture Grows"
+ GreenlandFlavor.1d:0 "Our colonies on the island of Greenland have developed a unique identity, intermingling with the natives and embracing their customs."
+ GreenlandFlavor.1opta:0 "Backwards savages!"
+ 
+ ##############################################################################
+ #####Central American Nations Events
+ 
+ #Belize
+ BelizeFlavor.1t:0 "Belize Beginnings"
+ BelizeFlavor.1d:0 "The people of Belize in Central America has become its own society and has adopted its own cultural identity."
+ BelizeFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Costa Rica
+ CostaRicaFlavor.1t:0 "Costa Rican Character"
+ CostaRicaFlavor.1d:0 "The people of Costa Rica have matured into their own society and has adopted its own collective identity."
+ CostaRicaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #El Salvador
+ ElSalvadorFlavor.1t:0 "El Savador  Establishment"
+ ElSalvadorFlavor.1d:0 "The people of El Salvador have matured into their own society and has adopted its own collective identity."
+ ElSalvadorFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Guatemala
+ GuatemalaFlavor.1t:0 ""
+ GuatemalaFlavor.1d:0 ""
+ GuatemalaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Hondoras
+ HondurasFlavor.1t:0 ""
+ HondurasFlavor.1d:0 ""
+ HondurasFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Misikto
+ MiskitoFlavor.1t:0 ""
+ MiskitoFlavor.1d:0 ""
+ MiskitoFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Nicaragua
+ NicaraguaFlavor.1t:0 ""
+ NicaraguaFlavor.1d:0 ""
+ NicaraguaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Panama
+ PanamaFlavor.1t:0 ""
+ PanamaFlavor.1d:0 ""
+ PanamaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ ##############################################################################
+ #####Pacific Island Nations Events
+ 
+ #Cook Islands
+ CookIslandsFlavor.1t:0 "Cook Islands Cultural Change"
+ CookIslandsFlavor.1d:0 "The people on the Cook Islands have changed their understand of their island culture and now view themselves as being a distinct culture and soceity from ours."
+ CookIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Fiji
+ FijiFlavor.1t:0 "Fijian Sense of Freedom"
+ FijiFlavor.1d:0 "The people of the Island of Fiji have slowly changed their understands of our principles on freedom and liberty that they have developed their own identity and culture."
+ FijiFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Kiribati
+ KiribatiFlavor.1t:0 "Kiribati Change"
+ KiribatiFlavor.1d:0 "Kiribati has come to identify themselves as their own society and culture."
+ KiribatiFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Midway Atoll
+ MidwayAtollFlavor.1t:0 "Midway Atoll Makes Its Case"
+ MidwayAtollFlavor.1d:0 "The islanders on Midway Atoll have detached themselves from our collective identity and become their own distinct society."
+ MidwayAtollFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ #MidwayAtollFlavor.2t:0 "Midway Atoll Makes Its Case" #Currently using text for event above for all but the option.
+ #MidwayAtollFlavor.2d:0 "The islanders on Midway Atoll have detached themselves from our collective identity and become their own distinct society."
+ MidwayAtollFlavor.2opta:0 "Their identity is what?!"
+ 
+ #Nauru
+ NauruFlavor.1t:0 "Nauru Culture Identity"
+ NauruFlavor.1d:0 "The people of Nauru have collectively identifying as a unique local identity and culture with even some coming to believe they're a seperate society from ours."
+ NauruFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #New Caledonia
+ NewCaledoniaFlavor.1t:0 "New Caledonia Cultural Shift"
+ NewCaledoniaFlavor.1d:0 "Our island territories of New Caledonia have been left to their own devices and have developed their own societial and culutural identities"
+ NewCaledoniaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Niue
+ NiueFlavor.1t:0 "Niue Nation"
+ NiueFlavor.1d:0 "The island of Niue has change its cultural identity to one that is distinct from ours and with it they view themselves as their own society."
+ NiueFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Solomon Islands
+ SolomonIslandsFlavor.1t:0 "Solomon Islands Society"
+ SolomonIslandsFlavor.1d:0 "The Solomon Islands have adopted their own cultural identity and become a distinct society."
+ SolomonIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Tahiti
+ TahitianFlavor.1t:0 "Tahitian Indentity"
+ TahitianFlavor.1d:0 "The Tahitians have adopted their own cultural identity and view themselves as a distinct society."
+ TahitianFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Tokelau
+ TokelauanFlavor.1t:0 "Tokelauan Island Cultural Identity" 
+ TokelauanFlavor.1d:0 "The island of Tokelau has gradually stopped identifying as our own culture but as their own distinct culture and society."
+ TokelauanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Tonga
+ TonganFlavor.1t:0 "Tonga Island Indentity"
+ TonganFlavor.1d:0 "The island people of Tonga have initiated their own cultural identity and view themselves as a distince society from us."
+ TonganFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Tuvalu
+ TuvaluFlavor.1t:0 "Tuvalu Culuture Organized"
+ TuvaluFlavor.1d:0 "Our island of Tuvalu has recently been described to us that they are a distince culture and society."
+ TuvaluFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Vanuatu
+ VanuatuFlavor.1t:0 "Vanuatu Culture Discovered"
+ VanuatuFlavor.1d:0 "The great people of the island of Vanuatu has organized into a distinct cultural and society from our own."
+ VanuatuFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #Wake Island
+ WakeIslandFlavor.1t:0 "Wake Island Wishes"
+ WakeIslandFlavor.1d:0 "The small island of Wake was at one time deserted but now the people having established a presence there as become accustom to their own distinct identity and culture."
+ WakeIslandFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+ #American Samoa (SEE ABOVE IN AMERICAN STATES EVENTS)
+ 
+ #Western Samoa
+ WesternSamoanFlavor.1t:0 "Western Samoa Culture Awakens"
+ WesternSamoanFlavor.1d:0 "Western Samoan society has created its own distinct identity and culture as a people."
+ WesternSamoanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ 
+  #Montgomery
+ MociteFlavor.1t:0 "Montgomery County"
+ MociteFlavor.1d:0 "Montgomery County has usurped Anne Arundel as the most important county in the area."
+ MociteFlavor.1opta:0 "Great!"
+ 
+ #Female Election Candidates
+ EVTOPTE700:0 "Female Bureaucrat Candidate"
+ EVTOPTF700:0 "Female Diplomat Candidate"
+ EVTOPTG700:0 "Female Military Candidate"
+ 
+ #Samoa (Formable))
