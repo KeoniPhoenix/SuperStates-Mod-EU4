@@ -1,0 +1,776 @@
+florida_local_expansion = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = FLO
+			primary_culture = floridian
+		}
+	}
+	has_country_shield = yes
+
+	flo_rally_the_troops = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+		completed_by = 1492.1.1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.70
+			num_of_generals = 1
+		}
+		effect = {
+			mississippi_delta_area = {
+				add_permanent_claim = ROOT
+			}
+			west_florida_area = {
+				add_core = ROOT
+			}
+		}
+	}
+	flo_reclaim_west_florida = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { flo_rally_the_troops }
+		position = 2
+		completed_by = 1521.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = mississippi_delta_area
+				area = west_florida_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4 
+				area = west_florida_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3 
+				area = mississippi_delta_area
+			}
+		}
+		effect = {
+			pearl_river_area = {
+				add_permanent_claim = ROOT
+				}
+			black_prairie_area = {
+				add_permanent_claim = ROOT
+				}
+			savannah_area = {
+				add_permanent_claim = ROOT
+				}
+			acadiana_area = {
+				add_permanent_claim = ROOT
+			}
+			louisiana_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	flo_control_the_mississippi = {
+		icon = mission_cannons_firing
+		required_missions = { flo_reclaim_west_florida }
+		position = 3
+		completed_by = 1521.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = black_prairie_area
+				area = acadiana_area
+				area = louisiana_area
+				area = pearl_river_area
+				area = west_florida_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 2 
+                    area = black_prairie_area
+            }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 2 
+                    area = pearl_river_area
+            }
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 2 
+                    area = acadiana_area
+            }
+			  num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 2 
+                    area = louisiana_area
+            }
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+				else_if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 1 }
+					}
+					center_of_trade = 1
+				}
+				else = {
+					add_base_production = 4
+				}
+			}
+			1507 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 50
+					key = mississippi_ambition
+				}
+			}
+		}
+	}	
+	flo_push_the_border = {
+		icon = mission_unite_home_region
+		required_missions = { flo_control_the_mississippi }
+		completed_by = 1540.1.1
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = alabama_area
+				area = savannah_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			if = {
+				limit = {
+					exists = GRG
+				}
+				army_strength = {
+					who = GRG
+					value = 2
+				}				
+			}
+			else = {
+				army_size_percentage = 1
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3 
+				area = alabama_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = savannah_area
+			}
+		}
+		effect = {
+			georgia_us_area = {
+				add_permanent_claim = ROOT
+			}
+			south_carolina_area = {
+				add_permanent_claim = ROOT
+			}
+			blue_ridge_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	flo_seize_piedmont = {
+		icon = mission_have_two_subjects
+		required_missions = { flo_push_the_border }
+		completed_by = 1550.1.1
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = georgia_us_area
+				area = south_carolina_area
+				area = blue_ridge_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4 
+				area = georgia_us_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = blue_ridge_area
+					area = south_carolina_area
+				}
+			}
+			2510 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = flavorFLO.2 }
+			add_prestige = 15
+			add_accepted_culture = us_georgian
+		}
+	}
+	
+	flo_castillo_de_san_marcos = {
+		icon = mission_conquer_50_development
+		required_missions = { }
+		position = 6
+		completed_by = 1530.1.1
+		provinces_to_highlight = {
+			province_id = 2546
+			NOT = {	fort_level = 4 }
+		}
+		
+		trigger = {
+			2546 = {
+				fort_level = 4
+				owns_core_province = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns = 2546
+				}
+				2546 = {
+				add_province_modifier = {
+					name = "flo_castillo_de_san_marcos_modifier"
+					duration = -1
+				}
+				}
+			}
+			add_mil_power = 100
+		}
+	}
+}
+# Column 2
+florida_internal = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = FLO
+			primary_culture = floridian
+		}
+	}
+	has_country_shield = yes
+
+	flo_consolidate_florida = {
+		icon = mission_colonize_florida
+		required_missions = { }
+		position = 6
+		completed_by = 1530.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = st_johns_area
+				area = suncoast_area
+				area = south_florida_area
+				area = north_florida_area
+				area = west_florida_area
+			}
+			OR = {
+				NOT = { culture = ROOT }
+				NOT = { religion = ROOT }
+				NOT = { owned_by = ROOT }
+			}
+		}
+		
+		trigger = {
+			st_johns_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+			suncoast_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+			south_florida_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+			north_florida_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+			west_florida_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					culture = ROOT
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			add_country_modifier = {
+				name = "flo_consolidate_florida_mission"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Column 3
+
+#Column 5
+florida_colonial = {
+
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = FLO
+			primary_culture = floridian
+		}
+	}
+	has_country_shield = yes
+
+	flo_port_of_miami = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		provinces_to_highlight = {
+			province_id = 2545
+		}
+
+		trigger = {
+			2545 = {
+				owned_by = ROOT
+					if = {
+						limit = {
+								has_dlc = Dharma
+						}
+						AND = {
+							province_has_center_of_trade_of_level = 3
+							development = 30
+							}
+					}
+					else = {
+						development = 30
+						has_building = marketplace
+					}
+			}
+		}
+		effect = {
+			east_cuba_area = {
+				# if = {
+					# limit = {
+						# NOT = { owned_by = ROOT }
+					# }
+					add_core = ROOT
+				#}
+			}
+			west_cuba_area = {
+				# if = {
+					# limit = {
+						# NOT = { owned_by = ROOT }
+					# }
+					add_core = ROOT
+				#}
+			}
+			2545 = {
+				add_province_modifier = {
+					name = "flo_port_of_miami_modifier"
+					duration = -1
+				}
+			}
+			south_florida_area = {
+				add_province_modifier = {
+					name = "flo_port_of_miami2_modifier"
+					duration = 5475
+				}
+			}
+		}
+	}
+	flo_cuban_diaspora = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { flo_port_of_miami }
+		completed_by = 1600.1.1
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = west_cuba_area
+				area = east_cuba_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = west_cuba_area
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					area = east_cuba_area
+				}
+				484 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+		}
+		effect = {
+			country_event = { id = flavorFLO.1 }
+			bahamas_area = {
+				add_permanent_claim = ROOT
+			}
+			puerto_rico_area = {
+				add_permanent_claim = ROOT
+			}
+			santo_domingo_area = {
+				add_permanent_claim = ROOT
+			}
+			north_haiti_area = {
+				add_permanent_claim = ROOT
+			}
+			south_haiti_area = {
+				add_permanent_claim = ROOT
+			}
+			jamaica_area = {
+				add_permanent_claim = ROOT
+			}
+			# east_cuba_area = {
+				# if = {
+					# limit = {
+						# NOT = { owned_by = ROOT }
+					# }
+					# add_core = ROOT
+				# }
+			# }
+			# west_cuba_area = {
+				# if = {
+					# limit = {
+						# NOT = { owned_by = ROOT }
+					# }
+					# add_core = ROOT
+				# }
+			# }
+		}
+	}
+	flo_caribbean_hispanosphere = {
+		icon = mission_have_two_subjects
+		required_missions = { flo_cuban_diaspora }
+		completed_by = 1560.1.1
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = puerto_rico_area
+				area = santo_domingo_area
+				area = south_haiti_area
+				area = north_haiti_area
+				area = jamaica_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3 
+				OR = {
+					area = jamaica_area
+					area = puerto_rico_area
+				}
+			}
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 6
+					OR = {
+						area = south_haiti_area
+						area = north_haiti_area
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					area = santo_domingo_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "flo_caribbean_hispanosphere_modifier"
+				duration = 5475
+			}
+		}
+	}
+	flo_spread_the_sunshine = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { }
+		completed_by = 1492.1.1
+		position = 4
+		provinces_to_highlight = {
+			region = greater_antilles_region
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			greater_antilles_region = {
+				type = any
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "flo_caribbean_discovered"
+				duration = 5475
+			}
+		}
+	}
+	flo_vacation_homes = {
+		icon = mission_colonial
+		required_missions = { flo_spread_the_sunshine }
+		completed_by = 1525.1.1
+		position = 5
+		provinces_to_highlight = {
+			superregion = caribbean_superregion
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				superregion = caribbean_superregion
+				is_city = yes
+			}
+		}
+		effect = {
+			3313 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 3650
+					power = 25
+					key = flo_caribbean_trade
+				}
+			}
+			1516 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 3650
+					power = 25
+					key = flo_caribbean_trade
+				}
+			}
+		}
+	}
+	flo_capture_the_bahamas = {
+		icon = mission_invade_island
+		required_missions = { flo_vacation_homes }
+		completed_by = 1600.1.1
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+				area = lower_lucaya_area
+			}
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { culture = ROOT }
+				NOT = { religion = ROOT }
+			}
+		}
+		trigger = {
+				bahamas_area = {
+				type = all
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					OR = {
+						culture = ROOT
+						culture = south_floridian
+						culture = miamian
+						culture = west_floridian
+						culture = floridian
+						}
+				}
+			}
+			4626 = {
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					OR = {
+						culture = ROOT
+						culture = south_floridian
+						culture = miamian
+						culture = west_floridian
+						culture = floridian
+						}
+					}
+				}
+			3326 = {
+				AND = {
+					owned_by = ROOT
+					religion = ROOT
+					OR = {
+						culture = ROOT
+						culture = south_floridian
+						culture = miamian
+						culture = west_floridian
+						culture = floridian
+						}
+					}
+				}
+			}
+		effect = {
+			3326 = {
+					add_base_production = 1
+					add_base_manpower = 1
+					add_base_tax = 1
+			}
+			4626 = {
+					add_base_production = 1
+					add_base_manpower = 1
+					add_base_tax = 1
+			}
+			bahamas_area = {
+					add_base_production = 1
+					add_base_manpower = 1
+					add_base_tax = 1
+				}
+			}
+		}
+	}
+florida_texas = {
+	slot = 3
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = FLO
+			primary_culture = floridian
+		}
+	}
+	has_country_shield = yes
+
+	flo_defend_against_texas = {
+		icon = mission_alliances
+		required_missions = { }
+		completed_by = 1550.1.1
+		position = 6
+
+		trigger = {
+			if = {
+				limit = {
+					exists = TEX
+				}
+				OR = {
+					army_strength = {
+						who = TEX
+						value = 1.5
+					}	
+					TEX = {
+						alliance_with = ROOT
+					}
+					TEX = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				navy_size_percentage = 1
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "flo_defend_against_texas_modifier"
+				duration = 5475
+			}
+			custom_tooltip = flo_defend_against_texas_tooltip
+			hidden_effect = {
+			ROOT = {
+				every_owned_province = {
+					if = {
+						limit = {
+							OR = {
+								is_permanent_claim = TEX
+								is_core = TEX
+								is_claim = TEX
+							}
+						}
+						remove_claim = TEX
+						remove_core = TEX
+					}
+				}
+			}
+			louisiana_area = {
+				if = {
+					limit = {
+							OR = {
+								is_permanent_claim = TEX
+								is_claim = TEX
+							}
+					}
+					remove_claim = TEX
+				}
+			}
+			acadiana_area = {
+				if = {
+					limit = {
+							OR = {
+								is_permanent_claim = TEX
+								is_claim = TEX
+							}
+					}
+					remove_claim = TEX
+				}
+			}
+			mississippi_delta_area = {
+				if = {
+					limit = {
+							OR = {
+								is_permanent_claim = TEX
+								is_claim = TEX
+							}
+					}
+					remove_claim = TEX
+				}
+			}
+			west_florida_area = {
+				if = {
+					limit = {
+						OR = {
+							is_permanent_claim = TEX
+							is_claim = TEX
+						}
+					}
+					remove_claim = TEX
+				}
+			}
+		}
+		}
+	}
+}

@@ -1,0 +1,905 @@
+cal_alta = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAL
+	}
+	has_country_shield = yes
+
+	cal_nevada = {
+		icon = mission_cannons_firing
+		required_missions = { cal_mil_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = black_rock_area
+				province_id = 3279
+				province_id = 949
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			black_rock_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3279 = { #Nye
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			949 = { #Clark
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			salt_lake_area = {
+				add_permanent_claim = ROOT
+			}
+			south_utah_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_utah = {
+		icon = mission_assemble_an_army
+		required_missions = { cal_nevada }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = salt_lake_area
+				area = south_utah_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			salt_lake_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_utah_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			arizona_area = {
+				add_permanent_claim = ROOT
+			}
+			3236 = { #Mohave
+				add_permanent_claim = ROOT
+			}
+			938 = { #Yuma
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_arizona = {
+		icon = mission_conquer_5_states
+		required_missions = { cal_utah }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = arizona_area
+				province_id = 3236
+				province_id = 938
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			arizona_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3236 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			938 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			baja_arizona_area = {
+				add_claim = ROOT
+			}
+			add_prestige = 10
+			add_adm_power = 75
+		}
+	}
+
+	cal_gold = {
+		icon = mission_high_income
+		required_missions = { cal_arizona }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+			province_id = 2733
+			province_id = 2734
+			province_id = 3244
+			province_id = 3248
+			province_id = 949
+			province_id = 951
+			}
+				OR = {
+					NOT = { base_production = 5 }
+					NOT = { owned_by = ROOT }
+			}
+		}	
+		trigger = {#If any new gold provinces are added in NV and CA, add em here. This mission doesn't care about any gold in Utah or Arizona
+			2733 = { #Shasta
+				owned_by = ROOT
+				base_production = 5
+			}
+			2734 = { #Placer
+				owned_by = ROOT
+				base_production = 5
+			}
+			3244 = { #Butte
+				owned_by = ROOT
+				base_production = 5
+			}
+			3248 = { #Inyo
+				owned_by = ROOT
+				base_production = 5
+			}
+			949 = { #Clark
+				owned_by = ROOT
+				base_production = 5
+			}
+			951 = { #Washoe
+				owned_by = ROOT
+				base_production = 5
+			}
+		}
+		effect = {
+			add_inflation = -2.0
+			country_event = { id = flavorCAL.1000 } # <-- Any gold changes should also change the event
+			define_advisor = {
+				type = master_of_mint
+				skill = 3
+				cost_multiplier = 0.25
+				culture = californian
+			}
+		}
+	}
+}
+
+cal_las_and_gran = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAL
+	}
+	has_country_shield = yes
+
+	cal_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			black_rock_area = {
+				add_permanent_claim = ROOT
+			}
+			mojave_area = {
+				add_permanent_claim = ROOT
+			}
+			baja_california_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_baja = {
+		icon = mission_colonize_california
+		required_missions = { cal_mil_buildup }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				area = baja_california_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baja_california_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			baja_california_sur_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_baja_sur = {
+		icon = mission_landsknecht_soldier
+		required_missions = { cal_baja }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = baja_california_sur_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			baja_california_sur_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			baja_california_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 5475
+				}
+			}
+			baja_california_sur_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 5475
+				}
+			}
+			jefferson_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_las_cali = {
+		icon = mission_assemble_an_army
+		required_missions = { cal_baja_sur }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = california_provincegroup
+				province_group = baja_california_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_subject = no
+			california_provincegroup = {
+				type = all
+				owned_by = ROOT
+			}
+			baja_california_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = {
+					local_autonomy = 15
+				}
+			}
+			baja_california_sur_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				NOT = {
+					local_autonomy = 15
+				}
+			}
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			country_event = { id = flavorCAL.1001 }
+		}
+	}
+	
+	cal_gran_cali = {
+		icon = mission_unite_home_region
+		required_missions = { cal_las_cali cal_arizona }
+		position = 5
+
+		trigger = {
+			is_subject = no
+			stability = 3
+			total_development = 800
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 30
+			add_country_modifier = {
+				name = "cal_gran"
+				duration = 5475
+			}
+			sonora_area = {
+				add_permanent_claim = ROOT
+			}
+			sinaloa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cal_sonora = {
+		icon = mission_have_two_subjects
+		required_missions = { cal_gran_cali }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				area = sonora_area
+				area = sinaloa_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = sonora_area
+			}
+			sinaloa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 20
+			}
+		}
+	}
+}
+
+cal_pacific = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAL
+	}
+	has_country_shield = yes
+
+	cal_fortifications = {
+		icon = mission_conquer_50_development
+		required_missions = { cal_mil_buildup }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = california_provincegroup
+			}
+			OR = {
+				NOT = { owned_by = root }
+				AND = {
+					NOT = { has_building = fort_15th }
+					NOT = { has_building = fort_16th }
+					NOT = { has_building = fort_17th }
+					NOT = { has_building = fort_18th }
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+				OR = {
+					province_group = california_provincegroup
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "cal_fortification"
+				duration = 7300
+			}
+		}
+	}
+
+	cal_coastal_defence = {
+		icon = renaissance_city
+		required_missions = { cal_fortifications }
+		position = 3
+
+		trigger = {
+			is_subject = no
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					has_building = coastal_defence
+					has_building = naval_battery
+				}
+			}
+			army_size = 80
+		}
+		effect = {
+			add_yearly_sailors = 2
+			add_country_modifier = {
+				name = "cal_marine" #gives california marines
+				duration = -1
+			}
+		}
+
+	}
+
+	cal_oregon = {
+		icon = mission_invade_island
+		required_missions = { cal_baja_sur }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = jefferson_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			jefferson_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			oregon_area = {
+				add_permanent_claim = ROOT
+			}
+			puget_sound_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+
+	cal_washington = {
+		icon = mission_cannons_firing
+		required_missions = { cal_oregon }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = oregon_area
+				area = puget_sound_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			oregon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			puget_sound_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			2635 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 25
+					key = cal_puget_trade
+				}
+			}
+			gulf_islands_area = {
+				add_claim = ROOT
+			}
+			vancouver_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+cal_trade_and_navy = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAL
+	}
+	has_country_shield = yes
+
+	cal_vineyards = {
+		icon = mission_wine_monopolies
+		required_missions = { cal_economy }
+		position = 2
+
+		provinces_to_highlight = {
+			trade_goods = wine
+			NOT = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+				has_manufactory_trigger = yes
+			}
+			has_discovered = ROOT
+		}
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 8 #9 provinces that produce wine on west coast
+					trade_goods = wine
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+					has_manufactory_trigger = yes
+				}
+				trading_bonus = {
+					trade_goods = wine
+					value = yes
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_dip_power = 150
+		}
+	}
+
+	cal_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 943
+			}
+			NOT = {
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+			}
+		}
+		trigger = {
+			943 = {
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+			}
+			num_of_heavy_ship = 15
+			num_of_light_ship = 40
+			navy_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}
+		}
+	}
+
+	# cal_navy_2
+	#
+	# kinda redundent
+	# position = 4 # <---open spot below navy-1
+
+	cal_cali_trade = { 
+		icon = mission_dominate_home_trade_node
+		required_missions = { cal_navy }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3309 #San Francisco Bay
+				province_id = 944 #LA
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		trigger = {
+			3309 = {
+				trade_share = {
+					country = ROOT
+					share = 80
+				}
+			}
+			944 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			san_francisco_area = {
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			central_coast_area = {
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "cal_trade"
+				duration = 7300
+			}
+		}
+	}
+
+	cal_pacific_trade = {
+		icon = mission_colonial
+		required_missions = { cal_cali_trade cal_washington }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 973 #anchorage
+				province_id = 2635 # vancouver
+				province_id = 1551 #manzanillo bay
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+			}
+		}
+		trigger = {
+			is_subject = no
+			973 = {
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+				is_strongest_trade_power = ROOT
+			}
+			2635 = {
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+				is_strongest_trade_power = ROOT
+			}
+			1551 = {
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			hawaii_area = {
+				add_claim = ROOT
+			}
+			leeward_hawaiian_islands_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+cal_dev_and_tech = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAL
+	}
+
+	cal_economy = { #similar to generic economic
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			temple = 12
+			workshop = 12
+			treasury = 1200
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+
+	cal_manufactories = { #similar to generic economic
+		icon = mission_have_manufactories
+		required_missions = { cal_economy }
+		position = 2
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+			}
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+		}
+	}
+
+	cal_development = {
+		icon = mission_hanseatic_city
+		required_missions = { cal_manufactories }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = california_provincegroup
+			}
+			NOT = { development = 24}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				OR = {
+					province_group = california_provincegroup
+				}
+				development = 20
+				value = 12
+			}
+			num_of_owned_provinces_with = {
+				OR = {
+					province_group = california_provincegroup
+				}
+				development = 32
+				value = 6
+			}
+		}
+		effect = {
+				 san_pablo_area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+					name = "cal_develop" 
+					duration = 10950 #30 years
+					}
+				 }
+		 		central_valley_area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+					name = "cal_develop" 
+					duration = 10950 #30 years
+					}
+	 			}
+				 central_coast_area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+					name = "cal_develop" 
+					duration = 10950 #30 years
+					}
+ 				}
+			 	san_diego_area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+					name = "cal_develop" 
+					duration = 10950 #30 years
+				}
+			}	
+		}
+	}
+
+	cal_universities = {
+		icon = mission_early_modern_university
+		required_missions = { }
+		position = 4
+
+		trigger = {
+			university = 12
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			is_in_deficit = no
+		}
+		effect = {
+			if = {
+				limit = {has_dlc = "Rule Britannia"}
+				change_innovativeness = 1
+				add_country_modifier = {
+					name = "cal_uni" #advisor cost and advisor amount
+					duration = 7300
+				}
+			}
+			else = {
+				add_dip_power = 50
+				add_country_modifier = {
+					name = "cal_uni" 
+					duration = 7300
+				}
+			}
+		}
+	}
+
+	cal_silicon_valley = {
+		icon = pontifical_universities
+		required_missions = { cal_universities }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 946
+				province_id = 2735
+			}
+		}
+		trigger = {
+			is_subject = no
+			AND = {
+				946 = { #San Francisco
+					has_building = university
+					has_manufactory_trigger = yes
+					num_of_buildings_in_province = 5
+					development = 32
+				}
+				2735 = { #Santa Clara
+					has_building = university
+					has_manufactory_trigger = yes
+					num_of_buildings_in_province = 5
+					development = 32
+				}
+			}
+			if = {
+				limit = {has_dlc = "Rule Britannia"}
+				innovativeness = 10
+			}
+			else = {
+				adm_power = 150
+			}
+		}
+		effect = {
+			country_event = { id = flavorCAL.1002 }
+		}
+	}
+}

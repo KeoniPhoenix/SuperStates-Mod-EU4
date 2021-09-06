@@ -1,0 +1,977 @@
+vir_economy = {
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	has_country_shield = yes
+
+	vir_economy_1 = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			temple = 5
+			workshop = 5
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 9125
+			}
+		}
+	}
+	vir_university = {
+		icon = mission_early_modern_university
+		required_missions = { vir_economy_1 }
+		position = 2
+
+		trigger = {
+			university = 3
+		}
+		effect = {
+			if = {
+				limit = {has_dlc = "Rule Britannia"}
+				change_innovativeness = 3
+			}
+			else = {
+				add_dip_power = 50
+				add_stability_or_adm_power = yes
+			}
+		}
+	}
+
+	vir_economy_2 = { #minimum dev of 10 in WV and neihboring virginian provinces
+		icon = mission_have_manufactories
+		required_missions = { vir_university }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+			area = monongahela_area
+			province_id = 3150
+			province_id = 3154
+			province_id = 2538
+			province_id = 3149
+			province_id = 2541
+			province_id = 3011
+			}
+				NOT = { development = 10 }
+			}
+
+			trigger = {
+				monongahela_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				3150 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				3154 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				2538 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				3149 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				2541 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+				3011 = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "production_improvements"
+				duration = 5475
+			}
+			add_years_of_income = 1.25
+		}
+	}
+
+#	vir_economy_3 = {
+#		icon = mission_rb_build_furnaces
+#		required_missions = { vir_economy_2 }
+#		position = 4
+#
+#		#empty until coal is added to the map
+#	}
+}
+
+vir_colonial_conquest = {
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	has_country_shield = yes
+
+	vir_ohio_river = {
+		icon = mission_cannons_firing
+		required_missions = { vir_conquer_kentucky }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+			area = ohio_area
+			area = wabash_area
+			area = little_egypt_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = ohio_area
+				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = wabash_area
+				}
+				little_egypt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				}
+		}
+		effect = {
+			sangamon_area = {
+				add_permanent_claim = ROOT
+			}
+			illinois_area = {
+				add_permanent_claim = ROOT
+			}
+			chicagoland_area = {
+				add_permanent_claim = ROOT
+			}
+			maumee_area = {
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				add_permanent_claim = ROOT
+			}
+			wisconsin_area = {
+				add_permanent_claim = ROOT
+			}
+			upper_peninsula_area = {
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "vir_imperialism"
+				duration = 5475
+			}
+		}
+	}	
+	vir_great_lakes = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { vir_ohio_river }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				area = sangamon_area
+				area = illinois_area
+				area = chicagoland_area
+				area = maumee_area
+				area = michigan_area
+				area = green_bay_area
+				area = wisconsin_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sangamon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				}
+				illinois_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				}
+				chicagoland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				}
+				maumee_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = wisconsin_area
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = michigan_area
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = green_bay_area
+			}
+		}
+		effect = {
+			add_mil_power = 150
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "vir_colonial_ambitions"
+				duration = 10950
+			}
+		}
+	}
+}
+
+vir_conquest = {
+	slot = 2
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	has_country_shield = yes
+
+	vir_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+		effect = {
+			monongahela_area = {
+				add_permanent_claim = ROOT
+			}
+			3011 = {
+				add_permanent_claim = ROOT
+			}
+			2541 = {
+				add_permanent_claim = ROOT
+			}
+			3154 = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "vir_imperialism"
+				duration = 5475
+			}
+		}
+	}
+	vir_conquer_wv = {
+		icon = mission_cannons_firing
+		required_missions = { vir_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = monongahela_area
+				province_id = 3011
+				province_id = 2541
+				province_id = 3154
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+				monongahela_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3011 = { #berkeley
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2541 = {#monongalia
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3154 = {#raleigh
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+		}
+			effect = {
+				kentucky_area = {
+					add_permanent_claim = ROOT
+				}
+				pennyroyal_area = {
+					add_permanent_claim = ROOT
+				}
+				delmarva_area = {
+					add_permanent_claim = ROOT
+				}
+				potomac_area = {
+					add_permanent_claim = ROOT
+				}
+				2532 = { #frederick
+					add_permanent_claim = ROOT
+				}
+				add_prestige = 15
+		}
+	}
+
+	vir_conquer_kentucky = {
+		icon = mission_unite_home_region
+		required_missions = { vir_conquer_wv }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+			area = kentucky_area
+			area = pennyroyal_area
+		}
+		NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 3
+				area = kentucky_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = pennyroyal_area
+			}
+		}
+		effect = {
+			blue_ridge_area = {
+				add_permanent_claim = ROOT
+			}
+			2520 = {
+				add_permanent_claim = ROOT
+			}
+			2521 = {
+				add_permanent_claim = ROOT
+			}
+			ohio_area = {
+				add_permanent_claim = ROOT
+			}
+			wabash_area = {
+				add_permanent_claim = ROOT
+			}
+			little_egypt_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	vir_conquer_appal = {
+		icon = mission_have_two_subjects
+		required_missions = { vir_conquer_kentucky }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = blue_ridge_area
+				province_id = 2520
+				province_id = 2521
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			blue_ridge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2520 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2521 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			south_carolina_area = {
+				add_permanent_claim = ROOT
+			}
+			tennessee_area = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "imperial_ambition"
+				duration = 7300
+			}
+		}
+	}
+
+	vir_greater_virginia = {
+		icon = mission_empire
+		required_missions = { vir_chesapeake_trade vir_conquer_appal}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = tennessee_area
+				area = south_carolina_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			tennessee_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_carolina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			stability = 3
+			development_in_provinces = {
+				value = 800
+			}
+		}
+		effect = {
+			#country_event blah blah
+			#event to change capital,
+			#to Richmond(capital of Virginia), DC(capital of US), or Baltimore(For Chesapeake)
+			deep_south_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "vir_hegemony"
+				duration = -1
+			}
+		}
+	}
+}
+
+vir_navy = {
+	slot = 3
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	has_country_shield = yes
+
+	vir_navy_1 = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		position = 1
+			provinces_to_highlight = {
+				province_id = 2534
+			OR = {
+				has_shipyard_building_trigger = no
+				NOT = { owned_by = ROOT }
+			}
+		}
+		trigger = {
+			navy_size_percentage = 0.90
+			2534 = {
+				owned_by = ROOT
+				has_shipyard_building_trigger = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "iron_ships"
+				duration = 5475
+			}
+			add_mercantilism = 2
+		}
+	}
+
+	vir_navy_2 = {
+		icon = mission_sea_battles
+		required_missions = { vir_navy_1 }
+		position = 2
+			provinces_to_highlight = {
+				province_id = 2534 # prince anne
+				OR = {
+					has_dock_building_trigger = no
+					NOT = { owned_by = ROOT }
+				}
+			}
+			trigger = {
+				num_of_heavy_ship = 10
+				2534 = {
+					owned_by = ROOT
+					has_dock_building_trigger = yes
+				}
+			}
+			effect = {
+				add_navy_tradition = 10
+				2534 = {
+					add_province_modifier = {
+					name = "vir_norfolk_base"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+vir_chesapeake = {
+	slot = 3
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	has_country_shield = yes
+
+	vir_chesapeake_conquest = {
+		icon = mission_unite_home_region 
+		required_missions = { vir_conquer_wv}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = potomac_area
+				area = delmarva_area
+				province_id = 2532
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+			}
+
+			trigger = {
+				potomac_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+						area = delmarva_area
+				}
+				2532 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}			
+			}
+			effect = {
+				north_carolina_area = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	
+		vir_north_crl = {
+			icon = mission_conquer_5_states
+			required_missions = { vir_chesapeake_conquest }
+			position = 4
+			provinces_to_highlight = {
+				OR = {
+					area = north_carolina_area
+				}
+				NOT = {country_or_non_sovereign_subject_holds = ROOT }
+			}
+			trigger = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = north_carolina_area
+				}
+			}
+			effect = {
+				delaware_area = {
+					add_permanent_claim = ROOT
+				}
+				add_mil_power = 100
+			}	
+		}
+
+	vir_chesapeake_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { vir_north_crl }
+		position = 5
+
+		provinces_to_highlight = {
+			province_id = 1501
+		}
+		trigger = {
+			1501 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = "vir_chesapeake_trade"
+				duration = -1
+			}
+		}
+	}
+
+	vir_develop_urban = {
+		icon = mission_early_game_buildings
+		required_missions = { vir_chesapeake_trade }
+		position = 6
+
+		provinces_to_highlight = {
+			province_id = 2533 #richmond
+		}
+		trigger = {
+			2533 = {
+			owned_by = ROOT
+			development = 30
+			num_of_buildings_in_province = 4
+			}
+				calc_true_if = {
+				all_owned_province = {
+					development = 25
+					}
+				amount = 8
+			}
+		}
+		effect = {
+			add_prestige = 15
+			2533 = {
+				add_base_tax = 3
+				add_base_production = 2
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "vir_richmond"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+	
+vir_military_missions = {
+	slot = 4
+	generic = no 
+	ai = yes 
+	potential = {
+		OR = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	
+	
+	vir_build_army_mission = { 
+		icon = mission_build_up_to_force_limit
+		required_missions = {  } 
+		position = 1
+		trigger = {
+			army_size_percentage = 1 
+		}
+		effect = { 
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 
+			}
+		}
+	}
+	
+	vir_expand_country_mission = {
+		icon = mission_conquer_50_development
+		required_missions = { vir_build_army_mission }
+		position = 2
+		trigger = { grown_by_development = 50 }
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 9125 
+					}
+				}
+			}
+		}
+	}
+	
+	vir_conquer_states = {
+		icon = mission_cannons_firing
+		required_missions = { vir_expand_country_mission }
+		position = 3
+		trigger = { grown_by_states = 5 }
+		effect = {
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 9125 
+			}
+		}
+	}
+
+	vir_assemble_an_army = {
+		icon = mission_assemble_an_army
+		required_missions = { vir_conquer_states }
+		position = 4
+		trigger = { army_size = 80 }
+		effect = {
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 9125 
+			}
+		}
+	}
+
+	vir_unite_home_region = {
+		icon = mission_unite_home_region
+		required_missions = { vir_assemble_an_army }
+		position = 5
+		provinces_to_highlight = {
+			region_for_scope_province = {
+				is_capital_of = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_adm_power = 50
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 
+			}
+		}
+	}
+
+	vir_conquer_del = {
+		icon = mission_assemble_an_army
+		required_missions = { vir_chesapeake_trade }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+			}
+
+			trigger = {
+				delaware_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			effect = {
+				add_adm_power = 75
+				2585 = {
+					add_claim = ROOT
+			}
+		}
+	}
+}
+
+vir_diplomatic_missions = {
+	slot = 5
+	generic = no 
+	ai = yes 
+	potential = {
+		or = {
+			tag = VIR
+			tag = NVI
+		}
+	}
+	
+	vir_building_alliances = {
+		icon = mission_alliances
+		required_missions = {  }
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	vir_have_two_subjects = {
+		icon = mission_have_two_subjects
+		required_missions = { vir_building_alliances }
+		position = 2
+		trigger = { num_of_non_tributary_subjects = 2 }
+		effect = {
+			add_country_modifier = {
+				name = "obedient_subjects"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	vir_establish_high_seas_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { vir_have_two_subjects }
+		position = 3
+		trigger = { 
+			OR = {
+				num_of_heavy_ship = 10 
+				num_of_galley = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	vir_dominate_home_trade_node = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { vir_establish_high_seas_navy }
+		position = 4
+		trigger = {
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+	vir_trade_company_region_abroad = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { vir_dominate_home_trade_node }
+		position = 5
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = trade_company_region_abroad_tooltip
+				calc_true_if = {
+					all_trade_node = {
+						calc_true_if = {
+							all_trade_node_member_province = {
+								owned_by = ROOT
+								is_node_in_trade_company_region = yes
+								NOT = { continent = CAPITAL }
+							}
+							amount = 5
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "east_india_trade_rush"
+				duration = 9125 #25 years
+			}
+		}
+	}
+}
