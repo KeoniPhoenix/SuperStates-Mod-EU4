@@ -1,0 +1,123 @@
+# Florida
+flo_control_the_mississippi_modifier = {
+	trade_efficiency = 0.15
+}
+
+expansionist_country = {
+	harsh_treatment_cost = -0.33
+	state_maintenance_modifier = -0.25
+}
+
+flo_consolidate_florida_mission = {
+	culture_conversion_cost = -0.15
+}
+
+flo_port_of_miami_modifier = {
+	local_development_cost = -0.10
+	local_build_cost = -0.10
+}
+
+flo_port_of_miami2_modifier = {
+	local_development_cost = -0.15
+	local_build_cost = -0.10
+}
+
+flo_caribbean_hispanosphere_modifier = {
+	global_tariffs = 0.20
+}
+
+flo_caribbean_discovered = {
+	colonists = 1
+}
+
+flo_castillo_de_san_marcos_modifier = {
+	local_defensiveness = 0.15
+}
+
+the_big_peach_modifier = {
+	prestige = 0.25
+	local_development_cost = -0.10
+}
+
+flo_defend_against_texas_modifier = {
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+}
+
+#Virginia Missions
+vir_imperialism = {
+	ae_impact = -0.10
+}
+
+vir_hegemony = {
+	core_creation = -0.05
+}
+
+vir_colonial_ambitions = {
+	production_efficiency = 0.1
+	trade_efficiency = 0.025
+}
+
+vir_chesapeake_trade = {
+	trade_efficiency = 0.1
+	trade_range_modifier = 0.15
+}
+
+vir_norfolk_base = { #similar to toulon dockyards in france
+	navy_tradition = 0.5
+	local_ship_cost = -0.1
+	local_ship_repair = 0.2
+}
+
+vir_richmond = {
+	local_development_cost = -0.1
+	local_defensiveness = 0.15
+}
+
+# New Jersey Missions
+njy_industry = {
+	trade_goods_size_modifier = 0.05
+}
+
+njy_south_development = {
+	local_development_cost = -0.05
+	local_unrest = -2
+}
+
+njy_empire_city = {
+	prestige = 0.5
+	local_manpower_modifier = 0.2
+	local_development_cost = -0.1
+	local_tax_modifier = 0.10
+}
+
+# California Missions
+cal_gran = {
+	years_of_nationalism = -5
+	global_autonomy = -0.05
+}
+
+cal_fortification = {
+	fort_maintenance_modifier = -0.15
+	defensiveness = 0.10
+}
+
+cal_marine = {
+	allowed_marine_fraction = 0.05
+	transport_cost = -0.10
+}
+
+cal_trade = {
+	trade_efficiency = 0.15
+	global_spy_defence = 0.33
+}
+
+cal_develop = {
+	local_development_cost = -0.1
+	local_state_maintenance_modifier = -0.2
+}
+
+cal_uni = {
+	advisor_cost = -0.15
+	advisor_pool = 1
+}
