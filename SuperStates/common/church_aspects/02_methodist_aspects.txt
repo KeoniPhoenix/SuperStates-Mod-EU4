@@ -1,0 +1,182 @@
+#Methodists are geared more for trade and diplomacy
+aspect_merchant_missionaries = {
+	modifier = {
+		trade_efficiency = 0.10
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 0
+			num_of_trade_embargos = 1
+		}
+	}
+}
+
+aspect_sermons_for_progress = {
+	modifier = {
+		institution_spread_from_true_faith = 0.1
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 2
+			NOT = { current_institution_growth = 0.33 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+			NOT = { current_institution_growth = 0.25 }
+		}
+	}
+}
+
+aspect_friendly_missionaries = {
+	modifier = { 
+		global_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+	}
+}
+
+aspect_thanksgiving_blessings = {
+	modifier = { 
+		production_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 17
+		modifier = {
+			factor = 0.5
+			treasury = 500
+		}
+		modifier = {
+			factor = 0
+			treasury = 2500
+		}
+	}
+}
+
+aspect_intermediating_missions = {
+	modifier = { 
+		diplomatic_reputation = 1
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { dip = 3 }
+		}
+	}
+}
+
+aspect_support_for_local_investment = {
+	modifier = { 
+		development_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			num_of_cities = 10
+			NOT = { total_development = 200 }
+		}
+		modifier = {
+		factor = 2
+			num_of_cities = 25
+			NOT = { total_development = 450 }
+		}
+	}
+}
+
+aspect_faith_to_the_government = {
+	modifier = {
+		legitimacy = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		republican_tradition = 0.25
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { legitimacy = 60 }
+			NOT = { devotion = 60 }
+			NOT = { horde_unity = 60 }
+			NOT = { republican_tradition = 60 }
+		}
+	}
+}
+
+aspect_missions_into_the_wilderness = {
+	modifier = {
+		range = 0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			num_of_colonists = 1
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+	}
+}
+
+aspect_missions_of_diplomacy = {
+	modifier = {
+		envoy_travel_time = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = yes
+			NOT = { manpower_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { manpower_percentage = 0.5 }
+		}
+	}
+}
+
+aspect_sermons_for_change = {
+	modifier = { 
+		idea_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
+
+aspect_faith_to_all_rich_and_poor = {
+	modifier = {
+		global_unrest = -0.5
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			unrest = 2
+		}
+		modifier = {
+			factor = 2
+			num_of_rebel_controlled_provinces = 1
+		}	
+	}
+}
+
+aspect_pastor_and_innkeeper = {
+	modifier = { 
+		caravan_power = 0.10
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}

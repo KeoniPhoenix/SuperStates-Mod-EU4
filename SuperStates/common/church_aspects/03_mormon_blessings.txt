@@ -1,0 +1,94 @@
+#Mormon holy sites
+#
+#Palmyra, NY (Foundation of the Church and the Gold Plates)
+#Lacawanna, PA (Priesthood Restoration Site)
+#Salt Lake, UT (Mormon Temple and seat of religion)
+#Kirkland, OH (First Temple built)
+#Buchanan, MO (Adam-ondi-Ahman site)
+#
+#Mormom Holy Site Blessings
+#
+#Mormon Theodemocracy (+0.25 Republican Tradition +0.5 Legitimacy/Devotion)
+#Resist the Invaders (+10% manpower recovery)
+#Temple Constructions (+1% missionary strength)
+#Nauvoo Legion (+2.5% displine)
+#Missions to the Gentiles (-10% core-creation cost)
+
+mormon_theodemocracy_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		legitimacy = 0.25
+		republican_tradition = 0.20
+		devotion = 0.25
+		stability_cost_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 3
+			NOT = {
+				OR = {
+					legitimacy = 70
+					republican_tradition = 70
+					devotion = 70
+				}
+			}
+		}
+	}
+}
+
+resist_the_invaders_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		defensiveness = 0.15
+		leader_land_manuever = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+temple_constructions_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+mission_to_the_gentiles_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		core_creation = -0.10
+		culture_conversion_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			overextension_percentage = 0.7
+		}
+		modifier = {
+			factor = 3
+			overextension_percentage = 0.5
+		}
+	}
+}
+
+nauvoo_legion_blessing = {
+	is_blessing = yes
+
+	modifier = {
+		siege_ability = 0.15
+		shock_damage = 0.10
+	}
+	ai_will_do = {
+		factor = 15
+	}
+}
