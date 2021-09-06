@@ -1,0 +1,132 @@
+# Order here is the priority for taking them, if trigger is true.
+
+### This mod has the following "States" lucky
+
+CAL = {
+	NOT = { 
+		exists = PCF
+		is_year = 1600
+	}
+}
+
+TEX = {
+	always = yes
+}
+
+ONT = {
+	NOT = { 
+		exists = NFR
+		is_year = 1650
+	}
+}
+
+NYS = {
+	NOT = { 
+		exists = MAA
+		is_year = 1650
+	}
+}
+
+FLO = {
+	NOT = { 
+		exists = CSA
+		is_year = 1600
+	}
+}
+
+QUE = {
+	NOT = { 
+		exists = NFR
+		is_year = 1650
+	}
+}
+
+JLC = {
+	always = yes
+}
+
+NSW = {
+	NOT = {
+		is_year = 1550
+	}
+}
+
+BCO = {
+	NOT = { 
+		exists = CSC
+		is_year = 1600
+	}
+}
+
+VIR = {
+	NOT = { 
+		exists = CSA
+		is_year = 1600
+	}
+}
+
+MIC = {
+	NOT = { 
+		exists = GLK
+		is_year = 1600
+	}
+}
+
+ABR = {
+	NOT = { 
+		exists = WCN
+		is_year = 1650
+	}
+}
+
+ARZ = {
+	always = yes
+}
+
+MSS = {
+	NOT = { 
+		exists = NEW
+		is_year = 1600
+	}
+}
+
+QLD = {
+	NOT = {
+		is_year = 1550
+	}
+}
+
+HHC = {
+	NOT = { 
+		exists = RRG
+		is_year = 1600
+	}
+}
+
+GLK = {
+	is_year = 1555
+}
+
+NEW = {
+	is_year = 1555
+}
+
+FSA = {
+	is_year = 1600
+}
+
+CSA = {
+	is_year = 1600
+}
+
+USA = {
+	is_year = 1700
+}
+
+CAN = {
+	is_year = 1700
+}
+
+AUS = {
+	is_year = 1800
+}
