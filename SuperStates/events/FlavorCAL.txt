@@ -1,0 +1,497 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorCAL
+
+#The A-Team
+country_event = {
+	id = flavorCAL.1
+	title = "flavorCAL.1t"
+	desc = "flavorCAL.1d"
+	picture = LAND_MILITARY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SFB
+			tag = SJV
+			tag = SCL
+		}
+		num_of_mercenaries = 1
+		mil_power = 50
+		treasury = 50
+		NOT = { has_country_flag = the_a-team }
+	}
+	mean_time_to_happen = {
+		years = 20
+	
+		modifier = {
+			factor = 0.1
+			num_of_mercenaries = 10
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = the_a-team
+		}
+	}
+	#B.A. Baracas
+	option = {
+		name = "flavorCAL.1opta"
+		define_general = {
+			name = "Bosco 'B.A.' Baracas"
+			fire = 0
+			shock = 5
+			manuever = 2
+			siege = 2
+		}
+		add_mil_power = -50
+		add_treasury = -50
+	}
+	#Hannibal
+	option = {
+		name = "flavorCAL.1optb"
+		define_general = {
+			name = "John 'Hannibal' Smith"
+			fire = 0
+			shock = 2
+			manuever = 2
+			siege = 5
+		}
+		add_mil_power = -50
+		add_treasury = -50
+	}
+	#Murdock
+	option = {
+		name = "flavorCAL.1optc"
+		define_general = {
+			name = "H. M. 'Howling Mad' Murdock"
+			fire = 0
+			shock = 2
+			manuever = 5
+			siege = 2
+		}
+		add_mil_power = -50
+		add_treasury = -50
+	}
+	#Face
+	option = {
+		name = "flavorCAL.1optd"
+		define_general = {
+			name = "Templeton 'Faceman' Peck"
+			fire = 0
+			shock = 3
+			manuever = 3
+			siege = 3
+		}
+		add_mil_power = -50
+		add_treasury = -50
+	}
+	#None of the Above
+	option = {
+		name = "flavorCAL.1opte"
+		add_dip_power = 5
+	}
+}
+
+#Earthquake in Los Angeles
+country_event = {
+	id = flavorCAL.21
+	title = "flavorCAL.21t"
+	desc = "flavorCAL.21d"
+	picture = PLAUGE_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SFB
+			tag = SJV
+			tag = SCL
+		}
+		owns = 944
+		controls = 944
+		NOT = { has_country_flag = had_earthquake }
+	}
+	immediate = {
+		set_country_flag = had_earthquake
+	}
+	mean_time_to_happen = {
+		years = 500
+	}
+	option = {
+		name = "flavorCAL.2opta"
+		add_stability = -1
+		add_years_of_income = -1.50
+		944 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 274
+			}
+		}
+	}
+	option = {
+		name = "flavorCAL.2optb"
+		add_stability = -1
+		add_yearly_manpower = -0.40
+		944 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 183
+			}
+		}
+	}
+	option = {
+		name = "flavorCAL.2optc"
+		add_stability = -1
+		add_prestige = -10
+		944 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 365
+			}
+		}
+		every_neighbor_country = {
+			limit = { 
+				NOT = { is_enemy = ROOT }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_earthquake
+			}
+		}
+	}
+}
+
+#Earthquake in San Francisco
+country_event = {
+	id = flavorCAL.22
+	title = "flavorCAL.22t"
+	desc = "flavorCAL.22d"
+	picture = PLAUGE_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SFB
+			tag = SJV
+			tag = SCL
+		}
+		owns = 946
+		controls = 946
+		NOT = { has_country_flag = had_earthquake }
+	}
+	immediate = {
+		set_country_flag = had_earthquake
+	}
+	mean_time_to_happen = {
+		years = 500
+	}
+	option = {
+		name = "flavorCAL.2opta"
+		add_stability = -1
+		add_years_of_income = -1.50
+		946 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 274
+			}
+		}
+	}
+	option = {
+		name = "flavorCAL.2optb"
+		add_stability = -1
+		add_yearly_manpower = -0.40
+		946 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 183
+			}
+		}
+	}
+	option = {
+		name = "flavorCAL.2optc"
+		add_stability = -1
+		add_prestige = -10
+		946 = {
+			add_province_modifier = {
+				name = "s_earthquake"
+				duration = 365
+			}
+		}
+		every_neighbor_country = {
+			limit = { 
+				NOT = { is_enemy = ROOT }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_earthquake
+			}
+		}
+	}
+}
+
+#John Spartan
+country_event = {
+	id = flavorCAL.3
+	title = "flavorCAL.3t"
+	desc = "flavorCAL.3d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SCL
+		}
+		is_subject = no
+		is_at_war = no
+		owns = 944
+		controls = 944
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+	
+		modifier = {
+			factor = 2
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+	}
+	option = {
+		name = "flavorCAL.3opta"
+		944 = {
+			add_province_modifier = {
+				name = "demolition_man"
+				duration = 183
+			}
+		}
+	}
+}
+
+#Nakatomi Plaza
+country_event = {
+	id = flavorCAL.4
+	title = "flavorCAL.4t"
+	desc = "flavorCAL.4d"
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SCL
+		}
+		is_subject = no
+		is_at_war = no
+		owns = 944
+		controls = 944
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+	
+		modifier = {
+			factor = 2
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+	}
+	immediate = { 
+		set_global_flag = die_hard
+	}
+	option = {
+		name = "flavorCAL.4opta"
+		944 = {
+			add_province_modifier = {
+				name = "nakatomi_plaza"
+				duration = 90
+			}
+		}
+	}
+}
+# California Mission events
+# 1000-1002
+# Written by:
+# goik
+
+#Gold Mining - cal_gold
+country_event = {
+	id = flavorCAL.1000
+	title = "flavorCAL.1000t"
+	desc = "flavorCAL.1000d"
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #give gold provinces a modifier
+		name = "flavorCAL.1000opta"
+		hidden_effect = {
+			3248 = { #Inyo
+			add_province_modifier = {
+				name = "cal_gold_mining"
+				duration = -1
+				}
+			}
+			949 = { #Clark
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+			2734 = { #Placer
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+			2733 = { #Shasta
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+			3244 = { #Butte
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+			951 = { #Washoe
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+		}
+		custom_tooltip = flavorCAL.1000opta.tt
+		tooltip = {
+			add_country_modifier = {
+				name = "cal_gold_mining"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Las Californias - cal_las_cali
+country_event = {
+	id = flavorCAL.1001
+	title = "flavorCAL.1001t"
+	desc = "flavorCAL.1001d"
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #Change name to Las Californias
+		name = "flavorCAL.1001opta"
+		ai_chance = {
+			factor = 100
+		}
+		add_stability_or_adm_power = yes
+		add_prestige = 10
+	 	override_country_name = LAS_CALIFORNIAS
+	}
+	option = { #Keep Current Name
+		name = "flavorCAL.1001optb"
+		ai_chance = {
+			factor = 0
+		}
+		add_stability_or_adm_power = yes
+		add_prestige = 10
+		add_dip_power = 5
+	}
+}
+
+#Silicon Valley - cal_silicon_valley
+country_event = {
+	id = flavorCAL.1002
+	title = "flavorCAL.1002t"
+	desc = "flavorCAL.1002d"
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #Mil tech
+		goto = 2735
+		name = "flavorCAL.1002opta"
+		add_mil_power = 5
+		2735 = { #Santa Clara
+			add_province_modifier = {
+				name = "cal_mil_silicon"
+				duration = -1
+			}
+		}
+	}
+	option = { #dip tech
+		goto = 2735
+		name = "flavorCAL.1002optb"
+		add_dip_power = 5
+		2735 = { #Santa Clara
+			add_province_modifier = {
+				name = "cal_dip_silicon"
+				duration = -1
+			}
+		}
+	}
+	option = { #adm tech
+		goto = 2735
+		name = "flavorCAL.1002optc"
+		add_adm_power = 5
+		2735 = { #Santa Clara
+			add_province_modifier = {
+				name = "cal_adm_silicon"
+				duration = -1
+			}
+		}
+	}
+	option = { #innovativeness
+		goto = 2735
+		name = "flavorCAL.1002optd"
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+			}
+			change_innovativeness = 2
+		2735 = { #Santa Clara
+			add_province_modifier = {
+				name = "cal_inno_silicon"
+				duration = -1
+				}
+			}
+		}
+		else = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+}

@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = BarbadosFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = BarbadosFlavor.1
+	title = "BarbadosFlavor.1t"
+	desc = "BarbadosFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		501 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = barbadian }
+			NOT = { is_core = BBD }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			501 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			501 = { has_owner_religion = no }
+		}
+		
+		modifier = {
+			factor = 4
+			501 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			501 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "BarbadosFlavor.1opta"
+		501 = { 
+			change_culture = barbadian
+			add_core = BBD
+		}
+	}
+}

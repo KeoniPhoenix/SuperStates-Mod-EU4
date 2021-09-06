@@ -1,0 +1,647 @@
+#Great Awakening Events
+#By KeoniPhoenix
+
+namespace = superstates_greatawakening
+
+#The Great Awakening Lutheran
+country_event = {
+	id = superstates_greatawakening.1
+	title = "superstates_greatawakening.1t"
+	desc = "superstates_greatawakening.1d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		NOT = { is_religion_enabled = s_lutheran }
+		religion_years = { protestant = 1 }
+		religion = s_protestant
+		is_defender_of_faith = no	
+		OR = {
+			NOT = { has_reform = papacy_reform }
+			NOT = { government = theocracy }
+		}
+		capital_scope = {
+			continent = north_america
+			NOT = { has_province_modifier = religious_center }
+		}		
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+				religion = s_lutheran
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2500
+		
+		modifier = {
+			factor = 0.4
+			OR = {
+				culture_group = midwestern_group
+				culture_group = great_laker
+				}
+		}
+				
+		modifier = {
+			factor = 0.75
+			reform_desire = 1.0
+		}
+		modifier = {
+			factor = 0.75
+			reform_desire = 1.05
+		}
+		modifier = {
+			factor = 0.75
+			reform_desire = 1.10
+		}
+		modifier = {
+			factor = 0.66
+			reform_desire = 1.15
+		}
+		modifier = {
+			factor = 0.50
+			OR = {
+				primary_culture = wisconsinite
+				primary_culture = pennsylvanian
+			}
+		}
+		modifier = {
+			factor = 0.50
+				reform_desire = 1.20
+		}
+		modifier = {
+			factor = 0.25
+			reform_desire = 1.25
+		}
+		
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 2 }
+		}
+		
+		modifier = {
+			factor = 0.75
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = religious_ideas
+		}		
+		modifier = {
+			factor = 0.5
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 2.0
+			has_reform = feudal_theocracy
+		}
+		modifier = {
+			factor = 10.0
+			OR = {
+				culture_group = southerner
+				capital_scope = {
+					superregion = central_america_superregion
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "superstates_greatawakening.1opta"
+		enable_religion = s_lutheran
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					religion = s_lutheran
+				}
+			}
+			change_religion = s_lutheran
+			add_reform_center = s_lutheran
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		capital_scope = {
+			change_religion = s_lutheran
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		set_country_flag = "great_awakening_lutheran" 
+	}
+}
+
+
+#The Great Awakening Methodist
+country_event = {
+	id = superstates_greatawakening.2
+	title = "superstates_greatawakening.2t"
+	desc = "superstates_greatawakening.2d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = s_lutheran
+		religion_years = { s_lutheran = 10 }
+		NOT = { is_religion_enabled = s_methodist }
+		is_defender_of_faith = no
+		OR = {
+			religion = s_catholic
+			religion = s_protestant
+			religion = s_lutheran
+			religion = catholic
+		}
+		NOT = { has_reform = papacy_reform }
+		capital_scope = {
+			continent = north_america
+		}
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+					religion = s_methodist
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.4
+			OR = {
+				culture_group = midwestern_group
+				primary_culture = west_virginian
+				}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				culture_group = appalachian
+				primary_culture = delmarvan
+				}
+		}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 15 }
+		}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 5
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 7
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { innovativeness_ideas = 3 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 2 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			has_idea = humanist_tolerance
+		}
+		modifier = {
+			factor = 0.5
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 2.0
+			has_reform = feudal_theocracy
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				culture_group = southerner
+				capital_scope = {
+					superregion = central_america_superregion
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "superstates_greatawakening.2opta"
+		enable_religion = s_methodist
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					religion = reformed
+				}
+			}
+			add_reform_center = s_methodist
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		capital_scope = {
+			change_religion = s_methodist
+		}
+		set_country_flag = "great_awakening_methodist" 
+	}
+}
+
+#The Great Awakening Baptist
+country_event = {
+	id = superstates_greatawakening.3
+	title = "superstates_greatawakening.3t"
+	desc = "superstates_greatawakening.3d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = s_lutheran
+		religion_years = { s_methodist = 5 }
+		NOT = { is_religion_enabled = s_baptist }
+		is_defender_of_faith = no
+		OR = {
+			religion = s_catholic
+			religion = s_protestant
+			religion = s_lutheran
+			religion = catholic
+			religion = s_methodist
+		}
+		NOT = { has_reform = papacy_reform }
+		capital_scope = {
+			continent = north_america
+		}
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+					religion = s_baptist
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.3
+				AND = {
+				culture_group = southerner
+				NOT = { primary_culture = south_floridian }
+				}
+			}
+		modifier = {
+			factor = 0.4
+				OR = {
+				culture_group = appalachian
+				primary_culture = missourian
+				primary_culture = oklahoman
+				}
+			}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 25 }
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 5
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 7
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { innovativeness_ideas = 3 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 2 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			has_idea = humanist_tolerance
+		}
+		modifier = {
+			factor = 0.5
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 2.0
+			has_reform = feudal_theocracy
+		}
+		modifier = {
+			factor = 10.0
+				capital_scope = {
+					superregion = central_america_superregion
+				}
+		}
+	}
+	
+	option = {
+		name = "superstates_greatawakening.3opta"
+		enable_religion = s_baptist
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					religion = s_baptist
+				}
+			}
+			add_reform_center = s_baptist
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		capital_scope = {
+			change_religion = s_baptist
+		}
+		set_country_flag = "great_awakening_baptist" 
+	}
+}
+
+# Canadian Anglicanism
+country_event = {
+	id = superstates_greatawakening.4
+	title = "superstates_greatawakening.4t"
+	desc = "superstates_greatawakening.4d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = protestant
+		religion_years = { protestant = 15 }
+		is_defender_of_faith = no
+		OR = {
+			religion = s_catholic
+			religion = s_protestant
+			religion = catholic
+			religion = s_lutheran
+			religion = s_baptist
+			religion = s_methodist
+			religion = protestant
+		}
+		NOT = { has_reform = papacy_reform }
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 30
+				superregion = canada_superregion
+			}
+			capital_scope = {
+				superregion = canada_superregion
+				}
+			}
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+					religion = anglican
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.3
+				OR = {
+				culture_group = arctic_canadian
+				primary_culture = ontarian
+				primary_culture = torontoan
+				primary_culture = mantarian
+				primary_culture = northern_ontarian
+				primary_culture = labradorian
+				primary_culture = newfoundlander
+				}
+			}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 25 }
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 5
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 7
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { innovativeness_ideas = 3 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 2 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			has_idea = humanist_tolerance
+		}
+		modifier = {
+			factor = 0.5
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 2.0
+			OR  = {
+			has_reform = feudal_theocracy
+			culture_group = western_canadian
+				}
+		}
+		modifier = {
+			factor = 15
+			culture_group = new_french
+			}
+		}
+	
+	option = {
+		name = "superstates_greatawakening.4opta"
+		enable_religion = anglican
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					religion = anglican
+				}
+			}
+			add_reform_center = anglican
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		capital_scope = {
+			change_religion = anglican
+		}
+		set_country_flag = "canadian_anglicanism" 
+	}
+}
+
+# Australian Anglicanism
+country_event = {
+	id = superstates_greatawakening.5
+	title = "superstates_greatawakening.5t"
+	desc = "superstates_greatawakening.5d"
+	picture = RELIGION_eventPicture
+	
+	major = yes
+	
+	trigger = {
+		is_religion_enabled = protestant
+		religion_years = { protestant = 20 }
+		is_defender_of_faith = no
+		OR = {
+			religion = austral_catholic
+			religion = austral_protestant
+			religion = catholic
+			religion = s_lutheran
+			religion = s_baptist
+			religion = s_methodist
+			religion = protestant
+		}
+		NOT = { has_reform = papacy_reform }
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 30
+				continent = australia_continent
+			}
+			capital_scope = {
+				continent = australia_continent
+				}
+			}
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+					religion = anglican
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.3
+				OR = {
+				primary_culture = new_south_welsh
+				primary_culture = tasmanian
+				}
+			}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			religion_years = { s_lutheran = 25 }
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 5
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 7
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { innovativeness_ideas = 3 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 2 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { innovativeness_ideas = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			has_idea = humanist_tolerance
+		}
+		modifier = {
+			factor = 0.5
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 2.0
+			has_reform = feudal_theocracy
+		}
+		modifier = {
+			factor = 3.0
+			OR = {
+				primary_culture = south_australian
+				primary_culture = northern_territorian
+				}
+			}
+	}
+	
+	option = {
+		name = "superstates_greatawakening.5opta"
+		enable_religion = anglican
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					religion = anglican
+				}
+			}
+			add_reform_center = anglican
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		capital_scope = {
+			change_religion = anglican
+		}
+		set_country_flag = "australian_anglicanism" 
+	}
+}
+
+###############################################################################
+# SPECIAL DENOMINATION WILL BE ADDED HERE
+###############################################################################
+

@@ -1,0 +1,105 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorVRM
+
+# Meow!
+country_event = {
+	id = flavorVRM.1
+	title = "flavorVRM.1t"
+	desc = "flavorVRM.1d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = VRM
+			tag = NEW
+		}
+		is_at_war = no
+		NOT = { has_country_flag = supertroopers }
+		government = republic
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	
+		modifier = {
+			factor = 2
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = supertroopers
+		}
+	}
+	option = {
+		name = "flavorVRM.1opta"
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			add_province_modifier = {
+				name = "cop_meow"
+				duration = 90
+			}
+		}
+	}
+}
+
+#Liter of Cola
+country_event = {
+	id = flavorVRM.2
+	title = "flavorVRM.2t"
+	desc = "flavorVRM.2d"
+	picture = ACCUSATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = VRM
+			tag = NEW
+		}
+		is_at_war = no
+		NOT = { has_country_flag = supertroopers }
+		government = republic
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	
+		modifier = {
+			factor = 0.5
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 2
+			stability = 3
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = supertroopers
+		}
+	}
+	option = {
+		name = "flavorVRM.2opta"
+		random_owned_province = {
+			add_province_modifier = {
+				name = "cop_liter"
+				duration = 90
+			}
+		}
+	}
+}

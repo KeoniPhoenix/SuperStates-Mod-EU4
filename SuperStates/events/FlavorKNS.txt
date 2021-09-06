@@ -1,0 +1,50 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorKNS
+
+#Hide Park Shootout
+country_event = {
+	id = flavorKNS.1
+	title = "flavorKNS.1t"
+	desc = "flavorKNS.1d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1650
+		tag = KNS
+		NOT = { has_country_flag = wild_west_shootout }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 1007
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = wild_west_shootout
+		}
+	}
+	option = {
+		name = "flavorKNS.1opta"
+		1007 = {
+			add_province_modifier = {
+				name = "gunfight_disturbance"
+				duration = 365
+			}
+		}
+	}
+}

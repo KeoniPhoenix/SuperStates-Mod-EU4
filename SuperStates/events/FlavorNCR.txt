@@ -1,0 +1,56 @@
+namespace = flavorNCR
+
+#CROATOAN
+country_event = {
+	id = flavorNCR.1
+	title = "flavorNCR.1t"
+	desc = "flavorNCR.1d"
+	picture = EXPOLERERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NCR
+	}
+	
+	mean_time_to_happen = {
+		months = 400
+
+		modifier = {
+			factor = 0.85
+			num_of_conquistadors = 1
+		}
+		modifier = {
+			factor = 0.7
+			num_of_conquistadors = 2
+		}
+		modifier = {
+			factor = 0.4
+			num_of_conquistadors = 3
+		}
+	}
+	
+	option = {
+		name = "flavorNCR.1opta" # Must've been aliens!
+		add_country_modifier = {
+			name = "croatoan_aliens"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = "flavorNCR.1optb" # And any town who rebels against the might of the state will disappear too!
+		add_country_modifier = {
+			name = "croatoan_state_pride"
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = "flavorNCR.1optc" # Make the story a novel, and sell it far and wide!
+		add_country_modifier = {
+			name = "croatoan_novel"
+			duration = 3650
+		}
+	}
+}

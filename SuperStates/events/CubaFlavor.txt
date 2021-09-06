@@ -1,0 +1,104 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = CubaFlavor
+
+#Cuba Culture Event
+country_event = {
+	id = CubaFlavor.1
+	title = "CubaFlavor.1t"
+	desc = "CubaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			OR = {
+			area = west_cuba_area
+			area = east_cuba_area
+			}
+			is_capital = no
+			owned_by = ROOT
+		}
+		west_cuba_area = {
+			type = all
+			NOT = { culture = cuban }
+		}
+		east_cuba_area = {
+			type = all
+			NOT = { culture = cuban }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			west_cuba_area = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+			east_cuba_area = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 0.5
+			west_cuba_area = {
+				type = all
+				has_owner_religion = no
+			}
+			east_cuba_area = {
+				type = all
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 4
+			west_cuba_area = {
+				type = all
+				is_core = ROOT
+			}
+			east_cuba_area = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				OR = {
+				area = west_cuba_area 
+				area = east_cuba_area
+				}
+				development = 35
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "CubaFlavor.1opta"
+		west_cuba_area = {
+			change_culture = cuban
+			add_core = CUB
+		}
+		
+		east_cuba_area = {
+			change_culture = cuban
+			add_core = CUB
+		}
+	}
+}

@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = BermudaFlavor
+
+#Bermuda Culture Event
+country_event = {
+	id = BermudaFlavor.1
+	title = "BermudaFlavor.1t"
+	desc = "BermudaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		481 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = bermudian }
+			NOT = { is_core = BRM }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			481 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			481 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			481 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			481 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "BermudaFlavor.1opta"
+		481 = {
+			change_culture = bermudian
+			add_core = BRM
+		}
+	}
+}

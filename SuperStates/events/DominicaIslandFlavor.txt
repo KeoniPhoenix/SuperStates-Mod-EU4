@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = DominicaIslandFlavor
+
+#Dominica Island Culture Event
+country_event = {
+	id = DominicaIslandFlavor.1
+	title = "DominicaIslandFlavor.1t"
+	desc = "DominicaIslandFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		497 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = dominican_islander }
+			NOT = { is_core = DMQ }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			497 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			497 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			497 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			497 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "DominicaIslandFlavor.1opta"
+		497 = { 
+			change_culture = dominican_islander
+			add_core = DMQ
+		}
+	}
+}

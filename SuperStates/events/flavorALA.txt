@@ -1,0 +1,74 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorALA
+
+#The Jubilee (Beneficial Event)
+country_event = {
+	id = flavorALA.1
+	title = "flavorALA.1t"
+	desc = "flavorALA.1d"
+	picture = HARBOUR_eventPicture
+	
+	trigger = {
+		owns = 2508
+		controls = 2508
+		NOT = { is_at_war = yes }
+	}
+	mean_time_to_happen = {
+		years = 200
+	}
+	option = {
+		name = "flavorALA.1opta"
+		2508 = {
+			add_province_modifier = {
+				name = "jubilee_good"
+				duration = 365
+			}
+		}
+		change_price = {
+			trade_goods = fish
+			key = JUBILEE_FISH_DECREASE
+			value = -0.10
+			duration = 365
+		}
+		add_prestige = 2
+	}
+}
+
+#The Jubilee (Detrimental Event)
+country_event = {
+	id = flavorALA.2
+	title = "flavorALA.2t"
+	desc = "flavorALA.2d"
+	picture = HARBOUR_eventPicture
+	
+	trigger = {
+		owns = 2508
+		controls = 2508
+		NOT = { is_at_war = yes }
+	}
+	mean_time_to_happen = {
+		years = 200
+	}
+	option = {
+		name = "flavorALA.2opta"
+		2508 = {
+			add_province_modifier = {
+				name = "jubilee_bad"
+				duration = 365
+			}
+		}
+		change_price = {
+			trade_goods = fish
+			key = JUBILEE_FISH_INCREASE
+			value = 0.10
+			duration = 365
+		}
+		add_prestige = -2
+	}
+}

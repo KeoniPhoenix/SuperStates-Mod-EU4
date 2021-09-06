@@ -1,0 +1,50 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorMOU
+
+#Hickok-Tutt Shootout in Springfield
+country_event = {
+	id = flavorMOU.1
+	title = "flavorMOU.1t"
+	desc = "flavorMOU.1d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1650
+		tag = MOU
+		NOT = { has_country_flag = wild_west_shootout }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 2500
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = wild_west_shootout
+		}
+	}
+	option = {
+		name = "flavorMOU.1opta"
+		2500 = {
+			add_province_modifier = {
+				name = "gunfight_disturbance"
+				duration = 365
+			}
+		}
+	}
+}

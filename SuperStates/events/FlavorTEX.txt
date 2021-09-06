@@ -1,0 +1,286 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#  Seviro
+#
+##########################
+
+namespace = flavorTEX
+
+#El Paso Shootout (Four Dead in Five Seconds)
+country_event = {
+	id = flavorTEX.1
+	title = "flavorTEX.1t"
+	desc = "flavorTEX.1d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1650
+		tag = TEX
+		NOT = { has_country_flag = wild_west_shootout }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 2484
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = wild_west_shootout
+		}
+	}
+	option = {
+		name = "flavorTEX.1opta"
+		2484 = {
+			add_province_modifier = {
+				name = "gunfight_disturbance"
+				duration = 365
+			}
+		}
+	}
+}
+
+# Texas Germans Arrive
+country_event = {
+	id = flavorTEX.2
+	title = "flavorTEX.2t"
+	desc = "flavorTEX.2d"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+	OR = {
+		OR = {
+			primary_culture = texan
+			primary_culture = eastern_texan
+			primary_culture = northern_texan
+			primary_culture = high_plainer
+		}
+		AND = {
+			tag = TEX
+			NOT = { primary_culture = tejano }
+		}
+	}
+		AND = {
+			religion_group = christian # American Protestants only
+			NOT = { religion = orthodox }
+			NOT = { religion = s_catholic }
+			NOT = { religion = catholic }
+			NOT = { religion = coptic }
+			NOT = { religion = anabaptist }
+			NOT = { religion = austral_catholic }
+			NOT = { religion = austral_protestant }
+		}
+		has_institution = new_world_i
+		#NOT = { exists = USA }
+		#NOT = { exists = GER } #Germany
+		#NOT = { exists = HRE } #Holy Roman Empire
+		NOT = { has_country_flag = received_germans }
+		OR = {
+		any_country = {
+			AND = {
+			capital_scope = {
+				OR = {
+					continent = europe
+					continent = north_america
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				continent = north_america
+				is_city = yes
+				AND = {
+					culture_group = germanic
+					NOT = { culture = flemish }
+					NOT = { culture = dutch }
+					NOT = { culture = frisian }
+				}
+			}
+		}
+	}
+		any_country = {
+		AND = {
+			capital_scope = {
+					continent = europe
+				}
+				culture_group = germanic
+					OR = {
+						religion = protestant
+						religion = reformed
+					}
+				OR = {
+					government_rank = 3
+					grown_by_development = 250
+				}
+			}
+		}
+	}
+}
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	immediate = {
+		set_country_flag = received_germans
+	}
+	
+	option = { # Welcome the German immigrants
+		name = "flavorTEX.2opta"
+		add_country_modifier = {
+			name = "german_influx"
+			duration = 3650
+		}
+		random_list = {
+			33 = {
+			texas_area = {
+				add_base_production = 1
+				random_province_in_state = {
+					limit =  {
+						NOT = { province_id = 2480 } # Dallas
+						NOT = { province_id = 2478 } # Austin
+						}
+					set_province_flag = german_development_flag
+					change_culture = texasdeutsch
+					change_religion = protestant
+					add_base_production = 2
+					add_base_manpower = 2
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = "german_development"
+						duration = 3650
+							}
+						}
+				} 
+			}
+			33 = { 
+			texas_gulf_area = {
+				add_base_production = 1
+				random_province_in_state = {
+					limit =  {
+						NOT = { province_id = 2487 } # Houston
+						}
+					set_province_flag = german_development_flag
+					change_culture = texasdeutsch
+					change_religion = protestant
+					add_base_production = 2
+					add_base_manpower = 2
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = "german_development"
+						duration = 3650
+							}
+						}
+				} 
+			}
+			33 = {	
+			high_plains_area = {
+				add_base_production = 1
+				random_province_in_state = {
+					set_province_flag = german_development_flag
+					change_culture = texasdeutsch
+					change_religion = protestant
+					add_base_production = 2
+					add_base_manpower = 2
+					add_base_manpower = 2
+					add_province_modifier = {
+						name = "german_development"
+						duration = 3650
+							}
+						}
+					} 
+				}
+			}
+		add_adm_power = -30
+		add_prestige = 10
+		set_country_flag = germans_accepted
+	}
+	option = { # Turn them away
+		name = "flavorTEX.2optb"
+		add_prestige = -5
+	}
+}
+
+# Adelsverein Requests Land Grants
+country_event = {
+	id = flavorTEX.3
+	title = "flavorTEX.3t"
+	desc = "flavorTEX.3d"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+	has_country_flag = germans_accepted
+	OR = {
+			primary_culture = texan
+			primary_culture = eastern_texan
+			primary_culture = northern_texan
+			primary_culture = high_plainer
+		AND = {
+			tag = TEX
+			NOT = { primary_culture = tejano }
+		}
+	}
+		AND = {
+		religion_group = christian
+			NOT = { religion = orthodox }
+			NOT = { religion = s_catholic }
+			NOT = { religion = catholic }
+			NOT = { religion = coptic }
+			NOT = { religion = anabaptist }
+			NOT = { religion = austral_catholic }
+			NOT = { religion = austral_protestant }
+		}
+		has_institution = new_world_i
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		clr_country_flag = received_germans
+		clr_country_flag = germans_accepted
+		set_country_flag = adelsverein_grants
+	}
+	
+	option = { # Accept their request
+		name = "flavorTEX.3opta"
+		add_country_modifier = {
+			name = "texans_displaced"
+			duration = 3650
+		}
+		every_owned_province = {
+			limit =  { has_province_flag = german_development_flag }
+			every_province_in_state = {
+				add_base_production = 2
+				add_base_manpower = 1
+				add_base_tax = 1
+				change_religion = protestant
+				change_culture = texasdeutsch
+				add_province_modifier = {
+				name = "expelled_minority"
+				duration = 5475
+			}
+			}
+		}
+		add_adm_power = -40
+		add_dip_power = -40
+		set_country_flag = adelsverein_grants_given
+	}
+	option = { # Texas is for the Texans! Turn them away.
+		name = "flavorTEX.3optb"
+		add_prestige = 15
+		add_country_modifier = {
+			name = "adelsverein_refused"
+			duration = 3650
+		}
+	}
+}

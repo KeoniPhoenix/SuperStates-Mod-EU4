@@ -1,0 +1,87 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = BahamasFlavor
+
+#Bahamas Culture Event
+country_event = {
+	id = BahamasFlavor.1
+	title = "BahamasFlavor.1t"
+	desc = "BahamasFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		any_owned_province = {
+			area = bahamas_area
+			is_capital = no
+			owned_by = ROOT
+		}
+		bahamas_area = {
+			type = all
+			NOT = { culture = bahamian }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			bahamas_area = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 0.5
+			bahamas_area = {
+				type = all
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 4
+			bahamas_area = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				area = bahamas_area 
+				development = 35
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "BahamasFlavor.1opta"
+		bahamas_area = {
+			change_culture = bahamian
+			add_core = BHM
+		}
+		
+		4626 = {
+			change_culture = bahamian
+			add_core = BHM
+		}
+		
+		3326 = {
+			change_culture = bahamian
+			add_core = BHM
+		}
+	}
+}

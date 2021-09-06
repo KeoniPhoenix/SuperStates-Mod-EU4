@@ -1,0 +1,84 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = GrenadaFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = GrenadaFlavor.1
+	title = "GrenadaFlavor.1t"
+	desc = "GrenadaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3327 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = grenadian }
+			NOT = { is_core = GNA }
+		}
+		4574 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = grenadian }
+			NOT = { is_core = GNA }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3327 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4574 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3327 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 0.5
+			4574 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3327 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 4
+			4574 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3327 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "GrenadaFlavor.1opta"
+		3327 = {
+			change_culture = grenadian
+			add_core = GNA
+		}
+		4574 = {
+			change_culture = grenadian
+			add_core = GNA
+		}
+	}
+}

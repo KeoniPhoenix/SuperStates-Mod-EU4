@@ -1,0 +1,254 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#  Seviro
+#
+##########################
+
+namespace = flavorPNN
+
+#Trouble in West Philadelphia
+country_event = {
+	id = flavorPNN.1
+	title = "flavorPNN.1t"
+	desc = "flavorPNN.1d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = PHL
+				NOT = { exists = PNN }
+			}
+			AND = {
+				NOT = { exists = PHL }
+				tag = PNN
+			}
+		}
+		is_subject = no
+		is_at_war = no
+		owns = 2585
+		controls = 2585
+		NOT = { has_country_flag = had_trouble_in_west_philly }
+		is_year = 1500
+		NOT = { is_year = 2000 }
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+	
+		modifier = {
+			factor = 10
+			NOT = { stability = 0 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_trouble_in_west_philly
+		}
+	}
+	option = {
+		name = "flavorPNN.1opta"
+		#Option does nothing
+	}
+	option = {
+		name = "flavorPNN.1optb"
+		hidden_effect = {
+			ROOT = {
+				set_country_flag = bel_air_prince
+			}
+		} #Option sets flag for future event
+	}
+}
+
+#California Ambassador Returns to Hometown
+country_event = {
+	id = flavorPNN.2
+	title = "flavorPNN.2t"
+	desc = "flavorPNN.2d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = PHL
+				NOT = { exists = PNN }
+			}
+			AND = {
+				NOT = { exists = PHL }
+				tag = PNN
+			}
+		}
+		is_subject = no
+		is_at_war = no
+		owns = 2585
+		controls = 2585
+		has_country_flag = bel_air_prince
+		NOT = { has_country_flag = bel_air_prince_returns }
+	}
+	mean_time_to_happen = {
+		years = 15
+		
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = bel_air_prince_returns
+		}
+	}
+	option = {
+		name = "flavorPNN.2opta"
+		add_republican_tradition = 5
+		add_prestige = 10
+		2585 = {
+			add_base_tax = 1
+			add_base_production = 2
+		}
+		if = {
+			limit = {
+				NOT = { stability = -2 }
+			}
+			add_stability = 1
+		}
+	}
+}
+
+# Amish
+country_event = {
+	id = flavorPNN.3
+	title = "flavorPNN.3t"
+	desc = "flavorPNN.3d"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			primary_culture = pennsylvanian
+			primary_culture = ohioan
+			primary_culture = hoosier
+			tag = OHI
+			tag = PNN
+			tag = PHL
+			tag = IND
+		}
+		has_institution = new_world_i
+		religion_years = { protestant = 20 }
+		NOT = { has_country_flag = amish_arrival }
+		europe = { has_discovered = ROOT }
+		OR = {
+			hre_leagues_enabled = yes
+			SWI = {
+				exists = yes
+				OR = {
+					war_exhaustion = 5
+					stability = -2
+				}
+				OR = {
+					religion = reformed
+					religion = protestant
+				}
+			}
+			ALS = {
+				exists = yes
+				OR = {
+					war_exhaustion = 5
+					stability = -2
+				}
+				OR = {
+					religion = reformed
+					religion = protestant
+				}
+			}
+			any_country = {
+			AND = {
+				capital_scope = { continent = europe }
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 50
+					OR = {
+						region = north_german_region
+						region = south_german_region
+					}
+					OR = {
+						religion = reformed
+						religion = protestant
+					}
+					AND = {
+						culture_group = germanic
+						NOT = { culture = flemish }
+						NOT = {	culture = dutch }
+						NOT = { culture = frisian }
+					}
+				}
+			}
+		}
+	}
+}
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	immediate = {
+		set_country_flag = amish_arrival
+	}
+	
+	option = { # We must remember our origins, and welcome these refugees with open arms.
+		name = flavorPNN.3opta
+		add_country_modifier = {
+			name = "amish_accepted"
+			duration = 7300
+		}
+		3138 = { #Lancaster
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		3139 = { #Lehigh
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		2584 = { #Dauphin
+			add_base_tax = 2
+			add_base_manpower = 1
+		}
+		2585 = { #Philadelphia
+			add_base_production = 1
+			add_base_tax = 1
+			add_base_manpower = 1
+		}
+		add_adm_power = -25
+		add_dip_power = -25
+		add_prestige = -10
+		set_country_flag = amish_accepted_flag
+	}
+	option = { # This is none of our business. Turn them away.
+		name = flavorPNN.3optb
+		add_prestige = 15
+		set_country_flag = amish_refused
+	}
+}

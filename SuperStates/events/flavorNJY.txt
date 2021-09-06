@@ -1,0 +1,297 @@
+##########################
+#
+#  Written by:
+#  Seviro
+#
+##########################
+
+namespace = flavorNJY
+
+country_event = { # Captain Billopp's Race
+	id = flavorNJY.1
+	title = "flavorNJY.1t"
+	desc = "flavorNJY.1d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {	# Dispute the results
+		name = "flavorNJY.1opta"
+		NYS = {
+            # limit = {
+                # owns = 3281 # Staten Island/Richmond
+            # }
+           country_event = {
+				id = flavorNJY.2 
+				days = 3
+				}
+			}
+		}
+			
+	option = {	# Accept the results
+		name = "flavorNJY.1optb"
+		3281 = {
+			remove_core = ROOT
+		}
+		NYS = {
+            # limit = {
+                # owns = 3281
+            # }
+            add_opinion = {
+                who = ROOT
+                modifier = opinion_pleased
+            }
+        }
+	}
+}
+
+country_event = { # New Jersey Disputes Captain Billopp's Race
+	id = flavorNJY.2
+	title = "flavorNJY.2t"
+	desc = "flavorNJY.2d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 3281 # Staten Island/Richmond
+	}
+
+	option = {	# Relinquish Staten Island
+		name = "flavorNJY.2opta"
+		ai_chance = {
+			factor = 30
+				modifier = {
+					factor = 1.5
+					alliance_with = FROM
+			}
+			modifier = {
+					factor = 1.1
+					has_opinion = {
+						who = ROOT
+						value = 10
+						}
+			}
+				modifier = {
+					factor = 0.5
+					is_rival = FROM
+				}
+			}
+		FROM = {
+		country_event = {
+		id = flavorNJY.4
+		days = 3
+			}
+		}
+		3281 = {
+		cede_province = FROM
+		add_core = FROM
+		remove_core = ROOT
+		}
+	}
+	option = {	# We have rightfully won the rights to Staten Island. It is ours to keep.
+		name = "flavorNJY.2optb"
+		ai_chance = { factor = 70 }
+		FROM = { country_event = {
+		id = flavorNJY.3
+		days = 3
+			}
+		}
+	}
+}
+
+country_event = { # New York Refuses to Cede Staten Island
+	id = flavorNJY.3
+	title = "flavorNJY.3t"
+	desc = "flavorNJY.3d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {	# Outrageous!
+		name = "flavorNJY.3opta"
+		3281 = {
+			add_core = ROOT
+		}
+		add_opinion = {
+			who = NYS
+			modifier = opinion_displeased
+			}
+	}
+}
+
+country_event = { # New York Cedes Staten Island
+	id = flavorNJY.4
+	title = "flavorNJY.4t"
+	desc = "flavorNJY.4d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {	# Excellent.
+		name = "flavorNJY.4opta"
+		add_opinion = {
+			who = NYS
+			modifier = opinion_pleased
+			}
+	}
+}
+
+#1000 - 1003 mission related
+country_event = { #Change capital via mission
+	id = flavorNJY.1000
+	title = "flavorNJY.1000t"
+	desc = "flavorNJY.1000d"
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #current capital
+		name = "flavorNJY.1000opta"
+		capital_scope = {
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+		}
+	}
+
+	option = {
+		name = "flavorNJY.1000optb"
+		trigger = {
+			2601 = { is_capital = no }
+		}
+		2601 = { #new york
+			move_capital_effect = yes
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+		}
+	}
+
+	option = {
+		name = "flavorNJY.1000optc"
+		trigger = {
+			2585 = { is_capital = no }
+		}
+		2585 = { #philidelphia
+			move_capital_effect = yes
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+		}
+	}
+
+	option = {
+		name = "flavorNJY.1000optd"
+		trigger = {
+			2616 = { is_capital = no }
+		}
+		2616 = { #dc
+			move_capital_effect = yes
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+		}
+	}
+	option = {
+		name = "flavorNJY.1000opte"
+		trigger = {
+			2531 = { is_capital = no }
+		}
+		2531 = { #baltimore
+			move_capital_effect = yes
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+		}
+	}
+}
+
+country_event = { #captain billopp's race
+	id = flavorNJY.1001
+	title = "flavorNJY.1001t"
+	desc = "flavorNJY.1001d"
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "flavorNJY.1001opta"
+		add_navy_tradition = 10
+		create_admiral = {
+			tradition = 100
+		}
+	}
+}
+
+country_event = { #Empire City
+	id = flavorNJY.1002
+	title = "flavorNJY.1002t"
+	desc = "flavorNJY.1002d"
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #op york?
+		name = "flavorNJY.1002opta"
+		trigger = {
+			2601 = {
+				is_capital = no
+			}
+		}
+		2601 = {
+			add_province_modifier = {
+			name = "njy_empire_city"
+			duration = -1
+			}
+		}
+	}
+
+	option = { #or op jersey(or wherever you capital is)
+		name = "flavorNJY.1002optb"
+		capital_scope = {
+			add_province_modifier = {
+			name = "njy_empire_city"
+			duration = -1
+			}
+		}
+	}
+}
+
+
+#country_event = { #Princeton Symposium
+#	id = flavorNJY.1003
+#	title = "flavorNJY.1003t"
+#	desc = "flavorNJY.1003d"
+#	picture = UNIVERSITY_eventPicture
+#}

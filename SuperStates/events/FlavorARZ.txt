@@ -1,0 +1,419 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorARZ
+
+#Mormon Arizona
+
+# Mormon Religious Upheaval!
+country_event = {
+	id = flavorARZ.1
+	title = "flavorARZ.1t"
+	desc = "flavorARZ.1d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		is_year = 1650
+		tag = ARZ
+		OR = {
+			940 = { has_missionary = yes }
+			NOT = { stability = 1 }
+		}
+		NOT = { is_year = 1500 }
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+	
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 10
+			stability = 3
+		}
+		modifier = {
+			factor = 5
+			stability = 2
+		}
+		modifier = {
+			factor = 2
+			stability = 1
+		}
+	}
+	immediate = {
+		set_country_flag = mormon_religious_upheaval
+	}
+	option = {
+		name = "flavorARZ.1opta"
+		ai_chance = { factor = 20 }
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = protestant_rebels
+				size = 1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				NOT = { religion = mormon }
+			}
+			change_religion = mormon
+		}
+		change_religion = mormon
+		add_stability = -1
+	}
+	option = {
+		name = "flavorARZ.1optb"
+		ai_chance = { factor = 80 }
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = mormon_rebels
+				size = 1
+				friend = UTA
+			}
+		}
+		add_stability = -1
+	}
+}
+
+#Continued Mormon Upheaval!
+country_event = {
+	id = flavorARZ.2
+	title = "flavorARZ.2t"
+	desc = "flavorARZ.2d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	trigger = {
+		tag = ARZ
+		religion = protestant
+		NOT = { is_year = 1500 }
+		has_country_flag = mormon_religious_upheaval
+	}
+	mean_time_to_happen = {
+		months = 60
+	
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+	}
+	immediate = {
+		set_country_flag = continued_flavorARZ_unrest
+	}
+	option = {
+		name = "flavorARZ.2opta"
+		ai_chance = { factor = 80 }
+		random_owned_province = {
+			limit = {
+				NOT = { religion = mormon }
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = mormon_rebels
+				size = 2
+			}
+		}
+		add_dip_power = -50
+	}
+	option = {
+		name = "flavorARZ.2optb"
+		ai_chance = { factor = 20 }
+		change_religion = mormon
+		add_adm_power = -25
+		add_dip_power = -25
+	}
+}
+
+#Protestant Unrest!
+country_event = {
+	id = flavorARZ.3
+	title = "flavorARZ.3t"
+	desc = "flavorARZ.3d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	trigger = {
+		tag = ARZ
+		religion = mormon
+		NOT = { is_year = 1500 }
+		has_country_flag = mormon_religious_upheaval
+	}
+	mean_time_to_happen = {
+		months = 60
+	
+		modifier = {
+			factor = 0.25
+			NOT = { stability = 0 }
+		}
+	}
+	
+	option = {
+		name = "flavorARZ.3opta"
+		random_owned_province = {
+			spawn_rebels = {
+				type = protestant_rebels
+				size = 2
+			}
+		}
+		add_dip_power = -50
+	}
+	option = {
+		name = "flavorARZ.3optb"
+		add_years_of_income = -0.25
+		add_dip_power = -25
+		add_adm_power = -25
+	}
+}
+
+
+
+#Return to Peace
+country_event = {
+	id = flavorARZ.4
+	title = "flavorARZ.4t"
+	desc = "flavorARZ.4d"
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = ARZ
+		OR = {
+			has_country_flag = mormon_religious_upheaval
+			has_country_flag = continued_flavorARZ_unrest
+		}
+	}
+	mean_time_to_happen = {
+		months = 36
+	
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.75
+			stability = 1
+		}
+		modifier = {
+			factor = 0.5
+			stability = 2
+		}
+		modifier = {
+			factor = 0.25
+			stability = 3
+		}
+	}
+	immediate = {
+		clr_country_flag = mormon_religious_upheaval
+		clr_country_flag = continued_flavorARZ_unrest
+	}
+	option = {
+		name = "flavorARZ.4opta"
+		ai_chance = { factor = 20 }
+		add_stability = 1
+		add_years_of_income = -0.5
+	}
+	option = {
+		name = "flavorARZ.4optb"
+		ai_chance = { factor = 80 }
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+}
+
+#Gun Fight at the OK Corral
+country_event = {
+	id = flavorARZ.5
+	title = "flavorARZ.5t"
+	desc = "flavorARZ.5d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARZ
+		is_year = 1650
+		NOT = { has_country_flag = wild_west_shootout }
+		is_subject = no
+		is_at_war = no
+		owns_core_province = 3239
+	}
+	
+	mean_time_to_happen = {
+		years = 25
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			3239 = { set_province_flag = ok_corral }
+			set_country_flag = wild_west_shootout
+		}
+	}
+	option = {
+		name = "flavorARZ.5opta"
+		3239 = {
+			add_province_modifier = {
+				name = "gunfight_disturbance"
+				duration = 365
+			}
+		}
+	}
+}
+
+#Assassination at the O.K. Corral reenactment
+country_event = {
+	id = flavorARZ.6
+	title = "flavorARZ.6t"
+	desc = "flavorARZ.6d"
+	picture = ASSASSINATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 3239
+		OR = {
+			NOT = { owns = 2484 }
+			NOT = { owns = 1007 }
+			NOT = { owns = 2500 }
+		}
+		3239 = { has_province_flag = ok_corral }
+		is_year = 1750
+		NOT = { is_year = 1800 }
+		is_monarch_leader = no
+	}
+	mean_time_to_happen = {
+		years = 100
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 5
+			stability = 1
+		}
+		modifier = {
+			factor = 5
+			stability = 2
+		}
+		modifier = {
+			factor = 2
+			stability = 3
+		}
+	}
+	#Detrimental
+	option = {
+		name = "flavorARZ.6opta"
+			trigger = {
+				adm = 5
+			}
+		kill_ruler = yes
+		add_stability = -2
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+	}
+	#Annoyance
+	option = {
+		name = "flavorARZ.6optb"
+		trigger = {
+			adm = 2
+			NOT = { adm = 5 }
+		}
+		kill_ruler = yes
+		add_stability = -1
+	}
+	#Beneficial
+	option = {
+		name = "flavorARZ.6optc"
+		trigger = {
+			NOT = { adm = 2 }
+		}
+		kill_ruler = yes
+		add_republican_tradition = -15
+	}
+}
+
+#Establish Lee's Ferry!
+country_event = {
+	id = flavorARZ.7
+	title = "flavorARZ.7t"
+	desc = "flavorARZ.7d"
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 939
+		is_core = 939
+		939 = {
+			NOT = { has_province_flag = lees_ferry }
+		}
+		is_year = 1500
+		
+	}
+	mean_time_to_happen = {
+		years = 300
+	
+		modifier = {
+			factor = 10
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.83
+			stability = 1
+		}
+		modifier = {
+			factor = 0.66
+			stability = 2
+		}
+		modifier = {
+			factor = 0.50
+			stability = 3
+		}
+	}
+	#Yes! This is an important crossing!
+	option = {
+		name = "flavorARZ.7opta"
+		939 = {
+			add_base_tax = 2
+			add_base_production = 2
+		}
+		add_years_of_income = -1.50
+		add_adm_power = -200
+		add_mil_power = -100
+		hidden_effect = {
+			939 = { 
+				set_province_flag = lees_ferry 
+			}
+		}
+	}
+	#No, we can't spare the resources.
+	option = {
+		name = "flavorARZ.7optb"
+		add_prestige = -15
+	}
+}

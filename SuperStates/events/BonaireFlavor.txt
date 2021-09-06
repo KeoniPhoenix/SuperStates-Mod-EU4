@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = BonaireFlavor
+
+#Bonaire Culture Event
+country_event = {
+	id = BonaireFlavor.1
+	title = "BonaireFlavor.1t"
+	desc = "BonaireFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3332 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = bonairean }
+			NOT = { is_core = BNR }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3332 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3332 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3332 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3332 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "BonaireFlavor.1opta"
+		3332 = { 
+			change_culture = bonairean
+			add_core = BNR
+		}
+	}
+}

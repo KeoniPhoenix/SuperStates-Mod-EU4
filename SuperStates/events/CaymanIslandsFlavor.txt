@@ -1,0 +1,59 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = CaymanIslandsFlavor
+
+#Cayman Islands Culture Event
+country_event = {
+	id = CaymanIslandsFlavor.1
+	title = "CaymanIslandsFlavor.1t"
+	desc = "CaymanIslandsFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		cayman_islands_area = {
+			is_capital = no
+			owned_by = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3014 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3014 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3014 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3014 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "CaymanIslandsFlavor.1opta"
+		cayman_islands_area = { 
+			change_culture = caymanian
+			add_core = CAY
+		}
+	}
+}

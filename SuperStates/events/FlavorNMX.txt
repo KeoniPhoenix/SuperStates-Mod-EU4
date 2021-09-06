@@ -1,0 +1,161 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorNMX
+
+#Lincoln County War, New Mexico
+country_event = {
+	id = flavorNMX.1
+	title = "flavorNMX.1t"
+	desc = "flavorNMX.1d"
+	picture = BORDER_TENSION_eventPicture
+	
+	trigger = {
+		tag = NMX
+		owns = 958
+		958 = { controlled_by = ROOT }
+		NOT = { is_year = 1900 }
+		NOT = { has_country_flag = lincoln_county_war }
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 5
+			stability = 1
+		}
+		modifier = {
+			factor = 10
+			stability = 3
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = lincoln_county_war
+		}
+	}
+	option = {
+		name = "flavorNMX.1opta"
+		958 = {
+			add_province_modifier = {
+				name = "lincoln_county_war_regulators"
+				duration = 365
+			}
+		}
+		add_stability = -1
+		hidden_effect = {
+			country_event = {
+				id = flavorNMX.2
+				days = 45
+			}
+		}
+	}
+	option = {
+		name = "flavorNMX.1optb"
+		958 = {
+			add_province_modifier = {
+				name = "lincoln_county_war_monopoly"
+				duration = 365
+			}
+			anti_tax_rebels = 2
+		}
+		add_stability = -1
+		add_years_of_income = 1
+		hidden_effect = {
+			country_event = {
+				id = flavorNMX.3
+				days = 45
+			}
+		}
+	}
+}
+
+#Lincoln County War in Support of Regulators
+country_event = {
+	id = flavorNMX.2
+	title = "flavorNMX.2t"
+	desc = "flavorNMX.2d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = lincoln_county_war_part2
+		}
+	}
+	option = {
+		name = "flavorNMX.2opta"
+		every_core_province = {
+			particularist_rebels = 1
+		}
+	}
+}
+
+#Lincoln County War in Support of the Monopoly
+country_event = {
+	id = flavorNMX.3
+	title = "flavorNMX.3t"
+	desc = "flavorNMX.3d"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = lincoln_county_war_part2
+		}
+	}
+	option = {
+		name = "flavorNMX.3opta"
+		random_owned_province = {
+			limit = { 
+				NOT = { is_capital = yes }
+			}
+			anti_tax_rebels = 2
+		}
+		capital_scope = {
+			anti_tax_rebels = 2
+		}
+	}
+}
+
+#End of the Lincoln County War
+country_event = {
+	id = flavorNMX.4
+	title = "flavorNMX.4t"
+	desc = "flavorNMX.4d"
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		OR = {
+			NOT = { has_spawned_rebels = particularist_rebels }
+			NOT = { has_spawned_rebels = anti_tax_rebels }
+		}
+		
+		has_country_flag = lincoln_county_war
+		has_country_flag = lincoln_county_war_part2
+		stability = 3
+	}
+	
+	option = {
+		name = "flavorNMX.4opta"
+		hidden_effect = {
+			clr_country_flag = lincoln_county_war_part2
+		}
+	}
+}

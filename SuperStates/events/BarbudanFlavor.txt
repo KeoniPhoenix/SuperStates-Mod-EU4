@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = BarbudanFlavor
+
+#Barbudan Culture Event
+country_event = {
+	id = BarbudaFlavor.1
+	title = "BarbudaFlavor.1t"
+	desc = "BarbudaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4582 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = barbudan }
+			NOT = { is_core = BRD }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4582 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4582 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4582 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4582 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "BarbudanFlavor.1opta"
+		4582 = {
+			change_culture = barbudan
+			add_core = BRD
+		}
+	}
+}

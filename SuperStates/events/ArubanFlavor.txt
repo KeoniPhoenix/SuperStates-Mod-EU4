@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = ArubanFlavor
+
+#Aruban Culture Event
+country_event = {
+	id = ArubanFlavor.1
+	title = "ArubanFlavor.1t"
+	desc = "ArubanFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3331 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = aruban }
+			NOT = { is_core = ARU }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3331 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3331 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3331 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3331 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "ArubanFlavor.1opta"
+		3331 = { 
+			change_culture = aruban
+			add_core = ARU
+		}
+	}
+}

@@ -1,0 +1,349 @@
+##########################
+#
+#  Written by:
+#  Seviro
+#
+##########################
+
+namespace = flavorFLO
+
+country_event = {
+	id = flavorFLO.1 # Cuban Diaspora
+	title = "flavorFLO.1t"
+	desc = "flavorFLO.1d"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		AND = {
+			east_cuba_area = { owned_by = ROOT }
+			west_cuba_area = { owned_by = ROOT }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {	# Resettle the Cuban Exiles
+		name = "flavorFLO.1opta"
+		ai_chance = {
+			factor = 70 
+			modifier = {
+					factor = 0
+					primary_culture = miamian
+			}
+		}
+		#custom_tooltip = flo_evict_cubans_tooltip
+		every_owned_province = {
+			limit = {
+				culture = miamian
+				has_owner_culture = no
+			}
+			change_religion = ROOT
+			change_culture = ROOT
+		}
+		
+		south_florida_area = {
+			add_province_modifier = {
+				name = cubans_resettled
+				duration = 3650
+			}
+		}
+			
+		west_cuba_area = {
+			change_culture = cuban
+			if = {
+				limit = {
+					any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+				}
+			}   
+			 		
+			# If no North American Catholics, convert to regular Catholic
+			else = {
+				change_religion = catholic
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = cubans_returned
+				duration = 3650
+			}
+			hidden_effect = {
+				add_province_modifier = {
+					name = expelled_minority
+					duration = 5475
+				}
+			}
+		}
+		east_cuba_area = {
+			change_culture = cuban
+					if = {
+				limit = {
+					any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+				}
+			}   	
+			# If no North American Catholics, convert to regular Catholic
+			else = {
+				change_religion = catholic
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = cubans_returned
+				duration = 3650
+			}
+			hidden_effect = {
+				add_province_modifier = {
+					name = expelled_minority
+					duration = 5475
+				}
+			}
+		}
+			every_country = {
+            limit = {
+                culture_group = caribbean_islander
+            }
+            add_opinion = {
+                who = ROOT
+                modifier = opinion_pleased
+            }
+        }
+		hidden_effect = {
+		remove_accepted_culture = miamian
+		add_accepted_culture = cuban
+		}
+	}
+	option = {	# Remove the Cubans from Cuba
+		name = "flavorFLO.1optb"
+		#custom_tooltip = flo_settle_cubans_tooltip
+		suncoast_area = {
+			change_culture = miamian
+				if = {
+				limit = {
+					any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+				}
+			}   
+			 		
+			# If no North American Catholics, convert to regular Catholic
+			else = {
+				change_religion = catholic
+			}
+			add_base_tax = 2
+			add_province_modifier = {
+				name = cubans_expelled
+				duration = 3650
+			}
+			hidden_effect = {
+			add_province_modifier = {
+				name = expelled_minority
+				duration = 5475
+			}
+			}
+		}
+		south_florida_area = {
+			change_culture = miamian
+				if = {
+				limit = {
+					any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+				}
+			}   
+			 		
+			# If no North American Catholics, convert to regular Catholic
+			else = {
+				change_religion = catholic
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = cubans_expelled
+				duration = 3650
+			}
+			hidden_effect = {
+			add_province_modifier = {
+				name = expelled_minority
+				duration = 5475
+			}
+			}
+		}
+		
+		3019 = {
+			change_culture = miamian
+				if = {
+				limit = {
+					any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+				}
+			}   
+			 		
+			# If no North American Catholics, convert to regular Catholic
+			else = {
+				change_religion = catholic
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = cubans_expelled
+				duration = 3650
+			}
+			hidden_effect = {
+				add_province_modifier = {
+					name = expelled_minority
+					duration = 5475
+				}
+			}
+		}
+		
+		west_cuba_area = {
+		limit = {
+                owned_by = ROOT
+            }
+			change_culture = ROOT
+			change_religion = ROOT
+			hidden_effect = {
+				add_province_modifier = {
+					name = expelled_minority
+					duration = 5475
+				}
+			}
+		}
+		
+		east_cuba_area = {
+		limit = {
+                owned_by = ROOT
+            }
+			change_culture = ROOT
+			change_religion = ROOT
+			hidden_effect = {
+				add_province_modifier = {
+					name = expelled_minority
+					duration = 5475
+				}
+			}
+		}
+			every_country = {
+            limit = {
+                culture_group = caribbean_islander
+            }
+            add_opinion = {
+                who = ROOT
+                modifier = opinion_displeased
+            }
+        }
+	}
+	option = {		# We have no business in this. Let it be.
+		name = "flavorFLO.1optc"
+		ai_chance = { factor = 30 }
+		add_prestige = 10
+		every_country = {
+            limit = {
+                culture_group = caribbean_islander
+            }
+            add_opinion = {
+                who = ROOT
+                modifier = opinion_pleased
+            }
+        }
+	}
+}
+
+country_event = {
+	id = flavorFLO.2 # The Big Peach
+	title = "flavorFLO.2t"
+	desc = "flavorFLO.2d"
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+			2510 = { owned_by = ROOT }
+	}
+
+	option = { #Atlanta will be the jewel of the South!
+		name = "flavorFLO.2opta"
+		ai_chance = { factor = 55 }
+		2510 = {
+			change_religion = ROOT
+			change_culture = ROOT
+			add_province_modifier = {
+				name = "the_big_peach_modifier"
+				duration = -1
+			}
+		}
+	}
+	option = { # Claim its wealth for [Root.GetCapitalName]!
+		name = "flavorFLO.2optb"
+		ai_chance = { factor = 30 }
+		capital_scope = {
+			add_province_modifier = {
+				name = "the_big_peach_modifier"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {	# Well, I didn't like [Root.GetCapitalName] anyways...
+		name = "flavorFLO.2optc"
+		ai_chance = { factor = 10 }
+		trigger = {
+			2510 = {
+				is_capital = no
+			}
+		}
+		2510 = {
+			move_capital_effect = yes
+			change_religion = ROOT
+			change_culture = ROOT
+			add_province_modifier = {
+				name = "the_big_peach_modifier"
+				duration = -1
+			}
+		}
+	}
+	option = {	# Burn it to the ground!
+		name = "flavorFLO.2optd"
+		ai_chance = { factor = 5 }
+		2510 = {
+			add_base_manpower = -3
+			add_base_production = -3
+			add_base_tax = -3
+			add_devastation = 50
+			change_religion = ROOT
+			change_culture = ROOT
+			}
+		}
+	}
+}

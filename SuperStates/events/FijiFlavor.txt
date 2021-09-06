@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = FijiFlavor
+
+#Fiji Culture Event
+country_event = {
+	id = FijiFlavor.1
+	title = "FijiFlavor.1t"
+	desc = "FijiFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1242 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = fijian }
+			NOT = { is_core = FIJ }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1242 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1242 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1242 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1242 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "FijiFlavor.1opta"
+		1242 = { 
+			change_culture = fijian
+			add_core = FIJ
+		}
+	}
+}

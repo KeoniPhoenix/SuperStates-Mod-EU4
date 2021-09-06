@@ -1,0 +1,103 @@
+##########################
+#
+#  Written by:
+#  Seviro
+#
+##########################
+
+namespace = flavorMSS
+
+country_event = { # The Maine Question
+	id = flavorMSS.1
+	title = "flavorMSS.1t"
+	desc = "flavorMSS.1d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {	# Very well.
+		name = "flavorMSS.1opta"
+		MNE = { country_event = {
+		id = flavorMSS.2 
+		days = 5
+			}
+		}
+	}
+}
+
+# Reunite with Massachusetts? (for Maine)
+country_event = {
+	id = flavorMSS.2
+	title = "flavorMSS.2t"
+	desc = "flavorMSS.2d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MNE
+	}
+
+	option = {	# We are a natural part of Massachusetts. Let us reunite our states.
+		name = "flavorMSS.2opta"
+		ai_chance = {
+			factor = 30
+			modifier = {
+					factor = 0
+					is_rival = FROM
+			}
+			}
+		FROM = { country_event = {
+		id = flavorMSS.3
+		days = 5
+			}
+		}
+	}
+	option = {	# Maine is an independent state, and will continue to be.
+		name = "flavorMSS.2optb"
+		ai_chance = { factor = 70 }
+		FROM = { country_event = {
+		id = flavorMSS.4
+		days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Maine accepts!
+	id = flavorMSS.3
+	title = "flavorMSS.3t"
+	desc = "flavorMSS.3d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {	# Excellent!
+		name = "flavorMSS.3opta"
+		vassalize = MNE
+	}
+}
+
+country_event = { # Maine refuses!
+	id = flavorMSS.4
+	title = "flavorMSS.4t"
+	desc = "flavorMSS.4d"
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {	# Outrageous!
+		name = "flavorMSS.4opta"
+		maine_area = {
+			add_core = ROOT
+		}
+	}
+}

@@ -1,0 +1,583 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = flavorALA
+
+#Serum Run Event
+country_event = {
+	id = flavorALA.1
+	title = "flavorALA.1t"
+	desc = "flavorALA.1d"
+	picture = PLAUGE_eventPicture
+	
+	trigger = {
+		tag = ALA
+		NOT = { is_year = 1950 }
+		num_of_cities = 3
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+	
+		modifier = {
+			factor = 1000
+			OR = {
+				is_month = 2	#March
+				is_month = 3	#April
+				is_month = 4	#May
+				is_month = 5	#June
+				is_month = 6	#July
+				is_month = 7	#August
+				is_month = 8	#September
+				is_month = 9	#October
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				is_month = 0	#January
+				is_month = 1	#February
+				is_month = 10	#November
+				is_month = 11	#December
+			}
+		}
+	}
+	option = {
+		name = "flavorALA.1opta"
+		add_years_of_income = -0.125
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			add_province_modifier = {
+				name = "medicine_run"
+				duration = 45
+			}
+		}
+	}
+	option = {
+		name = "flavorALA.1opta"
+		add_stability = -2
+		add_prestige = -20
+	}
+}
+
+#Discovery of Resources
+country_event = {
+	id = flavorALA.2
+	title = "flavorALA.2t"
+	desc = "flavorALA.2d"
+	picture = EXPLORERS_eventPicture
+	
+	trigger = {
+		tag = ALA
+		num_of_cities = 2
+		NOT = { is_year = 2000 }
+		all_owned_province = {
+			NOT = { development = 15 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 36500
+	
+		modifier = {
+			factor = 2
+			had_country_flag = {
+				flag = resource_discover_country
+				days = 1825
+			}
+		}modifier = {
+			factor = 2
+			had_country_flag = {
+				flag = resource_discover_country
+				days = 3650
+			}
+		}
+		modifier = {
+			factor = 2
+			had_country_flag = {
+				flag = resource_discover_country
+				days = 7300
+			}
+		}
+		modifier = {
+			factor = 0.90
+			owns = 2618		#Yukon
+		}
+		modifier = {
+			factor = 0.90
+			owns = 2619		#Northwest Territories
+		}
+		modifier = {
+			factor = 0.90
+			owns = 2621		#Keewatin
+		}
+		modifier = {
+			factor = 0.5
+			alaska_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		modifier = {
+			factor = 5
+			num_of_cities = 2
+		}
+		modifier = {
+			factor = 0.90
+			num_of_cities = 5
+		}
+		modifier = {
+			factor = 0.90
+			num_of_cities = 10
+		}
+		modifier = {
+			factor = 1.25
+			total_development = 25
+		}
+		modifier = {
+			factor = 1.5
+			total_development = 50
+		}
+		modifier = {
+			factor = 2
+			total_development = 100
+		}
+	}
+	immediate = {
+		random_core_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				NOT = { development = 15 }
+			}
+			hidden_effect = {
+				set_province_flag = resource_discovered
+			}
+		}
+		hidden_effect = {
+			set_country_flag = resource_discover_country
+		}
+	}
+	option = {
+		name = "flavorALA.2opta"
+		if = {
+			limit = {
+				any_core_province = { 
+					NOT = { base_tax = 5 }
+					has_province_flag = resource_discovered
+				}
+			}
+			every_core_province = {
+				limit = {
+					NOT = { base_tax = 5 }
+					has_province_flag = resource_discovered
+				}
+				add_base_tax = 1
+				hidden_effect = {
+					clr_province_flag = resource_discovered
+				}
+			}
+			hidden_effect = {
+				clr_country_flag = resource_discover_country
+			}
+		}
+	}
+	option = {
+		name = "flavorALA.2optb"
+		if = {
+			limit = {
+				any_core_province = { 
+					NOT = { base_tax = 5 }
+					has_province_flag = resource_discovered
+				}
+		 	}
+			every_core_province = {
+				limit = {
+					NOT = { base_production = 5 }
+					has_province_flag = resource_discovered
+				}
+				add_base_production = 1
+				hidden_effect = {
+					clr_province_flag = resource_discovered
+				}
+			}
+			hidden_effect = {
+				clr_country_flag = resource_discover_country
+			}
+		}
+	}
+	option = {
+		name = "flavorALA.2optc"
+		if = {
+			limit = {
+				any_core_province = { 
+					NOT = { base_tax = 5 }
+					has_province_flag = resource_discovered
+				}
+		 	}
+			every_core_province = {
+				limit = {
+					NOT = { base_manpower = 5 }
+					has_province_flag = resource_discovered
+				}
+				add_base_manpower = 1
+				hidden_effect = {
+					clr_province_flag = resource_discovered
+				}
+			}
+			hidden_effect = {
+				clr_country_flag = resource_discover_country
+			}
+		}
+	}
+	option ={
+		name = "flavorALA.2optd"
+		hidden_effect = {
+			clr_country_flag = resource_discover_country
+		}
+		add_country_modifier = {
+			name = tax_them_before_they_leave
+			duration = 913
+		}
+	}
+}
+
+#Alaskan Orthodox Church
+#country_event = {
+#	id = flavorALA.3
+#	title = "flavorALA.3t"
+#	desc = "flavorALA.3d"
+#	picture = PRAYING_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = ALA
+#		religion = s_catholic
+#		any_owned_province = {
+#			OR = {
+#				NOT = { religion = orthodox }
+#				NOT = { religion = catholic }
+#			}
+#		}
+#		stability = 0
+#		NOT = { is_year = 1500 }
+#	}
+#	mean_time_to_happen = {
+#		years = 60
+#	
+#		modifier = {
+#			factor = 0.75
+#			has_discovered = 151
+#		}
+#		modifier = {
+#			factor = 0.75
+#			has_discovered = 307
+#		}
+#		modifier = {
+#			factor = 0.75
+#			stability = 3
+#		}
+#	}
+#	immediate = {
+#		2671 = {
+#			change_religion = orthodox
+#			add_permanent_province_modifier = {
+#				name = "religious_zeal_at_conv"
+#				duration = 1825
+#			}
+#		}
+#	}
+#	option = {
+#		name = "flavorALA.3opta"
+#		
+#		hidden_effect = {
+#			set_country_flag = orthodoxy_in_alaska
+#		}
+#		add_prestige = 5
+#	}
+#	option = {
+#		name = "flavorALA.3optb"
+#		
+#		hidden_effect = {
+#			set_country_flag = orthodoxy_in_alaska
+#		}
+#		add_adm_power = 50
+#	}
+#}
+
+#Orthodoxy Spreads
+#country_event = {
+#	id = flavorALA.4
+#	title = "flavorALA.4t"
+#	desc = "flavorALA.4d"
+#	picture = RELIGIOUS_TURMOIL_eventPicture
+#	
+#	trigger = {
+#		tag = ALA
+#		religion = s_catholic
+#		has_country_flag = orthodoxy_in_alaska
+#		NOT = { is_year = 1525 }
+#	}
+#	mean_time_to_happen = {
+#		months = 60
+#	
+#		modifier = {
+#			factor = 0.75
+#			has_discovered = 151
+#		}
+#		modifier = {
+#			factor = 0.75
+#			has_discovered = 307
+#		}
+#		modifier = {
+#			factor = 0.75
+#			2671 = {
+#				has_building = temple
+#			}
+#		}
+#	}
+#	immediate = {
+#		random_core_province = {
+#			limit = {
+#				religion = s_catholic
+#				NOT = { is_capital = yes }
+#			}
+#			hidden_effect = {
+#				set_province_flag = orthodoxy_spreads
+#			}
+#		}
+#	}
+#	option = {
+#		name = "flavorALA.4opta"
+#		every_core_province = {
+#			limit = {
+#				has_province_flag = orthodoxy_spreads
+#			}
+#			change_religion = orthodox
+#			add_permanent_province_modifier = {
+#				name = "religious_zeal_at_conv"
+#				duration = 1825
+#			}
+#			hidden_effect = {
+#				clr_province_flag = orthodoxy_spreads
+#			}
+#		}
+#		random_core_province = {
+#			limit = {
+#				NOT = { is_capital = yes }
+#				religion = s_catholic
+#			}
+#			spawn_rebels = {
+#				type = orthodox_rebels
+#				size = 1
+#			}
+#		}
+#	}
+#}
+
+#State involvement in Doctrine Dispute
+#country_event = {
+#	id = flavorALA.5
+#	title = "flavorALA.5t"
+#	desc = "flavorALA.5d"
+#	picture = PRAYING_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = ALA
+#		has_country_flag = orthodoxy_in_alaska
+#		NOT = { is_year = 1525 }
+#		num_of_religion = { 
+#			religion = orthodox
+#			value = 4
+#		}
+#	}
+#	mean_time_to_happen = {
+#		months = 24
+#	
+#		modifier = {
+#			factor = 0.5
+#			has_discovered = 151
+#		}
+#		modifier = {
+#			factor = 0.5
+#			has_discovered = 307
+#		}
+#		modifier = {
+#			factor = 0.5
+#			2671 = {
+#				has_building = temple
+#			}
+#		}
+#		modifier = {
+#			factor = 0.75
+#			970 = {
+#				has_building = temple
+#			}
+#		}
+#	}
+#	option = {
+#		name = "flavorALA.5opta"
+#		change_religion = orthodox
+#		capital_scope = {
+#			change_religion = orthodox
+#		}
+#		random_core_province = {
+#			limit = {
+#				religion = orthodox
+#			}
+#			spawn_rebels = {
+#				type = s_catholic_rebels
+#				size = 1
+#			}
+#		}
+#		add_patriarch_authority = 0.10
+#		add_prestige = -10
+#		add_stability = -1
+#		hidden_effect = {
+#			clr_country_flag = orthodoxy_in_alaska
+#		}
+#	}
+#	option = {
+#		name = "flavorALA.5optb"
+#		capital_scope = {
+#			change_religion = orthodox
+#			add_permanent_province_modifier = {
+#				name = "religious_zeal_at_conv"
+#				duration = 1825
+#			}
+#			spawn_rebels = {
+#				type = s_catholic_rebels
+#				size = 1
+#			}
+#		}
+#		random_core_province = {
+#			limit = {
+#				religion = orthodox
+#			}
+#			spawn_rebels = {
+#				type = s_catholic_rebels
+#				size = 1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				government = republic
+#			}
+#			add_republican_tradition = -10
+#		}
+#		if = {
+#			limit = {
+#				government = monarchy
+#			}
+#			add_legitimacy = -10
+#		}
+#		add_stability = -1
+#	}
+#	option = {
+#		name = "flavorALA.5optc"
+#		random_core_province = {
+#			limit = {
+#				religion = orthodox
+#			}
+#			spawn_rebels = {
+#				type = s_catholic_rebels
+#				size = 1
+#			}
+#		}
+#		random_core_province = {
+#			limit = {
+#				religion = owner
+#			}
+#			spawn_rebels = {
+#				type = s_catholic_rebels
+#				size = 1
+#			}
+#		}
+#		add_stability = -1
+#	}
+#}
+
+#Catholic Doctrine Restored
+#country_event = {
+#	id = flavorALA.6
+#	title = "flavorALA.6t"
+#	desc = "flavorALA.6d"
+#	picture = POPE_PREACHING_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = ALA
+#		has_country_flag = orthodoxy_in_alaska
+#		OR = {
+#			religion = catholic
+#			religion = s_catholic
+#		}
+#		all_core_province = {
+#			NOT = { religion = orthodox }
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	immediate = {
+#		clr_country_flag = orthodoxy_in_alaska
+#	}
+#	option = {
+#		name = "flavorALA.6opta"
+#		
+#		add_stability = 1
+#		add_adm_power = 50
+#	}
+#}
+
+#Orthodox Doctrine Prevails
+#country_event = {
+#	id = flavorALA.7
+#	title = "flavorALA.7t"
+#	desc = "flavorALA.7d"
+#	picture = RELIGIOUS_CONVERSION_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		tag = ALA
+#		has_country_flag = orthodoxy_in_alaska
+#		all_core_province = {
+#			OR = {
+#				NOT = { religion = catholic }
+#				NOT = { religion = s_catholic }
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	immediate = {
+#		clr_country_flag = orthodoxy_in_alaska
+#	}
+#	option = {
+#		name = "flavorALA.7opta"
+#		
+#		if = {
+#			limit = {
+#				NOT = { religion = orthodox }
+#			}
+#			change_religion = orthodox
+#		}
+#		add_stability = 1
+#		add_patriarch_authority = 0.10
+#	}
+#}

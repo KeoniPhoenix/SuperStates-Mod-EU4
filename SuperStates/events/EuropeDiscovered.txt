@@ -1,0 +1,172 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = superstates_europe
+
+#We Have Reestablished Contact with the Mother Church!
+country_event = {
+	id = superstates_papal.1
+	title = "superstates_papal.1t"
+	desc = "superstates_papal.1d"
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			technology_group = north_american
+			technology_group = mesoamerican
+			technology_group = australian
+			technology_group = oceanian
+		}
+		religion = s_catholic
+		europe = {
+			has_discovered = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		ROOT = { 
+			every_owned_province = {
+				discover_country = PAP
+			}
+		}
+	}
+	option = {
+		name = "superstates_papal.1opta"
+		ai_chance = { factor = 100 }
+		add_prestige = 10
+		change_religion = catholic
+		add_papal_influence = 25
+		every_owned_province = {
+			limit = {
+				religion = s_catholic
+			}
+			change_religion = catholic
+		}
+		every_subject_country = {
+			limit = {
+				religion = s_catholic
+			}
+			every_owned_province = {
+				discover_country = PAP
+			}
+			change_religion = catholic
+			add_papal_influence = 10
+			every_owned_province = {
+				limit = {
+					religion = s_catholic
+				}
+				change_religion = catholic
+			}
+		}
+	}
+	option = {
+		name = "superstates_papal.1optb"
+		ai_chance = { factor = 0 }
+	
+	}
+}
+#Disconnect Catholics are reconnected to Catholic Church Hierarchy in Catholic State
+#(This even can fire for any province that is Disconnected Catholic for vanilla Catholic converted states.
+# So states that conquer others after they have converted but before other Disconnected Catholic provinces
+# could be converted allows them to be quickly converted. MMTH is 300 months.)
+province_event = {
+	id = superstates_papal.2
+	title = "superstates_papal.2t"
+	desc = "superstates_papal.2d"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		is_capital = no
+		religion = s_catholic
+		owner = {
+			religion = catholic
+		}  
+		any_neighbor_province = {
+			religion = catholic
+		}
+		NOT = { has_province_modifier = religious_zeal_at_conv }
+	}	
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			has_owner_accepted_culture = yes
+		}
+		modifier = {
+			factor = 0.75
+			has_owner_culture = yes
+		}
+		modifier = {
+			factor = 0.5
+			all_neighbor_province = {
+				religion = catholic
+			}
+		}
+	}
+
+	#is_mtth_scaled_to_size = 1
+
+	option = {
+		name = "superstates_papal.2opta"
+		change_religion = catholic
+	}
+}
+#Disconnected Catholics convert themselves when the Catholic neighboring hierachy take root.
+#(This event converts Disconnected Catholic provinces in states other than Catholic states,
+# this is to allow the gradual conversion of all the Disconnected Catholic provinces to 
+# either Catholic, unless converted with a missionary before hand.)
+province_event = {
+	id = superstates_papal.3
+	title = "superstates_papal.3t"
+	desc = "superstates_papal.3d"
+	picture = POPE_PREACHING_eventPicture
+
+	trigger = {
+		is_capital = no
+		religion = s_catholic
+		owner = {
+			OR = {
+				NOT = { religion = catholic }
+				NOT = { religion = s_catholic }
+			}
+		}  
+		any_neighbor_province = {
+			religion = catholic
+		}
+		NOT = { has_province_modifier = religious_zeal_at_conv }
+	}	
+
+	mean_time_to_happen = {
+		months = 3000
+		modifier = {
+			factor = 0.9
+			has_owner_accepted_culture = yes
+		}
+		modifier = {
+			factor = 0.75
+			has_owner_culture = yes
+		}
+		modifier = {
+			factor = 0.5
+			all_neighbor_province = {
+				religion = catholic
+			}
+		}
+	}
+
+	#is_mtth_scaled_to_size = 1
+
+	option = {
+		name = "superstates_papal.3opta"
+		change_religion = catholic
+	}
+}

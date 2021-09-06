@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = AntiguanFlavor
+
+#Antiguan Culture Event
+country_event = {
+	id = AntiguanFlavor.1
+	title = "AntiguanFlavor.1t"
+	desc = "AntiguanFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		495 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = antiguan }
+			NOT = { is_core = ATG }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			495 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			495 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			495 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			495 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "AntiguanFlavor.1opta"
+		495 = { 
+			change_culture = antiguan
+			add_core = ATG
+		}
+	}
+}
