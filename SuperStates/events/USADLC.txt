@@ -1,0 +1,24 @@
+#BONUS EVENTS FOR THOSE WHO PURCHASED AMERICAN DREAM DLC
+
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+#				NOTICE:
+#THESE EVENTS ARE RESTRICTED TO THOSE WHO HAVE PURCHASED
+#THE NECESSARY DLC TO ENFORCE PARADOX DEVELOPEMENT STUDIOS
+#RESTRICTIONS FOR FEATURES ADDED BY THE DLC.
+###########################################################
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#				ATTENTION!
+#MOD SUPPORT WILL NOT BE GIVEN TO PLAYERS WHO CIRCUMVENT
+#THE DLC REQUIREMENTS.  PLEASE RESPECT THIS.
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+###########################################################
+
+#namespace = usa_dlc_superstates
+
+#1.12 Obseleted this event, it will be replaced with special events in the future.
+

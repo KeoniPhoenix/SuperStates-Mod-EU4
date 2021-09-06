@@ -1,0 +1,87 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = SantoDomingoFlavor
+
+#Santo Domingo Culture Event
+country_event = {
+	id = SantoDomingoFlavor.1
+	title = "SantoDomingoFlavor.1t"
+	desc = "SantoDomingoFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		490 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = dominican }
+		}
+		2658 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = dominican }
+		}
+		2659 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = dominican }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				490 = { has_owner_accepted_culture = no }
+				2658 = { has_owner_accepted_culture = no }
+				2659 = { has_owner_accepted_culture = no }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				490 = { has_owner_religion = no }
+				2658 = { has_owner_religion = no }
+				2659 = { has_owner_religion = no }
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				490 = { is_core = ROOT }
+				2658 = { is_core = ROOT } 
+				2659 = { is_core = ROOT } 
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				490 = { development = 35 }
+				2658 = { development = 35 }
+				2659 = { development = 35 } 
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "SantoDomingoFlavor.1opta"
+		santo_domingo_area = { 
+			change_culture = dominican 
+			add_core = SDM
+		}
+	}
+}

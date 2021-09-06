@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = WakeIslandFlavor
+
+#Wake Island Culture Event
+country_event = {
+	id = WakeIslandFlavor.1
+	title = "WakeIslandFlavor.1t"
+	desc = "WakeIslandFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1994 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = wake_islander }
+			NOT = { is_core = WKI }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1994 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1994 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1994 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1994 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "WakeIslandFlavor.1opta"
+		1994 = { 
+			change_culture = wake_islander
+			add_core = WKI
+		}
+	}
+}

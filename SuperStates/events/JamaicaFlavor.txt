@@ -1,0 +1,59 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = JamaicaFlavor
+
+#Jamaica Culture Event
+country_event = {
+	id = JamaicaFlavor.1
+	title = "JamaicaFlavor.1t"
+	desc = "JamaicaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		jamaica_area = {
+			is_capital = no
+			owned_by = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+	
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			487 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			487 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			487 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			487 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "JamaicaFlavor.1opta"
+		jamaica_area = { 
+			change_culture = jamaican
+			add_core = JMC
+		}
+	}
+}

@@ -1,0 +1,156 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = new_zealand_culture
+
+country_event = {
+	id = new_zealand_culture.1
+	title = "new_zealand_culture.1t"
+	desc = "new_zealand_culture.1d"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			provincegroup = south_island_provincegroup
+			is_capital = no
+			owned_by = ROOT
+		}
+		south_island_provincegroup = {
+			type = all
+			NOT = { culture = south_islander }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			south_island_provincegroup = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 0.5
+			south_island_provincegroup = {
+				type = all
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 4
+			south_island_provincegroup = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				provincegroup = south_island_provincegroup 
+				development = 20
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "new_zealand_culture.1opta"
+		every_owned_province = {
+			limit = {
+				provincegroup = south_island_provincegroup
+				is_capital = no
+			}
+			change_culture = south_islander
+			add_core = NZL
+		}
+	}
+}
+
+country_event = {
+	id = new_zealand_culture.2
+	title = "new_zealand_culture.2t"
+	desc = "new_zealand_culture.2d"
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			provincegroup = north_island_provincegroup
+			is_capital = no
+			owned_by = ROOT
+		}
+		north_island_provincegroup = {
+			type = all
+			NOT = { culture = north_islander }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			north_island_provincegroup = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 0.5
+			north_island_provincegroup = {
+				type = all
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 4
+			north_island_provincegroup = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				provincegroup = north_island_provincegroup 
+				development = 20
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "new_zealand_culture.2opta"
+		every_owned_province = {
+			limit = {
+				provincegroup = north_island_provincegroup
+				is_capital = no
+			}
+			change_culture = north_islander
+			add_core = NZL
+		}
+	}
+}

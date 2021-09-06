@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = MontserratFlavor
+
+#Montserrat Culture Event
+country_event = {
+	id = MontserratFlavor.1
+	title = "MontserratFlavor.1t"
+	desc = "MontserratFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4636 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = montserratian }
+			NOT = { is_core = MSR }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4636 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4636 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4636 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4636 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "MontserratFlavor.1opta"
+		4636 = {
+			change_culture = montserratian
+			add_core = MSR
+		}
+	}
+}

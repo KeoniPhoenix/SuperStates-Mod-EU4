@@ -1,0 +1,111 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = HondurasFlavor
+
+#Honduras Culture Event
+country_event = {
+	id = HondurasFlavor.1
+	title = "HondurasFlavor.1t"
+	desc = "HondurasFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		840 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = honduran }
+			NOT = { is_core = HND			}
+		}
+		2637 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = honduran }
+			NOT = { is_core = HND }
+		}
+		2640 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = honduran }
+			NOT = { is_core = HND }
+		}
+		2662 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = honduran }
+			NOT = { is_core = HND }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				840 = { has_owner_accepted_culture = no }
+				2637 = { has_owner_accepted_culture = no }
+				2640 = { has_owner_accepted_culture = no }
+				2662 = { has_owner_accepted_culture = no } 
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				840 = { has_owner_religion = no }
+				2637 = { has_owner_religion = no }
+				2640 = { has_owner_religion = no }
+				2662 = { has_owner_religion = no } 
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				840 = { is_core = ROOT }
+				2637 = { is_core = ROOT }
+				2640 = { is_core = ROOT }
+				2662 = { is_core = ROOT } 
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				840 = { development = 35 }
+				2637 = { development = 35 }
+				2640 = { development = 35 }
+				2662 = { development = 35 } 
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "HondurasFlavor.1opta"
+		840 = { 
+			change_culture = honduran
+			add_core = HND
+		}
+		2637 = {
+			change_culture = honduran
+			add_core = HND
+		}
+		2640 = { 
+			change_culture = honduran
+			add_core = HND
+		}
+		2662 = {
+			change_culture = honduran
+			add_core = HND
+		}
+	}
+}

@@ -1,0 +1,350 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = superstates_random_events
+
+#Furries!
+country_event = {
+	id = superstates_random_events.1
+	title = "superstates_random_events.1t"
+	desc = "superstates_random_events.1d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	trigger = {
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = australia_continent
+			}
+		}
+		NOT = { has_country_flag = furry_convention }
+		NOT = { has_country_flag = fursecution }
+		OR = {
+			had_country_flag = {
+				flag = furry_convention
+				days = 3650
+			}
+			had_country_flag = {
+				flag = fursecution
+				days = 1825
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 200
+	
+		modifier = {
+			factor = 0.1
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				owns = 946
+				owns = 2565
+				owns = 2589
+			}
+		}
+	}		
+	option = {
+		name = "superstates_random_events.1opta"
+		add_years_of_income = 2
+		add_stability = 1
+		hidden_effect = {
+			set_country_flag = furry_convention
+			country_event = {
+				id = superstates_random_events.2
+				days = 7
+			}
+		}
+		change_price = {
+			trade_goods = fur
+			key = FURRIES_DEMAND_FUR
+			value = 0.35
+			duration = 365
+		}
+	}
+	option = {
+		name = "superstates_random_events.1optb"
+		capital_scope = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+				leader = "Uncle Kage"
+			}
+		}
+		hidden_effect = {
+			set_country_flag = fursecution
+			country_event = {
+				id = superstates_random_events.3
+				days = 60
+			}
+		}
+	}
+}
+
+#Fox Needs Assistance!
+country_event = {
+	id = superstates_random_events.2
+	title = "superstates_random_events.2t"
+	desc = "superstates_random_events.2d"
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = australia_continent
+			}
+		}
+		has_country_flag = furry_convention
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = furry_convention
+		}
+	}
+	option = {
+		name = "superstates_random_events.2opta"
+		add_treasury = -15
+		add_prestige = -5
+	}
+	option = {
+		name = "superstates_random_events.2optb"
+		add_treasury = -50
+		add_prestige = -10
+		add_stability = 1
+	}
+	option = {
+		name = "superstates_random_events.2optc"
+		add_prestige = 15
+	}
+}
+
+
+#Furries driven out
+country_event = {
+	id = superstates_random_events.3
+	title = "superstates_random_events.3t"
+	desc = "superstates_random_events.3d"
+	picture = BATTLE_eventPicture
+	
+	trigger = {
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = australia_continent
+			}
+		}
+		has_country_flag = fursecution
+		all_owned_province = {
+			NOT = { has_siege = yes }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = fursecution
+		}
+	}
+	option = {
+		name = "superstates_random_events.3opta"
+		add_dip_power = 10
+	}
+	option = {
+		name = "superstates_random_events.3optb"
+		add_prestige = 10
+	}
+}
+
+# Landslide!
+province_event = {
+	id = superstates_random_events.4
+	title = "superstates_random_events.4t"
+	desc = "superstates_random_events.4d"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = had_landslide }
+			primitives = no
+			OR = {
+				capital_scope = { continent = north_america }
+				capital_scope = { continent = south_america } 
+			}
+		}
+		OR = {
+			has_terrain = hills
+			has_terrain = mountain
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = had_landslide
+		}
+	}
+
+	option = {
+		name = "superstates_random_events.4opta" #"No escape from reality."
+		ai_chance = {
+			factor = 3
+		}
+		owner = {
+			add_stability = -1
+		}
+		add_province_modifier = {
+			name = "landslide_damage"
+			duration = 365
+		}
+	}
+	option = {
+		name = "superstates_random_events.4optb" #"Open your eyes."
+		ai_chance = {
+			factor = 3
+		}
+		owner = {
+			add_stability = -1
+		}
+		add_province_modifier = {
+			name = "landslide_damage"
+			duration = 365
+		}
+	}
+	option = {
+		name = "superstates_random_events.4optc" #"Look up to the skies and see."
+		ai_chance = {
+			factor = 3
+		}
+		owner = {
+			add_stability = -1
+		}
+		add_province_modifier = {
+			name = "landslide_damage"
+			duration = 365
+		}
+	}
+}
+
+#Lights over $PROVINCENAME$
+country_event = {
+	id = superstates_random_events.5
+	title = "superstates_random_events.5t"
+	desc = "superstates_random_events.5d"
+	picture = COMET_SIGHTED_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			technology_group = north_american
+			technology_group = mesoamerican
+			technology_group = australian
+			technology_group = oceanian
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 0.1
+			has_idea = comets
+		}
+		
+		modifier = {
+			factor = 0.5
+			natural_scientist = 1
+		}
+		modifier = {
+			factor = 0.5
+			luck = yes
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}
+	}
+	#Detrimental
+	option = {
+		name = "superstates_random_events.5opta"		# The Heavans Are Preparing for War!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "superstates_random_events.5optb"		# It's a sign that God's Wrath is to come!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "superstates_random_events.5optc"		# Astrologers are fleeing the capital!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "superstates_random_events.5optd"		# The Four Horsemen of the Apocalypse are decending!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "superstates_random_events.5opte"		# Russian Preemptive Nuclear Strike!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}
+	option = {
+		name = "superstates_random_events.5optf"		# Why are we panicking over visitors from Stellaris?!
+		if = {
+			limit = { stability = -2 }
+			add_stability = -1
+		}
+		if = {
+			limit = { NOT = { stability = -2 } }
+			add_adm_power = -100
+		}
+	}	
+}

@@ -1,0 +1,84 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = TahitianFlavor
+
+#New Caledonia Culture Event
+country_event = {
+	id = TahitianFlavor.1
+	title = "TahitianFlavor.1t"
+	desc = "TahitianFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1244 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = TAH }
+		}
+		1987 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = TAH }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				1244 = { has_owner_accepted_culture = no }
+				1987 = { has_owner_accepted_culture = no }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				1244 = { has_owner_religion = no }
+				1987 = { has_owner_religion = no }
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				1244 = { is_core = ROOT }
+				1987 = { is_core = ROOT }
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				1244 = { development = 35 }
+				1987 = { development = 35 }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "TahitianFlavor.1opta"
+		1244 = { 
+			change_culture = tahitian
+			add_core = TAH
+		}
+		1987 = { 
+			change_culture = tahitian
+			add_core = TAH
+		}
+	}
+}

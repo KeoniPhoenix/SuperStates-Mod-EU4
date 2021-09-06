@@ -1,0 +1,89 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = StPierreFlavor
+
+#St Pierre Culture Event
+country_event = {
+	id = StPierreFlavor.1
+	title = "StPierreFlavor.1t"
+	desc = "StPierreFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4576 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = saint_pierrais }
+			NOT = { is_core = SPM }
+		}
+		
+		3050 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = saint_pierrais }
+			NOT = { is_core = SPM }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4576 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3050 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4576 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 0.5
+			3050 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4576 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 4
+			3050 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4576 = { development = 35 }
+		}
+		modifier = {
+			factor = 2
+			3050 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "StPierreFlavor.1opta"
+		4576 = {
+			change_culture = saint_pierrais
+			add_core = SPM
+		}
+		3050 = {
+			change_culture = saint_pierrais
+			add_core = SPM
+		}
+	}
+}

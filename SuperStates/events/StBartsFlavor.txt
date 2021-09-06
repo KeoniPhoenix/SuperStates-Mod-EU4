@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = StBartsFlavor
+
+#St Barts Culture Event
+country_event = {
+	id = StBartsFlavor.1
+	title = "StBartsFlavor.1t"
+	desc = "StBartsFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4578 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = barthelemois }
+			NOT = { is_core = SBT }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4578 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4578 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4578 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4578 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "StBartsFlavor.1opta"
+		4578 = {
+			change_culture = barthelemois
+			add_core = SBT
+		}
+	}
+}

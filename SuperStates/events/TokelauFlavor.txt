@@ -1,0 +1,61 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = TokelauanFlavor
+
+#New Caledonia Culture Event
+country_event = {
+	id = TokelauanFlavor.1
+	title = "TokelauanFlavor.1t"
+	desc = "TokelauanFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3016 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tokelauan }
+			NOT = { is_core = TKL }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3016 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3016 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3016 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3016 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "TokelauanFlavor.1opta"
+		3016 = { 
+			change_culture = tokelauan
+			add_core = TKL
+		}
+	}
+}

@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = SintEustasiusFlavor
+
+#Statian Culture Event
+country_event = {
+	id = SintEustasiusFlavor.1
+	title = "SintEustasiusFlavor.1t"
+	desc = "SintEustasiusFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4580 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = statian }
+			NOT = { is_core = SEU }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4580 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4580 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4580 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4580 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "SintEustasiusFlavor.1opta"
+		4580 = {
+			change_culture = statian
+			add_core = SEU
+		}
+	}
+}

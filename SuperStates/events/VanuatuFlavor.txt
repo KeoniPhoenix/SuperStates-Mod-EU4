@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = VanuatuFlavor
+
+#New Caledonia Culture Event
+country_event = {
+	id = VanuatuFlavor.1
+	title = "VanuatuFlavor.1t"
+	desc = "VanuatuFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1239 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = ni-vanuatu }
+			NOT = { is_core = VAN }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1239 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1239 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1239 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1239 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "VanuatuFlavor.1opta"
+		1239 = { 
+			change_culture = ni-vanuatu
+			add_core = VAN
+		}
+	}
+}

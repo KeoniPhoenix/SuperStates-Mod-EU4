@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = TobagoFlavor
+
+#Tobago Culture Event
+country_event = {
+	id = TobagoFlavor.1
+	title = "TobagoFlavor.1t"
+	desc = "TobagoFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3328 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tobagonian }
+			NOT = { is_core = TBG }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3328 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3328 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3328 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3328 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "TobagoFlavor.1opta"
+		3328 = { 
+			change_culture = tobagonian
+			add_core = TBG
+		}
+	}
+}

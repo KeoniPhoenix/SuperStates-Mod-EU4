@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = MartiniqueFlavor
+
+#Martinique Culture Event
+country_event = {
+	id = MartiniqueFlavor.1
+	title = "MartiniqueFlavor.1t"
+	desc = "MartiniqueFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		498 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = martinican }
+			NOT = { is_core = MTQ }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			498 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			498 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			498 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			498 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "MartiniqueFlavor.1opta"
+		498 = {
+			change_culture = martinican
+			add_core = MTQ
+		}
+	}
+}

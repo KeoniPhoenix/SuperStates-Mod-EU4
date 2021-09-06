@@ -1,0 +1,289 @@
+namespace = superstates_culture
+
+# Cultural Assimilation
+
+province_event = {
+	id = superstates_culture.1
+	title = "superstates_culture.1t"
+	desc = "superstates_culture.1d"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = no
+
+	trigger = {
+		is_core = owner
+		controlled_by = owner
+		NOT = { unrest = 1 }
+		NOT = { local_autonomy = 15 }
+		NOT = { nationalism = 1 }
+		NOT = { has_harsh_treatment = yes }
+		has_owner_religion = yes
+		has_owner_culture = no
+		#has_owner_accepted_culture = no
+		any_neighbor_province = {
+			owned_by = owner
+			controlled_by = owner
+			has_owner_religion = yes
+			has_owner_culture = yes
+		}
+	}
+	mean_time_to_happen = {
+		years = 250
+
+		#Exception: SuperStates Mod - Australian region
+		# modifier = {
+			# factor = 0.05
+			# culture_group = australian_new_zealander
+			# owner = { culture_group = australian_new_zealander }
+		# }
+		#Exception: SuperStates Mod - Canada region
+		# modifier = {
+			# factor = 0.05
+			# OR = {
+				# culture_group = arctic_canadian
+				# primary_culture = ontarian
+				# primary_culture = mantarian
+				# primary_culture = torontoan
+				# primary_culture = northern_ontarian
+				# culture_group = atlantic_canadian
+				# culture_group = new_french
+				# culture_group = western_canadian
+			# }
+			# OR = {
+				# owner = { culture_group = arctic_canadian }
+				# owner = { primary_culture = ontarian }
+				# owner = { primary_culture = northern_ontarian }
+				# owner = { primary_culture = torontoan }
+				# owner = { primary_culture = mantarian }
+				# owner = { culture_group = atlantic_canadian }
+				# owner = { culture_group = new_french }
+				# owner = { culture_group = western_canadian }
+			# }
+		# }
+		#Exception: SuperStates Mod - Mexican region
+		# modifier = {
+			# factor = 0.05
+			# OR = {
+				# culture_group = peninsular_mexican
+				# culture_group = costa_chican
+				# culture_group = mazatlan_mexican
+				# culture_group = altiplano_central
+				# culture_group = gulf_mexican
+				# culture_group = occidental_mexican
+				# culture_group = oriental_mexican
+				# culture_group = pacific_mexican
+			# }
+			# OR = {
+				# owner = { culture_group = peninsular_mexican }
+				# owner = { culture_group = costa_chican }
+				# owner = { culture_group = mazatlan_mexican }
+				# owner = { culture_group = altiplano_central }
+				# owner = { culture_group = gulf_mexican }
+				# owner = { culture_group = occidental_mexican }
+				# owner = { culture_group = oriental_mexican }
+				# owner = { culture_group = pacific_mexican }
+			# }
+		# }
+		#Exception: SuperStates Mod - United States region
+		# modifier = {
+			# factor = 0.05
+			# OR = {
+				# culture_group = appalachian
+				# culture_group = caribbean_islander
+				# primary_culture = alaskan
+				# primary_culture = aleutian_islander
+				# primary_culture = juneauvian
+				# culture_group = southerner
+				# culture_group = great_laker
+				# culture_group = intermountain_western
+				# #culture_group = louisiana_group
+				# culture_group = midatlantic_group
+				# culture_group = great_plainer_group
+				# culture_group = midwestern_group
+				# culture_group = new_england_group
+				# culture_group = pacific_coastal
+				# culture_group = southwestern
+				# culture = guamanian
+				# culture = hawaiian
+				# culture = northern_marianas_islander
+				# culture = torontoan
+			# }
+			# OR = {
+				# owner = { culture_group = appalachian }
+				# owner = { primary_culture = alaskan }
+				# owner = { primary_culture = aleutian_islander }
+				# owner = { culture_group = juneauvian }
+				# owner = { culture_group = caribbean_islander }
+				# owner = { culture_group = southerner }
+				# owner = { culture_group = great_laker }
+				# owner = { culture_group = intermountain_western }
+				# owner = { culture_group = midatlantic_group }
+				# owner = { culture_group = great_plainer_group }
+				# owner = { culture_group = midwestern_group }
+				# owner = { culture_group = new_england_group }
+				# owner = { culture_group = pacific_coastal }
+				# owner = { culture_group = southwestern }
+				# owner = { primary_culture = guamanian }
+				# owner = { primary_culture = hawaiian }
+				# owner = { primary_culture = northern_marianas_islander }
+				# owner = { primary_culture = torontoan }
+			# }
+		# }
+		#Exception: SuperStates Mod - Pacific Islands region
+		# modifier = {
+			# factor = 0.05
+			# OR = {
+				# culture_group = micronesian-pacific_islander
+				# owner = { culture_group = micronesian-pacific_islander }
+			# }
+		# }
+		# Exception: Greeks vs Turks in Asia Minor
+		modifier = {
+			factor = 0.10
+			region = anatolia_region
+			OR = {
+				culture_group = turko_semitic
+				culture_group = byzantine
+			}
+			OR = {
+				owner = {	culture_group = turko_semitic }
+				owner = {	culture_group = byzantine }
+			}
+		}
+		
+		# Exception: Slavic vs Tartar
+		modifier = {
+			factor = 0.10
+			OR = {
+				culture = khazak
+				culture = kirgiz
+				culture_group = tartar
+			}
+			OR = {
+				owner = {	culture_group = east_slavic }
+				owner = {	culture_group = west_slavic }
+				owner = {	culture_group = baltic }
+			}
+		}
+		# Exception: Prussian culture in Northern Germany
+		modifier = {
+			factor = 0.05
+			OR = {
+				culture = saxon
+				culture = pommeranian
+			}
+			owner = {	primary_culture = prussian }
+		}
+		# Exception: Colonial
+		modifier = {
+			factor = 0.05
+			is_overseas = yes
+			owner = { 
+				OR = {
+					technology_group = western
+					technology_group = north_american
+					technology_group = australian
+					technology_group = oceanian
+					technology_group = mesoamerican
+					technology_group = eastern
+					technology_group = ottoman
+					technology_group = muslim
+				}
+				OR = {
+					culture_group = germanic
+					culture_group = scandinavian
+					culture_group = british
+					culture_group = gaelic
+					culture_group = latin
+					culture_group = iberian
+					culture_group = french
+					culture_group = finno_ugric
+					culture_group = south_slavic
+					culture_group = west_slavic
+					culture_group = east_slavic
+					culture_group = baltic
+					culture_group = byzantine
+					culture_group = turko_semitic
+				}
+			}
+			OR = {
+				culture_group = germanic
+				culture_group = scandinavian
+				culture_group = british
+				culture_group = gaelic
+				culture_group = latin
+				culture_group = iberian
+				culture_group = french
+				culture_group = finno_ugric
+				culture_group = south_slavic
+				culture_group = west_slavic
+				culture_group = east_slavic
+				culture_group = baltic
+				culture_group = byzantine
+				culture_group = turko_semitic
+			}
+			NOT = { continent = europe } 
+			NOT = { superregion = persia_superregion }
+			NOT = { superregion = near_east_superregion }
+			NOT = { region = central_asia_region }
+			NOT = { region = egypt_region }
+			NOT = { region = maghreb_region }
+		}
+		
+		modifier = {
+			factor = 0.8
+			owner = {
+				culture_group = THIS
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 0.75
+			owner = { has_idea_group = religious_ideas }
+		}
+		modifier = {
+			factor = 0.9
+			has_building = temple
+		}
+		modifier = {
+			factor = 0.75
+			owner = { full_idea_group = religious_ideas }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { stability = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { NOT = { stability = 0 } }
+		}
+		modifier = {
+			factor = 2.0
+			owner = { NOT = { stability = -1 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { full_idea_group = humanist_ideas }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_idea_group = humanist_ideas }
+		}
+		modifier = {
+			factor = 2.5
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	option = {
+		name = "superstates_culture.1opta"
+		change_culture = owner
+		#owner = { add_adm_power = -50 }
+	}
+}

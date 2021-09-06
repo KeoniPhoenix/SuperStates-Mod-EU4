@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = SabaFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = SabaFlavor.1
+	title = "SabaFlavor.1t"
+	desc = "SabaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		4579 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = saban }
+			NOT = { is_core = SAB }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			4579 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4579 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			4579 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			4579 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "SabaFlavor.1opta"
+		4579 = {
+			change_culture = saban
+			add_core = SAB
+		}
+	}
+}

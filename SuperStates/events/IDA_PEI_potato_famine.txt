@@ -1,0 +1,429 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = potato_famine
+
+# Potato Famine!
+country_event = {
+	id = potato_famine.1
+	title = "potato_famine.1t"
+	desc = "potato_famine.1d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1785 }
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	
+		modifier = {
+			factor = 0.2
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2
+			stability = 1
+		}
+		modifier = {
+			factor = 5
+			stability = 2
+		}
+		modifier = {
+			factor = 10
+			stability = 3
+		}
+	}
+	immediate = {
+		set_country_flag = potato_famine
+	}
+	option = {
+		name = "potato_famine.1opta"
+		ai_chance = { factor = 50 }
+		every_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = "potato_famine.1optb"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -0.50
+		add_adm_power = 10
+	}
+}
+
+country_event = {
+	id = potato_famine.2
+	title = "potato_famine.2t"
+	desc = "potato_famine.2d"
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = "potato_famine.2opta"
+		ai_chance = { factor = 33 }
+		add_adm_power = -5
+		add_years_of_income = -0.50
+		set_country_flag = potato_famine_adm
+		
+	}
+	option = {
+		name = "potato_famine.2optb"
+		ai_chance = { factor = 33 }
+		add_dip_power = -5
+		add_years_of_income = -0.50
+		set_country_flag = potato_famine_dip
+		
+	}
+	option = {
+		name = "potato_famine.2optc"
+		ai_chance = { factor = 33 }
+		add_adm_power = -5
+		add_years_of_income = -0.50
+		set_country_flag = potato_famine_mil
+	}
+	option = {
+		name = "potato_famine.2optd"
+		ai_chance = { factor = 0 }
+		add_adm_power = -10
+		add_dip_power = -10
+		add_mil_power = -10
+		add_prestige = -25
+		add_stability = -1
+		set_country_flag = potato_famine_did_nothing
+	}
+}
+
+country_event = {
+	id = potato_famine.3
+	title = "potato_famine.3t"
+	desc = "potato_famine.3d"
+	picture = PLAGUE_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+		has_country_flag = potato_famine_did_nothing
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 0 }
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+			}
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 1
+			}
+		}
+	}
+	option = {
+		name = "potato_famine.3opta"
+		ai_chance = { factor = 33 }
+		add_prestige = -15
+		add_years_of_income = -1
+		kill_advisor = random
+	}
+	option = {
+		name = "potato_famine.3optb"
+		ai_chance = { factor = 33 }
+		add_prestige = -15
+		add_years_of_income = -1
+		kill_advisor = random
+	}
+	option = {
+		name = "potato_famine.3optc"
+		ai_chance = { factor = 33 }
+		add_prestige = -15
+		add_years_of_income = -1
+		kill_advisor = random
+	}
+}
+
+country_event = {
+	id = potato_famine.4
+	title = "potato_famine.4t"
+	desc = "potato_famine.4d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+		has_country_flag = potato_famine_did_nothing
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	
+		modifier = {
+			factor = 0.25
+			stability = 3
+		}
+		modifier = {
+			factor = 0.2
+			stability = 1
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		clr_country_flag = potato_famine
+		clr_country_flag = potato_famine_did_nothing
+	}
+	option = {
+		name = "potato_famine.4opta"
+		if = {
+			limit = { 
+				government = republic
+			}
+		add_republican_tradition = -2
+		}
+		if = {
+			limit = {
+				government = monarchy
+			}
+			add_legitimacy = -20
+		}
+		if = {
+			limit = {
+				government = dictatorship
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = revolutionary_rebels
+					size = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = potato_famine.5
+	title = "potato_famine.5t"
+	desc = "potato_famine.5d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+		has_country_flag = potato_famine_adm
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		clr_country_flag = potato_famine
+		clr_country_flag = potato_famine_adm
+	}
+	option = {
+		name = "potato_famine.5opta"
+		add_adm_power = 50
+		add_stability = 1
+		random_core_province = {
+			add_base_tax = 1
+		}
+	}
+}
+
+country_event = {
+	id = potato_famine.6
+	title = "potato_famine.6t"
+	desc = "potato_famine.6d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+		has_country_flag = potato_famine_dip
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		clr_country_flag = potato_famine
+		clr_country_flag = potato_famine_dip
+	}
+	option = {
+		name = "potato_famine.6opta"
+		add_dip_power = 50
+		add_stability = 1
+		random_core_province = {
+			add_base_production = 1
+		}
+	}
+}
+
+country_event = {
+	id = potato_famine.7
+	title = "potato_famine.7t"
+	desc = "potato_famine.7d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = IDA
+			tag = PEI
+		}
+		is_year = 1600
+		NOT = { is_year = 1800 }
+		has_country_flag = potato_famine
+		has_country_flag = potato_famine_mil
+	}
+	
+	mean_time_to_happen = {
+		months = 18
+	
+		modifier = {
+			factor = 0.5
+			stability = 3
+		}
+		modifier = {
+			factor = 0.25
+			stability = 1
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 2.5
+			NOT = { stability = -2 }
+		}
+	}
+	immediate = {
+		clr_country_flag = potato_famine
+		clr_country_flag = potato_famine_dip
+	}
+	option = {
+		name = "potato_famine.7opta"
+		add_mil_power = 50
+		add_stability = 1
+		random_core_province = {
+			add_base_manpower = 1
+		}
+	}
+}

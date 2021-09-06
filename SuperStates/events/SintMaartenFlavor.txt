@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = SintMaartenFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = SintMaartenFlavor.1
+	title = "SintMaartenFlavor.1t"
+	desc = "SintMaartenFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		3051 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = maartener }
+			NOT = { is_core = SNM }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			3051 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			3051 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			3051 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			3051 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "SintMaartenFlavor.1opta"
+		3051 = { 
+			change_culture = maartener
+			add_core = SNM
+		}
+	}
+}

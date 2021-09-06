@@ -1,0 +1,89 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = StVincentFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = StVincentFlavor.1
+	title = "StVincentFlavor.1t"
+	desc = "StVincentFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		500 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = vincentian }
+			NOT = { is_core = STV }
+		}
+		
+		4575 = {
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = vincentian }
+			NOT = { is_core = STV }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			500 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			4575 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			500 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 0.5
+			4575 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			500 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 4
+			4575 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			500 = { development = 35 }
+		}
+		modifier = {
+			factor = 2
+			4575 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "StVincentFlavor.1opta"
+		500 = {
+			change_culture = vincentian
+			add_core = STV
+		}
+		4575 = {
+			change_culture = vincentian
+			add_core = STV
+		}
+	}
+}

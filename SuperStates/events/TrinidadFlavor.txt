@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = TrinidadFlavor
+
+#Trinidad Culture Event
+country_event = {
+	id = TrinidadFlavor.1
+	title = "TrinidadFlavor.1t"
+	desc = "TrinidadFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		502 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = trinidadian }
+			NOT = { is_core = TTB }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			502 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			502 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			502 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			502 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "TrinidadFlavor.1opta"
+		502 = { 
+			change_culture = trinidadian
+			add_core = TTB
+		}
+	}
+}

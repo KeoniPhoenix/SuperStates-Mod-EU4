@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = StLuciaFlavor
+
+#Barbados Culture Event
+country_event = {
+	id = StLuciaFlavor.1
+	title = "StLuciaFlavor.1t"
+	desc = "StLuciaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		499 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = st_lucian }
+			NOT = { is_core = STL }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			499 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			499 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			499 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			499 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "StLuciaFlavor.1opta"
+		499 = {
+			change_culture = st_lucian
+			add_core = STL
+		}
+	}
+}

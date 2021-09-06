@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = TonganFlavor
+
+#New Caledonia Culture Event
+country_event = {
+	id = TonganFlavor.1
+	title = "TonganFlavor.1t"
+	desc = "TonganFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1989 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tongan }
+			NOT = { is_core = TON }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1989 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1989 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1989 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1989 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "TonganFlavor.1opta"
+		1989 = { 
+			change_culture = tongan
+			add_core = TON
+		}
+	}
+}

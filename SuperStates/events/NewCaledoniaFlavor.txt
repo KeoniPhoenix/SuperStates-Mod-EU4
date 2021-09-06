@@ -1,0 +1,62 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = NewCaledoniaFlavor
+
+#New Caledonia Culture Event
+country_event = {
+	id = NewCaledoniaFlavor.1
+	title = "NewCaledoniaFlavor.1t"
+	desc = "NewCaledoniaFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1986 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = new_caledonian }
+			NOT = { is_core = NCL }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1986 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1986 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1986 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1986 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "NewCaledoniaFlavor.1opta"
+		1986 = { 
+			change_culture = new_caledonian
+			add_core = NCL
+		}
+	}
+}

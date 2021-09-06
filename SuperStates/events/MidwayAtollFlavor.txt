@@ -1,0 +1,116 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = MidwayAtollFlavor
+
+#Midway Atoll Core Event (Non-Hawaiian Nations)
+country_event = {
+	id = MidwayAtollFlavor.1
+	title = "MidwayAtollFlavor.1t"
+	desc = "MidwayAtollFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		NOT = { primary_culture = hawaiian }
+		1997 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = hawaiian }
+			NOT = { is_core = HAW }
+			NOT = { is_core = MWA }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1997 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1997 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1997 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1997 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "MidwayAtollFlavor.1opta"
+		1997 = { 
+			change_culture = hawaiian
+			add_core = MWA
+		}
+	}
+}
+
+#Midway Atoll Core Event (Hawaii Only)
+country_event = {
+	id = MidwayAtollFlavor.2
+	title = "MidwayAtollFlavor.1t"
+	desc = "MidwayAtollFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		primary_culture = hawaiian
+		1997 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { is_core = MWA }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			1997 = { has_owner_accepted_culture = no }
+		}
+		modifier = {
+			factor = 0.5
+			1997 = { has_owner_religion = no }
+		}
+		modifier = {
+			factor = 4
+			1997 = { is_core = ROOT }
+		}
+		modifier = {
+			factor = 2
+			1997 = { development = 35 }
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	option = {
+		name = "MidwayAtollFlavor.2opta"
+		1997 = { 
+			change_culture = hawaiian
+			add_core = MWA
+		}
+	}
+}

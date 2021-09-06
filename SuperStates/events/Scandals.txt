@@ -1,0 +1,936 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = superstates_scandal
+
+# Governor Scandal!
+country_event = {
+	id = superstates_scandal.1
+	title = "superstates_scandal.1t"
+	desc = "superstates_scandal.1d"
+	picture = ACCUSATION_eventPicture
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		OR = {
+			technology_group = north_american
+			technology_group = mesoamerican
+			technology_group = australian
+			technology_group = oceanian
+		}
+		government = republic
+		NOT = { government = dictatorship }
+		NOT = { has_reform = pure_westminster_reform }
+		NOT = { has_reform = hybrid_westminster_reform }
+		had_country_flag = {
+			flag = governor_scandal
+			days = 3650
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 5
+			adm = 5
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = pious_personality
+				ruler_has_personality = lawgiver_personality
+				ruler_has_personality = incorruptible_personality
+			}
+		}
+		modifier = {
+			factor = 3
+			ADM = 4
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				ruler_has_personality = midas_touched_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = industrious_personality
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { ADM = 3 }
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_has_personality = drunkard_personality
+				ruler_has_personality = obsessive_perfectionist_personality
+				ruler_has_personality = petty_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 2}
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = loose_lips_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { ADM = 1}
+			NOT = { stability = -2 }
+		}
+	}
+
+	option = { #Mediocre to Good Rulers with Good Traits
+		name = "superstates_scandal.1opta"
+		trigger = {
+			ADM = 2
+			NOT = { ADM = 5 }
+			stability = 1
+			OR = {
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = pious_personality
+				ruler_has_personality = lawgiver_personality
+				ruler_has_personality = incorruptible_personality
+				ruler_has_personality = midas_touched_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = industrious_personality
+			}
+		}
+		add_prestige = -10
+		kill_ruler = yes
+	}
+	
+	option = { #Great Rulers with Any Traits
+		name = "superstates_scandal.1optb"
+		trigger = {
+			ADM = 5
+			stability = 1
+		}
+		add_prestige = -25
+		add_stability = -6
+		kill_ruler = yes
+	}
+
+	option = { #Bad Rulers with Bad Traits
+		name = "superstates_scandal.1optc"
+		trigger = {
+			NOT = { ADM = 3 }
+			stability = 1
+			OR = {
+				ruler_has_personality = drunkard_personality
+				ruler_has_personality = obsessive_perfectionist_personality
+				ruler_has_personality = petty_personality
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = loose_lips_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		add_republican_tradition = 5
+		kill_ruler = yes
+	}
+	
+	option = { #Stand And Fight the Impeachment
+		name = "superstates_scandal.1optd"
+		hidden_effect = {
+			country_event = {
+				id = superstates_scandal.2
+				days = 45
+			}
+		}
+		add_prestige = -10
+		add_republican_tradition = -5
+		set_country_flag = governor_scandal
+	}
+
+}
+
+#Governor Faces Impeachment!
+country_event = {
+	id = superstates_scandal.2
+	title = "superstates_scandal.2t"
+	desc = "superstates_scandal.2d"
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Rights of Man"
+		has_country_flag = governor_scandal
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = governor_scandal
+		}
+	}
+
+	option = { #Impeachment Fails by a Large Margin
+		name = "superstates_scandal.2opta"
+		custom_tooltip = "superstates_scandal.tooltip2a"
+			trigger = {
+				NOT = { ADM = 6 }
+				ADM = 4
+			}
+		add_republican_tradition = 10
+		add_prestige = 10
+		add_adm_power = 100
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+
+	option = { #Impeachment Fails by a Large Margin
+		name = "superstates_scandal.2optb"
+		custom_tooltip = "superstates_scandal.tooltip2b"
+		highlight = yes
+		trigger = {
+			ADM = 6
+		}
+		add_republican_tradition = 15
+		add_prestige = 15
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_years_of_income = -0.083
+	}
+
+	option = { #Impeachment Fails by a Large Margin
+		name = "superstates_scandal.2optc"
+		custom_tooltip = "superstates_scandal.tooltip2c"
+		highlight = yes
+		trigger = {
+			ADM = 3
+			NOT = { ADM = 4 }
+			OR = {
+				AND = {
+					OR = {
+						ruler_has_personality = well_advised_personality
+						ruler_has_personality = benevolent_personality
+						ruler_has_personality = pious_personality
+						ruler_has_personality = lawgiver_personality
+						ruler_has_personality = incorruptible_personality
+						ruler_has_personality = midas_touched_personality
+						ruler_has_personality = scholar_personality
+						ruler_has_personality = industrious_personality
+					}
+					stability = 1
+				}
+			}
+
+		}
+		add_republican_tradition = 10
+		add_prestige = 5
+		add_adm_power = 50
+		add_dip_power = 25
+		add_mil_power = 25
+		add_years_of_income = -0.083
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2optd"
+	custom_tooltip = "superstates_scandal.tooltip2d"
+	trigger = {
+		ADM = 3
+		NOT = { ADM = 4 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = -1
+		NOT = { stability = 1 }
+	}
+	add_republican_tradition = 5
+	add_prestige = 2
+	add_adm_power = 25
+	add_dip_power = 10
+	add_mil_power = 10
+	add_years_of_income = -0.5
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2opte"
+	custom_tooltip = "superstates_scandal.tooltip2e"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = 1
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = 5
+	add_prestige = 2
+	add_adm_power = 25
+	add_dip_power = 10
+	add_mil_power = 10
+	add_years_of_income = -0.5
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2optf"
+	custom_tooltip = "superstates_scandal.tooltip2f"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		stability = -1
+		NOT = { stability = 1 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.75
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2optg"
+	custom_tooltip = "superstates_scandal.tooltip2g"
+	trigger = {
+		ADM = 3
+		NOT = { ADM = 5 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.75
+	add_stability = -1
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2opth"
+	custom_tooltip = "superstates_scandal.tooltip2h"
+	trigger = {
+		OR = {
+			ADM = 5
+			ADM = 6	#YES, Its redundant but to be made explicit that ADM 6 rulers are included
+		}
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = -2 }
+	}
+	add_republican_tradition = -15
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	add_stability = -3
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2opti"
+	custom_tooltip = "superstates_scandal.tooltip2i"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.5
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2optj"
+	custom_tooltip = "superstates_scandal.tooltip2j"
+	trigger = {
+		ADM = 1
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = 1
+		NOT = { stability = 3 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.5
+	kill_ruler = yes
+	}
+	
+	option = { #Impeachment Succeeds by a Large Margin
+	name = "superstates_scandal.2optk"
+	custom_tooltip = "superstates_scandal.tooltip2k"
+	trigger = {
+		ADM = 1
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = 5
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Large Margin
+	name = "superstates_scandal.2optl"
+	trigger = {
+		NOT = { ADM = 1 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 3 }
+	}
+	add_republican_tradition = 5
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	kill_ruler = yes
+	}
+}
+
+#Prime Minister Rocked by Scandal
+country_event = {
+	id = superstates_scandal.3
+	title = "superstates_scandal.3t"
+	desc = "superstates_scandal.3d"
+	picture = ACCUSATION_eventPicture
+	
+	trigger = {
+		OR = {
+			technology_group = north_american
+			technology_group = mesoamerican
+			technology_group = australian
+			technology_group = oceanian
+		}
+		government = republic
+		OR = {
+			has_reform = pure_westminster_reform
+			has_reform = hybrid_westminster_reform
+		}
+		had_country_flag = {
+			flag = motion_of_no_confidence
+			days = 3650
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+
+		modifier = {
+			factor = 5
+			adm = 5
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = pious_personality
+				ruler_has_personality = lawgiver_personality
+				ruler_has_personality = incorruptible_personality
+			}
+		}
+		modifier = {
+			factor = 3
+			ADM = 4
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				ruler_has_personality = midas_touched_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = industrious_personality
+			}
+		}
+		modifier = {
+			factor = 0.8
+			NOT = { ADM = 3 }
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				ruler_has_personality = drunkard_personality
+				ruler_has_personality = obsessive_perfectionist_personality
+				ruler_has_personality = petty_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 2}
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = loose_lips_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { ADM = 1}
+			NOT = { stability = -2 }
+		}
+	}
+	
+	option = {
+		name = "superstates_scandal.3opta"
+		add_republican_tradition = 5
+		kill_ruler = yes
+	}
+	
+	option = {
+		name = "superstates_scandal.3optb"
+		hidden_effect = {
+			country_event = {
+				id = superstates_scandal.4
+				days = 45
+			}
+		}
+		add_prestige = -10
+		add_republican_tradition = -5
+		set_country_flag = motion_of_no_confidence
+	}
+
+	
+
+}
+
+#Motion of No Confidence
+country_event = {
+	id = superstates_scandal.4
+	title = "superstates_scandal.4t"
+	desc = "superstates_scandal.4d"
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = motion_of_no_confidence
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = motion_of_no_confidence
+		}
+	}
+	
+	option = { #Motion Fails by a Large Vote.
+		name = "superstates_scandal.4opta"
+		trigger = {
+			ADM = 4
+			NOT = { ADM = 6 }	
+		}
+		add_republican_tradition = 10
+		add_prestige = 10
+		add_adm_power = 100
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+	
+	option = { #Motion Fails by a Large Vote.
+		name = "superstates_scandal.4optb"
+		trigger = {
+			ADM = 6
+		}
+		add_republican_tradition = 15
+		add_prestige = 15
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_years_of_income = -0.083
+	}
+	
+	option = { #Motion Fails by a Large Vote.
+		name = "superstates_scandal.4optc"
+		highlight = yes
+		trigger = {
+			ADM = 3
+			NOT = { ADM = 4 }
+			OR = {
+				AND = {
+					ruler_has_good_adm_personality = yes
+					NOT = { ruler_has_bad_adm_personality = yes }
+					stability = 1
+				}
+			}
+
+		}
+		add_republican_tradition = 10
+		add_prestige = 5
+		add_adm_power = 50
+		add_dip_power = 25
+		add_mil_power = 25
+		add_years_of_income = -0.083
+	}
+
+	option = { #Impeachment Fails by a Large Margin
+		name = "superstates_scandal.2optc"
+		custom_tooltip = "superstates_scandal.tooltip2c"
+		highlight = yes
+		trigger = {
+			ADM = 3
+			NOT = { ADM = 4 }
+			OR = {
+				AND = {
+					OR = {
+						ruler_has_personality = well_advised_personality
+						ruler_has_personality = benevolent_personality
+						ruler_has_personality = pious_personality
+						ruler_has_personality = lawgiver_personality
+						ruler_has_personality = incorruptible_personality
+						ruler_has_personality = midas_touched_personality
+						ruler_has_personality = scholar_personality
+						ruler_has_personality = industrious_personality
+					}
+					stability = 1
+				}
+			}
+
+		}
+		add_republican_tradition = 10
+		add_prestige = 5
+		add_adm_power = 50
+		add_dip_power = 25
+		add_mil_power = 25
+		add_years_of_income = -0.083
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2optd"
+	custom_tooltip = "superstates_scandal.tooltip2d"
+	trigger = {
+		ADM = 3
+		NOT = { ADM = 4 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = -1
+		NOT = { stability = 1 }
+	}
+	add_republican_tradition = 5
+	add_prestige = 2
+	add_adm_power = 25
+	add_dip_power = 10
+	add_mil_power = 10
+	add_years_of_income = -0.5
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2opte"
+	custom_tooltip = "superstates_scandal.tooltip2e"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = 1
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = 5
+	add_prestige = 2
+	add_adm_power = 25
+	add_dip_power = 10
+	add_mil_power = 10
+	add_years_of_income = -0.5
+	}
+
+	option = { #Impeachment Fails by a Small Margin
+	name = "superstates_scandal.2optf"
+	custom_tooltip = "superstates_scandal.tooltip2f"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		stability = -1
+		NOT = { stability = 1 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.75
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2optg"
+	custom_tooltip = "superstates_scandal.tooltip2g"
+	trigger = {
+		ADM = 3
+		NOT = { ADM = 5 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.75
+	add_stability = -1
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2opth"
+	custom_tooltip = "superstates_scandal.tooltip2h"
+	trigger = {
+		OR = {
+			ADM = 5
+			ADM = 6	#YES, Its redundant but to be made explicit that ADM 6 rulers are included
+		}
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = -2 }
+	}
+	add_republican_tradition = -15
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	add_stability = -3
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2opti"
+	custom_tooltip = "superstates_scandal.tooltip2i"
+	trigger = {
+		ADM = 2
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.5
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Small Margin
+	name = "superstates_scandal.2optj"
+	custom_tooltip = "superstates_scandal.tooltip2j"
+	trigger = {
+		ADM = 1
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = pious_personality
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = incorruptible_personality
+			ruler_has_personality = midas_touched_personality
+			ruler_has_personality = scholar_personality
+			ruler_has_personality = industrious_personality
+		}
+		stability = 1
+		NOT = { stability = 3 }
+	}
+	add_republican_tradition = -5
+	add_prestige = -2
+	add_adm_power = -25
+	add_dip_power = -10
+	add_mil_power = -10
+	add_years_of_income = -0.5
+	kill_ruler = yes
+	}
+	
+	option = { #Impeachment Succeeds by a Large Margin
+	name = "superstates_scandal.2optk"
+	custom_tooltip = "superstates_scandal.tooltip2k"
+	trigger = {
+		ADM = 1
+		NOT = { ADM = 3 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 0 }
+	}
+	add_republican_tradition = 5
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	kill_ruler = yes
+	}
+
+	option = { #Impeachment Succeeds by a Large Margin
+	name = "superstates_scandal.2optl"
+	trigger = {
+		NOT = { ADM = 1 }
+		OR = {
+			ruler_has_personality = drunkard_personality
+			ruler_has_personality = obsessive_perfectionist_personality
+			ruler_has_personality = petty_personality
+			ruler_has_personality = malevolent_personality
+			ruler_has_personality = loose_lips_personality
+			ruler_has_personality = naive_personality
+		}
+		NOT = { stability = 3 }
+	}
+	add_republican_tradition = 5
+	add_prestige = -20
+	add_adm_power = -100
+	add_dip_power = -100
+	add_mil_power = -100
+	add_years_of_income = -1
+	kill_ruler = yes
+	}
+	
+	option = {
+		name = "superstates_scandal.4optb"
+		trigger = {
+			adm = 2
+		}
+		add_republican_tradition = 5
+		add_prestige = 10
+		change_adm = 1
+		add_years_of_income = -0.05
+	}
+	
+	option = {
+		name = "superstates_scandal.4optc"
+		add_prestige = 5
+		add_republican_tradition = 5
+		kill_ruler = yes
+		add_years_of_income = -0.05
+	}
+	option = {
+		name = "superstates_scandal.4optd"
+		trigger = {
+				NOT = { adm = 2}
+		}
+		add_prestige = -5
+		add_republican_tradition = -5
+		kill_ruler = yes
+		add_years_of_income = -0.10
+	}
+}
