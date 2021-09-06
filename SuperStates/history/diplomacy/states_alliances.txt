@@ -1,0 +1,234 @@
+#Example, may use "guarantee", "vassal", "union", "alliance", "royal_marriage" for various allegencies.
+
+#alliance = {
+#	first = ARS
+#	second = ARZ
+#	start_date = 1400.11.11
+#	end_date = 1821.1.1
+#}
+
+### American State alliances
+
+###Idaho-Utah
+#(They're the only two Mormon states in the game.)
+alliance = {
+	first = IDA
+	second = UTA
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Arizona-Utah
+#(Historical ties to settlers)
+guarantee = {
+	first = ARZ
+	second = UTA
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Guam-Northern Marianas Islands
+#(Historically these two were culturally the same but WWII lead to a deep division between the two that hasn't healed completely yet.)
+#alliance = {
+#	first = GUM
+#	second = NMI
+#	start_date = 1400.1.1
+#	end_date = 1821.1.1
+#}
+
+###Massachusetts-Maine
+#(As they were once united as Massachusetts.)
+alliance = {
+	first = MSS
+	second = MNE
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Kentucky-Virginia
+#(As they were once united as Virginia.)
+alliance = {
+	first = VIR
+	second = KEN
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###New York State-New Jersey
+#(To mimic cooperation on number of interstate issues)
+alliance = {
+	first = NYS
+	second = NJY
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Delaware-Rhode Island
+#(For obvious reasons, they're OPMs and surrounded by other big monsters.)
+alliance = {
+	first = DEL
+	second = RIS
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Texas-Coahuila
+#(Coahuila y Tejas was the state of Mexico that revolted in the Texas Revolution in 1834. Where Texas split off to become the Republic of Texas.)
+guarantee = {
+	first = TEX
+	second = COA
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###British Colubmia-Washington
+#(Having a number of cultural similiarities)
+alliance = {
+	first = BCO
+	second = WAS
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Arizona-Sonora
+#(Very prominent relationship between the two states. Its even encoded in A.R.S. 41-107.)
+alliance = {
+	first = ARZ
+	second = SNA
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Pennsyvlania-Delaware
+#(Historically were connected to William Penn and originally ruled together but split into seperate colonies however remained part of the Penn family proprietorship and shared the same colonial governor.)
+alliance = {
+	first = PNN
+	second = DEL
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+guarantee = {
+	first = PNN
+	second = DEL
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Alaska-Yukon
+#(Because they share a river.)
+guarantee = {
+	first = ALA
+	second = YUK
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Canadian Alliances
+
+###Alberta-Northwest Terrotories
+#(Because an OPM needs a protector :-p)
+guarantee = {
+	first = ABR
+	second = NWT
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Saskatchewan-Manitoba
+#(Prairie Provinces of Canada are culturally very similar)
+alliance = {
+	first = MTB
+	second = SSK
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Maritime Alliances
+#(Having a number of cultural similiarities)
+alliance = {
+	first = NBR
+	second = NVS
+	start_date = 1444.11.11
+	end_date = 1821.1.1
+}
+
+guarantee = {
+	first = NFL
+	second = PEI
+	start_date = 1444.11.11
+	end_date = 1821.1.1
+}
+
+###Mexican Alliances
+
+###Sonora-Sinaloa
+#(Originally was a combined state and they maintain close ties.)
+alliance = {
+	first = SNA
+	second = SLA
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Las Baja Californias
+#(Originally were united and eventually split and given seperate statehood, they remain close.)
+alliance = {
+	first = BCN
+	second = BCS
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+### Mexico State-Mexico City
+#(Were originally united until Mexico City was made a federal district.)
+alliance = {
+	first = EMX
+	second = DFM
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Colima-Aguascalientes
+#(OPMs banding together)
+alliance = {
+	first = CLM
+	second = AGC
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Morelos-Tlaxcala
+#(Another set of OPMs banding together)
+alliance = {
+	first = MRL
+	second = TLX
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+###Australian Alliances
+
+###Canberra-New South Wales
+#(Canberra was created inside of New South Wales)
+guarantee = {
+	first = NSW
+	second = ACT
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+#Canberra-Victoria
+#(To prevent NSW from annexing Canberra.)
+guarantee = {
+	first = VCT
+	second = ACT
+	start_date = 1400.1.1
+	end_date = 1821.1.1
+}
+
+vassal = {
+	first = ACT
+	second = JBT
+	start_date = 1444.11.11
+	end_date = 1821.1.1
+}
