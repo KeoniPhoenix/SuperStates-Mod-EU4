@@ -1,0 +1,12 @@
+bookmark =
+{
+	name = "CAN_bookmark_name"
+	desc = "CAN_bookmark_desc"
+	date = 1867.7.1
+	
+	center = 1009
+	
+	country = USA
+	country = MEX
+	country = CAN
+}

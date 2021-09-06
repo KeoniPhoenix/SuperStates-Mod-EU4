@@ -1,0 +1,11 @@
+bookmark =
+{
+	name = "MEX_bookmark_name"
+	desc = "MEX_bookmark_desc"
+	date = 1810.9.16
+	
+	center = 871
+	
+	country = USA
+	country = MEX
+}

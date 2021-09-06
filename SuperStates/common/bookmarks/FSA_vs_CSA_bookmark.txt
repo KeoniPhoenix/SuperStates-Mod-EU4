@@ -1,0 +1,11 @@
+bookmark =
+{
+	name = "FSA_vs_CSA_name"
+	desc = "FSA_vs_CSA_desc"
+	date = 1675.2.4
+	
+	center = 2616
+	
+	country = CSA
+	country = FSA
+}

@@ -1,0 +1,21 @@
+bookmark =
+{
+	name = "STRANGE_TIMES_NAME"
+	desc = "STRANGE_TIMES_DESC"
+	date = 1444.11.11
+	
+	center = 1009
+	
+	country = ONT
+	country = CAL
+	country = TEX
+	country = ARZ
+	country = NYS
+	country = QUE
+	country = JLC
+	country = NSW
+	
+	easy_country = CAL
+	easy_country = ONT
+	easy_country = TEX
+}

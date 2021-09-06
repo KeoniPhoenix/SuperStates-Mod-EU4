@@ -1,0 +1,12 @@
+bookmark =
+{
+	name = "CSA_bookmark_name"
+	desc = "CSA_bookmark_desc"
+	date = 1861.2.4
+	
+	center = 2616
+	
+	country = CSA
+	country = USA
+	country = MEX
+}

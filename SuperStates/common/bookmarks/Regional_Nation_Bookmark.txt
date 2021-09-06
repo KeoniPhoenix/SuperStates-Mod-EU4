@@ -1,0 +1,21 @@
+bookmark =
+{
+	name = "REGIONAL_NATIONS_name"
+	desc = "REGIONAL_NATIONS_desc"
+	date = 1555.1.1
+	
+	center = 1009
+	
+	country = PCF
+	country = WCN
+	country = DES
+	country = RKY
+	country = GPL
+	country = ACU
+	country = GLK
+	country = NFR
+	country = MAA
+	country = NEW
+	country = WST
+	country = MTU
+}

@@ -1,0 +1,13 @@
+bookmark =
+{
+	name = "USA_bookmark_name"
+	desc = "USA_bookmark_desc"
+	date = 1776.7.4
+	
+	center = 2616
+	
+	country = USA
+	country = GBR
+	country = SPA
+	country = FRA
+}

@@ -1,0 +1,13 @@
+bookmark =
+{
+	name = "AUS_bookmark_name"
+	desc = "AUS_bookmark_desc"
+	date = 1901.1.1
+	
+	center = 1410
+	
+	country = USA
+	country = MEX
+	country = CAN
+	country = AUS
+}
