@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_catholic
+primary_culture = brayon
+add_accepted_culture = new_brunswicker
+add_accepted_culture = acadian
+capital = 2667	# Edmonston
+
+1528.1.1 = {
+    religion = catholic
+}

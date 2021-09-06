@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = tejano
+religion = s_catholic
+capital = 2484 # El Paso
+
+1528.1.1 = {
+    religion = catholic
+}

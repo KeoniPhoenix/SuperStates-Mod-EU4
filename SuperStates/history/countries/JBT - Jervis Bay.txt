@@ -1,0 +1,9 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+religion = austral_protestant
+primary_culture = canberran
+historical_friend = ACT
+
+capital =  4648	# Jervis Bay

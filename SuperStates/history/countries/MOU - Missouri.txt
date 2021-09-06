@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = slave_state_reform
+technology_group = north_american
+primary_culture = missourian
+add_accepted_culture = ozarker
+religion = s_protestant
+capital = 2497 # Jefferson City
+historical_rival = KNS
+
+1441.1.3 = {
+	monarch = {
+		name = "Alexander McNair"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}

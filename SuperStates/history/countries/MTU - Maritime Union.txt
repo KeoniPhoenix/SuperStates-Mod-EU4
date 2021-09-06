@@ -1,0 +1,11 @@
+government = monarchy
+#set_legacy_government = constitutional_monarchy
+government_rank = 3
+technology_group = north_american
+religion = s_protestant
+primary_culture = nova_scotian
+capital = 1811 # Halifax
+
+1531.1.1 = {
+    religion = anglican
+}

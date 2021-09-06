@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = michoacanian
+capital = 876	# Morelia
+
+
+1444.2.15 = {
+	monarch = {
+		name = "Enrique Ramírez"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

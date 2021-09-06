@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = long_islander
+add_accepted_culture = knickerbocker
+religion = s_catholic
+capital = 3026	#Hempstead
+
+1528.1.1 = {
+    religion = catholic
+}

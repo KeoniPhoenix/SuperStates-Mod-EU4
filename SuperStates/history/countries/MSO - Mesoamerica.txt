@@ -1,0 +1,19 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = north_american
+religion = s_catholic
+primary_culture = mexican_districter
+capital = 871	# Mexico City
+
+# 1443.7.6 = {
+	# monarch = {
+		# name = "John Bower Lewis"
+		# adm = 3
+		# dip = 3
+		# mil = 4
+	# }
+# }
+
+1528.1.1 = {
+    religion = catholic
+}

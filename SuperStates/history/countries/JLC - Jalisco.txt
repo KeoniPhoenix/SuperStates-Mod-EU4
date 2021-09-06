@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = jaliscan
+capital = 888	# Guadalajara
+
+
+1439.3.1 = {
+	monarch = {
+		name = "Basilio Badillo"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

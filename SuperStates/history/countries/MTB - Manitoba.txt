@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = manitoban
+capital = 2626	# Winnipeg
+historical_friend = SSK
+
+1443.3.15 = {
+	monarch = {
+		name = "Alexander Rutherford"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+	religion = protestant
+}

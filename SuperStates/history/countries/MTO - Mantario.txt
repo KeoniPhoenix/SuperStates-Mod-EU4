@@ -1,0 +1,14 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = manitoban
+add_accepted_culture = northern_ontarian
+#add_accepted_culture = northwest_ontarian
+capital = 2626	# Winnipeg
+historical_friend = QUE
+historical_friend = NRO
+
+1528.1.1 = {
+    religion = protestant
+}

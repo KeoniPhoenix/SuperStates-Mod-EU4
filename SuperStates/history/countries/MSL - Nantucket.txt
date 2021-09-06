@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = nantucketer
+religion = s_protestant
+capital = 3018  # Nantucket
+
+1528.1.1 = {
+    religion = protestant
+}

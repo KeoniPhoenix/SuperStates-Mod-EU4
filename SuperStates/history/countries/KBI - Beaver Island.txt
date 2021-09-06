@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = north_american
+primary_culture = michigander
+add_accepted_culture = yooper
+religion = mormon
+capital = 3278 #Beaver Island

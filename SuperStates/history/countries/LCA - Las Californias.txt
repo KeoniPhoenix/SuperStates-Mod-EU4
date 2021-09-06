@@ -1,0 +1,14 @@
+government = republic
+add_government_reform = oligarchy_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = californian
+add_accepted_culture = southern_californian
+add_accepted_culture = san_franciscan
+add_accepted_culture = baja_californian
+add_accepted_culture = south_baja_californian
+capital = 946	# San Francisco
+
+1528.1.1 = {
+    religion = catholic
+}

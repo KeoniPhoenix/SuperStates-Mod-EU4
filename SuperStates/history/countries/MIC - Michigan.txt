@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = michigander
+add_accepted_culture = yooper
+religion = s_protestant
+capital = 2572 # Lansing
+historical_rival = OHI
+
+1443.1.3 = {
+	monarch = {
+		name = "Stevens Mason"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = s_methodist
+}

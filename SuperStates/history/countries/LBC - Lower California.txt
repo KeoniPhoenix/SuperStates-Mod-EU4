@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = baja_californian
+add_accepted_culture = south_baja_californian
+religion = s_catholic
+capital = 932  # La Paz
+
+# 1443.1.3 = {
+	# monarch = {
+		# name = "José Joaquín de Arrillaga"
+		# adm = 2
+		# dip = 4
+		# mil = 2
+	# }
+# }
+
+	

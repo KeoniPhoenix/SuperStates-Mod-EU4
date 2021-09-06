@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = federal_republic
+government_rank = 3
+technology_group = north_american
+religion = s_catholic
+primary_culture = mexican_districter
+capital = 871	# Mexico City
+
+1528.1.1 = {
+    religion = catholic
+}

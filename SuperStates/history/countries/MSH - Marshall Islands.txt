@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = constitutional_republic
+government_rank = 1
+technology_group = oceanian
+primary_culture = marshallese
+religion = austral_catholic
+capital = 1993	#Majuro

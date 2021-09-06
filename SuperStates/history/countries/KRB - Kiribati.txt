@@ -1,0 +1,6 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = australian
+religion = austral_protestant
+primary_culture = i-kiribati
+capital = 1991  # Tarawa

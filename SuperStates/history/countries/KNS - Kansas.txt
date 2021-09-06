@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = kansan
+add_accepted_culture = west_kansan
+religion = s_protestant
+capital = 1006 # Topeka
+historical_rival = MOU
+
+1443.1.3 = {
+	monarch = {
+		name = "Charles L. Robinson"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
