@@ -1,0 +1,1019 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### SuperStates Formable Nations Ideas
+
+#Arctic Union
+
+ACU_ideas = {
+	start = {
+		land_attrition = -0.33
+		land_forcelimit_modifier = 0.15
+	}
+
+	bonus = {
+		reinforce_speed = 0.25
+	}
+
+	trigger = {
+			tag = ACU
+	}
+	free = yes		#will be added at load.
+
+	
+	implementing_new_tech_for_arctic_development = {
+		global_manpower_modifier = 0.20
+	}
+	no_vacation_for_the_enemy = {
+		defensiveness = 0.25
+	}
+	arctic_pride = {
+		land_morale = 0.20
+		naval_morale = 0.20
+	}
+	hudson_strait1 = {
+		trade_range_modifier = 0.15
+	}
+	endless_fur_supply = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	merchant_espionage = {
+		idea_cost = -0.20
+		global_regiment_cost = -0.10
+	}
+	ice_palace = {
+		prestige = 1
+	}
+}
+
+#Atlantic Union/Maritime Union
+
+MTU_ideas = {
+	start = {
+		naval_morale = 0.25
+		diplomatic_upkeep = 1
+	}
+
+	bonus = {
+		navy_tradition_decay = -0.02
+	}
+
+	trigger = {
+			tag = MTU
+	}
+	free = yes		#will be added at load.
+
+	new_food_preservation_techniques = {
+		naval_attrition = -0.25
+	}
+	improved_naval_ordnance = {
+		heavy_ship_power = 0.15
+		heavy_ship_cost = -0.10
+	}
+	enticements_and_effective_recruiting = {
+		global_manpower_modifier = 0.15
+	}
+	reduce_upper_house_legislative_powers = {
+		stability_cost_modifier = -0.20
+	}
+	commercializing_research_and_develop_successes = {
+		technology_cost = -0.15
+	}
+	stress_formality_in_the_diplomatic_corps = {
+		diplomatic_reputation = 3
+	}
+	cargo_insurance = {
+		merchants = 1
+		trade_efficiency = 0.15
+	}
+}
+
+#Canada
+
+# CAN_ideas = {
+	# start = {
+		# diplomatic_reputation = 3
+		# infantry_power = 0.10
+	# }
+
+	# bonus = {
+		# global_ship_cost = 0.15
+	# }
+
+	# trigger = {
+		# tag = CAN
+	# }
+	# free = yes		#will be added at load.
+
+	# canadian_mounties = {
+		# cavalry_power = 0.10
+		# stability_cost_modifier = -0.15
+	# }
+	# canadian_political_moderation = {
+		# global_unrest = -1
+	# }
+	# maple_leaf_loyalty = {
+		# land_morale = 0.20
+	# }
+	# settling_the_open_lands = {
+		# global_manpower_modifier = 0.15
+	# }
+	# effective_tax_policy = {
+		# global_tax_modifier = 0.15
+	# }
+	# harvesting_crown_woodlands = {
+		# build_cost = -0.15
+	# }
+	# community_integration = {
+		# no_religion_penalty = yes
+	# }
+# }
+
+CAN_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		land_attrition = -0.15
+	}
+	
+	bonus = {
+		republican_tradition = 0.3
+		legitimacy = 1
+	}
+	
+	trigger = {
+		tag = CAN
+	}
+	free = yes
+	
+		
+	singing_lumberjacks = {
+		production_efficiency = 0.10
+	}	
+	the_hudson_bay_company = {
+		merchants = 1
+	}
+    settling_the_interior = {
+		colonists = 1
+	}
+	the_maritimes = {
+		navy_tradition = 1
+	}
+	the_quebec_act = {
+		tolerance_heretic = 2
+	}
+	legacy_of_the_empire = {
+		trade_steering = 0.15
+	}
+	the_forests_of_canada = {
+		global_ship_cost = -0.1
+	}
+}
+
+#Carolina
+
+###Will use the national ideas of the state that formed it.
+
+#Cascadia
+
+CSC_ideas = {
+	start = {
+		diplomatic_reputation = 2
+		advisor_cost = -0.15
+	}
+
+	bonus = {
+		infantry_power = 0.10
+	}
+
+	trigger = {
+			tag = CSC
+	}
+	free = yes		#will be added at load.
+
+	reforming_revenue_collection = {
+		global_tax_modifier = 0.10
+		trade_efficiency = 0.10
+	}
+	economic_sanctions = {
+		embargo_efficiency = 0.5
+	}
+	merchant_fleet_registry = {
+		naval_maintenance_modifier = -0.20
+	}
+	astorian_empire = {
+		trade_steering = 0.15
+		global_spy_defence = 0.15
+	}
+	natural_harbors_of_great_economic_importance = {
+		trade_efficiency = 0.10
+	}
+	captain_vancouvers_naval_academy = {
+		leader_naval_manuever = 1
+	}
+	the_vulcan_artillery = {
+		artillery_power = 0.15
+	}
+}
+
+#Confederate States of America/Golden Circle
+
+CSA_ideas = {
+	start = {
+		cavalry_power = 0.10
+		global_regiment_cost = -0.10
+	}
+
+	bonus = {
+		hostile_attrition = 1
+	}
+
+	trigger = {
+		OR = {
+			tag = CSA
+			tag = GCL
+		}
+	}
+	free = yes		#will be added at load.
+
+	technological_agrigarian_society = {
+		production_efficiency = 0.20
+	}
+	never_a_tariff_of_abominations = {
+		merchants = 1
+		trade_steering = 0.15
+	}
+	state_military_colleges = {
+		infantry_power = 0.25
+		mil_tech_cost_modifier = -0.15
+	}
+	commerce_raiders1 = {
+		light_ship_power = 0.20
+	}
+	legends_in_command = {
+		leader_land_fire = 1
+	}
+	knights_of_the_golden_circle = {
+		unjustified_demands = -0.33
+	}
+	reform_drill_training = {
+		discipline = 0.075
+	}
+}
+
+#Dakota
+
+###Will use the national ideas of the state that formed it.
+
+#Deseret
+
+DES_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		ae_impact = -0.05
+	}
+	
+	bonus = {
+		cavalry_power = 0.10
+	}
+	
+	trigger = {
+		tag = DES
+	}
+	free = yes		#will be added at load
+	
+	miracle_of_the_gulls2 = {
+		land_attrition = -0.20
+	}
+	mormon_tabernacle_choir = {
+		prestige = 1
+	}
+	a_proclamation_on_family = {
+		global_manpower_modifier = 0.15
+	}
+	legacy_of_the_pioneers = {
+		colonists = 1
+		leader_land_manuever = 1
+	}
+	reform_the_mormon_battalion = {
+		discipline = 0.075
+		infantry_power = 0.10
+	}
+	re-establish_the_united_order_of_enoch = {
+		tolerance_own = 3
+		years_of_nationalism = -5
+	}
+	zions_central_board_of_trade = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
+
+#Free States of America
+
+FSA_ideas = {
+	start = {
+		merchants = 1
+		infantry_power = 0.10
+	}
+	
+	bonus = {
+		diplomats = 2
+	}
+	
+	trigger = {
+		tag = FSA
+	}
+	free = yes		#will be added at load
+	
+	underground_railroad = {
+		rebel_support_efficiency = 0.25
+	}
+	explosive_economy = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	anaconda_plan = {
+		blockade_efficiency = 0.15
+	}
+	naval_technological_progress = {
+		ship_durability = 0.15
+	}
+	generals_of_risk = {
+		leader_land_manuever = 1
+	}
+	iron_horses = {
+		cavalry_power = 0.10
+	}
+	the_right_cause = {
+		discipline = 0.075
+	}
+}
+
+#Great Lakes Republic
+
+GLK_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		cavalry_power = 0.15
+	}
+
+	bonus = {
+		idea_cost = -0.10
+	}
+
+	trigger = {
+			tag = GLK
+	}
+	free = yes		#will be added at load.
+
+	inland_seaways = {
+		trade_efficiency = 0.33
+	}
+	summer_festivals = {
+		stability_cost_modifier = -0.15
+	}
+	conferences_of_diplomacy = {
+		diplomats = 1
+		dip_tech_cost_modifier = -0.1
+	}
+	improving_our_arms = {
+		infantry_power = 0.15
+	}
+	militia_call_ups = {
+		manpower_recovery_speed = 0.25
+	}
+	lakeshore_commerce = {
+		merchants = 1
+	}
+	reform_the_tax_collection = {
+		global_tax_modifier = 0.25
+	}
+}
+
+#Great Plains Federation
+
+GPL_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		diplomats = 1
+	}
+
+	trigger = {
+			tag = GPL
+	}
+	free = yes		#will be added at load.
+
+	buffalo_warriors = {
+		cavalry_power = 0.10
+	}
+	fertile_landscape = {
+		land_attrition = -0.15
+	}
+	poems_of_the_ancestors = {
+		stability_cost_modifier = -0.05
+		prestige_decay = -0.03
+	}
+	diplomatic_invitations = {
+		diplomatic_upkeep = 2
+	}
+	sortition_for_unelected_offices = {
+		adm_tech_cost_modifier = -0.1
+	}
+	generals_of_the_plains = {
+		leader_land_fire = 1
+	}
+	wagon_train_trails = {
+		trade_efficiency = 0.15
+	}
+}
+
+#Las Californias
+
+###Will use the national ideas of the state that formed it.
+
+#United Mexican States/Mexican Empire
+
+# EUM_ideas = {
+	# start = {
+		# global_manpower_modifier = 0.15
+		# global_ship_cost = -0.15
+	# }
+
+	# bonus = {
+		# global_tax_modifier = 0.15
+	# }
+
+	# trigger = {
+		# tag = MEX
+	# }
+	# free = yes		#will be added at load.
+
+	# blue_agave_cultivation = {
+		# global_trade_goods_size_modifier = 0.15
+	# }
+	# chapultepec_castle = {
+		# infantry_power = 0.15
+	# }
+	# repudiate_foreign_tempations_for_unnecessary_war = {
+		# prestige = 2
+	# }
+	# cinco_de_mayo = {
+		# war_exhaustion = -0.20
+	# }
+	# enter_the_juarez_doctrine = {
+		# diplomatic_upkeep = 2
+		# diplomats = 1
+	# }
+	# vaqueros_horsemen = {
+		# cavalry_cost = -0.15
+	# }
+	# two_ocean_fleet = {
+		# naval_forcelimit_modifier = 0.15
+	# }
+# }
+
+MEX_ideas = {
+	start = {
+		global_colonial_growth = 20
+		missionaries = 2
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.20
+	}
+	
+	trigger = {
+		tag = MEX
+	}
+	free = yes
+	
+		
+	rebuilding_mexico = {
+		build_cost = -0.10
+	}	
+	the_republic_of_indians = {
+		num_accepted_cultures = 2
+		native_uprising_chance = -0.75
+	}
+    peace_by_purchase = {
+		years_of_nationalism = -5
+	}
+	casa_de_las_campanas = {
+		idea_cost = -0.10
+	}
+	repartimiento = {
+		production_efficiency = 0.15
+	}
+	heroes_of_the_revolution = {
+		leader_land_shock = 1
+	}
+	grito_de_delores = {
+		land_morale = 0.15
+	}
+}
+
+#Federated States of Micronesia
+
+# FSM_ideas = {
+	# start = {
+		# naval_maintenance_modifier = -0.15
+		# naval_morale = 0.25
+	# }
+	
+	# bonus = {
+		# core_creation = -0.25
+	# }
+	
+	# trigger = {
+		# tag = FSM
+	# }
+	# free = yes		#will be added at load.
+	
+	# island_paradises = {
+		# prestige = 1
+	# }
+	# rai_stones = {
+		# global_tax_modifier = 0.15
+	# }
+	# empire_of_the_sea = {
+		# ship_durability = 0.15
+		# naval_attrition = -0.25
+	# }
+	# natural_nautical_explorers = {
+		# navy_tradition = 0.75
+		# envoy_travel_time = -0.20
+	# }
+	# spirit_possessions = {
+		# stability_cost_modifier = -0.10
+	# }
+	# clan_aspirations = {
+		# global_colonial_growth = 25
+	# }
+	# western_pacific_trade = {
+		# global_prov_trade_power_modifier = 0.15
+	# }
+# }
+
+#Mid-Atlantic League
+
+MAA_ideas = {
+	start = {
+		advisor_cost = -0.15
+		light_ship_power = 0.10
+	}
+
+	bonus = {
+		diplomats = 1
+	}
+
+	trigger = {
+			tag = MAA
+	}
+	free = yes		#will be added at load.
+
+	enlistment_rewards = {
+		global_manpower_modifier = 0.15
+		infantry_cost = -0.10
+	}
+	efficiently_organized_navy = {
+		naval_forcelimit_modifier = 0.15
+	}
+	naval_ordiance_factories = {
+		heavy_ship_power = 0.10
+	}
+	great_cities_of_trade = {
+		merchants = 2
+	}
+	yearly_military_review_and_march = {
+		discipline = 0.075
+		prestige = 1
+	}
+	interconnecting_markets = {
+		global_trade_power = 0.25
+	}
+	legislative_discussion_of_political_philosophies = {
+		adm_tech_cost_modifier = -0.15
+	}
+}
+
+#New England
+
+NEW_ideas = {
+	start = {
+		global_ship_cost = -0.15
+		diplomatic_upkeep = 1
+	}
+
+	bonus = {
+		advisor_cost = -0.20
+	}
+
+	trigger = {
+			tag = NEW
+	}
+	free = yes		#will be added at load.
+
+	establish_the_quitrent = {
+		global_tax_modifier = 0.10
+	}
+	improvement_of_navigation_acts = {
+		global_own_trade_power = 0.15
+		trade_steering = 0.10
+	}
+	trading_along_the_triangle = {
+		merchants = 1
+	}
+	army_of_andros = {
+		global_regiment_cost = -0.15
+		land_maintenance_modifier = -0.10
+	}
+	establish_regional_lieutenant_governors = {
+		stability_cost_modifier = -0.15
+	}
+	bureaucratic_promotions = {
+		advisor_pool = 1
+	}
+	nunquam_libertas_gratior_extat = {
+		prestige = 1
+	}
+}
+
+#New France
+
+NFR_ideas = {
+	start = {
+		cavalry_power = 0.15
+		global_tax_modifier = 0.15
+	}
+
+	bonus = {
+		land_maintenance_modifier = -0.20
+	}
+
+	trigger = {
+			tag = NFR
+	}
+	free = yes		#will be added at load.
+
+	return_of_our_expansive_resources = {
+		build_cost = -0.25
+	}
+	formal_ties_to_the_metropolis = {
+		diplomats = 1
+		diplomatic_upkeep = 2
+	}
+	bourbon_super_power = {
+		infantry_power = 0.15
+	}
+	improving_our_military_recruiting = {
+		global_manpower_modifier = 0.15
+	}
+	not_really_just_a_few_acres_of_snow = {
+		trade_efficiency = 0.15
+	}
+	removal_of_the_heresy = {
+		missionaries = 2
+	}
+	restoration_of_our_homeland = {
+		prestige = 1
+		land_morale = 0.20
+	}
+}
+
+#North America Union
+
+NAM_ideas = {
+	start = {
+		diplomats = 1
+		diplomatic_upkeep = 1
+	}
+
+	bonus = {
+		diplomatic_reputation = 5
+	}
+
+	trigger = {
+			tag = NAM
+	}
+	free = yes		#will be added at load.
+
+	the_largest_economy = {
+		technology_cost = -0.25
+	}
+	our_collective_strength = {
+		global_manpower_modifier = 0.15
+	}
+	deep_supply_lines = {
+		land_attrition = -0.20
+		manpower_recovery_speed = 0.20
+	}
+	power_projector = {
+		naval_attrition = -0.20
+		blockade_efficiency = 0.33
+	}
+	large_mighty_navy = {
+		naval_forcelimit_modifier = 0.20
+	}
+	manifestating_our_destiny = {
+		auto_explore_adjacent_to_colony = yes
+	}
+	nonmonetary_compensation = {
+		advisor_cost = -0.67
+	}
+}
+
+#Occidente
+
+###Will use the national ideas of the state that formed it.
+
+#Pacifica
+
+PCF_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.10
+		global_manpower_modifier = 0.15
+	}
+
+	bonus = {
+		infantry_power = 0.10
+	}
+
+	trigger = {
+			tag = PCF
+	}
+	free = yes		#will be added at load.
+
+	strategic_mountian_ranges = {
+		defensiveness = 0.15
+	}
+	well_focused_foreign_affairs = {
+		diplomats = 1
+	}
+	adaptability_of_our_cavalry = {
+		cavalry_power = 0.10
+	}
+	skilled_diplomacy = {
+		diplomatic_reputation = 3
+		diplomatic_upkeep = 2
+	}
+	appeal_to_the_masses_with_referendums = {
+		stability_cost_modifier = -0.10
+	}
+	seeking_peace_through_trade = {
+		merchants = 2
+		trade_range_modifier = 0.20
+	}
+	economic_controls = {
+		technology_cost = -0.25
+		build_cost = -0.10
+	}
+}
+
+#Pacific Oceana
+
+###Will use the national ideas of the state that formed it.
+
+#Rio Grande
+
+RRG_ideas = {
+	start = {
+		infantry_power = 0.10
+		republican_tradition = 0.5
+	}
+
+	bonus = {
+		naval_forcelimit_modifier = 0.20
+	}
+
+	trigger = {
+		tag = RRG
+	}
+	free = yes		#will be added at load.
+
+	supporting_the_constitution = {
+		stability_cost_modifier = -0.15
+	}
+	reform_the_property_taxes = {
+		global_tax_modifier = 0.15
+	}
+	intimate_knowledge_of_the_land = {
+		leader_land_manuever = 1
+	}
+	rio_wranglers = {
+		cavalry_cost = -0.15
+	}
+	uniform_military_code = {
+		land_morale = 0.20
+		naval_morale = 0.20
+	}
+	removing_the_usurpers = {
+		global_unrest = -2
+	}
+	extra_man_on_the_team = {
+		diplomats = 1
+	}
+}
+
+#United States of America
+
+USA_ideas = {
+	start = {
+		merchants = 1
+		religious_unity = 0.2
+	}
+	
+	bonus = {
+		republican_tradition = 1
+	}
+	
+	trigger = {
+		tag = USA
+	}
+	free = yes
+	
+	freedom_of_religion1 = {
+		no_religion_penalty = yes
+	}
+	usa_bill_of_rights1 = {
+		global_unrest = -2
+	}
+	empire_of_liberty1 = {
+		stability_cost_modifier = -0.15
+	}
+	military_academy_at_west_point = {
+		land_morale = 0.10
+		leader_land_manuever = 1
+	}
+	workshop_of_the_world1 = {
+		production_efficiency = 0.15
+	}
+	shining_city_on_a_hill1 = {
+		prestige = 1
+	}
+	manifest_destiny = {
+		colonists = 1
+ 	}
+}
+
+#Western Canada
+
+WCN_ideas = {
+	start = {
+		stability_cost_modifier = -0.15
+		republican_tradition = 1
+	}
+	
+	bonus = {
+		cavalry_power = 0.15
+	}
+	
+	trigger = {
+		tag = WCN
+	}
+	free = yes
+	
+	balanced_elected_senate = {
+		global_unrest = -1
+	}
+	controling_our_resources = {
+		global_tax_modifier = 0.15
+	}
+	great_port_of_the_northwest = {
+		trade_efficiency = 0.10
+		trade_steering = 0.25
+	}
+	defensive_positions_in_the_rockies = {
+		defensiveness = 0.15
+		hostile_attrition = 1
+	}
+	no_more_western_alienation = {
+		diplomats = 1
+	}
+	mountain_experience = {
+		infantry_power = 0.20
+	}
+	esquimalt_naval_arsenal = {
+		light_ship_cost = -0.20
+ 	}
+}
+
+WSI_ideas = {
+	start = {
+		merchants = 1
+		development_cost = -0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	trigger = {
+	OR = {
+		tag = WSI
+		tag = ANL
+		}
+	}
+	free = yes      #will be added at load.
+	WSI_Plantation_Economy = {
+		production_efficiency = 0.1
+		build_cost = -0.10
+	}
+	WSI_Blue_Mountain_Coffee = {
+		global_institution_spread = 0.2
+	}
+	WSI_Sugar_Revolution = {
+		global_unrest = -2
+	}
+	WSI_American_Trade_Hub = {
+		global_trade_power = 0.05
+		trade_range_modifier = 0.1
+	}
+	WSI_Miskoto_Zambos = {
+		num_accepted_cultures = 2
+	}
+	WSI_Interconnected_Relations = {
+		diplomatic_reputation = 1
+	}
+	WSI_Colonial_Legacy = {
+		naval_forcelimit_modifier = 0.25
+	}
+}
+
+NZL_ideas = {
+	start = {	
+		diplomatic_upkeep = 1
+		global_trade_power = 0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	trigger = {
+	OR = {
+		tag = NZL
+		tag = ZLD
+		}
+	}
+	free = yes
+	NZL_maori_seats = {
+		no_religion_penalty = yes
+		republican_tradition = 0.15
+	}
+	NZL_otago_gold = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	NZL_piopiotahi = {
+		development_cost = -0.1
+		prestige_decay = -0.005
+	}
+	NZL_haka = {
+		shock_damage = 0.1
+	}
+	NZL_company = {
+		global_colonial_growth = 25
+	}
+	NZL_rejecting_australia = {
+		land_morale = 0.15
+	}
+	NZL_pokarekare_ana = {
+		diplomatic_reputation = 2
+	}
+}
+
+AUS_ideas = {
+	start = {	
+		global_ship_recruit_speed = -0.2
+		global_colonial_growth = 25
+	}
+	bonus = {
+		development_cost = -0.15
+	}
+	trigger = {
+		tag = AUS
+	}
+	free = yes
+	AUS_outback_stations = {
+		colonists = 1
+	}
+	AUS_land_down_under = {
+		land_attrition = -0.1
+		hostile_attrition = 1
+	}
+	AUS_eureka_rebellion = {
+		global_manpower_modifier = 0.2
+	}
+	AUS_sandpaper_and_cheating = {
+		infantry_power = 0.1
+		allowed_marine_fraction = 0.1
+	}
+	AUS_royal_navy = {
+		global_ship_cost = -0.1
+		disengagement_chance = 0.05
+	}
+	AUS_bushrangers = {
+		shock_damage = 0.1
+	}
+	AUS_waltzing_matilda = {
+		build_cost = -0.1
+	}
+}

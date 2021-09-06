@@ -1,0 +1,295 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### Micronesian States National Ideas
+
+FSM_ideas = { # Federated States of Micronesia
+	start = {
+		province_warscore_cost = -0.15
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		colonists = 1
+	}
+
+	trigger = {
+			tag = FSM
+	}
+	free = yes		#will be added at load.
+
+	FSM_chamorro_contact = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	mwehin_kawa = {
+		diplomatic_annexation_cost = -0.15
+		vassal_income = 0.25
+	}
+	mwehin_sau_deleur = {
+		reduced_liberty_desire = 10
+	}
+	mehin_nahnmwarki = {
+		diplomatic_upkeep = 1
+		vassal_forcelimit_bonus = 1
+	}
+	venice_of_the_pacific = {
+		light_ship_power = 0.15
+	}
+	uniting_the_trusteeship = {
+		unjustified_demands = -0.30
+	}
+	FSM_compact_of_free_association = {
+		diplomatic_upkeep = 2
+	}
+}
+
+CUU_ideas = { # Chuuk / Truk
+	start = {
+		naval_attrition = -0.10
+		range = 0.25
+	}
+
+	bonus = {
+		navy_tradition_decay = -0.01
+	}
+
+	trigger = {
+			tag = CUU
+	}
+	free = yes		#will be added at load.
+
+	FSM_chamorro_contact = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	CUU_high_mountains = {
+		leader_naval_manuever = 1
+	}
+	chuuk_lagoon = {
+		leader_naval_shock = 1
+	}
+	CUU_spanish_visitors = {
+		missionaries = 1
+	}
+	CUU_fortified_for_war = {
+		leader_naval_fire = 1
+	}
+	studying_the_wreckage = {
+		idea_cost = -0.05
+		mil_tech_cost_modifier = -0.10
+	}
+	forging_our_own_path = {
+		prestige_decay = -0.01
+	}
+}
+
+KSR_ideas = { # Kosrae
+	start = {
+		global_missionary_strength = 0.02
+		global_spy_defence = 0.20
+	}
+
+	bonus = {
+		tolerance_own = 2
+	}
+
+	trigger = {
+			tag = KSR
+	}
+	free = yes		#will be added at load.
+
+	FSM_chamorro_contact = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	KSR_leluh = {
+		technology_cost = -0.10
+	}
+	isokelekel = {
+		years_of_nationalism = -5
+	}
+	mehin_nahnmwarki = {
+		diplomatic_upkeep = 1
+		vassal_forcelimit_bonus = 1
+	}
+	bully_hayes_routed = {
+		global_unrest = -1
+	}
+	hayes_treasure = {
+		loot_amount = 0.25
+	}
+	KSR_conservative_society = {
+		papal_influence = 1
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.10
+		missionary_maintenance_cost = -0.15
+	}
+}
+
+PNP_ideas = { # Pohnpei
+	start = {
+		defensiveness = 0.10
+		capture_ship_chance = 0.20
+	}
+
+	bonus = {
+		fort_maintenance_modifier = -0.10
+	}
+
+	trigger = {
+			tag = PNP
+	}
+	free = yes		#will be added at load.
+
+	FSM_chamorro_contact = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	mwehin_kawa = {
+		diplomatic_annexation_cost = -0.10
+		vassal_income = 0.25
+	}
+	mwehin_sau_deleur = {
+		reduced_liberty_desire = 10
+	}
+	mehin_nahnmwarki = {
+		diplomatic_upkeep = 1
+	}
+	venice_of_the_pacific = {
+		light_ship_power = 0.10
+	}
+	PNP_rout_the_colonizers = {
+		prestige = 0.5
+		enemy_core_creation = 0.25
+	}
+	PNP_spanish_wall = {
+		garrison_size = 0.25
+	}
+}
+
+YAP_ideas = { # Yap
+	start = {
+		same_culture_advisor_cost = -0.20
+		global_regiment_cost = -0.05
+	}
+
+	bonus = {
+		mercenary_cost = -0.10
+	}
+
+	trigger = {
+			tag = YAP
+	}
+	free = yes		#will be added at load.
+
+	FSM_chamorro_contact = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	YAP_island_tributaries = {
+		diplomats = 1
+		envoy_travel_time = -0.25
+	}
+	YAP_polynesian_settlement = {
+		global_colonial_growth = 15
+	}
+	micronesian_empire = {
+		native_uprising_chance = -0.50
+		native_assimilation = 0.50
+	}
+	payment_in_stone = {
+		global_tax_modifier = 0.10
+	}
+	YAP_defending_the_isles = {
+		light_ship_cost = -0.10
+		sunk_ship_morale_hit_recieved = -0.10
+	}
+	YAP_bartering_for_goods = {
+		trade_efficiency = 0.10
+	}
+}
+
+MSH_ideas = { # Marshall Islands
+	start = {
+		global_heretic_missionary_strength = 0.02
+		blockade_efficiency = 0.33
+	}
+
+	bonus = {
+		naval_attrition = -0.20
+	}
+
+	trigger = {
+			tag = MSH
+	}
+	free = yes		#will be added at load.
+
+	MSH_micronesian_colonists = {
+		may_explore = yes
+		range = 0.20
+	}
+	jolet_jen_anij = {
+		tolerance_own = 2
+	}
+	jaluit_company = {
+		global_prov_trade_power_modifier = 0.10
+	}
+	iroij = {
+		governing_capacity_modifier = 0.10
+		church_loyalty_modifier = 0.10
+	}
+	MSH_pacific_installations = {
+		mil_tech_cost_modifier = -0.10
+	}
+	MSH_protocol_of_rome = {
+		heavy_ship_power = 0.10
+	}
+	enewetak_test = {
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+}
+
+PAU_ideas = { # Palau
+	start = {
+		min_autonomy_in_territories = 0.20
+		global_unrest = -1
+	}
+
+	bonus = {
+		global_trade_power = 0.1
+	}
+
+	trigger = {
+			tag = PAU
+	}
+	free = yes		#will be added at load.
+
+	PAU_trinidad = {
+		global_sailors_modifier = 0.20
+	}
+	melanesia_and_asia = {
+		num_accepted_cultures = 2
+	}
+	paul_klein = {
+		prestige_from_naval = 1
+	}
+	filipino_governance = {
+		global_institution_spread = 0.10
+	}
+	peleliu = {
+		naval_morale = 0.15
+	}
+	palauan_above_micronesian = {
+		culture_conversion_cost = -0.20
+		stability_cost_modifier = -0.10
+	}
+	nauru_agreement = {
+		global_prov_trade_power_modifier = 0.10
+		embargo_efficiency = 0.10
+	}
+}
+
+## Pacific Islands ideas

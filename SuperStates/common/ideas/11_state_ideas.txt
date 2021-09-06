@@ -1,0 +1,2747 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### US States National Ideals
+
+#Acadiana
+
+CJN_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		global_heretic_missionary_strength = 0.02
+	}
+	
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	trigger = {
+		tag = CJN
+	}
+	free = yes
+	
+	hurricane_proof = {
+		global_ship_cost = -0.20
+		leader_naval_manuever = 1
+	}
+	cajun_diversity = {
+		num_accepted_cultures = 1
+		religious_unity = 0.33
+	}
+	joie_de_vivre = {
+		prestige_decay = -0.01
+	}
+	atchafalaya_river = {
+		trade_efficiency = 0.10
+		trade_range_modifier = 0.10
+	}
+	tollways_between_markets = {
+		global_tax_modifier = 0.10
+	}
+	mardi_gras_parades2 = {
+		global_unrest = -2
+	}
+
+	save_up_the_home = {
+		years_of_nationalism = -5
+		enemy_core_creation = 0.50
+	}
+}
+
+#Alaska
+
+ALA_ideas = {
+	start = {
+		production_efficiency = 0.10
+		core_creation = -0.10
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = ALA
+			tag = ALU
+			}
+	}
+	free = yes		#will be added at load.
+	
+	alaskan_warfare = {
+		land_attrition = -0.20
+	}
+	mineral_rights = {
+		global_tax_modifier = 0.15
+	}
+	ursa_major = {
+		shock_damage_received = -0.10
+	}
+	mount_denali = {
+		defensiveness = 0.20
+	}
+	frontiersmen = {
+		colonists = 1
+	}
+	marine_highway = {
+		leader_naval_manuever = 1
+	}
+	remote_territory = {
+		hostile_attrition = 1.0
+		enemy_core_creation = 0.50
+	}
+}
+
+#Alabama
+
+ALM_ideas = {
+	start = {
+		movement_speed = 0.15
+		production_efficiency = 0.10
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+	
+	trigger = {
+			tag = ALM
+	}
+	free = yes		#will be added at load.
+
+	heart_of_dixie = {
+		religious_unity = 0.25
+	}
+	commerce_raiders = {
+		heavy_ship_power = 0.10
+	}
+	centralize_all_government = {
+		yearly_corruption = -0.10
+	}
+	alamaba_pride = {
+		manpower_recovery_speed = 0.15
+	}
+	yellowhammer = {
+		infantry_power = 0.10
+		artillery_power = 0.10
+	}
+	mobile_bay = {
+		global_ship_recruit_speed = -0.15
+	}
+	alabama_crimson = {
+		discipline = 0.05
+	}
+}
+
+#Arkansas
+
+ARS_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		infantry_power = 0.10
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.20
+	}
+
+	trigger = {
+		OR = {
+			tag = ARS
+			tag = OZK
+			}
+	}
+	free = yes		#will be added at load.
+
+	ozark_hillbillies = {
+		infantry_cost = -0.20
+	}
+	razorbacks = {
+		cavalry_power = 0.10
+	}
+	lessons_from_little_rock = {
+		discipline = 0.05
+	}
+	judge_parker = {
+		global_unrest = -1
+	}
+	the_family = {
+		stability_cost_modifier = -0.10
+	}
+	devils_backbone = {
+		leader_land_shock = 1
+	}	
+	arkansan_pledge = {
+		global_manpower_modifier = 0.20
+	}
+}
+
+#Arizona/Baja Arizona
+
+ARZ_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.20
+		improve_relation_modifier = 0.30
+	}
+	
+	bonus = {
+		leader_siege = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = ARZ
+			tag = BAZ
+		}
+	}
+	free = yes		#will be added at load.
+
+	phoenix_rising = {
+		prestige_decay = -0.01
+		army_tradition = 0.5
+	}
+	central_arizona_project = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	az_desert_warfare = {
+		land_attrition = -0.15
+		hostile_attrition = 1.0
+	}
+	cultural_acceptance = {
+		num_accepted_cultures = 2
+	}
+	kofa_mine = {
+		development_cost = -0.10
+	}
+	cochise_stronghold = {
+		defensiveness = 0.15
+	}
+	barry_goldwaters_military_reforms = {
+		discipline = 0.05
+	}
+}
+
+#California
+
+CAL_ideas = {
+	start = {
+		global_tax_modifier = 0.20
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.20
+	}
+
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = SFB
+			tag = SJV
+			tag = SCL
+			}
+	}
+	free = yes		#will be added at load.
+	
+	san_francisco_financials = {
+		inflation_reduction = 0.10
+	}
+	port_of_long_beach = {
+		merchants = 1
+		global_ship_repair = 0.10
+	}
+	CAL_california_republic = {
+		discipline = 0.05
+	}
+	los_angeles_water_district = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	hollywood = {
+		prestige_decay = -0.02
+	}
+	tule_fog = {
+		leader_land_shock = 1
+		leader_land_manuever = 1
+	}
+	the_melting_pot = {
+		no_religion_penalty = yes
+	}
+}
+
+#Colorado/Rocky Mountain
+
+CLO_ideas = {
+	start = {
+		build_cost = -0.15
+		same_culture_advisor_cost = -0.20
+	}
+	
+	bonus = {
+		leader_siege = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = CLO
+			tag = NCO
+			AND = {
+				tag = RKY
+				primary_culture = coloradan
+			}
+		}
+	}
+	free = yes		#will be added at load.
+
+	boulder_brewery = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	aquilegia_caerulea = {
+		culture_conversion_cost = -0.20
+	}
+	colorado_rockies = {
+		hostile_attrition = 1
+	}	
+	flatirons = {
+		shock_damage_received = -0.10
+	}
+	high_plains_grain = {
+		land_forcelimit_modifier = 0.20
+	}
+	cheyenne_mountain = {
+		defensiveness = 0.20
+	}
+	territory_of_jefferson = {
+		stability_cost_modifier = -0.15
+	}
+}
+
+#Connecticut
+
+CUT_ideas = {
+	start = {
+		idea_cost = -0.10
+		development_cost = -0.10
+	}
+	
+	bonus = {
+		navy_tradition = 1
+	}	
+
+	trigger = {
+		tag = CUT
+	}
+	free = yes		#will be added at load.
+	
+	hedge_funds = {
+		inflation_reduction = 0.05
+		build_cost = -0.10
+	}
+	abolish_county_government = {
+		global_tax_modifier = 0.10
+	}
+	colts_manufacturing_company = {
+		fire_damage = 0.10
+	}
+	long_island_sound = {
+		global_trade_power = 0.10
+		trade_efficiency = 0.10
+	}
+	new_england_industrial_revolution = {
+		technology_cost = -0.10
+	}
+	fundamental_orders = {
+		global_unrest = -1
+	}
+	charter_oak = {
+		stability_cost_modifier = -0.10
+	}
+}
+
+#Delaware
+
+DEL_ideas = {
+	start = {
+		prestige = 1
+		global_unrest = -1
+	}
+	
+	bonus = {
+		technology_cost = -0.10
+	}
+
+	trigger = {
+		OR = {
+			tag = DEL
+			tag = DMV
+		}
+	}
+	free = yes		#will be added at load.
+	
+	caesar_rodneys_ride = {
+		leader_land_manuever = 1
+	}	
+	delaware_blues = {
+		infantry_power = 0.10
+	}		
+	court_of_chancery_jurisprudence = {
+		trade_efficiency = 0.05
+		production_efficiency = 0.10
+	}
+	delaware_bay = {
+		global_ship_cost = -0.15
+		global_ship_recruit_speed = -0.15
+	}		
+	rein_in_the_county_governments = {
+		yearly_corruption = -0.10
+	}
+	business_friendly_environment = {
+		global_trade_power = 0.15
+	}
+	delaware_corporations = {
+ 		global_tax_modifier = 0.20
+	}
+}
+
+#Washington, DC
+
+WDC_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		diplomats = 1
+	}
+	
+	bonus = {
+		monarch_diplomatic_power = 1
+	}
+	
+	trigger = {
+		tag = WDC
+	}
+	free = yes		#will be added at load.
+	
+	soldiers_of_fortune = {
+		mercenary_cost = -0.10
+		mercenary_manpower = 0.25
+	}
+	centralized_government = {
+		global_tax_modifier = 0.10
+		state_maintenance_modifier = -0.10
+	}
+	ordained_capital = {
+		diplomatic_reputation = 2
+	}
+	civic_monuments = {
+		development_cost = -0.10
+		build_cost = -0.10
+	}
+	never_to_be_burned_again = {
+		defensiveness = 0.20
+	}
+	potomac_river = {
+		trade_efficiency = 0.10
+	}
+	charters_of_freedom = {
+		stability_cost_modifier = -0.20
+	}
+}
+
+#Florida
+
+FLO_ideas = {
+	start = {
+		technology_cost = -0.05
+		development_cost = -0.10
+	}
+	
+	bonus = {
+		free_adm_policy = 1
+	}
+	
+	trigger = {
+	OR = {
+		tag = FLO
+		tag = SFL
+		tag = WFL
+		tag = EFL
+		tag = MIA
+		tag = MSK
+	}
+		}
+	free = yes		#will be added at load.
+	
+	seminole_spirit = {
+		land_morale = 0.15
+	}
+	buccaneers = {
+		may_perform_slave_raid = yes
+		heavy_ship_power = 0.10
+	}
+	ponce_de_leon = {
+		colonists = 1
+	}
+	reedy_creek_improvement_district = {
+		global_trade_goods_size_modifier = 0.20
+	}
+	everglades = {
+		defensiveness = 0.10
+		hostile_attrition = 1.0
+	}
+	port_canaveral = {
+		navy_tradition = 1
+		global_colonial_growth = 15
+	}
+	biscayne_bay = {
+		global_trade_power = 0.20
+	}	
+}
+ 
+#Georgia
+ 
+GRG_ideas = {
+	start = {
+		manpower_recovery_speed = 0.10
+		trade_efficiency = 0.10
+	}
+	
+	bonus = {
+		global_foreign_trade_power = 0.10
+	}
+	
+	trigger = {
+	OR = {
+		tag = GRG
+		tag = SGR
+		#tag = NCK
+		}
+	}
+	free = yes		#will be added at load.
+	
+	the_ebenezer_church= {
+		stability_cost_modifier = -0.10
+		church_power_modifier = 0.10
+		monthly_fervor_increase = 0.25
+		papal_influence = 1
+	}
+	whitneys_cotton_gin = {
+		production_efficiency = 0.20
+	}
+	debtor_colony = {
+		interest = -0.5
+		inflation_reduction = 0.05
+	}
+	savannah_river = {
+		global_ship_cost = -0.10
+		naval_morale = 0.15
+	}
+	hazzard_county_boys = {
+		cavalry_power = 0.15
+	}
+	pharmacy_invention = {
+		global_trade_power = 0.10
+	}
+	georgia_bulldogs = {
+		infantry_power = 0.15
+	}
+}
+
+#Guam
+
+GUM_ideas = {
+	start = {
+		ship_durability = 0.10
+		diplomats = 1
+	}
+	
+	bonus = {
+		merchants = 1
+	}
+	
+	trigger = {
+		tag = GUM
+	}
+	free = yes		#will be added at load.
+	
+	legacy_of_magellan1 = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	island_tourism1 = {
+		global_prov_trade_power_modifier = 0.20
+	}
+	chamorro_colonists = {
+		colonists = 1
+		naval_morale = 0.15
+	}
+	feats_of_strength1 = {
+		heavy_ship_power = 0.10
+		light_ship_power = 0.10
+	}
+	gadao1 = {
+		leader_naval_manuever = 1
+	}
+	apra_harbor = {
+		naval_maintenance_modifier = -0.10
+	}
+	chenchule1 = {
+		global_autonomy = -0.05
+	}
+}
+
+#Hawaii
+
+HAW_ideas = {
+	start = {
+		leader_land_shock = 1
+		ship_durability = 0.05
+	}
+	
+	bonus = {
+		navy_tradition_decay = -0.02
+	}
+	
+	trigger = {
+		tag = HAW
+	}
+	free = yes		#will be added at load.
+
+	pearl_harbor = {
+		naval_morale = 0.10
+		naval_attrition = -0.10
+	}
+	kilaueas_expansion = {
+		may_explore = yes
+		colonists = 1
+	}
+	streamlined_government = {
+		state_maintenance_modifier = -0.25
+	}
+	night_marchers = {
+		shock_damage = 0.05
+		shock_damage_received = -0.05
+	}
+	culture_of_friendship = {
+		stability_cost_modifier = -0.15
+	}
+	kamehamehas_leadership = {
+		fire_damage = 0.10
+	}
+	iolani_palace = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+}
+
+#Idaho
+
+IDA_ideas = {
+	start = {
+		tolerance_heretic = 3
+		embracement_cost = -0.10
+	}
+	
+	bonus = {
+		technology_cost = -0.10
+	}
+	
+	trigger = {
+	OR = {
+		tag = IDA
+		tag = KOO
+		}
+	}
+	free = yes		#will be added at load.
+	
+	gemstones = {
+		global_tax_modifier = 0.10
+	}
+	minidoka_project = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	multicultural_pioneers = {
+		num_accepted_cultures = 1
+		same_culture_advisor_cost = -0.25
+	}
+	snake_river_plain = {
+		manpower_recovery_speed = 0.10
+		land_forcelimit_modifier = 0.10
+	}
+	boise_grocer_family = {
+		global_prov_trade_power_modifier = 0.20
+	}
+	blue_turf = {
+		infantry_power = 0.10
+	}
+	famous_potatoes = {
+		land_attrition = -0.15
+	}
+}
+
+#Illinois
+
+ILI_ideas = {
+	start = {
+		global_trade_power = 0.10
+		state_maintenance_modifier = -0.25
+	}
+	
+	bonus = {
+		inflation_reduction = 0.10
+	}
+	
+	trigger = {
+		OR = {
+		tag = ILI
+		tag = CCK
+		tag = ILS
+		tag = FOG
+			}
+	}
+	free = yes
+	
+	deeres_steel_plow = {
+		global_manpower_modifier = 0.15
+	}
+	blackhawks = {
+		discipline = 0.05
+		cavalry_power = 0.10
+	}
+	windy_city = {
+		development_cost = -0.10
+	}
+	standardized_building_code = {
+		build_cost = -0.15
+	}
+	liquor_control_commission = {
+		global_tax_modifier = 0.10
+	}
+	illinois_volunteers = {
+		manpower_recovery_speed = 0.20
+	}
+	the_machine = {
+		advisor_cost = -0.15
+		advisor_pool = 1
+	}
+}
+
+#Indiana
+
+IND_ideas = {
+	start = {
+		infantry_power = 0.10
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		core_creation = -0.20
+	}
+	
+	trigger = {
+		tag = IND
+	}
+	free = yes
+
+	hoosier_hospitality = {
+		improve_relation_modifier = 0.30
+	}
+	engineering_at_the_brickyard = {
+		technology_cost = -0.05
+	}
+	hoosier_basketball = {
+		discipline = 0.05
+	}
+	george_clarks_ghost = {
+		leader_land_fire = 1
+	}
+	mammoth_internal_improvement_act = {
+		trade_efficiency = 0.10
+	}
+	state_bank_of_indiana = {
+		interest = -1
+	}
+	crossroads_of_america = {
+		trade_range_modifier = 0.20
+	}
+}
+
+#Iowa
+
+IOW_Ideas = {
+	start = {
+		state_maintenance_modifier = -0.15
+		global_trade_goods_size_modifier = 0.05
+	}
+	
+	bonus = {
+		trade_efficiency = 0.10
+	}
+	
+	trigger = {
+		tag = IOW
+	}
+	free = yes
+	
+	corn_production = {
+		global_manpower_modifier = 0.33
+	}
+	iowa_caucus = {
+		improve_relation_modifier = 0.33
+	}
+	hawkeyes = {
+		cavalry_power = 0.15
+	}
+	council_for_defense = {
+		army_tradition = 0.5
+		discipline = 0.03
+	}
+	new_purchase_lands = {
+		tolerance_heretic = 1
+		religious_unity = 0.25
+	}
+	iowa_state_fair = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	chief_mahaskas_tactics = {
+		leader_land_manuever = 1
+	}
+}
+
+#Jefferson (California/Oregon)
+
+JEF_ideas = {
+	start = {
+		global_ship_cost = -0.10
+		adm_tech_cost_modifier = -0.10
+	}
+
+	bonus = {
+		ae_impact = -0.20
+	}
+	
+	trigger = {
+		tag = JEF
+	}
+	free = yes		#will be added at load.
+	
+	thursday_holidays = {
+		prestige = 1
+	}
+	the_double_cross = {
+		trade_steering = 0.25
+		global_own_trade_power = 0.10
+	}
+	republic_of_the_pacific = {
+		heavy_ship_power = 0.15
+	}
+	cascade_range3 = {
+		defensiveness = 0.15
+	}
+	new_road_investments = {
+		trade_efficiency = 0.10
+		movement_speed = 0.15
+	}
+	dedicated_people = {
+		global_regiment_cost = -0.15
+	}
+	state_of_mind = {
+		stability_cost_modifier = -0.20
+	}
+}
+
+#Kansas
+
+KNS_Ideas = {
+	start = {
+		global_unrest = -1
+		land_attrition = -0.10
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.10
+	}
+	
+	trigger = {
+		OR = {
+		tag = KNS
+		tag = WSK
+			}
+	}
+	free = yes
+	
+	land_of_john_brown = {
+		global_autonomy = -0.05
+	}
+	dodge_city = {
+		army_tradition = 0.5
+	}	
+	bleeding_kansas = {
+		ae_impact = -0.10
+		fabricate_claims_cost= -0.25
+	}
+	agricultural_heartland = {
+		reinforce_cost_modifier = -0.25
+	}
+	were_not_in_kansas_anymore = {
+		core_creation = -0.25
+	}
+	the_brown_case = {
+		idea_cost = -0.05
+	}
+	sunflower_state = {
+		diplomatic_upkeep = 1
+	}
+}
+
+#Kentucky
+
+KEN_Ideas = {
+	start = {
+		global_regiment_cost = -0.10
+		war_exhaustion = -0.02
+	}
+	
+	bonus = {
+		army_tradition = 0.5
+	}
+	
+	trigger = {
+		OR = {
+			tag = KEN
+			tag = TRN
+		}
+	}
+	free = yes
+	
+	the_derby = {
+		movement_speed = 0.15
+		cavalry_cost = -0.10 
+	}
+	coal_production = {
+		production_efficiency = 0.10
+	}
+	derby_training = {
+		cavalry_power = 0.33
+		cav_to_inf_ratio = 0.10
+	}
+	the_mccoys = {
+		global_manpower_modifier = 0.25
+		infantry_power = 0.10
+	}
+	equus_caballus = {
+		discipline = 0.05
+	}
+	fort_knox = {
+		inflation_reduction = 0.10
+	}
+	abraham_lincoln = {
+		possible_adm_policy = 1
+	}
+}
+
+#Louisiana
+
+LOU_ideas = {
+	start = {
+		religious_unity = 0.50
+		global_heretic_missionary_strength = 0.02
+	}
+	
+	bonus = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+	
+	trigger = {
+		tag = LOU
+	}
+	free = yes
+	
+	lake_pontchartrain = {
+		leader_naval_manuever = 1
+		global_ship_cost = -0.10
+	}
+	mardi_gras_parades = {
+		global_unrest = -2
+	}
+	cajun_influence = {
+		num_accepted_cultures = 2
+	}
+	french_quarter = {
+		prestige_decay = -0.01
+	}
+	mississippi_estuary = {
+		trade_steering = 0.25
+		trade_range_modifier = 0.10
+	}
+	river_traffic = {
+		global_tax_modifier = 0.10
+	}
+	defense_of_new_orleans = {
+		army_tradition = 0.5
+	}
+}
+
+#Maine
+
+MNE_ideas = {
+	start = {
+		garrison_size = 0.25
+		global_autonomy = -0.05
+	}
+	
+	bonus = {
+		sunk_ship_morale_hit_recieved = -0.20
+	}
+	
+	trigger = {
+		tag = MNE
+	}
+	free = yes
+	
+	fishing_grounds = {
+		navy_tradition = 1
+	}
+	trawler_experience = {
+		naval_morale = 0.20
+	}
+	pine_tree_state = {
+		build_cost = -0.10
+		global_ship_cost = -0.10
+	}
+	kittery_shipyard = {
+		ship_durability = 0.10
+	}
+	acadian_influence = {
+		diplomats = 1
+	}
+	bar_harbor = {
+		prestige = 1
+	}
+	aroostook_dispute = {
+		infantry_power = 0.10
+	}
+}
+
+#Maryland
+
+MYD_ideas = {
+	start = {
+		yearly_corruption = -0.10
+		global_ship_trade_power = 0.20
+	}
+	
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+	
+	trigger = {
+		OR = {
+			tag = MYD
+			tag = WML
+			tag = MMD
+			}
+	}
+	free = yes
+	
+	lord_calverts_followers = {
+		religious_unity = 0.33
+	}
+	chesapeake_bay1 = {
+		trade_range_modifier = 0.10
+		global_ship_recruit_speed = -0.10
+	}
+	annapolis_naval_academy = {
+		leader_naval_manuever = 1
+		naval_morale = 0.15
+	}
+	port_of_baltimore = {
+		merchants = 1
+	}
+	quoth_the_raven = {
+		prestige_decay = -0.01
+	}
+	declaration_of_rights = {
+		stability_cost_modifier = -0.15
+	}
+	the_b_and_o = {
+		dip_tech_cost_modifier = -0.10
+	}
+}
+
+#Massachusetts
+
+MSS_ideas = {
+	start = {
+		global_institution_spread = 0.25
+		development_cost = -0.10
+	}
+	
+	bonus = {
+		artillery_fire = 1
+	}
+	
+	trigger = {
+		OR = {
+		tag = MSS
+		tag = MSL
+		tag = BOT
+		tag = ESX
+		tag = WMA
+			}
+	}
+	free = yes
+	
+	boston_harbor = {
+		merchants = 1
+	}
+	taxation_with_representation1 = {
+		global_tax_modifier = 0.15
+	}
+	prestigious_universities = {
+		technology_cost = -0.10
+	}
+	perfect_storm = {
+		leader_naval_manuever = 1
+		naval_morale = 0.10
+	}
+	boston_tea_party = {
+		prestige = 0.5
+		prestige_decay = -0.01
+	}
+	naval_design_school = {
+		ship_durability = 0.05
+	}
+	center_for_engineering = {
+		idea_cost = -0.10
+	}
+}
+
+#Michigan/Superior
+
+MIC_ideas = {
+	start = {
+		build_cost = -0.15
+		infantry_power = 0.10
+	}
+	
+	bonus = {
+		global_unrest = -2
+	}
+	
+	trigger = {
+		OR = {
+			tag = MIC
+			tag = YPR
+			tag = KBI
+		}
+	}
+	free = yes
+	
+	the_boy_governor = {
+		stability_cost_modifier = -0.20
+	}
+	assembly_lines = {
+		technology_cost = -0.10
+	}
+	industrial_patriarchs = {
+		prestige_decay = -0.01
+	}
+	ambassador_bridge = {
+		diplomatic_reputation = 1
+	}
+	soo_line = {
+		trade_range_modifier = 0.10
+	}
+	land_of_resources = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	cereals_of_battle_creek = {
+		recover_army_morale_speed = 0.10
+		land_forcelimit_modifier = 0.10
+	}
+}
+
+#Minnesota
+
+MNN_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.10
+		fort_maintenance_modifier = -0.15
+	}
+	
+	bonus = {
+		land_attrition = -0.15
+	}
+	
+	trigger = {
+		tag = MNN
+	}
+	free = yes
+	
+	land_o_lakes = {
+		war_exhaustion = -0.02
+	}
+	minnesota_nice = {
+		stability_cost_modifier = -0.10
+		caravan_power = 0.15
+	}
+	gopher_state = {
+		defensiveness = 0.15
+	}
+	letoile_du_nord = {
+		leader_land_fire = 1
+	}
+	twin_cities = {
+		diplomats = 1
+	}
+	timberwolves = {
+		infantry_power = 0.10
+	}
+	minnesota_milling = {
+		production_efficiency = 0.15
+ 	}
+}
+
+#Mississippi
+
+MPP_ideas = {
+	start = {
+		infantry_power = 0.10
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = MPP
+	}
+	free = yes
+	
+	ole_miss = {
+		institution_spread_from_true_faith = 0.10
+	}
+	port_of_gulfport = {
+		merchants = 1
+	}
+	king_cotton = {
+		production_efficiency = 0.10
+	}
+	delta_blues = {
+		tolerance_own = 2
+	}
+	blues_trail = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	glorious_military_history = {
+		leader_land_fire = 1
+	}
+	mississippi_delta = {
+		trade_range_modifier = 0.30
+	}
+}
+
+#Missouri
+
+MOU_ideas = {
+	start = {
+		harsh_treatment_cost = -0.15
+		trade_steering = 0.10
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = MOU
+	}
+	free = yes
+	
+	the_gateway_in_st_louis = {
+		prestige_decay = -0.01
+	}
+	opportunistic_warfare = {
+		merc_maintenance_modifier = -0.15
+	}
+	state_guard = {
+		discipline = 0.05
+	}
+	anheuser_busch = {
+		global_unrest = -2
+	}
+	university_of_science_and_technology = {
+		technology_cost = -0.05
+		idea_cost = -0.10
+	}
+	mormon_expulsion = {
+		global_missionary_strength = 0.02
+	}
+	pioneers = {
+		caravan_power = 0.20
+		movement_speed = 0.05
+	}
+}
+
+#Montana
+
+MNT_ideas = {
+	start = {
+		province_warscore_cost = -0.15
+		hostile_attrition = 1
+	}
+	
+	bonus = {
+		max_absolutism = 10
+	}
+	
+	trigger = {
+	OR = {
+		tag = MNT
+		tag = CPP
+		}
+	}
+	free = yes
+	
+	state_treasures = {
+		global_tax_modifier = 0.10
+	}
+	glacier_park = {
+		prestige = 1
+	}
+	big_sky_country = {
+		governing_capacity_modifier = 0.15
+	}
+	lessons_from_custer = {
+		discipline = 0.05
+	}
+	little_big_horn = {
+		army_tradition_from_battle = 0.50
+	}
+	rogers_pass = {
+		leader_land_manuever = 1
+	}
+	copper_mining_kings = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
+
+#Nebraska
+
+NEB_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		ae_impact = -0.10
+	}
+	
+	bonus = {
+		global_autonomy = -0.05
+	}
+	
+	trigger = {
+	OR = {
+		tag = NEB
+		tag = WNB
+		}
+	}
+	free = yes
+	
+	bailey_yard = {
+		global_regiment_cost = -0.10
+	}
+	reformation_of_the_legislature = {
+		state_maintenance_modifier = -0.25
+	}
+
+	rural_growth = {
+		development_cost = -0.10
+	}
+	cornhuskers = {
+		fire_damage_received = -0.10
+	}
+	actuaries = {
+		interest = -1
+	}
+	edwin_perkins = {
+		merchants = 1
+	}
+	militia_drills = {
+		recover_army_morale_speed = 0.05
+	}
+		
+}
+
+#Nevada
+
+NVA_ideas = {
+	start = {
+		inflation_reduction = 0.10
+		war_exhaustion = -0.02
+	}
+	
+	bonus = {
+		harsh_treatment_cost = -0.20
+	}
+	
+	trigger = {
+	OR = {
+		tag = NVA
+		tag = NTQ
+		tag = LSV
+		}
+	}
+	free = yes
+	
+	cities_of_glory = {
+		prestige = 1
+	}
+	battle_born = {
+		army_tradition = 0.5
+	}
+	comstock_lode = {
+		technology_cost = -0.05
+		development_cost = -0.05
+	}
+	luck_of_the_draw = {
+		yearly_corruption = -0.10
+		native_uprising_chance = -0.25
+		capture_ship_chance = 0.20
+		female_advisor_chance = 0.50
+		heir_chance = 0.50
+		colonist_placement_chance = 0.05
+	}
+	deserts_and_dry_lake = {
+		defensiveness = 0.20
+	}
+	libertarianism = {
+		years_of_nationalism = -5
+		global_autonomy = -0.05
+	}
+	area_51 = {
+		mil_tech_cost_modifier = -0.10
+	}
+}
+
+#New Hampshire
+
+NWH_ideas = {
+	start = {
+		merchants = 1
+		diplomats = 1
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = NWH
+	}
+	free = yes
+	
+	new_hampshire_primary = {
+		diplomatic_reputation = 1
+	}
+	granite_state = {
+		shock_damage = 0.10
+		garrison_size = 0.15
+	}
+	portsmouth_alarm = {
+		spy_offence = 0.20
+		envoy_travel_time = -0.25
+	}
+	live_free_or_die = {
+		years_of_nationalism = -5
+		enemy_core_creation = 0.25
+	}
+	prosperous_citizens = {
+		global_unrest = -1
+	}
+	bretton_woods_conference = {
+		free_adm_policy = 1
+	}
+	volunteer_legislature = {
+		yearly_corruption = -0.10
+	}
+}
+
+#New Jersey
+
+NJY_ideas = {
+	start = {
+		advisor_cost = -0.15
+		development_cost = -0.10	
+	}
+	
+	bonus = {
+		free_mil_policy = 1
+	}
+	
+	trigger = {
+		OR = {
+		tag = NJY
+		tag = SNJ
+			}
+	}
+	free = yes
+	
+	philadelphia_and_new_york_markets = {
+		trade_efficiency = 0.10
+		global_ship_trade_power = 0.10
+	}
+	port_of_newark = {
+		merchants = 1
+	}
+	jersey_devil = {
+		leader_land_shock = 1
+	}
+	edisons_legacy = {
+		embracement_cost = -0.10
+		global_institution_spread = 0.05
+	}
+	crossroads_of_revolution = {
+		mercenary_cost = -0.15
+		mercenary_discipline = 0.025
+	}
+	atlantic_city = {
+		prestige_decay = -0.01	
+	}
+	jersey_produce = {
+		production_efficiency = 0.20
+	}
+}
+
+#New Mexico
+
+NMX_ideas = {
+	start = {
+		global_spy_defence = 0.20
+		missionaries = 1
+	}
+	
+	bonus = {
+		tolerance_own = 2
+	}
+	
+	trigger = {
+		tag = NMX
+	}
+	free = yes
+	
+	trinity_site = {
+		idea_cost = -0.05
+	}
+	spanish_influence = {
+		global_missionary_strength = 0.02
+	}
+	adobe_construction = {
+		development_cost = -0.10
+	}
+	kit_carsons_leadership = {
+		fire_damage = 0.10
+	}
+	observing_the_stars = {
+		technology_cost = -0.10
+	}
+	mining_taxes = {
+		global_tax_modifier = 0.15
+	}
+	dryland_agriculture_practices = {
+		production_efficiency = 0.10
+	}
+	
+}
+
+#New York State/New York City
+
+NYS_ideas = {
+	start = {
+		free_leader_pool = 1
+		trade_efficiency = 0.15
+	}
+	
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+	
+	trigger = {
+	OR = {
+		tag = NYS
+		tag = NYC
+		tag = LLI
+		}
+	}
+	free = yes
+	
+	financial_center = {
+		inflation_reduction = 0.10
+		interest = -1.0
+	}
+	sons_of_liberty = {
+		global_spy_defence = 0.20
+		spy_offence = 0.10
+	}
+	a_soldiers_foot = {
+		army_tradition = 0.50
+	}
+	marble_decor_capitol = {
+		prestige_decay = -0.01
+		diplomatic_reputation = 1
+	}
+	junction_for_information = {
+		technology_cost = -0.05
+	}
+	statue_of_liberty = {
+		ae_impact = -0.15
+	}
+	halls_of_diplomacy = {
+		diplomats = 1
+		diplomatic_upkeep = 1
+	}
+}
+
+#Niagara (Western New York)
+
+WNY_ideas = {
+	start = {
+		diplomats = 1
+		discipline = 0.03
+	}
+	
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	
+	trigger = {
+		tag = WNY
+	}
+	free = yes
+	
+	mighty_niagara_river = {
+		defensiveness = 0.25
+	}
+	between_the_lakes = {
+		merchants = 1
+	}
+	terminus_of_the_great_canalway = {
+		build_cost = -0.10
+		global_institution_spread = 0.10
+	}
+	forged_from_the_blizzard = {
+		leader_land_fire = 1
+	}
+	not_rusting = {
+		global_tax_modifier = 0.10
+	}
+	new_defenders_of_the_western_door = {
+		land_morale = 0.10
+	}
+	links_to_the_sea = {
+		trade_range_modifier = 0.20
+	}
+}
+
+#North Carolina
+
+NCR_ideas = {
+	start = {
+		land_morale = 0.10
+		reinforce_speed = 0.20
+	}
+	
+	bonus = {
+		stability_cost_modifier = -0.25
+	}
+	
+	trigger = {
+		OR = {
+			tag = NCR
+			tag = WSC
+			AND = {
+				tag = CRL
+				primary_culture = north_carolinian
+			}
+		}
+	}
+	free = yes
+	
+	earnhardts_horses = {
+		cavalry_power = 0.15
+	}
+	ghosts_of_roanoke = {
+		core_creation = -0.15
+	}
+	wilmington_port = {
+		global_ship_cost = -0.20
+		global_ship_recruit_speed = -0.1
+	}
+	inspirational_naval_lore = {
+		leader_naval_manuever = 1
+	}
+	tobacco_trading = {
+		trade_efficiency = 0.10
+	}
+	biltmore_estate = {
+		improve_relation_modifier = 0.30
+	}
+	research_triangle = {
+		technology_cost = -0.10
+	}
+}
+
+#North Dakota
+
+NDK_ideas = {
+	start = {
+		war_exhaustion_cost = -0.10
+		culture_conversion_cost = -0.20
+	}
+	
+	bonus = {
+		core_creation = -0.20
+	}
+	
+	trigger = {
+		OR = {
+			tag = NDK
+			AND = {
+				tag = DAK
+				primary_culture = north_dakotan
+			}
+		}
+	}
+	free = yes
+	
+	german_influence = {
+		global_institution_spread = 0.15
+	}
+	red_river_north_valley = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	fertile_land = {
+		manpower_recovery_speed = 0.15
+	}
+	the_peace_garden = {
+		global_unrest = -1
+		autonomy_change_time = -0.20
+	}
+	uniform_state_address_system = {
+		global_tax_modifier = 0.10
+		state_maintenance_modifier = -0.15
+	}
+	mining_college = {
+		technology_cost = -0.05
+	}
+	spirit_of_the_tribes = {
+		land_morale = 0.10
+	}
+}
+
+#Northern Mariana Islands
+
+NMI_ideas = {
+	start = {
+		global_sailors_modifier = 0.10
+		naval_morale = 0.15
+	}
+	
+	bonus = {
+		merchants = 1
+	}
+	
+	trigger = {
+		tag = NMI
+	}
+	free = yes		#will be added at load.
+	
+legacy_of_magellan2 = {
+		may_explore = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	lao_lao_bay = {
+		global_ship_cost = -0.20
+		global_ship_recruit_speed = -0.15
+	}
+	island_tourism2 = {
+		global_prov_trade_power_modifier = 0.20
+	}
+	chamorro_legacy = {
+		num_accepted_cultures = 2
+	}
+	strategic_location = {
+		naval_maintenance_modifier = -0.10
+	}
+	potential_for_growth = {
+		development_cost = -0.10
+	}
+	welcoming_spirit = {
+		diplomatic_reputation = 1
+	}
+}
+
+#Ohio
+
+OHI_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		idea_cost = -0.05
+	}
+	
+	bonus = {
+		years_of_nationalism = -5
+	}
+	
+	trigger = {
+		tag = OHI
+	}
+	free = yes		#will be added at load.
+	
+	public_land_survey_system = {
+		governing_capacity_modifier = 0.15
+	}
+	securing_the_toledo_strip = {
+		land_morale = 0.10
+	}
+great_river = {
+		trade_steering = 0.20
+		trade_range_modifier = 0.10
+	}
+	birthplace_of_generals = {
+		free_leader_pool = 1
+	}
+	carrage_capital = {
+		caravan_power = 0.25
+	}
+	buckeye_prowess = {
+		infantry_power = 0.10
+		cavalry_power = 0.10
+	}
+	mother_of_presidents = {
+		free_adm_policy = 1
+	}
+}
+
+#Oklahoma
+
+OKL_ideas = {
+	start = {
+		land_maintenance_modifier = -0.05
+		fort_maintenance_modifier = -0.10
+	}
+	
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	
+	trigger = {
+		OR = {
+		tag = OKL
+		tag = SEQ
+		tag = CIM
+			}
+	}
+	free = yes		#will be added at load.
+	
+	local_enlistment = {
+		global_manpower_modifier = 0.15
+	}
+	dust_bowl = {
+		land_attrition = -0.15
+	}
+	red_river_shootout = {
+		spy_offence = 0.20
+	}
+	indigenous_diversity = {
+		tolerance_heretic = 1
+		religious_unity = 0.15
+	}
+	oklahoma_thunder = {
+		land_morale = 0.10
+	}
+	wrath_of_the_twirling_wind = {
+		ae_impact = -0.10
+	}
+	red_river_of_the_south = {
+		trade_steering = 0.20
+	}
+}
+
+#Oregon
+
+ORE_ideas = {
+	start = {
+		technology_cost = -0.05
+		global_tax_modifier = 0.10
+	}
+	
+	bonus = {
+		navy_tradition_decay = -0.01
+	}
+	
+	trigger = {
+		tag = ORE
+	}
+	free = yes		#will be added at load.
+	
+	beaver_design_and_construction= {
+		build_cost = -0.10
+		development_cost = -0.10
+	}
+	ewing_young = {
+		prestige = 1
+	}
+	oregon_trail = {
+		leader_land_manuever = 1
+	}
+	goddess_nike_favors_us = {
+		movement_speed = 0.15
+		discipline = 0.03
+	}
+	christmas_trees = {
+		global_unrest = -2
+	}
+	pioneer_settlement = {
+		colonists = 1  
+	}
+	initiative_and_referendum = {
+		yearly_corruption = -0.10
+	}
+}
+
+#Pennsylvania
+
+PNN_ideas = {
+	start = {
+		merc_maintenance_modifier = -0.10
+		army_tradition = 0.5
+	}
+	
+	bonus = {
+		merchants = 1
+	}
+	
+	trigger = {
+	OR = {
+		tag = PNN
+		tag = PHL
+		tag = WML
+		}
+	}
+	free = yes		#will be added at load.
+	
+	liberty_bell = {
+		stability_cost_modifier = -0.20
+	}
+	pennsylvania_turnpike = {
+   		caravan_power = 0.20
+		global_tax_modifier = 0.10
+	}
+	manifest_destiny_pa = {
+		core_creation = -0.20
+	}
+	library_company_of_philadelphia = {
+		global_institution_spread = 0.10
+		technology_cost = -0.05
+	}
+	ohio_west_delaware_east = {
+		trade_efficiency = 0.10
+	}
+	philadelphias_secret_convention = {
+		 idea_cost = -0.10
+	}
+	king_of_prussia = {
+		infantry_power = 0.20
+	}
+}
+
+#Puerto Rico
+
+PRT_ideas = {
+	start = {
+	   	global_ship_cost = -0.15
+		ship_durability = 0.10
+	}
+	
+	bonus = {
+		dip_tech_cost_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = PRT
+	}
+	free = yes		#will be added at load.
+	
+	puerto_rican_rum = {
+		global_unrest = -1
+	}
+	columbus_legacy = {
+		colonists = 1
+		idea_claim_colonies = yes
+	}
+	port_of_san_juan = {
+		merchants = 1
+	}
+	ruins_of_caparra = {
+		global_colonial_growth = 20
+	}
+	arecibo_observatory = {
+		technology_cost = -0.05
+	}
+	el_grito_de_lares = {
+		harsh_treatment_cost = -0.15
+	}
+	vieques_naval_range = {
+		naval_morale = 0.20
+	}
+}
+
+#Rhode Island
+
+RIS_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		tolerance_heretic = 2
+	}
+	
+	bonus = {
+		prestige = 1
+	}
+	
+	trigger = {
+	OR = {
+		tag = RIS
+		tag = NSH
+		}
+	}
+	free = yes
+	
+	narragansett_bay = {
+		trade_range_modifier = 0.10
+		trade_efficiency = 0.10
+	}
+	providence_and_industry = {
+		build_cost = -0.10
+	}
+	industrial_spirit = {
+		development_cost = -0.10
+	}
+	anchor_of_the_soul = {
+		heavy_ship_power = 0.10
+		light_ship_power = 0.10
+	}
+	gaspee_affair = {
+		land_morale = 0.10
+	}
+	newport_market_tarriffs = {
+		global_tariffs = 0.15
+		embargo_efficiency = 0.10
+	}
+	commodore_perry = {
+		leader_naval_manuever = 1
+	}
+}
+
+#Samoa (American Samoa)
+
+ASM_ideas = {
+	start = {
+		global_ship_cost = -0.10
+		idea_cost = -0.05
+	}
+	
+	bonus = {
+		core_creation = -0.15
+	}
+	
+	trigger = {
+		tag = ASM
+	}
+	free = yes
+	
+	harbor_in_the_south_pacific = {
+		merchants = 1
+	}
+	western_missionaries = {
+		missionaries = 1
+		infantry_power = 0.10
+	}
+	polynesian_voyagers = {
+		may_explore = yes
+		naval_attrition = -0.10
+	}
+	harbor_fees = {
+		global_tax_modifier = 0.10
+		global_tariffs = 0.15
+	}
+	neighborly_government_council = {
+		advisor_cost = -0.15
+	}
+	haven_from_taxes_and_rules = {
+		yearly_corruption = -0.10
+	}
+	samoan_fono = {
+		stability_cost_modifier = -0.10
+	}
+}
+
+#South Carolina
+
+SCR_ideas = {
+	start = {
+		loot_amount = 0.25
+		light_ship_cost = -0.20
+	}
+	
+	bonus = {
+		advisor_pool = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = SCR
+			AND = {
+				tag = CRL
+				primary_culture = south_carolinian
+			}
+		}
+	}
+	free = yes		#will be added at load.
+	
+	nullification_acts = {
+		global_autonomy = -0.05
+	}
+	charleston_harbor = {
+		global_sailors_modifier = 0.20
+		naval_forcelimit_modifier = 0.10
+	}
+	palmetto_fortress = {
+		defensiveness = 0.15
+	}
+	appealing_business_attitude = {
+		trade_efficiency = 0.10
+	}
+	back_country_patriots = {
+		cavalry_flanking = 0.50
+	}
+	battle_of_fort_sumter = {
+		prestige_from_land = 0.5
+		army_tradition_from_battle = 0.50
+	}
+	forward_to_freedom = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+}
+
+#South Dakota
+
+SDK_ideas = {
+	start = {
+		shock_damage = 0.10
+		culture_conversion_cost = -0.20
+	}
+	
+	bonus = {
+		core_creation = -0.10
+	}
+	
+	trigger = {
+		OR = {
+			tag = SDK
+			AND = {
+				tag = DAK
+				primary_culture = south_dakotan
+			}
+		}
+	}
+	free = yes
+	
+	mount_rushmore = {
+		reduced_liberty_desire = 10
+	}
+	the_badlands = {
+		leader_land_manuever = 1
+		land_attrition = -0.10
+	}
+	black_hills_war = {
+		army_tradition = 0.5
+	}
+	spirit_of_crazy_horse = {
+		free_mil_policy = 1
+	}
+	black_hills_mining_excise = {
+		global_tax_modifier = 0.10
+	}
+	development_of_combine_harvesting = {
+		development_cost = -0.10
+	}
+	culture_of_resistance = {
+		missionaries = 1
+		enemy_core_creation = 0.25
+	}
+}
+
+#Tennessee/Franklin
+
+TEN_ideas = {
+	start = {
+		religious_unity = 0.25
+		siege_ability = 0.10
+	}
+	
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	trigger = {
+		OR = {
+			tag = TEN
+			tag = FKL
+			tag = NCK
+			tag = WTN
+		}
+	}
+	free = yes
+	
+	the_volunteer_state = {
+		global_manpower_modifier = 0.20
+		global_regiment_recruit_speed = -0.15
+	}
+	grand_divisions = {
+		governing_capacity_modifier = 0.10
+	}
+	graceland = {
+		prestige = 1
+	}
+	the_meeting_place = {
+		diplomatic_reputation = 1
+	}
+	jacksons_men = {
+		infantry_power = 0.10
+		land_morale = 0.10
+	}
+	scopes_trial = {
+		tolerance_own = 2
+	}
+	casey_jones = {
+		build_cost = -0.10
+		envoy_travel_time = -0.25
+	}
+}
+
+#Texas
+
+# TEX_ideas = {
+	# start = {
+		# global_missionary_strength = 0.02
+		# army_tradition = 0.5
+	# }
+	
+	# bonus = {
+		# heavy_ship_power = 0.10
+	# }
+	
+	# trigger = {
+	# OR = {
+		# tag = TEX
+		# #tag = COM
+		# tag = LPN
+		# tag = ETX
+		# tag = NTX
+		# }
+	# }
+	# free = yes
+	
+	# the_alamo_the_goliad = {
+		# discipline = 0.05
+		# defensiveness = 0.15
+	# }
+	# galvaston_bay = {
+		# naval_forcelimit_modifier = 0.25
+	# }
+	# six_flags = {
+		# land_morale = 0.15
+	# }
+	# chisholm_trail2 = {
+		# cavalry_power = 0.20
+		# cavalry_cost = -0.05
+	# }
+	# sam_houstons_disciples = {
+		# leader_land_manuever = 1
+	# }
+	# fort_worth_stockyard = {
+		# merchants = 1
+	# }
+	# san_jacinto = {
+		# prestige_from_land = 0.50
+		# army_tradition_decay = -0.01
+	# }
+# }
+
+TEX_ideas = {
+	start = {	
+		fire_damage_received = -0.1
+		global_missionary_strength = 0.02
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	trigger = {
+	OR = {
+		tag = TEX
+		tag = COM
+		tag = LPN
+		tag = ETX
+		tag = NTX
+		}
+	}
+	free = yes
+	lone_star_state = {
+		prestige = 1
+	}
+	tex_revolution = {
+		fire_damage = 0.1
+	}
+	cotton_plantations = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	vaqueros = {
+		land_attrition = -0.1
+		movement_speed = 0.15
+	}
+	tex_native_frontiers = {
+		army_tradition_decay = -0.01
+	}
+	tejanos = {
+		stability_cost_modifier = -0.15
+	}
+	adelsverin = {
+		development_cost = -0.1
+	}
+}
+
+#Utah
+
+UTA_ideas = {
+	start = {
+		tolerance_heretic = 1
+		global_missionary_strength = 0.03
+	}
+
+	bonus = {
+		garrison_size = 0.25
+	}
+	
+	trigger = {
+		OR = {
+		tag = UTA
+		tag = SUT
+			}
+	}
+	free = yes		#will be added at load.
+	
+	miracle_of_the_gulls = {
+		tolerance_own = 2
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.10
+		papal_influence = 1
+	}
+	remember_zion = {
+		missionaries = 1
+}
+	jordan_river_valley = {
+		build_cost = -0.10
+	}
+	legend_of_cibola = {
+		devotion = 1
+		republican_tradition = 0.30
+		legitimacy = 1
+		meritocracy = 1
+		horde_unity = 1
+	}
+	nauvoo_legion = {
+		land_morale = 0.15
+		enforce_religion_cost = -0.10
+	}
+	simple_tax_code = {
+		yearly_corruption = -0.1
+		global_tax_modifier = 0.05
+	}
+	beehive_state = {
+		religious_unity = 0.50
+	}
+}
+
+#Vermont
+
+VRM_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		dip_tech_cost_modifier = -0.10
+	}
+	
+	bonus = {
+		possible_dip_policy = 1
+	}
+	
+	trigger = {
+		tag = VRM
+	}
+	free = yes
+	
+	green_mountain_boys = {
+		shock_damage = 0.10
+		fire_damage = 0.05
+	}
+	correcting_the_gores = {
+		global_tax_modifier = 0.10
+	}
+	maple_plantations = {
+		build_cost = -0.10
+	}	
+	overseer_of_the_poor = {
+		global_unrest = -2
+	}
+	vermont_republic = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		meritocracy = 1
+		horde_unity = 1
+		devotion = 1
+	}
+	ben_and_jerry = {
+		global_manpower_modifier = 0.20
+	}	
+	government_centralization = {
+		administrative_efficiency = 0.5
+	}
+}
+
+#Virginia
+
+VIR_ideas = {
+	start = {
+		free_leader_pool = 1
+		recover_army_morale_speed = 0.10
+	}
+
+	bonus = {
+		embargo_efficiency = 0.20
+	}
+	
+	trigger = {
+		OR = {
+			tag = NVI
+			tag = VIR
+		}
+	}
+	free = yes
+	
+	appomattox_courthouse = {
+		improve_relation_modifier = 0.20
+	}
+	sic_semper_tyrannis = {
+		ae_impact = -0.15
+		enemy_core_creation = 0.25
+	}
+	tobacco_plantations = {
+		production_efficiency = 0.10
+}
+	the_father_from_mount_vernon = {
+		siege_ability = 0.10
+	}
+	the_pentagon = {
+		free_mil_policy = 1
+	}
+	norfolk_naval_shipyard = {
+		sunk_ship_morale_hit_recieved = -0.20
+	}
+	jeffersonian_tariffs = { 
+		global_tariffs = 0.15
+		global_tax_modifier = 0.05
+	}
+}
+
+#Virgin Islands
+
+UVI_ideas = {
+	start = {
+		global_sailors_modifier = 0.10
+		capture_ship_chance = 0.20
+	}
+
+	bonus = {
+		leader_naval_manuever = 1
+	}
+	
+	trigger = {
+		tag = UVI
+	}
+	free = yes
+	
+	knights_of_st_john = {	
+	warscore_cost_vs_other_religion = -0.25
+	}
+	colonial_history = {				
+		colonists = 1
+		idea_claim_colonies = yes
+	}
+	blackbeards_castle = {
+		privateer_efficiency = 0.15
+		embargo_efficiency = 0.10
+	}
+	brandenburg_colony  = {
+		may_perform_slave_raid = yes
+	}
+	military_inspiration = {
+		army_tradition = 0.5
+	}
+	territorial_rule = {
+		governing_capacity_modifier = 0.10
+	}
+	alexander_hamilton = {
+		free_adm_policy = 1
+	}
+}
+
+#Washington/Lincoln
+
+WAS_ideas = {
+	start = {
+		embracement_cost = -0.10
+		trade_efficiency = 0.10
+	}
+	
+	bonus = {
+		heavy_ship_power = 0.15
+	}
+	
+	trigger = {
+	OR = {
+			tag = WAS
+			tag = LNC
+			}
+	}
+	free = yes		#will be added at load.
+	
+	mount_st_helens = {
+		leader_land_manuever = 1
+	}
+	the_siren = {
+		movement_speed = 0.10
+		global_unrest = -1
+	}
+	columbia_valley_vineyards = {
+		improve_relation_modifier = 0.20
+	}
+	george_vancouver = {
+		may_explore = yes
+	}
+	puget_sound = {
+		global_ship_cost = -0.15
+		global_ship_recruit_speed = -0.10
+	}
+	the_founding_father = {
+		fire_damage = 0.10
+	}
+	home_of_visionaries = {
+		idea_cost = -0.10
+		development_cost = -0.05
+	}
+}
+
+#West Virginia
+
+WVA_ideas = {
+	start = {
+		land_morale = 0.10
+		spy_offence = 0.20
+	}
+	
+	bonus = {
+		production_efficiency = 0.20
+	}
+	
+	trigger = {
+	OR = {
+		tag = WVA
+		tag = WST
+		}
+	}
+	free = yes
+	
+	high_quality_timberlands = {
+		build_cost = -0.15
+	}
+	coal_mines2 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	battle_of_philippi = {
+		infantry_power = 0.10
+	}
+	agricultural_college = {
+		technology_cost = -0.05
+	}
+	montani_semper_liberi = {
+		years_of_nationalism = -5
+		enemy_core_creation = 0.50
+	}
+	mining_claim_fees = {
+		global_tax_modifier = 0.10
+	}
+	country_roads = {
+		movement_speed = 0.20
+	}
+}
+
+#Wisconsin
+
+WIS_ideas = {
+	start = {
+		adm_tech_cost_modifier = -0.10
+		yearly_corruption = -0.10
+	}
+	
+	bonus = {
+		diplomats = 1
+	}
+	
+	trigger = {
+		tag = WIS
+	}
+	free = yes       #will be added at load.
+	
+	cheesemakers_paradise = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	iron_mines = {            
+		artillery_power = 0.10
+		artillery_cost = -0.10
+	}
+	dairy_capital = {
+		production_efficiency = 0.10
+	}
+	badger_hole_surprises = {
+		shock_damage = 0.10
+		leader_land_shock = 1
+	}
+	progressive_taxation = {
+		global_tax_modifier = 0.15
+	}
+	paul_bunyans_axe = {
+		discipline = 0.05
+	}
+	milwaukee_beer_gardens = {
+		idea_cost = -0.05
+		global_unrest = -1
+	}
+}
+
+#Wyoming
+
+WYO_ideas = {
+	start = {
+		yearly_corruption = -0.10
+		shock_damage = 0.10
+	}
+	
+	bonus = {
+		yearly_absolutism = 0.50
+	}
+	
+	trigger = {
+	OR = {
+		tag = WYO
+		tag = ABS
+		}
+	}
+	free = yes
+	
+	william_cody = {
+		dip_tech_cost_modifier = -0.10
+	}
+	homestead_act = {
+		state_maintenance_modifier = -0.20
+		governing_capacity_modifier = 0.05
+	}
+	grand_tetons = {	
+		hostile_attrition = 1
+		cavalry_flanking = 0.25
+	}
+	the_yellowstone = {
+		prestige = 1
+	}
+	equality_state = {
+		global_unrest = -2
+		may_recruit_female_generals = yes
+		female_advisor_chance = 0.5
+	}
+	cheyenne_warrior_spirits = {
+		cavalry_power = 0.25
+		cav_to_inf_ratio = 0.10
+	}
+	culture_of_self_investment = {
+		build_cost = -0.15
+	}
+}
+
+#### END OF US STATES ####
+
+### American Releasable National Ideas
+
+YZU_ideas = {
+	start = {
+		movement_speed = 0.15
+		global_trade_goods_size_modifier = 0.10
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = YZU
+	}
+	free = yes
+	
+	heart_of_dixie = {
+		religious_unity = 0.33
+	}
+	yellowhammer = {
+		infantry_power = 0.10
+		artillery_power = 0.10
+	}
+	king_cotton = {
+		production_efficiency = 0.10
+	}
+	alamaba_pride = {
+		manpower_recovery_speed = 0.15
+	}
+	blues_trail = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	centralize_all_government = {
+		yearly_corruption = -0.10
+	}
+	alabama_crimson = {
+		discipline = 0.05
+	}
+}

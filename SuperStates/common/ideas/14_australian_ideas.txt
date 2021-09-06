@@ -1,0 +1,596 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### Australian States National Ideals
+
+ACT_ideas = { # Australian Capital Territory/ACT/Canberra
+	start = {
+		reform_progress_growth = 0.15
+		vassal_forcelimit_bonus = 1
+	}
+
+	bonus = {
+		administrative_efficiency = 0.25
+	}
+
+	trigger = {
+			tag = ACT
+	}
+	free = yes		#will be added at load.
+
+	namadgi_land = {
+		drill_gain_modifier = 0.20
+		leader_land_manuever = 1
+	}
+	griffin_architects = {
+		development_cost = -0.10
+		build_cost = -0.05
+	}
+	ACT_seat_of_government = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	pristine_monuments_and_museums = {
+		prestige = 1
+	}
+	jervis_bay_territory = {
+		fire_damage = 0.10
+	}
+	ACT_quality_living = {
+		yearly_corruption = -0.10
+	}
+	meticulous_planning = {
+		candidate_random_bonus = 1
+		state_maintenance_modifier = -0.20
+	}
+}
+
+NSW_ideas = { # New South Wales
+	start = {
+		global_manpower_modifier = 0.10
+		core_creation = -0.10
+	}
+
+	bonus = {
+		diplomats = 1
+	}
+
+	trigger = {
+			tag = NSW
+	}
+	free = yes		#will be added at load.
+
+	first_among_australia = {
+		diplomatic_reputation = 1
+	}
+	NSW_legacy_of_cook = {
+		may_explore = yes
+		naval_attrition = -0.10
+	}
+	admiral_phillips_efforts = {
+		ae_impact = -0.10
+		governing_capacity_modifier = 0.10
+	}
+	rum_rebellion = {
+		discipline = 0.05
+	}
+	NSW_autocratic_rule = {
+		yearly_absolutism = 1
+	}
+	flinders_voyage = {
+		heavy_ship_power = 0.1
+		navy_tradition = 0.25
+	}
+	NSW_gold_rush = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
+
+QLD_ideas = { # Queensland
+	start = {
+		idea_cost = -0.10
+		merchants = 1
+	}
+
+	bonus = {
+		land_morale = 0.10
+	}
+
+	trigger = {
+		OR = {
+			tag = QLD
+			tag = NQL
+			}
+	}
+	free = yes		#will be added at load.
+
+	moreton_bay_settlement = {
+		core_creation = -0.20
+	}
+	QLD_frontier_wars = {
+		shock_damage = 0.10
+	}
+	bowen_proclamation = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	papua_territory = {
+		unjustified_demands = -0.15
+		province_warscore_cost = -0.10
+	}
+	construction_of_railroads = {
+		global_own_trade_power = 0.20
+		movement_speed = 0.10
+	}
+	the_labor_party = {
+		global_unrest = -1
+	}
+	pacific_island_immigration = {
+		num_accepted_cultures = 1
+	}
+}
+
+SAU_ideas = { # South Australia
+	start = {
+		diplomatic_upkeep = 1
+		global_unrest = -1
+	}
+
+	bonus = {
+		improve_relation_modifier = 0.30
+	}
+
+	trigger = {
+		OR = {
+			tag = SAU
+			tag = PLD
+			}
+	}
+	free = yes		#will be added at load.
+
+	ngurunderi = {
+		native_assimilation = 0.50
+		native_uprising_chance = -0.50
+	}
+	systematic_colonisation = {
+		global_colonial_growth = 20
+	}
+	old_gum_tree = {
+		years_of_nationalism = -5
+	}
+	torrens_title = {
+		development_cost = -0.05
+		yearly_corruption = -0.05
+	}
+	vanguard_of_change = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	south_australian_wine = {
+		production_efficiency = 0.10
+	}
+	SAU_disestablishment_of_religion = {
+		no_religion_penalty = yes
+	}
+}
+
+TSM_ideas = { # Tasmania
+	start = {
+		trade_range_modifier = 0.20
+		ship_durability = 0.05
+	}
+
+	bonus = {
+		colonists = 1
+	}
+
+	trigger = {
+			tag = TSM
+	}
+	free = yes		#will be added at load.
+
+	TSM_palawa = {
+		global_autonomy = -0.075
+	}
+	TSM_van_diemens_land = {
+		merchants = 1
+	}
+	abel_tasman = {
+		may_explore = yes
+		range = 0.33
+	}
+	TSM_our_island_spirit = {
+		naval_morale = 0.20
+	}
+	distributing_our_population = {
+		global_colonial_growth = 15
+		expel_minorities_cost = -0.10
+	}
+	tasmanian_devil = {
+		infantry_power = 0.10
+	}
+	TSM_port_arthur = {
+		harsh_treatment_cost = -0.20
+	}
+}
+
+VCT_ideas = { # Victoria
+	start = {
+		global_institution_spread = 0.1
+		global_missionary_strength = 0.02
+	}
+
+	bonus = {
+		advisor_pool = 1
+	}
+
+	trigger = {
+			tag = VCT
+	}
+	free = yes		#will be added at load.
+
+	port_phillip_association = {
+		governing_capacity_modifier = 0.10
+	}
+	VCT_eureka_rebellion = {
+		land_morale = 0.10
+		global_manpower_modifier = 0.10
+	}
+	VCT_catholic_immigration = {
+		papal_influence = 2
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.10
+	}
+	VCT_god_save_the_queen = {
+		yearly_absolutism = 0.50
+		legitimacy = 0.50
+		devotion = 0.50
+		horde_unity = 0.50
+		meritocracy = 0.50
+	}
+	NSW_gold_rush = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	execution_of_kelly = {
+		global_autonomy = -0.05
+	}
+	sporting_capital = {
+		prestige = 1
+	}
+}
+
+WAU_ideas = { # Western Australia
+	start = {
+		war_exhaustion = -0.02
+		global_regiment_cost = -0.10
+	}
+
+	bonus = {
+		siege_ability = 0.10
+	}
+
+	trigger = {
+		OR = {
+			tag = WAU
+			tag = AAL
+			}
+	}
+	free = yes		#will be added at load.
+
+	the_harsh_outback = {
+		hostile_attrition = 1
+		land_attrition = -0.10
+	}
+	acres_and_acres = {
+		governing_capacity_modifier = 0.15
+	}
+	cindarella_colony = {
+		technology_cost = -0.05
+	}
+	australian_gold = {
+		global_trade_goods_size_modifier = 0.10
+		inflation_reduction = 0.10
+	}
+	WAU_settling_the_interior = {
+		development_cost = -0.15
+	}
+	WAU_export_economy = {
+		trade_range_modifier = 0.20
+	}
+	no_longer_isolated = {
+		global_own_trade_power = 0.10
+		caravan_power = 0.10
+	}
+}
+
+NTT_ideas = { # Northern Territory
+	start = {
+		free_leader_pool = 1
+		manpower_recovery_speed = 0.10
+	}
+
+	bonus = {
+		defensiveness = 0.10
+	}
+
+	trigger = {
+			OR = {
+				tag = NTT
+				tag = CTT
+			}
+	}
+	free = yes		#will be added at load.
+
+	the_harsh_outback = {
+		hostile_attrition = 1
+		land_attrition = -0.10
+	}
+	acres_and_acres = {
+		governing_capacity_modifier = 0.10
+	}
+	lessons_of_the_land = {
+		idea_cost = -0.10
+	}
+	makassan_merchants = {
+		merchants = 1
+	}
+	WAU_settling_the_interior = {
+		core_creation = -0.15
+	}
+	aboriginal_land_rights = {
+		stability_cost_modifier = -0.10
+		global_tax_modifier = 0.10
+	}
+	rebuild_from_rubble = {
+		development_cost = -0.05
+		build_cost = -0.10
+	}
+}
+
+JBT_ideas = { # Jervis Bay Territory
+	start = {
+		infantry_power = 0.10
+		discipline = 0.05
+	}
+
+	bonus = {
+		artillery_fire = 1
+	}
+
+	trigger = {
+			tag = JBT
+	}
+	free = yes		#will be added at load.
+
+	booderee = {
+		leader_land_manuever = 1
+	}
+	JBT_capital_drill = {
+		drill_gain_modifier = 0.20
+		leader_land_shock = 1
+	}
+	sydney_cove = {
+		sunk_ship_morale_hit_recieved = -0.33
+		disengagement_chance = 0.05
+	}
+	JBT_naval_bases = {
+		global_sailors_modifier = 0.20
+		allowed_marine_fraction = 0.05
+	}
+	integration_of_the_locals = {
+		land_morale = 0.15
+	}
+	hmas_creswell = {
+		navy_tradition = 1
+		leader_naval_manuever = 1
+	}
+	JBT_economic_ties = {
+		core_creation = -0.25
+	}
+}
+
+XMS_ideas = { # Christmas Island
+	start = {
+		naval_morale = 0.20
+		trade_steering = 0.10
+	}
+
+	bonus = {
+		ae_impact = -0.10
+	}
+
+	trigger = {
+			tag = XMS
+	}
+	free = yes		#will be added at load.
+
+	peranakans = {
+		num_accepted_cultures = 1
+		harmonization_speed = 0.20
+	}
+	XMS_flying_fish = {
+		light_ship_power = 0.20
+	}
+	XMS_malay_spirit = {
+		merchants = 1
+	}
+	phosphate_deposits = {
+		global_trade_power = 0.15
+	}
+	XMS_religious_diversity = {
+		tolerance_heathen = 3
+		tolerance_heretic = 1
+	}
+	XMS_christmas = {
+		improve_relation_modifier = 0.20
+	}
+	reunite_our_families = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+}
+
+CCI_ideas = { # Cocos / Keeling Islands
+	start = {
+		advisor_cost = -0.10
+		may_perform_slave_raid_on_same_religion = yes
+	}
+
+	bonus = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+
+	trigger = {
+			tag = CCI
+	}
+	free = yes		#will be added at load.
+
+	cross_and_the_crescent = {
+		global_heathen_missionary_strength = 0.03
+	}
+	clunies_ross = {
+		global_autonomy = -0.050
+	}
+	XMS_malay_spirit = {
+		merchants = 1
+	}
+	battle_of_cocos = {
+		navy_tradition = 0.50
+		prestige_from_naval = 0.25
+	}
+	no_more_foreign_rule = {
+		global_spy_defence = 0.20
+		enemy_core_creation = 0.25
+	}
+	CCI_local_government = {
+		candidate_random_bonus = 1
+		yearly_absolutism = 0.50
+	}
+	reunite_our_families = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+}
+
+NFI_ideas = {
+	start = {
+		garrison_size = 0.25
+		ship_durability = 0.10
+	}
+
+	bonus = {
+		liberty_desire_from_subject_development = -0.25
+	}
+
+	trigger = {
+			tag = NFI
+	}
+	free = yes		#will be added at load.
+
+	norfuk = {
+		diplomatic_reputation = 1
+	}
+	norfolk_island_pine = {
+		production_efficiency = 0.10
+		light_ship_cost = -0.15
+	}
+	pitkerners = {
+		shock_damage = 0.15
+	}
+	flax_cultivation = {
+		development_cost = -0.10
+		build_cost = -0.10
+	}
+	incomparable_timber = {
+		global_ship_cost = -0.10
+	}
+	NFI_penal_settlements = {
+		harsh_treatment_cost = -0.20
+	}
+	convict_mutinies_crushed = {
+		years_of_nationalism = -5
+	}
+}
+
+### END OF AUSTRALIAN STATES
+
+australian_ideas = { # Generic Australian state ideas
+	start = {
+		defensiveness = 0.10
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		AND = {
+			OR = {
+				culture_group = australian_new_zealander
+				capital_scope = { superregion = australia_superregion }
+			}
+			NOT = {
+				tag = ACT
+				tag = CCI
+				tag = JBT
+				tag = NSW
+				tag = NTT
+				tag = QLD
+				tag = SAU
+				tag = TSM
+				tag = VCT
+				tag = WAU
+				tag = XMS
+				tag = NFI
+				tag = AAL
+				tag = CTT
+				tag = NQL
+				tag = PLD
+				tag = AUS
+				tag = NZL
+				tag = ZLD
+			}
+		}
+	}
+	free = yes		#will be added at load.
+
+	bbq_for_the_mates = {
+		diplomats = 1
+	}
+	thats_not_a_cavalry_thats_a_cavalry = {
+		cavalry_power = 0.15
+	}
+	aboriginal_spirit = {
+		technology_cost = -0.05
+	}
+	great_barrier_fleet = {
+		blockade_efficiency = 0.20
+		light_ship_power = 0.15
+	}
+	australian_outback = {
+		hostile_attrition = 1
+	}
+	kangaroo_fury = {
+		infantry_power = 0.10
+	}
+	excellent_judicial_courts = {
+		global_unrest = -1
+	}
+}

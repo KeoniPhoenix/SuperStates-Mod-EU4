@@ -1,0 +1,1480 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### Mexican States National Idea
+
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### Mexican State National Ideas
+
+#Aguascalientes
+
+AGC_ideas = {
+	start = {
+		global_unrest = -2
+		diplomats = 1
+	}
+
+	bonus = {
+		advisor_cost = -0.15
+	}
+
+	trigger = {
+			tag = AGC
+	}
+	free = yes		#will be added at load.
+
+	hidrocalido_wine = {
+		production_efficiency = 0.10
+	}
+	distinctly_separate = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	growing_textile_industry = {
+		development_cost = -0.10
+	}
+	the_blood_spilled = {
+		army_tradition = 0.5
+	}
+	feria_nacional_de_san_marcos = {
+		prestige = 1
+	}
+	rout_the_zacatecano = {
+		fire_damage = 0.10
+	}
+	convention_of_aguascalientes = {
+		improve_relation_modifier = 0.30
+	}
+}
+
+#Baja California
+
+BCN_ideas = {
+	start = {
+		infantry_power = 0.10
+		ship_durability = 0.05
+	}
+
+	bonus = {
+		tolerance_own = 2
+	}
+	
+	trigger = {
+			tag = BCN
+	}
+	free = yes		#will be added at load.
+	
+	queen_calafia = {
+		land_morale = 0.15
+	}
+	california_island = {
+		naval_morale = 0.20
+	}
+	religious_missions = {
+		missionaries = 1
+		development_cost = -0.05
+	}
+	port_of_tijuana = {
+		trade_range_modifier = 0.25
+	}
+	magonista_rebellion = {
+		global_spy_defence = 0.20
+		enemy_core_creation = 0.50
+	}
+	pacifico_o_cortes = {
+		trade_steering = 0.20
+	}
+	burgeoning_economy = {
+		global_trade_goods_size_modifier = 0.05
+	}
+}
+
+#Baja California Sur
+
+BCS_ideas = {
+	start = {
+		leader_naval_fire = 1
+		ae_impact = -0.10
+	}
+
+	bonus = {
+		prestige = 1
+	}
+	
+	trigger = {
+			tag = BCS
+	}
+	free = yes		#will be added at load.
+	
+	queen_calafia = {
+		land_morale = 0.10
+	}
+	california_island = {
+		naval_morale = 0.20
+	}
+	religious_missions = {
+		missionaries = 1
+		development_cost = -0.05
+	}
+	hotel_california = {
+		tolerance_heretic = 1
+		num_accepted_cultures = 1
+	}
+	magonista_rebellion = {
+		global_spy_defence = 0.20
+		enemy_core_creation = 0.50
+	}
+	pacifico_o_cortes = {
+		trade_steering = 0.20
+	}
+	maritime_lifestyle = {
+		navy_tradition = 1
+	}
+}
+
+#Chihuahua
+
+HHC_ideas = {
+	start = {
+		discipline = 0.05
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		unjustified_demands = -0.25
+	}
+	
+	trigger = {
+			tag = HHC		
+	}
+	free = yes		#will be added at load.
+	
+	rugged_terrain = {
+		hostile_attrition = 1
+	}
+	el_paso_del_norte = {
+		caravan_power = 0.20
+	}
+	hidalgo_del_parral = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	pancho_villa = {
+		possible_mil_policy = 1
+	}
+	punitive_expedition = {
+		fire_damage_received = -0.10
+	}
+	pascual_orozco = {
+		yearly_corruption = -0.10
+	}
+	maquiladoras = {
+		production_efficiency = 0.10
+	}
+}
+
+#Coahuila
+
+COA_ideas = {
+	start = {
+		infantry_cost = -0.10
+		reinforce_speed = 0.15
+	}
+
+	bonus = {
+		province_warscore_cost = -0.10
+	}
+	
+	trigger = {
+		tag = COA
+	}
+	free = yes		#will be added at load.
+	
+	flying_serpent = {
+		shock_damage = 0.10
+	}
+	coahuila_y_tejas = {
+		ae_impact = -0.15
+	}
+	sierra_madre_oriental = {
+		fort_maintenance_modifier = -0.20
+	}
+	francisco_madero = {
+		possible_adm_policy = 1
+	}
+	 presidential_succession = {
+		republican_tradition = 0.30
+		legitimacy = 1 
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	 venustiano_carranza = {
+		army_tradition = 0.5
+	}	
+steel_production = {
+	artillery_cost = -0.15
+global_trade_goods_size_modifier = 0.05
+	}
+}
+
+
+#Colima
+
+CLM_ideas = {
+	start = {
+		development_cost = -0.10
+production_efficiency = 0.10
+	}
+
+	bonus = {
+		improve_relation_modifier = 0.30
+	}
+	
+	trigger = {
+		tag = CLM
+	}
+	free = yes		#will be added at load.
+	
+	colimas = {
+		land_morale = 0.10
+	}
+	king_coliman = {
+		shock_damage = 0.10
+	}
+	port_de_manzanillo = {
+		trade_efficiency = 0.15
+	}
+	the_sailfish = {
+		leader_naval_manuever = 1
+	}
+	repulse_the_occupiers = {
+		defensiveness = 0.25
+	}
+	city_of_the_palms = {
+		build_cost = -0.10
+	}
+	seat_of_government = {
+		diplomats = 1
+	}
+}
+
+#Campeche
+
+CPE_ideas = {
+	start = {
+		idea_cost = -0.10
+		fabricate_claims_cost = -0.25
+	}
+
+	bonus = {
+		global_sailors_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = CPE
+	}
+	free = yes		#will be added at load.
+	
+	mayan_innovation = {
+		technology_cost = -0.05
+	}
+	can_pech = {
+		prestige = 1
+	}
+	kuchkabal = {
+		governing_capacity_modifier = 0.10
+		reform_progress_growth = 0.15
+	}
+	spaniards_repelled = {
+		fire_damage_received = -0.15
+	}
+	early_colonial_port = {
+		merchants = 1
+	}
+	dyewood_cultivation = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	an_independent_yucatan = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
+	}
+}
+
+#Chiapas
+
+CPS_ideas = {
+	start = {
+		mercenary_manpower= 0.50
+		global_colonial_growth = 25
+	}
+	
+	bonus = {
+		colonists = 1
+	}
+	
+	trigger = {
+		tag = CPS
+	}
+	free = yes		#will be added at load.
+	
+	indigenous_influence = {
+		num_accepted_cultures = 1
+		native_assimilation = 0.50
+	}
+	mayan_innovation = {
+		technology_cost = -0.05
+	}
+	kuchkabal = {
+		governing_capacity_modifier = 0.10
+		reform_progress_growth = 0.15
+	}
+	spaniards_repelled = {
+		fire_damage_received = -0.15
+	}
+	highlander_warfare = {
+		shock_damage = 0.15
+	}
+	economic_liberalization = {
+		state_maintenance_modifier = -0.10
+		yearly_absolutism = 0.50
+	}
+	spirit_of_opposition = {
+		years_of_nationalism = -5
+		max_revolutionary_zeal = 10
+	}
+}
+	
+#Distrito Federal
+
+DFM_ideas = {
+	start = {
+		diplomats = 1
+		prestige_decay = -0.01
+	}
+
+	bonus = {
+		vassal_forcelimit_bonus = 1.0
+	}
+	
+	trigger = {
+		tag = DFM
+	}
+	free = yes		#will be added at load.
+	
+	tenochtitlan = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		build_cost = -0.10
+	}
+	aztec_foundation = {
+		development_cost = -0.10
+	}
+	jaguar_warriors = {
+		land_morale = 0.10
+	}
+	castillo_de_chapultepec = {
+		monarch_military_power = 1
+	}
+	ninos_heroes = {
+		fire_damage_received = -0.10
+		land_morale = 0.05
+	}
+	home_of_university = {
+		technology_cost = -0.10
+	}
+	jewel_of_the_west = {
+		diplomatic_reputation = 2
+	}
+}
+
+#Durango
+
+DRG_ideas = {
+	start = {
+		advisor_pool = 1
+		fabricate_claims_cost = -0.20
+	}
+
+	bonus = {
+		envoy_travel_time = -0.25
+	}
+	
+	trigger = {
+			tag = DRG
+	}
+	free = yes		#will be added at load.
+	
+	silver_and_gold = {
+		inflation_reduction = 0.10
+	}
+	alacranes = {
+		discipline = 0.03
+		spy_offence = 0.15
+	}
+	francisco_de_ibarra = {
+		core_creation = -0.15
+	}
+	pancho_villa = {
+		free_mil_policy = 1
+	}
+	DRG_mining_economy = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	guadalupe_victoria = {
+		free_adm_policy = 1
+	}
+	maquiladoras = {
+		production_efficiency = 0.10
+	}
+}
+
+#Estado Mexico
+
+EMX_ideas = {
+	start = {
+		stability_cost_modifier = -0.10
+		global_autonomy = -0.05
+	}
+
+	bonus = {
+		global_spy_defence = 0.30
+	}
+	
+	trigger = {
+			tag = EMX
+	}
+	free = yes		#will be added at load.
+	
+	anahuac = {
+		global_manpower_modifier = 0.25
+	}
+	aztec_foundation = {
+		development_cost = -0.10
+	}
+	teotihuacan = {
+		global_missionary_strength = 0.03
+	}
+	jaguar_warriors = {
+		land_morale = 0.10
+	}
+	monte_de_las_cruces = {
+		army_tradition = 0.5
+	}
+	at_the_center_of_the_moon = {
+		global_unrest = -1
+	}
+	izta_popo = {
+		idea_cost = -0.10
+	}
+}
+
+
+#Guanajuato
+
+GJT_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		missionaries = 1
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	
+	trigger = {
+			tag = GJT		
+	}
+	free = yes		#will be added at load.
+	
+	bajio = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	cristo_rey = {
+		global_missionary_strength = 0.02
+	}
+	valenciana_mine = {
+		production_efficiency = 0.10
+	}
+	el_pipila = {
+		discipline = 0.05
+	}
+	alhondiga_de_granaditas = {
+		ae_impact = -0.20
+	}
+	grito_de_dolores = {
+		global_unrest = -1
+		max_revolutionary_zeal = 10
+	}
+	diego_rivera = {
+		prestige = 1
+	}
+}
+
+#Guerrero
+
+GRR_ideas = {
+	start = {
+		diplomatic_annexation_cost = -0.15
+		global_institution_spread = 0.10
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+			tag = GRR
+	}
+	free = yes		#will be added at load.
+	
+	decentralized_rule = {
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 1.0
+	}
+	manila_galleons = {
+		light_ship_power = 0.20
+	}
+	santa_ana = {
+		heavy_ship_power = 0.10
+		global_sailors_modifier = 0.15
+	}
+	port_of_acapulco = {
+		global_trade_power = 0.10
+	}
+	acapulco_slave_trade = {
+		production_efficiency = 0.10
+	}
+	vicente_guerrero = {
+		land_morale = 0.20
+	}
+	zapatista_philosophy = {
+		global_unrest = -2
+	}
+}
+
+#Hidalgo
+
+HDL_ideas = {
+	start = {
+		missionaries = 1
+		merchants = 1
+	}
+
+	bonus = {
+		global_heretic_missionary_strength = 0.03
+	}
+	
+	trigger = {
+			tag = HDL
+	}
+	free = yes		#will be added at load.
+	
+	topiltzin = {
+		colonists = 1
+	}
+	tula_ruins = {
+		development_cost = -0.10
+	}
+	HDL_silver_and_gold = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	HDL_revolutionary_spirit = {
+		garrison_size = 0.20
+		enemy_core_creation = 0.25
+		#max_revolutionary_zeal = 10
+	}
+	HDL_father_of_the_nation = {
+		republican_tradition = 0.30
+		horde_unity = 1
+		devotion = 1
+		meritocracy = 1
+		legitimacy = 1
+		free_policy = 1
+	}
+	manuel_fernando_soto = {
+		diplomats = 1
+	}
+	pachucas_clock = {
+		prestige_decay = -0.01
+	}
+}
+#Jalisco
+
+JLC_ideas = {
+	start = {
+		land_morale = 0.15
+		ae_impact = -0.10
+	}
+
+	bonus = {
+		province_warscore_cost = -0.10
+	}
+	
+	trigger = {
+			tag = JLC
+	}
+	free = yes		#will be added at load.
+	
+	tequila = {
+		years_of_nationalism = -5
+	}
+	jalisco_es_mexico = {
+		core_creation = -0.20
+	}
+	mixton_rebellion = {
+		army_tradition_decay = -1.0
+	}
+	times_of_uncertainty = {
+		discipline = 0.05
+	}
+	land_of_revolt = {
+		harsh_treatment_cost = -0.20
+	}
+	cultural_influence = {
+		prestige = 1
+	}
+	political_consolidation = {
+		yearly_absolutism = 0.50
+		stability_cost_modifier = -0.10
+	}
+}
+
+#Michoacan
+
+MCN_ideas = {
+	start = {
+		leader_naval_fire = 1
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	
+	trigger = {
+			tag = MCN
+	}
+	free = yes		#will be added at load.
+	
+	tarascan_fishing = {
+		naval_morale = 0.15
+	}
+	paricutin = {
+		technology_cost = -0.05
+	}
+	a_worthy_rival = {
+		land_morale = 0.10
+	}
+	place_of_the_fishermen = {
+		naval_forcelimit_modifier = 0.25
+	}
+	jose_maria_morelos = {
+		governing_capacity_modifier = 0.10
+		max_revolutionary_zeal = 10
+	}
+	soul_of_mexico = {
+		tolerance_heretic = 1
+		num_accepted_cultures = 1
+	}
+	bequeath_social_justice = {
+		num_accepted_cultures = 1
+		tolerance_heretic = 1
+	}
+
+}
+
+#Morelos
+
+MRL_ideas = {
+	start = {
+		global_manpower_modifier = 0.20
+		leader_land_shock = 1
+	}
+
+	bonus = {
+		trade_efficiency = 0.10
+	}
+	
+	trigger = {
+			tag = MRL
+	}
+	free = yes		#will be added at load.
+	
+	tlatoani = {
+		reform_progress_growth = 0.15
+		state_maintenance_modifier = -0.10
+	}
+	advanced_society = {
+		idea_cost = -0.05
+		development_cost = -0.05
+	}
+	followers_of_quetzalcoatl = {
+		shock_damage_received = -0.10
+	}
+	popocatepetl_monasteries = {
+		global_missionary_strength = 0.02
+	}
+	jose_maria_morelos = {
+		governing_capacity_modifier = 0.15
+		max_revolutionary_zeal = 10
+	}
+	MRL_sugar_cane_production = {
+		production_efficiency = 0.15
+	}
+	MRL_zapata = {
+		#max_revolutionary_zeal = 10
+		republican_tradition = 0.30
+		legitimacy = 1
+		horde_unity = 1
+		meritocracy = 1
+		devotion = 1
+	}
+}
+
+#Nayarit
+
+NAY_ideas = {
+	start = {
+		missionary_maintenance_cost = -0.20
+		missionaries = 1
+	}
+
+	bonus = {
+		max_states = 5
+	}
+	
+	trigger = {
+			tag = NAY
+	}
+	free = yes		#will be added at load.
+	
+	la_cora = {
+		shock_damage = 0.10
+	}
+	nayar = {
+		global_heretic_missionary_strength = 0.03
+	}
+	guerilla_resistance = {
+		cav_to_inf_ratio = 0.10
+		cavalry_flanking = 0.50
+	}
+	san_blas = {
+		global_tax_modifier = 0.15
+	}
+	riviera_nayarit = {
+		naval_morale = 0.20
+	}
+	jose_maria_mercado = {
+		prestige_from_land = 1
+	}
+	turbulent_times = {
+		stability_cost_modifier = -0.10
+	}
+}
+
+#Nuevo Leon
+
+NLN_ideas = {
+	start = {
+		land_morale = 0.10
+		interest = -0.50
+	}
+	
+	bonus = {
+		core_creation = -0.15
+	}
+	
+	trigger = {
+			tag = NLN
+	}
+	free = yes		#will be added at load.
+	
+	luis_de_carvajal = {
+		advisor_cost = -0.10
+	}
+	franciscan_missions = {
+		global_missionary_strength = 0.02
+	}
+	kingdom_of_leon = {
+		development_cost = -0.10
+	}
+	NLN_monterrey = {
+		prestige = 1
+	}
+	republic_of_the_rio_grande = {
+		ae_impact = -0.15
+	}
+	rapid_industrialization = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	profit_by_proximity = {
+		technology_cost = -0.10
+	}
+}
+
+#Oaxaca
+
+OAX_ideas = {
+	start = {
+		diplomats = 1
+		defensiveness = 0.20
+	}
+
+	bonus = {
+		siege_ability = 0.10
+	}
+	
+	trigger = {
+			tag = OAX
+	}
+	free = yes		#will be added at load.
+	
+	central_valley = {
+		num_accepted_cultures = 2
+	}
+	mayan_innovation = {
+		technology_cost = -0.05
+	}
+	marquessate_of_oaxaca_valley = {
+		ae_impact = -0.20
+	}
+	customs_and_traditions = {
+		years_of_nationalism = -5
+		religious_unity = 0.15
+	}
+	guelaguetza = {
+		global_unrest = -1
+	}
+	land_of_presidents = {
+		free_adm_policy = 1
+		candidate_random_bonus = 1
+	}
+	vasconcelos = {
+		prestige = 1
+		max_revolutionary_zeal = 10
+	}
+}
+
+#Puebla
+
+PBL_ideas = {
+	start = {
+		fire_damage = 0.10
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+			tag = PBL
+	}
+	free = yes		#will be added at load.
+	
+	cholula = {
+		idea_cost = -0.10
+	}
+	cultural_scene = {
+		global_institution_spread = 0.10
+	}
+	PBL_economic_center = {
+		development_cost = -0.05
+		build_cost = -0.10
+	}
+	battle_of_puebla = {
+		fire_damage_received = -0.10
+	}
+	china_poblana = {
+		stability_cost_modifier = -0.10
+	}
+	PBL_cinco_de_mayo = {
+		army_tradition = 0.50
+	}
+	rapid_industrialization = {
+		global_trade_goods_size_modifier = 0.10
+	}
+}
+
+#Queretaro
+
+QRT_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		infantry_cost = -0.20
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+			tag = QRT
+	}
+	free = yes		#will be added at load.
+	
+	otomi_settlement = {
+		global_tax_modifier = 0.10
+	}
+	sierra_gorda = {
+		defensiveness = 0.10
+	}
+	conin = {
+		land_morale = 0.15
+	}
+	third_city_of_the_kingdom = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		meritocracy = 1
+		horde_unity = 1
+		devotion = 1
+	}
+	conspiracy_of_queretaro = {
+		spy_offence = 0.20
+	}
+	la_corregidora = {
+		global_spy_defence = 0.15
+		envoy_travel_time = -0.33
+	}
+	home_of_revolutionaries = {
+		improve_relation_modifier = 0.30
+		#max_revolutionary_zeal = 10
+	}
+}
+
+#Quintana Roo
+
+QTR_ideas = {
+	start = {
+		stability_cost_modifier = -0.15
+		merchants = 1
+	}
+
+	bonus = {
+		years_of_nationalism = -5
+	}
+	
+	trigger = {
+		OR = {
+			tag = QTR
+			tag = CSZ
+			}
+	}
+	free = yes		#will be added at load.
+	
+	mayan_innovation = {
+		technology_cost = -0.05
+	}
+	tulum = {
+		prestige = 1
+	}
+	kuchkabal = {
+		governing_capacity_modifier = 0.10
+		reform_progress_growth = 0.15
+	}
+	gonzalo_guerrero = {
+		culture_conversion_cost = -0.20
+	}
+	mayan_expeditions = {
+		colonists = 1
+	}
+	chan_santa_cruz = {
+		native_assimilation = 0.50
+		native_uprising_chance = -0.50
+	}
+	an_independent_yucatan = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
+	}
+}
+
+
+#Sinaloa
+
+SLA_ideas = {
+	start = {
+		cavalry_power = 0.15
+		merchants = 1
+	}
+	
+	bonus = {
+		yearly_corruption = -0.10
+	}
+	
+	trigger = {
+			tag = SLA
+	}
+	free = yes		#will be added at load.
+	
+	SLA_ulama = {
+		global_autonomy = -0.075
+	}
+	banda_music = {
+		prestige = 1
+	}
+	damiana = {
+		manpower_recovery_speed = 0.20
+	}
+	bread_basket_of_mexico = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	mazatlan = {
+		global_trade_power = 0.10
+	}
+	estado_de_occidente = {
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	SLA_opium_production = {
+		global_unrest = -1
+	}
+}
+
+#San Luis Potosi
+
+SLP_ideas = {
+	start = {
+		global_spy_defence = 0.20
+		inflation_reduction = 0.10
+	}
+
+	bonus = {
+		core_creation = -0.15
+	}
+	
+	trigger = {
+			tag = SLP
+	}
+	free = yes		#will be added at load.
+	
+	SLP_mineral_wealth = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	king_saint_louis = {
+		prestige = 0.50
+		yearly_absolutism = 0.50
+	}
+	SLP_potosi = {
+		production_efficiency = 0.15
+	}
+	san_luis_de_la_patria = {
+		army_tradition = 0.50
+	}
+	xilitla_castle = {
+		defensiveness = 0.20
+	}
+	plan_of_san_luis_potosi = {
+		candidate_random_bonus = 1
+		reform_progress_growth = 0.10
+
+	}
+	potosino_poets = {
+		culture_conversion_cost = -0.15
+	}
+}
+
+#Sonora
+
+SNA_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		prestige = 1
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	trigger = {
+		tag = SNA
+	}
+	free = yes      #will be added at load.
+
+	SNA_mercenary_republic = {
+		mercenary_discipline = 0.05
+		mercenary_manpower = 0.5
+	}
+	SNA_sale_of_script = {
+		core_creation = -0.1
+	}
+	SNA_Good_Use_Of_Gold = {
+		inflation_reduction = 0.1
+	}
+	SNA_cowboy_country = {
+		fire_damage = 0.1
+	}
+	SNA_take_what_is_yours = {
+		light_ship_cost = -0.1
+		privateer_efficiency = 0.1
+	}
+	SNA_uniting_the_outlaws = {
+		land_forcelimit_modifier = 0.33
+	}
+	SNA_taking_the_fight_south = {
+		movement_speed = 0.15
+		prestige_from_land = 0.5
+	}
+}
+
+#Tabasco
+
+TBS_ideas = {
+	start = {
+		hostile_attrition = 1
+		land_attrition = -0.15
+	}
+
+	bonus = {
+		ae_impact = -0.10
+	}
+	
+	trigger = {
+			tag = TBS
+	}
+	free = yes		#will be added at load.
+	
+	TBS_olmecs = {
+		num_accepted_cultures = 1
+		tolerance_heretic = 1
+	}
+	land_of_rainforests = {
+		build_cost = -0.10
+		defensiveness = 0.10
+	}
+	tabscoob = {
+		land_morale = 0.10
+	}
+	eight_tigers = {
+		shock_damage = 0.10
+	}
+	TBS_la_malinche = {
+		free_dip_policy = 1
+	}
+	TBS_chocolate = {
+		improve_relation_modifier = 0.30
+	}
+	fiery_creation = {
+		discipline = 0.05
+	}
+}
+
+#Tamaulipas
+
+TML_ideas = {
+	start = {
+		diplomats = 1
+		fire_damage = 0.10
+	}
+
+	bonus = {
+		fire_damage_received = -0.10
+	}
+	
+	trigger = {
+			tag = TML
+	}
+	free = yes		#will be added at load.
+	
+	nuevo_santander = {
+		governing_capacity_modifier = 0.10
+	}
+	TML_native_resistance = {
+		years_of_nationalism = -5
+	}
+	port_of_tampico = {
+		naval_forcelimit_modifier = 0.25
+	}
+	teatro_de_la_reforma = {
+		prestige = 1
+	}
+	TML_theater_entertainment = {
+		global_unrest = -1
+	}
+	republic_of_the_rio_grande = {
+		ae_impact = -0.15
+	}
+	maquiladoras = {
+		production_efficiency = 0.10
+	}
+}
+
+#Tlaxcala
+
+TLX_ideas = {
+	start = {
+		core_creation = -0.15
+		siege_ability = 0.10
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.20
+	}
+	
+	trigger = {
+			tag = TLX
+	}
+	free = yes		#will be added at load.
+	
+	tlaxcalans = {
+		global_institution_spread = 0.15
+	}
+	cacaxtla = {
+		development_cost = -0.05
+		state_maintenance_modifier = -0.10
+	}
+	spanish_aid = {
+		advisor_cost = -0.20
+	}
+	TLX_IKF = { # Joanna, Charles, Filipe
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 1
+	}
+	a_distinct_entity = {
+		prestige_decay = -0.01
+	}
+	matlalcueye = {
+		technology_cost = -0.1
+	}
+	our_identity_kept = {
+		tolerance_own = 2
+	}
+}
+
+#Veracruz
+
+VRZ_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		diplomatic_upkeep = 1
+	}
+
+	bonus = {
+		colonists = 1
+	}
+	
+	trigger = {
+		tag = VRZ
+	}
+	free = yes		#will be added at load.
+	
+	VRZ_plus_ultra = {
+		may_explore = yes
+	}
+	true_cross = {
+		global_missionary_strength = 0.03
+	}
+	yanga = {
+		infantry_power = 0.15
+	}
+	gateway_to_mexico = {
+		global_garrison_growth = 0.20
+		defensiveness = 0.10
+	}
+	port_of_veracruz = {
+		navy_tradition = 1
+	}
+	remember_the_siege = {
+		fire_damage_received = -0.15
+	}
+	holding_the_gulf = {
+		naval_morale = 0.20
+	}
+}
+
+#Yucatan
+
+YTN_ideas = {
+	start = {
+		shock_damage = 0.10
+		idea_cost = -0.10
+	}
+	
+	bonus = {
+		prestige = 1
+	}
+	
+	trigger = {
+			tag = YTN
+	}
+	free = yes		#will be added at load.
+	
+	mayan_innovation = {
+		technology_cost = -0.05
+	}
+	the_heartland = {
+		prestige = 1
+	}
+	kuchkabal = {
+		governing_capacity_modifier = 0.10
+		reform_progress_growth = 0.15
+	}
+	gonzalo_guerrero = {
+		culture_conversion_cost = -0.20
+	}
+	mayan_expeditions = {
+		colonists = 1
+	}
+	reunite_the_peninsula = {
+		core_creation = -0.20
+	}
+	an_independent_yucatan = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
+	}
+}
+
+#Zacatecas
+
+ZCT_ideas = {
+	start = {
+		movement_speed = 0.10
+		global_institution_spread = 0.10
+	}
+
+	bonus = {
+		spy_offence = 0.20
+	}
+	
+	trigger = {
+			tag = ZCT
+	}
+	free = yes		#will be added at load.
+	
+	work_conquers_all = {
+		production_efficiency = 0.10
+	}
+	ZCT_silver_mining = {
+		inflation_reduction = 0.10
+	}
+	nuevo_galicia = {
+		state_maintenance_modifier = -0.15
+	}
+	tenamaxtle = {
+		infantry_power = 0.10
+	}
+	a_jewel_in_the_crown = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	people_of_the_grasslands = {
+		cavalry_power = 0.20
+	}
+	the_taking_of_zacatecas = {
+		army_tradition = 1
+	}
+}
+
+#### END OF MEXICAN STATES ####
+
+mexican_ideas = {
+	start = {
+		infantry_power = 0.10
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+
+	bonus = {
+		technology_cost = -0.05
+	}
+
+	trigger = {
+		AND = {
+			OR = {
+					culture_group = peninsular_mexican
+					culture_group = costa_chican
+					culture_group = mazatlan_mexican
+					culture_group = altiplano_central
+					culture_group = gulf_mexican
+					culture_group = oriental_mexican
+					culture_group = occidental_mexican
+					culture_group = pacific_mexican
+					capital_scope = { superregion = central_america_superregion }
+				}
+			NOT = {
+				tag = AGC
+				tag = BCN
+				tag = BCS
+				tag = HHC
+				tag = COA
+				tag = CLM
+				tag = CPE
+				tag = CPS
+				tag = DFM
+				tag = DRG
+				tag = EMX
+				tag = GJT
+				tag = GRR
+				tag = HDL
+				tag = JLC
+				tag = MCN
+				tag = MRL
+				tag = NAY
+				tag = NLN
+				tag = OAX
+				tag = PBL
+				tag = QRT
+				tag = QTR
+				tag = SLA
+				tag = SLP
+				tag = SNA
+				tag = TBS
+				tag = TML
+				tag = VRZ
+				tag = YTN
+				tag = ZCT
+				tag = MEX
+				#tag = NOM
+				#tag = EOC
+				#tag = RRG
+				#tag = LBC
+				#tag = ROS
+				#tag = CSZ
+				#tag = YUC
+			}
+		}
+	}
+	free = yes		#will be added at load.
+
+	agave_azul = {
+		global_trade_power = 0.10
+	}
+	pronunciamiento = {
+		enemy_core_creation = 0.10
+	}
+	fiestas = {
+		prestige_from_land = 0.15
+	}
+	esos_caballos_no_son_pinatas = {
+		cavalry_power = 0.10
+	}
+	strictly_business = {
+		envoy_travel_time = -0.10
+	}
+	exporting_rebellions = {
+		rebel_support_efficiency = 0.25
+	}
+	secularizing_government = {
+		idea_cost = -0.10
+	}
+}
