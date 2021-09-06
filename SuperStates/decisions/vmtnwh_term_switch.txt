@@ -1,0 +1,32 @@
+country_decisions = {
+	vrm_nwh_term_change = {
+		
+		major = yes
+		potential = {
+			has_reform = new_england_state_reform
+			OR = {
+				primary_culture = new_hampshirite
+				primary_culture = vermonter
+			}
+		}
+		
+		allow = {
+			stability = 1
+			dip_power = 75
+			adm_power = 75
+			mil_power = 75
+			government_reform_progress = 75
+		}
+		
+		effect = {
+			remove_government_reform = new_england_state_reform
+			add_government_reform = american_state_reform
+			hidden_effect = {
+				set_country_flag = term_length_amendment
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

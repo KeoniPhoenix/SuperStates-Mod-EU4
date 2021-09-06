@@ -1,0 +1,79 @@
+country_decisions = {
+## Reform into New Brunswick
+	new_brunswick_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_new_brunswick } #Only once
+			NOT = { exists = NBR }
+			NOT = { tag = MTU }
+			NOT = { tag = USA }
+			NOT = { tag = CAN }
+			NOT = { exists = NAM }
+			OR = {
+				primary_culture = new_brunswicker
+				primary_culture = brayon
+				tag = MDW
+				AND = {
+					OR = {
+						primary_culture = acadian
+						primary_culture = gaspesie
+					}
+					capital_scope = {
+					area = new_brunswick_area
+					}
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+				area = new_brunswick_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			new_brunswick_area = {
+				ROOT = { num_of_cities = 5 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = NBR
+			set_country_flag = formed_new_brunswick
+			NBR = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					NOT = { owns = 3071 }
+					NOT = { is_core = 3071 }
+				}
+			3071 = { add_permanent_claim = GRG }
+			}
+				swap_non_generic_missions = yes
+				country_event = { id = ideagroups.1 } #Swap
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

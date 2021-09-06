@@ -1,0 +1,74 @@
+country_decisions = {
+
+## Mantario Nation
+	reform_into_mantario = {
+		major = yes
+		potential = {
+			NOT = { exists = MTO }
+			NOT = { exists = CAN }
+			NOT = { exists = WCN }
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			OR = {
+				tag = MTB
+				tag = NRO
+				#tag = NWO
+				primary_culture = manitoban
+				primary_culture = northern_ontarian
+				primary_culture = mantarian
+				#primary_culture = northwest_ontarian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mantario_area
+				area = manitoba_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			manitoba_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mantario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 10
+			change_tag = MTO
+				MTO = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			northern_ontario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MTO
+			}
+				}
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

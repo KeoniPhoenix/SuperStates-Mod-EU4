@@ -1,0 +1,99 @@
+country_decisions = {
+
+## Unified Baja Callifornia
+	unite_baja_california = {
+		major = yes
+		potential = {
+		NOT = { has_country_flag = formed_baja_flag }
+			NOT = { exists = EUM }
+			NOT = { exists = MEX }
+			NOT = { exists = NAM }
+			NOT = { exists = ROS }
+			NOT = { exists = LBC }
+			NOT = { exists = GCL }
+			NOT = { exists = LCA }
+			NOT = { exists = PCF }
+			NOT = { exists = NSP }
+			#technology_group = mesoamerican
+			OR = {
+				AND = {
+					primary_culture = baja_californian
+					NOT = { exists = BCS }
+				}
+				AND = {
+					primary_culture = south_baja_californian
+					NOT = { exists = BCN }
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 934
+				province_id = 935
+				province_id = 933
+				province_id = 932
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			baja_california_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			baja_california_sur_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 934 # Tijuana
+			owns_core_province = 935 # Mexicali
+			owns_core_province = 933 # Ensenada
+			owns_core_province = 932 # La Paz
+		}
+		effect = {
+		set_country_flag = formed_baja_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = LBC
+			LBC = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			baja_california_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LBC
+			}
+			baja_california_sur_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LBC
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

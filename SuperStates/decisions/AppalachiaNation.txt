@@ -1,0 +1,112 @@
+country_decisions = {
+
+## Appalachia
+	appalachia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = APL }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			NOT = { exists = MAA }
+			NOT = { has_country_flag = formed_appalachia_flag }
+			OR = {
+				culture_group = appalachian
+				primary_culture = ohioan
+				primary_culture = kentuckian
+				tag = NCK
+				tag = WML
+				tag = WVA
+				tag = FKL
+				AND = {
+					tag = TEN
+					NOT = { owns = 2519 }	# West Tennessee and Memphis
+					NOT = { owns = 3144 }	# West Tennessee
+					NOT = { owns = 2518 }	# Middle Tennessee Nashville
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				province_id = 2520	# Knoxville
+				province_id = 2523	# Asheville
+				province_id = 2589	# Pittsburgh
+				province_id = 2539	# Charleston, WV
+				AND = {
+                    province_id = 2507
+                    ROOT = { NOT = { owns_core_province = 2509 } }
+                }
+				AND = {
+                    province_id = 2509
+                    ROOT = { NOT = { owns_core_province = 2507 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			shenandoah_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			appalachia_region = {
+				ROOT = { num_of_cities = 25 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2520 # Knoxville
+			owns_core_province = 2523 # Asheville
+			owns_core_province = 2589 # Pittsburgh
+			owns_core_province = 2539 # Charleston, WV
+			OR = {
+				owns_core_province = 2507 # Birmingham
+				owns_core_province = 2509 # Huntsville
+			}
+		}		
+		effect = {
+		change_tag = APL
+		swap_non_generic_missions = yes
+			APL = {
+				appalachia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = APL
+			}
+			ohio_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = APL
+			}
+				if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			set_country_flag = formed_appalachia_flag
+			add_prestige = 30
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

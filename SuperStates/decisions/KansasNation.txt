@@ -1,0 +1,89 @@
+country_decisions = {
+
+## Reform into Kansas
+	reform_kansas = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			NOT = { has_country_flag = formed_kansas_flag }
+			NOT = { exists = KNS }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { exists = GPL }
+			NOT = { exists = FSA }
+			NOT = { exists = NSP }
+			#NOT = { exists = MDL }
+			NOT = { tag = MOU }
+			OR = {
+				tag = WSK
+				primary_culture = kansan
+				primary_culture = jayhawker
+				primary_culture = west_kansan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = west_kansas_area
+				area = kansas_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			kansas_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			west_kansas_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+				}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			set_country_flag = formed_kansas_flag
+			add_prestige = 10
+			change_tag = KNS
+			KNS = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			kansas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KNS
+			}
+			west_kansas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KNS
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

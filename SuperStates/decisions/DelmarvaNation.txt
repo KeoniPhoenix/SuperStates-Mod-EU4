@@ -1,0 +1,102 @@
+country_decisions = {
+
+## DELMARVA
+	form_delmarva_nation = {
+		major = yes
+		potential = {
+		NOT = { has_country_flag = formed_delmarva_flag }
+			NOT = { exists = DMV }
+			NOT = { exists = MAA }
+			NOT = { exists = FSA }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			OR = {
+				primary_culture = delawarean
+				primary_culture = delmarvan
+				AND = {
+					OR = {
+						primary_culture = marylander
+						primary_culture = west_marylander
+						}
+					OR = {
+							2729 = {
+								is_capital_of = ROOT
+							}
+							2730 = {
+								is_capital_of = ROOT
+							}
+						}
+				}
+				AND = {
+					primary_culture = virginian
+						2731 = {
+							is_capital_of = ROOT
+						}
+				}
+			}
+			OR = {
+			ai = no
+			AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+				}
+		}
+		allow = {
+			is_at_war = no
+			delaware_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			delmarva_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+		set_country_flag = formed_delmarva_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = DMV
+			DMV = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			change_culture = delmarvan
+			delmarva_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DMV
+			}
+			delaware_area = {
+				limit = {
+						owned_by = ROOT 
+				}
+				change_culture = delmarvan
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_owner_culture = yes
+					}
+					change_culture = delmarvan
+				}
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

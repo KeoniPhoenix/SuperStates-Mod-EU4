@@ -1,0 +1,94 @@
+country_decisions = {
+
+## CAROLINA
+	carolina_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ASE }
+			NOT = { exists = CRL }
+			NOT = { exists = USA }
+			NOT = { exists = CSA }
+			NOT = { exists = NAM }
+			NOT = { exists = ASE }
+			#technology_group = north_american
+			OR = {
+				primary_culture = north_carolinian
+				primary_culture = south_carolinian
+				primary_culture = mountaineer
+				primary_culture = high_tider
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_carolina_area
+				area = south_carolina_area
+				area = blue_ridge_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			north_carolina_area = {
+				ROOT = { num_of_cities = 4 }
+					owned_by = ROOT
+					is_core = ROOT
+			}
+			blue_ridge_area = {
+				ROOT = { num_of_cities = 4 }
+					owned_by = ROOT
+					is_core = ROOT
+			}
+			south_carolina_area = {
+				ROOT = { num_of_cities = 4 }
+					owned_by = ROOT
+					is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = CRL
+			CRL = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			north_carolina_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CRL
+			}
+			south_carolina_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CRL
+			}
+			blue_ridge_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CRL
+			}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

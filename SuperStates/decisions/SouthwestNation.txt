@@ -1,0 +1,139 @@
+country_decisions = {
+
+## SOUTHWEST NATION
+	southwest_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = USA }
+			#NOT = { exists = GPL }
+			NOT = { exists = SWW }
+			NOT = { exists = DES }
+			#NOT = { exists = GLK }
+			NOT = { has_country_flag = formed_deseret_flag }
+			NOT = { has_country_flag = formed_southwest_flag }
+			NOT = { has_country_flag = formed_rocky_mountain_flag }
+			NOT = { has_country_flag = formed_pacifica_flag }
+			OR = {
+				culture_group = southwestern
+				primary_culture = nevadan
+				primary_culture = southern_californian
+				}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 936
+				province_id = 937
+				province_id = 949
+				province_id = 956
+				province_id = 957
+				province_id = 2484
+				AND = {
+                    province_id = 2486 # San Antonio
+                    ROOT = { NOT = { owns_core_province = 942 } } # San Bernardino
+                }
+				AND = {
+                    province_id = 951 # Reno
+                    ROOT = { NOT = { owns_core_province = 953 } } # Provo
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			american_southwest_region = {
+				ROOT = { num_of_cities = 20 }
+				owned_by = ROOT
+			}
+			owns_core_province = 936	# Phoenix
+			owns_core_province = 937	# Tucson
+			owns_core_province = 949	# Las Vegas
+			owns_core_province = 956	# Santa Fe
+			owns_core_province = 957	# Albuquerque
+			owns_core_province = 2484	# El Paso
+			OR = {
+				owns_core_province = 2486	# San Antonio
+				owns_core_province = 942	# San Bernardino
+				}
+			OR = {
+				owns_core_province = 951	# Reno
+				owns_core_province = 953	# Provo
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_southwest_flag
+			add_prestige = 10
+			change_tag = SWW
+			ROOT = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			american_southwest_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			colorado_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			black_rock_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			salt_lake_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			942 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3293 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2485 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			}
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

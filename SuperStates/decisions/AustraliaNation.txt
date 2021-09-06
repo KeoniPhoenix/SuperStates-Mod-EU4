@@ -1,0 +1,108 @@
+country_decisions = {
+
+## AUSTRALIA
+	australia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = AUS }
+			NOT = { has_country_flag = formed_australia_flag }
+			culture_group = australian_new_zealander
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1084
+				province_id = 1088
+				province_id = 1790
+				province_id = 2011
+				province_id = 2017
+				province_id = 2018
+				province_id = 2021
+				province_id = 4648
+				province_id = 1092
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			australia_superregion = {
+				ROOT = { num_of_cities = 40}
+				owned_by = ROOT
+				is_core = ROOT
+				}
+			OR = {
+				AND = {
+					owns_core_province = 1084		#Perth
+					owns_core_province = 1088		#Adelaide
+					owns_core_province = 1092		#Darwin
+					owns_core_province = 1790		#Brisbane
+						OR = {
+							owns_core_province = 4648		#Jervis Bay
+							owns_core_province = 2021		#Hobart
+							}
+					}
+				AND = {
+					owns_core_province = 2011		#Sydney
+					owns_core_province = 2017		#Canberra
+					owns_core_province = 2018		#Melbourne
+					owns_core_province = 4648		#Jervis Bay
+						OR = {
+							owns_core_province = 1790	#Brisbane
+							owns_core_province = 2021	#Hobart
+						}
+					}
+				}
+		}
+		effect = {
+		change_tag = AUS
+		swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_australia_flag
+			add_prestige = 35
+			AUS = {
+				if = {
+					limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+				}
+				east_australia_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = AUS
+				}
+				west_australia_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = AUS
+				}
+				if = {
+					limit = {
+						NOT = { owns = 4637 }
+					}
+					4637 = {			# Norfolk Island
+						add_permanent_claim = AUS
+					}
+				}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,66 @@
+country_decisions = {
+
+## OCCIDENTE
+	occidente_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = EOC }
+			NOT = { exists = MEX }
+			NOT = { exists = GCL }
+			NOT = { exists = ROS }
+			OR = {
+				primary_culture = sinaloan
+				primary_culture = sonoran_culture
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				area = sinaloa_area
+				area = sonora_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			sinaloa_area = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sonora_area = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = EOC
+			EOC = {
+				if = {
+					limit = {
+						NOT = { government_rank = 2 }
+					}
+				set_government_rank = 2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

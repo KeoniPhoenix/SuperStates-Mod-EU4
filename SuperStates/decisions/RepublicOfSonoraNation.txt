@@ -1,0 +1,93 @@
+country_decisions = {
+
+## Republic of Sonora + Baja California
+	unite_sonora_and_lower_california = {
+		major = yes
+		potential = {
+			NOT = { exists = BCN }
+			NOT = { exists = BCS }
+			NOT = { exists = MEX }
+			NOT = { exists = NAM }
+			NOT = { exists = ROS }
+			NOT = { exists = LBC }
+			NOT = { exists = GCL }
+			NOT = { exists = NSP }
+			NOT = { exists = MSO }
+			NOT = { exists = EOC }
+			#technology_group = north_american
+			OR = {
+				primary_culture = baja_californian
+				primary_culture = south_baja_californian
+				primary_culture = sonoran_culture
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				area = baja_california_area
+				area = baja_california_sur_area
+				area = sonora_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			baja_california_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sonora_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			baja_california_sur_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}			
+		
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = ROS
+			ROS = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			sonora_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROS
+			}
+			baja_california_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROS
+			}
+				}
+			#country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,68 @@
+country_decisions = {
+
+## Reform into Nevada
+	reform_nevada = {
+		major = yes
+		potential = 	{
+			NOT = { exists = NVA }
+			NOT = { tag = RKY }
+			NOT = { tag = DES }
+			NOT = { exists = NAU }
+			NOT = { tag = USA }
+			NOT = { tag = NSP }
+			OR = {
+				tag = LSV
+				primary_culture = nevadan
+				#primary_culture = las_vegan
+				}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 3
+							}
+				}
+			}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3279
+				province_id = 951
+				province_id = 950
+				province_id = 948
+				province_id = 949
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			owns_core_province = 3279
+			owns_core_province = 951
+			owns_core_province = 950
+			owns_core_province = 948
+			owns_core_province = 949
+				}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = NVA
+				NVA = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

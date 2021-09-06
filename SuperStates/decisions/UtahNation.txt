@@ -1,0 +1,84 @@
+country_decisions = {
+
+## Reform into Utah
+	reform_utah = {
+		major = yes
+		potential = {
+			NOT = { exists = UTA }
+			NOT = { exists = DES }
+			NOT = { exists = RKY }
+			NOT = { exists = FSA }
+			NOT = { exists = NAU }
+			NOT = { exists = USA }
+			NOT = { exists = ACA }
+			NOT = { exists = AZL }
+			NOT = { exists = NSP }
+			OR = {
+				tag = SUT
+				primary_culture = utahn
+				primary_culture = south_utahn
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = salt_lake_area
+				area = south_utah_area
+				province_id = 952
+				province_id = 953
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			salt_lake_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_utah_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 952 # Salt Lake
+			owns_core_province = 953 # Provo
+		}	
+		
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = UTA
+			UTA = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			south_utah_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = UTA
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

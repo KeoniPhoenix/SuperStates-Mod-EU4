@@ -1,0 +1,108 @@
+country_decisions = {
+
+## PACIFIC OCEANIA
+	pacific_oceania_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = PCO }
+			#technology_group = north_american
+			culture_group = micronesian-pacific_islander
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1235
+				province_id = 1240
+				province_id = 968
+				superregion = oceania_superregion
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			hawaii_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			micronesia_region = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				polynesia_region = {
+					ROOT = { num_of_cities = 3 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				melanesia_region = {
+					ROOT = { num_of_cities = 3 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+			owns_core_province = 1235 # Guam
+			owns_core_province = 1240 # NMI
+			owns_core_province = 968 # Honolulu
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = PCO
+			PCO = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			melanesia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PCO
+			}
+			southeastern_melanesia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PCO
+			}
+			hawaii_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PCO
+			}
+			micronesia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PCO
+			}
+			polynesia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PCO
+			}
+				}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

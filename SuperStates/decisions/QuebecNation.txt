@@ -1,0 +1,113 @@
+country_decisions = {
+	quebec_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = QUE }
+			NOT = { exists = NFR }
+			NOT = { exists = CAN }
+			NOT = { exists = RUP }
+			OR = {
+				primary_culture = inuktitut
+				AND = {
+					primary_culture = labradorian
+					accepted_culture = quebecois
+				}
+				AND = {
+					culture_group = new_french
+					OR = {
+						NOT = { primary_culture = cajun }
+						NOT = { primary_culture = acadian }
+					}
+				}
+			}
+			#technology_group = north_american
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2657
+				province_id = 2652
+				province_id = 2007
+				area = nord_du_quebec_area
+				area = quebec_area
+				area = bois_francs_area
+				area = baie_des_chaleurs_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			nord_du_quebec_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			bois_francs_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			quebec_area = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			baie_des_chaleurs_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2657 # Montreal
+			owns_core_province = 2652 # Quebec
+			owns_core_province = 2007 # Gatineau
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = QUE
+			QUE = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			nord_du_quebec_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QUE
+			}
+			bois_francs_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QUE
+			}
+			baie_des_chaleurs_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QUE
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

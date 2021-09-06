@@ -1,0 +1,42 @@
+# country_decisions = {
+
+# #Kingdom of Hawaii
+	# kingdom_of_hawaii = {
+		# major = no
+		# potential = {
+			# primary_culture = hawaiian
+			# NOT = { government = monarchy }
+			# NOT = { government = republican_dictatorship }
+			# NOT = { government = hawaiian_monarchy }
+			# ai = no
+		# }	
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# owns = 968
+			# owns = 969
+			# government = republic
+		# }
+		# effect = {
+			# capital_scope = {
+				# spawn_rebels = {
+					# type = pretender_rebels 
+					# size = 1
+					# leader = "Lorrin Thurston"
+				# }
+			# }
+			# add_adm_power = -100
+			# add_dip_power = -50
+			# add_years_of_income = -1
+			# add_stability = -3
+			# change_government = hawaiian_monarchy
+			# define_ruler = {
+				# name = "Quentin"
+				# dynasty = "Kawananakoa"
+				# DIP = 3
+				# ADM = 3
+				# MIL = 2
+			# }
+		# }
+	# }
+# }

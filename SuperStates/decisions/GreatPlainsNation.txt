@@ -1,0 +1,105 @@
+country_decisions = {
+
+## GREAT PLAINS FEDERATION
+	great_plains_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = USA }
+			NOT = { exists = GPL }
+			NOT = { exists = NAM }
+			NOT = { has_country_flag = formed_great_lakes_flag }
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			OR = {
+				culture_group = great_plainer_group
+				primary_culture = west_nebraskan
+				primary_culture = iowan
+				primary_culture = montanan
+				primary_culture = kansan
+				primary_culture = saskatchewanian
+				primary_culture = wyomingite
+				}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1006
+				province_id = 1010
+				province_id = 1002
+				province_id = 994
+				province_id = 998
+				province_id = 986
+				province_id = 982
+				region = great_plains_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			great_plains_region = {
+				ROOT = { num_of_cities = 25 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 1006	# Topeka
+			owns_core_province = 1010	# Oklahoma City
+			owns_core_province = 1002	# Lincoln
+			owns_core_province = 994	# Bismarck
+			owns_core_province = 998	# Pierre
+			OR = {
+				owns_core_province = 986	# Cheyenne
+				owns_core_province = 982	# Billings
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_great_plains_flag
+			add_prestige = 10
+			change_tag = GPL
+			GPL = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			great_plains_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GPL
+			}
+			oklahoma_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GPL
+			}
+			high_plains_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GPL
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

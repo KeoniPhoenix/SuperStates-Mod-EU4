@@ -1,0 +1,105 @@
+country_decisions = {
+	ontario_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ONT }
+			NOT = { exists = NFR }
+			NOT = { exists = CAN }
+			NOT = { exists = RUP }
+			OR = {
+				tag = OTW
+				tag = GAT
+				tag = OTG
+				tag = TNT
+			}
+			primary_culture = ontarian
+			primary_culture = northern_onarian
+			primary_culture = mantarian
+			primary_culture = torontoan
+			#technology_group = north_american
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				area = northern_ontario_area
+				area = ontario_area
+				area = southwest_ontario_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			northern_ontario_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			ontario_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			southwest_ontario_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2642 # Toronto
+			owns_core_province = 2643 # Ottawa
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = ONT
+			ONT = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			southwest_ontario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ONT
+			}
+			northern_ontario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ONT
+			}
+			ontario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ONT
+			}
+			2650 = {
+				add_permanent_claim = ONT
+			}
+			2672 = {
+				add_permanent_claim = ONT
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,58 @@
+country_decisions = {
+
+## Ottawa-Gatineau/National Capital Region
+	form_national_capital_region = {
+		major = yes
+		potential = {
+			NOT = { exists = OTG }
+			NOT = { exists = CAN }
+			NOT = { exists = NFR }
+			NOT = { exists = NAM }
+			NOT = { exists = RUP }
+			#technology_group = north_american
+			OR = {
+				tag = OTW
+				tag = GAT
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				province_id = 2007
+				province_id = 2643
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns = 2643
+			owns = 2007
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = OTG
+			2007 = {
+				add_core = OTG
+			}
+			2643 = {
+				add_core = OTG
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

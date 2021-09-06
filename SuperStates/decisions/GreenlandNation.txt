@@ -1,0 +1,77 @@
+country_decisions = {
+# Form Greenland
+greenland_nation = {
+		major = yes
+		potential = {
+			greenland_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+			}
+			OR = {
+				primary_culture = greenlandic
+				primary_culture = icelandic
+				culture_group = arctic_canadian
+				culture_group = scandinavian
+				}
+			capital_scope = {
+					area = greenland_area
+				}
+			NOT = { num_of_cities = 8 }
+			NOT = { has_country_flag = formed_greenland } # Only once
+			OR = {
+				ai = no
+				NOT = { num_of_cities = 4 }
+			}
+			NOT = { exists = GRL }
+			NOT = { tag = ACU }
+			NOT = { tag = CAN}
+			NOT = { tag = USA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = greenland_area
+				province_id = 1104 # Eiriksjford
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { num_of_cities = 8 }
+			is_at_war = no
+			greenland_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = GRL
+			set_country_flag = formed_greenland
+			GRL = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			greenland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GRL
+			}
+				}
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

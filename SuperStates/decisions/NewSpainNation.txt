@@ -1,0 +1,234 @@
+country_decisions = {
+
+	## New Spain
+	new_spain_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NSP }
+			NOT = { exists = NAM }
+			OR = {
+				culture_group = peninsular_mexican
+				culture_group = costa_chican
+				culture_group = mazatlan_mexican
+				culture_group = occidental_mexican
+				culture_group = oriental_mexican
+				culture_group = gulf_mexican
+				culture_group = altiplano_central
+				culture_group = pacific_mexican
+				culture_group = southwestern
+				primary_culture = miamian
+				primary_culture = west_floridian
+				primary_culture = cuban
+				primary_culture = puerto_rican
+				primary_culture = dominican
+				primary_culture = floridian
+				primary_culture = south_floridian
+				primary_culture = costa_rican
+				primary_culture = guatemalan
+				primary_culture = honduran
+				primary_culture = nicaraguan
+				primary_culture = salvadorian
+				primary_culture = panamanian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 20
+				}
+			}
+		}
+		allow = {
+			average_unrest = 1	#This is not suppose to be an easy tag to form because its overpowered in its effects
+			adm_tech = 15
+			stability = 3
+			OR = {
+				AND = {
+					adm_power = 400
+					NOT = { full_idea_group = administrative_ideas }
+				}
+				full_idea_group = administrative_ideas
+			}
+			OR = {
+				AND = {
+					dip_power = 400
+					NOT = { full_idea_group = diplomatic_ideas }
+				}
+				full_idea_group = diplomatic_ideas
+			}
+			OR = {
+				AND = {
+					mil_power = 400
+					OR = {
+						NOT = { full_idea_group = plutocracy_ideas }
+						NOT = { full_idea_group = aristocracy_ideas }
+					}
+				}
+				OR = {
+					full_idea_group = aristocracy_ideas
+					full_idea_group = plutocracy_ideas
+				}
+			}
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 484 	# Havana
+			owns_core_province = 490	# Santo Domingo
+			owns_core_province = 862 	# Veracruz
+			owns_core_province = 871	# Mexico City
+			owns_core_province = 888	# Guadalajara
+			owns_core_province = 925	# Juarez
+			owns_core_province = 934	# Tiajuana
+			owns_core_province = 841	# Guatemala
+			owns_core_province = 839	# San Salvador
+			owns_core_province = 2640	# Tegucialpa
+			owns_core_province = 2660	# Managua
+			owns_core_province = 2663	# San Jose
+			owns_core_province = 835	# Panama
+			owns_core_province = 831	# Caracas
+			owns_core_province = 825	# Bogota
+			#Must own at least one of these pairs
+			OR = {
+				AND = {
+					owns_core_province = 936	# Phoenix
+					owns_core_province = 944	# Los Angeles
+				}
+				AND = {
+					owns_core_province = 2486	# San Antonio
+					owns_core_province = 2487	# Houston
+				}
+				AND = {
+					owns_core_province = 937	# Tucson
+					owns_core_province = 957	# Albuquerque
+				}
+				AND = {
+					owns_core_province = 2490	# New Orleans
+					owns_core_province = 2508	# Mobile
+				}
+			}
+			#Must own at least one of these pairs
+			OR = {
+				AND = {
+					owns_core_province = 943	# San Diego
+					owns_core_province = 2543	# Pensacola
+				}
+				AND = {
+					owns_core_province = 492	# San Juan
+					owns_core_province = 2484	# El Paso
+				}
+				AND = {
+					owns_core_province = 941	# Sacramento
+					owns_core_province = 2546	# Jacksonville\St. Augstine
+				}
+				AND = {
+					owns_core_province = 946	# San Francisco
+					owns_core_province = 2545	# Miami
+				}
+			}
+		}
+					
+		effect = {
+			if = {
+				limit = { NOT = { full_idea_group = administrative_ideas } }
+				add_adm_power = -400
+			}
+			if = {
+				limit = { NOT = { full_idea_group = diplomatic_ideas } }
+				add_dip_power = -400
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { full_idea_group = aristocracy_ideas }
+						NOT = { full_idea_group = plutocracy_ideas }
+					}
+				}
+				add_mil_power = -400
+			}		
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 30
+			change_tag = NSP
+			NSP = {
+				set_capital = 871			# Mexico City
+			}
+			# #country_event = { id = ideagroups.1 } #Swap
+			central_america_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			caribbean_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			colombia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			american_southwest_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			texas_gulf_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			texas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			louisiana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			mississippi_delta_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			north_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			st_johns_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			suncoast_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+			south_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSP
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

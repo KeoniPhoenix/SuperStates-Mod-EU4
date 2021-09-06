@@ -1,0 +1,78 @@
+country_decisions = {
+## Reform into Oklahoma
+	oklahoma_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_oklahoma_flag } #Only once
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			NOT = { exists = OKL }
+			NOT = { tag = CSA }
+			NOT = { tag = GPL }
+			NOT = { tag = USA }
+			NOT = { exists = NAM }
+			OR = {
+				primary_culture = oklahoman
+				tag = SEQ
+			}
+			technology_group = states
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = oklahoma_area
+				province_id = 2476
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			oklahoma_area = {
+				ROOT = { num_of_cities = 5 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2476 # Tulsa
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = OKL
+			set_country_flag = formed_oklahoma_flag
+			OKL = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			3289 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+				}
+				swap_non_generic_missions = yes
+				country_event = { id = ideagroups.1 } #Swap
+					}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

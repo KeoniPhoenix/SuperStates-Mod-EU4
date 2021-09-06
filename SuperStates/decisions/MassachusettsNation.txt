@@ -1,0 +1,84 @@
+country_decisions = {
+
+## Reform into Massachusetts
+	reform_massachusetts = {
+		major = yes
+		potential = {
+			NOT = { exists = MSS }
+			NOT = { exists = NEW }
+			NOT = { exists = FSA }
+			NOT = { exists = NAU }
+			NOT = { exists = USA }
+			OR = {
+				tag = MSL
+				primary_culture = bay_stater
+				primary_culture = cape_codder
+				tag = MNE
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = massachusetts_area
+				area = cape_cod_area
+				province_id = 2609
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			massachusetts_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			cape_cod_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2609 # Boston
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = MSS
+			MSS = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			massachusetts_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MSS
+			}
+			cape_cod_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MSS
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,305 @@
+# country_decisions = {
+
+# #Canada Formed; Convert the populace to a common Canadian identy?
+	# common_culture_canada1 = {
+		# major = yes
+		# potential = {
+			# ai = no
+			# OR = {
+				# tag = CAN
+				# tag = RCA
+			# }
+			# NOT = { has_country_flag = culture_decision }
+			# #technology_group = north_american
+		# }
+		# allow = {
+			# ai = no
+			# adm_power = 500
+			# dip_power = 500
+			# mil_power = 125
+			# treasury = 5000
+			# arctic_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# western_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# central_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# maritimes_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+		# }
+		# effect = {
+			# add_adm_power = -500
+			# add_dip_power = -500
+			# add_mil_power = -125
+			# add_treasury = -5000
+			# change_primary_culture = canadian
+			# every_core_province = {
+				# limit = { superregion = canada_superregion }
+				# change_culture = canadian
+			# }
+			# add_country_modifier = {
+				# name = "united_culture_decision"
+				# duration = 10950
+			# }
+			# hidden_effect = {
+				# set_country_flag = culture_decision
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+	
+# #Canada Formed; Convert the populace to a common national identy?
+	# common_culture_canada2 = {
+		# major = yes
+		# potential = {
+			# ai = no
+			# OR = {
+				# tag = CAN
+				# tag = RCA
+			# }
+			# NOT = { has_country_flag = culture_decision }
+			# #technology_group = north_american
+		# }
+		# allow = {
+			# ai = no
+			# adm_power = 200
+			# dip_power = 200
+			# mil_power = 75
+			# treasury = 5000
+			# arctic_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# western_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# central_canada_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+			# maritimes_region = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = canadian }
+			# }
+		# }
+		# effect = {
+			# add_adm_power = -200
+			# add_dip_power = -200
+			# add_mil_power = -75
+			# add_treasury = -1000
+			# every_core_province = {
+				# limit = { superregion = canada_superregion }
+				# change_culture = ROOT
+			# }
+			# add_country_modifier = {
+				# name = "common_culture_decision"
+				# duration = 10950
+			# }
+			# hidden_effect = {
+				# set_country_flag = culture_decision
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+
+# #United north_american Formed; Convert the populace to a common American identy?
+# united_north_american_formed1 = {
+	# major = yes
+		# potential = {
+			# ai = no
+			# tag = USA
+			# #technology_group = north_american
+			# NOT = { has_country_flag = culture_decision }
+		# }
+		# allow = {
+			# ai = no
+			# adm_power = 500
+			# dip_power = 500
+			# mil_power = 125
+			# treasury = 5000
+			# pacific_coast_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# intermountain_west_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# american_southwest_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# great_plains_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# dixie_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# great_lakes_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# mid_atlantic_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# new_england_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+		# }
+		# effect = {
+			# add_adm_power = -500
+			# add_dip_power = -500
+			# add_mil_power = -125
+			# add_treasury = -5000
+			# every_core_province = {
+				# limit = { superregion = north_america_superregion }
+				# change_culture = ROOT
+			# }
+			# add_country_modifier = {
+				# name = "united_culture_decision"
+				# duration = 10950
+			# }
+			# hidden_effect = {
+				# set_country_flag = culture_decision
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+
+# #United north_american Formed; Convert the populace to a common national identy?
+# united_north_american_formed2 = {
+	# major = yes
+		# potential = {
+			# ai = no
+			# tag = USA
+			# #technology_group = north_american
+			# NOT = { has_country_flag = culture_decision }
+		# }
+		# allow = {
+			# ai = no
+			# adm_power = 200
+			# dip_power = 200
+			# mil_power = 75
+			# treasury = 1000
+			# pacific_coast_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# intermountain_west_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# american_southwest_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# great_plains_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# dixie_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# great_lakes_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# mid_atlantic_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+			# new_england_region = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# NOT = { culture = american }
+			# }
+		# }
+		# effect = {
+			# add_adm_power = -200
+			# add_dip_power = -200
+			# add_mil_power = -75
+			# add_treasury = -1000
+			# every_core_province = {
+				# limit = { superregion = north_america_superregion }
+				# change_culture = ROOT
+			# }
+			# add_country_modifier = {
+				# name = "common_culture_decision"
+				# duration = 10950
+			# }
+			# hidden_effect = {
+				# set_country_flag = culture_decision
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+# }

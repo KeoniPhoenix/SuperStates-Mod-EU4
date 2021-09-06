@@ -1,0 +1,182 @@
+country_decisions = {
+	
+## CASCADIA
+	cascadia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_cascadia_flag }
+			NOT = { has_country_flag = formed_pacifica_flag }
+			NOT = { exists = USA }
+			NOT = { exists = CSC }
+			NOT = { exists = PCF }
+			NOT = { exists = WCN }
+			#NOT = { exists = NAM }
+			NOT = { exists = ACA }
+			#technology_group = north_american
+			OR = {
+				primary_culture = oregonian
+				primary_culture = washingtonian
+				primary_culture = lincolnite
+				primary_culture = jeffersonian
+				primary_culture = british_columbian
+				#primary_culture = victorian
+				primary_culture = vancouverite
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 961
+				province_id = 965
+				province_id = 2635
+				province_id = 2634
+			}
+			AND = {
+                    province_id = 967
+                    ROOT = { NOT = { owns_core_province = 2732 } }
+                }
+				AND = {
+                    province_id = 2732
+                    ROOT = { NOT = { owns_core_province = 967 } }
+                }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			columbia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vancouver_area = {
+				type = all
+				owned_by = ROOT
+			}
+			high_desert_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+			}
+			oregon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jefferson_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+			}
+			lincoln_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+			}
+			puget_sound_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			gulf_islands_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 961	# Portland
+			owns_core_province = 965	# Seattle
+			owns_core_province = 2635	# Vancouver
+			owns_core_province = 2634	# Victoria
+			OR = {
+			owns_core_province = 967	# Spokane
+			owns_core_province = 2732	# Yakima
+			}
+		}
+		effect = {
+			set_country_flag = formed_cascadia_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = CSC
+				CSC = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			puget_sound_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			jefferson_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			gulf_islands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			lincoln_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			vancouver_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			columbia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			strait_of_georgia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			high_desert_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			kootenay_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			yukon_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSC
+			}
+			}
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

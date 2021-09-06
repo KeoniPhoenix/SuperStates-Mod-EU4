@@ -1,0 +1,88 @@
+# country_decisions = {
+
+# ## GOLDEN CIRCLE
+	# golden_circle_nation = {
+		# major = yes
+		# potential = {
+			# NOT = { exists = GCL }
+			# NOT = { exists = EUM }
+			# NOT = { exists = MEX }
+			# NOT = { exists = NAM }
+			# NOT = { exists = USA }
+			# NOT = { exists = IUS }
+			# NOT = { exists = NSP }
+			# NOT = { has_country_modifier = the_abolish_slavery_act }
+			# OR = {
+				# culture_group = southerner
+				# #culture_group = louisiana_group
+				# primary_culture = texan
+			# }
+			# OR = {
+				# ai = no
+				# AND = {
+					# ai = yes
+					# num_of_cities = 35
+				# }
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# NOT = { has_country_modifier = the_abolish_slavery_act }
+			# carribeans_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# central_america_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# dixie_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# mexican_altiplano_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# mexican_gulf_coast_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# mexican_pacific_coast_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# rio_bravo_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# sea_of_cortez_region = {
+				# type = all 
+				# owned_by = ROOT
+			# }
+			# is_core = 484		#Havana
+			# is_core = 862		#Veracruz
+			# is_core = 2487		#Harris
+			# is_core = 2490		#New Orleans
+			# is_core = 2508		#Mobile
+			# is_core = 2510		#Fulton
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 7300
+			# }
+			# add_prestige = 25
+			# change_tag = GCL
+			# set_government_rank = 3
+			# change_government = bureaucratic_despotism
+			# GCL = {
+				# set_capital = 484			# Havana
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+# }

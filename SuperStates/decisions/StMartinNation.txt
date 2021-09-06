@@ -1,0 +1,61 @@
+country_decisions = {
+## Unite Saint Martin
+	st_martin_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_saint_martin } #Only once
+			NOT = { exists = USM }
+			NOT = { tag = WIS }
+			NOT = { tag = ANL }
+			NOT = { tag = USA }
+			NOT = { tag = NAM }
+			NOT = { tag = MEX }
+			OR = {
+				tag = SNM
+				tag = STM
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 1
+				}
+			}
+			capital_scope = {
+					OR = {
+						province_id = 1881
+						province_id = 3051
+						}
+				}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1881
+				province_id = 3051
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 1881 # Saint-Martin
+			owns_core_province = 3051 # Sint Marteen
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = USM
+			set_country_flag = formed_saint_martin
+				#swap_non_generic_missions = yes
+				#country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

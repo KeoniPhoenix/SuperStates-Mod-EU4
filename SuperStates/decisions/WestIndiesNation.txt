@@ -1,0 +1,134 @@
+country_decisions = {
+
+	west_indies_nation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_nomad = no
+			is_random_new_world = no
+			NOT = { tag = MEX }
+			NOT = { tag = USA }
+			NOT = { tag = CAN }
+			NOT = { tag = CSA }
+			#NOT = { tag = CAM }
+			#NOT = { tag = FSA }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			#NOT = { tag = ANL }
+			NOT = { exists = WSI }
+			#NOT = { exists = ANL }
+			NOT = { has_country_flag = formed_west_indies_flag }
+			AND = {
+				culture_group = caribbean_islander
+					OR = {
+						capital_scope = {
+							region = lesser_antilles_region
+							is_core = ROOT
+						}
+						capital_scope = {
+							area = jamaica_area
+							is_core = ROOT
+						}
+						capital_scope = {
+							area = cayman_islands_area
+							is_core = ROOT
+						}
+						capital_scope = {
+							primary_culture = turk_caicos_islander
+						}
+					}
+				}
+				OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10	
+				}
+			}
+		}
+	provinces_to_highlight = {
+			OR = {
+				province_id = 483		#Cockburn Town, Turk and Caicos Islands
+				province_id = 487		#Kingston, Jamaica
+				province_id = 3013		#Grand Cayman
+				province_id = 501		#Barbados
+				province_id = 502		#Trinidad
+				province_id = 497		#Dominica
+				province_id = 3327		#Grenada
+				province_id = 499		#St. Lucia
+				province_id = 500		#St. Vincent
+				province_id = 495		#Antigua
+				province_id = 4636		#Montserrat
+				province_id = 494		#St. Kitts
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				is_city = no
+			}
+		}
+	allow = {
+		lesser_antilles_region = {
+				ROOT = { num_of_cities = 20 }
+				owned_by = ROOT
+			}
+			owns_core_province = 483
+			owns_core_province = 487
+			is_at_war = no
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_tag = WSI
+			lesser_antilles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+			bahamas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+			lower_lucaya_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+			jamaica_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+			cayman_islands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WSI
+			}
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_west_indies_flag
+			add_prestige = 15
+			# if = {
+				# limit = { has_custom_ideas = no }
+				# country_event = { id = ideagroups.1 } #Swap Ideas
+			# }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

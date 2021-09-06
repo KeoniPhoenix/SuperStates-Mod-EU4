@@ -1,0 +1,119 @@
+country_decisions = {
+
+## Chesapeake
+	form_chesapeake = {
+		major = yes
+		potential = {
+			#NOT = { exists = CHS }
+			NOT = { exists = USA }
+			NOT = { exists = CSA }
+			NOT = { exists = ASE }
+			NOT = { exists = FSA }
+			NOT = { exists = NAM }
+			NOT = { exists = MAA }
+			NOT = { exists = GCL }
+			NOT = { has_country_flag = chesapeake_decision }
+			#technology_group = north_american
+			OR = {
+				primary_culture = marylander
+				primary_culture = virginian
+				primary_culture = delawarean
+				primary_culture = districter
+				primary_culture = northern_virginian
+				primary_culture = west_marylander
+				primary_culture = delmarvan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = potomac_area
+				area = virginia_area
+				area = delmarva_area
+				area = chesapeake_area
+				area = delaware_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			potomac_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			virginia_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			delmarva_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			delaware_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			chesapeake_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			override_country_name = CHESAPEAKE
+			ROOT = {
+				set_capital = 2531			# Baltimore
+				}
+			ROOT = {
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+				}
+				virginia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				potomac_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				shenandoah_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			hidden_effect = {
+				set_country_flag = chesapeake_decision
+			}
+			#country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

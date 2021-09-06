@@ -1,0 +1,166 @@
+country_decisions = {
+	
+## South Atlantic Confederacy
+	southatlantic_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ASE }
+			NOT = { exists = CSA }
+			NOT = { exists = NAM }
+			NOT = { exists = FSA }
+			NOT = { exists = USA }
+			NOT = { exists = CRL }
+			NOT = { tag = MAA }
+			#technology_group = north_american
+			OR = {
+				primary_culture = north_carolinian
+				primary_culture = south_carolinian
+				primary_culture = us_georgian
+				primary_culture = virginian
+				primary_culture = floridian
+				primary_culture = south_floridian
+				primary_culture = west_floridian
+				primary_culture = miamian
+				primary_culture = high_tider
+				primary_culture = us_piedmontese
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3019
+				province_id = 2544
+				province_id = 2546
+				province_id = 2512
+				province_id = 2522
+				province_id = 2528
+				province_id = 2510
+				province_id = 2545
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			north_carolina_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_carolina_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			north_florida_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			st_johns_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			georgia_us_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			savannah_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				owns_core_province = 3019 # Orlando
+				owns_core_province = 2544 # Tampa
+			}
+			owns_core_province = 2546 # Jacksonville
+			owns_core_province = 2512 # Savannah
+			owns_core_province = 2522 # Raleigh
+			owns_core_province = 2528 # Charleston
+			OR = {
+				owns_core_province = 2510 # Atlanta
+				owns_core_province = 2545 # Miami
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = ASE
+			ASE = {
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+				}
+			}	
+			georgia_us_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			st_johns_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			north_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			south_carolina_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			north_carolina_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			virginia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			chesapeake_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			south_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ASE
+			}
+			swap_non_generic_missions = yes
+			add_government_reform = confederate_republic
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

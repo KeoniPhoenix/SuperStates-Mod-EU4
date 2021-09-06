@@ -1,0 +1,78 @@
+country_decisions = {
+
+## Unite the Virgin Islands
+	unite_virgin_islands = {
+		major = yes
+		potential = 	{
+			NOT = { exists = VII }
+			NOT = { tag = WIS }
+			NOT = { tag = ANT }
+			OR = {
+				tag = UVI
+				primary_culture = virgin_islander
+				}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 5
+							}
+				}
+			}
+		provinces_to_highlight = {
+			OR = {
+				area = west_virgin_islands_area
+				area = east_virgin_islands_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			west_virgin_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+								}
+			east_virgin_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+								}
+				}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = VII
+				VII = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			puerto_rico_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VII
+			}
+			east_virgin_islands_area = {
+				add_core = VII
+			}
+			west_virgin_islands_area = {
+				add_core = VII
+			}
+			}
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

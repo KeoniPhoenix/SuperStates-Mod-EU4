@@ -1,0 +1,99 @@
+country_decisions = {
+
+## WESTSYLVANIA
+	westsylvania_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = WST }
+			NOT = { exists = MAA }
+			NOT = { exists = FSA }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { exists = APL }
+			#technology_group = north_american
+			OR = {
+				primary_culture = western_pennsylvanian
+				primary_culture = west_virginian
+				primary_culture = west_marylander
+			}
+			ai = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = allegheny_area
+				area = monongahela_area
+				province_id = 2516
+				province_id = 2532
+				province_id = 3150
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			monongahela_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			shenandoah_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			allegheny_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+			owns_core_province = 2516 # Pikeville
+			owns_core_province = 2532 # Frederick
+			owns_core_province = 3150 # Bristol
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = WST
+			WST = {
+			add_accepted_culture = west_virginian
+			add_accepted_culture = western_pennsylvanian
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WST
+			}
+			shenandoah_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WST
+			}
+			if = { 
+				limit = {
+					2532 = { owned_by = ROOT }
+				}
+				2532 = { change_culture = ROOT }
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

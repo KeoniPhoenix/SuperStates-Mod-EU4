@@ -1,0 +1,63 @@
+# country_decisions = {
+
+# ## WABASH UNION
+	# wabash_union_nation = {
+		# major = yes
+		# potential = {
+			# NOT = { exists = WBU }
+			# NOT = { exists = NAM }
+			# NOT = { exists = USA }
+			# NOT = { exists = IUS }
+			# NOT = { exists = FSA }
+			# NOT = { exists = GLK }
+			# #technology_group = north_american
+			# OR = {
+				# culture_group = midwestern_group
+				# primary_culture = ohioan
+				# primary_culture = hoosier
+				# primary_culture = illinoisan
+			# }
+			# OR = {
+				# ai = no
+				# AND = {
+					# ai = yes
+					# num_of_cities = 12
+				# }
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# illinois_area = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+			# indiana_area = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+		# }
+		# effect = {
+			# great_lakes_region = {
+				# limit = {
+					# NOT = { owned_by = ROOT }
+				# }
+				# add_permanent_claim = WBU
+			# }
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 1825
+			# }
+			# add_prestige = 10
+			# change_tag = WBU
+			# WBU = {
+				# set_capital = 2568	# Indianapolis, IN
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+# }

@@ -1,0 +1,174 @@
+country_decisions = {
+	texas_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = TEX }
+			NOT = { tag = CSA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
+			NOT = { tag = ASE }
+			NOT = { tag = GPL }
+			NOT = { exists = GCL }
+			NOT = { exists = AZL }
+			NOT = { exists = NSP }
+			OR = {
+				primary_culture = eastern_texan
+				primary_culture = northern_texan
+				primary_culture = texan
+				primary_culture = tejano
+				primary_culture = high_plainer
+				primary_culture = oklahoman
+				primary_culture = texasdeutsch
+			}
+			#technology_group = north_american
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2478
+				province_id = 2480
+				province_id = 2487
+				province_id = 2484
+				province_id = 2485
+				province_id = 2479
+				province_id = 2483
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			texas_area = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			texas_gulf_area = {
+				type = all 
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			high_plains_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			rio_grande_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				trans_pecos_area = {
+					ROOT = { num_of_cities = 2 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				texarkana_area = {
+					ROOT = { num_of_cities = 1 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+			owns_core_province = 2478 # Austin
+			owns_core_province = 2480 # Dallas
+			owns_core_province = 2487 # Houston
+			OR = {
+				owns_core_province = 2484 # El Paso
+				owns_core_province = 2485 # Corpus Christi
+			}
+			OR = {
+				owns_core_province = 2479 # Waco
+				owns_core_province = 2483 # Midland
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 15
+			change_tag = TEX
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			trans_pecos_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TEX
+			}
+			rio_grande_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TEX
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2488 }
+				}
+				2488 = {
+					add_permanent_claim = TEX
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2483 }
+				}
+				2483 = {
+					add_permanent_claim = TEX
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2482 } 
+				}
+				2482 = {
+					add_permanent_claim = TEX
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2481 } 
+				}
+				2481 = {
+					add_permanent_claim = GLK
+				}
+			}
+			# For Oklahoma forming Texas
+			high_plains_area = {
+				limit = {
+						owned_by = ROOT 
+						ROOT = { primary_culture = oklahoman }
+				}
+				change_culture = oklahoman
+			} 
+			if = {
+				limit = {
+					3294 = {
+						owned_by = ROOT
+						ROOT = { primary_culture = oklahoman }
+					}
+				}
+				3294 = { change_culture = oklahoman }
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

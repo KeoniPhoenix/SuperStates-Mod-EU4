@@ -1,0 +1,69 @@
+country_decisions = {
+
+## NEW ENGLAND
+	new_england_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NAM }
+			NOT = { exists = NEW }
+			NOT = { exists = USA }
+			#technology_group = north_american
+			culture_group = new_england_group
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 20
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			new_england_region = {
+				ROOT = { num_of_cities = 23 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2609 # Boston
+			owns_core_province = 2606 # Augusta
+			owns_core_province = 2602 # Montpelier
+			owns_core_province = 2604 # Concord
+			owns_core_province = 2613 # Hartford
+			owns_core_province = 2612 # Providence
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = NEW
+			NEW = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			new_england_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NEW
+			}
+			adirondack_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NEW
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

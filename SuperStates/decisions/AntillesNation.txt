@@ -1,0 +1,104 @@
+country_decisions = {
+
+	antilles_nation = {
+		major = yes
+		potential = {
+			was_never_end_game_tag_trigger = yes
+			is_nomad = no
+			is_random_new_world = no
+			NOT = { tag = MEX }
+			NOT = { tag = USA }
+			NOT = { tag = CAN }
+			NOT = { tag = CSA }
+			#NOT = { tag = CAM }
+			#NOT = { tag = FSA }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = WSI }
+			NOT = { exists = ANL }
+			#NOT = { exists = WSI }
+			NOT = { has_country_flag = formed_west_indies_flag }
+			NOT = { has_country_flag = formed_antilles_flag }
+			OR = {
+				primary_culture = aruban
+				primary_culture = bonairean
+				primary_culture = curacaoan
+				primary_culture = statian
+				primary_culture = saban
+				primary_culture = maartener
+			}	
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 3331		#Aruba
+			province_id = 491		#Curacao
+			province_id = 3322		#Bonaire
+			province_id = 4580		#Sint Eustaius
+			province_id = 4579		#Saba
+			province_id = 3051		#Sint Maarten
+
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			owns_core_province = 3331
+			owns_core_province = 491
+			owns_core_province = 3332
+			owns_core_province = 4580
+			owns_core_province = 4579
+			owns_core_province = 3051
+			is_at_war = no
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+
+			change_tag = ANL
+			basseterre_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANL
+			}
+			anguilla_channel_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANL
+			}
+			leeward_antilles_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_antilles_flag
+			add_prestige = 10
+			# if = {
+				# limit = { has_custom_ideas = no }
+				# country_event = { id = ideagroups.1 } #Swap Ideas
+			# }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

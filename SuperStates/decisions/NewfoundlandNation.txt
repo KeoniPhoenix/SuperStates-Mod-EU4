@@ -1,0 +1,57 @@
+country_decisions = {
+
+## NEWFOUNDLAND
+	newfoundland_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MTU }
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { exists = NFL }
+			NOT = { exists = NWF }
+			OR = {
+				primary_culture = newfoundlander
+				primary_culture = saint_pierrais
+				tag = SPM
+			}
+		}
+		provinces_to_highlight = {
+				area = newfoundland_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 10
+			change_tag = NWF
+			NWF = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			newfoundland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NWF
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,167 @@
+country_decisions = {
+
+## PACIFICA
+	pacifica_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_pacifica_flag }
+			NOT = { exists = USA }
+			#NOT = { exists = IUS }
+			#NOT = { exists = AZL }
+			NOT = { exists = CSC }
+			NOT = { exists = PCF }
+			NOT = { exists = LCA }
+			#NOT = { exists = NAM }
+			#NOT = { exists = ACA }
+			#NOT = { exists = NSP }
+			#technology_group = north_american
+			AND = {
+				OR = {
+					culture_group = pacific_coastal
+					primary_culture = lincolnite
+					}
+					NOT = { primary_culture = vancouverite }
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 946
+				province_id = 961
+				province_id = 965
+				province_id = 944
+			}
+			AND = {
+                    province_id = 3136
+                    ROOT = { NOT = { owns_core_province = 967 } }
+                }
+				AND = {
+                    province_id = 967
+                    ROOT = { NOT = { owns_core_province = 3136 } }
+                }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			jefferson_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+			}
+			oregon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			puget_sound_area = {
+				type = all
+				owned_by = ROOT
+			}
+			OR = {
+				3136 = { # Bend
+				owned_by = ROOT
+				}
+				967 = { # Spokane
+				owned_by = ROOT
+				}
+			}
+			central_valley_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+			}
+			san_pablo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			san_francisco_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_coast_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+			}
+			san_diego_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+			}
+			owns_core_province = 946		#San Francisco
+			owns_core_province = 961		#Portland
+			owns_core_province = 965		#Seattle
+			owns_core_province = 944		#Los Angeles
+		}
+		effect = {
+			set_country_flag = formed_pacifica_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = PCF
+			#change_government = bureaucratic_despotism
+			PCF = {
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+				pacific_coast_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				high_desert_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				lincoln_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				gulf_islands_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				mojave_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				vancouver_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+				strait_of_georgia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCF
+				}
+			}
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

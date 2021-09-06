@@ -1,0 +1,82 @@
+country_decisions = {
+
+## Reform into New Jersey
+	reform_new_jersey = {
+		major = yes
+		potential = {
+			NOT = { exists = NJY }
+			NOT = { exists = MAA }
+			NOT = { exists = FSA }
+			NOT = { exists = NAU }
+			NOT = { exists = USA }
+			OR = {
+				tag = SNJ
+				primary_culture = new_jerseyan
+				primary_culture = south_jerseyan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = south_jersey_area
+				area = north_jersey_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			north_jersey_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_jersey_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}	
+		
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = NJY
+			NJY = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			north_jersey_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NJY
+			}
+			south_jersey_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NJY
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

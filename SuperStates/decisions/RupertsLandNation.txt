@@ -1,0 +1,82 @@
+# country_decisions = {
+
+# ## Rupert's Land
+	# ruperts_land_nation = {
+		# major = yes
+		# potential = 	{
+			# NOT = { exists = RUP }
+			# NOT = { exists = CAN }
+			# NOT = { exists = RCA }
+			# NOT = { exists = WCN }
+			# NOT = { exists = NAM }
+			# NOT = { exists = BFF }
+			# #technology_group = north_american
+			# NOT = { tag = QUE }
+			# OR = 			{ #cultures
+				# primary_culture = manitoban
+				# primary_culture = northern_ontarian
+				# #primary_culture = northwest_ontarian
+				# primary_culture = nunavummiut
+				# primary_culture = nunavimmiut
+				# primary_culture = nunatsiavummiut
+				# primary_culture = albertan
+				# primary_culture = saskatchewanian
+							# }
+			# OR = 			{ # tags
+				# tag = MTB
+				# tag = NRO
+				# tag = ONT
+							# }
+			# OR = {
+				# ai = no
+				# AND = 		{
+					# ai = yes
+					# num_of_cities = 6
+							# }
+				# }
+						# }
+		# allow = {
+			# southern_alberta_area = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT
+				# }
+			# manitoba_area = {
+				# type = all
+				# owned_by = ROOT
+				# is_core = ROOT 
+				# }
+				# # Nunavut
+				# owns_core_province = 2621
+				# # Saskatchewan
+				# owns_core_province = 2622
+				# owns_core_province = 2623
+				# # Ontario
+				# owns_core_province = 2647
+				# owns_core_province = 2650
+				# # Quebec
+				# owns_core_province = 2005
+				# owns_core_province = 2006
+								# }
+			
+		
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 730
+								# }
+			# add_prestige = 10
+			# change_tag = RUP
+			# RUP = {
+				# set_capital = 2628		# York Factory
+				# 2628 = {
+				# rename_capital = York Factory
+				# }
+			# }
+			# #country_event = { id = ideagroups.1 } #Swap
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+					# }

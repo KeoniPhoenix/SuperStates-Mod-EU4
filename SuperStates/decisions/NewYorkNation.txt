@@ -1,0 +1,121 @@
+country_decisions = {
+
+## Reform into New York
+	reform_new_york = {
+		major = yes
+		potential = {
+			NOT = { exists = NYS }
+			NOT = { exists = MAA }
+			NOT = { exists = FSA }
+			NOT = { exists = NAU }
+			NOT = { exists = USA }
+			OR = {
+				tag = WNY
+				tag = NYC
+				tag = LLI
+				primary_culture = new_yorker
+				primary_culture = knickerbocker
+				primary_culture = long_islander
+				primary_culture = western_new_yorker
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = long_island_area
+				area = new_york_area
+				area = erie_area
+				area = adirondack_area
+				area = hudson_valley_area
+				province_id = 2593
+				province_id = 2601
+				province_id = 2598
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			long_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			new_york_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			erie_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			adirondack_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			hudson_valley_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2593 # Albany
+			owns_core_province = 2601 # New York
+			owns_core_province = 2598 # Buffalo
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = NYS
+				NYS = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			new_york_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NYS
+			}
+			erie_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NYS
+			}
+			adirondack_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NYS
+			}
+			hudson_valley_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NYS
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,62 @@
+# country_decisions = {
+
+# ## NEW FRANCE
+	# new_france_nation = {
+		# major = yes
+		# potential = {
+			# NOT = { exists = CAN }
+			# NOT = { exists = NAM }
+			# NOT = { exists = NFR }
+			# NOT = { exists = RCA }
+			# technology_group = north_american
+			# culture_group = new_french
+			# OR = {
+				# ai = no
+				# AND = {
+					# ai = yes
+					# num_of_cities = 10
+				# }
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# northern_ontario_area = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+			# southern_ontario_area = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+			# northern_quebec_area = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+			# southern_quebec_area = {
+				# type = all 
+				# owned_by = ROOT
+				# is_core = ROOT
+			# }
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 7300
+			# }
+			# add_prestige = 15
+			# change_tag = NFR
+			# change_government = despotic_monarchy
+			# NFR = {
+				# set_capital = 2652			# Quebec City
+			# }
+			# country_event = { id = ideagroups.1 } #Swap 
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+# }

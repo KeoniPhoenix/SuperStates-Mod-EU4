@@ -1,0 +1,155 @@
+country_decisions = {
+
+## MIDWEST NATION
+	midwest_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = USA }
+			#NOT = { exists = GPL }
+			NOT = { exists = MDL }
+			#NOT = { exists = GLK }
+			NOT = { has_country_flag = formed_great_lakes_flag }
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			OR = {
+				culture_group = midwestern_group
+				primary_culture = chicagoan
+				primary_culture = wisconsinite
+				}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2565
+				province_id = 2498
+				province_id = 2553
+				province_id = 2568
+				province_id = 2578
+				province_id = 2547
+				province_id = 3323
+				province_id = 2499
+				province_id = 3095
+				province_id = 2557
+				province_id = 2562
+				AND = {
+                    province_id = 2547 # St. Paul
+                    ROOT = { NOT = { owns_core_province = 3323 } } # Minneapolis
+                }
+				AND = {
+                    province_id = 2499 # Kansas City, MS
+                    ROOT = { NOT = { owns_core_province = 3095 } } # Kansas City, KS
+                }
+				AND = {
+                    province_id = 2557 # Madison
+                    ROOT = { NOT = { owns_core_province = 2562 } } # Springfield, IL
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			american_midwest_region = {
+				ROOT = { num_of_cities = 35 }
+				owned_by = ROOT
+			}
+			owns_core_province = 2565	# Chicago
+			owns_core_province = 2498	# St. Louis
+			owns_core_province = 2553	# Des Moines
+			owns_core_province = 2568	# Indianapolis
+			owns_core_province = 2578	# Columbus
+			OR = {
+				owns_core_province = 2547	# St. Paul
+				owns_core_province = 3323	# Minneapolis
+				}
+			OR = {
+				owns_core_province = 2499	# Kansas City, MS
+				owns_core_province = 3095	# Kansas City, KS
+				}
+			OR = {
+				owns_core_province = 2557	# Madison
+				owns_core_province = 2562	# Springfield, IL
+				}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_midwest_flag
+			add_prestige = 10
+			change_tag = MDL
+			ROOT = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			american_midwest_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			chicagoland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			maumee_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loess_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kansas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2579 = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

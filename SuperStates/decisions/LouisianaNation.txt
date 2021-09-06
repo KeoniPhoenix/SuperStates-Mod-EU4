@@ -1,0 +1,95 @@
+country_decisions = {
+	louisiana_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = LOU }
+			NOT = { exists = NFR }
+			NOT = { exists = CSA }
+			NOT = { exists = ASE }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { exists = GCL }
+			OR = {
+				primary_culture = louisianan
+				primary_culture = cajun
+				primary_culture = orleanais
+			}
+			#technology_group = north_american
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = louisiana_area
+				area = acadiana_area
+				province_id = 2489
+				province_id = 2490
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			louisiana_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			acadiana_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2490 # New Orleans
+			owns_core_province = 2489 # Baton Rouge
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = LOU
+			if = {
+				limit = {
+					NOT = {
+							primary_culture = CJN
+					}
+				}
+				swap_non_generic_missions = yes
+			}
+			LOU = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			louisiana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LOU
+			}
+			acadiana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LOU
+			}
+			country_event = { id = ideagroups.1 } #Swap
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

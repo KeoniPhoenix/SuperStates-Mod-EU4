@@ -1,0 +1,35 @@
+country_decisions = {
+	# #Release Haiti
+	# release_haiti_decision = {
+		# major = no
+		# potential = {
+			# NOT = { exists = HAT }
+			# owns = 488
+			# owns = 489
+		# }	
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# controls = 488
+			# controls = 489
+		# }
+		# effect = {
+			# add_prestige = -15
+			# release = HAT
+			# 488 = {
+				# add_core = HAT
+				# controller = HAT
+				# owner = HAT
+			# }
+			# 489 = {
+				# add_core = HAT
+				# controller = HAT
+				# owner = HAT
+			# }
+			# HAT = {
+				# change_government = revolutionary_republic
+				# set_capital = 488		#Port-au-Prince
+			# }
+		# }
+	# }
+}

@@ -1,0 +1,69 @@
+country_decisions = {
+## Unite Trinidad and Tobago
+	trinidad_tobago_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_trinidad_tobago } #Only once
+			#NOT = { exists = TTB }
+			NOT = { tag = WIS }
+			NOT = { tag = USA }
+			NOT = { tag = NAM }
+			NOT = { tag = MEX }
+			OR = {
+				tag = TBG
+				primary_culture = trinidadian
+				primary_culture = tobagonian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 1
+				}
+			}
+			capital_scope = {
+					OR = {
+						province_id = 502
+						province_id = 3328
+						}
+				}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 502
+				province_id = 3328
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 502 # Trinidad
+			owns_core_province = 3328 # Tobago
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			override_country_name = TRINIDAD_AND_TOBAGO
+			set_country_flag = formed_trinidad_tobago
+			ROOT = {
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+				}
+			}
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,247 @@
+country_decisions = {
+
+## CANADA
+	canada_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_canada_flag }
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			OR = {
+				culture_group = arctic_canadian
+				culture_group = atlantic_canadian
+				primary_culture = quebecois
+				primary_culture = brayon
+				primary_culture = acadian
+				primary_culture = montrealer
+				culture_group = western_canadian
+				primary_culture = ontarian
+				primary_culture = northern_ontarian
+				primary_culture = torontoan
+				OR = {
+					primary_culture = minnesotan
+					primary_culture = yooper
+					primary_culture = mainer
+					primary_culture = vermonter
+					primary_culture = cajun
+					primary_culture = saint_pierrais
+						AND = {
+							canada_superregion = {
+							type = any
+							owned_by = ROOT
+							}
+							NOT = { provincegroup = alaska_provincegroup }
+						}
+				}
+				tag = TTO
+				tag = OTW
+				tag = OTG
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 35
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				AND = {
+                    province_id = 2635
+					province_id = 2634
+					AND = {
+						ROOT = { NOT = { owns_core_province = 1813 } }
+						ROOT = { NOT = { owns_core_province = 1808 } }
+						ROOT = { NOT = { owns_core_province = 1811 } }
+					}
+                }
+				AND = {
+                    province_id = 1813
+					province_id = 1808
+					province_id = 1811
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2635 } }
+						ROOT = { NOT = { owns_core_province = 2634 } }
+					}
+                }
+				AND = {
+                    province_id = 2652
+					province_id = 2657
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2631 } }
+						ROOT = { NOT = { owns_core_province = 2630 } }
+					}
+                }
+				AND = {
+                    province_id = 2631
+					province_id = 2630
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2652 } }
+						ROOT = { NOT = { owns_core_province = 2657 } }
+					}
+                }
+				AND = {
+                    province_id = 2642
+					province_id = 2643
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2622 } }
+						ROOT = { NOT = { owns_core_province = 2623 } }
+					}
+                }
+				AND = {
+                    province_id = 2622
+					province_id = 2623
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2642 } }
+						ROOT = { NOT = { owns_core_province = 2643 } }
+					}
+                }
+				AND = {
+                    province_id = 1807
+					province_id = 1805
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2626 } }
+						ROOT = { NOT = { owns_core_province = 2649 } }
+					}
+                }
+				AND = {
+                    province_id = 2626
+					province_id = 2649
+					AND = {
+						ROOT = { NOT = { owns_core_province = 1807 } }
+						ROOT = { NOT = { owns_core_province = 1805 } }
+					}
+                }
+				AND = {
+                    province_id = 2619
+					province_id = 2618
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2621 } }
+						ROOT = { NOT = { owns_core_province = 2620 } }
+					}
+                }
+				AND = {
+                    province_id = 2621
+					province_id = 2620
+					AND = {
+						ROOT = { NOT = { owns_core_province = 2619 } }
+						ROOT = { NOT = { owns_core_province = 2618 } }
+					}
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			OR = {
+			western_canada_region = {
+				ROOT = { num_of_cities = 20 }
+				owned_by = ROOT
+				is_core = ROOT
+				}
+			central_canada_region = {
+				ROOT = { num_of_cities = 25 }
+				owned_by = ROOT
+				is_core = ROOT
+				}
+			}
+			OR = {
+				maritimes_region = {
+					ROOT = { num_of_cities = 20 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				arctic_region = {
+					ROOT = { num_of_cities = 18 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 2635 # Vancouver
+					owns_core_province = 2634 # Victoria
+				}
+				AND = {
+					owns_core_province = 1808 # Charlottetown
+					owns_core_province = 1811 # Halifax
+					owns_core_province = 1813 # St. John
+					}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 2652 # Quebec
+					owns_core_province = 2657 # Montreal
+					}
+				AND = {
+					owns_core_province = 2631 # Calgary
+					owns_core_province = 2630 # Edmonton
+				}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 2642 # Toronto
+					owns_core_province = 2643 # Ottawa
+					}
+				AND = {
+					owns_core_province = 2622 # Regina
+					owns_core_province = 2623 # Saskatoon
+				}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 1807 # Saint John's
+					owns_core_province = 1805 # Goose Bay
+					}
+				AND = {
+					owns_core_province = 2626 # Winnipeg
+					owns_core_province = 2649 # Thunder Bay
+				}
+			}
+			OR = {
+				AND = {
+					owns_core_province = 2619 # Yellowknife
+					owns_core_province = 2618 # Whitehorse
+					}
+				AND = {
+					owns_core_province = 2620 # Baffin
+					owns_core_province = 2621 # Keewatin
+				}
+			}
+		}
+		effect = {
+		set_country_flag = formed_canada_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			change_tag = CAN
+				CAN = {
+			if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+			canada_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CAN
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

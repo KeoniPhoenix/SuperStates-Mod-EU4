@@ -1,0 +1,132 @@
+country_decisions = {
+
+## DESERET
+	deseret_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = DES }
+			#NOT = { exists = AZL }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { has_country_flag = formed_deseret_flag }
+			NOT = { has_country_flag = formed_southwest_flag }
+			NOT = { has_country_flag = formed_rocky_mountain_flag }
+			NOT = { has_country_flag = formed_pacifica_flag }
+			#NOT = { exists = NSP }
+			#technology_group = north_american
+			OR = {
+				tag = UTA
+				primary_culture = utahn
+				primary_culture = south_utahn
+					AND = {
+						OR = {
+							culture_group = intermountain_western
+							primary_culture = nevadan
+							primary_culture = arizonan
+							primary_culture = las_vegan
+							}
+						religion = mormon
+					}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			salt_lake_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_utah_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			black_rock_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mojave_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			arizona_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				AND = {		
+					# West Colorado
+					owns_core_province = 992
+					owns_core_province = 3260
+					owns_core_province = 991
+					}
+				AND = {
+					# SoCal
+					owns_core_province = 3252
+					owns_core_province = 3254
+					owns_core_province = 3248
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_deseret_flag
+			add_prestige = 10
+			change_tag = DES
+			DES = {
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+					}
+				set_government_rank = 2
+				}
+				set_capital = 952			# Salt Lake City
+				change_government = theocracy
+				add_government_reform = mormon_theodemocracy_reform
+			}
+			arizona_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DES
+			}
+			mojave_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DES
+			}
+			black_rock_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DES
+			}
+			baja_arizona_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DES
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

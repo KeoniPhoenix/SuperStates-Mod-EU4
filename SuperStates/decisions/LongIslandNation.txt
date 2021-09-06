@@ -1,0 +1,77 @@
+country_decisions = {
+## Reform into Long Island
+	long_island_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_long_island } #Only once
+			NOT = { exists = LLI }
+			NOT = { tag = NYS }
+			NOT = { tag = MAA }
+			NOT = { tag = USA }
+			NOT = { exists = NAM }
+			OR = {
+				primary_culture = knickerbocker
+				primary_culture = long_islander
+				tag = NYC
+			}
+			technology_group = north_american
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = long_island_area
+				area = new_york_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			long_island_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			new_york_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = LLI
+			set_country_flag = formed_long_island
+			LLI = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			new_york_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LLI
+			}
+			country_event = { id = ideagroups.1 } #Swap
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,142 @@
+country_decisions = {
+	
+## GREAT LAKES
+	great_lakes_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = FSA }
+			NOT = { exists = USA }
+			NOT = { exists = GLK }
+			NOT = { exists = NAM }
+			NOT = { has_country_flag = formed_great_lakes_flag }
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			#technology_group = north_american
+			OR = {
+			culture_group = great_laker
+			primary_culture = ohioan
+			primary_culture = hoosier
+			primary_culture = minnesotan
+			primary_culture = illinoisan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2565	# Chicago
+				province_id = 2579	# Cleveland
+				province_id = 2573	# Detroit
+				province_id = 2558	# Milwaukee
+				AND = {
+                    province_id = 2642 # Toronto
+                    ROOT = { NOT = { owns_core_province = 2598 } }
+                }
+				AND = {
+                    province_id = 2598 # Buffalo
+                    ROOT = { NOT = { owns_core_province = 2642 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			great_lakes_region = {				
+				ROOT = { num_of_cities = 30 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2565		# Chicago
+			owns_core_province = 2579		# Cleveland
+			owns_core_province = 2558		# Milwaukee
+			owns_core_province = 2573		# Detroit
+			OR ={
+				owns_core_province = 2642 # Toronto
+				owns_core_province = 2598 # Buffalo
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			set_country_flag = formed_great_lakes_flag
+			add_prestige = 10
+			change_tag = GLK
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			great_lakes_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GLK
+			}
+			ohio_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GLK
+			}
+			wabash_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GLK
+			}
+			superior_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GLK
+			}
+			illinois_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GLK
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2646 } # Sudbury
+				}
+				2646 = {
+					add_permanent_claim = GLK
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 3037 } # Algoma
+				}
+				3037 = {
+					add_permanent_claim = GLK
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 2649 } # Thunder Bay
+				}
+				2649 = {
+					add_permanent_claim = GLK
+				}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

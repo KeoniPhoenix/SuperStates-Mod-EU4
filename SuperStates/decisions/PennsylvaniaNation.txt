@@ -1,0 +1,96 @@
+country_decisions = {
+
+## Reform into Pennsylvania
+	reform_pennsylvania = {
+		major = yes
+		potential = {
+			NOT = { exists = PNN }
+			NOT = { exists = MAA }
+			NOT = { exists = FSA }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			OR = {
+				tag = PHL
+				primary_culture = pennsylvanian
+				primary_culture = western_pennsylvanian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 7
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2585
+				province_id = 2589
+				area = central_pennsylvania_area
+				area = delaware_valley_area
+				area = allegheny_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			allegheny_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			central_pennsylvania_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			delaware_valley_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2585 # Philadelphia
+			owns_core_province = 2589 # Pittsburgh
+		}
+			
+		
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+		}
+			add_prestige = 10
+			change_tag = PNN
+			PNN = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			delaware_valley_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PNN
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PNN
+			}
+			2588 = {
+				add_permanent_claim = PNN
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

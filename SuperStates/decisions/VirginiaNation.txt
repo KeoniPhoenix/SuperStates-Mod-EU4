@@ -1,0 +1,102 @@
+country_decisions = {
+
+## Reform into Virginia
+	reform_virginia = {
+		major = yes
+		potential = {
+			NOT = { exists = VIR }
+			NOT = { exists = CSA }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			NOT = { exists = ASE }
+			#NOT = { exists = CHS }
+			NOT = { exists = MAA }
+			NOT = { exists = GCL }
+			OR = {
+				tag = NVI
+				tag = WVA
+				primary_culture = virginian
+				primary_culture = northern_virginian
+				AND = {
+					OR = {
+						primary_culture = districter
+						primary_culture = west_virginian
+						}
+							OR = {
+								accepted_culture = virginian
+								accepted_culture = northern_virginian
+					}
+				}
+
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = shenandoah_area
+				area = virginia_area
+				area = chesapeake_area
+				province_id = 2534
+				province_id = 2533
+				province_id = 2536
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			virginia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			chesapeake_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			shenandoah_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2536 # Arlington
+			owns_core_province = 2533 # Richmond
+			owns_core_province = 2534 # Virginia Beach
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = VIR
+			VIR = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			shenandoah_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VIR
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

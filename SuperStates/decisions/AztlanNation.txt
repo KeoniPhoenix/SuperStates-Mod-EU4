@@ -1,0 +1,69 @@
+# country_decisions = {
+
+# ## AZTLÁN
+	# aztlan_nation = {
+		# major = no
+		# potential = {
+			# ai = no
+			# NOT = { exists = LCA }
+			# NOT = { exists = CSA }
+			# NOT = { exists = USA }
+			# NOT = { exists = IUS }
+			# NOT = { exists = DES }
+			# NOT = { exists = AZL }
+			# NOT = { exists = NAM }
+			# NOT = { exists = GCL }
+			# NOT = { exists = ACA }
+			# #NOT = { exists = GTX }
+			# NOT = { exists = PCF }
+			# NOT = { exists = NAH }
+			# NOT = { exists = NSP }
+			# #technology_group = north_american
+			# OR = {
+				# culture_group = southwestern
+				# culture_group = peninsular_mexican
+				# culture_group = costa_chica
+				# culture_group = mazatlan_mexican
+				# culture_group = altiplano_central
+				# culture_group = gulf_mexican
+				# culture_group = oriental_mexican
+				# culture_group = pacific_mexican
+				# primary_culture = californian
+				# primary_culture = southern_californian
+				# primary_culture = san_franciscan
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# southern_california_area = {
+				# type = all
+				# owned_by = ROOT
+			# }
+			# is_core = 943		#San Diego
+			# american_southwest_region = {
+				# type = all
+				# owned_by = ROOT
+			# }
+			# is_core = 944		#Los Angeles
+			# is_core = 936		#Phoenix
+			# is_core = 2480		#Dallas
+			# is_core = 2487		#Houston
+		# }
+		# effect = {
+			# add_country_modifier = {
+			# name = "centralization_modifier"
+			# duration = 5475
+		# }
+			# add_prestige = 20
+			# change_tag = AZL
+			# change_government = revolutionary_empire
+			# AZL = {
+				# set_capital = 943 		#San Diego
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+# }

@@ -1,0 +1,54 @@
+# country_decisions = {
+
+# #NAVAJO
+	# navajo_nation = {
+		# major = no
+		# potential = {
+			# NOT = { exists = AZL }
+			# NOT = { exists = NAH }
+			# NOT = { exists = NAM }
+			# NOT = { exists = USA }
+			# NOT = { exists = IUS }
+			# #technology_group = north_american
+			# OR = {
+				# primary_culture = arizonan
+				# primary_culture = coloradan
+				# primary_culture = new_mexican
+				# primary_culture = utahn
+			# }
+			# ai = no
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# owns = 940
+			# owns = 954
+			# owns = 957
+			# owns = 992
+			# is_core = 940
+			# is_core = 954
+			# is_core = 957
+			# is_core = 992
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 730
+			# }
+			# add_prestige = 10
+			# change_tag = NAH
+			# #set_#technology_group = high_american
+			# #change_unit_type = high_american
+			# NAH = {
+				# set_capital = 940	#Window Rock
+			# }
+			# 940 = { 
+				# change_province_name = Navajo
+				# rename_capital = "Window Rock"
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+# }

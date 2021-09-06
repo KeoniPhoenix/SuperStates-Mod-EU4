@@ -1,0 +1,69 @@
+# country_decisions = {
+
+# ## Chan Santa Cruz
+	# form_a_mayan_state = {
+		# major = yes
+		# potential = {
+			# NOT = { exists = CSZ }
+			# NOT = { exists = MEX }
+			# NOT = { exists = NAM }
+			# NOT = { exists = NSP }
+			# NOT = { exists = MSO }
+			# NOT = { exists = GCL }
+			# #technology_group = mesoamerican
+			# OR = {
+				# culture_group = maya
+				# primary_culture = miskito
+				# AND = {
+					# OR = {
+						# primary_culture = yucatanian
+						# primary_culture = quintanaroan
+						# primary_culture = campechian
+						# primary_culture = belizean
+					# }
+					# accepted_culture = mayan
+				# }
+			# }
+			# OR = {
+				# ai = no
+				# AND = {
+					# ai = yes
+					# num_of_cities = 3
+				# }
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# # Quintana Roo
+			# owns_core_province = 847 # Chetumal
+			# owns_core_province = 846 # Cancun
+			# # Campeche
+			# OR = {
+				# AND = {
+			# owns_core_province = 848 # Carmen
+			# owns_core_province = 849 # Campeche
+						# }
+				# AND = {
+			# owns_core_province = 843 # Belize
+			# owns_core_province = 842 # Peten
+						# }
+				# }
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 7300
+			# }
+			# add_prestige = 10
+			# change_tag = CSZ
+			# CSZ = {
+				# set_capital = 847		# Othon P Blanco
+			# }
+			# #country_event = { id = ideagroups.1 } #Swap
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+# }

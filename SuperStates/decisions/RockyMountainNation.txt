@@ -1,0 +1,111 @@
+country_decisions = {
+
+## ROCKY MOUNTAIN REPUBLIC
+	rocky_mountain_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RKY }
+			#NOT = { exists = AZL }
+			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			#NOT = { exists = NSP }
+			NOT = { has_country_flag = formed_deseret_flag }
+			NOT = { has_country_flag = formed_southwest_flag }
+			NOT = { has_country_flag = formed_rocky_mountain_flag }
+			NOT = { has_country_flag = formed_pacifica_flag }
+			#technology_group = north_american
+			culture_group = intermountain_western
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 20
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = intermountain_west_region
+				province_id = 949
+				province_id = 986
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			intermountain_west_region = {
+				ROOT = { num_of_cities = 22 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 990 # Denver
+			owns_core_province = 952 # Salt Lake
+			owns_core_province = 976 # Boise
+			owns_core_province = 980 # Helena
+			OR = {
+				owns_core_province = 949 # Las Vegas
+				owns_core_province = 986 # Cheyenne
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			set_country_flag = formed_rocky_mountain_flag
+			add_prestige = 20
+			change_tag = RKY
+			RKY = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			intermountain_west_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+			mojave_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+			wyoming_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+			south_utah_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+			montana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+			east_montana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RKY
+			}
+				}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

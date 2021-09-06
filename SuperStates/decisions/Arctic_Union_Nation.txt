@@ -1,0 +1,100 @@
+country_decisions = {
+
+## ARCTIC UNION
+	arctic_union_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ACU }
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { has_country_flag = formed_arctic_flag }
+			#technology_group = north_american
+			OR = {
+				culture_group = arctic_canadian
+				primary_culture = alaskan
+				primary_culture = aleutian_islander
+				primary_culture = juneauvian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+			provinces_to_highlight = {
+			OR = {
+				province_id = 2619
+				province_id = 2621
+				province_id = 2620
+				province_id = 2618
+				province_id = 970
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2619 # Yellowknife
+			owns_core_province = 2621 # Rankin Inlet
+			owns_core_province = 2620 # Iqaluit
+			owns_core_province = 2618 # Whitehorse
+			owns_core_province = 970  # Juneau
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_arctic_flag
+			add_prestige = 20
+			change_tag = ACU
+			ACU = {
+				arctic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACU
+			}
+			peace_river_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACU
+			}
+			athabasca_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACU
+			}
+			nord_du_quebec_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACU
+			}
+			labrador_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACU
+			}
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			}
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

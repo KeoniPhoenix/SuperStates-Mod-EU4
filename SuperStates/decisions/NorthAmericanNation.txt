@@ -1,0 +1,76 @@
+country_decisions = {
+	north_american_union_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			OR = {
+				culture_group = appalachian
+				culture_group = caribbean_islander
+				culture_group = southerner
+				culture_group = great_laker
+				culture_group = intermountain_western
+				culture_group = midatlantic_group
+				culture_group = midwestern_group
+				culture_group = new_england_group
+				culture_group = pacific_coastal
+				culture_group = southwestern
+				culture_group = arctic_canadian
+				culture_group = atlantic_canadian
+				culture_group = new_french
+				culture_group = western_canadian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 50
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			america_superregion = {
+				type = all 
+				owned_by = ROOT
+			}
+			canada_superregion = {
+				type = all
+				owned_by = ROOT
+			}
+			OR = {
+				is_core = 2616		#Washington DC
+				is_core = 2643		#Ottawa
+			}
+			is_core = 2642			#Toronto
+			is_core = 2657			#Montreal
+			is_core = 2635			#Vancouver
+			is_core = 2601			#New York City
+			is_core = 944			#Los Angeles
+			is_core = 2565			#Chicago
+			is_core = 2609			#Boston
+			OR = {
+				is_core = 2480		#Dallas
+				is_core = 2487		#Houston
+			}
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 9125
+			}
+			add_prestige = 33
+			change_tag = NAM
+			set_government_rank = 3
+			NAM = {
+				set_capital = 2616			# Washington, D.C.
+			}
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

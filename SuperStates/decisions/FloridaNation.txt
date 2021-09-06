@@ -1,0 +1,106 @@
+country_decisions = {
+
+## Reform into Florida
+	reform_florida = {
+		major = yes
+		potential = 	{
+			NOT = { exists = FLO }
+			NOT = { exists = CSA }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			NOT = { exists = GCL }
+			NOT = { exists = NSP }
+			NOT = { exists = ASE }
+			OR  = {
+				tag = SFL
+				tag = MIA
+				tag = KYS
+				tag = WFL
+				primary_culture = floridian
+				primary_culture = south_floridian
+				primary_culture = west_floridian
+				primary_culture = miamian
+				AND = {
+					primary_culture = cuban
+					capital_scope = {
+					area = south_florida_area
+					}
+				}
+			}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			north_florida_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			south_florida_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			st_johns_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			suncoast_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}	
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = FLO
+			FLO = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			south_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = FLO
+			}
+			north_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = FLO
+			}
+			st_johns_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = FLO
+			}
+			suncoast_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = FLO
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

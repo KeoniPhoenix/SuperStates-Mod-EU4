@@ -1,0 +1,73 @@
+country_decisions = {
+
+## Reform into British Columbia
+	reform_british_columbia = {
+		major = yes
+		potential = 	{
+		NOT = { has_country_flag = formed_columbia_flag }
+		NOT = { exists = BCO }
+		NOT = { exists = CAN }
+		NOT = { exists = NAM }
+		NOT = { exists = WCN }
+		NOT = { exists = CSC }
+				OR = {
+				tag = VCV
+				primary_culture = british_columbian
+				primary_culture = vancouverite
+				primary_culture = haida
+				}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 5
+							}
+				}
+						}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2635
+				province_id = 2634
+				province_id = 3038
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			columbia_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kootenay_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			vancouver_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2635 # Vancouver
+			owns_core_province = 2634 # Victoria
+			owns_core_province = 3038 # Fraser Valley
+				}
+		effect = {
+		set_country_flag = formed_columbia_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = BCO
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

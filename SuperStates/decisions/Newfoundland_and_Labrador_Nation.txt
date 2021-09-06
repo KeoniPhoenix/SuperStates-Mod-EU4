@@ -1,0 +1,76 @@
+country_decisions = {
+
+## NEWFOUNDLAND AND LABRADOR
+	newfoundland_and_labrador_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MTU }
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { exists = NFL }
+			#technology_group = north_american
+			OR = {
+				tag = NWF
+				tag = LBD
+				primary_culture = labradorian
+				primary_culture = newfoundlander
+				primary_culture = inuktitut
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = labrador_area
+				area = newfoundland_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			labrador_area = {
+				ROOT = { num_of_cities = 2 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			newfoundland_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 1807 # St John's
+			owns_core_province = 1805 # Goose Bay
+		}
+		effect = {
+			add_prestige = 10
+			change_tag = NFL
+			NFL = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			newfoundland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NFL
+			}
+			labrador_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NFL
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

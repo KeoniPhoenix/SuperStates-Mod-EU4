@@ -1,0 +1,94 @@
+country_decisions = {
+
+## Reform into Illinois
+	reform_illinois = {
+		major = yes
+		potential = 	{
+			NOT = { has_country_flag = formed_great_lakes_flag }
+			NOT = { has_country_flag = formed_midwest_flag }
+			NOT = { has_country_flag = formed_great_plains_flag }
+			NOT = { has_country_flag = formed_illinois_flag }
+			NOT = { exists = ILI }
+			NOT = { exists = USA }
+			NOT = { exists = GLK }
+			#NOT = { exists = WBU }
+			NOT = { exists = USA }
+			#NOT = { exists = FSA }
+			OR = {
+				tag = CCK
+				tag = ILS
+				primary_culture = illinoisan 
+				primary_culture = chicagoan
+				primary_culture = little_egyptian
+			}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2565
+				province_id = 2562
+				area = little_egypt_area
+				area = illinois_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			illinois_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			little_egypt_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2565 # Chicago
+			owns_core_province = 2562 # Springfield
+		}
+				
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			set_country_flag = formed_illinois_flag
+			add_prestige = 10
+			change_tag = ILI
+			ILI = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			little_egypt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ILI
+			}
+			illinois_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ILI
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

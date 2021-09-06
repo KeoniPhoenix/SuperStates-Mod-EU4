@@ -1,0 +1,85 @@
+country_decisions = {
+
+## Reform into Maryland
+	reform_maryland = {
+		major = yes
+		potential = {
+			NOT = { exists = MYD }
+			NOT = { exists = FSA }
+			NOT = { exists = CSA }
+			NOT = { exists = ASE }
+			NOT = { exists = MAA }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			#NOT = { exists = CHS }
+			NOT = { exists = GCL }
+			NOT = { exists = DMV }
+			OR = {
+				tag = WML
+				primary_culture = marylander
+				primary_culture = west_marylander
+				AND = {
+					primary_culture = delmarvan
+					NOT ={ tag = DMV }
+				}
+				AND = {
+					primary_culture = districter
+					accepted_culture = marylander
+				}
+			}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2531
+				province_id = 2530
+				province_id = 3025
+				province_id = 2532
+				province_id = 2730
+				province_id = 2729
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+		AND = {
+			owns_core_province = 2531
+			owns_core_province = 2530
+			owns_core_province = 3025
+			owns_core_province = 2532
+			OR = {
+				owns_core_province = 2730
+				owns_core_province = 2729
+			}
+			}
+		}	
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = MYD
+			MYD = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+				}
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

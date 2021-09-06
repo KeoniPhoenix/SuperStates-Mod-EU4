@@ -1,0 +1,100 @@
+country_decisions = {
+## WESTERN CANADA
+	western_canada_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = CAN }
+			NOT = { exists = NAM }
+			NOT = { exists = WCN }
+			#technology_group = north_american
+			OR = {
+				culture_group = western_canadian
+				primary_culture = vancouverite
+				primary_culture = mantarian
+				primary_culture = northern_ontarian
+				primary_culture = haida
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = western_canada_region
+				province_id = 2635
+				province_id = 2631
+				province_id = 2630
+				province_id = 2626
+				province_id = 2623
+				province_id = 2622
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			western_canada_region = {
+				ROOT = { num_of_cities = 25 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2631 # Calgary
+			owns_core_province = 2630 # Edmonton
+			owns_core_province = 2635 # Vancouver
+			owns_core_province = 2623 # Saskatoon
+			owns_core_province = 2622 # Regina
+			owns_core_province = 2626 # Winnipeg
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			change_tag = WCN
+			WCN = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			western_canada_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WCN
+			}
+			vancouver_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WCN
+			}
+			mantario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WCN
+			}
+			strait_of_georgia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WCN
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

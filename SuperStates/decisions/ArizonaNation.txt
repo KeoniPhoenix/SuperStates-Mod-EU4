@@ -1,0 +1,94 @@
+country_decisions = {
+
+## Reform into Arizona
+	reform_arizona = {
+		major = yes
+		potential = 	{
+		NOT = { has_country_flag = formed_arizona_flag }
+		NOT = { exists = ARZ }
+		NOT = { exists = DES }
+		#NOT = { exists = NAH }
+		#NOT = { exists = FSA }
+		NOT = { exists = CSA }
+		#NOT = { exists = NAM }
+		NOT = { exists = USA }
+		#NOT = { exists = GCL }
+		#NOT = { exists = NSP }
+		#NOT = { exists = AZL }
+		OR = {
+				tag = BAZ
+				primary_culture = arizonan
+				primary_culture = baja_arizonan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 936
+				province_id = 937
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			OR = {
+				NOT = { owns_core_province = 940 }
+				AND = {
+					owns_core_province = 938 # Yuma
+					owns_core_province = 939 # Prescott
+				}
+			}
+			OR = {
+				NOT = { owns_core_province = 939 }
+				AND = {
+					owns_core_province = 940 # Flagstaff
+					owns_core_province = 939 # Prescott
+				}
+			}	
+			owns_core_province = 936 # Phoenix
+			owns_core_province = 937 # Tucson
+		}
+		effect = {
+		set_country_flag = formed_arizona_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = ARZ
+			ARZ = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			arizona_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ARZ
+			}
+			baja_arizona_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ARZ
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

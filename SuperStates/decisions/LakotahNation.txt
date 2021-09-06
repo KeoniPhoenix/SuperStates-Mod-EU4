@@ -1,0 +1,69 @@
+# country_decisions = {
+	
+# ## Lakotah
+	# lakotah_nation = {
+		# major = yes
+		# potential = {
+			# NOT = { exists = LAK }
+			# NOT = { exists = GPL }
+			# NOT = { exists = USA }
+			# NOT = { exists = IUS }
+			# NOT = { exists = NAM }
+			# NOT = { exists = NSP }
+			# #technology_group = north_american
+			# OR = {
+				# primary_culture = north_dakotan
+				# primary_culture = south_dakotan
+				# primary_culture = wyomingite
+				# primary_culture = montanan
+				# primary_culture = nebraskan
+			# }
+			# OR = {
+				# ai = no
+				# AND = {
+					# ai = yes
+					# num_of_cities = 3
+				# }
+			# }
+		# }
+		# allow = {
+			# is_subject = no
+			# is_at_war = no
+			# # Nebraska
+			# owns_core_province = 1004
+			# owns_core_province = 1003
+			# owns_core_province = 1005
+			# # South Dakota
+			# owns_core_province = 998
+			# owns_core_province = 1001
+			# # North Dakota
+			# owns_core_province = 994
+			# owns_core_province = 997
+			# # Montana
+			# owns_core_province = 985
+			# owns_core_province = 982
+			# # Wyoming
+			# owns_core_province = 988
+			# owns_core_province = 986
+			
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "centralization_modifier"
+				# duration = 1825
+			# }
+			# add_prestige = 10
+			# change_tag = LAK
+			# change_government = constitutional_republic
+			# LAK = {
+				# set_capital = 1001	#Porcupine
+				# 1001 = {
+				# rename_capital = Porcupine
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+# }

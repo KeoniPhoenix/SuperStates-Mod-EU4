@@ -1,0 +1,91 @@
+country_decisions = {
+## Unite the Yucatan
+	greater_yucatan_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_yucatan } #Only once
+			NOT = { exists = YUC } # Separate from YTN tag!
+			NOT = { tag = MEX }
+			NOT = { tag = USA }
+			NOT = { exists = NAM }
+			OR = {
+				culture_group = peninsular_mexican
+				tag = YTN
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yucatan_area
+				area = quintana_roo_area
+				area = campeche_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			yucatan_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			quintana_roo_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			campeche_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 844 # Merida
+			owns_core_province = 847 # Chetumal
+			owns_core_province = 849 # Campeche
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 10
+			change_tag = YUC
+			set_country_flag = formed_yucatan
+			YUC = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			campeche_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = YUC
+			}
+			quintana_roo_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = YUC
+			}
+				swap_non_generic_missions = yes
+				country_event = { id = ideagroups.1 } #Swap
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

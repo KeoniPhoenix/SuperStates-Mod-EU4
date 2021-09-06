@@ -1,0 +1,149 @@
+country_decisions = {
+
+## Acadia
+	recreate_acadia = {
+		major = yes
+		potential = {
+			NOT = { exists = ACD }
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { exists = NFR }
+			NOT = { exists = MTU }
+			NOT = { has_country_flag = formed_acadia_flag }
+			#technology_group = north_american
+			OR = {
+				tag = CJN	
+				primary_culture = acadian
+				primary_culture = brayon
+				primary_culture = saint_pierrais
+				primary_culture = cajun
+				AND = 	{
+				primary_culture = new_brunswicker
+				OR = {
+				accepted_culture = acadian
+				accepted_culture = brayon
+					}
+						}
+				AND = 	{
+				OR = {
+				primary_culture = prince_edward_islander
+				primary_culture = nova_scotian
+				primary_culture = cape_bretoner
+				primary_culture = mainer
+					}
+				accepted_culture = acadian
+						}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3064
+				province_id = 1810
+				province_id = 1811
+				province_id = 1808
+				province_id = 1813
+				province_id = 1812
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 3064 # Port-Royal
+			owns_core_province = 1810 # Louisbourg
+			owns_core_province = 1811 # Halifax
+			owns_core_province = 1808 # Port-la-Joye
+			owns_core_province = 1813 # St. John
+			owns_core_province = 1812 # Moncton
+		}
+		effect = {
+		change_tag = ACD
+		swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_acadia_flag
+			add_prestige = 20
+			#change_government = administrative_republic
+			ACD = {
+			acadiana_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACD
+			}
+			maritimes_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACD
+			}
+			maine_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ACD
+			}
+				set_capital = 3064		# Port Royal
+				3064 = {
+				change_province_name = "Port-Royal"
+				rename_capital = "Port-Royal"
+				change_culture = acadian
+				}
+				1808 = {
+				change_province_name = "Isle Saint-Jean"
+				rename_capital = "Port-La-Joye"
+				}
+				1809 = {
+				change_culture = acadian
+				}
+				3217 = {
+				change_culture = acadian
+				}
+				1811 = {
+				change_culture = acadian
+				}
+				3065 = {
+				change_culture = acadian
+				}
+				3063 = {
+				change_culture = acadian
+				}
+				1810 = {
+				change_province_name = Île-Royale
+				rename_capital = Louisbourg
+				change_culture = acadian
+				}
+				hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_owner_culture = yes
+					}
+					change_culture = acadian
+				}
+			}
+				if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			}
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

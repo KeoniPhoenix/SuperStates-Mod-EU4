@@ -1,0 +1,130 @@
+country_decisions = {
+	
+## MID_ATLANTIC LEAGUE
+	midatlantic_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = FSA }
+			NOT = { exists = MAA }
+			NOT = { exists = NAM }
+			NOT = { exists = USA }
+			#technology_group = north_american
+			OR = {
+				culture_group = midatlantic_group
+				primary_culture = virginian
+				primary_culture = connecticuter
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2601
+				province_id = 2585
+				province_id = 2616
+				province_id = 2530
+				province_id = 2531
+				province_id = 3025
+				province_id = 2591
+				province_id = 3319
+				province_id = 2590
+				province_id = 2536
+				province_id = 2534
+				province_id = 3138
+				province_id = 3264
+				province_id = 2600
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			mid_atlantic_region = {
+				ROOT = { num_of_cities = 30 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2601	# New York City
+			owns_core_province = 2585	# Philadelphia
+			owns_core_province = 2616	# Washington DC
+			OR = {
+				owns_core_province = 2530	# Annapolis
+				owns_core_province = 2531	# Baltimore
+				owns_core_province = 3025	# Rockville
+			}
+			OR = {
+				owns_core_province = 2591	# Newark
+				owns_core_province = 3319	# Jersey City
+				owns_core_province = 2590	# Trenton
+			}
+			OR = {
+				owns_core_province = 2536	# Arlington
+				owns_core_province = 2534	# Virginia Beach
+			}
+			OR = {
+				owns_core_province = 3138	# Lancaster
+				owns_core_province = 3264	# Wilmington
+				owns_core_province = 2600	# Westchester
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = MAA
+			MAA = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			mid_atlantic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAA
+			}
+			adirondack_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAA
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAA
+			}
+			shenandoah_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAA
+			}
+			erie_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MAA
+			}
+				}
+			swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

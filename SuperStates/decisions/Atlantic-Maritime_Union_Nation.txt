@@ -1,0 +1,135 @@
+country_decisions = {
+	
+## MARITIME UNION
+	maritime_union_nation = {
+		major = yes
+		potential = {
+		NOT = { has_country_flag = formed_maritime_flag }
+			NOT = { exists = CAN }
+			NOT = { exists = MTU }
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			culture_group = atlantic_canadian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1814
+				province_id = 1813
+				province_id = 1808
+				province_id = 1811
+				province_id = 1810
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			maritimes_region = {
+				ROOT = { num_of_cities = 10 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 1814 # Fredericton
+			owns_core_province = 1813 # Saint John
+			owns_core_province = 1808 # Charlottetown
+			owns_core_province = 1811 # Halifax
+			owns_core_province = 1810 # Sydney
+		}
+		effect = {
+		set_country_flag = formed_maritime_flag
+		swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			MTU = {
+			maritimes_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MTU
+			}
+			if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+					}
+			add_prestige = 20
+			change_tag = MTU
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	atlantic_union_nation = {
+		major = yes
+		potential = {
+			tag = MTU
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { has_country_flag = atlantic_union_decision }
+			##technology_group = north_american
+			#culture_group = atlantic_canadian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			newfoundland_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+									}
+			owns_core_province = 1807 # Avalon
+			owns_core_province = 1805 # Saint John
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			MTU = {
+			maritimes_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MTU
+			}
+			if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+					}
+			add_prestige = 10
+			override_country_name = ATLANTIC_UNION
+			hidden_effect = {
+				set_country_flag = atlantic_union_decision
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,231 @@
+country_decisions = {
+
+## CONFEDERATE STATES OF AMERICA
+	confederate_states_nation = {
+		major = yes
+		potential = { 
+			NOT = { exists = AZL }
+			NOT = { exists = CSA }
+			NOT = { exists = USA }
+			NOT = { exists = ASE }
+			NOT = { exists = NAM }
+			NOT = { exists = GCL }
+			NOT = { exists = NSP }
+			#technology_group = north_american
+			OR = {
+				culture_group = southerner
+				primary_culture = texan
+				primary_culture = northern_texan
+				primary_culture = baja_arizonan
+				primary_culture = tennessean
+				primary_culture = west_tennessean
+				primary_culture = kentuckian
+				primary_culture = missourian
+				primary_culture = northern_virginian
+				primary_culture = cajun
+				primary_culture = high_plainer
+				primary_culture = miamian
+				primary_culture = west_marylander
+				primary_culture = mountaineer
+				primary_culture = oklahoman
+				AND = {
+					primary_culture = west_virginian
+					accepted_culture = virginian
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 25
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2502
+				province_id = 2507
+				province_id = 2510
+				province_id = 2527
+				province_id = 2522
+				province_id = 2533
+				province_id = 2520
+				province_id = 2478
+				province_id = 2493
+				province_id = 2518
+				province_id = 2490
+				province_id = 2542
+				region = deep_south_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			deep_south_region = {
+				ROOT = { num_of_cities = 35 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			old_southwest_region = {
+				ROOT = { num_of_cities = 25 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			appalachia_region = {
+				ROOT = { num_of_cities = 10 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 2502			#Jackson, Mississippi
+			owns_core_province = 2507			#Birmingham, Alabama
+			owns_core_province = 2510			#Atlanta, Georgia
+			owns_core_province = 2527			#Columbia, South Carolina
+			owns_core_province = 2522			#Raleigh, North Carolina
+			owns_core_province = 2533			#Richmond, Virginia
+			OR = {
+				owns_core_province = 2520			#Knoxville, Tennessee
+				owns_core_province = 2478			#Austin, Texas
+			}
+			OR = {
+				owns_core_province = 2493			#Little Rock, Arkansas
+				owns_core_province = 2518			#Nashville, Tennessee
+			}
+			OR = {
+				owns_core_province = 2490			#New Orleans, Louisiana
+				owns_core_province = 2542			#Tallahassee, Florida
+			}
+		}
+		effect = {
+		change_tag = CSA
+		CSA = {
+			if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+			deep_south_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			old_southwest_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			tennessee_area = {
+			limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			blue_ridge_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			nickajack_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			high_plains_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			trans_pecos_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			rio_grande_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			chesapeake_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+			virginia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CSA
+			}
+				}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 5475
+			}
+			add_prestige = 30
+			add_government_reform = confederate_republic
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#RELEASE CSA
+	release_csa_decision = {
+		potential = {
+			tag = USA
+			NOT = { exists = CSA }
+			NOT = { exists = ASE }
+			NOT = { has_country_flag = released_csa }
+		}
+		provinces_to_highlight = {
+			OR = {
+				confederate_states_provincegroup = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}	
+		allow = {
+			is_subject = no
+			is_at_war = no
+			confederate_states_provincegroup = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = -25
+			add_stability = -1
+			CSA = {
+				add_government_reform = confederate_republic
+				set_capital = 2533		#Richmond
+			}
+			confederate_states_provincegroup = {
+				add_core = CSA
+			}
+			confederate_claims_provincegroup = {
+				add_permanent_claim = CSA
+			}
+			set_country_flag = released_csa
+			release = CSA
+		}
+	}
+}

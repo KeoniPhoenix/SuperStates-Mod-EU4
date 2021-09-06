@@ -1,0 +1,111 @@
+country_decisions = {
+
+## Buffalo Nation
+	form_province_of_buffalo = {
+		major = yes
+		potential = 	{
+		NOT = { has_country_flag = formed_buffalo_flag }
+			NOT = { exists = BFF }
+			NOT = { exists = CAN }
+			NOT = { exists = WCN }
+			NOT = { exists = NAM }
+			#technology_group = north_american
+			OR = 			{
+				primary_culture = saskatchewanian
+				primary_culture = albertan
+				primary_culture = athabascan
+							}
+			OR = {
+				ai = no
+				AND = 		{
+					ai = yes
+					num_of_cities = 3
+							}
+				}
+						}
+		allow = {
+			alberta_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			north_saskatchewan_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saskatchewan_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				peace_river_area = {
+					ROOT = { num_of_cities = 3 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				athabasca_area = {
+					ROOT = { num_of_cities = 3 }
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}	
+		effect = {
+			set_country_flag = formed_buffalo_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+								}
+			add_prestige = 10
+			change_tag = BFF
+			BFF = {
+				set_capital = 2622		# Regina
+				}
+			BFF = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			saskatchewan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BFF
+			}
+			alberta_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BFF
+			}
+			peace_river_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BFF
+			}
+			athabasca_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BFF
+			}
+			north_saskatchewan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BFF
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,93 @@
+country_decisions = {
+
+## RIO GRANDE
+	rio_grande_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RRG }
+			NOT = { exists = MEX }
+			NOT = { exists = GCL }
+			NOT = { exists = NSP }
+			OR = {
+				primary_culture = coahuilan
+				primary_culture = nuevo_leonian
+				primary_culture = tamaulipasian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = coahuila_area
+				area = tamaulipas_area
+				area = nuevo_leon_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			coahuila_area = {
+				ROOT = { num_of_cities = 4 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			nuevo_leon_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tamaulipas_area = {
+				ROOT = { num_of_cities = 3 }
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 20
+			change_tag = RRG
+			RRG = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			tamaulipas_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RRG
+			}
+			nuevo_leon_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RRG
+			}
+			coahuila_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RRG
+			}
+				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
