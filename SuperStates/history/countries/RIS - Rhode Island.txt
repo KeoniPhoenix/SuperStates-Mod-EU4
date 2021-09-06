@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = rhode_islander
+religion = s_catholic
+capital = 2612 # Providence
+historical_rival = MSS
+
+1443.1.3 = {
+	monarch = {
+		name = "Nicholas Cooke"
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = newfoundlander
+capital = 1807	# St. John's
+
+1528.1.1 = {
+    religion = catholic
+}

@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = nevadan
+religion = mormon
+capital = 951  # Washoe

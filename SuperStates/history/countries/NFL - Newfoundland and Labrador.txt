@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = newfoundlander
+add_accepted_culture = labradorian
+capital = 1807	# St. John's
+
+1441.12.6 = {
+	monarch = {
+		name = "Roger Grimes"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1531.1.1 = {
+    religion = anglican
+}

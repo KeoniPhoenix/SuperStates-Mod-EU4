@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = queretan
+capital = 879	# Querétaro
+
+
+1441.10.1 = {
+	monarch = {
+		name = "Adolfo Isla"
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

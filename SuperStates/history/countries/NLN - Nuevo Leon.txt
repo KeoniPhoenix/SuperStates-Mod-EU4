@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = nuevo_leonian
+capital = 910	# Monterrey
+
+
+1443.10.4 = {
+	monarch = {
+		name = "Juan de Echandía"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

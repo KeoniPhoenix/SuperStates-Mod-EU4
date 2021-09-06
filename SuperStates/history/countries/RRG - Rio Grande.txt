@@ -1,0 +1,12 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = north_american
+religion = s_catholic
+primary_culture = tamaulipasian
+add_accepted_culture = nuevo_leonian
+add_accepted_culture = coahuilan
+capital = 905	# Nuevo Laredo
+
+1528.1.1 = {
+    religion = catholic
+}

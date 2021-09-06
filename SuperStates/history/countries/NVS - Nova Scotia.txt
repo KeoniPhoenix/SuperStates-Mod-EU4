@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = nova_scotian
+add_accepted_culture = cape_bretoner
+capital = 1811	# Halifax
+
+1440.2.2 = {
+	monarch = {
+		name = "James Uniacke"
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}

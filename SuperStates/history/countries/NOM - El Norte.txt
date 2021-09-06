@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = constitutional_republic
+government_rank = 2
+technology_group = north_american
+religion = s_catholic
+primary_culture = mexican_districter
+capital = 925	# Juarez
+
+1528.1.1 = {
+    religion = catholic
+}

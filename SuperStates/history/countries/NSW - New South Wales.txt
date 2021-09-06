@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = new_south_welsh
+capital = 2011 	# Sydney
+
+1444.6.6 = {
+	monarch = {
+		name = "Stuart Donaldson"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = ozarker
+add_accepted_culture = arkansan
+religion = s_protestant
+capital = 3242 # Bentonville
+
+1531.1.1 = {
+	religion = s_baptist
+}

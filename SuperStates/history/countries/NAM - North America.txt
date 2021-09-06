@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = oligarchy_reform
+technology_group = north_american
+primary_culture = american
+religion = s_protestant
+capital = 2616 # Washington, D.C.
+
+1528.1.1 = {
+    religion = protestant
+}

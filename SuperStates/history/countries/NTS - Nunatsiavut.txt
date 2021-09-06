@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_protestant
+primary_culture = inuktitut
+capital = 3022	# Nunatsiavut
+historical_friend = NUV
+historical_friend = NUN
+
+1528.1.1 = {
+    religion = anglican
+}

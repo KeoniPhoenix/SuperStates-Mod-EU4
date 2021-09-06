@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = revolutionary_republic
+technology_group = north_american
+religion = s_catholic
+primary_culture = nicaraguan
+capital = 2660	# Managua
+
+1528.1.1 = {
+    religion = catholic
+}

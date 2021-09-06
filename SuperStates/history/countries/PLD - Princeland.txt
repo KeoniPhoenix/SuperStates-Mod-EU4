@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = victorian
+add_accepted_culture = south_australian
+capital = 2019	# Greater Geelong

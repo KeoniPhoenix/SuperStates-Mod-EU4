@@ -1,0 +1,6 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = oceanian
+primary_culture = palauan
+religion = austral_catholic
+capital = 1996	#Majuro

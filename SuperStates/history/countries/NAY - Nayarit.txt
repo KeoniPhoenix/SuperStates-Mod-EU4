@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = nayaritian
+capital = 902	# Tepic
+
+1443.9.19 = {
+	monarch = {
+		name = "José María"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

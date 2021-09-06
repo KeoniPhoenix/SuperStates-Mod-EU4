@@ -1,0 +1,277 @@
+government = republic
+#set_legacy_government = constitutional_republic
+government_rank = 1
+technology_group = north_american
+primary_culture = nauruan
+religion = austral_protestant
+capital = 1992
+
+1968.1.31 = {
+	monarch = {
+		name = "Hammer DeRoburt"
+		adm = 4
+		mil = 3
+		dip = 3
+	}
+}
+
+1976.12.22 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1978.4.19 = {
+	monarch = {
+		name = "Lagumot Harris"
+		adm = 4
+		mil = 3
+		dip = 1
+	}
+}
+
+1978.5.15 = {
+	monarch = {
+		name = "Hammer DeRoburt"
+		adm = 4
+		mil = 3
+		dip = 3
+	}
+}
+
+1986.9.17 = {
+	monarch = {
+		name = "Kennan Adeang"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1986.10.1 = {
+	monarch = {
+		name = "Hammer DeRoburt"
+		adm = 4
+		mil = 3
+		dip = 3
+	}
+}
+
+1986.12.12 = {
+	monarch = {
+		name = "Kennan Adeang"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1986.12.22 = {
+	monarch = {
+		name = "Hammer DeRoburt"
+		adm = 4
+		mil = 3
+		dip = 3
+	}
+}
+
+1989.8.17 = {
+	monarch = {
+		name = "Kenas Aroi"
+		adm = 3
+		mil = 2
+		dip = 2
+	}
+}
+
+1989.12.12 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1995.11.22 = {
+	monarch = {
+		name = "Lagumot Harris"
+		adm = 4
+		mil = 3
+		dip = 1
+	}
+}
+
+1996.11.11 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1996.11.26 = {
+	monarch = {
+		name = "Kennan Adeang"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1996.12.19 = {
+	monarch = {
+		name = "Ruben Kun"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1997.2.13 = {
+	monarch = {
+		name = "Kinza Clodumar"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1998.6.18 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1999.4.27 = {
+	monarch = {
+		name = "René Harris"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+2000.4.20 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+2001.3.30 = {
+	monarch = {
+		name = "René Harris"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+2003.1.9 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+2003.1.17 = {
+	monarch = {
+		name = "René Harris"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+2003.1.18 = {
+	monarch = {
+		name = "Bernard Dowiyogo"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+2003.3.10 = {
+	monarch = {
+		name = "Derog Gioura"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+2003.5.29 = {
+	monarch = {
+		name = "Ludwig Scotty"
+		adm = 3
+		mil = 3
+		dip = 3
+	}
+}
+
+2003.8.8 = {
+	monarch = {
+		name = "René Harris"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+2004.6.22 = {
+	monarch = {
+		name = "Ludwig Scotty"
+		adm = 3
+		mil = 3
+		dip = 3
+	}
+}
+
+2007.12.19 = {
+	monarch = {
+		name = "Marcus Stephen"
+		adm = 3
+		mil = 4
+		dip = 2
+	}
+}
+
+2011.11.10 = {
+	monarch = {
+		name = "Frederick Pitcher"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+2011.11.15 = {
+	monarch = {
+		name = "Sprent Dabwido"
+		adm = 4
+		mil = 2
+		dip = 4
+	}
+}
+
+2013.6.11 = {
+	monarch = {
+		name = "Baron Waqa"
+		adm = 4
+		mil = 2
+		dip = 3
+	}
+}

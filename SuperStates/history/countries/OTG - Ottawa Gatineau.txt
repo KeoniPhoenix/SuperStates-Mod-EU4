@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = ontarian
+add_accepted_culture = quebecois
+capital = 2643	# Ottawa
+
+1528.1.1 = {
+    religion = catholic
+}

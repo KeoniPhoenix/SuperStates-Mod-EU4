@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = nickajack
+add_accepted_culture = mountaineer
+religion = s_protestant
+capital = 2509  # Madison
+historical_rival = TEN
+
+1531.1.1 = {
+    religion = s_baptist
+}

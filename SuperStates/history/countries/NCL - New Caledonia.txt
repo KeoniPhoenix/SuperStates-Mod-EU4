@@ -1,0 +1,7 @@
+government = republic
+#set_legacy_government = constitutional_republic
+government_rank = 1
+technology_group = australian
+religion = austral_catholic
+primary_culture = new_caledonian
+capital = 1986 #New Caledonia

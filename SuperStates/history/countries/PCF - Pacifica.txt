@@ -1,0 +1,10 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = north_american
+primary_culture = californian
+religion = s_catholic
+capital = 946 # San Francisco
+
+1528.1.1 = {
+    religion = catholic
+}

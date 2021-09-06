@@ -1,0 +1,12 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = oceanian
+primary_culture = hawaiian
+religion = s_protestant
+capital = 968 # Honolulu
+
+
+1528.1.1 = {
+	religion = protestant
+}
+

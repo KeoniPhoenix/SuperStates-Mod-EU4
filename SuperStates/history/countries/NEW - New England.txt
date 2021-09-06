@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = american_republic
+government_rank = 3
+technology_group = north_american
+primary_culture = bay_stater
+add_accepted_culture = connecticuter
+add_accepted_culture = mainer
+religion = s_catholic
+capital = 2609	# Boston
+
+1528.1.1 = {
+    religion = catholic
+}

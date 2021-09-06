@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = ohioan
+add_accepted_culture = clevelander
+religion = s_protestant
+capital = 2578  # Columbus
+historical_rival = MIC
+
+1443.1.3 = {
+	monarch = {
+		name = "Edward Tiffin"
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}

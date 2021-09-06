@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = northern_texan
+add_accepted_culture = texan
+religion = s_protestant
+capital = 2480 # Dallas
+
+1531.1.1 = {
+    religion = s_baptist
+}

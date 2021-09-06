@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_catholic
+primary_culture = ontarian
+capital = 2643	# Ottawa
+historical_rival = TTN
+historical_friend = GAT
+
+1528.1.1 = {
+    religion = catholic
+}

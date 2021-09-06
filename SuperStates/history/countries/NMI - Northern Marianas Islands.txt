@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = oceanian
+primary_culture = northern_marianas_islander
+religion = austral_catholic
+capital = 1240 # Saipan
+
+1443.1.3 = {
+	monarch = {
+		name = "Carlos Camacho"
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+}

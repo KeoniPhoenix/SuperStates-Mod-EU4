@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = new_brunswicker
+capital = 1814	# Fredericton
+
+1442.10.19 = {
+	monarch = {
+		name = "Charles Fisher"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+	religion = catholic
+}

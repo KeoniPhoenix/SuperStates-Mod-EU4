@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = queenslander
+capital = 1790 # Brisbane
+
+1443.12.10 = {
+	monarch = {
+		name = "Robert Herbert"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

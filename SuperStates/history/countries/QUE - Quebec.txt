@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = quebecois
+capital = 2652	# Quebec City
+historical_rival = ONT
+
+1441.7.15 = {
+	monarch = {
+		name = "Pierre-Joseph-Olivier Chauveau"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

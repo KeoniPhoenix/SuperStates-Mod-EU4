@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = northern_virginian
+religion = s_protestant
+capital = 2536 # Arlington
+
+1528.1.1 = {
+    religion = s_methodist
+}

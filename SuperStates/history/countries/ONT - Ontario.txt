@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = ontarian
+add_accepted_culture = mantarian
+capital = 2642	# Toronto
+historical_rival = QUE
+
+1443.7.6 = {
+	monarch = {
+		name = "John Macdonald"
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+	religion = protestant
+}

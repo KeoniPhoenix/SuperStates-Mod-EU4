@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_protestant
+primary_culture = nunavummiut
+capital = 2620	# Iqaluit
+
+1443.4.1 = {
+	monarch = {
+		name = "Paul Okalik"
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1531.1.1 = {
+    religion = s_baptist
+}
