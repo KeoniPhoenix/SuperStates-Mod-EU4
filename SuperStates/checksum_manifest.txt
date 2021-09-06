@@ -1,0 +1,1 @@
+#This file is necessary and must be empty.  The game will create a mod checksum correctly with this file.
