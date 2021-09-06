@@ -1,0 +1,933 @@
+# Confederate States Province Group
+confederate_states_provincegroup = {
+	# Alabama
+	2506 2507 2508 2509 3229 3230 3231 3232
+	# Arkansas
+	2493 2494 2495 2496 3240 3241 3242 3243
+	# Georgia
+	2510 2511 2512 2513 3078 3079 3080 3081 3082
+	# Florida
+	2542 2543 2544 2545 2546 3019 3020 3265 3266 3267 3268 3269 3270 3271 3272 3273
+	# Indian Territory (aka Oklahoma)
+	1010 1011 2476 2477 3287 3288 3289
+	# Louisiana
+	2489 2490 2491 2492 3021 3022 3023 3101 3102
+	# Mississippi
+	2502 2503 2504 2505 3110 3111 3112
+	# North Carolina
+	2522 2523 2524 2525 2526 3129 3130 3131 3132
+	# South Carolina
+	2527 2528 2529 3162 3163
+	# Tennessee
+	2518 2519 2520 2521 3144 3145 3146 3147
+	# Texas
+	2478 2479 2480 2481 2482 2483 2484 2485 2486 2487 2488 3292 3293 3294 3295 3296 3297 3298 4573
+	# Virginia
+	2533 2534 2535 2536 2537 2538 2731 3148 3149 3150 3151
+}
+
+confederate_claims_provincegroup = {
+	# Confederate Arizona
+	936 937 938 958 959 3238 3239 4571 4572
+	# Delaware
+	2615 3264 3312
+	# Kentucky
+	2514 2515 2516 2517 3012 3099 3100
+	# Maryland and District of Columbia
+	2530 2531 2532 2729 2730 3025
+	2616
+	# Missouri
+	2497 2498 2499 2500 2501 2669 3113 3114 3115 3116
+	# West Virginia
+	2539 2540 2541 3011 3154 3155 3156
+}
+
+# Geographical Province Groups
+	# America-Canada
+lake_erie_provincegroup = {
+	2579 2583 2573 3061 2645 2651 2588 2598
+}
+
+lake_ontario_provincegroup = {
+	2651 2642 2644 2643 2595 2596 2597 2598
+}
+
+lake_huron_provincegroup = {
+	3219 2645 3061 2573 3105 3106 2642 3062 2646 3037 3218 2576
+}
+
+lake_michigan_provincegroup = {
+	2575 3091 2565 2558 2559 3304 2577 3208 2576 3278 2574
+}
+
+lake_superior_provincegroup = {
+	2576 3208 2577 3037 2649 2548 2560
+}
+
+lake_champlain_provincegroup = {
+	2594 2603 2665 2657
+}
+
+# Mexico
+yucatan_peninsula_provincegroup = {
+	846 3223 847 3225 845 844 849 3221 3222 848 843 842 4606
+}
+
+# Caribbean
+cuba_provincegroup = {
+	4624 484 4622 4586 4623 485 2656 2655 2654 486
+}
+
+hispaniola_provincegroup = {
+	489 4590 4619 4618 4588 488 490 2658 2659 4620 4621
+}
+
+haiti_provincegroup = {
+	489 4590 4619 4618 4588 488
+}
+
+virgin_islands_provincegroup = {
+	493 4646 4645 3220 3049 4584 4585
+}
+
+lucaya_provincegroup = {
+	4626 483 3329 3326 3330 4625 482 4627 4635
+}
+
+abc_islands_provincegroup = {
+	3331 491 3332
+}
+
+grenadines_provincegroup = {
+	4575 4574
+}
+
+# Caribbean Nations
+trinidad_tobago_provincegroup = {
+	3328 502
+}
+
+st_vincent_grenadines_provincegroup = {
+	500 4575
+}
+
+antigua_barbuda_provincegroup = {
+	495 4582
+}
+
+st_martin_provincegroup = {
+	1881 3051
+}
+
+netherlands_antilles_provincegroup = {
+	3051 4579 4580 3331 491 3332
+}
+
+saba_sint_eustatius_provincegroup = {
+	4579 4580
+}
+
+st_kitts_nevis_provincegroup = {
+	494 4581
+}
+
+guadeloupe_provincegroup = {
+	496 4583
+}
+
+turks_caicos_provincegroup = {
+	483 3329
+}
+
+bahamas_provincegroup = {
+	3330 4625 482 4627 4635 3326 4626
+}
+
+grenada_provincegroup = {
+	3327 4574
+}
+
+# Canada
+cape_breton_provincegroup = {
+	3063 1810
+}
+
+prince_edward_island_provincegroup = {
+	1808 3060
+}
+
+st_pierre_miquelon_provincegroup = {
+	3050 4576
+}
+
+## Pacific Province Groups
+micronesia_states_provincegroup = {
+	2726 2727 2728 1995
+}
+
+associated_states_provincegroup = {
+	2726 2727 2728 1995 1996 1993
+}
+
+us_pacific_territories_provincegroup = {
+	1240 1235 2617 3315
+}
+
+# northern_mariana_islands_provincegroup = [
+	# 1240
+# }
+
+# guam_provincegroup = {
+	# 1235
+# }
+
+# marshall_islands_provincegroup = {
+	# 1993
+# }
+
+nmi_guam_provincegroup = {
+	1240 1235
+}
+
+american_samoa_provincegroup = {
+	2617 3315
+}
+
+samoa_islands_provincegroup = {
+	2617 3315 1243
+}
+
+# Greenland - to be expanded
+# greenland_provincegroup = {
+	# 1104 1105 4632 4633 4634
+# }
+
+# American Province Groups (States, Territories, and geographical regions)
+
+# Alabama
+alabama_provincegroup = {
+	2507 2506 3230 3232 3231 2508 2509 3229
+}
+
+# Alaska
+alaska_provincegroup = {
+	974 2648 3235 3234 975 973 3233 2671 972 971 970
+}
+
+aleutia_provincegroup = {
+	3235 974
+}
+
+# Arizona
+arizona_provincegroup = {
+	936 3237 3238 939 940 937 938 3239
+}
+
+# Arkansas
+arkansas_provincegroup = {
+	3243 2493 3240 2494 2496 3241 2495 3242
+}
+
+# California
+california_provincegroup = {
+	3244 2734 3247 945 3249 3245 941 3250 2735 3246 946 943 3251 3252 942 944 2736 3253 3255 3254 3248 947 2733
+}
+
+northern_california_provincegroup = {
+	3248 945 3247 2735 946 3250 3246 2734 941 3245 3244 2733 947 2736
+}
+
+southern_california_provincegroup = {
+	943 3251 3252 942 944 3253 3255 3249 3254
+}
+
+san_francisco_bay_provincegroup = {
+	2735 946 3246 3250 3245
+}
+
+# Colorado
+colorado_provincegroup = {
+	992 3260 993 3259 3258 3256 3257 991 990
+}
+
+# Connecticut
+# connecticut_provincegroup = {
+	 # 2614 2613 3261 3263 3262
+# }
+
+# Delaware
+# delaware_provincegroup = {
+	# 2615 3264 3312
+# }
+
+delmarva_provincegroup = {
+	2731 2730 2729 2615 3264 3312
+}
+
+# Florida
+# west_florida_provincegroup = {
+	# 2543 2508 2503 2489
+# }
+
+florida_provincegroup = {
+	3266 2542 3267 2546 2545 3265 3270 3020 3271 3268 2544 3273 3272 3019 3269 2543
+}
+
+south_florida_provincegroup = {
+	3271 3268 2544 2545 3265 3270 3020 3019 3269
+}
+
+miami_provincegroup = {
+	2545 3265
+}
+
+# Georgia
+georgia_provincegroup = {
+	3081 3080 2512 2513 3082 2511 2510 3079 3078
+}
+
+# Hawaii
+hawaii_provincegroup = {
+	969 3226 3227 968 3228
+}
+
+leeward_hawaii_provincegroup = { #Midway, Wake
+	1994 1997
+}
+
+# Idaho
+idaho_provincegroup = {
+	976 3083 3084 977 3085 979 978
+}
+
+idaho_panhandle_provincegroup = {
+	979 978
+}
+
+# Illinois
+illinois_provincegroup = {
+	2563 2564 3274 3275 3087 2562 2566 2567 3086 3276 2565
+}
+
+# Indiana
+indiana_provincegroup = {
+	2571 3088 2568 3089 3090 3091 2570 2569
+}
+
+# Iowa
+iowa_provincegroup = {
+	2554 2555 2553 3093 3092 3094 2556
+}
+
+# Kansas
+kansas_provincegroup = {
+	1007 3098 1006 3095 3096 3097 1009 1008
+}
+
+# Kentucky
+kentucky_provincegroup = {
+	2516 3012 2514 2515 2517 3099 3100
+}
+
+# Louisiana
+louisiana_provincegroup = {
+	3023 2491 3101 2490 2489 3021 3102 2492 3022
+}
+
+# Maine
+maine_provincegroup = {
+	2606 2607 2608 3018 3103
+}
+
+# Maryland
+maryland_provincegroup = {
+	2530 2531 3025 2532 2729 2730
+}
+
+# Massachusetts
+massachusetts_provincegroup = {
+	2609 2610 3104 3325 2611 3017 3277
+}
+
+massachusetts_islands_provincegroup = { # Dukes, Nantucket
+	3277 3017
+}
+
+west_massachusetts_provincegroup = {
+	2610 3104
+}
+
+# Michigan
+michigan_provincegroup = {
+	2572 2575 3105 3106 2574 2573 2576 2577 3278 3208
+}
+
+lower_michigan_provincegroup = { # Mitten
+	2572 2575 3105 3106 2574 2573
+}
+
+# Minnesota
+minnesota_provincegroup = {
+	2548 2550 2549 3107 2552 2547 3323 3108 3109 2551
+}
+
+twin_cities_provincegroup = {
+	3323 2547
+}
+
+# Mississippi
+mississippi_provincegroup = {
+	3111 3112 2502 2504 3110 2505 2503
+}
+
+yazoo_provincegroup = {
+	3111 3112 2502 2504 3230 2506 3232 3231
+}
+
+# Missouri
+missouri_provincegroup = {
+	2498 3116 3115 2669 2499 2501 3114 2497 3113 2500
+}
+
+ozarks_provincegroup = {
+	2495 3242 3243 2500 3114 2501
+}
+
+# Montana
+montana_provincegroup = {
+	981 982 3120 985 3119 984 3121 980 983 3117 3118
+}
+
+# Nebraska
+nebraska_provincegroup = {
+	3124 1005 1002 1004 3123 3122 1003
+}
+
+# Nevada
+nevada_provincegroup = {
+	948 951 950 3279 949
+}
+
+# New Jersey
+new_jersey_provincegroup = {
+	2592 3126 3321 3280 2591 2590 3320 3319 3318
+}
+
+# New Mexico
+new_mexico_provincegroup = {
+	959 957 4570 4572 956 4571 958
+}
+
+# New York
+new_york_provincegroup = {
+	3127 2595 2594 2596 2598 2597 2668 2593 2600 3284 2601 3283 3282 3281 3026 3128 3285 2599
+}
+
+long_island_provincegroup = {
+	3026 3128 3285 3283 3282
+}
+
+new_york_city_provincegroup = {
+	2601 3283 3282 3281 2600
+}
+
+downstate_new_york_provincegroup = {
+	2601 3283 3282 3281 3026 3128 3285
+}
+
+upstate_new_york_provincegroup = {
+	2593 2600 3284 2598 2597 2668 3127 2595 2594 2596 2599
+}
+
+# North Carolina
+north_carolina_provincegroup = {
+	2526 2525 3130 2522 3129 2524 3132 3131 2523
+}
+
+# North Dakota
+north_dakota_provincegroup = {
+	3133 994 3135 995 3134 996 997
+}
+
+dakota_provincegroup = {
+	3133 994 3135 995 3134 996 997 1000 999 3141 998 3142 3143 1001
+}
+
+# Ohio
+ohio_provincegroup = {
+	2581 3286 2580 2578 2582 2583 2579
+}
+
+# Oklahoma
+oklahoma_provincegroup = {
+	3287 3288 1011 1010 2477 2476 3289
+}
+
+# Oregon
+oregon_provincegroup = {
+	3136 962 963 2666 3027 3137 960 961
+}
+
+# Pennsylvania
+pennsylvania_provincegroup = {
+	2589 3028 3029 2585 3139 2586 2584 2587 3138 2588
+}
+
+west_pennsylvania_provincegroup = {
+	2589 3028 3029 2588
+}
+
+# Rhode Island
+# rhode_island_provincegroup = {
+	# 3140 2612 3291 3290
+# }
+
+# South Carolina
+# south_carolina_provincegroup = {
+	# 2527 2528 2529 3162 3163
+# }
+
+# South Dakota
+south_dakota_provincegroup = {
+	1000 999 3141 998 3142 3143 1001
+}
+
+# Tennessee
+tennessee_provincegroup = {
+	3145 3146 2518 3144 2519 2521 2520 3147 
+}
+
+west_tennessee_provincegroup = {
+	3144 2519
+}
+
+central_tennessee_provincegroup = {
+	3145 2518 3146 
+}
+
+east_tennessee_provincegroup = {
+	2521 2520 3147
+}
+
+# Texas
+texas_provincegroup = {
+	2478 2479 3297 3294 2480 2488 3296 2486 3295 2484 3298 4573 2483 2482 2481 3293 2485 2487 3292
+}
+
+metroplex_provincegroup = {
+	3294 2480
+}
+
+north_texas_provincegroup = {
+	3294 2480 2488 2482 2481
+}
+
+texas_panhandle_provincegroup = {
+	2483 2482 2481
+}
+
+rio_grande_provincegroup = {
+	3296 2486 3295 2484 3298 4573 3293
+}
+
+central_texas_provincegroup = {
+	2478 2479 3297 2486
+}
+
+east_texas_provincegroup = {
+	2487 3292 2488
+}
+
+# Utah
+utah_provincegroup = {
+	953 954 955 952 3299 3300
+}
+
+# New Hampshire
+# new_hampshire_provincegroup = {
+	# 2605 2604 3125
+# }
+
+# Vermont
+# vermont_provincegroup = {
+	# 3161 2602 2603
+# }
+
+vermont_new_hampshire_provincegroup = {
+	3161 2602 2603 2605 2604 3125
+}
+
+# Virginia
+virginia_provincegroup = {
+	3151 2538 3149 2533 2537 2534 2535 3148 2731 2536 3150
+}
+
+northern_virginia_provincegroup = {
+	2536 2537 3148
+}
+
+washington_dc_metro_provincegroup = {
+	2536 2537 3148 2616 3025
+}
+
+district_of_columbia_provincegroup = {
+	2616
+}
+
+# Washington
+washington_provincegroup = {
+	965 3152 964 3301 2732 966 967 3303 3302 3153
+}
+
+washington_islands_provincegroup = {
+	3303 3302
+}
+
+# West Virginia
+west_virginia_provincegroup = {
+	3154 2541 3011 3155 2539 2540 3156
+}
+
+# Wisconsin
+wisconsin_provincegroup = {
+	2557 3157 2561 3305 2560 2559 3158 3304 2558
+}
+
+# Wyoming
+wyoming_provincegroup = {
+	989 988 987 986 3159 3160
+}
+
+# Virgin Islands
+# us_virgin_islands_provincegroup = {
+	# 4646 493 4645
+# }
+
+# Puerto Rico
+puerto_rico_provincegroup = {
+	492 3024 3314 3220
+}
+
+# Canada Province Groups (provinces, territories, geographical regions)
+# Alberta
+alberta_provincegroup = {
+	3212 3213 2630 3045 3043 2631 3044 2633 3010 3210 3209 3211 2632
+}
+
+# British Columbia
+british_columbia_provincegroup = {
+	2634 3215 3214 3038 3075 3039 2641 3076 3077 2639 2635 3074 2638 3040 3041 3042
+}
+
+# Manitoba
+manitoba_provincegroup = {
+	3072 2629 2626 3073 3006 2627 2628
+}
+
+# New Brunswick
+new_brunswick_provincegroup = {
+	3070 1812 1813 1814 2667 3071
+}
+
+# Newfoundland and Labrador
+newfoundland_labrador_provincegroup = {
+	1806 1807 3068 3067 3066 1805 3033 3069
+}
+
+# Nova Scotia
+nova_scotia_provincegroup = {
+	3065 3064 1811 1809 3217 3063 1810 
+}
+
+# Nunavut
+nunavut_provincegroup = {
+	2620 3036 3035 3034 2621 
+}
+
+nunavut_islands_provincegroup = {
+	3036 3034 3035
+}
+
+# baffin_provincegroup = {
+	# 2620
+# }
+
+# Ontario
+ontario_provincegroup = {
+	3061 2645 2651 3219 3218 2644 3062 2643 2642 2647 3037 2646 2649 2672 2650
+}
+
+toronto_provincegroup = {
+	3061 2645 2651 3219 2642
+}
+
+northern_ontario_provincegroup = {
+	2647 3037 2646 2649 3062 2672 2650
+}
+
+# Quebec
+qubec_provincegroup = {
+	3030 3031 3059 2003 2004 3032 2006 2005 2657 2008 2007 3055 3056 3058 2652 3057 2665
+}
+
+ottawa_gatineau_provincegroup = {
+	2643 2007
+}
+
+# Saskatchewan
+saskatchewan_provincegroup = {
+	3007 2622 2623 3054 3053 2624 2625
+}
+
+buffalo_provincegroup = {
+	3007 2622 2623 3054 3053 2624 2625 3043 2631 3044 2633 3212
+}
+
+# Northwest Territories
+northwest_territories_provincegroup = {
+	3046 2619
+}
+
+# Yukon
+yukon_provincegroup = {
+	2618 3052
+}
+
+## Mexico Province Groups
+aguascalientes_provincegroup = {
+	889
+}
+
+# baja_california_north_provincegroup = {
+	# 3047 933 935 934
+# }
+
+# baja_california_sur_provincegroup = {
+	# 3048 931 932
+# }
+
+baja_california_provincegroup = {
+	3047 933 935 934 3048 931 932
+}
+
+# campeche_provincegroup = {
+	# 3222 848 3221 849
+# }
+
+chiapas_provincegroup = {
+	850 851
+}
+
+dfm_provincegroup = {
+	871 
+}
+
+mexico_city_provincegroup = {
+	871 870 872
+}
+
+# chihuahua_provincegroup = {
+	# 922 923 924 925 926
+# }
+
+coahuila_provincegroup = {
+	911 912 913 914
+}
+
+# durango_provincegroup = {
+	# 915 916 917 918
+# }
+
+# guanajuanto_provincegroup = {
+	# 880 881 882
+# }
+
+# guerrero_provincegroup = {
+	# 857 858 859
+# }
+
+hidalgo_provincegroup = {
+	864 865
+}
+
+queretaro_provincegroup = {
+	879 878
+}
+
+jalisco_provincegroup = {
+	883 884 886 887 888 885
+}
+
+state_of_mexico_provincegroup = {
+	872 873
+}
+
+morelos_provincegroup = {
+	870
+}
+
+michoacan_provincegroup = {
+	874 875 876
+}
+
+colima_provincegroup = {
+	877
+}
+
+nayarit_provincegroup = {
+	900 901 902
+}
+
+# nuevo_leon_provincegroup = {
+	# 907 908 909 910
+# }
+
+puebla_provincegroup = {
+	866 867 868
+}
+
+tlaxcala_provincegroup = {
+	869
+}
+
+# san_luis_potosi_provincegroup = {
+	# 890 891 892 893 894
+# }
+
+# sinaloa_provincegroup = {
+	# 919 920 921
+# }
+
+# sonora_provincegroup = {
+	# 927 929 930 928
+# }
+
+# tamaulipas_provincegroup = {
+	# 903 904 905 906
+# }
+
+# veracruz_provincegroup = {
+	# 860 861 862 863
+# }
+
+# yucatan_state_provincegroup = {
+	# 3225 844 845
+# }
+
+# quintana_roo_provincegroup = {
+	# 847 3223 846 3224
+# }
+
+zacatecas_provincegroup = {
+	895 897 898 899
+}
+
+# tabasco_provincegroup = {
+	# 853 852 4606
+# }
+
+northern_mexico_provincegroup = {
+	927 929 930 928 907 908 909 910 922 923 924 925 926 911 912 913 914 903 904 905 906 3047 933 935 934 3048 931 932 919 920 921 915 916 917 918
+}
+
+republic_of_sonora_provincegroup = {
+	3047 933 935 934 3048 931 932 927 929 930 928 919 920 921
+}
+
+republic_of_rio_grande_provincegroup = {
+	911 912 913 914 896 907 908 909 910 903 904 905 906 3296 2486 3295
+}
+
+## Australian Province Groups
+# New South Wales
+new_south_wales_provincegroup = {
+	2011 2014 3164 3165 3166 2015 2016 3171 3169 3170 3168 2012 2013 3167
+}
+
+# Victoria
+victoria_provincegroup = {
+	2020 2018 2019 3193 3194 3195 3196 3197
+}
+
+princeland_provincegroup = {
+	1088 3187 3194 3193 2019
+}
+
+# Queensland
+queensland_provincegroup = {
+	3183 3184 3185 1791 3182 3181 3179 2010 3177 3180 3176 1790 3175 3178
+}
+
+north_queensland_provincegroup = {
+	1791 3182 3181 3183 3184 3185 2009
+}
+
+# torres_strait_provincegroup = {
+	#### #####
+# }
+
+# South Australia
+south_australia_provincegroup = {
+	1088 1089 3188 3189 3187 3186 1091 3191 3190 1090
+}
+
+# Western Australia
+western_australia_provincegroup = {
+	3206 1086 3207 1087 3205 3202 3201 1085 3203 3200 3199 3198 3204 1084
+}
+
+# Australian Capital Territory
+australian_capital_territory_provincegroup = {
+	2017
+}
+
+jervis_bay_provincegroup = {
+	4648
+}
+
+act_jbt_provincegroup = {
+	2017 4648
+}
+
+# Tasmania
+# tasmania_provincegroup = {
+	# 2021 2022 3192 3317 3316
+# }
+
+tasmania_islands_provincegroup = {
+	3317 3316
+}
+
+tasmania_proper_provincegroup = {
+	2022 3192 2021
+}
+
+aus_indian_ocean_islands_provincegroup = {
+	1999 1998
+}
+
+# Northern Territory
+northern_territory_provincegroup = {
+	3173 1092 1093 3172 3174 1094
+}
+
+central_australia_provincegroup = {
+	1094 3174
+}
+
+## New Zealand Province Groups
+south_island_provincegroup = {
+	4639 1246 4650 1109 4649 2738 4647 4644
+}
+
+north_island_provincegroup = {
+	4643 2737 1107 4642 4637 1108 4641 2739 4640 1106
+}
+
+nz_islands_provincegroup = {
+	4637 4638 4639
+}
+
+norfolk_island_provincegroup = {
+	4637
+}
