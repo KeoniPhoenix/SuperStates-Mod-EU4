@@ -1,0 +1,194 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+doctrine_the_ban =
+{
+	# (Diplomatic - Stability)
+	global_unrest = -2
+	tolerance_heretic = 2
+	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+			personality = ai_militarist
+			ruler_has_personality = conqueror_personality
+			}
+		}
+		modifier = {
+		factor = 2
+			OR = {
+			ruler_has_personality = lawgiver_personality
+			ruler_has_personality = benevolent_personality
+			ruler_has_personality = righteous_personality
+			}
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+		modifier = {
+			factor = 0.25
+			OR = {
+			ruler_has_personality = cruel_personality
+			ruler_has_personality = malevolent_personality
+			}
+		}	
+	}
+}
+
+doctrine_the_sword = 
+{
+	#(Diplomatic)
+	diplomatic_reputation = 2
+	improve_relation_modifier = 0.30
+	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+			ruler_has_personality = silver_tongue_personality
+			ruler_has_personality = charismatic_negotiator_personality
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+			personality = ai_militarist
+			ruler_has_personality = conqueror_personality
+			}
+		}	
+		modifier = {
+			factor = 0.25
+			ruler_has_personality = babbling_buffoon_personality
+			ruler_has_personality = naive_enthusiast_personality
+		}
+	}	
+}
+
+doctrine_breaking_of_bread =
+{
+	#(Economic - Growth)
+	development_cost = -0.10
+	build_cost = -0.15
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+			ruler_has_personality = industrious_personality
+			ruler_has_personality = architectural_visionary_personality
+			}
+		}				
+	}	
+}
+
+doctrine_separation_from_evil = 
+{
+	#(Economic - Savings)
+	yearly_corruption = -0.10
+	stability_cost_modifier = -0.10
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			ruler_has_personality = well_advised_personality
+			ruler_has_personality = incorruptible_personality
+		}	
+		modifier = {
+			factor = 2
+			ruler_has_personality = entrepreneur_personality
+		}	
+	}	
+}
+
+doctrine_pastors_in_the_church = 
+{ 
+	#(Religious - Conversion) 
+	missionaries = 1
+	global_missionary_strength = 0.02
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+			ruler_has_personality = zealot_personality
+			ruler_has_personality = pious_personality
+			}
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+			ruler_has_personality = tolerant_personality
+		}		
+	}	
+}
+
+doctrine_baptism =
+{
+	# (Military - Defensive)
+	defensiveness = 0.20
+	global_manpower_modifier = 0.20
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			ruler_has_personality = careful_personality
+		}	
+		modifier = {
+			factor = 0
+			ruler_has_personality = conqueror_personality
+		}		
+	}	
+}
+
+doctrine_the_oath =
+{
+	# Administrative
+	idea_cost = -0.05
+	legitimacy = 1
+	republican_tradition = 0.33
+	devotion = 1
+	
+	allow = { religion = anabaptist }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			ruler_has_personality = free_thinker_personality
+		}	
+		modifier = {
+			factor = 0
+			ruler_has_personality = indulgent_personality
+		}		
+	}	
+}
+
