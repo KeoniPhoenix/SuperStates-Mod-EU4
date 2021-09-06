@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = slave_state_reform
+technology_group = north_american
+primary_culture = us_transylvanian
+add_accepted_culture = kentuckian
+religion = s_protestant
+capital = 2517 # Bowling Green
+
+1531.1.1 = {
+	religion = s_baptist
+}

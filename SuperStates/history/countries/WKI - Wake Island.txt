@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+religion = s_protestant
+primary_culture = wake_islander
+capital = 1994  # Wake Island
+
+1528.1.1 = {
+    religion = protestant
+}

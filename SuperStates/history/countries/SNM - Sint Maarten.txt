@@ -1,0 +1,11 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = maartener
+religion = s_catholic
+capital = 3051
+
+1528.1.1 = {
+    religion = protestant
+}

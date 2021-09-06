@@ -1,0 +1,11 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = north_american
+primary_culture = tobagonian
+add_accepted_culture = trinidadian
+religion = s_protestant
+capital = 3382
+
+1528.1.1 = {
+    religion = protestant
+}

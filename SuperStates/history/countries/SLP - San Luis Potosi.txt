@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = san_luis_potosian
+capital = 894	# San Luis Potosí
+historical_rival = QRT
+
+
+1441.9.26 = {
+	monarch = {
+		name = "Carlos Díez"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

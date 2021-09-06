@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_catholic
+#primary_culture = saguenay
+primary_culture = quebecois
+capital = 3021	# Saguenay
+
+1528.1.1 = {
+    religion = catholic
+}

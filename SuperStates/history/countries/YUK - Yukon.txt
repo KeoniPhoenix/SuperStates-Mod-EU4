@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = yukoner
+capital = 2618	# Whitehorse
+
+1442.11.20 = {
+	monarch = {
+		name = "Alexander Rutherford"
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+	religion = anglican
+}

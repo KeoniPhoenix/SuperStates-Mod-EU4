@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = west_virginian
+religion = s_protestant
+capital = 2539 # Charleston
+
+1441.1.3 = {
+	monarch = {
+		name = "Arthur Boreman"
+		adm = 5
+		dip = 5
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}

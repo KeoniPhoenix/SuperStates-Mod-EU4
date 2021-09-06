@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = yooper
+religion = s_catholic
+capital = 2577 # Marquette
+
+1528.1.1 = {
+    religion = catholic
+}

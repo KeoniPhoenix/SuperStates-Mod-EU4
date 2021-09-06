@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = tasmanian
+capital = 2021	# Hobart
+
+1444.11.1 = {
+	monarch = {
+		name = "William Champ"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

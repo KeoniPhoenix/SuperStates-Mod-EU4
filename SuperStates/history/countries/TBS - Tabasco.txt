@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = tabascan
+capital = 853	# Centro
+
+1438.12.31 = {
+	monarch = {
+		name = "Luis Felipe"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

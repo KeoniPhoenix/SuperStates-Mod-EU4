@@ -1,0 +1,116 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = tongan
+capital = 1989 #Tonga
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1845.12.4 = {
+	monarch = {
+		name = "George I"
+		dynasty = "Tupou"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1874.6.18 = {
+	heir = {
+		name = "George"
+		monarch_name = "George II"
+		dynasty = "Tupou"
+		birth_Date = 1874.6.18
+		death_date = 1918.4.5
+		claim = 95
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+
+1893.2.18 = {
+	monarch = {
+		name = "George II"
+		dynasty = "Tupou"
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+
+1970.6.4 = {
+	monarch = {
+		name = "Taufa'ahau IV"
+		dynasty = "Tupou"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+1970.6.4 = {
+	heir = {
+		name = "George"
+		monarch_name = "George V"
+		dynasty = "Tupou"
+		birth_Date = 1948.5.4
+		death_date = 2012.3.18
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2006.9.11 = {
+	monarch = {
+		name = "George V"
+		dynasty = "Tupou"
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+2006.9.11 = {
+	heir = {
+		name = "Tupou"
+		monarch_name = "Tupou VI"
+		dynasty = "Tupou"
+		birth_Date = 1959.7.12
+		death_date = 3000.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+2012.3.18 = {
+	monarch = {
+		name = "Tupou VI"
+		dynasty = "Tupou"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+2012.3.18 = {
+	heir = {
+		name = "Tupouto'a"
+		monarch_name = "Tupouto'a I"
+		dynasty = "Tupou"
+		birth_Date = 1985.9.17
+		death_date = 3000.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}

@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = saskatchewanian
+capital = 2622	# Regina
+historical_friend = MTB
+
+1441.9.12 = {
+	monarch = {
+		name = "Thomas Walter Scott"
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+
+1528.1.1 = {
+	religion = protestant
+}

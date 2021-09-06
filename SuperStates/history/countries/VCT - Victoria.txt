@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_catholic
+primary_culture = victorian
+capital = 2018	# Melbourne
+
+1443.11.30 = {
+	monarch = {
+		name = "William Haines"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

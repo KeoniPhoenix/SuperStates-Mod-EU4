@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = western_pennsylvanian
+add_accepted_culture = west_virginian
+religion = s_protestant
+capital = 2539 # Charleston
+
+1531.1.1 = {
+	religion = s_methodist
+}

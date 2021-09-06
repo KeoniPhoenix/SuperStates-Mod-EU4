@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = slave_state_reform
+technology_group = north_american
+primary_culture = texan
+#add_accepted_culture = northern_texan
+#add_accepted_culture = eastern_texan
+add_accepted_culture = tejano
+#add_accepted_culture = high_plainer
+religion = s_protestant
+capital = 2478 # Austin
+
+1443.1.3 = {
+	monarch = {
+		name = "James Henderson"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}

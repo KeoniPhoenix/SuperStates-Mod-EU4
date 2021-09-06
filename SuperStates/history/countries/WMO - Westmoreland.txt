@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = connecticuter
+religion = s_catholic
+capital = 2586 # Scranton
+historical_friend = CUT

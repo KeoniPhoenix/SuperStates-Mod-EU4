@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = arizonan
+add_accepted_culture = new_mexican
+religion = s_protestant
+capital = 936  # Phoenix

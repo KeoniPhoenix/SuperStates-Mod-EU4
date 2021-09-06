@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = southern_californian
+religion = s_catholic
+capital = 944 # Los Angeles
+
+1528.1.1 = {
+    religion = catholic
+}

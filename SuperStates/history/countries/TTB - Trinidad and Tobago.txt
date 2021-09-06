@@ -1,0 +1,64 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = north_american
+primary_culture = trinidadian
+religion = s_protestant
+capital = 502
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1962.8.31 = {
+	monarch = {
+		name = "Eric Williams"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1976.8.1 = {
+	monarch = {
+		name = "Ellis Clarke"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1987.3.19 = {
+	monarch = {
+		name = "Noor Hassanali"
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}
+
+1997.3.19 = {
+	monarch = {
+		name = "Arthur Robinson"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2003.3.17 = {
+	monarch = {
+		name = "George Maxwell Richards"
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+2013.3.18 = {
+	monarch = {
+		name = "Anthony Cramona"
+		adm = 3
+		dip = 5
+		mil = 1
+	}
+}

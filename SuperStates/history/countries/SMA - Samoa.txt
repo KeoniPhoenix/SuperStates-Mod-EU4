@@ -1,0 +1,10 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = australian
+religion = s_protestant
+primary_culture = samoan_western
+capital = 1243 #Western Samoa
+
+1528.1.1 = {
+    religion = protestant
+}

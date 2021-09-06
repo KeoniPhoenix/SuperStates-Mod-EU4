@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = western_australian
+capital =  1084	# Perth
+
+1440.12.29 = {
+	monarch = {
+		name = "John Forrest"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

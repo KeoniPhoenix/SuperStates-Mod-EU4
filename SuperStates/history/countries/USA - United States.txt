@@ -1,0 +1,545 @@
+government = republic
+add_government_reform = federal_republic
+technology_group = north_american
+primary_culture = american
+add_accepted_culture = alabaman
+add_accepted_culture = alaskan
+add_accepted_culture = arizonan
+add_accepted_culture = arkansan
+add_accepted_culture = californian
+add_accepted_culture = coloradan
+add_accepted_culture = connecticuter
+add_accepted_culture = delawarean
+add_accepted_culture = districter
+add_accepted_culture = floridian
+add_accepted_culture = us_georgian
+add_accepted_culture = guamanian
+add_accepted_culture = hawaiian
+add_accepted_culture = idahoan
+add_accepted_culture = illinoisan
+add_accepted_culture = hoosier
+add_accepted_culture = iowan
+add_accepted_culture = kansan
+add_accepted_culture = kentuckian
+add_accepted_culture = louisianan
+add_accepted_culture = mainer
+add_accepted_culture = marylander
+add_accepted_culture = bay_stater
+add_accepted_culture = michigander
+add_accepted_culture = minnesotan
+add_accepted_culture = mississippian
+add_accepted_culture = missourian
+add_accepted_culture = montanan
+add_accepted_culture = nebraskan
+add_accepted_culture = nevadan
+add_accepted_culture = new_hampshirite
+add_accepted_culture = new_jerseyan
+add_accepted_culture = new_mexican
+add_accepted_culture = new_yorker
+add_accepted_culture = north_carolinian
+add_accepted_culture = north_dakotan
+add_accepted_culture = ohioan
+add_accepted_culture = oklahoman
+add_accepted_culture = oregonian
+add_accepted_culture = pennsylvanian
+add_accepted_culture = rhode_islander
+add_accepted_culture = south_carolinian
+add_accepted_culture = south_dakotan
+add_accepted_culture = tennessean
+add_accepted_culture = texan
+add_accepted_culture = utahn
+add_accepted_culture = vermonter
+add_accepted_culture = virginian
+add_accepted_culture = washingtonian
+add_accepted_culture = west_virginian
+add_accepted_culture = wisconsinite
+add_accepted_culture = wyomingite
+add_accepted_culture = baja_arizonan
+add_accepted_culture = samoan_american
+add_accepted_culture = northern_marianas_islander
+add_accepted_culture = lincolnite
+add_accepted_culture = mountaineer
+add_accepted_culture = western_new_yorker
+add_accepted_culture = puerto_rican
+add_accepted_culture = virgin_islander
+add_accepted_culture = cajun
+add_accepted_culture = jeffersonian
+add_accepted_culture = yooper
+add_accepted_culture = san_franciscan
+add_accepted_culture = southern_californian
+add_accepted_culture = northern_texan
+add_accepted_culture = tejano
+add_accepted_culture = eastern_texan
+add_accepted_culture = high_plainer
+add_accepted_culture = northern_virginian
+add_accepted_culture = torontoan
+religion = s_protestant
+capital = 2616 # Washington, D.C.
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1700.9.6  = {
+	monarch = {
+		name = "Continental Congress"
+		adm = 2	
+		dip = 4	
+		mil = 3
+	}
+}
+
+1789.4.30 = {
+	monarch = {
+		name = "George Washington"
+		adm = 5	
+		dip = 5	
+		mil = 6
+	}
+}
+
+1797.3.4  = {
+	monarch = {
+		name = "John Adams"
+		adm = 2	
+		dip = 4	
+		mil = 2
+	}
+}
+
+1801.3.4 = {
+	monarch = {
+		name = "Thomas Jefferson"
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}
+
+1809.3.4  = {
+	monarch = {
+		name = "James Madison"	
+		adm = 5	
+		dip = 5	
+		mil = 3
+	}
+}
+
+1817.3.4  = {
+	monarch = {
+		name = "James Monroe"
+		adm = 6	
+		dip = 5	
+		mil = 4
+	}
+}
+
+1825.3.4 = {
+	monarch = {
+		name = "John Quincy Adams"
+		birth_date = 1767.7.11
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1829.3.4 = {
+	monarch = {
+		name = "Andrew Jackson"
+		birth_date = 1767.3.15
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1837.3.4 = {
+	monarch = {
+		name = "Martin Van Buren"
+		birth_date = 1782.12.5
+		adm = 3
+		dip = 5
+		mil = 2
+	}
+}
+
+1841.3.4 = {
+	monarch = {
+		name = "William Henry Harrison"
+		birth_date = 1773.2.9
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1841.4.4 = {
+	monarch = {
+		name = "John Tyler"
+		birth_date = 1790.3.29
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1845.3.4 = {
+	monarch = {
+		name = "James Polk"
+		birth_date = 1795.11.2
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1849.3.4 = {
+	monarch = {
+		name = "Zachary Taylor"
+		birth_date = 1784.11.24
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1850.7.9 = {
+	monarch = {
+		name = "Millard Fillmore"
+		birth_date = 1800.1.7
+		adm = 2
+		dip = 3
+		mil = 5
+	}
+}
+
+1853.3.4 = {
+	monarch = {
+		name = "Franklin Pierce"
+		birth_date = 1804.11.23
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1857.3.4 = {
+	monarch = {
+		name = "James Buchanan"
+		birth_date = 1791.4.23
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1861.3.4 = {
+	monarch = {
+		name = "Abraham Lincoln"
+		birth_date = 1809.2.12
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}
+
+1865.4.15 = {
+	monarch = {
+		name = "Andrew Johnson"
+		birth_date = 1808.12.29
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1869.3.4 = {
+	monarch = {
+		name = "Ulysses Grant"
+		birth_date = 1822.4.27
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1877.3.4 = {
+	monarch = {
+		name = "Rutheford Hayes"
+		birth_date = 1822.10.4
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+
+1881.3.4 = {
+	monarch = {
+		name = "James Garfield"
+		birth_date = 1831.11.19
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1881.9.19 = {
+	monarch = {
+		name = "Chester Arthur"
+		birth_date = 1829.10.5
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1885.3.4 = {
+	monarch = {
+		name = "Grover Cleveland"
+		birth_date = 1837.3.18
+		adm = 2
+		dip = 5
+		mil = 2
+	}
+}
+
+1889.3.4 = {
+	monarch = {
+		name = "Benjamin Harrison"
+		birth_date = 1833.8.20
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1893.3.4 = {
+	monarch = {
+		name = "Grover Cleveland"
+		birth_date = 1837.3.18
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1897.3.4 = {
+	monarch = {
+		name = "William McKinley"
+		birth_date = 1843.1.29
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+
+1901.9.14 = {
+	monarch = {
+		name = "Theodore Roosevelt"
+		birth_date = 1858.10.27
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+
+1909.3.4 = {
+	monarch = {
+		name = "William Howard Taft"
+		birth_date = 1857.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+1913.3.4 = {
+	monarch = {
+		name = "Woodrow Wilson"
+		birth_date = 1856.12.28
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}
+
+1921.3.4 = {
+	monarch = {
+		name = "Warren Harding"
+		birth_date = 1865.11.2
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1923.8.2 = {
+	monarch = {
+		name = "Calvin Coolidge"
+		birth_date = 1872.7.4
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1929.3.4 = {
+	monarch = {
+		name = "Herbert Hoover"
+		birth_date = 1874.8.10
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1933.3.4 = {
+	monarch = {
+		name = "Franklin Roosevelt"
+		birth_date = 1882.1.30
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+}
+
+1945.4.12 = {
+	monarch = {
+		name = "Harry Truman"
+		birth_date = 1884.5.8
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1953.1.20 = {
+	monarch = {
+		name = "Dwight Eisenhower"
+		birth_date = 1890.10.14
+		adm = 4
+		dip = 3
+		mil = 5
+	}
+}
+
+1961.1.20 = {
+	monarch = {
+		name = "John Kennedy"
+		birth_date = 1917.5.29
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+1963.11.22 = {
+	monarch = {
+		name = "Lyndon Johnson"
+		birth_date = 1908.8.27
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1969.1.20 = {
+	monarch = {
+		name = "Richard Nixon"
+		birth_date = 1913.1.9
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1974.8.9 = {
+	monarch = {
+		name = "Gerald Ford"
+		birth_date = 1913.7.14
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1977.1.20 = {
+	monarch = {
+		name = "Jimmy Carter"
+		birth_date = 1924.10.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1981.1.20 = {
+	monarch = {
+		name = "Ronald Reagan"
+		birth_date = 1911.2.6
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+
+1989.1.20 = {
+	monarch = {
+		name = "George Bush"
+		birth_date = 1924.6.12
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1993.1.20 = {
+	monarch = {
+		name = "Bill Clinton"
+		birth_date = 1946.8.19
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+2001.1.20 = {
+	monarch = {
+		name = "George W. Bush"
+		birth_date = 1946.7.6
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+2009.1.20 = {
+	monarch = {
+		name = "Barack Obama"
+		birth_date = 1961.8.4
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+2017.1.20 = {
+	monarch = {
+		name = "Donald Trump"
+		birth_date = 1946.5.14
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+2021.1.20 = {
+	monarch = {
+		name = "Bernie Sanders"
+		birth_date = 1941.9.8
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

@@ -1,0 +1,150 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = oceanian
+primary_culture = solomon_islander
+religion = austral_protestant
+capital = 1238
+
+1978.7.7 = {
+	monarch = {
+		name = "Peter Kenilorea"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1981.8.31 = {
+	monarch = {
+		name = "Solomon Mamaloni"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+1984.11.19 = {
+	monarch = {
+		name = "Peter Kenilorea"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1986.12.1 = {
+	monarch = {
+		name = "Ezekiel Alebua"
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}
+
+1989.3.28 = {
+	monarch = {
+		name = "Solomon Mamaloni"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+1993.6.18 = {
+	monarch = {
+		name = "Francis Billy Hilly"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1994.11.7 = {
+	monarch = {
+		name = "Solomon Mamaloni"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+1997.8.27 = {
+	monarch = {
+		name = "Bartholomew Ulufa'alu"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+2000.6.30 = {
+	monarch = {
+		name = "Manasseh Sogavare"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+2001.12.17 = {
+	monarch = {
+		name = "Allan Kemakeza"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2006.4.20 = {
+	monarch = {
+		name = "Snyder Rini"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+2006.5.4 = {
+	monarch = {
+		name = "Manasseh Sogavare"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+2007.12.20 = {
+	monarch = {
+		name = "Derek Sikua"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+
+2010.8.25 = {
+	monarch = {
+		name = "Danny Philip"
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}
+
+2011.11.16 = {
+	monarch = {
+		name = "Gordon Darcy Lilo"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2014.12.9 = {
+	monarch = {
+		name = "Manasseh Sogavare"
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}

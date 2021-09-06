@@ -1,0 +1,46 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = north_american
+primary_culture = vincentian
+religion = s_protestant
+capital = 500
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1979.10.27 = {
+	monarch = {
+		name = "Milton Cato"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1984.7.30 = {
+	monarch = {
+		name = "James Fitz-Allen Mitchell"
+		adm = 2
+		dip = 6
+		mil = 2
+	}
+}
+
+2000.10.27 = {
+	monarch = {
+		name = "Arnhim Eustace"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+2001.3.29 = {
+	monarch = {
+		name = "Ralph Gonsalves"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

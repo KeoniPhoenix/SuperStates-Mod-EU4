@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+unit_type = chinese
+religion = confucianism
+add_harmonized_religion = sunni
+primary_culture = christmas_islander
+capital =  1998	# Flying Fish Cove
+
+1443.10.1 = {
+	monarch = {
+		name = "D. E. Nickels"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

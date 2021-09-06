@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = south_utahn
+religion = mormon
+capital = 953  # Provo
+historical_rival = UTA

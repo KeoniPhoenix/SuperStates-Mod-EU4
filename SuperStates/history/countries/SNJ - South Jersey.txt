@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = south_jerseyan
+religion = s_protestant
+capital = 2592 # Atlantic
+
+1528.1.1 = {
+    religion = s_methodist
+}

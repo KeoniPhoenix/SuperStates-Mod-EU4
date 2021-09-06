@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = sinaloan
+capital = 921	# Culiacán
+
+1443.1.1 = {
+	monarch = {
+		name = "Ramón Iturbe"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

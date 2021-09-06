@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = zacatecan
+capital = 899	# Zacatecas
+
+
+1442.9.12 = {
+	monarch = {
+		name = "Leobardo Ruiz"
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

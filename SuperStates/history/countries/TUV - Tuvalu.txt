@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = oceanian
+primary_culture = tuvaluan
+religion = austral_protestant
+capital = 1990 #Tuvalu

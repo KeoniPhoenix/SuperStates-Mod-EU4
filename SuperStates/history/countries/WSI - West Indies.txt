@@ -1,0 +1,10 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = north_american
+primary_culture = jamaican
+religion = s_catholic
+capital = 502 # Port of Spain
+
+1528.1.1 = {
+    religion = catholic
+}

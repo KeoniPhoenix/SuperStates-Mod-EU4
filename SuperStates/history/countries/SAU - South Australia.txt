@@ -1,0 +1,15 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = south_australian
+capital =  1088	# Adelaide
+
+1444.10.24 = {
+	monarch = {
+		name = "Boyle Finniss"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

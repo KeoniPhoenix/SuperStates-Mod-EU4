@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = west_floridian
+religion = s_protestant
+capital = 2543  # Pensacola
+
+1531.1.1 = {
+    religion = s_baptist
+}

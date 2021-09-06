@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = oceanian
+primary_culture = yapese
+religion = austral_catholic
+capital = 2726 #Colonia

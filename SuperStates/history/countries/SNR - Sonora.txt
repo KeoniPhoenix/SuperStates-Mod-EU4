@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = sonoran_culture
+capital = 930	# Hermosillo
+historical_friend = ARZ
+
+1441.9.13 = {
+	monarch = {
+		name = "Plutarco Elías"
+		adm = 5
+		dip = 4
+		mil = 4
+	}
+}

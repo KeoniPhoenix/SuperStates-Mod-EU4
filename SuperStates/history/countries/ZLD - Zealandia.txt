@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = constitutional_republic
+technology_group = australian
+religion = austral_protestant
+primary_culture = new_zealander
+capital = 1107 # Wellington

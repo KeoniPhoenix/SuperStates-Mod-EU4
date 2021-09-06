@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_protestant
+primary_culture = vancouverite
+add_accepted_culture = british_columbian
+capital = 2634	# Victoria
+
+1528.1.1 = {
+    religion = protestant
+}

@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = west_nebraskan
+religion = s_protestant
+capital = 1004 # Scotts Bluff
+
+1518.1.1 = {
+	religion = s_lutheran
+}

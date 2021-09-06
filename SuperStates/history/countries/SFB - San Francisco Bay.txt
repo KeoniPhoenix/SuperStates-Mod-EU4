@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = san_franciscan
+religion = s_catholic
+capital = 946  # San Francisco
+
+1528.1.1 = {
+    religion = catholic
+}

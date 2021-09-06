@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = slave_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = west_tennessean
+add_accepted_culture = tennessean
+religion = s_protestant
+capital = 2519 # Memphis
+
+1531.1.1 = {
+	religion = s_baptist
+}

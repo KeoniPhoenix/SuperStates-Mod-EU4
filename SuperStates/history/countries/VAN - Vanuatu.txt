@@ -1,0 +1,169 @@
+government = republic
+#set_legacy_government = constitutional_republic
+technology_group = australian
+primary_culture = ni-vanuatu
+religion = austral_catholic
+capital = 1239 #Vanuatu
+
+1980.7.30 = {
+	monarch = {
+		name = "Ati George Sokomanu"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1984.2.17 = {
+	monarch = {
+		name = "Frederick Karlomuana Timakata"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1984.3.8 = {
+	monarch = {
+		name = "Ati George Sokomanu"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1989.1.12 = {
+	monarch = {
+		name = "Onneyn Tahi"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1989.1.30 = {
+	monarch = {
+		name = "Frederick Karlomuana Timakata"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+
+1994.1.30 = {
+	monarch = {
+		name = "Alfred Maseng"
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+1994.3.2 = {
+	monarch = {
+		name = "Jean Marie Leye Lenelgau"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1999.3.2 = {
+	monarch = {
+		name = "Edward Natapei"
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+}
+
+1999.3.25 = {
+	monarch = {
+		name = "John Bani"
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+}
+
+2004.3.24 = {
+	monarch = {
+		name = "Roger Abiut"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2004.4.12 = {
+	monarch = {
+		name = "Alfred Maseng"
+		adm = 3
+		dip = 4
+		mil = 1
+	}
+}
+
+2004.5.11 = {
+	monarch = {
+		name = "Roger Abiut"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2004.7.28 = {
+	monarch = {
+		name = "Josias Moli"
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+}
+
+2004.8.16 = {
+	monarch = {
+		name = "Kalkot Mataskelekele"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+2009.8.16 = {
+	monarch = {
+		name = "Maxime Carlot Korman"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+2009.9.2 = {
+	monarch = {
+		name = "Iolu Abil"
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+2014.9.2 = {
+	monarch = {
+		name = "Philip Boedoro"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+2014.9.22 = {
+	monarch = {
+		name = "Baldwin Lonsdale"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

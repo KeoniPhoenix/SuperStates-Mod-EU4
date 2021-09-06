@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_catholic
+primary_culture = saint_pierrais
+add_accepted_culture = quebecois
+capital = 3036	# Saint-Pierre
+
+1528.1.1 = {
+    religion = catholic
+}
