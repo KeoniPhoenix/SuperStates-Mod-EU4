@@ -1,0 +1,42 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = north_american
+primary_culture = antiguan
+religion = s_protestant
+capital = 496
+
+1981.11.1 = {
+	monarch = {
+		name = "Vere Bird"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1994.3.9 = {
+	monarch = {
+		name = "Lester Bird"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+2004.3.24 = {
+	monarch = {
+		name = "Baldwin Spencer"
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+2014.6.13 = {
+	monarch = {
+		name = "Gaston Browne"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = illinoisan
+religion = s_protestant
+capital = 2563 # Peoria
+historical_rival = ILS
+
+1528.1.1 = {
+    religion = s_methodist
+}

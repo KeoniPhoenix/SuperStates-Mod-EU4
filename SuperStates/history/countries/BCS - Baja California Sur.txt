@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = south_baja_californian
+capital = 932	# La Paz
+
+1443.4.5 = {
+	monarch = {
+		name = "Félix Agramont"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

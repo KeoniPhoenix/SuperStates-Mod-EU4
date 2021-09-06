@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = chihuahuan
+capital = 926	# Chihuahua
+historical_rival = SNA
+
+
+1442.10.4 = {
+	monarch = {
+		name = "Rafael Pimentel"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

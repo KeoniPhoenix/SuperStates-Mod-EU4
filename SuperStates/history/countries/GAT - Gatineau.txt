@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 1
+technology_group = north_american
+religion = s_catholic
+primary_culture = quebecois
+capital = 2007	# Gatineau
+historical_rival = TTN
+historical_rival = OTW
+historical_rival = MTL
+
+1528.1.1 = {
+    religion = catholic
+}
+
+# 1441.7.15 = {
+	# monarch = {
+		# name = "John Egan"
+		# adm = 3
+		# dip = 3
+		# mil = 3
+	# }
+# }

@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = pure_westminster_reform
+government_rank = 2
+technology_group = north_american
+religion = s_protestant
+primary_culture = greenlandic
+capital = 1104 # Eiriksfjord
+
+1531.1.1 = {
+    religion = protestant
+}

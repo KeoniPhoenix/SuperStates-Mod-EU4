@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = montanan
+religion = s_protestant
+capital = 3119 #Wolf Point
+
+1518.1.1 = {
+	religion = s_lutheran
+}

@@ -1,0 +1,22 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = yucatanian
+add_accepted_culture = campechian
+add_accepted_culture = quintanaroan
+capital = 847	# Othon P Blanco
+#historical_friend = MAY
+
+# 1441.9.16 = {
+	# monarch = {
+		# name = "Pablo García"
+		# adm = 3
+		# dip = 3
+		# mil = 3
+	# }
+# }
+
+1528.1.1 = {
+    religion = catholic
+}

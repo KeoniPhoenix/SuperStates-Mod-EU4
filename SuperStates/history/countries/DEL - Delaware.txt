@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = delawarean
+add_accepted_culture = delmarvan
+religion = s_protestant
+capital = 2615 # Dover
+
+1441.1.3 = {
+	monarch = {
+		name = "John McKinly"
+		adm = 5
+		dip = 3
+		mil = 3
+	}
+}
+
+1531.1.1 = {
+	religion = s_methodist
+}

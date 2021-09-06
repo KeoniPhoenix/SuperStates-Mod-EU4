@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = aleutian_islander
+religion = orthodox
+capital = 974  # Dutch Harbor

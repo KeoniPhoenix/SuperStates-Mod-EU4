@@ -1,0 +1,140 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = australian
+religion = austral_protestant
+primary_culture = canberran
+capital = 2017 # Canberra
+
+1837.6.20 = {
+	monarch = {
+		name = "Victoria I"
+		dynasty = "von Hannover"
+		adm = 5
+		dip = 4
+		mil = 3
+		female = yes
+	}
+}
+
+1841.11.9 = {
+	heir = {
+		name = "Edward"
+		monarch_name = "Edward VII"
+		dynasty = "von Saxe-Coburg"
+		birth_date = 1841.11.9
+		death_date = 1910.5.6
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1901.1.22 = {
+	monarch = {
+		name = "Edward VII"
+		dynasty = "von Saxe-Coburg"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1901.1.22 = {
+	heir = {
+		name = "George"
+		monarch_name = "George V"
+		dynasty = "of Windsor"
+		birth_date = 1865.6.3
+		death_date = 1936.1.20
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1910.5.6 = {
+	monarch = {
+		name = "George V"
+		dynasty = "of Windsor"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+
+1910.5.6 = {
+	heir = {
+		name = "Edward"
+		monarch_name = "Edward VIII"
+		dynasty = "of Windsor"
+		birth_date = 1894.6.23
+		death_date = 1972.5.28
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+
+1936.1.20 = {
+	monarch = {
+		name = "Edward VIII"
+		dynasty = "of Windsor"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1936.12.11 = {
+	monarch = {
+		name = "George VI"
+		dynasty = "of Windsor"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1936.12.11 = {
+	heir = {
+		name = "Elizabeth"
+		monarch_name = "Elizabeth II"
+		dynasty = "of Windsor"
+		birth_date = 1926.4.21
+		death_date = 3000.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 1
+		female = yes
+	}
+}
+
+1952.2.6 = {
+	monarch = {
+		name = "Elizabeth II"
+		dynasty = "of Windsor"
+		adm = 5
+		dip = 4
+		mil = 1
+		female = yes
+	}
+}
+
+1952.2.6 = {
+	heir = {
+		name = "Charles"
+		monarch_name = "Charles III"
+		dynasty = "of Windsor"
+		birth_date = 1948.11.14
+		death_date = 3000.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}

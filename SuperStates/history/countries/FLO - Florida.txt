@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = slave_state_reform
+technology_group = north_american
+primary_culture = floridian
+add_accepted_culture = south_floridian
+add_accepted_culture = miamian
+religion = s_protestant
+capital = 2542  # Tallahassee
+
+1443.1.3 = {
+	monarch = {
+		name = "William Moseley"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}

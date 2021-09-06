@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = slave_state_reform
+technology_group = north_american
+primary_culture = us_georgian
+add_accepted_culture = south_georgian
+religion = s_protestant
+capital = 2510 # Atlanta
+historical_rival = ALM
+
+1443.1.3 = {
+	monarch = {
+		name = "William Ewen"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}

@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 3
+technology_group = north_american
+primary_culture = ohioan
+add_accepted_culture = michigander
+add_accepted_culture = wisconsinite
+religion = s_protestant
+capital = 2579	# Cleveland
+
+1528.1.1 = {
+    religion = s_methodist
+}

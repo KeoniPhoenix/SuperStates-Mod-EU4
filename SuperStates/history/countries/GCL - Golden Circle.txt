@@ -1,0 +1,13 @@
+government = republic
+add_government_reform = confederate_republic
+government_rank = 3
+technology_group = north_american
+religion = s_protestant
+primary_culture = floridian
+add_accepted_culture = texan
+add_accepted_culture = cuban
+capital = 484	# Havana
+
+1531.1.1 = {
+    religion = s_baptist
+}

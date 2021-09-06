@@ -1,0 +1,55 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+technology_group = north_american
+primary_culture = bahamian
+religion = s_protestant
+capital = 482
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1973.7.10 = {
+	monarch = {
+		name = "Lynden Pindling"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1992.8.21 = {
+	monarch = {
+		name = "Hubert Ingraham"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+2002.5.3 = {
+	monarch = {
+		name = "Perry Christie"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+2007.5.4 = {
+	monarch = {
+		name = "Hubert Ingraham"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+2012.5.8 = {
+	monarch = {
+		name = "Perry Christie"
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}

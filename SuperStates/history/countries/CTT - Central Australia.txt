@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+religion = austral_protestant
+primary_culture = northern_territorian
+capital = 1094 	# Alice Springs

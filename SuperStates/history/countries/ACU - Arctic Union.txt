@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudal_monarchy
+technology_group = north_american
+religion = s_protestant
+primary_culture = nunavummiut
+capital = 2620 # Iqaluit
+
+1528.1.1 = {
+    religion = s_methodist
+}

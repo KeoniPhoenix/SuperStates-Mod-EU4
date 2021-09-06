@@ -1,0 +1,12 @@
+government = republic
+add_government_reform = american_republic
+technology_group = north_american
+primary_culture = washingtonian
+add_accepted_culture = british_columbian
+add_accepted_culture = oregonian
+religion = s_protestant
+capital = 965 # Seattle
+
+1528.1.1 = {
+    religion = protestant
+}

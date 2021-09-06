@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = guanajuatoan
+capital = 882	# Guanajuato
+historical_friend = HHC
+
+1444.9.26 = {
+	monarch = {
+		name = "Fernando Dávila"
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+government_rank = 2
+technology_group = north_american
+primary_culture = aruban
+religion = s_catholic
+capital = 491	#Curacao

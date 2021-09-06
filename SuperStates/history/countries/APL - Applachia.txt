@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = federal_republic
+government_rank = 3
+technology_group = north_american
+religion = s_protestant
+primary_culture = western_pennsylvanian
+capital = 2589	# Allegheny
+
+# 1443.7.6 = {
+	# monarch = {
+		# name = "John Bower Lewis"
+		# adm = 3
+		# dip = 3
+		# mil = 4
+	# }
+# }
+
+1528.1.1 = {
+    religion = s_methodist
+}

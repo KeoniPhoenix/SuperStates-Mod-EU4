@@ -1,0 +1,10 @@
+government = theocracy
+add_government_reform = mormon_theodemocracy_reform
+technology_group = north_american
+primary_culture = utahn
+add_accepted_culture = idahoan
+add_accepted_culture = south_utahn
+add_accepted_culture = arizonan
+add_accepted_culture = nevadan
+religion = mormon
+capital = 952 #Salt Lake City

@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = bay_stater
+religion = s_catholic
+capital = 3325 # Middlesex
+
+1528.1.1 = {
+    religion = catholic
+}

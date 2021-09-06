@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = baja_arizonan
+religion = s_catholic
+capital = 937  # Tucson

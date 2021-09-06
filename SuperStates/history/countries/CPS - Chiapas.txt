@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = chiapan
+capital = 851	# Tuxtla Gutiérrez
+historical_rival = OAX
+
+1438.12.8 = {
+	monarch = {
+		name = "Manuel José"
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

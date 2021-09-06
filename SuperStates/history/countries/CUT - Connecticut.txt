@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = connecticuter
+religion = s_catholic
+capital = 2613 # Hartford
+
+1443.1.3 = {
+	monarch = {
+		name = "Jonathan Trumbull"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

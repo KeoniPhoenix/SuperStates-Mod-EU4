@@ -1,0 +1,26 @@
+government = republic
+add_government_reform = mexican_state_reform
+government_rank = 1
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = mexican_districter
+capital = 871	# Mexico City
+historical_friend = EMX
+historical_friend = HDL
+historical_friend = NLN
+historical_rival = CLM
+historical_rival = CPE
+historical_rival = MRL
+
+1438.12.5 = {
+	monarch = {
+		name = "Melchor Múzquiz"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}

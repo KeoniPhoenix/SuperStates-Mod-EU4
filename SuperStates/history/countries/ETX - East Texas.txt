@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+primary_culture = eastern_texan
+religion = s_protestant
+capital = 2487 # Houston
+
+1531.1.1 = {
+    religion = s_baptist
+}

@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = oceanian
+primary_culture = chuukese
+religion = austral_catholic
+capital = 2727	#Weno

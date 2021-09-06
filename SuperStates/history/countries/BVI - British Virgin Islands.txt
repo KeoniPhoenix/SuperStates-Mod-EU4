@@ -1,0 +1,11 @@
+government = monarchy
+add_government_reform = constitutional_monarchy
+government_rank = 1
+technology_group = north_american
+primary_culture = virgin_islander
+religion = s_catholic
+capital = 3049 # Tortola
+
+1528.1.1 = {
+    religion = catholic
+}

@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = confederate_republic
+technology_group = north_american
+primary_culture = south_carolinian
+religion = s_protestant
+capital = 2533  # Richmond
+
+1531.1.1 = {
+    religion = s_baptist
+}

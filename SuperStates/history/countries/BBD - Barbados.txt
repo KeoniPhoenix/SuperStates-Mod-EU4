@@ -1,0 +1,82 @@
+government = monarchy
+add_government_reform =  constitutional_monarchy
+technology_group = north_american
+primary_culture = barbadian
+religion = s_protestant
+capital = 501
+
+1528.1.1 = {
+    religion = protestant
+}
+
+1966.11.18 = {
+	monarch = {
+		name = "Errol Barrow"
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1976.9.8 = {
+	monarch = {
+		name = "John Adams"
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+}
+
+1985.3.11 = {
+	monarch = {
+		name = "Bernard St. John"
+		adm = 2
+		dip = 5
+		mil = 6
+	}
+}
+
+1986.5.29 = {
+	monarch = {
+		name = "Errol Barrow"
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}
+
+1987.6.1 = {
+	monarch = {
+		name = "Erskine Sandiford"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1994.9.7 = {
+	monarch = {
+		name = "Owen Arthur"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+2008.1.16 = {
+	monarch = {
+		name = "David Thompson"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+2010.10.23 = {
+	monarch = {
+		name = "Freundel Stuart"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

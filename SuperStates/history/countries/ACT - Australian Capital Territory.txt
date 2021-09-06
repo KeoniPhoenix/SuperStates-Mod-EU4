@@ -1,0 +1,17 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+religion = austral_protestant
+primary_culture = canberran
+capital =  2017	# Canberra
+historical_friend = JBT
+
+1443.5.11 = {
+	monarch = {
+		name = "Rosemary Follett"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

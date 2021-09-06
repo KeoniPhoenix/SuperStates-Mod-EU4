@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = pure_westminster_reform
+technology_group = north_american
+religion = s_catholic
+primary_culture = albertan
+add_accepted_culture = saskatchewanian
+capital = 2622	# Sherwood, Regina
+
+1528.1.1 = {
+    religion = catholic
+}

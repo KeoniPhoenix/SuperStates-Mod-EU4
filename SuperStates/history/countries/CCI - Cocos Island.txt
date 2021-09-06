@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+religion = sunni
+unit_type = chinese
+primary_culture = cocos_islander
+capital =  1999	# West Island
+religious_school = shafii_school
+
+1440.11.23 = {
+	monarch = {
+		name = "H.J. Hull"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

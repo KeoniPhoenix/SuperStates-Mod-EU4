@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = mexican_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = baja_californian
+capital = 935	# Mexicali
+
+1439.11.1 = {
+	monarch = {
+		name = "Luis Torres"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+1528.1.1 = {
+    religion = catholic
+}
