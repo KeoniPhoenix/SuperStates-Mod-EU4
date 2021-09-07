@@ -1,0 +1,127 @@
+#Country Name: New France
+
+graphical_culture = westerngfx
+
+color = { 30  84  117 }
+
+historical_idea_groups = {
+	offensive_ideas
+	naval_ideas
+	aristocracy_ideas
+	defensive_ideas
+	exploration_ideas
+	trade_ideas
+	innovativeness_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Adélard #0" = 5
+	"Antonio #0" = 5
+	"Arthur #0" = 5
+	"Bernard #0" = 5
+	"Charles #0" = 5
+	"Dalton #0" = 5
+	"Daniel #0" = 5
+	"David #0" = 5
+	"Edmund #0" = 5
+	"Edward #0" = 5
+	"Ernest #0" = 10
+	"Fèlix-Gabriel #0" = 5
+	"Frank #0" = 5
+	"Gédéon #0" = 5
+	"George #0" = 20
+	"Gordon #0" = 5
+	"Harry #0" = 5
+	"Henri-Gustave #0" = 5
+	"Honorè #0" = 5
+	"Jacques #0" = 5
+	"James #0" = 5
+	"Jean #0" = 5
+	"Jean-Jacques #0" = 5
+	"John #0" = 15
+	"Joseph-Adolphe #0" = 5
+	"Joseph-Alfred #0" = 5
+	"Kathleen #0" = -5
+	"Leslie #0" = 5
+	"Lomer #0" = 5
+	"Louis-Alexandre #0" = 5
+	"Louis-Olivier #0" = 5
+	"Lucien #0" = 5
+	"Maurice #0" = 5
+	"Michael #0" = 5
+	"Michell #0" = 5
+	"Oliver #0" = 5
+	"Paul #0" = 5
+	"Pauline #0" = -5
+	"Pierre #0" = 5
+	"Pierre-Marc #0" = 5
+	"René #0" = 5
+	"Robert #0" = 10
+	"Simon-Napoléon #0" = 5
+	"Thomas #0" = 5
+	"William #0" = 10
+}
+
+leader_names = {
+	Alexander
+	Barrette Bertrand Blake Bouchard Bourassa
+	Chapleau Charest Chauveau Conant Crowne
+	Davis "d'Aulnay" "de Belle-Isle" "de Biencourt" "de Bonaventure" "de Boucherville" "de Brouillan" "de Chambly" "de Grandfontaine" "de Joybert" "de Subercase" "de la Tour" "de Lotbinère" "de Meneval" Denys "de Razilly" "de Villebon" "de Villieu" Drew Drury Dugua Duplessis
+	Eves
+	Ferguson Flynn Frost
+	Godbout Gouin
+	Hardy Harris Hearst Henry Hepburn
+	Johnson
+	Kennedy
+	Landry Lesage Lévesque Leverett "Le Borgne" "La Tourasse"
+	Macdonald Marchand Marois McGuinty Mercier Miller Mousseau Mowat
+	Nixon
+	Ouimet
+	Parent Parizeau Perrot Peterson
+	Rae Rhoades Robarts Ross
+	Sauvé
+	Taillon Taschereau Temple
+	"Van Steenwyk"
+	Whitney Wynne	
+}
+
+ship_names = {
+	Abitibi Abitibi-Ouest Acton Antoine-Labelle Argenteuil Arthabaska Avignon
+	Beauce-Sartigan Beauharnois-Salaberry Bellechasse Bonaventure Brome-Missisquoi Bécancour
+	Caniapiscau Charlevoix Charlevoix-Est Coaticook
+	D'Autray Deux-Montagnes Drummond
+	"Eeyou Istchee"
+	Gatineau
+	Jamésie Joliette
+	Kamouraska Kativik
+	L'Assomption L'Islet L'Érable L'Île-d'Orléans "La Côte-de-Beaupré" "La Côte-de-Gaspé" "La Haute-Côte-Nord" "La Haute-Gaspésie" "La Haute-Yamaska" "La Jacques-Cartier" "La Matanie" "La Matapédia" "La Mitis" "La Mouvelle-Beauce" "La Rivière-du-Nord" "La Tuque" "La Vallée-de-l'Or" "La Vallée-de-la-Gatineau" "La Vallée-du-Richelieu" Lac-Saint-Jean-Est Laval "Le Domaine-du-Roy" "Le Fjord-du-Saguenay" "Le Golfe-du-Saint-Laurent" "Le Granit" "Le Haut-Richelieu" "Le Haut-Saint-François" "Le Haut-Saint-Laurent" "Le Rocher-Percé" "Le Val-Saint-François" "Les Appalaches" "Les Basques" "Les Chenaux" "Les Collines-de-l'Outaouais" "Les Etchemins" "Les Îles-de-la-Madeleine" "Les Jardins-de-Napierville" "Les Laurentides" "Les Maskoutains" "Les Moulins" "Les Pays-d'en-Haut" "Les Sources" Longueuil Lotbinière Lévis
+	Manicouagan Marguerite-D'Youville Maria-Chapdelaine Maskinongé Metawinie Memphrémagog Minganie Mirabel Montcalm Montmagny Montréal Mékinac
+	Nicolet-Yamaska
+	Papineau "Pierre-Du Saurel" Pontiac Portneuf
+	Québec
+	Rimouski-Neigette Rivière-du-Loup Robert-Cliche Roussillon Rouville Rouyn-Noranda
+	Saguenay Sept-Rivères Shawinigan Sherbrooke
+	"Thérèse-De Blainville" Témiscamingue Témiscouata Trois-Rivières
+	Vaudreuil-Soulanges
+}

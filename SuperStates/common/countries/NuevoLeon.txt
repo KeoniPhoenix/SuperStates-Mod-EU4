@@ -1,0 +1,145 @@
+#Country Name: Nuevo León
+
+graphical_culture = westerngfx
+
+color = { 255 190 130 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Aarón #0" = 5
+	"Agapito #0" = 5
+	"Agustín #0" = 5
+	"Alfonso #0" = 5
+	"Alfredo #0" = 5
+	"Alonso #0" = 5
+	"Anacleto #0" = 5
+	"Anastacio #0" = 5
+	"Ángel #0" = 5
+	"Antonio #0" = 15
+	"Arturo #0" = 5
+	"Benjamin #0" = 5
+	"Bernardino #0" = 5
+	"Bernardo #0" = 5
+	"Bernardon #0" = 5
+	"Blas #0" = 5
+	"Bonifacio #0" = 5
+	"Canuto #0" = 5
+	"Carlos #0" = 5
+	"Cipriano #0" = 5
+	"Diego #0" = 15
+	"Domingo #0" = 10
+	"Eduardo #0" = 10
+	"Felipe #0" = 5
+	"Fernando #0" = 10
+	"Francisco #0" = 20
+	"Froilán #0" = 5
+	"Genaro #0" = 10
+	"Generoso #0" = 5
+	"Gregorin #0" = 5
+	"Gregorio #0" = 5
+	"Idefonso #0" = 5
+	"Ignacio #0" = 10
+	"Jerónimo #0" = 15
+	"Jesús #0" = 5
+	"Joaquín #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 20
+	"Juan #0" = 20
+	"Lázaro #0" = 15
+	"Leobardo #0" = 5
+	"León #0" = 5
+	"Luis #0" = 15
+	"Manuel #0" = 20
+	"Mariano #0" = 10
+	"Martín #0" = 5
+	"Melchor #0" = 5
+	"Narciso #0" = 5
+	"Nicolás #0" = 5
+	"Pablo #0" = 10
+	"Pedro #0" = 20
+	"Plutarco #0" = 5
+	"Rafael #0" = 5
+	"Ramón #0" = 5
+	"Raúl #0" = 10
+	"Rodrigo #0" = 5
+	"Salomé #0" = 5
+	"Santiago #0" = 5
+	"Simón #0" = 10
+	"Sócrates #0" = 5
+	"Vicente #0" = 10
+	"Viviano #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Ángeles Antonio
+	Báez Bahamonde Benítez Botello Bruno Bueno
+	Canales Cárdenas Cardona Carvajal Cepeda Chapa Clariond Cuervo
+	Dávila "de Alza" "de Ampudia" "de Arriaga" "de Azcárraga" "de Barbadillo" "de Echandía" "de Echegaray" "de Echevérez" "de Echeverría" "de Herrera" "de la Calancha" "de la Garza" "de la Paz" "de León" "de Mier" "de Montemayor" "de Prudena" "de Salinas" "de Santa María" "de Sarabia" "de Velasco" "de Videgaray" "de Villarreal" "de Zavala" Díaz
+	Eleuterio Elías Elizondo Escobedo
+	Farías Fernández Flores Francisco Fuero
+	García Garza Garza Gómez González Guerrero
+	José Juan Junco
+	Leal Livas
+	Madero María Martínez Medina Mier Monroy Morales Morones Morret	Muñoz
+	Nepomuceno
+	Pérez
+	Quiroga
+	Rangel Reyes Rizzo Rodríguez
+	Sáenz Salinas Santiago Santos Siller Silvestre
+	Treviño Treviño Treviño
+	Ussel
+	Vázquez Viaurri Vidal Villamil Villareal Villarreal Vivanco
+	Zorrilla
+}
+
+ship_names = {
+	Abasolo Agualeguas Allende Anáhuac Apodaca Aramberri
+	Bustamante
+	Cadereyta Cerralvo China Ciénega "Doctor Arroyo" "Doctor Coss" "Doctor González"
+	"El Carmen"
+	Flores
+	Galeana García Garza  "General Bravo" "General Escobedo" "General Terán" "General Treviño" "General Zaragoza" "General Zuazua" Guadalupe
+	Hidalgo Higueras Hualahuises
+	Iturbide
+	Jiménez Juárez
+	Lampazos Linares "Los Aldama" "Los Herrera" "Los Ramones"
+	Marín Melchor Mier Mina Montemorelos Monterrey
+	Naranjo Noriega
+	Ocampo
+	Parás Pesquería
+	Rayones
+	Sabinas Salinas "San Nicolás" "San Pedro" "Santa Catarina" Santiago
+	Vallecillo Victoria Villadama
+}

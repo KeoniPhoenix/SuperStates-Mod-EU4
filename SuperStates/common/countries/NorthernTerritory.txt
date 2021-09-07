@@ -1,0 +1,112 @@
+#Country Name: Northern Territory
+
+graphical_culture = westerngfx
+
+color = { 204 119 34 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	naval_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Adam #0" = 5
+	"Arthur #0" = 5
+	"Austin #0" = 5
+	"Charles #0" = 5
+	"Clare #0" = -5
+	"Denis #0" = 5
+	"Eric #0" = 5
+	"Frank #0" = 5
+	"Frederic #0" = 5
+	"Frederick #0" = 5
+	"Goff #0" = 1
+	"Henry #0" = 5
+	"Ian #0" = 5
+	"James #0" = 10
+	"Jock #0" = 1
+	"John #0" = 20
+	"Marshall #0" = 5
+	"Neil #0" = 5
+	"Paul #0" = 10
+	"Robert #0" = 5
+	"Roger #0" = 10
+	"Sally #0" = -5
+	"Shane #0" = 5
+	"Stephen #0" = 5
+	"Terrance #0" = 5
+	"Theodore #0" = 5
+	"Thomas #0" = 5
+	"Victor #0" = 5
+}
+
+leader_names = {
+	Abbott Anictomatis Archer Asche
+	Burke
+	Carey Carrington Cawood Chaney Conn
+	Dean Driver
+	Egan England Everingham
+	Giles Gilruth
+	Hatton Henderson
+	Johnston
+	Letts
+	Martin Mills Muirhead
+	Nelson Nott
+	Pauling Perron
+	Stone
+	Thomas Tuxworth
+	Urquhart
+	Weddell Wise
+}
+
+ship_names = {
+	"Alice Springs" Alyangula
+	Barkly Belyuen
+	Coomalie
+	Darwin
+	"East Arnhem"
+	Katherine
+	Litchfield
+	MacDonnell
+	Nhulunbuy
+	Palmerston
+	"Roper Gulf"
+	"Tiwi Islands"
+	"Victoria Daly"
+	Wagait "West Arnhem"
+	Yulara
+}
+
+army_names = {
+	"Northern Territory Army"
+	"Army for Darwin Defense"
+}
+
+fleet_names = {
+	"Darwin Maritime Force"
+}

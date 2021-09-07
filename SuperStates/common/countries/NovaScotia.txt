@@ -1,0 +1,104 @@
+#Country Name: Nova Scotia
+
+graphical_culture = westerngfx
+
+color = { 197  99  255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	exploration_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Alexander #0" = 5
+	"Angus #0" = 0
+	"Charles #0" = 5
+	"Darrell #0" = 5
+	"Donald #0" = 5
+	"Edgar #0" = 5
+	"Ernest #0" = 5
+	"George #0" = 10
+	"Gerald #0" = 5
+	"Gordon #0" = 5
+	"Harold #0" = 5
+	"Henry #0" = 5
+	"Hiram #0" = 0
+	"James #0" = 10
+	"John #0" = 20
+	"Joseph #0" = 5
+	"Philip #0" = 5
+	"Robert #0" = 5
+	"Rodney #0" = 1
+	"Roger #0" = 1
+	"Russell #0" = 5
+	"Simon #0" = 5
+	"Stephen #0" = 5
+	"William #0" = 20
+}
+
+leader_names = {
+	Annand Armstrong
+	Bacon Blanchard Buchanan
+	Cameron Connolly
+	Dexter
+	Fielding
+	Hamm Harrington Hicks Hill Holmes Howe
+	Johnston
+	Macdonald MacLellan MacMillan McNeil Murray
+	Pipes
+	Regan Rhodes
+	Savage Smith Stanfield
+	Thompson Tupper
+	Uniacke
+	Young
+}
+
+ship_names = {
+	Amherst Annapolis "Annapolis Royal" Antigonish Argyle
+	Barrington Berwick Bridgetown Bridgewater
+	"Cape Breton" Chester Clare Colchester "Clark's Harbour" Cumberland
+	Digby
+	"East Hants"
+	Guysborough
+	Halifax Hants Hantsport
+	Inverness
+	Kentville Kings
+	Lockeport Lunenburg
+	"Mahone Bay" Middleton Mulgrave
+	"New Glasgow"
+	Oxford
+	Parrsboro Pictou "Port Hawkesbury"
+	Queens
+	Richmond
+	"St. Mary's" Shelburne Springhill Stellarton Stewiacke
+	Trenton Truro
+	Victoria
+	"West Hants" Westville Windsor Wolfville
+	Yarmouth
+}

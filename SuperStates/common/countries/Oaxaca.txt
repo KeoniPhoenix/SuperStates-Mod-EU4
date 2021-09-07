@@ -1,0 +1,96 @@
+#Country Name: Oaxaca
+
+graphical_culture = westerngfx
+
+color = { 195 50 0 }
+
+historical_idea_groups = {
+	defensive_ideas
+	expansion_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Alfonso #0" = 5
+	"Anastasio #0" = 5
+	"Constantino #0" = 5
+	"Diódoro #0" = 5
+	"Edmundo #0" = 5
+	"Eduardo #0" = 5
+	"Eliseo #0" = 5
+	"Fernando #0" = 5
+	"Flavio #0" = 5
+	"Francisco #0" = 5
+	"Gabino #0" = 5
+	"Genaro #0" = 5
+	"Heladio #0" = 5
+	"Jesús #0" = 5
+	"José #0" = 10
+	"Juan #0" = 5
+	"Manuel #0" = 20
+	"Miguel #0" = 5
+	"Onofre #0" = 5
+	"Pedro #0" = 5
+	"Rodolfo #0" = 5
+	"Ulises #0" = 5
+	"Vicente #0" = 5
+	"Victor #0" = 5	
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Bravo Brena
+	Cabrera Carrasco Chapital Cué
+	García Gómez González
+	Jiménez
+	López
+	Manjardín Martínez Mayoral Murat
+	Pacheco Pérez
+	Ramírez Ruiz
+	Sánchez
+	Vasconcelos Vázquez
+	Zárate
+}
+
+ship_names = {
+	Cañada Centro Choapan Coixtlahuaca Costa Cuicatlán
+	Ejutla Etla
+	Huajuapan
+	Istmo Ixtlán
+	Jamiltepec Juchitán Juquila Juxtlahuaca
+	Miahuatlán Mixe Mixteca
+	Nochixtlán
+	Ocotlán
+	Papaloapan Pochutla Putla
+	"Sierra Norte" "Sierra Sur" Silacayoapam Sola
+	Tehuantepec Teposcolula Tlacolula Tlaxiaco Tuxtepec
+	"Valles Centrales" Vega "Villa Alta"
+	Yautepec
+	Zaachila Zimatlán
+}

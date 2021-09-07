@@ -1,0 +1,114 @@
+#Country Name: Puebla
+
+graphical_culture = westerngfx
+
+color = { 90 255 250 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Aarón #0" = 5
+	"Alberto #0" = 5
+	"Alfonso #0" = 5
+	"Antonio #0" = 5
+	"Arturo #0" = 10
+	"Carlos #0" = 5
+	"Claudio #0" = 10
+	"Donato #0" = 5
+	"Enrique #0" = 5
+	"Fausto #0" = 5
+	"Francisco #0" = 5
+	"Froylán #0" = 5
+	"Gonzalo #0" = 10
+	"Guillermo #0" = 10
+	"Gustavo #0" = 5
+	"José #0" = 10
+	"Juan #0" = 5
+	"Leónides #0" = 5
+	"Luis #0" = 5
+	"Manuel #0" = 10
+	"Mariano #0" = 5
+	"Mario #0" = 10
+	"Maximino #0" = 5
+	"Melquiades #0" = 5
+	"Rafael #0" = 20
+	"Roberto #0" = 5
+	"Toxqui #0" = 5
+	"Wenseslao #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Andrew Ariza Ávila
+	Bartlett Bautista Betancourt Bravo
+	Cabrera Crisóstomo
+	Espinoza
+	Fernández
+	Guerrero
+	Jiménez
+	Labastida
+	Macip Manjares Marín Mellado Merino Mijares Montes Morales Moreno
+	Nava
+	Ortega Osorio
+	Piña
+	Rojas
+	Sánchez
+	Tirado
+	Valle
+}
+
+ship_names = {
+	Abino Acajete Acateno Acatlán Acatzingo Acteopan Ahuacatlán Ahuatempan Ahuazotepec Ahuehuetitla Ajalpan Aljojuca Altepexi Amixtlan Amozoc Andrade Ángeles Anicano Aquixtla Arenas Atempan Atenco Atexcal Atlequizayan Atlixco Atoyatempan Atzala Atzitzihuacán Atzitzintla Atzompa Ávila Axutla Ayotoxco
+	Benito Bonilla Bravo "Buenos Aires" 
+	Calpan Caltepec Camocuautla Cañada Carranza Castillo Caxhuacán Chalchicomula Chapulco Chiapa Chiautla Chiautzingo Chico Chiconcuautla Chietla Chigmecatitlán Chignahuapan Chignautla Chila Chilac Chilchotla Chinantla Cholula Coatepec Coatzingo Cohetzala Cohuecán Coronango Coxcatlán Coyomeapan Coyotepec Cuapiaxtla Cuauhtémoc Cuautempan Cuautinchan Cuautlancingo Cuayuca Cuetzalán Cuyoaco
+	Domingo
+	Eloxochitlán Epatlán Esperanza
+	Francisco
+	Galeana Galindo "General Felipe" Grajales Grande Guadalupe Guerrero
+	Hermengildo Hidalgo Honey Huaquechula Huatlatlauca Huauchinango Huehuetla Huehuetlán Huejotzingo Hueyotlipán Hueytamalco Hueytlalpan Huitzilan Huitziltepec Huixcolotla
+	Ixcamilpa Ixcaquixtla Ixitlán Ixtacamaxtitlán Ixtepec Izúcar
+	Jalpan Jolalpan Jopala Juan
+	"La Magdalena" Lafragua Lara Libres López "Los Ranchos" "Los Reyes"
+	Madero Matamoros Mazapiltepec Mena Méndez Mesa Miahuatlán Mixtla Molcaxac Morelos
+	Naupan Nauzontla Nealticán Nicolás Nopalucan
+	Ocampo Ocotepec Ocoyucan Olintla Oriental Osorio
+	Pahuatlán Palmar Pantepec Petlalcingo Piaxtla Progeso Puebla
+	Quecholac Quimixtlán
+	Rafael Rodríguez
+	Sal "San Andrés" "San Antonio" "San Diego" "San Felipe" "San Gabriel" "San Gregorio" "San Jerónimo" "San José" "San Juan" "San Martín" "San Matías" "San Miguel" "San Nicolás" "San Pablo" "San Pedro" "San Salvador" "San Sebastián" "Santa Catarina" "Santa Inés" "Santa Isabel" Santiago "Santo Tomás" Santos Seco Serdán Sesma Soltepec Suárez
+	Tecali Tecamachalco Tecomatlán Tecuanipan Tehuacán Tehuitzingo Telteles Tenamulco Teopantlán Teotlalcingo Teotlalco Tepanco Tepango Tepatlán Tepatlaxo Tepeaca Tepemaxalco Tepeojuma Tepexco Tepexi Tepeyahualco Tepezintla Tetela Texmelucan Teziutlán Tianguismanalco Tiaola Tlacotepec Tlacuilotepec Tlahuapan Tlalancaleca Tlaltenango Tlanepantla Tlapacoya Tlapanala Tlatauquitepec Tlatempan Tlatlauquitepec Tlaxco Tochimilco Tochimiltzingo Tochtepec Todos Totoltepec Tzicatlacoyan
+	Venustiano Verde Vicente Victoria
+	Xayacatlán Xicotepec Xicotlán Xiutetelco Xochiapulco Xochitepec Xochitlán Xonotla Xoxtla
+	Yaonahuac Yehualtepec Yeloixtlahuacan
+	Zacapala Zacapoaxtla Zacatlán Zapotitlán Zaragoza Zautla Zertuche Zihuateutla Zinacatepec Zongozotla Zoquiapan Zoquitlán
+}

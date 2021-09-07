@@ -1,0 +1,96 @@
+#Country Name: Nevada
+
+graphical_culture = westerngfx
+
+color = { 97  120  113 }
+
+historical_idea_groups = {
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	innovativeness_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Brian #0" = 5
+	"Charles #0" = 10
+	"Denver #0" = 5
+	"Edward #0" = 5
+	"Emmet #0" = 1
+	"Frank #0" = 5
+	"Frederick #0" = 5 
+	"Grant #0" = 5
+	"Henry #0" = 5
+	"Isaac #0" = 5
+	"James #0" = 15
+	"Jewett #0" = 1
+	"John #0" = 15
+	"Kenneth #0" = 5
+	"Lewis #0" = 5
+	"Michael #0" = 5
+	"Morley #0" = 5
+	"Paul #0" = 5
+	"Reinhold #0" = 5
+	"Richard #0" = 10
+	"Robert #0" = 10
+	"Rosewell #0" = 5
+	"Tasker #0" = 1
+	"Vail #0" = 1
+}
+
+leader_names = {
+	Adams
+	Balzar Bell Blasdel Boyle Bradley Bryan
+	Carville Colcord
+	Dickerson
+	Gibbons Griswold Guinn
+	Jones
+	Kinkead Kirman
+	Laxalt List
+	Miller
+	Nye
+	O'Calloghan Oddie
+	Pittman
+	Roop Russell
+	Sadler Sandoval Sawyer Scrugham Sparks Stevenson
+}
+
+ship_names = {
+	"Carson City" Churchill Clark
+	Douglas
+	Elko Esmeralda Eureka
+	Humboldt
+	Lander "Las Vegas" Lincoln Lyon
+	Mineral
+	Nye
+	Ormsby
+	Pershing
+	Reno
+	Storey
+	Washoe
+	"White Pine"
+}

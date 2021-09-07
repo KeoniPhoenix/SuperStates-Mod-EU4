@@ -1,0 +1,96 @@
+#Country Name: Ottawa
+
+graphical_culture = westerngfx
+
+color = { 96  186  159 }
+
+historical_idea_groups = {
+	aristocracy_ideas
+	naval_ideas
+	exploration_ideas
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Arthur #0" = 5
+	"Dalton #0" = 1
+	"David #0" = 5
+	"Edward #0" = 5
+	"Ernest #0" = 10
+	"Frank #0" = 5
+	"George #0" = 20
+	"Gordon #0" = 5
+	"Harry #0" = 5
+	"James #0" = 5
+	"John #0" = 10
+	"Kathleen #0" = -5
+	"Leslie #0" = 1
+	"Michael #0" = 5
+	"Michell #0" = 5
+	"Oliver #0" = 5
+	"Robert #0" = 5
+	"Thomas #0" = 5
+	"William #0" = 10
+}
+
+leader_names = {
+	Blake
+	Conant
+	Davis Drew Drury
+	Eves
+	Ferguson Frost
+	Hardy Harris Hearst Henry Hepburn
+	Kennedy
+	Macdonald McGuinty Miller Mowat
+	Nixon
+	Peterson
+	Rae Robarts Ross
+	Whitney Wynne
+}
+
+ship_names = {
+	Addington
+	Brant Brantford Bruce
+	Carleton Chatham
+	Dufferin Dundas Durham
+	Elgin Essex
+	Frontenac
+	Glengarry Grenville Grey
+	Haldimand Haliburton Halton Hamilton Hastings Huron
+	"Kawartha Lakes" Kent
+	Lambton Lanark Leeds Lennox
+	Middlesex Muskoka
+	Niagara Norfolk Northumerland
+	Oxford Ottawa
+	Peel Perth Peterborough Prescott "Prince Edward"
+	Renfrew Russell
+	Simcoe Stormont Sudbury
+	Toronto
+	Victoria
+	Waterloo Wellington Wentworth
+	York
+}

@@ -1,0 +1,135 @@
+#Country Name: New Shoreham
+
+graphical_culture = westerngfx
+
+color = { 175  141  233 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	diplomatic_ideas
+	exploration_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Alfred #0" = 5
+	"Ambrose #0" = 5
+	"Aram #0" = 1
+	"Arthur #0" = 5
+	"Augustus #0" = 1
+	"Benedict #0" = 5
+	"Bruce #0" = 5
+	"Byron #0" = 1
+	"Caleb #0" = 5
+	"Charles #0" = 15
+	"Christopher #0" = 5
+	"Dennis #0" = 5
+	"Donald #0" = 5
+	"Edmund #0" = 1
+	"Edward #0" = 5
+	"Elisha #0" = 15
+	"Emery #0" = 5
+	"Francis #0" = 5
+	"Frank #0" = 5
+	"George #0" = 10
+	"Gideon #0" = 1
+	"Gregory #0" = 5
+	"Henry #0" = 20
+	"Herbert #0" = 5
+	"Howard #0" = 5
+	"Isaac #0" = 5
+	"James #0" = 20
+	"Jeremy #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 15
+	"Josiah #0" = 5
+	"Lemuel #0" = 5
+	"Lincoln #0" = 10
+	"Livingston #0" = 5
+	"Lucius #0" = 5
+	"Nehemiah #0" = 1
+	"Nicholas #0" = 10
+	"Norman #0" = 5
+	"Pele #0" = 1
+	"Peter" = 1
+	"Philip #0" = 10
+	"Richard #0" = 5
+	"Robert #0" = 5
+	"Roger #0" = 5
+	"Royal #0" = 0
+	"Russell #0" = 5
+	"Samuel #0" = 20
+	"Seth #0" = 5
+	"Stephen #0" = 5
+	"Theodore #0" = 5
+	"Thomas #0" = 10
+	"Walter #0" = 15
+	"William #0" = 20
+}
+
+leader_names = {
+	Allen Almon Andros Anthony Arnold
+	Beeckman Bourn Brenton Brown Bull Burnside
+	Caggeshall Carcieri Carr Case Chafee Clarke Coddington Collins Cooke Cozzens Cranston
+	Davis "Del Sesto" Dexter Diman Dimond DiPrete Dorr Dyer
+	Easton 
+	Fenner Flynn Francis Frenner
+	Garrahy Garvin Gibbs Gorton Green Greene Gregory Griffin
+	Harris Higgins Hopkins Hoppin Howard Hutchinson
+	Jenckes Johnes
+	Kimball King Knight
+	Ladd Licht Lippitt Littlefield Lyndon
+	McGrath McKiernan
+	Noel Notte
+	Padelford Pastore Pothier
+	Quinn
+	Roberts
+	Sanford Smith Souci Sprague Sundlun
+	Taft Turner
+	Utter
+	"Van Zandt" Vanderbilt
+	Wanton Ward Wetmore Wilbour Williams
+}
+
+ship_names = {
+	Barrington "Block Island" Bristol Burrillville
+	"Central Falls" Charlestown Coventry Cranston Cumberland
+	Exeter
+	Foster
+	Glocester Greenwich
+	Hopkinton
+	Jamestown Johnston
+	Kent Kings Kingstown
+	Lincoln "Little Compton"
+	Middletown
+	Narrangansett "New Shoreham" Newport
+	Pawtucket Portsmouth Providence
+	"Rhode Island" Richmond
+	Scituate Smithfield
+	Tiverton
+	Warren Warwick Washington Westerly Woonsocket
+}

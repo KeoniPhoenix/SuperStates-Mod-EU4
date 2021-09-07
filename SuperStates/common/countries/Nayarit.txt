@@ -1,0 +1,117 @@
+#Country Name: Nayarit
+
+graphical_culture = westerngfx
+
+color = { 175 255 255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustín #0" = 5
+	"Antíoco #0" = 5
+	"Antonio #0" = 5
+	"Candelario #0" = 5
+	"Celso #0" = 5
+	"Cuauhtémoc #0" = 5
+	"Eduardo #0" = 5
+	"Emilio #0" = 5
+	"Esteban #0" = 5
+	"Everardo #0" = 5
+	"Federico #0" = 5
+	"Felipe #0" = 5
+	"Fernando #0" = 5
+	"Francisco #0" = 20
+	"Gilberto #0" = 5
+	"Gustavo #0" = 10
+	"Heriberto #0" = 5
+	"Ismael #0" = 5
+	"Jesús #0" = 5
+	"Joaquín #0" = 5
+	"José #0" = 20
+	"Julián #0" = 10
+	"Juventino #0" = 5
+	"Lamberto #0" = 5
+	"Luis #0" = 5
+	"Miguel #0" = 5
+	"Ney #0" = 5
+	"Pablo #0" = 5
+	"Pascual #0" = 5
+	"Rafael #0" = 5
+	"Ramón #0" = 5
+	"Ricardo #0" = 5
+	"Rigoberto #0" = 5
+	"Roberto #0" = 5
+	"Rodolfo #0" = 10
+	"Rogelio #0" = 5
+	"Salvador #0" = 10
+	"Tomás #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Anguiano Arriola Azcárraga
+	Baca
+	Cardoso Castillo Chávez Corona Cristo
+	"de la Peña" Delgado Díaz
+	Echevarría Enríquez Espinoza
+	Flores
+	García Gazcón Godínez Gómez González
+	Herrara
+	Ibarra
+	Jaime
+	Limón López Luna
+	María Miramontes Moroña
+	Narváez
+	Ochoa
+	Parra Peña
+	Ramírez Retes Ríos Rodríguez Romero
+	Santiago Santos
+	Trejo
+	Valdés Velarde Villanueva
+}
+
+ship_names = {
+	Acaponeta Ahuacatlán Amatlán
+	Bahía Banderas
+	Cañas Compostela
+	"El Nayar"
+	Huajicori
+	Ixcuintla Ixtlán
+	Jala
+	"La Yesca" Lagunillas
+	Oro
+	Río Rosamorada Ruiz
+	"San Blas" "San Pedro" "Santa María" Santiago
+	Tecuala Tepic Tuxpan
+	Xalisco
+}
