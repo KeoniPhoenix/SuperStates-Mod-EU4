@@ -1,0 +1,201 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+
+###########################################
+# Isthmus of Tehuantepec Trade Route Bonus
+###########################################
+tehuantepec_trade_bonus = {
+	potential = {
+		num_of_ports = 1
+		capital_scope = { continent = north_america }
+	}
+	trigger = {
+		num_of_ports = 2
+		NOT = { 
+			835 = { has_great_project = panama_canal }
+		}
+		owns = 854 		#Salina Cruz
+		owns = 860		#Coatzacoalcos
+	}
+	
+	global_tax_modifier = 0.025
+	trade_efficiency = 0.025
+	global_trade_power = 0.025
+	trade_steering = 0.05
+	
+}
+
+###########################################
+# Isthmus of Panama Trade Route Bonus
+###########################################
+panama_trade_bonus = {
+	potential = {
+		num_of_ports = 1
+		capital_scope = { continent = north_america }
+	}
+	trigger = {
+		num_of_ports = 2
+		NOT = {
+			835 = { has_great_project = panama_canal }
+		}
+		owns = 835 		#Panama
+	}
+	
+	global_tax_modifier = 0.05
+	trade_efficiency = 0.05
+	global_trade_power = 0.05
+	trade_steering = 0.10
+	
+}
+
+###########################################
+# Mormon Control of Salt Lake City
+###########################################
+## This will help Mormons convert their neighbors faster.
+mormon_control_of_slc = {
+	potential = {
+		religion = mormon
+	}
+	trigger = {
+		owns = 952
+		952 = { religion = mormon }
+	}
+	
+	global_missionary_strength = 0.01
+}
+
+###########################################
+# Golden Plates!
+###########################################
+golden_plates = {
+	potential = {
+		OR = {
+			tag = UTA
+			tag = DES
+		}
+		religion = mormon
+	}
+	trigger = {
+		owns = 2597
+		2597 = { religion = mormon }
+	}
+	
+	global_missionary_strength = 0.04
+	prestige = 1
+}
+
+###########################################
+# Pacific Islands States Colonization Help
+###########################################
+pac_islands_colonizing ={
+	potential = {
+		OR = {
+			tag = ASM
+			tag = CUU
+			tag = GUM
+			tag = FSM
+			tag = HAW
+			tag = KSR
+			tag = MSH
+			tag = NMI
+			tag = PAU
+			tag = PNP
+			tag = YAP
+		}
+	}
+	trigger = {
+		OR = {
+			has_idea_group = exploration_ideas
+			has_idea_group = expansion_ideas
+		}
+		OR = {
+			NOT = { num_of_cities = 10 }
+			NOT = { total_base_tax = 25 }
+		}
+	}
+	
+	global_colonial_growth = 25
+	colonist_placement_chance = 0.05
+	naval_maintenance_modifier = -0.10
+	land_maintenance_modifier = -0.10
+	global_tax_modifier = 0.10
+}
+
+###########################################
+# Northwest Territory Reunified
+###########################################
+northwest_territory_reunified = {
+	potential = {
+		OR = {
+			tag = IND
+			tag = ILI
+			tag = MIC
+			tag = MNN
+			tag = OHI
+			tag = WIS
+			tag = YPR
+			tag = CCK
+			tag = ILS
+			#tag = WBU
+		}
+	}
+	trigger = {
+		wisconsin_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		green_bay_area  = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		upper_peninsula_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		illinois_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		little_egypt_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		chicagoland_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		wabash_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		ohio_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		maumee_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		michigan_area = {
+			type = all
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		owns_core_province = 2579
+	}
+
+	prestige_decay = -0.05
+	global_tax_modifier = 0.05
+}

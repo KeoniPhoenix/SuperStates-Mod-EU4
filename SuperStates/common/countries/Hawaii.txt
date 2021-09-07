@@ -1,0 +1,125 @@
+#Country Name: Hawaii
+
+graphical_culture = westerngfx
+
+#color = { 113  101  0 }
+color = { 48  169  96 } #Victoria 2 color
+
+historical_idea_groups = {
+	defensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Anna #0" = -5
+	"Antone #0" = 1
+	"Archibald #0" = 1
+	"Ben #0" = 1
+	"Boki #0" = 0
+	"Charles #0" = 0
+	"Cox #0" = 0
+	"Curtis #0" = 0
+	"Emelia #0" = -1
+	"Fredrick #0" = 0
+	"George #0" = 0
+	"Ingram #0" = 1
+	"Isaac #0" = 0
+	"James #0" = 1
+	"John #0" = 5
+	"John Adams" = 1
+	"Joseph #0" = 5
+	"Kahakuha'akoi #0" = 5
+	"Kahalai'a #0" = 5
+	"Kaikio'ewa #0" = 5
+	"Kalaimamahu #0" = 5
+	"Kalakaua #0" = 10
+	"Kalakua #0" = -5
+	"Kalani #0" = -5
+	"Kamehameha #0" = 20
+	"Ke'eaumoku #0" = 5
+	"Kuihelani #0" = 5
+	"Kuini #0" = -5
+	"Lanihau #0" = 5
+	"Lawrence #0" = 0
+	"Lili'uokalani #0" = -10
+	"Linda #0" = -1
+	"Lucius #0" = 1
+	"Lydia #0" = -5
+	"Mainhinenui #0" = -5
+	"Mataio #0" = 5
+	"Miriam #0" = -5
+	"Mokuhia #0" = 5
+	"Naihe #0" = 5
+	"Neil #0" = 0
+	"Oliver #0" = 0
+	"Oren #0" = 0
+	"Paul #0" = 1
+	"Robert #0" = 0
+	"Ruth #0" = -5
+	"Samuel #0" = 1
+	"Sanford #0" = 0
+	"Thomas #0" = 0
+	"Ululani #0" = 5
+	"Ulumaheihei #0" = 5
+	"Victoria #0" = -5
+	"Virginia #0" = -5
+	"Wallace #0" = 0
+	"Walter #0" = 0
+	"William #0" = 1
+}
+
+leader_names = {
+	"'Aikake" "'Iaukea" "'Olohana"
+	Abercrombie Ariyoshi
+	Baker Beckley Burns Bush
+	Carter Cayetano Cleghorn
+	Dole Dominis
+	Everett
+	Farrington Frear
+	Hoapili Holmes
+	Judd
+	Kaheiheimalie Kama'ule'ule Kanehoa Kanoa Kapeau Kapena Ke'eaumoku Ke'elikolani Keaweamahi Kekau'onohi Kekaulike Kekuanao'a Kina'u King Kipi Kuakini
+	Leleiohoku Likelike Liliha Lingle Long Luanu'u
+	McCarthy Moehonua
+	Nahaolelua
+	Papa'iahiahi Pi'ia Pinkham Po'omaikelani Poindexter Puhiula
+	Quinn
+	Rice Rosa
+	Stainback
+	Wahine Pi'o Waihee
+}
+
+ship_names = {
+	Atoll
+	Ford
+	"Gardner Pinnacles" Grass
+	Hawai'i Hilo Holoikauaua Honolulu
+	Kaho'olawe Kaohikaipu Ka'ula Kalawao Kauai Kauo Kure
+	Lana'i Laysan Lehua
+	Manana Maro Maui Midway "Mokolea Rock" Mokoli'i Mokumana Mokumanamana "Moku Manu" Mokupapapa "Moku o Lo'e" "Moku Ola" "Moku 'ume'ume" Moloka'i Molokini
+	"Na Mokulua" Nalukakala Nihoa Necker
+	O'ahu
+	Papa'apoho "Pearl and Hermes" Pihemanu Puhahonu
+	Sand
+}

@@ -1,0 +1,123 @@
+#Country Name: Occidente
+
+graphical_culture = westerngfx
+
+color = { 131 138 78 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abelardo #0" = 5
+	"Adolfo #0" = 5
+	"Alejandro #0" = 10
+	"Alejo #0" = 5
+	"Alfonso #0" = 5
+	"Alfredo #0" = 10
+	"Álvaro #0" = 5
+	"Angel #0" = 5
+	"Anselmo #0" = 5
+	"Antonio #0" = 5
+	"Armando #0" = 5
+	"Carlos #0" = 5
+	"Eduardo #0" = 5
+	"Enrique #0" = 5
+	"Faustino #0" = 5
+	"Fausto #0" = 5
+	"Francisco #0" = 10
+	"Gabriel #0" = 5
+	"Guillermo #0" = 5
+	"Horacio #0" = 5
+	"Ignacio #0" = 5
+	"Jesús #0" = 5
+	"Juan #0" = 5
+	"Leopoldo #0" = 5
+	"Luis #0" = 5
+	"Macario #0" = 5
+	"Manlio #0" = 5
+	"Manuel #0" = 5
+	"Mario #0" = 10
+	"Pablo #0" = 5
+	"Plutarco #0" = 5
+	"Ramón #0" = 10
+	"Renato #0" = 5
+	"Rigoberto #0" = 5
+	"Rodolfo #0" = 15
+	"Román #0" = 5
+	"Samuel #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar 
+	Bay Beltrones Biebrich Bours
+	Calderón Carrillo
+	"de la Huerta" Delgado
+	Elías Encinas
+	Félix Flores
+	Gaxiola
+	Iturbe
+	Labastida Leyva Loaiza López
+	Macías Millán Morúa
+	Obregón Ocaña
+	Padrés Páez Pérez
+	Ramos Rodríguez
+	Sánchez Sobarzo Soto
+	Toledo Topete
+	Valdés Vega
+	Yocupicio
+}
+
+ship_names = {
+	Aconchi Ahome Álamos Altar Alvarado Angostura Arivechi Arizpe Atil "Auga Preita"
+	Bacadéhuachi Bacanora Bacerac Bacoachi Bácum Badiraguato Banámichi Baviácora Bavispe Benito Benjamín
+	Caborca Cajeme Calles Cananea Carbó Chico Choix Concordia Cosalá Cucurpe Cueva Culiacán
+	Divisaderos
+	"El Fuerte" Elías Elota Empalme Escuinapa Etchojoa
+	Fronteras
+	García Granados Grande Guamúchil Guasave Guaymas
+	Hermosillo Hidalgo Hill Horcasitas Huachinera Huásabas Huatabampo Huépac
+	Imuris
+	Jesús Juárez
+	Kino
+	"La Colorada" "La Cruz" Leyva "Los Mochis"
+	Magalena Mazatán Mazatlán Mocorito Moctezuma Muerto
+	Naco Nácori Nacozari Navojoa Navolato Nogales
+	Onavas Opodepe Oquitoa
+	Pesqueira Pitiquito Plutarco "Puerto Peñasco"
+	Quiriego
+	Rayón Río "Río Colorado" Rosario Rosarui
+	Sahuaripa Salvador "San Filipe" "San Ignacio" "San Javier" "San Luis" "San Miguel" "San Pedro" "Santa Ana" "Santa Cruz" Sáric Sinaloa Soyopa Suaqui
+	Tepache Tesopaco Trincheras Tubutama
+	Ures
+	Yécora 
+}

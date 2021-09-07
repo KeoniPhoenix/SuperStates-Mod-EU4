@@ -1,0 +1,147 @@
+#Country Name: San Luis Potosi
+
+graphical_culture = westerngfx
+
+color = { 200 200 75 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abel #0" = 5
+	"Adolfo #0" = 5
+	"Agustín #0" = 10
+	"Alfredo #0" = 5
+	"Ángel #0" = 10
+	"Antonio #0" = 15
+	"Arnulfo #0" = 5
+	"Arturo #0" = 5
+	"Aureliano #0" = 5
+	"Aurelio #0" = 5
+	"Baldormero #0" = 5
+	"Benigno #0" = 5
+	"Benito #0" = 5
+	"Blas #0" = 10
+	"Camilo #0" = 5
+	"Carlos #0" = 10
+	"Cayetano #0" = 5
+	"Celedonio #0" = 5
+	"David #0" = 5
+	"Emiliano #0" = 5
+	"Eugenio #0" = 5
+	"Eulalio #0" = 5
+	"Fausto #0" = 5
+	"Federico #0" = 5
+	"Felipe #0" = 5
+	"Fernando #0" = 10
+	"Florencio #0" = 5
+	"Francisco #0" = 15
+	"Gabriel #0" = 15
+	"Gonzalo #0" = 10
+	"Graciano #0" = 5
+	"Guillermo #0" = 5
+	"Herminio #0" = 5
+	"Hilario #0" = 10
+	"Horacio #0" = 5
+	"Ignacio #0" = 5
+	"Ildefonso #0" = 5
+	"Ismael #0" = 5
+	"Jesús #0" = 5
+	"Joaquín #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 20
+	"Juan #0" = 15
+	"Leopoldino #0" = 5
+	"Lorenzo #0" = 5
+	"Luis #0" = 10
+	"Manuel #0" = 20
+	"Marcelino #0" = 5
+	"Mariano #0" = 10
+	"Mateo #0" = 5
+	"Miguel #0" = 5
+	"Nicasio #0" = 5
+	"Octaviano #0" = 5
+	"Pablo #0" = 5
+	"Pedro #0" = 10
+	"Pío #0" = 5
+	"Rafael #0" = 20
+	"Raynaldo #0" = 5
+	"Ricardo #0" = 10
+	"Rubén #0" = 5
+	"Rutiló #0" = 5
+	"Santiago #0" = 5
+	"Saturnino #0" = 5
+	"Severino #0" = 10
+	"Timoteo #0" = 5
+	"Vicente #0" = 10
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilera Aguirre Alamilla Aldape Alonso Álvarez Amaya Anaya Arguinzoni
+	Barragán
+	Cano Cardiel Carlos Castillo Cedillo Cepeda Chapoy Chávez Cuellar Curiel
+	Dávila Díez
+	Encarnación Escobedo Escontría Espinosa
+	Fernández Flores Fonseca Fraga
+	Garavia García Garza González Guerrero Gutiérrez
+	Hermosillo
+	Jiménez Jonguitud
+	Lárraga Leija López Lozano
+	Macías Manrique Marcelo Martínez Mendoza Moctezuma Muñoz Nieto Noyola
+	Olivo Ortiz
+	Palau Pedroza Pérez Pilar Prieto
+	Rangel Refugio Rincón Rocha Rodríguez Romero
+	Salas Salazar Sánchez Sandoval Santos Sarabia Segura Silva Solís
+	Terrazas Toranzo Turrubiartes
+	Vildósola Vives
+	Zapata Zúñiga
+}
+
+ship_names = {
+	Acosta Ahualulco Alaquines Aquismón Aradillo Arista Arriaga Axtla
+	Cárdenas Carmona Catorce Cedral Cerritos Cerro Chalchicuautla Charcas Corona Coxcatlán
+	Ebano "El Naranjo" Escobedo
+	Fernández
+	Graciano Guadalcazar Guadaulpe
+	Hidalgo Huehuetlán
+	Infante
+	Juárez
+	"La Paz" Lagunillas
+	Maíz Matehuala Matlapa Mexquitic Moctezuma
+	Ramos Rayón Reyes Río Rioverde
+	Salinas "San Antonio" "San Ciro" "San Luis Potosí" "San Martin" "San Nicolás" "San Pedro" "San Vicente" Sánchez "Santa Catarina" "Santa María" "Santo Domingo" Santos Soledad
+	Tamasopo Tamazunchale Tampacan Tampamolón Tamuín Tancanhuitz Tancuayalab Tanlajás Tanquián Terrazas "Tierra Nueva" Tolentino
+	Valles Vanegas Venado Villa
+	Xilitla
+	Zaragoza
+}

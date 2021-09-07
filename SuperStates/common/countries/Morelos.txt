@@ -1,0 +1,100 @@
+#Country Name: Morelos
+
+graphical_culture = westerngfx
+
+color = { 208 54 54 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abrosio #0" = 5
+	"Alfonso #0" = 10
+	"Alfredo #0" = 5
+	"Alvaro #0" = 5
+	"Amilcar #0" = 5
+	"Armando #0" = 5
+	"Benito #0" = 5
+	"Carlos #0" = 5
+	"Elpidio #0" = 5
+	"Emilio #0" = 5
+	"Ernesto #0" = 5
+	"Felipe #0" = 5
+	"Graco #0" = 5
+	"Ismael #0" = 5
+	"Jesús #0" = 5
+	"Joaquín #0" =5 
+	"Jorge #0" = 10
+	"José #0" = 20
+	"Juan #0" = 5
+	"Luis #0" = 5
+	"Marco #0" = 5
+	"Norberto #0" = 5
+	"Octavio #0" = 5
+	"Rodolfo #0" = 5
+	"Sergio #0" = 5
+	"Vicente #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Adame Aguilar Alcárar
+	Castillo
+	Escobar Estrada
+	Flores
+	García
+	Lavín López
+	Magaña María Morales
+	Ortega
+	Páez Palacio Parres Paz Perdomo Puente
+	Ramírez Refugio Riva Rivera Rojas
+	Sámano
+	Tajonar
+	Velazco
+}
+
+ship_names = {
+	Amacuzac Amilpas Atlatlahucan Ayala Azochiapan
+	Coatlán Cuautla Cuernavaca
+	Emiliano
+	Hidalgo Huitzilac
+	Ixtla
+	Jantetelco Jiutepec Jojutla Jonactepec
+	Mazatepec Miacatlan
+	Ocuituco
+	Puente
+	Río
+	Temixco Temoac Tepalcigno Tetecala Tetela Tlalnepantla Tlaltizapan Tlaquiltenango Tlayacapan Totolapan
+	Volcán
+	Yautepec Yecapixtla
+	Zacatepec Zacualpan Zapata
+}

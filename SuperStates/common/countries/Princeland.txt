@@ -1,0 +1,106 @@
+#Country Name: Princeland
+
+graphical_culture = westerngfx
+
+color = { 10 10 128 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	naval_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Albert #0" = 5
+	"Alexander #0" = 5
+	"Allen #0" = 5
+	"Bryan #0" = 5
+	"Charles #0" = 10
+	"Denis #0" = 5
+	"Duncan #0" = 5
+	"Edmond #0" = 5
+	"George #0" = 20
+	"Graham #0" = 5
+	"Harry #0" = 5
+	"Henry #0" = 5
+	"Ian #0" = 5
+	"James #0" = 20
+	"Jeffery #0" = 5
+	"Joan #0" = -5
+	"John #0" = 20
+	"Lindsay #0" = 5
+	"Richard #0" = 5
+	"Rupert #0" = 5
+	"Stanley #0" = 5
+	"Steven #0" = 5
+	"Theodore #0" = 5
+	"Thomas #0" = 10
+	"William #0" = 20
+}
+
+leader_names = {
+	Allen Argyle
+	Bailieu Bent Berry Bolte Bowser Bracks Brumby
+	Cain
+	Duffy Dunstan
+	Elmslie
+	Francis
+	Gillies
+	Haines Hamer Heales Hogan Hollway
+	Irvine
+	Kennett Kerferd Kirner
+	Lawson
+	Macfarlan MacPherson McCulloch McDonald McLean McPherson Munro Murray
+	Napthine Nicholson
+	O'Loghlen O'Shanassy
+	Patterson Peacock Prendergast
+	Service Shiels Sladen
+	Thompson Turner
+	Watt
+}
+
+ship_names = {
+	Alpine Ararat
+	Ballarat Banyule "Bass Coast" "Baw Baw" Bayside Benalla Bendigo Boroondara Brimbank Buloke
+	Campaspe Cardinia Casey Colac Corangamite
+	Dandenong Darebin
+	"Falls Creek" Frankston
+	Gannawarra Geelong Gippsland "Glen Eira" Glenelg "Golden Plains" Grampians
+	Hepburn Hindmarsh "Hobsons Bay" Horsham Hume
+	Indigo
+	Kingston Knox
+	"Lake Mountain" Latrobe Loddon
+	"Macedon Ranges" Manningham Mansfield Maribyrnong Maroondah Melbourne Melton Mildura Mitchell Moira Monash "Moonee Valley" Moorabool Moreland "Mornington Peninsula" "Mount Alexander" "Mount Baw Baw" "Mount Buller" "Mount Hotham" "Mount Stirling" Moyne Murrindindi
+	Nillumbik
+	Otway
+	"Port Phillip" Pyrenees
+	Queenscliffe
+	Shepparton Stonnington Strathbogie "Surf Coast" "Swan Hill"
+	Towong
+	Wangaratta Warrnambool Wellington Whitehorse Whittlesea Wimmera Wodonga Wyndham
+	Yarra "Yarra Ranges" Yarriambiack
+}

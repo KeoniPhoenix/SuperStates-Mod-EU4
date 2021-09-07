@@ -1,0 +1,140 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 109  213  255 }
+
+historical_idea_groups = {
+	naval_ideas
+	defensive_ideas
+	exploration_ideas
+	offensive_ideas
+	diplomatic_ideas
+	religious_ideas
+	trade_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_highlander
+	carolinian_infantry
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Abner #0" = 1
+	"Alexander #0" = 10
+	"Alfred #0" = 5
+	"Angus #0" = 5
+	"Arthur #0" = 5
+	"Benjamin #0" = 5
+	"Beverly F #0" = -5
+	"Cameron #0" = 5
+	"Charles #0" = 15
+	"Clyde #0" = 5
+	"Cornelius #0" = 5
+	"Curtis #0" = 5
+	"Daniel #0" = 15
+	"David #0" = 15
+	"Edward #0" = 10
+	"Elias #0" = 5
+	"Gabriel #0" = 10
+	"George #0" = 5
+	"Gregg #0" = 5
+	"Henderson #0" = 5
+	"Henry #0" = 10
+	"Hutchins #0" = 5
+	"James #0" = 20
+	"Jesse #0" = 5
+	"John #0" = 20
+	"Jonathan #0" = 5
+	"Josiah #0" = 5
+	"Kerr #0" = 5
+	"Locke #0" = 5
+	"Luther #0" = 5
+	"Matthew #0" = 5
+	"Melville #0" = 1
+	"Michael #0" = 5
+	"Montfort #0" = 5
+	"Nathaniel #0" = 5
+	"Oliver #0" = 5
+	"Patrick #0" = 5
+	"Peter #0" = 5
+	"Ralph #0" = 5
+	"Richard #0" = 20
+	"Robert #0" = 15
+	"Roy" = 5
+	"Samuel #0" = 15
+	"Seth #0" = 5
+	"Terry #0" = 5
+	"Thomas #0" = 20
+	"Tod #0" = 5
+	"Warren #0" = 5
+	"William #0" = 20
+	"Willie #0" = 1
+	"Zebulon #0" = 1
+}
+
+leader_names = {
+	Ashe Aycock
+	Bickett Bragg Branch Brogden Broughton Burke Burrington Burton
+	Caldwell Carr Carteret Cary Caswell Chapman Cherry Clark Cooper Craig
+	Daniell Davie Dobbs Drummond Dudley
+	Easley Eastchurch Eden Ehringhaus Ellis Everard
+	Fowle Franklin
+	Gardner Gibbs Glenn Glover Graham
+	Harnett Harvey Hawkins Hodges Hoey Holden Holmes Holshouser Holt Hunt Hyde
+	Iredell
+	Jarvis Jenkins Johnston Jones
+	Kitchin
+	Lane
+	Manly Martin McCrory McLean Miller Moore Morehead Morrison
+	Nash
+	Owen
+	Perdue Pollock
+	Reed Reid Rice Rowan Russell
+	Sanford Scales Scott Sothel Spaight Stephens Stokes Stone Swain
+	Tyron
+	Umstead
+	Vance
+	Walker White Wilkinson Williams Winslow Worth
+}
+
+ship_names = {
+	Alamance Albemarle Alexander Alleghany Anson Ashe Avery
+	Bath Beaufort Bertie Bladen Brunswick Buncombe Burke Bute
+	Cabarrus Caldwell Camden Carteret Caswell Catawba Chatham Cherokee Chowan Clay Cleveland Columbus Craven Cumberland Currituck
+	Dare Davidson Davie Dobbs Duplin Durham
+	Edgecombe
+	Forsyth Franklin
+	Gaston Gates Graham Granville Greene Guilford
+	Halifax Harnett Haywood Henderson Hertford Hoke Hyde
+	Iredell
+	Jackson Johnston Jones
+	Lee Lenoir Lincoln
+	McDowell Macon Maidson Martin Mecklenburg Mitchell Montgomery Moore
+	Nash "New Hanover" Northampton
+	Onslow Orange
+	Pamlico Pasquotank Pender Perquimans Person Pitt Polk
+	Randolph Richmond Robeson Rockingham Rowan Rutherford
+	Sampson Scotland Stanly Stokes Surry Swain
+	Transylvania Tryon Tyrrell
+	Union
+	Vance
+	Wake Warren Washington Wayne Wilkes Wilson
+	Yadkin Yancey
+}

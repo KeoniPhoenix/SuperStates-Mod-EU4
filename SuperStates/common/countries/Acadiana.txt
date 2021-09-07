@@ -1,0 +1,141 @@
+#Country Name: Acadiana
+
+graphical_culture = westerngfx
+
+color = { 140  174  255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_highlander
+	north_american_frontiersmen
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	texas_rangers
+}
+
+monarch_names = {
+	"Alejandro #0" = 5
+	"Alexandre #0" = 1
+	"Alvin #0" = 1
+	"Andre #0" = 5
+	"Antoine #0" = 5
+	"Antonio #0" = 5
+	"Armand #0" = 1
+	"Benjamin #0" = 1
+	"Bernardo #0" = 5
+	"Charles #0" = 10
+	"David #0" = 5
+	"Earl #0" = 1
+	"Edward #0" = 5
+	"Edwin #0" = 1
+	"Esteban #0" = 5
+	"Etienne #0" = 5
+	"Francis #0" = 5
+	"Francisco #0" = 10
+	"George #0" = 1
+	"Henry #0" = 20
+	"Huey #0" = 1
+	"Isaac #0" = 1
+	"Jacques #0" = 10
+	"James #0" = 15
+	"Jared #0" = 1
+	"Jean-Baptiste" = 1
+	"Jean-Jacques" = 1
+	"Jean-Michel" = 1
+	"John #0" = 15
+	"Joseph #0" = 1
+	"Joshua #0" = 1
+	"Juan #0" = 5
+	"Kathleen #0" = -1
+	"Louis #0" = 10
+	"Luiz #0" = 5
+	"Luther #0" = 5
+	"Manuel #0" = 5
+	"Michael #0" = 1
+	"Murphy #0" = 5
+	"Newton #0" = 1
+	"Nicolas #0" = 5
+	"Oramel #0" = 1
+	"Oscar #0" = 1
+	"Paul #0" = 1
+	"Pickney #0" = 1
+	"Pierre #0" = 20
+	"Piyush #0" = 5
+	"Richard #0" = 1
+	"Robert #0" = 5
+	"Ruffin #0" = 1
+	"Samuel #0" = 10
+	"Sauvole #0" = 5
+	"Sebastian #0" = 5
+	"Stephen #0" = 1
+	"Thomas #0" = 5
+	"William #0" = 15
+}
+
+leader_names = {
+	Allen Aubry
+	Baker Beauvais Bienville Billouart Blachard Blanco Boisbriant Bouligny
+	Cadillac Carondelet Claiborne
+	d'Abbadie Davis "de Ulloa" Derbigny Dupre
+	Edwards Flanders Foster Fuqua
+	Galvez
+	Hahn Hall Heard Hebert
+	Jindal Johnson Jones
+	Kellogg Kennon King
+	Laussat Leche Lemos Lepinay Long
+	McEnery McEnery	McKeithen Miro Moore Mouton
+	Nicholls Noe
+	O'Rielly
+	Packard Parker Perier Pinchback Pleasant "Puerta y O'Farrill"
+	Rigaud Robertson Roemer Roman
+	Salcedo Sanders Shepley Simpson
+	Thibodaux Treen
+	Unzaga
+	Vidal Villere
+	Walker Warmoth Watkins Wells White Wickliffe Wiltz
+}
+
+ship_names = {
+	Acadia Allen Ascension Assumption Attakapas Avoyelles
+	"Baton Rogue" Beauregard Bienvill Biloxi Bossier
+	Caddo Calcasieu Caldwell Cameron Carroll Catahoula Caliborne Concordia
+	"De Soto"
+	"East Baton Rogue" "East Carroll" "East Feliciana" Evangeline
+	Feliciana Franklin
+	Grant
+	Iberia Iberville
+	Jackson Jefferson
+	Lafayette Lafourche "La Salle" Lincoln Livingston Louisiana
+	Madison Morehouse
+	Natchitoches
+	Orleans Ouachita
+	Pascagoula Plaquemines "Pointe Coupee"
+	Rapides "Red River"
+	Sabine "St. Bernard" "St. Charles" "St. Helena" "St. James" "St. Landry" "St. Martin" "St. Mary" "St. Tammany"
+	Tangipahoa Tensas Terrebonne
+	Union
+	Vermilion Vernon
+	Washington Warren Webster "West Baton Rogue" "West Carroll" "West Felicanana" Winn
+}

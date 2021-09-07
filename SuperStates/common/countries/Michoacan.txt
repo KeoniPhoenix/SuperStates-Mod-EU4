@@ -1,0 +1,103 @@
+#Country Name: Michoacan
+
+graphical_culture = westerngfx
+
+color = { 100 75 50 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustín #0" = 5
+	"Arnulfo #0" = 5
+	"Ausencio #0" = 5
+	"Benigno #0" = 5
+	"Carlos #0" = 10
+	"Conrado #0" = 5
+	"Cuauhtémoc #0" = 5
+	"Dámaso #0" = 10
+	"Daniel #0" = 5
+	"David #0" = 5
+	"Eduardo #0" = 5
+	"Enrique #0" = 5
+	"Fausto #0" = 5
+	"Félix #0" = 5
+	"Gabino #0" = 5
+	"Genovevo #0" = 5
+	"Gildardo #0" = 5
+	"José #0" = 5
+	"Lázaro #0" = 10
+	"Leonel #0" = 5
+	"Luis #0" = 5
+	"Rafael #0" = 10
+	"Servando #0" = 5
+	"Victor #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Arriaga Avila
+	Cárdenas Chávez
+	Figueroa Franco
+	Gálvez Godoy
+	Ireta
+	Magaña Manuel Martínez Mendoza
+	Ordorica
+	Ramírez Rentería
+	Sánchez Serrato
+	Torres
+	Vallejo Vázquez Villaseñor
+}
+
+ship_names = {
+	Acuitzio Aguililla Álvaro Angamacutiro Angangueo Apatzingán Aporo Aquila Ario Arteaga
+	Briseñas Buenavista
+	Caracuaro Cárdenas Carranza Charapan Charo Chavinda Cherán Chilchota Chinicuila Chucándiro Churintzio Churumuco Coahuayana Coalcomán Coeneo Cojumatlán Contepec Copándaro Cotija Cuitzeo
+	Ecuandureo Epitácio Erongaricuaro Escalante
+	Gabirel
+	Hidalgo Huandacareo Huaniqueo Huerta Huetamo Huiramba
+	Indaparapeo Irimbo Ixtlán
+	Jacona Jiménez Jiquilpan José Juárez Jungapeo
+	"La Huacana" "La Piedad" Lagunillas Lázaro "Los Reyes"
+	Madero Maravatío Marcos Maya Morelia Morelos Múgica
+	Nahuatzén Nicolas Nocupétaro "Nuevo Parangaricutiro" "Nuevo Urecho" Numarán
+	Obregón Ocampo
+	Pajacuarán Pallares Panindicuaro Paracho Parácuaro Pátzcuaro Penjamillo Peribán Purépero Puruándiro
+	Queréndaro Quiroga
+	Régules Romero
+	Sahuayo Salvador "San Lucas" "Santa Ana" Senguío Sixto Susupuato
+	Tacámbaro Tancítaro Tangamandapio Tangancícuaro Tanhuato Taretan Tarímbaro Tepalcatepec Tingambato Tingüindín Tiquicheo Tlalpujahua Tlazazalca Tocumbo Tumbiscatío Turicato Tuxpan Tuzantla Tzintzuntzan Tzitzío
+	Uruapan
+	Vázquez Venustiano Verduzco Villiamar "Vista Hermosa"
+	Yurécuaro
+	Zacapú Zamora Zináparo Zinapécuaro Ziracuaretiro Zitácuaro
+}

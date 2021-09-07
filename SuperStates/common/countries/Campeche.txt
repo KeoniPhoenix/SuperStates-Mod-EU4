@@ -1,0 +1,115 @@
+#Country Name: Campeche
+
+graphical_culture = westerngfx
+
+color = { 150 150 125 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abelardo #0" = 5
+	"Alberto #0" = 5
+	"Ángel  #0" = 5
+	"Arturo #0" = 5
+	"Benjamín #0" = 5
+	"Carlos #0" = 15
+	"Eduardo #0" = 20
+	"Enrique #0" = 10
+	"Eugenio #0" = 5
+	"Fausto #0" = 5
+	"Felipe #0" = 5
+	"Fernando #0" = 5
+	"Gonzalo #0" = 5
+	"Guillermo #0" = 5
+	"Gustavo #0" = 5
+	"Héctor  #0" = 5
+	"Joaquín  #0" = 15
+	"Jorge #0" = 10
+	"José #0" = 20
+	"Juan #0" = 10
+	"Leocadio #0" = 5
+	"Luis #0" = 5
+	"Manuel #0" = 20
+	"Marcelino #0" = 5
+	"Onecíforo #0" = 5
+	"Pablo #0" = 5
+	"Pedro #0" = 5
+	"Prudencio #0" = 5
+	"Rafael #0" = 5
+	"Ramiro #0" = 5
+	"Ramón #0" = 10
+	"Salvador #0" = 5
+	"Silvestre #0" = 5
+	"Tomás  #0" = 10
+	"Urbano #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Anzar Arceo Arias Azar Aznar
+	Baranda Bojórquez Bojórquez Bueno
+	Carrillo Castellot Castilla Castillo
+	Donde Durán
+	Echeverría Espinosa
+	Félix Ferrer
+	García Gómez González Gutiérrez
+	Hurtado
+	Kerlegand
+	Lavalle López
+	Mena Montalvo Mucel
+	Ortega Ortiz
+	Pavón Pérez Preve
+	Rivera Rodríguez Rojas Romero Ruz
+	Sabas Sales Sansores Shiels Suzarte
+	Tello Trinidad Trueba
+	Zamudio
+}
+
+ship_names = {
+	Abasolo Allende
+	Bravo
+	Calakmul Calkiní Campeche Candelaria Carmen Champotón 
+	Durango
+	Escárcega
+	Galeana Guanjuato
+	Hecelchakán Hopelchén 
+	Ilhunicamina
+	Juarez
+	Netzahualcoyotl
+	Palizada
+	Romero
+	"San Francisco" Serria Sonora
+	Tenabo
+	Veracruz Victoria 
+	Xpujil
+}

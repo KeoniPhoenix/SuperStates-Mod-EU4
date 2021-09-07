@@ -1,0 +1,104 @@
+#Country Name: Tabasco
+
+graphical_culture = westerngfx
+
+color = { 160 39 18 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Alejandro #0" = 5
+	"Andrés #0" = 5
+	"Arturo #0" = 5
+	"Augusto #0" = 5
+	"Aureo #0" = 5
+	"Ausencio #0" = 10
+	"Carlos #0" = 15
+	"Enrique #0" = 10
+	"Francisco #0" = 10
+	"Heriberto #0" = 5
+	"Joaquín #0" = 5
+	"José #0" = 5
+	"Leandro #0" = 5
+	"Leonel #0" = 5
+	"Limbano #0" = 5
+	"Luis #0" = 10
+	"Manuel #0" = 20
+	"Mario #0" = 5
+	"Miguel #0" = 10
+	"Noé #0" = 5
+	"Pedro #0" = 5
+	"Primitivo #0" = 5
+	"Roberto #0" = 5
+	"Salvador #0" = 5
+	"Santiago #0" = 10
+	"Tobías #0" = 5
+	"Tomás #0" = 10
+	"Victor #0" = 10
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar Andrade Antonio
+	Bartlett
+	Calles Casanova Conrado Correa
+	"de la Flor"
+	Felipe Fernández 
+	Garrido González Granier Greene Gurría
+	Hernández
+	Jara Javier
+	Lastra
+	Madrazo Madrazo Magaña Manuel Mora
+	Neme Núñez
+	Orrico
+	Peralta Priego
+	Rovirosa Ruiz
+	Taracena Torruco Trujillo
+	Vidal
+}
+
+ship_names = {
+	Balancán
+	Cárdenas Centla Centro Comalcalco Cunduacán
+	Emiliano
+	Frontera
+	Huimanguillo
+	Jalapa Jalpa Jonuta
+	Macuspana Méndez
+	Nacajuca
+	Paraíso Pino
+	Suárez
+	Tacotalpa Teapa Tenosique
+	Villahermosa
+	Zapata
+}

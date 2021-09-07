@@ -1,0 +1,104 @@
+#Country Name: Prince Edward Island
+
+graphical_culture = westerngfx
+
+color = { 124  205  255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	exploration_ideas
+	aristocracy_ideas
+	offensive_ideas
+	trade_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 5
+	"Alexander #0" = 15
+	"Angus #0" = 5
+	"Arthur #0" = 5
+	"Aubin #0" = 1
+	"Bennett #0" = 5
+	"Catherine #0" = -5
+	"Donald #0" = 5
+	"Edward #0" = 5
+	"Francis #0" = 5
+	"Frederick #0" = 5
+	"George #0" = 5
+	"James #0" = 20
+	"John #0" = 20
+	"Joseph #0" = 10
+	"Keith #0" = 5
+	"Lemuel #0" = 0
+	"Louis #0" = 5
+	"Neil #0" = 5
+	"Patrick #0" = 5
+	"Robert #0" = 10
+	"Thane #0" = 1
+	"Walter #0" = 15
+	"William #0" = 10
+}
+
+leader_names = {
+	Arsenault
+	Bell Binns
+	Callbeck Campbell Coles
+	Davies
+	Farquharson
+	Ghiz Gray
+	Haszard Haythorne Hensley Holl
+	Jones
+	Lea Lee
+	MacLean MacMillan Matheson McLeod Milligan
+	Owen
+	Palmer Peters Pope
+	Saunders Shaw Stewart Sullivan
+	Warburton
+}
+
+ship_names = {
+	"Abrams Village" Afton Alberton Alexandra Annandale
+	Bayview Bedeque Belfast Bideford Bonshaw Borden Brackley Breadabane Brudenell
+	Cardigan Carleton Cavendish "Central Bedeque" "Central Kings" Charlottetown "Clyde River" Corwall Crapaud
+	Darlington
+	"Eastern Kings" Ellerslie
+	Georgetown "Grand Tracadie" Greenmount
+	Hampshire Hazelbrook "Hope River" "Howe Bay" "Hunter River"
+	Kensington Kings Kinkora
+	"Lady Slipper" Linkletter "Little Pond" Lorne Valley "Lot 11 and Area" "Lower Montague"
+	"Malpeque Bay" Meadowbank "Miltonvale Park" Miminegash Miscouche Montague Montrose Morell "Mount Stewart" "Murray Harbour" "Murray River"
+	"New Haven" "North Rustico" "North Shore" "North Wiltshire" Northport
+	O'Leary
+	"Pleasant Grove" Prince
+	Queens
+	Resort Riverdale
+	Sherbrooke Souris "Souris West" "St. Felix" "St. Louis" "St. Nicholas" "St. Peters Bay" "Stanley Bridge" Stratford Summerside
+	Tignish "Tignish Shore" "Tyne Valley"
+	"Union Road"
+	Valleyfield Victoria
+	"Warren Grove" Wellington "West River" "Winsloe South"
+	York 
+}

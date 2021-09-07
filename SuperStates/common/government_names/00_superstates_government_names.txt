@@ -1,0 +1,321 @@
+# For specific combinations of culture, religion and other such triggers
+# Will pick the first valid one it finds in list
+
+#### Super States - Individual State Governments ####
+american_state_republic = {
+	rank = {
+		1 = AMER_TERRITORY
+		2 = AMER_STATE
+		3 = AMER_SOV_STATE
+	}	
+
+	ruler_male = {
+		1 = AMERICAN_CHIEF_EXE
+		2 = AMERICAN_GOV
+		3 = AMERICAN_GOV_GEN
+	}
+
+	ruler_female = {
+		1 = AMERICAN_CHIEF_EXE_fem
+		2 = AMERICAN_GOV_fem
+		3 = AMERICAN_GOV_GEN_fem
+	}
+	
+	trigger = {
+		OR = {
+			has_reform = american_state_reform
+			has_reform = new_england_state_reform
+			has_reform = slave_state_reform
+			has_reform = commonwealth_state_reform
+		}
+	}
+}
+
+## Mormon Theo-Democracy Government ##
+gov_mormon_theodemocracy = {
+	rank = {
+		1 = MORMON_THEODEMOCRACY
+		2 = MORMON_THEODEMOCRACY
+		3 = MORMON_THEODEMOCRACY
+	}
+	
+	ruler_male = {
+		1 = PROPHET
+		2 = PROPHET
+		3 = PROPHET
+	}
+
+	ruler_female = {
+		1 = PROPHET
+		2 = PROPHET
+		3 = PROPHET
+	}
+
+	trigger = {
+		has_reform = mormon_theodemocracy_reform
+	}
+}
+
+## Confederate States of America Government ##
+gov_confederacy_republic = {
+	rank = {
+		1 = CSA_REPUBLIC
+		2 = CSA_REPUBLIC
+		3 = CSA_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = CSA_PRESIDENT
+		2 = CSA_PRESIDENT
+		3 = CSA_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = CSA_PRESIDENT_fem
+		2 = CSA_PRESIDENT_fem
+		3 = CSA_PRESIDENT_fem
+	}
+
+	trigger = {
+		has_reform = confederate_republic
+		tag = CSA
+	}
+}
+
+gov_confederacy_republic = {
+	rank = {
+		1 = TEX_REPUBLIC
+		2 = TEX_REPUBLIC
+		3 = TEX_REPUBLIC
+	}
+	
+	ruler_male = {
+		1 = TEX_PRESIDENT
+		2 = TEX_PRESIDENT
+		3 = TEX_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = TEX_PRESIDENT_fem
+		2 = TEX_PRESIDENT_fem
+		3 = TEX_PRESIDENT_fem
+	}
+
+	trigger = {
+		has_reform = texan_republic
+	}
+}
+
+## Hawaiian Potential Monarchy Government ##
+gov_hawaiian_monarchy = {
+	rank = {
+		1 = HAW_CHIEFDOM
+		2 = HAW_KINGDOM
+		3 = HAW_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = HAW_CHIEF
+		2 = HAW_KING
+		3 = HAW_EMPEROR
+	}
+
+	ruler_female = {
+		1 = HAW_CHIEFTESS
+		2 = HAW_QUEEN
+		3 = HAW_EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = HAW
+	}
+}
+
+#### Mexican Government Specific ####
+## Mexican State Government - mexican_state_republic ##
+gov_mex_state_governor = {
+	rank = {
+		1 = MEX_TERRITORY
+		2 = MEX_STATE
+		3 = MEX_SOV_STATE
+	}
+
+	ruler_male = {
+		1 = MEX_HEAD_OF_GOVERNMENT
+		2 = MEX_GOBERNADOR
+		3 = MEX_GOBERNADOR_GEN
+	}
+
+	ruler_female = {
+		1 = MEX_HEAD_OF_GOVERNMENT_fem
+		2 = MEX_GOBERNADOR_fem
+		3 = MEX_GOBERNADOR_GEN_fem
+	}
+
+	trigger = {
+		has_reform = mexican_state_reform
+		OR = {
+				culture_group = peninsular_mexican
+				culture_group = costa_chican
+				culture_group = mazatlan_mexican
+				culture_group = altiplano_central
+				culture_group = gulf_mexican
+				culture_group = oriental_mexican
+				culture_group = pacific_mexican
+				culture_group = occidental_mexican
+			}
+	}
+}
+
+## Mexican Federal Government - mexican_federal_republic ##
+gov_mexican_republic = {
+	rank = {
+		1 = REPUBLICA_MEX
+		2 = REPUBLICA_UNI_MEX
+		3 = REPUBLICA_FED_MEX
+	}
+
+	ruler_male = {
+		1 = MEX_PRESIDENTE
+		2 = MEX_PRESIDENTE_MAY
+		3 = MEX_PRESIDENTE_SUP
+	}
+
+	ruler_female = {
+		1 = MEX_PRESIDENTE_fem
+		2 = MEX_PRESIDENTE_MAY_fem
+		3 = MEX_PRESIDENTE_SUP_fem
+	}
+
+	trigger = {
+		government = republic
+		NOT = { government = dictatorship }
+		tag = MEX
+	}
+}
+#########################################
+
+## Canadian Parliamentary Government - Monarchy ##
+gov_pure_westminster_reform = {
+	rank = {
+		1 = CAN_TERRITORY
+		2 = CAN_PROVINCE
+		3 = CAN_DOMINION
+	}
+	
+	ruler_male = {
+		1 = AUS_CAN_FIRST_MINISTER
+		2 = AUS_CAN_PREMIER
+		3 = AUS_CAN_PRIME_MINISTER
+	}
+
+	ruler_female = {
+		1 = AUS_CAN_FIRST_MINISTER_fem
+		2 = AUS_CAN_PREMIER_fem
+		3 = AUS_CAN_PRIME_MINISTER_fem
+	}
+
+	trigger = {
+		has_reform = pure_westminster_reform
+		OR = {
+			culture_group = arctic_canadian
+			primary_culture = ontarian
+			primary_culture = northern_ontarian
+			primary_culture = torontoan
+			primary_culture = mantarian
+			culture_group = atlantic_canadian
+			primary_culture = quebecois
+			primary_culture = montrealer
+			primary_culture = brayon
+			primary_culture = acadian
+			culture_group = western_canadian
+		}
+	}
+}
+
+## Australian Monarchy / Parliamentary Government ##
+gov_hybrid_westminster_reform = {
+	rank = {
+		1 = AUS_TERRITORY
+		2 = AUS_STATE
+		3 = AUS_DOMINION
+	}
+
+	ruler_male = {
+		1 = AUS_CAN_FIRST_MINISTER
+		2 = AUS_CAN_PREMIER
+		3 = AUS_CAN_PRIME_MINISTER
+	}
+
+	ruler_female = {
+		1 = AUS_CAN_FIRST_MINISTER_fem
+		2 = AUS_CAN_PREMIER_fem
+		3 = AUS_CAN_PRIME_MINISTER_fem
+	}
+
+	trigger = {
+		has_reform = hybrid_westminster_reform
+		culture_group = australian_new_zealander
+	}
+}
+
+########################################################
+#### United States Government Specific ####
+## American Confederal Republic - articles_of_confederation_republic##
+gov_american_republic = {
+	rank = {
+		1 = AMER_REPUBLIC
+		2 = AMER_REPUBLIC
+		3 = AMER_REPUBLIC
+	}
+
+	ruler_male = {
+		1 = AMER_PRESIDENT
+		2 = AMER_PRESIDENT
+		3 = AMER_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = AMER_PRESIDENT_fem
+		2 = AMER_PRESIDENT_fem
+		3 = AMER_PRESIDENT_fem
+	}
+
+	trigger = {
+		has_reform = american_republic
+		OR = {
+			tag = USA
+			tag = FSA
+		}
+	}
+}
+## American Federal Republic - american_constitutional_republic##
+gov_federal_republic = {
+	rank = {
+		1 = AMER_FED_REPUBLIC
+		2 = AMER_FED_REPUBLIC
+		3 = AMER_FED_REPUBLIC
+	}
+
+	ruler_male = {
+		1 = AMER_FED_PRESIDENT
+		2 = AMER_FED_PRESIDENT
+		3 = AMER_FED_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = AMER_FED_PRESIDENT_fem
+		2 = AMER_FED_PRESIDENT_fem
+		3 = AMER_FED_PRESIDENT_fem
+	}
+
+	trigger = {
+		has_reform = federal_republic
+		OR = {
+			tag = USA
+			tag = FSA
+		}
+	}
+}
+#########################################

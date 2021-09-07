@@ -1,0 +1,99 @@
+#Country Name: Tahiti
+
+graphical_culture = westerngfx
+
+color = { 145  97  2 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Adélard #0" = 5
+	"Antonio #0" = 5
+	"Bernard #0" = 5
+	"Charles #0" = 5
+	"Daniel #0" = 10
+	"Edmund #0" = 5
+	"Fèlix-Gabriel #0" = 1
+	"Gédéon #0" = 1
+	"Henri-Gustave #0" = 1
+	"Honorè #0" = 1
+	"Jacques #0" = 5
+	"Jean #0" = 10
+	"Jean-Jacques #0" = 1
+	"John #0" = 5
+	"Joseph-Adolphe #0" = 1
+	"Joseph-Alfred #0" = 1
+	"Lomer #0" = 0
+	"Louis-Alexandre #0" = 1
+	"Louis-Olivier #0" = 1
+	"Lucien #0" = 0
+	"Maurice #0" = 5
+	"Paul #0" = 5
+	"Pauline #0" = -5
+	"Pierre #0" = 5
+	"Pierre-Marc" = 1
+	"René #0" = 5
+	"Robert #0" = 5
+	"Simon-Napoléon" = 1
+
+}
+
+leader_names = {
+	Barrette Bertrand Bouchard Bourassa
+	Chapleau Charest Chauveau
+	"de Boucherville" "de Lotbinère" Duplessis
+	Flynn
+	Godbout Gouin
+	Johnson
+	Landry Lesage Lévesque
+	Marchand Marois Mercier Mousseau
+	Ouimet
+	Parent Parizeau
+	Ross
+	Sauvé
+	Taillon Taschereau
+}
+
+ship_names = {
+	Abitibi Abitibi-Ouest Acton Antoine-Labelle Argenteuil Arthabaska Avignon
+	Beauce-Sartigan Beauharnois-Salaberry Bellechasse Bonaventure Brome-Missisquoi Bécancour
+	Caniapiscau Charlevoix Charlevoix-Est Coaticook
+	D'Autray Deux-Montagnes Drummond
+	"Eeyou Istchee"
+	Gatineau
+	Jamésie Joliette
+	Kamouraska Kativik
+	L'Assomption L'Islet L'Érable L'Île-d'Orléans "La Côte-de-Beaupré" "La Côte-de-Gaspé" "La Haute-Côte-Nord" "La Haute-Gaspésie" "La Haute-Yamaska" "La Jacques-Cartier" "La Matanie" "La Matapédia" "La Mitis" "La Mouvelle-Beauce" "La Rivière-du-Nord" "La Tuque" "La Vallée-de-l'Or" "La Vallée-de-la-Gatineau" "La Vallée-du-Richelieu" Lac-Saint-Jean-Est Laval "Le Domaine-du-Roy" "Le Fjord-du-Saguenay" "Le Golfe-du-Saint-Laurent" "Le Granit" "Le Haut-Richelieu" "Le Haut-Saint-François" "Le Haut-Saint-Laurent" "Le Rocher-Percé" "Le Val-Saint-François" "Les Appalaches" "Les Basques" "Les Chenaux" "Les Collines-de-l'Outaouais" "Les Etchemins" "Les Îles-de-la-Madeleine" "Les Jardins-de-Napierville" "Les Laurentides" "Les Maskoutains" "Les Moulins" "Les Pays-d'en-Haut" "Les Sources" Longueuil Lotbinière Lévis
+	Manicouagan Marguerite-D'Youville Maria-Chapdelaine Maskinongé Metawinie Memphrémagog Minganie Mirabel Montcalm Montmagny Montréal Mékinac
+	Nicolet-Yamaska
+	Papineau "Pierre-Du Saurel" Pontiac Portneuf
+	Québec
+	Rimouski-Neigette Rivière-du-Loup Robert-Cliche Roussillon Rouville Rouyn-Noranda
+	Saguenay Sept-Rivères Shawinigan Sherbrooke
+	"Thérèse-De Blainville" Témiscamingue Témiscouata Trois-Rivières
+	Vaudreuil-Soulanges
+}

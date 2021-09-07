@@ -1,0 +1,102 @@
+#Country Name: Canada
+
+graphical_culture = westerngfx
+
+color = { 94  117  55 }
+
+historical_idea_groups = {
+	offensive_ideas
+	naval_ideas
+	exploration_ideas
+	aristocracy_ideas
+	defensive_ideas
+	administrative_ideas
+	innovativeness_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Charles #0" = 20
+	"Paul #0" = 20
+	"Henry #0" = 15
+	"James #0" = 15
+	"David #0" = 10
+	"Thomas #0" = 10
+	"Ambrose #0" = 0
+	"Archibald #0" = 0
+	"Benjamin #0" = 0
+	"Brian #0" = 0
+	"Bruce #0" = 0
+	"Christopher #0" = 0
+	"Conrad #0" = 0
+	"Denis #0" = 0
+	"Duncan #0" = 0
+	"Eustace #0" = 0
+	"Frederick #0" = 0
+	"Gerard #0" = 0
+	"Gregory #0" = 0
+	"Homer #0" = 0
+	"Joseph #0" = 0
+	"Julius #0" = 0
+	"Kevin #0" = 0
+	"Laurence #0" = 0
+	"Leroy #0" = 0
+	"Lewis #0" = 0
+	"Matthew #0" = 0
+	"Michael #0" = 0
+	"Montgomery #0" = 0
+	"Nicholas #0" = 0
+	"Peter #0" = 0
+	"Richard #0" = 0
+	"Rowan #0" = 0
+	"Scott #0" = 0
+	"Silvester #0" = 0
+	"Spencer #0" = 0
+	"Ulysses #0" = 0
+	"Victor #0" = 0
+}
+
+leader_names = { 
+	Adams Anderson
+	Bagot Byrne
+	Canuck Chaffey
+	Dawson Dion Douglas
+	Fahey Fizzard
+	Gladman
+	Jackson Joe
+	MacDonald McLaughlin Miles Murphy
+	Puddester
+	Stephanson Stone
+	Twain
+	Young
+}
+
+ship_names = {
+	Algonquin Athabaskan
+	Halifax Huron
+	Iroquois
+	Kingston
+	Montreal
+	Preserver Protectuer 
+	"Ville de Quebec"
+}

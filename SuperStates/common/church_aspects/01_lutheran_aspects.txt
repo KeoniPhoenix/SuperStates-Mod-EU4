@@ -1,0 +1,188 @@
+#Lutherans are more geared towards warfare
+aspect_dominus_reget_me = {
+	modifier = {
+		land_attrition = -0.10
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 15
+			is_at_war = yes
+			NOT = { manpower_percentage = 0.66 }
+		}
+	}
+}
+
+aspect_welcoming_churches = {
+	modifier = {
+		stability_cost_modifier = -0.10
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 2
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+
+aspect_passionate_theology = {
+	modifier = { 
+		global_missionary_strength = 0.02
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { religious_unity = 0.8 }
+		}
+	}
+}
+
+aspect_mighty_fortress = {
+	modifier = { 
+		defensiveness = 0.25
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+aspect_soliders_of_the_cross = {
+	modifier = { 
+		discipline = 0.05
+	}	
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+	}
+}
+
+aspect_glory_under_the_cross = {
+	modifier = { 
+		prestige = 0.5
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { prestige = -40 }
+		}
+	}
+}
+
+aspect_confessions_from_the_state = {
+	modifier = {
+		legitimacy = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		republican_tradition = 0.33
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 2
+			NOT = { legitimacy = 60 }
+		}
+	}
+}
+
+aspect_missions_to_the_tribes = {
+	modifier = {
+		global_colonial_growth = 15
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			num_of_colonies = 1
+		}
+		modifier = {
+			factor = 2
+			num_of_colonists = 2
+		}
+	}
+}
+
+aspect_answering_the_call_to_serve = {
+	modifier = {
+		manpower_recovery_speed = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = yes
+			NOT = { manpower_percentage = 0.9 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { manpower_percentage = 0.5 }
+		}
+	}
+}
+
+aspect_cross_on_the_front_line = {
+	modifier = { 
+		reinforce_speed = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = yes
+			manpower_percentage = 0.75
+		}
+	}
+}
+
+aspect_military_chaplains = {
+	modifier = { 
+		production_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			is_at_war = no
+		}
+		modifier = {
+			factor = 2
+			is_at_war = no
+			NOT = { army_tradition = 50 }
+		}
+	}
+}
+
+aspect_integrity_through_faith = {
+	modifier = {
+		yearly_corruption = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 2
+			corruption = 5
+		}
+		modifier = {
+			factor = 2
+			corruption = 10
+		}
+		modifier = {
+			factor = 5
+			corruption = 50
+		}
+	}
+}

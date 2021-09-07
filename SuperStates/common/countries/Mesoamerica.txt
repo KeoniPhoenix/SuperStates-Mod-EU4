@@ -1,0 +1,112 @@
+#Country Name: Mesoamerica
+
+graphical_culture = westerngfx
+
+color = { 183 158 89 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abundio #0" = 5
+	"Agustín #0" = 5
+	"Alfredo #0" = 20
+	"Arturo #0" = 5
+	"Carlos #0" = 15
+	"César #0" = 5
+	"Cristóbal #0" = 5
+	"Darío #0" = 5
+	"Emilio #0" = 5
+	"Enrique #0" = 5
+	"Eruviel #0" = 5
+	"Eucario #0" = 5
+	"Filiberto #0" = 5
+	"Francisco #0" = 10
+	"Gustavo #0" = 10
+	"Ignacio #0" = 5
+	"Isidro #0" = 5
+	"Joaquín #0" = 10
+	"Jorge #0" = 5
+	"José #0" = 15
+	"Juan #0" = 5
+	"Lorenzo #0" = 5
+	"Manuel #0" = 5
+	"Mario #0" = 5
+	"Pascual #0" = 5
+	"Rafael #0" = 10
+	"Salvador #0" = 5
+	"Wenceslao #0" = 5	
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Ávila
+	Baranda Baz Beltrán 
+	Camacho Campos Cepeda Chuayffet
+	"de Zavala" "del Mazo"
+	Fabela Fernández
+	García Gómez Gutiérrez
+	Hank Hidalgo
+	Javier Jiménez
+	Labra López Luis
+	Millán Montiel Morales Murguía
+	Peña Pichardo
+	Ramón Refugio Riva
+	Sánchez Solano
+	Tejada
+	Zárate
+}
+
+ship_names = {
+	Acambay Acolman Aculco Aire Almoloya Alquisiras Amatepec Amecameca Apaxco Atenco Atizapán Atlacomulco Atlautla Ayapango Azapusco
+	Baz Berriozábal
+	Calimaya Capulhuac Chalco Chapa Chapultepec Chiautla Chicoloapan Chiconcuac Chimalhuacán Coacalco Coatepec Cocotitlán Coyotepec Cuautitlán
+	"Cuautitlán Izcalli" 
+	Donato
+	Ecatepec Ecatzingo "El Oro"
+	Fabela
+	Guerra Guerrero
+	Harinas Huehuetoca Hueypoxtla Huixquilucan
+	Isidro Isla Ixtahuaca Ixtapaluca Ixtapan
+	Jaltenco Jilotepec Jilotzingo Jiquipilco Jocotitlán Joquicingo Juárez Juchitepec
+	Lerma Luvianos
+	Malinalco Melchor Metepec Mexicaltzingo Morelos Mota
+	Naucalpan Nextlalpan Nezahualcóyotl Nicolás Nopaltepec
+	Ocampo Ocoyoacac Ocuilán Oro Otumba Otzoloapan Ozumba
+	Papalotla Pirámides Progreso
+	Rayón Rincón Río Romero	
+	Sal "San Antonio" "San Felipe" "San José" "San Martín" "San Mateo" "San Simón" "Santo Tomás" Soyaniquilpan Sultepec
+	Tecámac Tejupilco Temamatla Temascalapa Temascalcingo Temascaltepec Temoaya Tenancingo Tenango Teoloyucan Teotihuacán Tepetlaoxtoc Tepotzotlán Texcalyacac Texcoco Tezoyuca Tianguistenco Timilpan Tlalmanalco Tlalnepantla Tlatlaya Toluca Tonanitla Tonatico Tultepec Tultitlán
+	Valle "Valle de Bravo" "Villa de Allende" "Villa del Carbón" "Villa Guerrero" "Villa Victoria" 
+	Xalatlaco Xonacatlán
+	Zacazonapan Zacualpan Zaragoza Zinacantepec Zumpahuacán
+}

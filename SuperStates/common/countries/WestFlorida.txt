@@ -1,0 +1,133 @@
+#Country Name: West Florida
+
+graphical_culture = westerngfx
+
+color = { 0  20  140 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_advanced_third
+	north_american_line
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_lancers
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Abraham #0" = 5
+	"Albert  #0" = 5
+	"Andrew #0" = 5
+	"Bob #0" = 5
+	"Buddy #0" = 5
+	"Cary #0" = 5
+	"Charles Eugene" = 1 
+	"Charlie #0" = 5
+	"Claude #0" = 5
+	"Daniel #0" = 5
+	"David #0" = 10
+
+	"Doyle #0" = 5
+	"Edward #0" = 5
+	"Farris #0" = 5
+	"Francis #0" = 5
+	"Fred #0" = 5
+	"Fuller #0" = 5 
+	"George Franklin" = 10
+	"Harrison #0" = 5
+	"Haydon #0" = 5
+	"Henry #0" = 5
+	"James #0" = 5
+	"Jeb #0" = 5
+	"John #0" = 20
+	"Lawton #0" = 5
+	"LeRoy #0" = 5
+	"Madison #0" =5 
+	"Marcellus #0" = 5
+	"Millard #0" = 5
+	"Napoleon" = 1
+	"Ossian #0" = 5
+	"Park" = 1
+	"Reubin #0" = 5
+	"Richard #0" = 10
+	"Robert #0" = 10
+	"Sidney Johnston" = 1 
+	"Spessard " = 1
+	"Wayne #0" = 5
+	"William #0" = 15 
+	"William Dunn" = 1
+	"William Pope" = 1
+	"William Sherman" = 1
+}
+
+leader_names = {
+	Allison Askew
+	Bloxham Branch Broome Broward Bryant Burns Bush
+	Caldwell Call Carlton Catts Chiles Collins Cone Crist
+	Drew Duval
+	Eaton
+	Fleming
+	Gilchrist Graham
+	Hard Hardee Holland
+	Jackson Jennings Johns
+	Kirk
+	MacKay Martin Martinez Marvin McCarty Milton Mitchell Mixcon Moseley
+	Perry
+	Reed Reid
+	Scott Sholtz Stearsn
+	Trammell
+	Walker Warren
+}
+
+ship_names = {
+	Alachua
+	Baker Bay Benton Bloxham Bradford Brevard Broward
+	Calhoun Charlotte Citrus Clay Columbia
+	Dade "De Sota" Dixie Duval
+	Escambia
+	Flagler
+	Franklin
+	Gadsden Gilchrist Glades Gulf
+	Hamilton Hardee Hernado Highlands Hillsborough Holmes
+	Indian
+	Jackson
+	Jefferson
+	Lafayette Lake Lee "Leigh Read" Leon Levy Liberty
+	Madison Manatee Marion Martin Miami Monroe Mosquito
+	Nassau "New River"
+	Ocean Okaloosa Okeechobee Orange Osceola 
+	Palm "Palm Beach" Pasco Pinella Polk Putnam
+	"St. Johns" "St. Lucie" "Santa Rosa" Sarasota Seminole Sumter Suwannee
+	Taylor
+	Union
+	Volusia
+	Wakulla Walton Washington
+}
+
+fleet_names = {
+	"Florida Navy"
+	"Gulf Fleet"
+	"Miami Fleet"
+	"Seminole Squadron"
+}

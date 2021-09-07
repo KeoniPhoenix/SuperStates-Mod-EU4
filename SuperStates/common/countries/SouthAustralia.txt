@@ -1,0 +1,115 @@
+#Country Name: South Australia
+
+graphical_culture = westerngfx
+
+color = { 238 32 77 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	exploration_ideas
+	naval_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Archibald #0" = 5
+	"Arthur #0" = 5
+	"Boyle #0" = 5
+	"Charles #0" = 5
+	"Crawford #0" = 5
+	"David #0" = 5
+	"Dean #0" = 5
+	"Desmond #0" = 5
+	"Donald #0" = 5
+	"Francis #0" = 5
+	"Frank #0" = 5
+	"Frederick #0" = 5
+	"George #0" = 5
+	"Henry #0" = 15
+	"James #0" = 5
+	"Jay #0" = 5
+	"John #0" = 20
+	"Lionel #0" = 5
+	"Lynn #0" = 5
+	"Michael #0" = 5
+	"Richard #0" = 15
+	"Robert #0" = 15
+	"Steele #0" = 5
+	"Thomas #0" = 20
+	"Vaiben #0" = 5
+	"William #0" = 5
+}
+
+leader_names = {
+	Arnold Ayers
+	Baker Bannon Barwell Blyth Boucaut Bray Brown Butler
+	Cockburn Colton Corcoran
+	Downer Dunstan Dutton
+	Finniss
+	Gunn
+	Hall Hanson Hart Hill Holder
+	Jenkins
+	Kerin Kingston
+	Morgan
+	Olsen
+	Peake Playford Price
+	Rann Reynolds Richards
+	Solomon Strangways
+	Tonkin Torrens
+	Vaughan Verran
+	Walsh Waterhouse Weatherill
+}
+
+ship_names = {
+	Adelaide "Adelaide Hills" Alexandrina Anangu
+	Barmera Barossa Barunga Berri Brighton Burnside
+	Campbelltown Carrieton Ceduna "Clare Valley" Cleve "Coober Pedy" "The Coorong" "Copper Coast"
+	Elliston Enfield "Eyre Peninsula"
+	"Flinders Ranges" "Franklin Harbour"
+	Gawler Gerard "Gilbert Valley" Goyder Grant
+	"Kangaroo Island" Karoonda Kimba Kingston
+	Light Lucindale
+	Mallala Mallee Maralinga Marion Mitcham "Mount Barker" "Mount Gambier" "Mount Remarkable" Murray "Murray Bridge"
+	Naracorrte Nepabunna Norwood
+	Onkaparinga Orroroo
+	Paringa Payneham Peterborough Pitjantjatjara Playford "Port Adelaide" "Port Augusta" "Port Lincoln" "Port Pirie" Prospect
+	Renmark Robe "Roxby Downs"
+	Salisbury "St. Peters" "Streaky Bay"
+	Tatiara "Tea Tree Gully" Tjarutja
+	Unley
+	"Victor Harbour"
+	Wakefield Walkerville "Wattle Range" "West Torrens" Whyalla Wudinna
+	Yalata Yankalilla Yankunytjatjara "Yorke Peninsula"
+}
+
+army_names = {
+	"Adelaide Defense Group"
+	"South Australian Army"
+}
+
+fleet_names = {
+	"Adelaide Naval Guard"
+}

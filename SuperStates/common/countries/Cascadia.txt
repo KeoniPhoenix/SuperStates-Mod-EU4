@@ -1,0 +1,141 @@
+#Country Name: Cascadia
+
+graphical_culture = westerngfx
+
+color = { 0  92  0 }
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	exploration_ideas
+	plutocracy_ideas
+	defensive_ideas
+	administrative_ideas
+	economic_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Addison #0" = 5
+	"Albert #0" = 10
+	"Albin #0" = 0
+	"Alvan #0" = 5
+	"Arthur #0" = 5
+	"Barbara #0" = -5
+	"Benjamin #0" = 5
+	"Booth #0" = 1
+	"Charles #0" = 10
+	"Christine #0" = -5
+	"Clarence #0" = 5
+	"Daniel #0" = 5
+	"Dixy #0" = -1
+	"Douglas #0" = 5
+	"Earl #0" = 5
+	"Edward #0" = 5
+	"Elisha #0" = 10
+	"Elmo #0" = 0
+	"Ernest #0" = 1
+	"Eugene #0" = 5
+	"Frank #0" = 5
+	"Gary #0" = 5
+	"George #0" = 20
+	"Henry #0" = 5
+	"Isaac #0" = 10
+	"James #0" = 5
+	"Jay #0" = 10
+	"John #0" = 20
+	"Joseph #0" = 5
+	"Julius #0" = 5
+	"Kintzing #0" = 0
+	"La Fayette #0" = 0
+	"LaFayette #0" = 0
+	"Louis #0" = 5
+	"Marion #0" = 5
+	"Mark #0" = 5
+	"Marshall #0" = 5
+	"Michael #0" = 5
+	"Miles #0" = 5
+	"Monrad #0" = 1
+	"Neil #0" = 5
+	"Oswald #0" = 5
+	"Paul #0" = 5
+	"Richard #0" = 5
+	"Robert #0" = 10
+	"Roland #0" = 1
+	"Samuel #0" = 5
+	"Stephen #0" = 5
+	"Sylvester #0" = 5
+	"Theodore #0" = 10
+	"Thomas #0" = 5
+	"Victor #0" = 5
+	"Walter #0" = 5
+	"Watson #0" = 5
+	"William #0" = 20
+	"Zenas #0" = 0
+}
+
+leader_names = {
+	Abernethy Atiyeh
+	Benson Bowerman
+	Chadwick Chamberlain Cole Cosgrove Curry
+	Davis
+	Evans
+	Ferry Flanders
+	Gaines Gardern Geer Gholson Gibbs Goldschmidt Gregoire Grover
+	Hall Hart Hartley Hatfield Hay Holmes
+	Inslee
+	Kitzhaber Kulongoski
+	Lane Langlie Lister Locke Lord Lowry
+	Martin McBride McCall McGraw McKay McMullen Mead Meier Moody Moore
+	Newell Norblad
+	Olcott
+	Patterson Pennoyer Pickering Pierce Prichette
+	Ray Roberts Rogers Rosellini
+	Salomon Semple Smith Snell Spellman Sprague  quire Stevens Straub
+	Thayer
+	Wallace Wallgren West Whiteaker Withycombe Woods
+}
+
+ship_names = {
+	Adams Asotin
+	Baker Benton "Big Bend" Buchanan
+	Chehalis Chelan Clackamas Clallam Clark Clatsop Columbia Coos Coulee Cowlitz Curry
+	Deschutes Douglas
+	Ferguson Ferry Franklin
+	Garfield Gilliam Grant "Grays Harbor"
+	Harney "Hood River"
+	Island
+	Jackson Jefferson Josephine
+	King Kitsap Kittias Klamath Klickitat
+	Lake Lane Lewis Lincoln Linn
+	Madison Malheur Marion Marrow Mason McKinley Multnomah
+	Okanogan
+	Pacific Palouse "Pend Oreille" Pierce Polk Portland
+	Quillehuyte
+	Salem "San Juan" Sawamish Sherman Skagit Skamania Slaughter Snohomish Spokane Steptoe Stevens
+	Tillamook Thurston
+	Umatilla Umpqua Union
+	Vancouver
+	Wahkiakum "Walla Walla" Wallowa Wasco Washington Whatcom Wheeler Whitman
+	Yakima Yamhill
+}

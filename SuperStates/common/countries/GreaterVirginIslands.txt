@@ -1,0 +1,94 @@
+#Country Name: Greater Virgin Islands
+
+graphical_culture = westerngfx
+
+color = { 255  144  107 }
+
+historical_idea_groups = {
+	defensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Alexander #0" = 5
+	"Archibald #0" = 5
+	"Charles #0" = 15
+	"Cyril #0" = 1
+	"Edin #0" = 1
+	"Henry #0" = 5
+	"James #0" = 5
+	"John #0" = 10
+	"Joseph #0" = 5
+	"Juan #0" = 5
+	"Lawrence #0" = 5
+	"Martin #0" = 5
+	"Melvin #0" = 1
+	"Morris #0" = 5
+	"Paul #0" = 5
+	"Philip #0" = 5
+	"Ralph #0" = 5
+	"Robert #0" = 10
+	"Roy #0" = 5
+	"Sumner #0" = 1
+	"Waldo #0" = 1
+	"Walter #0" = 5
+	"William #0" = 5
+}
+
+leader_names = {
+	Alexander
+	Castro Claunch Cramer
+	"de Jongh"
+	Evans
+	Farrelly
+	Gordon
+	Harwood Hastie Herrick Hough
+	King Kittelle
+	Lovett Luis
+	Merwin
+	Oliver Oman
+	Paiewonsky Pearson Pollock
+	Scheider
+	Trench Turnbull
+	Williams
+}
+
+ship_names = {
+	"Anna's Hope"
+	Caribbean "Charlotte Amalie" Central Christiansted "Coral Bay" "Cruz Bay"
+	"East End"
+	Frederiksted
+	Hurricane
+	Leeward
+	Northcentral Northside Northwest
+	"Sion Farm" Southcentral Southside Southwest "St. Croix" "St. John" "St. Thomas"
+	Tropical Tutu
+	"Virgin Islands"
+	"Water Island" "West End"
+}

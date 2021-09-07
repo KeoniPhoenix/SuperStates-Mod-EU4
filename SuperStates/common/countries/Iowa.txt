@@ -1,0 +1,114 @@
+#Country Name: Iowa
+
+graphical_culture = westerngfx
+
+color = { 0  136  116 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	religious_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 5
+	"Ansel #0" = 1
+	"Beryl #0" = 5
+	"Bourke #0" = 1
+	"Buren #0" = 1
+	"Chet #0" = 1
+	"Clyde #0" = 5
+	"Cyrus #0" = 1
+	"Daniel #0" = 5
+	"Francis #0" = 5
+	"Frank #0" = 5
+	"George #0" = 10
+	"Harold #0" = 1
+	"Hershel #0" = 1
+	"Horace #0" = 1
+	"James #0" = 10
+	"John #0" =15
+	"Joshua #0" =  5
+	"Leo #0" = 10
+	"Leslie #0" = 1
+	"Nathan #0" = 5
+	"Nelson #0" = 5
+	"Norman #0" = 1
+	"Ralph #0" = 5
+	"Robert #0" = 20
+	"Samuel #0" = 10
+	"Stephen #0" = 5
+	"Terry #0" = 5
+	"Thomas #0" = 5
+	"Warren #0" = 5
+	"Wiliam #0" = 20
+}
+
+leader_names = {
+	Beardsley Blue Boies Branstad Briggs
+	Carpenter Carroll Chambers Clarke Culver Cummins
+	Drake
+	Elthon Erbe
+	Fulton
+	Garst Gear Grimes
+	Hammill Harding Hempstead Herring Hickenlooper Hoegh Hughes
+	Jackson
+	Karschel Kendall Kirkwood
+	Larrabee Loveless Lowe Lucas
+	Merrill
+	Newbold
+	Ray
+	Shaw Sherman Stone
+	Turner
+	Vilsack
+	Wilson
+}
+
+ship_names = {
+	Adair Adams Allamakee Appanoose Audubon
+	Benson "Black Hawk" Boone Bremer Buchanan "Buena Vista" Butler
+	Calhoun Carroll Cass Cedar "Cerro Gordo" Cherokee Chickasaw Clarke Clay Clayton Clinton Crawford
+	Dallas Davis Decatur Delaware "Des Moines" Dickinson Dubuque
+	Emmett
+	Fayette Floyd Franklin Fremont
+	Greene Grundy Guthrie
+	Hamilton Hancock Hardin Harrison Henry Howard Humboldt
+	Ida Iowa
+	Jackson Jasper Johnson Jones
+	Keokuk Kossuth
+	Lee Linn Louisa Lucas Lyon
+	Madison Mahaska Marion Marshall Mills Mitchell Monona Monroe Montgomery Muscatine
+	O'Brien Osceola
+	Page "Palo Alto" Plymoth Pocahantas Polk Pottawattamie Poweshiek
+	Ringgold
+	Sac Scott Shelby Sioux Story
+	Tama Taylor
+	Union
+	Van Buren
+	Wapello Warren Washington Wayne Webster Winnebago Winneshiek Woodbury Worth Wright
+}

@@ -1,0 +1,115 @@
+#Country Name: New Mexico
+
+graphical_culture = westerngfx
+
+color = { 211  154  114 } #Rustic Adobe
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	innovativeness_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Abraham #0" = 1
+	"Andrew #0" = 5
+	"Arthur #0" = 10
+	"Bradford #0" = 5
+	"Bruce #0" = 5
+	"Charles #0" = 5
+	"Clyde #0" = 5
+	"David #0" = 10
+	"Donaciano #0" = 1
+	"Edmund #0" = 1
+	"Edwin #0" = 5
+	"Ezequiel #0" = 1
+	"Garrey #0" = 1
+	"Gary #0" = 5
+	"George #0" = 5
+	"Henry #0" = 5
+	"Herbert #0" = 5
+	"James #0" = 10
+	"Jerry #0" = 5
+	"John #0" = 20
+	"Lewis #0" = 5
+	"Lionel #0" = 5
+	"Marsh #0" = 5
+	"Merritt #0" = 1
+	"Miguel #0" = 1
+	"Octaviano #0" = 1
+	"Richard #0" = 5
+	"Robert #0" = 5
+	"Samuel #0" = 5
+	"Stephen #0" = 5
+	"Sterling #0" = 5
+	"Susana #0" = -5
+	"Thomas #0" = 10
+	"Toney #0" = 1
+	"Washington #0" = 1
+	"William #0" = 20
+}
+
+leader_names = {
+	Anaya Apodaca Axtell
+	Bent Bolack
+	Calhoun Campbell Cargo Carruthers Connelly Curry
+	"de Baca" Dempsey Dillon
+	Giddings
+	Hagerman Hannett Hinkle Hockenhull
+	Johnson
+	Kearny King
+	Lane Larrazola Lindsey
+	Mabry Martinez McDonald Mechem Meriwether Miles Mills Mitchell Munroe
+	Otero
+	Pile Price Prince
+	Rencher Richardson Ross
+	Seligman Sheldon Simms
+	Thornton Tingley
+	Vigil
+	Wallace Washington
+}
+
+ship_names = {
+	Alamogordo Albuquerque
+	Bernalillo
+	Cañadian Carlsbad Catron Chaves Cibola Colfax Curry
+	"De Baca" "Doña Ana"
+	Eddy
+	Grant Guadalupe
+	Harding Hidalgo
+	"Las Cruces" Lea Lincoln "Los Alamos" Luna
+	McKinley Mora
+	Otero
+	Quay
+	"Rio Arriba" "Rio Grande" Roosevelt Roswell
+	Sandoval "San Juan" "San Miguel" "Santa Fe" Sierra "Silver City" Socorro
+	Torrance "Truth or Consequences"
+	Union
+	Valencia
+	"White Sands"
+}

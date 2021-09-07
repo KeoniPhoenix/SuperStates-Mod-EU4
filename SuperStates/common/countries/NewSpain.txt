@@ -1,0 +1,145 @@
+#Country Name: New Spain
+
+graphical_culture = westerngfx
+
+color = { 236 223 41 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Aaron #0" = 5
+	"Abel #0" = 5
+	"Agustin #0" = 5
+	"Alberto #0" = 5
+	"Alejandro #0" = 5
+	"Alfonso #0" = 20
+	"Anastasio #0" = 5
+	"Andrés #0" = 5
+	"Ángel #0" = 5
+	"Antono #0" = 5
+	"Arnulfo #0" = 5
+	"Augustine #0" = 10
+	"Benito #0" = 5
+	"Carlos #0" = 10
+	"Celestino #0" = 5
+	"Cesar #0" = 5
+	"Cosme #0" = 5
+	"Crisóforo #0" = 5
+	"Cuauhtémoc #0" = 5
+	"Edwardo #0" = 5
+	"Enrique #0" = 5
+	"Ernesto #0" = 5
+	"Federico #0" = 5
+	"Fernando #0" = 5
+	"Francis #0" = 15
+	"Francisco #0" = 20
+	"Gabino #0" = 5
+	"Gonzalo #0" = 5
+	"Guillermo #0" = 5
+	"Heriberto #0" = 5
+	"Ignacio #0" = 15
+	"Javier #0" = 5
+	"Joaquin #0" = 10
+	"John #0" = 15
+	"Jose #0" = 20
+	"José #0" = 20
+	"Joseph #0" = 5
+	"Juan #0" = 20
+	"Justin #0" = 5
+	"Lamberto #0" = 5
+	"Lorenzo #0" = 5
+	"Luis #0" = 10
+	"Magana #0" = 5
+	"Manuel #0" = 20
+	"Marcelo #0" = 5
+	"Mariano #0" = 5
+	"Melchor #0" = 5
+	"Miguel #0" = 20
+	"Nicolas #0" = 4
+	"Octavio #0" = 5
+	"Oscar #0" = 5
+	"Pedro #0" = 20
+	"Ponciano  #0" = 5
+	"Porfirio #0" = 5
+	"Primo #0" = 5
+	"Protasio #0" = 5
+	"Rafael #0" = 5
+	"Ramon #0" = 15
+	"Ramón #0" = 15
+	"Rómulo #0" = 5
+	"Rosario #0" = 5
+	"Samuel #0" = 5
+	"Stephen #0" = 5
+	"Thomas #0" = 5
+	"Tiburcio #0" = 5
+	"Valentín #0" = 5
+	"Vicente #0" = 15
+	"Vito #0" = 5
+	"William #0" = 5
+	"Winfield #0" = 5
+	
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilera Aguirre Alcerreca Alessio Ángel Aramberri Arriaga Azcarate
+	Bonilla Breceda Bustamante Butler
+	Cabral Camacho Campero Canalizo Cárdenas Casanova Casas Cerda Cervantes Chao Chavero Corona Corral Crisostomo Cuellar Curiel
+	"de la Mata" "de Landa" "del Rio" "del Villar" Díaz Dominguez
+	Ebrard Encinas Espinosa Estrada Fagoaga Fernado Fernandez Fernández Flores Frías
+	Garcia García Gasca Gomez Gómez Gonzalez González Guadalupe Hernandez Hinojosa
+	Ibáñez Icaza Ignacio Inclan Island Itrubide
+	Jara Joaquín Jose José Juarez
+	Kearny
+	Lebrija Lopez López 
+	Manuel Maria María Martinez Mateos Mayor Molinos Montiel Múzquiz
+	Navarro
+	"O'Hora"
+	Pacheco Padilla Parrodi Paz Pérez Ramon Ramos Rayon Rebollar Reyes Rincon Rincón Rivas Rivero Robles Rodriguez Romero Ross Rueda
+	Saenz Scott Serrano Siurob
+	Tagle Terreros Torrin
+	Uruchurtu
+	Velez Vicente Vieyra Villa
+	Zarate
+}
+
+ship_names = {
+	"Álvaro Obregón" Azacpotzalco
+	Coyoacán Cuajimalpa Cuauhtémoc
+	"Gustavo A. Madero"
+	Iztacalco Iztapalapa
+	"Magdalena Contreras" "Miguel Hidalgo" "Milpa Alta"
+	Tláhuac Tlalpan
+	"Venustiano Carranza"
+	Xochimilco
+}

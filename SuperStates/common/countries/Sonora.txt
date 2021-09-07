@@ -1,0 +1,105 @@
+#Country Name: Sonora
+
+graphical_culture = westerngfx
+
+color = { 212 175 55 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abelardo #0" = 5
+	"Adolfo #0" = 5
+	"Alejandro #0" = 5
+	"Alejo #0" = 5
+	"Álvaro #0" = 5
+	"Anselmo #0" = 5
+	"Armando #0" = 5
+	"Carlos #0" = 5
+	"Eduardo #0" = 5
+	"Faustino #0" = 5
+	"Fausto #0" = 5
+	"Francisco #0" = 5
+	"Guillermo #0" = 5
+	"Horacio #0" = 5
+	"Ignacio #0" = 5
+	"Luis #0" = 5
+	"Manlio #0" = 5
+	"Mario #0" = 5
+	"Plutarco #0" = 5
+	"Ramón #0" = 5
+	"Rodolfo #0" = 10
+	"Román #0" = 5
+	"Samuel #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Bay Beltrones Biebrich Bours
+	Carrillo
+	"de la Huerta"
+	Elías Encinas
+	Félix
+	López
+	Macías Morúa
+	Obregón Ocaña
+	Padrés
+	Ramos Rodríguez
+	Sobarzo Soto
+	Topete
+	Yocupicio
+}
+
+ship_names = {
+	Aconchi Álamos Altar Arivechi Arizpe Atil "Auga Preita"
+	Bacadéhuachi Bacanora Bacerac Bacoachi Bácum Banámichi Baviácora Bavispe Benito Benjamín
+	Caborca Cajeme Calles Cananea Carbó Chico Cucurpe Cueva
+	Divisaderos
+	Elías Empalme Etchojoa
+	Fronteras
+	García Granados Grande Guaymas
+	Hermosillo Hidalgo Hill Horcasitas Huachinera Huásabas Huatabampo Huépac
+	Imuris
+	Jesús Juárez
+	Kino
+	"La Colorada"
+	Magalena Mazatán Moctezuma Muerto
+	Naco Nácori Nacozari Navojoa Nogales
+	Onavas Opodepe Oquitoa
+	Pesqueira Pitiquito Plutarco "Puerto Peñasco"
+	Quiriego
+	Rayón Río "Río Colorado" Rosarui
+	Sahuaripa "San Filipe" "San Ignacio" "San Javier" "San Luis" "San Miguel" "San Pedro" "Santa Ana" "Santa Cruz" Sáric Soyopa Suaqui
+	Tepache Tesopaco Trincheras Tubutama
+	Ures
+	Yécora 
+}

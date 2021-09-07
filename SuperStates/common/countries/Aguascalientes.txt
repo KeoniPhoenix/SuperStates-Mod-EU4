@@ -1,0 +1,101 @@
+#Country Name: Aguascalientes
+
+graphical_culture = westerngfx
+
+color = { 41 36 180 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Alberto #0" = 20
+	"Alejandro #0" = 5
+	"Aurelio #0" = 5
+	"Benito #0" = 5
+	"Benjamín  #0" = 10
+	"Carlos #0" = 15
+	"Edmundo #0" = 5
+	"Enrique #0" = 10
+	"Esteban #0" = 5
+	"Felipe #0" = 15
+	"Francisco #0" = 15
+	"Guadalupe #0" = 5
+	"Ignacio #0" = 5
+	"Isaac #0" = 5
+	"Jesús #0" = 15
+	"Joaquín  #0" = 5
+	"José  #0" = 20
+	"Juan #0" = 10
+	"Luis #0" = 10
+	"Manuel #0" = 10
+	"Maria #0" = -5
+	"Mariano #0" = 5
+	"Miguel #0" = 10
+	"Otto #0" = 5
+	"Pedro #0" = 5
+	"Rafael #0" = 15
+	"Rodolfo #0" = 5
+	"Rodrigo #0" = 5
+	"Victorino #0" = 5
+}
+
+leader_names = {
+	Alvarado Arellano Armando Ávila Azpeitia
+	Barberena Barrón
+	Carpio Chávez Chico Cosio
+	Dávila "de la Mora" "de Lara" "del Valle" Díaz
+	Esparza
+	Fuentes
+	Gámez García Gómez González Granados Guel Güinchard
+	Hermosillo
+	Landeros León Lozano
+	Maria Medina Mena
+	Nieto
+	Olivares Ortega Osorio
+	Palomino
+	Quevedo
+	Reyes Rincón Rodríguez Ruíz
+	Sagredo
+	Terán
+	Vázquez
+}
+
+ship_names = {
+	Aguasclaientes Arteaga Asientos
+	Calvillo Cosío
+	"El Llano"
+	Gracia
+	Jesús "Jesús María"
+	María
+	Pabellón
+	Rincón Romo Romos 
+	"San Francisco" "San José"
+	Tepezalá
+}

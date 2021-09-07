@@ -1,0 +1,126 @@
+#Country Name: Tejas
+
+graphical_culture = westerngfx
+
+#color = { 186  70  58 }	#Original Color for Mod
+color = { 4  144  178 }		#Vic2 Color
+
+historical_idea_groups = {
+	offensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	plutocracy_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	texas_rangers
+	north_american_lancers
+}
+
+monarch_names = {
+	"Allan #0" = 5
+	"Andrew #0" = 5
+	"Ann #0" = -5
+	"Anson #0" = 5
+	"Beauford #0" = 5
+	"Charles #0" = 5
+	"Coke #0" = 1
+	"Daniel #0" = 5
+	"David #0" = 5
+	"Dolph #0" = 0
+	"Edmund #0" = 5
+	"Edward #0" = 5
+	"Elisha #0" = 10
+	"Flectcher #0" = 5
+	"Francis #0" = 5
+	"George #0" = 10
+	"Hardin #0" = 5
+	"Henry #0" = 5
+	"James #0" = 20
+	"John #0" = 10
+	"Joseph #0" = 5
+	"Lawrence #0" = 2
+	"Lee #0" = 5
+	"Mark #0" = 5
+	"Mirabeau #0" = 5
+	"Miriam #0" = -5
+	"Oran #0" = 5
+	"Oscar #0" = 5
+	"Patrick #0" = 5
+	"Pendleton #0" = 5
+	"Peter #0" = 5
+	"Preston #0" = 5
+	"Price #0" = 5
+	"Richard #0" = 15
+	"Ross #0" = 5
+	"Samuel #0" = 10
+	"Stephen #0" = 5
+	"Thomas #0" = 5
+	"William #0" = 10
+}
+
+leader_names = {
+	Allred Austin
+	Bell Briscoe Burnet Bush
+	Campbell Clark Clements Coke Colquitt Connally Culberson
+	Daniel Davis
+	Ferguson
+	Hamilton Henderson Hobby Hogg Houston Hubbard
+	Ireland
+	Jester Jones
+	Lamar Lanham Lubbock
+	Moody Murrah
+	Neff
+	O'Daniel
+	Pease Perry
+	Richards Roberts Robinson Ross Runnels
+	Sayers Shivers Smith Sterling Stevenson Stockdale
+	Throckmorton
+	White Wood
+}
+
+ship_names = {
+	Anderson Andrews Angelina Aransas Archer Armstrong Atascosa Austin
+	Bailey Bandera Bastrop Baylor Bee Bell Bexar Blanco Borden Bosque Bowie Brazoria Brazos Brewster Briscoe Brooks Brown Buchel Burleson Burnet
+	Caldwell Calhoun Cameron Camp Carson Cass Castro Chambers Cherokee Childress Clay Cochran Coke Coleman Collin Collingsworth Colorado Cormal Comanche Concho Cooke Coryell Cottle Crane Crockett Crosby Culberson
+	Dallam Dallas Dawson "Deaf Smith" Delta Denton DeWitt Dickens Dimmit Donley Duval
+	Eastland Ector Edwards Ellis "El Paso" Encinal Erath
+	Falls Fannin Fayette Fisher Floyd Foard Foley "Fort Bend" Franklin Freestone Frio
+	Gaines Galveston Garza Gillespie Glasscock Goliad Gonzales Gray Grayson Greer Gregg Grimes Guadalupe
+	Hale Hall Hamilton Hansford Hardeman Hardin Harris Harrison Hartley Haskell Hays Hemphill Henderson Hidalgo Hill Hockley Hood Hopkins Houston Howard Hudspeth Hunt Hutchinson
+	Irion
+	Jack Jackson Jasper "Jeff Davis" Jefferson "Jim Hogg" "Jim Wells" Johnson Jones
+	Karnes Kaufman Kendall Kenedy Kent Kerr Kimble Kinney Kleberg Knox
+	Lamar Lamb Lampasas "La Salle" Lavaca Lee Leon Liberty Limestone Lipscomb "Live Oak" Llano Loving Lubbock Lynn
+	McCulloch McLennan McMullen Madison Marion Martin Mason Matagorda Maverick Medina Menard Midland Milam Mills Mitchell Montague Montgomery Moore Morris Motley
+	Nacogdoches Navarro Newton Nolan Nueces
+	Ochiltree Oldham
+	"Palo Pinto" Panola Parmer Pecos Perdido Potter Presidio
+	Rains Randall Reagan Real "Red River" Reeves Refugio Roberts Robertson Rockwall Runnels Rusk
+	Sabine "San Augustine" "San Jacinto" "San Patricio" "San Saba" "Santa Fe" Schleicher Scurry Shackelford Shelby Sherman Smith Somervell Starr Stephens Sterling Stonewall Sutton Swisher
+	Tarrant Taylor Terrell Terry Throckmorton Titus "Tom Green" Travis Trinity Tyler
+	Upshur Upton Uvalde
+	"Val Verde" "Van Zandt" Victoria
+	Walker Waller Ward Washington Webb Wegefarth Wharton Wheeler Wichita Wilbarger Willacy Williamson Wilson Winkler Wise Wood Worth
+	Yoakum Young
+	Zapata Zavala
+}

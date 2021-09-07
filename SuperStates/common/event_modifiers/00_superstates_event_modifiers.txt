@@ -1,0 +1,449 @@
+#SUPERSTATES EVENT MODIFIERS
+
+##PERMANENT PROVINCE MODIFIERS 
+###SuperStates Mod River Estuaries
+
+#San Francisco
+sfbay_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#San Luis Rio Colorado, Sonora
+colorado_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Baltimore
+chesapeake_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Virginia
+hampton_roads_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Sydney, Australia
+port_jackson_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Boston
+charles_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Savannah, Georgia
+savannah_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Mobile
+mobile_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Houston
+galveston_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Honolulu
+pearl_harbor_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Miami, Florida
+biscayne_bay_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+#Providence, Rhode Island
+narragansett_bay_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+#Essex, New Jersey
+passaic_river_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+#Guantanamo Bay, Cuba
+guantanamo_bay_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+#Perth, Western Australia
+swan_river_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Seattle, Washington
+puget_sound_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Chicago, Illinois
+lake_michigan_port_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Jacksonville, Florida
+apalachicola_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Tallahassee, Florida
+st_johns_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Commented modifiers below are from the default game and will not be changed but are listed for completeness.
+
+#Portland
+#columbia_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+##Delaware
+#delaware_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#New Orleans
+#mississippi_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#Northeast Mexico
+#rio_grande_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#Quebec City
+#saint_lawrence_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#New York City
+#hudson_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#Churchill, Manitoba
+#nelson_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#Cities for Important Centers of Trade (limited to cities above 150000 pop and one per state and not bordering another province with COT modifier)
+
+#Los Angeles
+#Phoenix (inland)
+#Chicago (inland)
+#Houston
+#New York City
+#Boston (pop exception)
+#Seattle (pop exception)
+#Toronto (inland)
+#Montreal (inland)
+#Philadelphia
+#Tijauna
+#Mexico City (inland)
+#Washington, DC (pop exemption) (inland)
+#Melborne (pop exemption)
+#Sydney (pop exemption)
+#Honolulu (pop exemption)
+
+#Hudson Strait Sound Toll
+
+hudson_strait_toll = {
+	province_trade_power_value = 20
+}
+
+#Soo Locks
+
+soo_locks_toll = {
+	province_trade_power_value = 5
+}
+
+#Welland Canal
+
+welland_canal_toll = {
+	province_trade_power_value = 5
+}
+
+#Erie Canal
+
+erie_canal_albany_toll = {
+	province_trade_power_value = 5
+}
+
+erie_canal_buffalo_toll = {
+	province_trade_power_value = 5
+}
+
+#Death Valley Attrition
+death_valley_modifier = {
+	local_hostile_attrition = 1.5
+}
+
+#####################################################################
+##DECISION TRIGGERED MODIFIERS
+
+###UNIFORM CULTURE DECISIONS
+common_culture_decision = {
+	stability_cost_modifier = 0.40
+	global_tax_modifier = -0.40
+	technology_cost = 0.40
+}
+
+united_culture_decision = {
+	stability_cost_modifier = 0.20
+	global_tax_modifier = -0.20
+	technology_cost = 0.20
+}
+
+#####################################################################
+##EVENT TRIGGERED MODIFIERS
+
+##FURRY EVENTS
+#None
+
+##FLAVOR Events
+###Flavor Events Alabama
+jubilee_good = {
+	local_tax_modifier = 0.10
+}
+
+jubilee_bad = {
+	local_tax_modifier = -0.10
+}
+
+###Flavor Events Vermont
+cop_meow = {
+	local_tax_modifier = 0.25
+}
+
+cop_liter = {
+	local_tax_modifier = -0.25
+	local_unrest = 1
+}
+
+#Flavor Events New York
+gold_heist_stopped = {
+	local_tax_modifier = 0.10
+	local_production_efficiency = 0.10
+}
+
+#American Southwest Events
+gunfight_disturbance = {
+	local_production_efficiency = -0.10
+}
+
+lincoln_county_war_regulators = {
+	local_unrest = 5
+	local_tax_modifier = -0.10
+}
+
+lincoln_county_war_monopoly = {
+	global_unrest = 15
+	global_tax_modifier = 0.10
+}
+
+# Texas Events
+texans_displaced = {
+	global_unrest = 1
+	tolerance_own = -1
+}
+
+german_influx = {
+	development_cost = -0.05
+	idea_cost = -0.10
+}
+
+german_development = {
+	local_development_cost = -0.10
+	local_build_cost = -0.15
+	local_unrest = -1
+}
+
+adelsverein_refused = {
+	tolerance_own = 2
+	global_unrest = -1
+}
+
+#Flavor Events California
+s_earthquake = {
+	local_production_efficiency = -0.33
+	province_trade_power_modifier = -0.33
+	local_tax_modifier = -0.66
+}
+
+demolition_man = {
+	local_tax_modifier = -0.10
+	local_unrest = -5
+}
+
+nakatomi_plaza = {
+	local_production_efficiency = -0.10
+}
+
+#Flavor Events North Carolina
+croatoan_aliens = {
+	global_unrest = 1
+	mil_tech_cost_modifier = -0.1
+}
+
+croatoan_state_pride = {
+	land_morale = 0.15
+	years_of_nationalism = 5
+}
+
+croatoan_novel = {
+	global_tax_modifier = 0.05
+}
+
+#Tropical Cyclone
+tropical_cyclone_damage_mild = {
+	local_tax_modifier = -0.10
+	local_build_cost = 0.10
+	local_production_efficiency = -0.10
+}
+
+tropical_cyclone_damage_severe = {
+	local_tax_modifier = -0.25
+	local_build_cost = 0.25
+	local_production_efficiency = -0.25
+}
+
+#Hurricane
+hurricane_full_repairs = {
+	local_development_cost = -0.1
+}
+
+hurricane_minor_repairs = {
+	local_tax_modifier = -0.1
+}
+
+hurricane_no_repairs = {
+	local_development_cost = 0.15
+	local_tax_modifier = -0.2
+	local_unrest = 5
+}
+
+#Governor Affair
+governor_affair = {
+	prestige = -0.5
+	diplomatic_reputation = -1
+}
+
+#Sports Events
+#hockey_modifier = {
+#	regiment_recruit_speed = -0.10
+#}
+
+#Alaskan Epidemic
+medicine_run = {
+	local_production_efficiency = -0.10
+	local_tax_modifier = -0.10
+}
+
+#Alaskan Resource Discovery
+tax_them_before_they_leave = {
+	local_tax_modifier = 0.20
+}
+
+#Landslide event modifier
+landslide_damage = {
+	local_tax_modifier = -0.10
+	local_production_efficiency = -0.10
+}
+
+#Massachusetts Expanding Trade Modifier | MISSION MODIFIER
+mss_expanding_trade = {
+	local_tax_modifier = 0.10
+}
+
+#Amish
+amish_accepted = {
+	tolerance_heretic = 2
+}
+
+amish_migration = {
+	local_development_cost = -0.10
+	local_culture_conversion_cost = 0.50 # Purposely positive
+}
+
+#Affair
+governor_affair = {
+	#TO BE FILLED IN
+}
+
+#Texas Germans
+german_influx = {
+	tolerance_heretic = 2
+}
+
+german_development = {
+	local_development_cost = -0.10
+	local_culture_conversion_cost = 0.50 # Purposely positive
+}
+
+# flo_consolidate_florida_mission = {
+	# #TO BE FILLED IN
+# }
+
+# flo_control_the_mississippi_modifier = {
+	# #TO BE FILLED IN
+# }
+
+# flo_castillo_de_san_marcos_modifier = {
+	# #TO BE FILLED IN
+# }
+
+#California
+cal_gold_mining  = {
+	trade_goods_size = 0.20
+}
+
+cal_mil_silicon = {
+	mil_tech_cost_modifier = -0.05
+}
+
+cal_dip_silicon = {
+	dip_tech_cost_modifier = -0.05
+}
+
+cal_adm_silicon = {
+	adm_tech_cost_modifier = -0.05
+}
+
+cal_inno_silicon = {
+	innovativeness_gain = 0.33
+}

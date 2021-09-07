@@ -1,0 +1,107 @@
+#Country Name: Jalisco
+
+graphical_culture = westerngfx
+
+color = { 35 79 141 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustín #0" = 5
+	"Alberto #0" = 10
+	"Antonio #0" = 5
+	"Aristóteles #0" = 5
+	"Basilio #0" = 5
+	"Carlos #0" = 5
+	"Clemente #0" = 5
+	"Daniel #0" = 5
+	"Emilio #0" = 5
+	"Enrique #0" = 5
+	"Everardo #0" = 5
+	"Flavio #0" = 5
+	"Francisco #0" = 20
+	"Gerardo #0" = 5
+	"Guillermo #0" = 5
+	"Ignacio #0" = 5
+	"Jose #0" = 5
+	"José #0" = 15
+	"Juan #0" = 10
+	"Marcelino #0" = 5
+	"Margarito #0" = 5
+	"Ruperto #0" = 5
+	"Saturnino #0" = 5
+	"Sebastián #0" = 5
+	"Silvano #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Allende Álvarez
+	Badillo Barba Benitez
+	Cárdenas Coronado Cossío
+	"de Dios" "de la Mora"
+	García Gil González Guadalupe
+	María Medina Muñóz
+	Orozco
+	Ramírez Rivera Rodríguez Romero
+	Sandoval Sepúlveda Solís
+	Tolentino Topete
+	Valadez
+	Yáñez
+}
+
+ship_names = {
+	Acatic Acatlán Ahualulco Alejandría Allende Alto Amacueca Amatitán Ameca Arandas Atemajac Atengo Atenguillo Atotnilco Autlán Ayotlán Ayutla
+	Barragán Barranca Bolaños Brizuela "Buenos Aires"
+	"Cabo Corrientes" Cañadas Casimiro Castillo Cerro Chapala Chimaltitán Chiquilistlán Cihuatlán Cocula Colotlán Concepción Corona Cuautitlán Cuautla Cuquío
+	Degollado Díaz Dolores
+	Ejutla "El Arsenal" "El Grullo" "El Limón" "El Salto" Encarnación Etzatlán
+	Farías
+	Gallo García Gómez González Gordiano Gordo Grande Guachinango Guadalajara
+	Hidalgo Hostotipaquillo Huejúcar Huejuquilla
+	Ixtlahuacán
+	Jalisco Jalostotitlán Jamay Jesús Jilotlán Jocotepec Juanacatlán Juárez Juchitlán
+	"La Barca" "La Huerta" "La Manzanilla" "La Paz" Lagos "Los Angeles"
+	Magdalena María Mascota Mazamitla Membrillos Mercado Mexticacan Mezquitic Mixtlán Montenegro Morelos Moreno
+	Navarro
+	Obregón Ocotlán Oeste Ojuelos Oro
+	Píhuamo Poncitlán "Puerto Vallarta"
+	Quitupan
+	Rey Río
+	"San Antonio" "San Cristobal" "San Diego" "San Gabriel" "San Ignacio" "San Juan" "San Juanito" "San Julián" "San Marcos" "San Martín" "San Miguel" "San Sebastián" "Santa María" Sayula
+	Tala Talpa Tamazula Tapalpa Tecalitlán Techaluta Tecolotlán Tenamaxtlán Teocuitatlán Tepatitlán Tequila Teuchitlán Tizapan Tlajomulco Tlaquepaque Tolimán Tomatlán Tonalá Tonaya Tonila Torres Totatiche Tototlán Tula Tuxcacuesco Tuxcueca Tuxpan
+	Unión
+	Vadillo "Valle de Guadalupe" "Valle de Juárez" "Villa Corona" "Villa Guerrero" "Villa Hildago" "Villa Purificación"
+	Yahualica
+	Zacoalco Zapopan Zapotiltic Zapotitlán Zapotlán Zapotlanejo Zuñiga
+}

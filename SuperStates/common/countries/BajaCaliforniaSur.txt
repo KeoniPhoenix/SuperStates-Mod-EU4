@@ -1,0 +1,79 @@
+#Country Name: Baja California Sur
+
+graphical_culture = westerngfx
+
+color = { 250 125 125 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustín #0" = 10
+	"Alberto #0" = 5
+	"Angel #0" = 5
+	"Bonifacio #0" = 5
+	"Félix  #0" = 5
+	"Francisco #0" = 5
+	"Guillermo #0" = 5
+	"Hugo #0" = 5
+	"Juan #0" = 5
+	"Leonel #0" = 5
+	"Lucino #0" = 5
+	"Marcos #0" = 5
+	"Narciso #0" = 5
+	"Patrocinio #0" = 5
+	"Rafael #0" = 5
+	"Ruperto #0" = 5
+	"Víctor #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Agramont Agúndez Alvarado Arriola
+	Cervantes Cota Covarrubias
+	Domínguez
+	Flores
+	Garcia
+	Liceaga
+	Mendoza Mercado Mújica
+	Olachea
+	Pedrajo
+	Rebolledo
+	Salinas
+}
+
+ship_names = {
+	Comondú Constitución
+	"La Paz" Loreto "Los Cabos"
+	Mulegé
+	"San Anselmo" "San Bernardino" "San Bruno" "San Carlos" "San Clemente" "San Diego" "San Dimas" "San Fernado" "San Francisco" "San Gabriel" "San Jacinto" "San Joaquin" "San Jose" "San José" "San Juan Bautista" "San Juan Capistrano" "San Leandro" "San Luis Obispo" "San Marcos" "San Marino" "San Mateo" "San Pablo" "San Ramon" "Santa Ana" "Santa Barbara" "Santa Clara" "Santa Clarita" "Santa Cruz" "Santa Fe" "Santa Maria" "Santa Monica" "Santa Paula" "Santa Rosa" "Santa Rosalía"
+}

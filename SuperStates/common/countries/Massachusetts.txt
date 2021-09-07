@@ -1,0 +1,130 @@
+#Country Name: Massachusettes
+
+graphical_culture = westerngfx
+
+color = { 31  31  166 }
+
+historical_idea_groups = {
+	offensive_ideas
+	naval_ideas
+	exploration_ideas
+	diplomatic_ideas
+	expansion_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Alexander #0" = 10
+	"Alvan #0" = 1 
+	"Benjamin #0" = 5
+	"Caleb #0" = 5
+	"Calvin #0" = 5
+	"Channing #0" = 1
+	"Charles #0" = 5
+	"Christian #0" = 5
+	"Christopher #0" = 5
+	"Curtis #0" = 5
+	"David #0" = 5
+	"Deval #0" = 1
+	"Eben #0" = 1
+	"Edmund #0" = 1
+	"Edward #0" = 15
+	"Elbridge #0" = 1
+	"Emory #0" = 1
+	"Endicott #0" = 1
+	"Eugene #0" = 1
+	"Foster #0" = 1
+	"Francis #0" = 1
+	"Frank #0" = 5
+	"Frederic #0" = 1
+	"George #0" = 20
+	"Henry #0" = 10
+	"Increase #0" = 1
+	"James #0" = 15
+	"Jane  #0" = -5
+	"John #0" = 20
+	"Jonathan #0" = 5
+	"Joseph #0" = 10
+	"Josiah #0" = 1
+	"Leverett  #0" = 1
+	"Levi #0" = 10
+	"Marcus #0" = 5
+	"Matthew #0" = 5
+	"Maurice #0" = 5
+	"Michael #0" = 5
+	"Mitt #0" = 5
+	"Moses #0" = 5
+	"Nathaniel #0" = 5
+	"Oliver #0" = 5
+	"Paul #0" = 10
+	"Ralegh #0" = 5
+	"Richard #0" = 15
+	"Robert #0" = 10
+	"Roger #0" = 5
+	"Samuel #0" = 20
+	"Simon #0" = 5
+	"Spencer #0" = 5
+	"Thomas #0" = 20
+	"William #0" = 20
+	"Winthrop #0" = 5
+}
+
+leader_names = {
+	Adams Allen Ames Andrew Andros Armstrong
+	Banks Bates Belcher Bellingham Boutwell Bowdoin Brackett Bradford Bradstreet Briggs Brooks Bullock Burnet Butler
+	Carver Cellucci Claflin Clifford Coolidge Coote Cox Cradock Crane Curley Cushing
+	Davis Dever Douglas Draper Dudley Dukakis Dummer
+	Ely Endecott Eustis Everett
+	Foss Fuller Furcolo
+	Gage Gardner Gaston Gerry Gilbert Gill Gore Gorges Greene Greenhalge Guild
+	Hancock Haynes Herter Hinckley Hurley Hutchinson
+	King
+	Leverett Lincoln Long
+	McCall Morton
+	Patrick Peabody Phips Popham Pownall Prence
+	Rice Robinson Romney Russell
+	Saltonstall Sanders Sargent Shirley Shute Stoughton Strong Sullivan Sumner Swift
+	Tailer Talbot Tobin
+	Vane Volpe
+	Walsh Washburn Weld Winslow Winthrop Wolcott
+}
+
+ship_names = {
+	Barnstable Berkshire Bristol
+	Cumberland
+	Devonshire Dukes
+	Essex
+	Franklin
+	Hampden Hampshire Hancock
+	Kennebec
+	Lincoln
+	Massachusetts Middlesex
+	Nantucket Norfolk
+	"Old Norfolk" Oxford
+	Penobscot Plymoth
+	Somerset Suffolk
+	Washington Worcester
+	York
+}

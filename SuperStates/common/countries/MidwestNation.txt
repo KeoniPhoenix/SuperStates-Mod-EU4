@@ -1,0 +1,110 @@
+#Country Name: Midwest
+
+graphical_culture = westerngfx
+
+color = { 108  187  216 }
+
+historical_idea_groups = {
+	plutocracy_ideas
+	offensive_ideas
+	administrative_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Adlai #0" = 1
+	"Augustus #0" = 1
+	"Charles #0" = 5
+	"Daniel #0" = 5
+	"Dwight #0" = 5
+	"Edward #0" = 10
+	"Frank #0" = 5
+	"George #0" = 5
+	"Henry #0" = 5
+	"James #0" = 10
+	"Joel #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 10
+	"Len #0" = 1
+	"Louis #0" = 5
+	"Ninian #0" = 1
+	"Otto #0" = 1
+	"Patrick #0" = 5
+	"Richard #0" = 20
+	"Rod #0" = 1
+	"Samuel #0" = 5
+	"Shadrach #0" = 1
+	"Shelby #0" = 5
+	"Thomas #0" = 10
+	"William #0" = 15
+}
+
+leader_names = {
+	Altgeld
+	Beveridge Bissell Blagojevich Bond
+	Carlin Coles Cullom
+	Deneen Duncan Dunne
+	Edgar Edwards Emmerson Ewing
+	Fifer Ford French
+	Green
+	Hamilton Horner
+	Kerner
+	Lowden
+	Matteson
+	Ogilvie Oglesby
+	Palmer
+	Quinn
+	Reynolds Ryan
+	Shapiro Small Stelle Stevenson Stratton
+	Tanner Thompson
+	Walker Wood
+	Yates
+}
+
+ship_names = {
+	Adams Alexander
+	Bond Boone Brown Bureau
+	Calhoun Carroll Cass Champaign Christian Clark Clay Clinton Coles Cook Crawford Cumberland
+	DeKalb DeWitt Douglas DuPage
+	Edgar Edwards Effingham
+	Fayette Ford Fulton
+	Gallatin Greene Grundy
+	Hamilton Hancock Hardin Henderson Henry
+	Iroquois
+	Jackson Jasper Jefferson Jersey "Jo Daviess" Johnson
+	Kane Kankakee Kendall Knox
+	Lake LaSalle Lawrence Lee Livingston Logan
+	Macon Macoupin Madison Marion Marshall Mason Massac McDonough McHenry McLean Menard Mercer Monroe Montgomery Morgan Moultrie
+	Ogle
+	Peoria Perry Piatt Pike Pope Pulaski Putnam
+	Randolph Richland "Rock Island"
+	Saline Sangamon Shuyler Scott Shelby "St. Clair" Stark Stephenson
+	Tazewell
+	Union
+	Vermillion
+	Wabash Warren Washington Wayne White Whiteside Will Williamson Winnebago Woodford
+}

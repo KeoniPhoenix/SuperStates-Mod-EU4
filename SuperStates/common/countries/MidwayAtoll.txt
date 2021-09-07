@@ -1,0 +1,104 @@
+#Country Name: Midway Atoll
+
+graphical_culture = westerngfx
+
+color = { 255 80 255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	diplomatic_ideas
+	naval_ideas
+	innovativeness_ideas
+	economic_ideas
+	plutocracy_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Alfred #0" = 5
+	"Arthur #0" = 5
+	"Edgar #0" = 1
+	"Edward #0" = 5
+	"Ernest #0" = 1
+	"Frank #0" = 10
+	"Fredrick #0" = 5
+	"George #0" = 15
+	"Harvey #0" = 5
+	"Henry #0" = 15
+	"James #0" = 5
+	"Jay" = 1
+	"Jefferson" = 1
+	"John #0" = 20
+	"John Green" = 1
+	"John Henry" = 1
+	"Joseph #0" = 15
+	"Keith Harvey" = 1
+	"Lester" = 1
+	"Lyman Enos" = 1
+	"Michael #0" = 5
+	"Montgomery #0" = 1
+	"Mottrom" = 1
+	"Sarah #0" = -5
+	"Scott #0" = 5
+	"Sean #0" = 5
+	"Steve #0" = 5
+	"Thomas #0" = 5
+	"Tony #0" = 5
+	"Waino Edward" = 1
+	"Walter #0" = 5
+	"Walter Ei" = 1
+	"Wilford Bacon" = 1
+	"William #0" = 1
+	"William Allen" = 1
+
+}
+
+leader_names = {
+	Allen
+	Ball Beardslee Berry Brady
+	Campbell Clark Coghlan Cordelle Cowper
+	Davis
+	Egan
+	Glass Gruening
+	Hammon Heintzleman Hendrickson Hickel Hoggatt
+	Kinkead Knapp Knowles
+	Lull
+	Mendenhall Merriman Miller Morris Murkowski
+	Nichols
+	Palin Parks Parnell Person
+	Riggs Rodney
+	Sheakley Sheffield Stepovich Stewart Strong Swineford
+	Tidball Troy
+}
+
+
+
+ship_names = {
+	Atoll
+	Ford
+	"Gardner Pinnacles" Grass
+	Hawai'i Hilo Holoikauaua Honolulu
+	Kaho'olawe Kaohikaipu Ka'ula Kalawao Kauai Kauo Kure
+	Lana'i Laysan Lehua
+	Manana Maro Maui Midway "Mokolea Rock" Mokoli'i Mokumana Mokumanamana "Moku Manu" Mokupapapa "Moku o Lo'e" "Moku Ola" "Moku 'ume'ume" Moloka'i Molokini
+	"Na Mokulua" Nalukakala Nihoa Necker
+	O'ahu
+	Papa'apoho "Pearl and Hermes" Pihemanu Puhahonu
+	Sand
+}

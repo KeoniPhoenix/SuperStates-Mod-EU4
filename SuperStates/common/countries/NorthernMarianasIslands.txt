@@ -1,0 +1,85 @@
+#Country Name: Northern Marianas Islands
+
+graphical_culture = westerngfx
+
+color = { 19  149  19 }
+
+historical_idea_groups = {
+	defensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Adiran #0" = 5
+	"Arthur #0" = 5
+	"Benigno #0" = 5
+	"Carlos #0" = 15
+	"Charles #0" = 5
+	"Chester #0" = 5
+	"Delmas #0" = 5
+	"DeWitt #0" = 5
+	"Edward #0" = 5
+	"Elbert #0" = 1
+	"Eloy #0" = 1
+	"Frank #0" = 5
+	"Froilan #0" = 1
+	"Janet #0" = -5
+	"John #0" = 5
+	"Juan #0" = 10
+	"Lorenzo #0" = 5
+	"Louis #0" = 10
+	"Maurice #0" = 5
+	"Pedro #0" = 20
+	"Peter #0" = 5
+	"Raymond #0" = 5
+	"William #0" = 15
+}
+
+leader_names = {
+	Babauta
+	Camacho Coleman
+	Denfeld
+	Fitial
+	Goding Guerrero
+	Hoover
+	Inos
+	Johnston Jordan
+	McCoy Midkiff
+	Nimitz Norwood Nucker
+	Radford Ramsey
+	Spruance
+	Tenorio Thomas Towers
+	Winkel
+}
+
+ship_names = {
+	Agrihan Aguijan Alamagan Asuncion Anatahan
+	"Farallon de Medinila" "Farallon de Pajaros"
+	Guguan
+	Maug
+	Pagan
+	Rota
+	Saipan Sarigan
+	Tinian
+}

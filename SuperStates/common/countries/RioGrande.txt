@@ -1,0 +1,225 @@
+#Country Name: Rio Grande
+
+graphical_culture = westerngfx
+
+color = { 50 50 50 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Aarón #0" = 5
+	"Adrian #0" = 5
+	"Agapito #0" = 5
+	"Agustín #0" = 10
+	"Albino #0" = 10
+	"Alejandro #0" = 10
+	"Alfonso #0" = 5
+	"Alfredo #0" = 5
+	"Alonso #0" = 10
+	"Américo #0" = 5
+	"Anacleto #0" = 5
+	"Anastacio #0" = 5
+	"Andrés #0" = 20
+	"Ángel #0" = 10
+	"Aniceto #0" = 5
+	"Antinio #0" = 20
+	"Arnulfo #0" = 5
+	"Arturo #0" = 5
+	"Ascensión #0" = 5
+	"Bartolomé #0" = 5
+	"Baudelio #0" = 5
+	"Benecio #0" = 10
+	"Benito #0" = 5
+	"Benjamin #0" = 5
+	"Bernardino #0" = 5
+	"Bernardo #0" = 5
+	"Bernardon #0" = 5
+	"Blas #0" = 20
+	"Bonifacio #0" = 5
+	"Braulio #0" = 5
+	"Bruno #0" = 5
+	"Candelrio #0" = 5
+	"Canuto #0" = 5
+	"Carlos #0" = 20
+	"Cipriano #0" = 5
+	"Clemente #0" = 5
+	"Desiderio #0" = 5
+	"Diego #0" = 20
+	"Domingo #0" = 15
+	"Don #0" = 5
+	"Eduardo #0" = 15
+	"Egidio #0" = 5
+	"Eleno #0" = 5
+	"Eliseo #0" = 5
+	"Emilio #0" = 10
+	"Encarnación #0" = 5
+	"Enrique #0" = 20
+	"Espiridión #0" = 5
+	"Eugenio #0" = 5
+	"Eulalio #0" = 5
+	"Evaristo #0" = 5
+	"Federico #0" = 5
+	"Felipe #0" = 20
+	"Fernando #0" = 10
+	"Flores #0" = 5
+	"Francisco #0" = 20
+	"Froilán #0" = 5
+	"Genaro #0" = 10
+	"Generoso #0" = 5
+	"Gómez #0" = 5
+	"Gonzalo #0" = 5
+	"Gregorin #0" = 5
+	"Gregorio #0" = 20
+	"Gustavo #0" = 5
+	"Hipólito #0" = 5
+	"Horacio #0" = 5
+	"Hugo #0" = 5
+	"Humberto #0" = 5
+	"Idefonso #0" = 5
+	"Ignacio #0" = 20
+	"Isidro #0" = 5
+	"Ismael #0" = 5
+	"Jacinto #0" = 5
+	"Jacobo #0" = 5
+	"Jerónimo #0" = 20
+	"Jesús #0" = 20
+	"Joaquín #0" = 15
+	"Jorge #0" = 10
+	"José #0" = 20
+	"Juan #0" = 20
+	"Julio #0" = 5
+	"Lázaro #0" = 15
+	"Leobardo #0" = 5
+	"León  #0" = 5
+	"Lorenzo #0" = 5
+	"Loreto #0" = 5
+	"Lucas #0" = 5
+	"Luis #0" = 20
+	"Magdaleno #0" = 5
+	"Manuel #0" = 20
+	"Marcial #0" = 5
+	"Mariano #0" = 10
+	"Marte #0" = 5
+	"Martín #0" = 10
+	"Matías #0" = 10
+	"Máximo #0" = 5
+	"Melchor #0" = 15
+	"Miguel #0" = 20
+	"Modesto #0" = 5
+	"Narciso #0" = 5
+	"Nazario #0" = 5
+	"Nicolás #0" = 5
+	"Norberto #0" = 5
+	"Oscar #0" = 5
+	"Pablo #0" = 10
+	"Paz #0" = 5
+	"Pedro #0" = 20
+	"Pelayo #0" = 5
+	"Plutarco #0" = 5
+	"Praxedis #0" = 10
+	"Rafael #0" = 20
+	"Ramon #0" = 20
+	"Raúl #0" = 20
+	"Rmulo #0" = 5
+	"Rodrigo #0" = 5
+	"Rogelio #0" = 5
+	"Romulo #0" = 5
+	"Rubén #0" = 5
+	"Salomé #0" = 5
+	"Santiago #0" = 20
+	"Servando #0" = 5
+	"Simón #0" = 15
+	"Sócrates #0" = 5
+	"Telésforo #0" = 5
+	"Tomás #0" = 10
+	"Venustiano  #0" = 5
+	"Vicente #0" = 20
+	"Victor #0" = 5
+	"Victoriano #0" = 5
+	"Victorino #0" = 5
+	"Viviano  #0" = 5
+	"Zeferino #0" = 5
+	
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar Alcocer Ángeles Antonio Argüelles Arizpe Ascensión Azlo
+	Báez Bahamonde Balboa Benitez Berriozábal Blanco Borrego Botello Breceda Bruno Bueno
+	Caballero Camilo Canales Cancio Canseco Cardenas Cárdenas Cardona Carranza Carvajal Castellanos Castelló Castro Cavazos Cepeda Cervantes Chapa Charles Chovel Clariond Claudio Comonfort Cordero Costilla Crespo Cuellar Cuervo
+	Dávila "de Aguirre" "de Alarcón" "de Alba" "de Alza" "de Ampudia" "de Arredondo" "de Arriaga" "de Azcárraga" "de Barbadillo" "de Barríos" "de Cárdenas" "de Echandía" "de Echegaray" "de Echevérez" "de Echeverría" "de Escandón" "de Haro" "de Herrera" "de Itrube" "de Ixart" "de la Aguirre" "de la Calancha" "de la Garza" "de la Paz" "de la Peña" "de la Serna" "de las Fuentes" "de León" "de Mier" "de Montemayor" "de Padilla" "de Paula" "de Prudena" "de Rábago" "de Saldaña" "de Salinas" "de Sandoval" "de Santa María" "de Sarabia" "de Sesman" "de Terán" "de Ugarte" "de Valdes" "de Valle" "de Vargas" "de Velasco" "de Videgaray"
+	"de Villarreal" "de Zavala" Diaz
+	Echartea Eleuterio Elías Elizondo Elosúa Escandón Escobedo Espinoza Espiridión
+	Fajardo Farías Faz Fermín Fernandez Fernando Flores Francisco Franco Fuentes Fuero Fuero Fueros
+	Galindo Garate García Garza Gojón Gómez González Guadalupe Guerra Guerrero Gutiérrez
+	Hernández Honorato
+	Ignacio Illizaliturri
+	Joaquín Jose José Juan Juárez Junco Lazago Leal Lino Livas Lobo López
+	Madero Mainero Manuel Maria María Martin Martínez Martos Maximiliano Medina Mejía Mendoza Mier Miguel Monroy Montemayor Morales Morante Moreira Moreno Morones Morret Muñoz
+	Nepomuceno Neyra Núñez
+	Ortiz Ortíz Osuna
+	Palacios Pardo Pavón Pedrero Pérez Portes Prieto
+	Quesada Quintana Quiroga
+	Rabago Rabize Rafael Ramón Rangel Reyes Rincón Rizzo Rocha Rodríguez Rubio Ruiz
+	Saavedra Sáenz Salas Salazar Saldaña Salinas Sánchez Santiago Santos Siller Silvestre
+	Tapia Terán Torre Torres Trejo Treviño Troconis
+	Ussel
+	Valdés Valdez Valerio Vázquez Viaurri Vicente Vidal Vidaurri Viesca Villamil Villanueva Villareal Villarreal Vital Vivanco
+	Woll
+	Yarrington
+	Zaragoza Zorrilla
+}
+
+ship_names = {
+	Abasolo Acuña Agualeguas Aldama Alemán Allende Altamira Anáhuac Antiguo Apodaca Aramberri Arizpe Artega
+	Burgos Bustamante
+	Cadereyta Camargo Casas Castaños Cendela Cerralvo China Ciénega 
+	Colonias Cuatrociénegas Curillas
+	Díaz "Doctor Arroyo" "Doctor Coss" "Doctor González"
+	"El Carmen" Escobedo
+	Flores Francisco Frontera
+	Galeana García Garza "Genearl Zaragoza" "General Bravo" "General Cepeda" "General Escobedo" "General Terán" "General Treviño" "General Zuazua" González Guadalupe Güémez Guerrero Gustavo
+	Hidalgo Higueras Hualahuises
+	Iturbide
+	Jiménez Juamave Juárez 
+	Lamadrid Lampazos Liera Linares "Los Aldama" "Los Herrera" "Los Ramones"
+	Madero Mainero Mante Marín Marina Matamoros Matamors Melchor Méndez Mier Miguel Mina Monclova Montemorelos Monterrey Morelos Múzquiz
+	Nadadores Naranjo Nava Negras Noriega "Nuevo Laredo" "Nuevo Morelos" Ocampo Ordaz
+	Padilla Palmillas Parás Parras Pesquería Piedras Progreso
+	Ramos Rayones Reynosa "Río Bravo"
+	Sabinas Sacramento Salinas Saltillo "San Buenaventura" "San Carlos" "San Fernando" "San Juan" "San Nicolás" "San Pedro" "Santa Catarina" Santander Santiago "Sierra Mojada" Soto
+	Tampico Torreón Tula
+	"Valle Hermoso" "Vallecillo" "Victoria" "Viesca" "Villa Unión" Villadama Villagrán
+	Xicoténcatl
+	Zaragoza
+}

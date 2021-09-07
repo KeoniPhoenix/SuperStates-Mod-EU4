@@ -1,0 +1,106 @@
+#Country Name: Federated States of Micronesia
+
+graphical_culture = westerngfx
+
+color = { 12 129 173 }
+
+historical_idea_groups = {
+	exploration_ideas
+	naval_ideas
+	trade_ideas
+	economic_ideas
+	plutocracy_ideas
+	offensive_ideas
+	spy_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Peter" = 20
+	"John" = 20
+	"Milton" = 20
+	"Leland" = 20
+	"Frederick" = 15
+	"Henry" = 15
+	"Newton" = 15
+	"Romualdo" = 15
+	"William" = 10
+	"George" = 10
+	"Washington" = 10
+	"Robert" = 10
+	"James" = 5
+	"Hiram" = 5
+	"Friend" = 5
+	"Clement" = 5
+	"Frank" = 0
+	"Culbert" = 0
+	"Earl" = 0
+	"Goodwin" = 0
+	"Edmund" = 0
+	"Ronald" = 0
+	"Joseph" = 0
+	"Arnold" = 0
+}
+
+leader_names = {
+	Bartlett Bigler Booth Brown Budd Burnett
+	Davis Deukmejian Downey
+	Gage Gillett
+	Haight
+	Irwin
+	Johnson
+	Knight
+	Latham Low
+	Markham McDougall Merriman
+	Pachesco Pardee Perkins 
+	Reagan Richardson Rolph
+	Stanford Schwarzenegger Stephens Stoneman
+	Warren Waterman Weller Wilson
+	Young	
+}
+
+ship_names = {
+	Alamedia Alpine Amador
+	Bakersfield Barstow Butte
+	Calaveras California Colusa "Contra Coasta"
+	"Del Norte"
+	"El Dorado"
+	Fresno
+	Glenn "Golden State"
+	Humboldt
+	Imperial Inyo
+	Kern Kings
+	Lake Lassen "Los Angeles"
+	Madera Marin Mariposa Mendocino Merced Modoc Monterey 
+	Napa Nevada
+	Orange Oregon
+	Placer Plumas Presidio
+	Riverside
+	Sacaramento "San Andreas" "San Bernadino" "San Diego" "San Francisco" "San Joaquin" "San Luis Obispo" "San Mateo" "Santa Clara" "Santa Cruz" "Shasta" "Sierra" "Siskiyou" Solano Stanislaus Sutter
+	Tehama Trinity Tulare Tuolumne
+	Ventura
+	Yolo Yosemite Yuba
+}
+
+army_names = {
+	"$PROVINCE$'s Army"
+}
+
+fleet_names = {
+	"Pacific Fleet"
+}

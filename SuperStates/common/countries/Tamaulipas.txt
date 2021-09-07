@@ -1,0 +1,148 @@
+#Country Name: Tamaulipas
+
+graphical_culture = westerngfx
+
+color = { 114  165  114 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Adrian #0" = 5
+	"Albino #0" = 10
+	"Alejandro #0" = 10
+	"Américo #0" = 5
+	"Andrés #0" = 15
+	"Aniceto #0" = 5
+	"Antonio #0" = 10
+	"Ascensión #0" = 5
+	"Baudelio #0" = 5
+	"Benecio #0" = 5
+	"Benito #0" = 5
+	"Candelrio #0" = 5
+	"Desiderio #0" = 5
+	"Diego #0" = 5
+	"Don #0" = 5
+	"Egidio #0" = 5
+	"Eleno #0" = 5
+	"Emilio #0" = 10
+	"Enrique #0" = 20
+	"Espiridión #0" = 5
+	"Eugenio #0" = 5
+	"Federico #0" = 5
+	"Felipe #0" = 15
+	"Flores #0" = 5
+	"Francisco #0" = 20
+	"Gómez #0" = 5
+	"Gonzalo #0" = 5
+	"Gregorio #0" = 10
+	"Horacio #0" = 5
+	"Hugo #0" = 5
+	"Ignacio #0" = 10
+	"Jesús #0" = 10
+	"Joaquín #0" = 10
+	"José #0" = 20
+	"Juan #0" = 20
+	"Loreto #0" = 5
+	"Lucas #0" = 5
+	"Luis #0" = 10
+	"Magdaleno #0" = 5
+	"Manuel #0" = 20
+	"Marte #0" = 5
+	"Matías #0" = 5
+	"Máximo #0" = 5
+	"Melchor #0" = 5
+	"Modesto #0" = 5
+	"Norberto #0" = 5
+	"Pedro #0" = 15
+	"Pelayo #0" = 5
+	"Praxedis #0" = 5
+	"Rafael #0" = 15
+	"Ramon #0" = 20
+	"Raúl #0" = 10
+	"Rmulo #0" = 5
+	"Romulo #0" = 5
+	"Santiago #0" = 5
+	"Servando #0" = 5
+	"Tomás #0" = 10
+	"Vicente #0" = 5
+	"Victorino #0" = 5
+	"Zeferino #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar Antonio Argüelles Ascensión
+	Balboa Berriozábal Blanco
+	Caballero Camilo Canales Canseco Cardenas Cárdenas Castellanos Castelló Castro Cavazos Chovel Comonfort Cuellar
+	"de Alba" "de Arredondo" "de Cárdenas" "de Echeandía" "de Echegaray" "de Escandón" "de Haro" "de Itrube" "de Ixart" "de la Garza" "de la Garza" "de la Garza" "de la Serna" "de León" "de Saldaña" "de Vargas" Diaz
+	Echartea Escandón Espiridión
+	Fajardo Fermín Fernandez Fernández Fernando Francisco
+	Garate García Garza Gojón Gómez González Guadalupe Guerra 
+	Hernández Honorato
+	Ignacio Illizaliturri
+	José Juárez
+	Lazago Lino López
+	Mainero Manuel Maria María Martin Martínez Maximiliano Medina Miguel Morante Moreno Muñoz
+	Nepomuceno Núñez
+	Ortíz Osuna
+	Pavón Pedrero Portes Prieto
+	Quintana
+	Rabago Rabize Rincón Rocha Rubio Ruiz
+	Saavedra Salazar Saldaña
+	Tapia Terán Torre Trejo Treviño Troconis
+	Vidal Villanueva Villarreal Vital
+	Woll
+	Yarrington
+	Zaragoza
+}
+
+ship_names = {
+	Abasolo Aldama Alemán Altamira Antiguo
+	Burgos Bustamante
+	Camargo Casas Curillas
+	Díaz
+	González Güémez Guerrero Gustavo
+	Hidalgo
+	Jiménez Juamave
+	Liera
+	Madero
+	Mainero Mante Marina Matamors Méndez Mier Miguel Morelos
+	"Nuevo Laredo" "Nuevo Morelos"
+	Ocampo Ordaz
+	Padilla Palmillas
+	Reynosa "Río Bravo"
+	"San Carlos" "San Fernando" "San Nicolás" Santander Soto
+	Tampico Tula
+	"Valle Hermoso" Victoria Villagrán
+	Xicoténcatl
+}

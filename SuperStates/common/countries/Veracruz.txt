@@ -1,0 +1,117 @@
+#Country Name: Veracruz
+
+graphical_culture = westerngfx
+
+color = { 100 150 255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abel #0" = 5
+	"Adalberto #0" = 5
+	"Adolfo #0" = 5
+	"Agustín #0" = 5
+	"Ángel  #0" = 5
+	"Antonio #0" = 20
+	"Apolinar #0" = 5
+	"Cándido #0" = 5
+	"Dante #0" = 5
+	"Emilio #0" = 5
+	"Fernando #0" = 15
+	"Fidel #0" = 5
+	"Francisco #0" = 15
+	"Gonzalo #0" = 5
+	"Guillermo #0" = 5
+	"Heriberto #0" = 5
+	"Ignacio #0" = 10
+	"Javier #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 15
+	"Juan #0" = 5
+	"Leandro #0" = 5
+	"León #0" = 5
+	"Luis #0" = 5
+	"Manuel #0" = 15
+	"Marco #0" = 5
+	"Mauro #0" = 5
+	"Miguel #0" = 15
+	"Patricio #0" = 5
+	"Rafael #0" = 10
+	"Sebastián #0" = 5
+	"Teodoro #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Acosta Aguilar Aillaud Alcolea Alemán
+	Barragán
+	Camacho Carvajal Casas Castillo Cerdán Cházaro Chirinos Cortés
+	"de Emparán" "de la Llave" Dehesa Delgado Duarte
+	Enríquez 
+	Gutiérrez
+	Hernández Herrera
+	Jara Juille
+	Landero Leví Léycegui López Loyo
+	María Mena Mier Muñoz Murillo
+	Pérez
+	Rebolledo Rodríguez Ruíz
+	Tejeda
+	Vázquez
+}
+
+ship_names = {
+	Acajete Acatlán Acayucan Actopan Acula Acultzingo "Agua Dulce" Alatorre Alemán Alpatlahuac Altamirano Alto Altotonga Alvarado Amatitlán Amatlán Ángel Apazapan Aquila Astacinga Atlahuilco Atoyac Atzacan Atzalán Atzompa Ayahualulco Azueta Azul
+	Banderilla Barrios Beinto Boca
+	Cabada Café Calcahualco Camarón Camerino Cardel Carlos Carpio Carranza Carrillo Carvajal Catemaco Cazones Cerro Chacaltianguis Chalma Chiconamel Chiconquiaco Chicontepec Chinameca Chinampa Choapas Chocaman Chontla Chumatlan Citlaltepetl Clara Coacoatzintla Coahuitlan Coatepec Coatzintla Coetzala Colipa Comapa Córdoba Cosamaloapan Cosautlán Coscomatepec Cosoleacaque Coss Cotaxtla Cotazacoalcos Coxquihui Coyutla Cuichapa Cuitláhuac
+	Delgado Doblado "Dos Ríos"
+	"El Higo" Emiliano Escobedo Espinal Evanelista
+	Fabio Ferrer Filomeno Flores Fortín Fuentes
+	Galván Gorostiza Gutiérrez
+	Hidalgo Hidalgotitlán Huatusco Huayacocotla Hueyapan Huiloapan
+	Ignacio Ilamatlán Isla Ixcatepec Ixhuacán Ixhuatlán Ixhuatlancillo Ixmatlahuacan Ixtaczoquitlán
+	Jalacingo Jalcomulco Jaltipan Jamapa Jesús Jilotepec José Juan Juárez Juchique
+	"La Antigua" Landero "Las Minas" "Las Vigas" Lerdo Llave López "Los Reyes" Lucero Lucio
+	Macho Madero Magdalena Maltrata Manlio Mariano Martínez Mascareñas Mata Mecatlán Mecayapan Medellín Mejía Mendoza Miahuatlán Minatitlán Misantla Mixtla Moloacán
+	Nacional Nanchital Naolinco Naranjal Naranjos Nautla Nogales
+	Ocampo Olarte Oluta Omealca Orizaba Otatitlán Ovejas Ozuluama
+	Pajapan Pánuco Papantla Paso Perote Platón Playa "Poza Rica" "Pueblo Viejo" Puente Puerto
+	Rafael Ramírez Reyes Río "Río Blanco" Rodríguez
+	Saltabarranca "San Andrés" "San Juan" "San Rafael" Sánchez Santiago Sayula Sochiapa Sochiapan Soconusco Soledad Soteapan Sureste
+	Tamalín Tamiahua Tampico Tancoco Tantima Tantoyuca Tatahuicapan Tatatila Teayo Tecolutia Tehuipango Tejada Temapache Tempoal Tenampa Tenejapan Tenochtitlán Teocelo Tepatlaxco Tepetlán Tepetzintla Tequila Texcatepec Texhuacán Texistepec Tezonapa "Tierra Blanca" Tihuatlán Tlaclulan Tlacojalpan Tlacotalpan Tlacotepec Tlainehuayocan Tlaltetela Tlapacoyan Tlaquipa Tlaxicoyan Tlilapan Tomatlán Tonayan Torre Totutla "Tres Valles" Tuxpam Tuxtilla Tuxtla
+	Úrsulo Uxpanapa
+	Vega Vicente
+	Xico Xoxocotla
+	Yanga
+	Yecuatla
+	Zacualpan Zalapa Zamora Zapata Zaragoza Zentla Zongolica Zontecomatlán Zozocolco 
+}

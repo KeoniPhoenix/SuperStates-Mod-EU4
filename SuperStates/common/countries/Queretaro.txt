@@ -1,0 +1,107 @@
+#Country Name: Queretaro
+
+graphical_culture = westerngfx
+
+color = { 0 35 150 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abraham #0" = 5
+	"Adolfo #0" = 5
+	"Agapito #0" = 5
+	"Alfonso #0" = 5
+	"Ángel #0" = 5
+	"Antonio #0" = 5
+	"Carlos #0" = 5
+	"Constantino #0" = 5
+	"Eduardo #0" = 5
+	"Emilio #0" = 5
+	"Enrique #0" = 5
+	"Ernesto #0" = 5
+	"Federico #0" = 5
+	"Fernando #0" = 5
+	"Francisco #0" = 10
+	"Gustavo #0" = 5
+	"Ignacio #0" = 5
+	"Joaquín  #0" = 10
+	"José #0" = 20
+	"Juan #0" = 5
+	"Julián #0" = 5
+	"Juventino #0" = 5
+	"Manuel #0" = 5
+	"Mariano #0" = 5
+	"Noradino #0" = 5
+	"Octavio #0" = 5
+	"Rafael #0" = 5
+	"Ramón #0" = 10
+	"Rómulo #0" = 5
+	"Salvador #0" = 5
+	"Saturnino #0" = 5
+	"Teodoro #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Anaya Antonio Araujo Argain
+	Bravo Burgos
+	Calzada Camacho Castro Chicarro
+	"de la Peña" "de la Torre"
+	Elizondo
+	Garrido González Gorríez
+	Isla
+	Llaca Loyola Luque
+	Malo Mondragón Montes
+	Osornio
+	Palacios Perrusquía Pozo
+	Ramírez Rodríguez Rubio
+	Salinas Siurob
+	Truchuelo
+	Vázquez Veraza Villarreal
+}
+
+ship_names = {
+	Amealco Amoles Arroyo
+	Bonfil
+	Cadereyta Colón Corregidora
+	"El Marqués" Escobedo Ezequiel
+	Huimilpan
+	Jalpan
+	Landa
+	Matamoros Montes
+	Pedro Peñamiller Pinal
+	Querétaro
+	Río
+	"San Joaquín" "San Juan" Seco Serra
+	Tequisquiapan Tolimán
+}

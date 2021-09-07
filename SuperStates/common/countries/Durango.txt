@@ -1,0 +1,87 @@
+#Country Name: Durango
+
+graphical_culture = westerngfx
+
+color = { 50 100 50 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Alejandro #0" = 5
+	"Ángel #0" = 10
+	"Armando #0" = 5
+	"Blas #0" = 5
+	"Elpidio #0" = 5
+	"Enrique #0" = 15
+	"Francisco #0" = 10
+	"Héctor #0" = 5
+	"Ismael #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 10 
+	"Maximiliano #0" = 5
+	"Rafael  #0" = 10
+	"Salvador #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Calderón Celis Corral
+	"del Castillo" Dupré
+	Gámiz González Guerrero
+	Hernández Herrera
+	Mayagoitia
+	Páez
+	Ramírez Ramón Rodríguez
+	Silerio
+	Torres
+	Velázquez 
+}
+
+ship_names = {
+	Bolívar
+	Canatlán Canelas Comfort Coneto Cordero Coronado Cuencamé
+	Durango
+	"El Oro"
+	Gallo Gómez Guadalupe Guanaceví Guerrero
+	Hidalgo
+	Indé
+	Lerdo
+	Mapimí Mezquital
+	Nazas "Nombre de Dios" "Nuevo Ideal"
+	Ocamp Otáez
+	Palacio Pánuco "Peñón Blanco" Poanas "Pueblo Nuevo"
+	Rio Rodeo
+	"San Bernardo" "San Dimas" "San Juan" "San Pedro" "Santa Clara" Simón Súchil
+	Tamazula Tepehuanes Tlahualilo Topia
+	Vicente Victoria
+}

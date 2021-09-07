@@ -1,0 +1,62 @@
+#Country Name: Western Samoa
+
+graphical_culture = westerngfx
+
+color = { 89  137  52 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Tuilaepa Aiono Sailele #0" = 10
+	"Fonotoe Nuafesili Pierre #0" = 10
+	"Le Mamea #0" = 10
+	"Tuisugaletaua Sofara #0" = 10
+	"Magele #0" = 10
+	"Faumuina #0" = 10
+	"Tuitama Talalelei #0" = 10
+	"Fiame Naomi #0" = -10
+	"Faamoetauloa Ulaitino Faale #0" = 10
+	"Sala Fata #0" = 10
+	"Tuiloma Pule #0" = 10
+	"Tolofuaivalelei Falemoe #0" = 10
+	"Manu'alesagalala Enokati #0" = 10
+	"Palusalue #0" = 10
+	"Gaina #0" = 10
+	"Mulitalo Siafusa #0" = 10
+	"Tuisugaletua Sofara #0" = 10
+	"Tuala Ainiu #0" = 10
+	"Ulu Vaomalo #0" = 10
+}
+
+leader_names = {
+	Malielegaoi Lauofo Ropati Aveau Mauiliu Liuga Tuitama Mataafa Tumaalii
+	Pinati Lameko Leiataua Posala Faapo Tino Vui Iusitino Kini Keil
+}
+
+ship_names = {
+	"Western Samoa"
+}

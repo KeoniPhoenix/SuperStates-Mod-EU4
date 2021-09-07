@@ -1,0 +1,124 @@
+#Country Name: Maryland
+
+graphical_culture = westerngfx
+
+color = { 213  201  62 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_advanced_third
+	north_american_line
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_lancers
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 5
+	"Augustus #0" = 5
+	"Austin #0" = 5
+	"Benedict #0" = 10
+	"Benjamin #0" = 10
+	"Blair #0" = 5
+	"Charles #0" = 20
+	"Daniel #0" = 5
+	"Edmund #0" = 5
+	"Edward #0" = 10
+	"Edwin #0" = 5
+	"Elihu #0" = 5
+	"Emerson #0" = 5
+	"Enoch #0" = 5
+	"Francis #0" = 10
+	"Frank #0" = 5
+	"George #0" = 10
+	"Harry #0" = 15
+	"Herbert #0" = 5
+	"Horatio #0" = 5
+	"James #0" = 15
+	"Jesse #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 5
+	"Josias #0" = 5
+	"Leonard #0" = 5
+	"Levin #0" = 5
+	"Lionel #0" = 5
+	"Lloyd #0" = 5
+	"Martin #0" = 5
+	"Marvin #0" = 5
+	"Millard #0" = 5
+	"Nathaniel #0" = 5
+	"Nehemiah #0" = 5
+	"Nicholas #0" = 5
+	"Oden #0" = 5
+	"Parris #0" = 5
+	"Phillip #0" = 10
+	"Phillips #0" = 5
+	"Robert #0" = 20
+	"Samuel #0" = 15
+	"Spiro #0" = 5
+	"Theodore #0" = 5
+	"Thomas #0" = 20
+	"William #0" = 20
+
+}
+
+leader_names = {
+	Agnew Andros
+	Bladen Blakiston Blakiston Bowie Bradford Brice Brooke Brown
+	Calvert Carroll Coode Copley Crothers
+	Eden Ehrlich
+	Fendall
+	Glendening Goldsborough Grason Greenberry Greene Groome
+	Hamiliton Harrington Hart Henry Hicks Howard Hughes
+	Jackson Johnson Joseph
+	Kent
+	Lane Lawrence Lee Ligon Lloyd Lowe Lowndes
+	Mandel Martin McKeldin McLane Mercer
+	Nice Nicholson Notley
+	O'Conor O'Malley Ogle
+	Paca Plater Pratt
+	Ridgely Ritchie
+	Schaefer Seymour Sharpe Smallwood Smith Sprigg Stevens Stone Swann
+	Tasker Tawes Tench Thomas
+	Veazey
+	Warfield Wharton Whyte Winder Wright
+}
+
+ship_names = {
+	Allegany "Anne Arundel"
+	"Baltimore City" "Balitimore County"
+	Calvert Caroline Carroll Charles
+	Dorechester
+	Frederick
+	Garrett
+	Harford Howard
+	Kent
+	Montgomery
+	"Prince George's"
+	"Queen Anne's"
+	"St. Mary's" Somerset
+	Talbot
+	Washington Wicomico Worcester
+}

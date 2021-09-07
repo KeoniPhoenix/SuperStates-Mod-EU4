@@ -1,0 +1,65 @@
+#Country Name: Tuvalu
+
+graphical_culture = westerngfx
+
+color = { 89  147  192 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Fiatau #0" = 10
+	"Tupua #0" = 10
+	"Toaripi #0" = 10
+	"Tomu #0" = 10
+	"Tulaga #0" = 10
+	"Tomasi #0" = 10
+	"Faimalaga #0" = 10
+	"Filoimea #0" = 10
+	"Kamuta #0" = 10
+	"Iakoba #0" = 10
+	"Bikenibeu #0" = 10
+	"Ionatana #0" = 10
+	"Lagitupu #0" = 10
+	"Koloa #0" = 10
+	"Saufatu #0" = 10
+	"Maatia #0" = 10
+	"Apisai #0" = 10
+	"Willy #0" = 10
+}
+
+leader_names = {
+	Lauti Puapua Paeniu Latasi Ionatana Tuilimu Luka Talake
+	Sopoanga Toafa Ielemia Toafa Telavi Penitala Teo Laupena
+	Sione Manuella Telito
+}
+
+ship_names = {
+	Funafuti
+	Namumea Nanumanga Niulakita Niutao Nui Nukufetau Nukulaelae
+	Tuvalu
+	Vaiaku Vaitupu
+}

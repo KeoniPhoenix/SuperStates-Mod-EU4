@@ -1,0 +1,88 @@
+#Country Name: Sinaloa
+
+graphical_culture = westerngfx
+
+color = { 150 100 100 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Alejandro #0" = 5
+	"Alfonso #0" = 5
+	"Alfredo #0" = 10
+	"Angel #0" = 5
+	"Antonio #0" = 5
+	"Enrique #0" = 5
+	"Francisco #0" = 5
+	"Gabriel #0" = 5
+	"Jesús #0" = 5
+	"Juan #0" = 5
+	"Leopoldo #0" = 5
+	"Macario #0" = 5
+	"Manuel #0" = 5
+	"Mario #0" = 5
+	"Pablo #0" = 5
+	"Ramón #0" = 5
+	"Renato #0" = 5
+	"Rigoberto #0" = 5
+	"Rodolfo #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar
+	Calderón
+	Delgado
+	Flores
+	Gaxiola
+	Iturbe
+	Labastida Leyva Loaiza López 
+	Macías Millán
+	Páez Pérez
+	Sánchez
+	Toledo
+	Valdés Vega
+}
+
+ship_names = {
+	Ahome Alvarado Angostura
+	Badiraguato
+	Choix Concordia Cosalá Culiacán
+	"El Fuerte" Elota Escuinapa
+	Guamúchil Guasave
+	"La Cruz" Leyva "Los Mochis"
+	Mazatlán Mocorito
+	Navolato
+	Rosario
+	Salvador "San Ignacio" Sinaloa
+}

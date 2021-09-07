@@ -1,0 +1,119 @@
+#Country Name: Beaver Island
+
+graphical_culture = westerngfx
+
+color = { 142  66  64 }
+
+historical_idea_groups = {
+	plutocracy_ideas
+	defensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	offensive_ideas
+	administrative_ideas
+	innovativeness_ideas
+	trade_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Aaron #0" = 5
+	"Albert #0" = 5
+	"Alexander #0" = 5
+	"Alpheus #0" = 1
+	"Andrew #0" = 5
+	"Austin #0" = 5
+	"Charles #0" = 5
+	"Chase #0" = 5
+	"Cyrus #0" = 1
+	"David #0" = 5
+	"Edwin #0" = 5
+	"Epaphroditus #0" = 1
+	"Frank #0" = 10
+	"Fred #0" = 10
+	"George #0" = 10
+	"Harry #0" = 5
+	"Hazen #0" = 1
+	"Henry #0" = 10
+	"James #0" = 10
+	"Jennifer #0" = -5 
+	"John #0" = 20
+	"Josiah #0" = 1
+	"Kimber #0" = 1
+	"Kinsley #0" = 1
+	"Lewis #0" = 5
+	"Luren #0" = 1
+	"Mennen #0" = 1
+	"Moses #0" = 1
+	"Murray #0" = 5
+	"Richard #0" = 5
+	"Robert #0" = 5
+	"Russell #0" = 5
+	"Stevens #0" = 5
+	"Wilber #0" = 1
+	"William #0" = 20
+	"Woodbridge #0" = 1
+}
+
+leader_names = {
+	Alger
+	Bagley Baldwin Barry Begole Bingham Blair Blanchard Bliss Brucker
+	Cass Comstock Crapo Croswell
+	Dickinson
+	Engler
+	Felch Ferris Fitzgerald
+	Gordon Granholm Green Greenly Groesbeck
+	Horner Hull
+	Jerome
+	Kelly
+	Luce
+	Mason McClelland Milliken Murphy
+	Osborn
+	Parsons Pingree Porter
+	Ransom Rich Romney
+	Sigler Sleeper Snyder Swainson
+	Wagoner Warner Williams Winans Wisner Woodbridge
+}
+
+ship_names = {
+	Alcona Alger Allegan Alpena "Ann Arbor" Antrim Arenac
+	Baraga Barry Bay Benzie Barrien Branch Brown
+	Calhoun Cass Charlevoix Cheboygan Chippewa Clare Clinton Crawford
+	"Des Moines" Delta Detroit Dickinson Dubuque
+	Easton Emmet Erie
+	Genessee Gladwin Gogebic "Grand Rapids" "Grand Traverse" Gratiot
+	Hillsdale Houghton Huron
+	Ingham Ionia Iosco Iowa Iron Isabella "Isle Royale"
+	Jackson
+	Kalamazoo Kalkaska Kent Keweenaw Keskkauko
+	Lake Lansing Lapeer Leelanau Lenawee Livingston Luce
+	Mackinac Macomb Manistee Manitou Marquette Mason Mecosta Menominee Midland Michigan Milwaukee Missaukee Monroe Montcalm Montmorency Muskegon
+	Newaygo
+	Oakland Oceana Ogemaw Omeena Ontonagon Osceola Oscoda Ostego Ottawa
+	"Presque Isle"
+	Roscommon
+	Saginaw "St. Clair" "St. Joseph" Sanilac Schoolcraft Shiawassee Superior
+	Tuscula
+	"Van Buren"
+	Washtenaw Wayne Wexford Wyandot
+	Yooper
+}

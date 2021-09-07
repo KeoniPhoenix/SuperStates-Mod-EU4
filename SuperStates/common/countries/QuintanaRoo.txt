@@ -1,0 +1,106 @@
+#Country Name: Quintana Roo
+
+graphical_culture = westerngfx
+
+color = { 50 150 50 }
+
+historical_idea_groups = {
+	defensive_ideas
+	expansion_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Aarón #0" = 5
+	"Alfonso #0" = 5
+	"Alfredo #0" = 5
+	"Amado #0" = 5
+	"Anastasio #0" = 5
+	"Antonio #0" = 5
+	"Arturo #0" = 10
+	"Camilo #0" = 5
+	"Candelario #0" = 5
+	"Carlos #0" = 10
+	"David #0" = 5
+	"Enrique #0" = 5
+	"Félix #0" = 10
+	"Gabriel #0" = 5
+	"Ignacio #0" = 5
+	"Isidro #0" = 5
+	"Javier #0" = 5
+	"Jesús #0" = 5
+	"Joaquín  #0" = 5
+	"José #0" = 10
+	"Librado #0" = 10
+	"Malrubio #0" = 5
+	"Manuel #0" = 5
+	"Margarito #0" = 5
+	"Mario #0" = 5
+	"Miguel #0" = 5
+	"Octaviano #0" = 5
+	"Pascual #0" = 5
+	"Pedro #0" = 5
+	"Rafael #0" = 10
+	"Rufo #0" = 5
+	"Victor #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Abitia Aguirre Ancona
+	Bañuelos Barocio Borge Bravo
+	Cámara Campillo Carrera Coral
+	"de la Chapa"
+	Egealiz Escobar
+	Félix Figueroa
+	Garcilazo Garza González Guevara Gustavo
+	Hendricks
+	Joaquín
+	María Martínez Melgar Merino Morón
+	Plank
+	Ramírez
+	Rojas Rojo
+	Sánchez Siurob Solís
+	Vidal Villanueva
+}
+
+ship_names = {
+	Bacalar Benito Blanco
+	Cancún Cárdenas Carmen Carrillo Chetumal Cozumel
+	Felipe
+	Isla
+	José Juárez
+	Kantunilkín
+	Lázaro
+	María Morelos Mujeres
+	Othón
+	Playa Puerto
+	"San Miguel" Solidaridad
+	Tulum
+}

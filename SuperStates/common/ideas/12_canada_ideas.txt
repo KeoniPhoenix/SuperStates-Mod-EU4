@@ -1,0 +1,895 @@
+# Do not change tags in here without changing every other reference to them.
+# Do not change tags in here without changing every other reference to them.
+# If adding new groups or ideas, make sure they are unique.
+
+### Canadian States National Ideals
+
+#Acadia
+
+ACD_ideas = {
+	start = {
+		years_of_nationalism = -5
+		diplomats = 1
+	}
+
+	bonus = {
+		missionaries = 1
+	}
+
+	trigger = {
+			tag = ACD
+	}
+	free = yes		#will be added at load.
+
+	throw_out_the_occupiers = {
+		culture_conversion_cost = -0.20
+		enemy_core_creation = 0.10
+	}
+	reorganization_of_the_defenses = {
+		defensiveness = 0.15
+	}
+	adopt_tactics_from_gaul = {
+		land_morale = 0.20
+	}
+	the_new_acadian_navy = {
+		naval_morale = 0.10
+		global_ship_trade_power = 0.05
+	}
+	resources_for_recovery = {
+		development_cost = -0.10
+	}
+	repatriation_of_our_family = {
+		global_manpower_modifier = 0.15
+	}
+	reestablish_the_missions = {
+		global_missionary_strength = 0.02
+	}
+}
+
+#Alberta
+
+ABR_ideas = {
+	start = {
+		land_morale = 0.15
+		trade_goods_size_modifier = 0.10
+	}
+
+	bonus = {
+		army_tradition = 1
+	}
+	
+	trigger = {
+			tag = ABR
+	}
+	free = yes		#will be added at load.
+	
+	dominion_lands_act = {
+		development_cost = -0.05
+		tolerance_heretic = 1
+	}
+	northwest_mounted_police = {
+		cavalry_power = 0.20
+	}
+	prairie_militia = {
+		cavalry_flanking = 0.50
+	}
+	fields_of_wheat = {
+		global_manpower_modifier = 0.33
+	}
+	old_growth_forests = {
+		build_cost = -0.10
+	}
+	upgrade_the_trails = {
+		caravan_power = 0.20
+		movement_speed = 0.10
+	}
+	calgary_stampede = {
+		discipline = 0.05
+	}
+}
+
+#British Columbia
+
+BCO_ideas = {
+	start = {
+		naval_morale = 0.20
+		global_sailors_modifier = 0.20
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = BCO
+			tag = VCV
+			}
+	}
+	free = yes		#will be added at load.
+	
+	seaforth_highlanders = {
+		fire_damage = 0.10
+	}
+	burrard_inlet_harbor = {
+		merchants = 1
+		trade_range_modifier = 0.10
+	}
+	pacific_navigators = {
+		may_explore = yes
+		global_colonial_growth = 20
+	}
+	the_cariboo_road = {
+		technology_cost = -0.10
+	}
+	columbia_district = {
+		trade_steering = 0.20
+	}
+	ferry_network = {
+		transport_cost = -0.10
+		leader_naval_manuever = 1
+	}
+	protecting_the_dixon_entrance = {
+		heavy_ship_power = 0.15
+	}
+}
+
+#Cape Breton
+
+CBI_ideas = {
+	start = {
+		land_morale = 0.15
+		leader_land_shock = 1
+	}
+
+	bonus = {
+		siege_ability = 0.10
+	}
+	
+	trigger = {
+			tag = CBI		
+	}
+	free = yes		#will be added at load.
+	
+	gaelic_diplomacy = {
+		ae_impact = -0.15
+	}
+	bras_dor_trade = {
+		merchants = 1
+		global_own_trade_power = 0.05
+	}
+	beinn_bhreagh = {
+		idea_cost = -0.10
+		innovativeness_gain = 0.25
+	}
+	the_highlanders = {
+		shock_damage = 0.15
+	}
+	bretoner_sovereignty = {
+		free_dip_policy = 1
+	}
+	scottish_clans = {
+		global_manpower_modifier = 0.10
+	}
+	forteresse_de_louisbourg = {
+		defensiveness = 0.15
+	}
+}
+
+
+#Labrador
+
+LBD_ideas = {
+	start = {
+		hostile_attrition = 1
+		build_cost = -0.10
+	}
+
+	bonus = {
+		yearly_absolutism = 1
+	}
+	
+	trigger = {
+		tag = LBD
+	}
+	free = yes		#will be added at load.
+	
+	inuit_spirit = {
+		land_attrition = -0.10
+	}
+	joao_lavrador = {
+		may_explore = yes
+		range = 0.33
+	}
+	moravian_brethren = {
+		papal_influence = 1
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.10
+		religious_unity = 0.25
+	}
+	goose_bay = {
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
+	}
+	iron_deposits = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	boundary_disputes = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}	
+	markland = {
+		prestige = 1
+		discipline = 0.025
+	}
+}
+
+
+#Madawaska
+
+MDW_ideas = {
+	start = {
+		tolerance_own = 2
+		republican_tradition = 0.30	
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+
+	bonus = {
+		infantry_power = 0.10
+	}
+	
+	trigger = {
+		tag = MDW
+	}
+	free = yes		#will be added at load.
+	
+	brayon_fervor = {
+		global_missionary_strength = 0.03
+	}
+	neither_mainer_quebecois_or_acadian = {
+		culture_conversion_cost = -0.20
+		enemy_core_creation = 0.10
+	}
+	assessing_our_own_taxes = {
+		global_tax_modifier = 0.10
+	}
+	militia_service = {
+		global_manpower_modifier = 0.15
+	}
+	quills_of_the_porcupine = {
+		defensiveness = 0.25
+	}
+	porcupine_and_eagle_diplomacy = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
+	the_legend_of_aroostooks_baker = {
+		diplomats = 1
+	}
+}
+
+#Manitoba
+
+MTB_ideas = {
+	start = {
+		cavalry_power = 0.15
+		spy_offence = 0.20
+	}
+
+	bonus = {
+		technology_cost = -0.10
+	}
+	
+	trigger = {
+		OR = {
+			tag = MTB
+			tag = MTA
+			tag = NRO
+			}
+	}
+	free = yes		#will be added at load.
+	
+	plentiful_prairies = {
+		land_forcelimit_modifier = 0.20
+	}
+	metis_miltia = {
+		army_tradition = 0.5
+	}
+	land_claim_registry = {
+		global_tax_modifier = 0.10
+	}
+	polar_bear_wranglers = {
+		shock_damage_received = -0.10
+	}
+	the_father_of_manitoba = {
+		diplomatic_upkeep = 1
+	}
+	town_agricultural_processing = {
+		production_efficiency = 0.10
+	}
+	york_factory_express = {
+		trade_range_modifier = 0.10
+		trade_steering = 0.10
+	}
+}
+
+#Montreal
+
+MTL_ideas = {
+	start = {
+		trade_range_modifier = 0.15
+		merchants = 1
+	}
+	
+	bonus = {
+		free_dip_policy = 1
+	}
+	
+	trigger = {
+		tag = MTL
+	}
+	free = yes		#will be added at load.
+	
+	economic_center = {
+		global_trade_power = 0.15
+		center_of_trade_upgrade_cost = -0.10
+	}
+	grand_exposition = {
+		prestige = 1
+	}
+	from_fortress_to_capital = {
+		development_cost = -0.10
+	}
+	bank_of_montreal = {
+		interest = -0.5
+	}
+	port_on_the_seaway = {
+		global_sailors_modifier = 0.15
+		light_ship_cost = -0.20
+	}
+	ville_marie = {
+		defensiveness = 0.20
+	}
+	lachine_canal = {
+		trade_efficiency = 0.10
+	}
+}
+	
+#New Brunswick
+
+NBR_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+		num_accepted_cultures = 1
+	}
+
+	bonus = {
+		naval_attrition = -0.10
+	}
+	
+	trigger = {
+		tag = NBR
+	}
+	free = yes		#will be added at load.
+	
+	house_of_brunswick = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	celebrate_shipyards = {
+		leader_naval_manuever = 1
+		global_ship_cost = -0.05
+	}
+	bay_of_fundy = {
+		technology_cost = -0.05
+		trade_efficiency = 0.10
+	}
+	north_shore_regiment = {
+		discipline = 0.05
+	}
+	center_for_transport = {
+		trade_range_modifier = 0.20
+	}
+	timber_economy = {
+		build_cost = -0.10
+	}
+	drive_back_the_fenians = {
+		fire_damage = 0.10
+	}
+}
+
+#Newfoundland and Labrador
+
+NFL_ideas = {
+	start = {
+		ship_durability = 0.10
+		own_coast_naval_combat_bonus = 1.0
+	}
+
+	bonus = {
+		global_ship_cost = -0.05
+	}
+	
+	trigger = {
+			tag = NFL
+	}
+	free = yes		#will be added at load.
+	
+	grand_banks = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	cabots_landing = {
+		may_explore = yes
+		range = 0.33
+	}
+	legacy_of_vinland = {
+		colonists = 1
+	}
+	signal_hill = {
+		land_morale = 0.10
+	}
+	goose_bay = {
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
+	}
+	resource_rich = {
+		build_cost = -0.10
+		development_cost = -0.05
+	}
+	markland = {
+		prestige = 1
+		discipline = 0.025
+	}
+}
+
+#Newfoundland
+
+NWF_ideas = {
+	start = {
+		own_coast_naval_combat_bonus = 1.0
+		idea_cost = -0.10
+	}
+
+	bonus = {
+		global_ship_cost = -0.05
+	}
+	
+	trigger = {
+			tag = NWF
+	}
+	free = yes		#will be added at load.
+	
+	grand_banks = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	cabots_landing = {
+		may_explore = yes
+		range = 0.33
+	}
+	our_dominion = {
+		free_policy = 1
+		republican_tradition = 0.15
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+	}
+	signal_hill = {
+		land_morale = 0.10
+	}
+	admiral_system = {
+		navy_tradition = 1
+	}
+	joseph_smallwood = {
+		free_adm_policy = 1
+	}
+	newfoundlander_first = {
+		same_culture_advisor_cost = -0.25
+	}
+}
+
+
+#Nova Scotia
+
+NVS_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.33
+		leader_land_shock = 1
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+	
+	trigger = {
+			tag = NVS		
+	}
+	free = yes		#will be added at load.
+	
+	gaelic_diplomacy = {
+		ae_impact = -0.15
+	}
+	navigating_the_sable_island_graveyard = {
+		leader_naval_manuever = 1
+	}
+	halifax_harbour = {
+		global_ship_cost = -0.10
+	}
+	scottish_highlanders = {
+		shock_damage = 0.10
+	}
+	fourteenth_colony = {
+		prestige = 1
+	}
+	william_d_lawrence = {
+		heavy_ship_power = 0.10
+		navy_tradition = 0.25
+	}
+	a_home_for_all = {
+		tolerance_heretic = 1
+		num_accepted_cultures = 1
+	}
+}
+
+#Northwest Territories
+
+NWT_ideas = {
+	start = {
+		hostile_attrition = 1
+		core_creation = -0.20
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+			tag = NWT
+	}
+	free = yes		#will be added at load.
+	
+	polar_warfare = {
+		land_attrition = -0.25
+	}
+	reclaim_our_right = {
+		ae_impact = -0.10
+		province_warscore_cost = -0.05
+	}
+
+	vast_territory = {
+		governing_capacity_modifier = 0.15
+	}
+	diamond_mine_income = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	ice_roads = {
+		movement_speed = 0.15
+		envoy_travel_time = -0.25
+	}
+	nonpartisan_assembly = {
+		yearly_corruption = -0.10
+	}
+	aurora_borealis1 = {
+		prestige = 1
+	}
+}
+
+#Nunavut
+
+NUN_ideas = {
+	start = {
+		land_attrition = -0.15
+		leader_naval_manuever = 1
+	}
+
+	bonus = {
+		war_exhaustion = -0.02
+	}
+	
+	trigger = {
+		OR = {
+			tag = NUN
+			tag = KTN
+			tag = NTS
+			tag = NUV
+			}
+	}
+	free = yes		#will be added at load.
+	
+	land_of_the_inuit = {
+		land_morale = 0.10
+	}
+	hudson_strait = {
+		trade_steering = 0.20
+	}
+	helluland_repulsers = {
+		infantry_power = 0.10
+	}
+	far_and_wide = {
+		governing_capacity_modifier = 0.20
+	}
+	resource_exploration_taxes = {
+		global_tax_modifier = 0.10
+	}
+	northwest_passage = {
+		trade_efficiency = 0.10
+	}
+	avenge_the_relocations = {
+		culture_conversion_cost = -0.20
+		global_missionary_strength = 0.01
+	}
+}
+
+#Ontario
+
+ONT_ideas = {
+	start = {
+		unjustified_demands = -0.25
+		core_creation = -0.10
+	}
+
+	bonus = {
+		advisor_cost = -0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = ONT
+			tag = OTW
+			}
+	}
+	free = yes		#will be added at load.
+	
+	brocks_victory = {
+		land_morale = 0.10
+	}
+	lake_and_river_system = {
+		merchants = 1
+		trade_range_modifier = 0.10
+	}
+	shining_jewels = {
+		free_adm_policy = 1
+		prestige = 0.5
+	}
+	free_public_and_ecclesiastical_schools = {
+		tolerance_own = 1
+		idea_cost = -0.05
+	}
+	local_government_reorganization_acts = {
+		yearly_corruption = -0.10
+	}
+	kingston_military_college = {
+		free_leader_pool = 1
+	}
+	family_compact = {
+		yearly_absolutism = 1
+	}
+}
+
+#Prince Edward Island
+
+PEI_ideas = {
+	start = {
+		development_cost = -0.10
+		defensiveness = 0.15
+	}
+
+	bonus = {
+		diplomats = 1
+	}
+	
+	trigger = {
+			tag = PEI
+	}
+	free = yes		#will be added at load.
+	
+	diversified_agriculture = {
+		land_maintenance_modifier = -0.10
+	}
+	experienced_captains = {
+		leader_naval_manuever = 1
+	}
+	small_but_equal = {
+		legitimacy = 1
+		republican_tradition = 0.30
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	garden_of_the_gulf = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	birthplace_of_confederation = {
+		free_dip_policy = 1
+	}
+	acadian_immigration = {
+		tolerance_heretic = 1
+		num_accepted_cultures = 1
+	}
+	fishing_communities = {
+		global_ship_cost = -0.10
+	}
+
+}
+
+#Quebec
+
+QUE_ideas = {
+	start = {
+		global_manpower_modifier = 0.20
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = QUE
+			tag = GAT
+			tag = SAG
+			}
+	}
+	free = yes		#will be added at load.
+	
+	devout_catholics = {
+		global_missionary_strength = 0.02
+		papal_influence = 1
+	}
+	nunquam_retrorsum = {
+		land_morale = 0.20
+	}
+	an_early_capital = {
+		prestige = 1
+	}
+	quebec_act = {
+		tolerance_own = 2
+	}
+	masters_of_our_own_house = {
+		stability_cost_modifier = -0.10
+	}
+	quiet_revolution = {
+		yearly_corruption = -0.10
+	}
+	coureur_des_bois = {
+		merchants = 1
+	}
+}
+
+#Saskatchewan
+
+SSK_ideas = {
+	start = {
+		cavalry_cost = -0.10
+		cavalry_power = 0.20
+	}
+
+	bonus = {
+		governing_capacity_modifier = 0.20
+	}
+	
+	trigger = {
+			tag = SSK
+	}
+	free = yes		#will be added at load.
+	
+	northwest_resistance = {
+		shock_damage = 0.10
+	}
+	control_over_our_minerals = {
+		global_tax_modifier = 0.10
+	}
+	saskatchewan_dragoons = {
+		cav_to_inf_ratio = 0.10
+		cavalry_flanking = 0.50
+	}
+	fur_trade_station = {
+		global_trade_goods_size_modifier = 0.05
+	}
+	prairie_power = {
+		infantry_power = 0.10
+	}
+	victories_in_the_fields = {
+		prestige_from_land = 1
+	}
+	orientation_for_social_justice = {
+		stability_cost_modifier = -0.10
+	}
+}
+
+#Toronto
+
+TTN_ideas = {
+	start = {
+		global_trade_power = 0.10
+		trade_efficiency = 0.10
+	}
+	
+	bonus = {
+		merchants = 2
+	}
+	
+	trigger = {
+			tag = TNT
+	}
+	free = yes		#will be added at load.
+	
+	raccoons_and_umbrellas = {
+		embargo_efficiency = 0.25
+		privateer_efficiency = 0.15
+	}
+	golden_horseshoe = {
+		development_cost = -0.10
+	}
+	goods_and_services_tax = {
+		global_tax_modifier = 0.10
+	}
+	battle_of_york = {
+		fire_damage_received = -0.10
+	}
+	william_lyon_mackenzie = {
+		advisor_cost = -0.10
+		advisor_pool = 1
+	}
+	old_york = {
+		build_cost = -0.15
+	}
+	economic_progress = {
+		idea_cost = -0.10
+		technology_cost = -0.10
+	}
+}
+
+#Yukon
+
+YUK_ideas = {
+	start = {
+		movement_speed = 0.15
+		technology_cost = -0.05
+	}
+
+	bonus = {
+		core_creation = -0.20
+	}
+	
+	trigger = {
+			tag = YUK
+	}
+	free = yes		#will be added at load.
+	
+	masters_of_tundra_warfare = {
+		land_attrition = -0.20
+	}
+	klondike_gold_rush = {
+		inflation_reduction = 0.10
+		production_efficiency = 0.05
+	}
+	the_great_yukon = {
+		trade_range_modifier = 0.20
+	}
+	winter_whiteouts = {
+		defensiveness = 0.20
+	}
+	precious_metal_and_gemstone_mining = {
+		global_tax_modifier = 0.15
+	}
+	sled_dog_teams = {
+		leader_land_manuever = 1
+	}
+	highway_systems = {
+		global_institution_spread = 0.10
+	}
+}
+
+#### END OF CANADIAN STATES ####
+

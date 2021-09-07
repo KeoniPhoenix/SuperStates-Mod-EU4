@@ -1,0 +1,107 @@
+#Country Name: Oregon
+
+graphical_culture = westerngfx
+
+color = { 255  132  0 }
+
+historical_idea_groups = {
+	exploration_ideas
+	naval_ideas
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Addison #0" = 5
+	"Albin #0" = 0
+	"Barbara #0" = -5
+	"Benjamin #0" = 5
+	"Charles #0" = 10
+	"Douglas #0" = 5
+	"Earl #0" = 5
+	"Elmo #0" = 0
+	"Frank #0" = 5
+	"George #0" = 20
+	"Isaac #0" = 5
+	"James #0" = 5
+	"Jay #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 5
+	"Julius #0" = 5
+	"Kintzing #0" = 0
+	"La Fayette #0" = 0
+	"Mark #0" = 5
+	"Neil #0" = 5
+	"Oswald #0" = 5
+	"Paul #0" = 5
+	"Robert #0" = 10
+	"Stephen #0" = 5
+	"Sylvester #0" = 5
+	"Theodore #0" = 10
+	"Thomas #0" = 5
+	"Victor #0" = 5
+	"Walter #0" = 5
+	"William #0" = 10
+	"Zenas #0" = 0
+}
+
+leader_names = {
+	Abernethy Atiyeh
+	Benson Bowerman
+	Chadwick Chamberlain Curry
+	Davis
+	Gaines Geer Gibbs Goldschmidt Grover
+	Hall Hatfield Holmes
+	Kitzhaber Kulongoski
+	Lane Lord
+	Martin McCall McKay Meier Moody
+	Norblad
+	Olcott
+	Patterson Pennoyer Pierce Prichette
+	Roberts
+	Smith Snell Sprague Straub
+	Thayer
+	West Whiteaker Withycombe Woods
+}
+
+ship_names = {
+	Baker Benton
+	Clackamas Clatsop Columbia Coos Curry
+	Deschutes Douglas
+	Gilliam Grant
+	Harney "Hood River"
+	Jackson Jefferson Josephine
+	Klamath
+	Lake Lane Lincoln Linn
+	Malheur Marion Marrow Multnomah
+	Polk Portland
+	Salem Sherman
+	Tillamook
+	Umatilla Umpqua Union
+	Wallowa Wasco Washington Wheeler
+	Yamhill
+}

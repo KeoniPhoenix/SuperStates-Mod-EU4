@@ -1,0 +1,147 @@
+#Country Name: Arizona
+
+graphical_culture = westerngfx
+
+color = { 60 59 110 }
+
+historical_idea_groups = {
+	offensive_ideas
+	diplomatic_ideas
+	plutocracy_ideas
+	trade_ideas
+	quality_ideas
+	defensive_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_early_infantry
+	north_american_armored_horsemen
+	north_american_longbow
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	texas_rangers
+	north_american_lancers
+}
+
+monarch_names = {
+	"John #0" = 20
+	"Francis #0" = 10
+	"Edward #0" = 5
+	"Richard #0" = 2
+	"Benjamin #0" = 2
+	"Frederick #0" = 2
+	"Alexander #0" = 2
+	"Oakes" = 1
+	"Joseph #0" = 2
+	"Anson" = 1
+	"Lewis #0" = 2
+	"Conrad" = 0
+	"Myron" = 1
+	"Thomas" = 0
+	"George #0" = 1
+	"Rawghlie Clement" = 0
+	"Robert" = 0
+	"Sidney" = 0
+	"Dan Edward" = 0
+	"Ernest" = 0
+	"Paul #0" = 1
+	"Samuel" = 0
+	"Raul" = 0
+	"Wesley" = 0
+	"Bruce" = 0
+	"Evan" = 0
+	"Rose" = -5
+	"Fife" = 0
+	"Jane" = -5
+	"Janet" = -1
+	"Janice" = -5
+}
+
+leader_names = {
+	O'Hara
+	Goodwin
+	McCormick
+	Safford
+	Hoyt
+	Frémont
+	Tritle
+	Zulick
+	Wolfley
+	Irwin
+	Murphy
+	Hughes
+	Franklin
+	McCord
+	Brodie
+	Kibbey
+	Sloan
+	Hunt
+	Campbell
+	Phillips
+	Moeur
+	Stanford
+	Jones
+	Osborn
+	Garvey
+	Pyle
+	McFarland
+	Fannin
+	Goddard
+	Williams
+	Castro
+	Bolin
+	Babbitt
+	Mecham
+	Mofford
+	Symington
+	Hull
+	Napolitano
+	Brewer
+}
+
+ship_names = {
+	Arizona America Apache "Apache Junction" Avondale Anasazi
+	Bullhead Benson Bisbee Buckeye Bighorn
+	Constitution Chandler Coconino Cochise Carefree "Casa Grande" "Cave Creek" "Chino Valley" Clarkdale Clifton Colorado Coolidge Cottonwood Cocopa Chiricahua Chemehuevi "Cactus Wren" Coyote "Copper Star"
+	Dogulas Dewey
+	Enterprise Eagar "El Mirage" Eloy Eagle
+	Freedom Flagstaff Florence "Fountain Hills" Falcon
+	Guadalupe Gila Graham Greenelee "Gila Bend" Glendale Goodyear Globe "Grand Canyon" "Grand Saguaro" "Barry Goldwater"
+	"Happy Valley" Hayen Holbrook "Huachuca City" Havasu Hopi Hualapai Havasupai Hohokam Hassayampa
+	Independence
+	"John O'Hara" Jerome
+	Kerney Kingman Kanab Kaibab Kofa
+	Liberty "La Paz" Litchfield
+	Mesa Maricopa Mohave Mammoth Marana Miami Mogollon
+	Navajo Nogales
+	Oracle "Oro Valley" "Old Pueblo" O'odham
+	Payson Phoenix Pima Pinal "Paradise Valley" Page Parker Patagonia Peoria Prescott "Prescott Valley" Paiute Papago Patayan Paria
+	"Queen Creek" Quartzsite
+	Republic "Rio Salado"
+	Strawberry "Santa Cruz" Scottsdale "San Tan" Safford Sahuarita "San Luis" Sedona "Show Low" "Sierra Vista" Snowflake Somerton Springerville "Saint Johns" "Star Valley" Superior Suprise "Santa Maria" Salt "San Cristobal" "San Carlos" "San Simon" "San Pedro" "Sierra Estrella" "Santa Catalina"
+	Tucson Taylor Tempe Thatcher Tolleson Tombstone Tusayan Tonto Thunderbird
+	Vulcan "Valley of the Sun" Verde
+	Warren Wellton Wickenburg Wilcox Winkleman Winslow
+	Yuma Yavapai Youngtown Yaqui
+	Zuni
+}
+
+army_names = {
+	"Sonoran Army" "Mohave Army" "Phoenix Army" "Mogollon Army" "Colorado Army" "Gila Army" "Rio Salado Army" "Grand Army" "Army del Canyon" "Thunderbird Army" "$PROVINCE$'s Army"
+}
+
+fleet_names = {
+	"Arizona Armada" "Blue Fleet" "Red Rays Fleet" "Gold Rays Fleet" "Sunset Fleet" "Copper Fleet" "Grand Navy" "Firebird Fleet" "Armada del Sol"
+}
