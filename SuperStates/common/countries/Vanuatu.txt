@@ -1,0 +1,85 @@
+#Country Name: Vanuatu
+
+graphical_culture = westerngfx
+
+color = { 129  137  122 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Ati George #0" = 10
+	"Frederick #0" = 10
+	"Alfred #0" = 10
+	"Francis #0" = 10
+	"Manasseh #0" = 10
+	"Bartholomew #0" = 10
+	"Allan #0" = 10
+	"Snyder #0" = 10
+	"Derek #0" = 10
+	"Danny #0" = 10
+	"Gordon #0" = 10
+	"Joses #0" = 10
+	"Baddley #0" = 10
+	"Edward #0" = 10
+	"Patteson #0" = 10
+	"John #0" = 10
+	"Steve #0" = 10
+	"Matthew #0" = 10
+	"Connolly #0" = 10
+	"Walter #0" = 10
+}
+
+leader_names = {
+	Abana Wale Tom Sandagapatu Maneniaru Folotalu Gukuna Tokaza Tausinga Panakitasi
+	Sagavare Pacha Iduri Ghiro Garu Houenipwela Kenilorea Mamaloni Alebua "Billy Hilly"
+	Ulufa'alu Kemakeza Rini Sikua Philip Lilo Timakata Mataskelekele
+}
+
+ship_names = {
+	Akhamb Ambae Ambrym Anatom Aniwa Aore Araki Arseo Asuleka Atchin Avokh Awei
+	Banks Bokissa Buninga
+	Castaway
+	Dany Dolphin
+	Efate "Ekapum Lep" Elephant Emae Emao Emwae Enwut Epi Erakor Eratap Erromango "Espiritu Santo" Étarik Ewose
+	Falea Futuna
+	Goat Gaua
+	Hideaway Hiw Hunter
+	Ifira Inyeug Iririki "Iriwiti Lep"
+	Kakula Kwakea
+	Laika Lamen Lathi Lataro Lelepa Lemeur Leneu Leumanang Lo Lopevi
+	Maewo Mai Makura Malakula Malampa Malo Malohu Malokilikili Malotina Malparavu Maltinerava Malewepe Maskelynes Matah Mataso Matthew Mavea Mele "Mere Lava" Merig Metoma Monument Moso Mota "Mota Lava"
+	Namuka Nawila Nguna Ngwel Norsup
+	Oyster
+	Paama Pele Penama Pentecost
+	Ra Rano Ravenga Reef Rowa
+	Saddle Sakao Sanma "Santa Maria" Shefa Shepard Sowan
+	Tangoa Tanna Tefea Tefala Toga Tomman Tongariki Tongoa Torba Torres Tutuba
+	"Vanua Lava" "Vet Tagde"
+	Uluveo Ureparapara Uri Uripiv
+	Vao Varo Verao "Vete Manung" Vulai
+	Wala Wot
+}

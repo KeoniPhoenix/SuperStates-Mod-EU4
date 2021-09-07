@@ -1,0 +1,102 @@
+#Country Name: Utah
+
+graphical_culture = westerngfx
+
+color = { 243  201  116 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+	offensive_ideas
+	trade_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Alfred #0" = 5
+	"Arthur #0" = 5
+	"Bracken #0" = 0
+	"Bringham #0" = 5
+	"Caleb #0" = 5
+	"Calvin #0" = 5
+	"Charles #0" = 10
+	"Eli #0" = 5
+	"Gary #0" = 5
+	"George #0" = 15
+	"Heber #0" = 5
+	"Henry #0" = 5
+	"Herbert #0" = 5
+	"James #0" = 5
+	"John #0" = 15
+	"Jon #0" = 5
+	"Michael #0" = 5
+	"Norman #0" = 5
+	"Olene #0" = -5
+	"Samuel #0" = 5
+	"Scott #0" = 5
+	"Simon #0" = 5
+	"Stephen #0" = 5
+	"Vernon #0" = 5
+	"William #0" = 5
+}
+
+leader_names = {
+	Axtell
+	Bamberger Bangerter Blood
+	Clyde Cumming Cutler
+	Dawson Dern Doty Durkee
+	Emery
+	Harding Herbert Huntsman
+	Leavitt Lee
+	Matheson Maw Maybe Murray
+	Rampton
+	Shaffer Spry
+	Thomas
+	Vaughan
+	Walker Wells West Woods
+	Young
+}
+
+ship_names = {
+	Beaver Bee Beehive "Box Elder"
+	Cache Carbon Carson Cedar Colorado
+	Davis Deseret Desert Duchesne
+	Emery
+	Garfield Grand Greasewood Green
+	Humboldt
+	Iron
+	Jordan Juab
+	Kane
+	Malad Millard Moab Morgan
+	Navuoo
+	Piute
+	Rich "Rio Virgin"
+	"St. Mary's" "Salt Lake" "San Juan" Sanpete Sevier Shambip Summit
+	Tooele
+	Uintah Utah
+	Wasatch Washington Wayne Weber
+	Young
+}

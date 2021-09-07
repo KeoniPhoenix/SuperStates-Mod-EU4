@@ -1,0 +1,103 @@
+#Country Name: Wyoming
+
+graphical_culture = westerngfx
+
+#color = { 51  112  120 }
+color = { 155  160  159 }
+
+historical_idea_groups = {
+	defensive_ideas
+	quantity_ideas
+	offensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Alonzo #0" = 1
+	"Amos #0" = 1
+	"Arthur #0" = 5
+	"Bryant #0" = 5
+	"Clifford #0" = 10
+	"David #0" = 5
+	"DeForest #0" = 5
+	"Edgar #0" = 5
+	"Elliot #0" = 5
+	"Fenimore #0" = 1
+	"Francis #0" = 5
+	"Frank #0" = 20
+	"George #0" = 5
+	"Jack #0" = 5
+	"James #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 5
+	"Leslie #0" = 1
+	"Lester #0" = 1
+	"Matthew #0" = 5
+	"Michael #0" = 5
+	"Milward #0" = 1
+	"Nellie #0" = -5
+	"Nels #0" = 5
+	"Robert #0" = 5
+	"Stanley #0" = 5
+	"Thomas #0" = 5
+	"William #0" = 15
+}
+
+leader_names = {
+	Barber Barrett Baxter Brooks
+	Campell Carey Carey Chatterton Clark Crane
+	Emerson
+	Freudenthal
+	Gage Geringer
+	Hale Hansen Hathaway Herschler Hickey Houx Hoyt Hunt
+	Kendrick
+	Lucas
+	Mead Miller Moonlight Morgan
+	Osborne
+	Richards Rogers Ross
+	Simpson Smith Sullivan
+	Thayer
+	Warren
+}
+
+ship_names = {
+	Albany
+	"Big Horn" Buffalo
+	Campbell Carbon Carter Cheyenne Cody Converse Crook
+	Fremont
+	Goshen
+	Hanover "Hot Springs"
+	Johnson
+	Laramie Lincoln
+	Natrona Niobrara
+	Park Pease Platte
+	Sheridan Sublette Sweetwater
+	Teton
+	Uinta
+	Washakie Weston William
+	Yellowstone
+}

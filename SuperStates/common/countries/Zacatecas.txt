@@ -1,0 +1,91 @@
+#Country Name: Zacatecas
+
+graphical_culture = westerngfx
+
+color = { 229 138 80 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Amilia #0" = 5
+	"Arturo #0" = 5
+	"Félix #0" = 5
+	"Fernando #0" = 5
+	"Genaro #0" = 5
+	"Jesús #0" = 5
+	"José #0" = 10
+	"Leobardo #0" = 10
+	"Matías #0" = 5
+	"Miguel #0" = 5
+	"Pánfilo  #0" = 10
+	"Pedro #0" = 10
+	"Ricardo #0" = 5
+	"Rodrigo #0" = 5
+	"Salvador #0" = 10
+	"Victor #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Alonso
+	Bañuelos Borrego
+	Castañedo Cervantes
+	"de León"
+	Escobar
+	Gallegos García
+	Martínez Monreal
+	Natera
+	Pámanes
+	Ramos Reynoso Rodríguez Romo Ruiz
+}
+
+ship_names = {
+	Aldama Apozol Apulco Atolinga Auza
+	Benito
+	Cadena Calera Codina Conception Cuauhtémoc
+	"El Salvador" Escobedo Estrada
+	Flores Fresnillo
+	García Genaro "General Enrique" "General Francisco" "General Pánfilo" Gonzalez Guadalupe
+	Hidalgo Huanusco
+	Jalpa Jerez Jiménez "Jiménez Teul" "Joaquín Amaro" Juan Juárez Juchipila
+	Luis
+	Mazapil Melchor Mezquital Miguel Momax Monte Morelos Moya Moyahua Murguía
+	Nieves "Noria Ángeles"
+	Ocampo Ojocaliente Oro Ortega
+	Pánuco Paz Pinos Plateado
+	"Rio Grande" Román Rosales
+	Salinas "San Pedro Piedra" Sánchez "Santa María" Sombrerete
+	Tepechitlán Tepetongo Teul Tlatenago Tobasco Trinidad
+	Valparaiso Valparaíso Valpariso Victor "Villa de Cos" Villanueva
+	Zacatecas
+}

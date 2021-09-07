@@ -1,0 +1,123 @@
+#Country Name: Wabash Union
+
+graphical_culture = westerngfx
+
+color = { 75  133  209 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Abram #0" = 1
+	"Albert #0" = 5
+	"Alvin #0" = 1
+	"Ashbel #0" = 1
+	"Claude #0" = 1
+	"Clifford #0" = 5
+	"Conrad #0" = 5
+	"David #0" = 5
+	"Edgar #0" = 5
+	"Edward #0" = 5
+	"Emmett #0" = 5
+	"Evan #0" = 5
+	"Frank #0" = 10
+	"George #0" = 5
+	"Harold #0" = 5
+	"Harry #0" = 5
+	"Henry #0" = 15
+	"Ira #0" = 1
+	"Isaac #0" = 1
+	"James #0" = 20
+	"John #0" = 5
+	"Jonathan #0" = 5
+	"Joseph #0" = 10
+	"Matthew #0" = 5
+	"Michael #0" = 5
+	"Mitch #0" = 1
+	"Noah #0" = 1
+	"Oliver #0" = 5
+	"Otis #0" = 1
+	"Paris #0" = 1
+	"Paul #0" = 5
+	"Ralph #0" = 5
+	"Ratliff #0" = 1
+	"Robert #0" = 5
+	"Roger #0" = 5
+	"Samuel #0" = 10
+	"Thomas #0" = 15
+	"Warren #0" = 5
+	"William #0" = 10
+	"Winfield #0" = 5
+
+}
+
+leader_names = {
+	Baker Bayh Bigger Boon Bowen Branch Branigin
+	Chase Craig
+	Daniels Dunning Durbin
+	Gates Gibson Goodrich Gray
+	Hammond Handley Hanly Harrison Hendricks Hovey
+	Jackson Jennings
+	Kernan
+	Lane Leslie
+	Marshall Matthews McCray McNutt Morton Mount
+	Noble
+	O'Bannon Orr
+	Pence Porter Posey
+	Ralston Ray
+	Schricker
+	Townsend
+	Wallace Welsh Whitcomb Whitcomb Willard Williams Wright
+}
+
+ship_names = {
+	Adams Allen
+	Bartholomew Benton Blackford Boone Brown
+	Carroll Cass Clark Clay Clinton Crawford
+	Daviess Dearborn Decatur DeKalb Delaware Dubois
+	Elkhart
+	Fayette Floyd Fountain Franklin Fulton
+	Gibson Grant Greene
+	Hamilton Hancock Harrison Henry Howard Huntington
+	Jackson Jasper Jay Jefferson Jennings Johnson
+	Knox Kosciusko
+	LaGrange Lake LaPorte Lawrence
+	Madison Marion Marshall Martin Miami Monroe Montgomery Morgan
+	Newton Noble
+	Ohio Orange Owen
+	Parke Perry Pike Porter Posey Pulaski Putnam
+	Randolph Ripley Rush
+	"St. Joseph" Scott Shelby Spencer Starke Steuben Sullivan Switzerland
+	Tippecanoe Tipton
+	Union
+	Vanderburgh Vermillion Vigo
+	Warren Warrick Washington Wayne White Whitley
+}
