@@ -1,0 +1,111 @@
+#Country Name: California
+
+graphical_culture = westerngfx
+
+color = { 255  200  50 }
+
+historical_idea_groups = {
+	economic_ideas
+	exploration_ideas
+	trade_ideas
+	offensive_ideas
+	plutocracy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Peter" = 20
+	"John" = 20
+	"Milton" = 20
+	"Leland" = 20
+	"Frederick" = 15
+	"Henry" = 15
+	"Newton" = 15
+	"Romualdo" = 15
+	"William" = 10
+	"George" = 10
+	"Washington" = 10
+	"Robert" = 10
+	"James" = 5
+	"Hiram" = 5
+	"Friend" = 5
+	"Clement" = 5
+	"Frank" = 0
+	"Culbert" = 0
+	"Earl" = 0
+	"Goodwin" = 0
+	"Edmund" = 0
+	"Ronald" = 0
+	"Joseph" = 0
+	"Arnold" = 0
+}
+
+leader_names = {
+	Bartlett Bigler Booth Brown Budd Burnett
+	Davis Deukmejian Downey
+	Gage Gillett
+	Haight
+	Irwin
+	Johnson
+	Knight
+	Latham Low
+	Markham McDougall Merriman
+	Pachesco Pardee Perkins 
+	Reagan Richardson Rolph
+	Stanford Schwarzenegger Stephens Stoneman
+	Warren Waterman Weller Wilson
+	Young	
+}
+
+ship_names = {
+	Alamedia Alpine Amador
+	Bakersfield Barstow Butte
+	Calaveras California Colusa "Contra Coasta"
+	"Del Norte"
+	"El Dorado"
+	Fresno
+	Glenn "Golden State"
+	Humboldt
+	Imperial Inyo
+	Kern Kings
+	Lake Lassen "Los Angeles"
+	Madera Marin Mariposa Mendocino Merced Modoc Monterey 
+	Napa Nevada
+	Orange
+	Placer Plumas Presidio
+	Riverside
+	Sacaramento "San Andreas" "San Bernadino" "San Diego" "San Francisco" "San Joaquin" "San Luis Obispo" "San Mateo" "Santa Clara" "Santa Cruz" "Shasta" "Sierra" "Siskiyou" Solano Stanislaus Sutter
+	Tehama Trinity Tulare Tuolumne
+	Ventura
+	Yolo Yosemite Yuba
+}
+
+army_names = {
+	"Golden State Army" "Central Valley Army" "$PROVINCE$'s Army" "Angelino Army" "Bay Army" "Golden Gate Army" "Sierra Nevada Army"
+}
+
+fleet_names = {
+	"Golden Fleet" "Golden Gate Fleet" "Capitol Fleet" "Treasure Fleet" "California Fleet" 
+}

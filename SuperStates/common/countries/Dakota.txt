@@ -1,0 +1,129 @@
+#Country Name: Dakota
+
+graphical_culture = westerngfx
+
+color = { 84  0  255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Allen #0" = 5
+	"Andrew #0" = 10
+	"Archibald #0" = 5
+	"Arthur #0" = 5
+	"Carl #0" = 5
+	"Charles #0" = 10
+	"Cilbert #0" = 1
+	"Clarence #0" = 5
+	"Coe #0" = 0
+	"Dennis #0" = 5
+	"Edward #0" = 5
+	"Edwin #0" = 5
+	"Eli #0" = 5
+	"Elmore #0" = 1
+	"Frank #0" = 10
+	"Frederick #0" = 10
+	"George #0" = 10
+	"Harlan #0" = 0
+	"Harvey #0" = 5
+	"John #0" = 10
+	"Joseph #0" = 5
+	"Leslie #0" = 5
+	"Louis #0" = 5
+	"Lynn #0" = 5
+	"Merrill #0" = 5
+	"Michael #0" = 5
+	"Mils #0" = 1
+	"Nehemiah #0" = 1
+	"Newton #0" = 10
+	"Ole #0" = 1
+	"Peter #0" = 5
+	"Ralph #0" = 5
+	"Richard #0" = 5
+	"Ragnvald #0" = 1
+	"Robert #0" = 5
+	"Roger #0" = 5
+	"Samuel #0" = 5
+	"Siguard #0" = 5
+	"Thomas #0" = 5
+	"Walter #0" = 5
+	"Warren #0" = 5
+	"William #0" = 20
+	"Wilmot #0" = 5
+}
+
+leader_names = {
+	Anderson Aandahl Allin
+	Berry Boe Briggs Brookings Brunsdale Bullow Burbank Burke Bushfield Byrne
+	Church Crawford
+	Dalrymple Daugaard Davis Devine
+	Edmunds Elrod
+	Fancher Farrar Faulk Foss Frazier
+	Green Gubbrud Gunderson Guy
+	Hanna Herreid Herseth Hoeven Howard
+	Janklow Jayne Jensen
+	Kneip
+	Langer Langer Lee Link
+	Maddock McCook McMaster Mellette Mickelson Miller Moodie Moses
+	Nestros Norbeck
+	Olson Ordway
+	Pennington Pierce
+	Rounds
+	Sarles Shafer Shafter Sharpe Sheldon Shortridge Sinner Sorlie
+	Vessey
+	Welford White Wollman
+}
+
+ship_names = {
+	Adams Armstrong Auora
+	Beadle Barnes Bennett Benson Billings "Bon Homme" Bottineau Bowman Boreman Brookings Brown Brule Buffalo Burke Burleigh Butte
+	Campbell Cass Cavalier "Charles Mix" Clark Clay Codington Corson Custer
+	Davidso Day Deuel Dewey Dickey Divide Douglas Dunn
+	Eddy Edmunds Ewing Emmons
+	"Fall River" Faulk Foster
+	"Golden Valley" "Grand Forks" Grant Griggs Gregory
+	Haakon Hamlin Hand Hanson Harding Hettinger Hughes Hutchinson Hyde
+	Jackson Jerauld Jones
+	Kidder Kingsbury
+	Lake LaMoure Lawrence Lincoln Logan Lugenbeel Lyman
+	Marshall McCook McHenry McIntosh McKenzie McPherson Meads Mercer Mellette Miner Minnehaha Moody Morton Mountrail
+	Nelson Nowlin
+	Oliver
+	Pembina Pennington Perkin Pierce Potter Pyatt
+	Ramsey Ransom Renville Richland Roberts Rolette
+	Sargent Sanborn Schnasse Shannon Sheridan Sioux Slope Spink Stanley Stark Steele Sterling Stutsman Sully
+	Todd Towner Traill Tripp Turner
+	Union
+	Walsh Walworth Ward Washabaugh Washington Wells Williams
+	Yankton
+	Ziebach
+}

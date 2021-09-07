@@ -1,0 +1,121 @@
+#Country Name: Alta California
+
+graphical_culture = westerngfx
+
+color = { 201 173 84 }
+
+historical_idea_groups = {
+	economic_ideas
+	exploration_ideas
+	trade_ideas
+	offensive_ideas
+	plutocracy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Abelardo #0" = 5
+	"Abraham #0" = 5
+	"Agustín #0" = 20
+	"Alberto #0" = 10
+	"Alejandro #0" = 5
+	"Alfonso #0" = 5
+	"Angel #0" = 5
+	"Arturo #0" = 10
+	"Bonifacio #0" = 5
+	"Braulio #0" = 5
+	"Carlos #0" = 10
+	"Celso #0" = 5
+	"David #0" = 5
+	"Eligio #0" = 5
+	"Epigmenio #0" = 5
+	"Ernesto #0" = 5
+	"Esteban #0" = 5
+	"Eugenio #0" = 5
+	"Félix #0" = 5
+	"Francisco #0" = 15
+	"Gabriel #0" = 5
+	"Gildard #0" = 5
+	"Guillermo #0" = 5
+	"Gustavo #0" = 5
+	"Héctor #0" = 5 
+	"Hugo #0" = 5
+	"Jacinto #0" = 5
+	"José #0" = 20
+	"Juan #0" = 10
+	"Leonel #0" = 5
+	"Lucas #0" = 5
+	"Lucino #0" = 5
+	"Luis #0" = 10
+	"Manuel #0" = 10
+	"Marcos #0" = 5
+	"Miguel #0" = 10
+	"Milton #0" = 5
+	"Narciso #0" = 5
+	"Oscar #0" = 5
+	"Patrocinio #0" = 5
+	"Rafael #0" = 10
+	"Raúl #0" = 5
+	"Roberto #0" = 5
+	"Rodolfo #0" = 5
+	"Ruperto #0" = 5
+	"Víctor #0" = 5
+	"Xicoténcatl #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Agramont Agúndez Alvarado Arriola Arroniz Aubanel
+	Balarezo Baylón Bernal Berrera
+	Cantú Castellanos Cervantes Cota Covarrubias
+	"de la Madrid" Domínguez
+	Elías Elorduy Espinoza Esquivel
+	Felipe Flores
+	Garcia García Gavira Gómez González Gordillo
+	Ibarra Inocente
+	Leyva Liceaga
+	Magaña Maldonado Mayol Mendoza Mercado Mújica
+	Navarro
+	Olachea Osuna
+	Pedrajo Ptanick
+	Rebolledo Rodríguez Ruffo
+	Salazar Salinas Sánchez Sanginés
+	Tapia Terán Torres Trejo
+	Vásquez Vega
+	Zárate 
+}
+
+ship_names = {
+	Comondú Constitución
+	Ensenada
+	"La Paz" "Loreto" "Los Cabos"
+	Mexicali Mulegé
+	Playas
+	Rosarito
+	"San Anselmo" "San Bernardino" "San Bruno" "San Carlos" "San Clemente" "San Diego" "San Dimas" "San Fernado" "San Francisco" "San Gabriel" "San Jacinto" "San Joaquin" "San Jose" "San José" "San Juan Bautista" "San Juan Capistrano" "San Leandro" "San Luis Obispo" "San Marcos" "San Marino" "San Mateo" "San Pablo" "San Ramon" "Santa Ana" "Santa Barbara" "Santa Clara" "Santa Clarita" "Santa Cruz" "Santa Fe" "Santa Maria" "Santa Monica" "Santa Paula" "Santa Rosa" "Santa Rosalía"
+	Tecate Tijuana
+}

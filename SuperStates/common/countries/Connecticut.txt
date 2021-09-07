@@ -1,0 +1,122 @@
+#Country Name: Connecticut
+
+graphical_culture = westerngfx
+
+color = { 75  69  113 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	diplomatic_ideas
+	exploration_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Jonathan" = 20
+	"Matthew" = 20
+	"Samuel" = 20
+	"Oliver" = 20
+	"John" = 15
+	"Roger" = 15
+	"Gideon" = 15
+	"Henry" = 15
+	"William" = 10
+	"Chauncey" = 10
+	"Issac" = 10
+	"Joseph" = 10
+	"Thomas" = 5
+	"Charles" = 5
+	"Alexander" = 5
+	"James" = 5
+	"Marshall" = 0
+	"Richard" = 0
+	"Phineas" = 0
+	"Morgan" = 0
+	"Luzon" = 0
+	"Owen" = 0
+	"Lorrin" = 0
+	"Abiram" = 0
+	"Rollin" = 0
+	"Frank" = 0
+	"Simeon" = 0
+	"Marcus" = 0
+	"Everett" = 0
+	"Hiram" = 0
+	"Wilbur" = 0
+	"Raymond" = 0
+	"Robert" = 0
+	"Chester" = 0
+	"Abraham" = 0
+	"Ella" = -1
+	"Lowell" = 0
+	"Jodi" = -1
+	"Dannel" = 0	
+}
+
+leader_names = {
+	Andrews
+	Baldwin Bigelow Bingham Bissell Bowles Buckingham Bulkeley
+	Chamberlain Cleveland Coffin Cooke Cross
+	Dempsey Dutton
+	Edwards Ellsworth English
+	Foot
+	Grasso Griswold 
+	Harrison Hawley Holcomb Holley Hubbard Huntington Hurley
+	Ingersoll
+	Jewell
+	Lake Lilley Lodge Lounsbury
+	Malloy McConaughy McLean Meskill Minor Morris
+	O'Neill
+	Peters Pond
+	Rell Ribicoff Roberts Rowland
+	Seymour Shannon Smith Snow
+	Templeton Tomlinson Toucey Treadwell Trumbull
+	Waller Weeks Weicker Wolcott Woodruff
+}
+
+ship_names = {
+	Bridgeport Brooklyn
+	Fairport Fairfield
+	Hartford
+	Litchfield
+	Middlesex Middletown
+	"New Haven" "New London"
+	Putnam
+	Rockville
+	Tolland Trumbull
+	Westmoreland Willimantic Windham
+	Yale
+}
+
+army_names = {
+	"$PROVINCE$'s Army"
+}
+
+fleet_names = {
+	"Atlantic Fleet"
+	"Fleet New England"
+}

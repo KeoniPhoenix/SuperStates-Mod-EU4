@@ -1,0 +1,131 @@
+#Country Name: Chihuahua
+
+graphical_culture = westerngfx
+
+color = { 180 140 100 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abel #0" = 5
+	"Abraham #0" = 5
+	"Alberto #0" = 5
+	"Alfonso #0" = 5
+	"Alfredo #0" = 5
+	"Andrés #0" = 10
+	"Antonio #0" = 5
+	"Arnulfo #0" = 5
+	"Aureliano #0" = 5
+	"César #0" = 5
+	"Eduardo #0" = 5
+	"Efrén #0" = 5
+	"Emilio #0" = 5
+	"Enrique #0" = 10
+	"Felipe #0" = 5
+	"Fernando #0" = 15
+	"Fidel #0" = 5
+	"Francisco #0" = 20
+	"Gustavo #0" = 5
+	"Ignacio #0" = 5
+	"Jesús #0" = 10
+	"Joaquín #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 15
+	"Luis #0" = 10
+	"Manuel #0" = 20
+	"Marcelo #0" = 5
+	"Mariano #0" = 5
+	"Max #0" = 5
+	"Melquiades #0" = 5
+	"Miguel #0" = 5
+	"Oscar #0" = 15
+	"Pascual #0" = 5
+	"Patricio #0" = 5
+	"Pedro #0" = 5
+	"Práxedes #0" = 5
+	"Rafael #0" = 5
+	"Ramón #0" = 5
+	"Reinaldo #0" = 5
+	"Roberto #0" = 5
+	"Rodrigo #0" = 5
+	"Rómulo #0" = 10
+	"Salvador #0" = 5
+	"Saúl #0" = 5
+	"Silvester #0" = 5
+	"Teofilo #0" = 5
+	"Tomás #0" = 5
+	"Vicente #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Acosta Ahumada Alcalá Almada Alvelais Angulo Antonio Ávila
+	Baeza Barrio Bernardo Borunda
+	Caraveo Cárdenas Chao Cortázar Creel
+	Duarte
+	Enríquez Escobar
+	Fierro Flores Foglio
+	Gameros García Ginér Gómez González Guillén Gutiérrez
+	Harrold Herrera
+	León Lozoya
+	María Mascareñas Matrtinez Mendoza Mercado
+	Olivias Ornelas Orozco Ortiz
+	Pimentel
+	Quevedo
+	Rábago Reyes Rodríguez
+	Salidos Salinas Soto
+	Talamantes Talavera Terrazas Treviño
+	Valdez Villa
+}
+
+ship_names = {
+	Ahumada Aldama Allende Aquiles Ascensión
+	Bachiniva Balleza Batopilas Belisario Benavides Bocoyna Borja Buenaventura
+	Calvo Camargo Carichi Chihuahua Chínipas Conchos Coronado Coyame Cuauhtémoc Cusihuiriachi
+	Delicias Domínguez
+	"El Tule"
+	Galeana "Gómez Farías" "Gran Morelos" Guachochi Guadalupe Guazapares Guerrero
+	Hidalgo Huejotitán
+	Ignacio
+	Janos Jiménez Juárez Julimes
+	"La Cruz" López
+	Madera Maguarichi Manuel Matachi Matamoros Meoqui Morelos Moris
+	Namiquipa Nonoava "Nuevo Casas Grandes"
+	Ocampo Ojinaga Oro
+	Parral Práxedis "Riva Palacio" Rosales Rosario
+	"San Francisco" "Santa Bárbara" "Santa Isabel" Satevo Saucillo Sotol
+	Temósachi
+	Urique Uruachi
+	"Valle de Zaragoza"
+	Zaragoza
+}

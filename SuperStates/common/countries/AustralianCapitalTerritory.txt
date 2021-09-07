@@ -1,0 +1,100 @@
+#Country Name: Australian Capital Territory
+
+graphical_culture = westerngfx
+
+color = { 235 203 0 }
+
+historical_idea_groups = {
+	diplomatic_ideas
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	plutocracy_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Gary #0" = 5
+	"Jonathon #0" = 5
+	"Trevor #0" = 5
+	"Rosemary #0" = -5
+	"Katherine #0" = -5
+	"Anne #0" = -5
+	"Ronald #0" = 10
+	"John #0" = 15
+	"Hallam #0" = 5
+	"Henry #0" = 15
+	"William #0" = 25
+	"Thomas #0" = 5
+	"Isaac #0" = 5
+	"Alexander #0" = 5
+	"Richard #0" = 5
+	"Paul #0" = 5
+	"Zelman #0" = 1
+	"Peter #0" = 10
+	"Philip #0" = 1
+	"Michael #0" = 1
+	"Quentin #0" = -1
+}
+
+leader_names = {
+	Bryce
+	Carnell Casey Cosgrove Cowen
+	Deane Denman Dudley Dunrossil "De L'Isle"
+	Follett Forster
+	Gallagher Gowre Gloucester
+	Hasluck Hayden Hollingworth Hopetoun Humphries
+	Isaacs
+	Jefferey
+	Kaine Kerr
+	"Munro Ferguson" McKell
+	Northcote
+	Slim Stanhope Stephen Stonehaven
+	Tennyson
+	
+}
+
+ship_names = {
+	Australia
+	Belconnen Booth
+	Canberra Coree "Cotter River"
+	Gungahlin
+	Hall
+	Jerrabomberra
+	Kowen
+	Majura "Molonglo Valley" "Mount Clear"
+	"Paddys River"
+	"Rendezvous Creek"
+	Stromlo
+	Tennent Tuggeranong
+	"Weston Creek" "Woden Valley"
+}
+
+army_names = {
+	"Canberran Guard"
+}
+
+fleet_names = {
+	"Canberran Corvettes"
+}

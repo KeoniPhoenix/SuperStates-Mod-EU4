@@ -1,0 +1,86 @@
+#Country Name: Acadia
+
+graphical_culture = westerngfx
+
+color = { 94  117  55 }
+
+historical_idea_groups = {
+	defensive_ideas
+	aristocracy_ideas
+	diplomatic_ideas
+	naval_ideas
+	trade_ideas
+	economic_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Alexandre #0" = 1
+	"Charles #0" = 20
+	"Claude-Sebastien" = 1
+	"Cornelius" = 0
+	"Daniel #0" = 15
+	"Emmanuel #0" = 1
+	"Fracois-Marie" = 1
+	"Hector #0" = 1
+	"Issac #0" = 10
+	"Jacques #0" = 5
+	"Jacques-Fracois" = 1
+	"Jean #0" = 20
+	"John #0" = 5
+	"Joseph Robineau" = 1
+	"Loius-Alexandre" = 1
+	"Michel #0" = 5
+	"Nicolas #0" = 5
+	"Pierre #0" = 20
+	"Simon-Pierre" = 1
+	"Thomas #0" = 5
+	"William #0" = 15
+}
+
+leader_names = { 
+	Alexander
+	Crowne
+	Dugua "de Biencourt" "de la Tour" "de Razilly" "d'Aulnay" Denys
+	"de Belle-Isle" "de Grandfontaine" "de Chambly" "de Joybert"
+	"de Beaubassin" "de Meneval" "de Villebon" "de Villieu" "de Brouillan"
+	"de Bonaventure" "de Subercase"
+	Leverett "Le Borgne" "La Tourasse"
+	Perrot
+	Rhoades
+	Temple
+	"Van Steenwyk"
+}
+
+ship_names = {
+	Canso Chedabouctou Chebouctout Cobeguit
+	"Ile Royale"
+	Fourchu
+	Grand Pre
+	Louisbourg "La Have" "La Tour" Lomeron
+	Maltais
+	"Port Louis" "Port Royal" Pigiguit
+	St. Anne
+	Toulouse
+}

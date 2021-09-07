@@ -1,0 +1,107 @@
+#Country Name: Australian (Republic)
+
+graphical_culture = westerngfx
+
+color = { 0 43 127 }
+
+historical_idea_groups = {
+	diplomatic_ideas
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	plutocracy_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_early_infantry
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_def_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Alfred #0" = 5
+	"Andrew #0" = 5
+	"Anthony #0" = 5
+	"Arthur #0" = 5
+	"Benjamin #0" = 5
+	"Christopher #0" = 5
+	"Earle #0" = 5
+	"Edmund #0" = 5
+	"Frank #0" = 5
+	"George #0" = 5
+	"Gough #0" = 5
+	"Harold #0" = 5
+	"James #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 10
+	"Julia #0" = -5 
+	"Kevin #0" = 5
+	"Malcolm #0" = 5
+	"Paul #0" = 5
+	"Robert #0" = 10
+	"Stanley #0" = 5
+	"William #0" = 10
+}
+
+leader_names = {
+	Abbot
+	Barton Bruce
+	Chifley Cook Curtin
+	Deakin
+	Fadden Fisher Forde Fraser
+	Gillard Gorton
+	Hawke Holt Howard Hughes
+	Keating
+	Lyons
+	McEwen McMahon Menzies
+	Page
+	Reid Rudd
+	Scullin
+	Watson Whitlam	
+}
+
+ship_names = {
+	Albany Anzac Ararat Armidale Arunta
+	Ballarat Bandicoot Bathurst Benalla Broome Brunei Bundaberg
+	Childers Choules Collins
+	Darwin Dechaineux Diamantina
+	Farncomb
+	Gascoyne Glenelg
+	Hawkesbury Huon
+	Labuan Larrakia Launceston Leeuwin
+	Maitland Maryborough Melbourne Melville Mermaid
+	Newcastle Norman
+	"Ocean Shield"
+	Paluma Parramatta Perth Pirie
+	Rankin
+	Sheean Shepparton Sirius Stuart Success Sydney
+	Tarakan Tobruk Toowoomba
+	Wallaroo Waller Warramunga Wollongong
+	Yarra "Young Endeavour"
+}
+
+army_names = {
+	"Australian Army"
+}
+
+fleet_names = {
+	"Australian Navy"
+	"Indian Fleet"
+	"Pacific Fleet"
+}

@@ -1,0 +1,70 @@
+#Country Name: Fiji
+
+graphical_culture = westerngfx
+
+color = { 189  187  52 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Imraz #0" = 10
+	"Hari #0" = 10
+	"Ballu #0" = 10
+	"Shivlal #0" = 10
+	"Josateki #0" = 10
+	"Dixon #0" = 10
+	"Mere #0" = -10
+	"Ram #0" = 10
+	"Rajnesh #0" = 10
+	"Davila #0" = -10
+	"Sangeeta #0" = -10
+	"Taito #0" = 10
+	"Sunil #0" = 10
+	"Praveen #0" = 10
+	"Penaia #0" = 10
+	"Kamisese #0" = 10
+	"Josefa #0" = 10
+	"Epeli #0" = 10
+}
+
+leader_names = {
+	Nailatikau Iloilo Bainimarama Mara Ganilau Rabuka Chandra Lal
+	Narayan Pillay Rundrananda Siwatubau Ali Heffernan Luveni
+	Punja Nawalowalo Seeto Samisoni
+}
+
+ship_names = {
+	Ba Bua
+	Cakaudrove
+	Kadavu
+	Labasa Lau Lautoka Levuka Lomaiviti
+	Macuata
+	"Nadroga-Navosa" Naitasiri Namosi
+	Ra Rewa Rotuma
+	Serua Suva
+	Tailevu
+}

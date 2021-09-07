@@ -1,0 +1,127 @@
+#Country Name: Arkansas
+
+graphical_culture = westerngfx
+
+color = { 101  109  132 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_highlander
+	north_american_frontiersmen
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"James" = 20
+	"George" = 20
+	"John" = 20
+	"William" = 20
+	"Archibald" = 15
+	"Samuel" = 15
+	"Thomas" = 15
+	"Richard" = 15
+	"Elias" = 10
+	"Henry" = 10
+	"Harris" = 10
+	"Issac" = 10
+	"Powell" = 5
+	"Orza" = 5
+	"Elisha" = 5
+	"Augusta" = 5
+	"Simon" = 5
+	"Daniel" = 0
+	"Jefferson" = 0
+	"Xenophon" = 0
+	"Joseph" = 0
+	"Junius" = 0
+	"Charles" = 0
+	"Harvey" = 0
+	"Carl" = 0
+	"Homer" = 0
+	"Benjamin" = 0
+	"Sidney" = 0
+	"Francis" = 0
+	"Orval" = 0
+	"Winthrop" = 0
+	"Dale" = 0
+	"Robert" = 0
+	"David" = 0
+	"Frank" = 0
+	"Michael" = 0
+}
+
+leader_names = {
+	Adams Adkins
+	Bailey Baxter Beebe	Berry Brough Bumpers Byrd
+	Cherry Churchill Clarke Clayton Clinton Conway
+	Davis Donaghey Drew
+	Eagle
+	Faubus Fishback Flanagin Fulton Futrell
+	Garland
+	Hadley Hays Huckabee Hughes
+	Izard
+	Jones
+	Laney Little
+	McRae McMath Martin Martineau Miller Moore Murphy
+	Parnell Pindall Pope Pryor Purcell
+	Oldham
+	Rector Riley Roane Robinson Rockefeller
+	Terral Tucker
+	White
+	Yell
+}
+
+ship_names = {
+	Arkansas Ashley
+	Baxter Benton Boone Bradley
+	Calhoun Carroll Chicot Clark Clay Cleburne Cleveland Columbia Conway Craighead Crawford Crittenden Cross
+	Dallas Desha Drew
+	Faulkner Franklin Fulton
+	Garland Grant Greene
+	Hempstead "Hot Spring" Howard
+	Independence Izard
+	Jackson Jefferson Johnson
+	Lafayette Lawrence Lee Lincoln "Little Rock" Logan Lonoke
+	Madison Marion Miller Mississippi Monroe Montgomery
+	Nevada Newton
+	Ouchita
+	Perry Phillips Pikes Poinsett Polk Pope Prarie Pulaski Randolph
+	Razorback
+	"St. Francis" Saline Searcy Sebastian Sevier Sharp Stone
+	Union
+	"Van Buren"
+	Washington White Woodruff
+	Yell
+}
+
+army_names = {
+	"$PROVINCE$'s Army"
+}
+
+fleet_names = {
+	"Razorback Fleet"
+}

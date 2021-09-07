@@ -1,0 +1,69 @@
+#Country Name: Cook Islands
+
+graphical_culture = westerngfx
+
+color = { 246  95 246 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Shirley #0" = -10
+	"Siaosi #0" = 10
+	"Siosateki #0" = 10
+	"Sione #0" = 10
+	"Tevita #0" = 10
+	"Viliami #0" = 10
+	"Solomone #0" = 10
+	"Taufa'ahau #0" = 10
+	"Tu'i Pelehake #0" = 10
+	"Fatafehi #0" = 10
+	"Tu'ihala #0" = 10
+	"'Alipate #0" = 10
+	"'Aho'eitu #0" = 10
+	"'Unuaki'otonga #0" = 10
+	"Feleti #0" = 10
+	"Siale #0" = 10
+	"'Ataongo #0" = 10
+}
+
+leader_names = {
+	Tuku'aho Veikune Mateialona Tu'ivakano Mailefihi "Ula Ata" 
+	Tungi "Vaea Tupou" Sevele Kaho Tonga Ha'atakalaua Kanokupolu
+}
+
+ship_names = {
+	Aitutaki Atiu
+	Mangaia Manihiki Manuae Ma'uke Mitiaro
+	Nassau
+	Palmerston Penrhyn Pukapuka
+	Rakahanga
+	Suwarrow
+}

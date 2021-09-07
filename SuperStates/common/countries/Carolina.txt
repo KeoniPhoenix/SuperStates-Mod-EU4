@@ -1,0 +1,174 @@
+#Country Name: Carolina
+
+graphical_culture = westerngfx
+
+color = { 0  178  116 }
+
+historical_idea_groups = {
+	naval_ideas
+	defensive_ideas
+	exploration_ideas
+	offensive_ideas
+	diplomatic_ideas
+	religious_ideas
+	trade_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_highlander
+	carolinian_infantry
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Abner #0" = 0
+	"Alexander  #0" = 10
+	"Alfred #0" = 5
+	"Andrew #0" = 10
+	"Angus #0" = 0
+	"Arnoldus #0" = 0
+	"Arthur #0" = 10
+	"Barnabas #0" = 0
+	"Benjamin #0" = 20
+	"Beverly #0" = -5 
+	"Burnet #0" = 1
+	"Cameron #0" = 5
+	"Carroll #0" = 5
+	"Charles #0" = 20
+	"Clyde #0" = 5
+	"Coleman #0" = 0
+	"Cornelius #0" = 0
+	"Curtis #0" = 1
+	"Daniel #0" = 20
+	"David #0" = 20
+	"Donald #0" = 5
+	"Duncan #0" = 5
+	"Edward #0" = 20
+	"Elias #0" = 0
+	"Ernest #0" = 0
+	"Francis #0" = 10
+	"Franklin #0" = 5
+	"Gabriel #0" = 10
+	"George #0" = 15
+	"Gregg #0" = 5
+	"Henderson #0" = 1
+	"Henry #0" = 15
+	"Hugh #0" = 5
+	"Hutchins #0" = 1
+	"Ibra #0" = 0
+	"James #0" = 20
+	"Jesse #0" = 5
+	"John #0" = 20
+	"Johnson #0" = 0
+	"Jonathan #0" = 5
+	"Joseph #0" = 20
+	"Josiah #0" = 1
+	"Kerr #0" = 5
+	"Locke #0" = 5
+	"Luther #0" = 5
+	"Mark #0" = 5
+	"Martin #0" = 5
+	"Matthew #0" = 5
+	"Melville #0" = 0
+	"Michael #0" = 5
+	"Miles #0" = 5
+	"Milledge #0" = 0
+	"Montfort #0" = 0
+	"Nathaniel #0" = 10
+	"Nikki #0" = -1 
+	"Olin #0" = 0
+	"Oliver #0" = 5
+	"Patrick #0" = 10
+	"Paul #0" = 5
+	"Peter #0" = 5
+	"Philip #0" = 5
+	"Pierce #0" = 5
+	"Ralph #0" = 5
+	"Ransome #0" = 0
+	"Rawlins #0" = 0
+	"Richard #0" = 20
+	"Robert #0" = 20
+	"Roy" = 1
+	"Samuel #0" = 20
+	"Seth #0" = 10
+	"Stephen #0" = 5
+	"Strom #0" = 0
+	"Terry #0" = 1
+	"Thomas #0" = 20
+	"Tod #0" = 0
+	"Wade #0" = 1
+	"Warren #0" = 5
+	"Whitemarsh #0" = 0
+	"William #0" = 20
+	"Willie #0" = 0
+	"Wilson #0" = 5
+	"Zebulon #0" = 1
+}
+
+leader_names = {
+	Adams Aiken Allston Alston Ansel Archdale Ashe Aycock
+	Beasley Bennett Bickett Blackwood Blake Blease Bonham Boone Bothwell Bragg Branch Brogden Broughton Bull Burke Burrington Burton Butler Bynes
+	Caldwell Campbell Carr Carteret Cary Caswell Chamberlain Chapman Cherry Clark Colleton Cooper Craig Craven
+	Daniell Davie Dobbs Drayton Drummond Dudley
+	Easley Eastchurch Eden Edwards Ehringhaus Ellerbe Ellis Evans Everard
+	Fowle Franklin
+	Gardner Geddes Gibbes Gibbs Gist Glen Glenn Glover Graham Guerard
+	Hagood Haley Hamilton Hammond Hampton Harley Harnett Harvey Hawkins Hayne Henagan Heyward Hodges Hoey Holden Hollings Holmes Holshouser Holt
+	Horsey Hunt Hyde
+	Iredell
+	Jarvis Jefferies Jenkins Johnson Johnston Jones
+	Kitchin Kyrle
+	Lane Lowndes Ludwell Lyttleton
+	Magrath Manly Manning Martin Mathews Maybank McCrory McDuffie McLean McLeod McNair McSweeney Means Middleton Middleton Miller Montagu Moore Morehead Morrison Morton Moses Moultrie
+	Nash Nicholson Noble
+	Orr Owen
+	Perdue Perry Pickens Pinckney Pollock Pownall
+	Quary
+	Reed Reid Rice Richards Richardson Riley Rowan Russell Rutledge Sanford Sayle Scales Scott Seabrook Sheppard Simpson Smith Sothel Spaight Stephens Stokes Stone Swain
+	Taylor Thompson Thurmond Tillman Timmerman Tynte Tyron
+	Umstead
+	Vance Vanderhorst
+	Walker West White Wilkinson Williams Wilson Winslow Worth
+	Yeamans
+}
+
+ship_names = {
+	Abbeville Aiken Alamance Albemarle Alexander Alleghany Allendale Anderson Anson Ashe Avery
+	Bamberg Barnwell Bath Beaufort Berkeley Bertie Birch Bladen Brunswick Buncombe Burke Bute
+	Cabarrus Caldwell Calhoun Charleston Camden Carteret Caswell Catawba Chatham Cherokee Chester Chesterfield Chowan Clarendon Claremont Clay Cleveland Colleton Columbus Craven Cumberland Currituck
+	Dare Darlington Davidson Davie Dillon Dobbs Dorchester Duplin Durham
+	Edgecombe Edgefield
+	Fairfield Florence Forsyth Franklin
+	Gaston Gates Georgetown Graham Granville Greene Greenville Greenwood Guilford
+	Halifax Hampton Harnett Haywood Henderson Hertford Hoke Horry Hyde
+	Iredell
+	Jackson Jasper Johnston Jones
+	Kershaw
+	Lancaster Laurens Lee Lenoir Lewisburg Lexington Liberty Lincoln
+	Macon Maidson Marion Marlboro Martin McCormick McDowell Mecklenburg Mitchell Montgomery Moore
+	Nash "New Hanover" Newberry Northampton
+	Oconee Onslow Orange Orangeburg
+	Pamlico Pasquotank Pender Perquimans Person Pickens Pitt Polk
+	Randolph Richland Richmond Robeson Rockingham Rowan Rutherford
+	Salem Saluda Sampson Scotland Spartanburg Stanly Stokes Sumter Surry Swain
+	Transylvania Tryon Tyrrell
+	Union
+	Vance
+	Wake Warren Washington Wayne Wilkes Williamsburg Wilson Winton Winyah
+	Yadkin Yancey York	
+}

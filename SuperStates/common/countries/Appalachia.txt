@@ -1,0 +1,107 @@
+#Country Name: Appalachia
+
+graphical_culture = westerngfx
+
+color = { 107  63  36 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	offensive_ideas
+	religious_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_young_warrior
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_highlander
+	north_american_frontiersmen
+	north_american_sword_cavalry
+	confederate_grey_coat
+	north_american_carabineer
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 5
+	"Arch #0" = 10
+	"Aretas #0" = 5
+	"Arthur #0" = 5
+	"Cecil #0" = 5
+	"Clarence #0" = 5
+	"Daniel #0" = 5
+	"Earl #0" = 5
+	"Emanuel #0" = 1
+	"Ephraim #0" = 1
+	"Gaston #0" = 1
+	"George #0" = 5
+	"Henry #0" = 10
+	"Herman #0" = 5
+	"Homer #0" = 5
+	"Howard #0" = 5
+	"Hulett #0" = 1
+	"Jacob #0" = 5
+	"Jay #0" = 5
+	"John #0" = 10
+	"Joseph #0" = 5
+	"Matthew #0" = 5
+	"Okey #0" = 1
+	"Robert #0" = 5
+	"William #0" = 20
+}
+
+leader_names = {
+	Atkinson
+	Barron Boreman
+	Caperton Conley Cornwell
+	Dawson
+	Farnsworth Fleming
+	Glasscock Gore
+	Hatfield Holt
+	Jackson Jacob
+	Kump
+	MacCorkle Machin Marland Mathews Meadows Moore Morgan
+	Neely
+	Petterson
+	Rockefeller
+	Smith Stevenson
+	Tomblin
+	Underwood
+	White
+	Wilson
+	Wise
+}
+
+ship_names = {
+	Barbour Berkeley Boone Braxton Brooke
+	Cabell Calhoun Clay
+	Doddridge
+	Fayette
+	Gilmer Grant Greenbrier
+	Hampshire Hancock Hardy Harrison
+	Jackson Jefferson
+	Kanawha
+	Lewis Lincoln Logan
+	Marion Marshall Mason McDowell Mercer Mineral Mingo Monongalia Monroe Morgan
+	Nicholas
+	Ohio
+	Pendleton Pleasants Pocahontas Preston Putnam
+	Raleigh Randolph Ritchie Roane
+	Summers
+	Taylor Tucker Tyler
+	Upshur
+	Wayne Webster Wetzel Wirt Wood Wyoming
+}

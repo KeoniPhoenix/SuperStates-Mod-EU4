@@ -1,0 +1,111 @@
+#Country Name: Samoa (American)
+
+graphical_culture = westerngfx
+
+color = { 69  157  208 }
+
+historical_idea_groups = {
+	defensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	offensive_ideas
+	expansion_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Aifili #0" = 15
+	"Allen #0" = 5
+	"Arthur #0" = 5
+	"Benjamin #0" = 5
+	"Charles #0" = 10
+	"Clark #0" = 5
+	"Earl #0" = 5
+	"Edmund #0" = 1
+	"Edward #0" = 10
+	"Edwin #0" = 1
+	"Frank #0" = 10
+	"Gatewood #0" = 5
+	"George #0" = 5
+	"Harold #0" = 5
+	"Henry #0" = 15
+	"Hyrum #0" = 1
+	"James #0" = 10
+	"Jesse #0" = 5
+	"John #0" = 20
+	"Laurence #0" = 5
+	"Lawrence #0" = 5
+	"Lolo #0" = 15
+	"MacGillivray #0" = 0
+	"Nathan #0" = 5
+	"Otto #0" = 1
+	"Owen #0" = 5
+	"Peter #0" = 5
+	"Phelps #0" = 5
+	"Ralph #0" = 5
+	"Richard #0" = 5
+	"Samuel #0" = 5
+	"Stephen #0" = 5
+	"Tauese #0" = 15
+	"Thomas #0" = 15
+	"Togiola #0" = 15
+	"Uriel #0" = 1
+	"Vernon #0" = 5
+	"Waldo #0" = 1
+	"Warren #0" = 5
+	"William #0" = 5
+}
+
+leader_names = {
+	Aspinall
+	Barnett Bryan
+	Canan Coleman Crose
+	Darden Dowling
+	Elliott Emerson Evans Ewing
+	Fitzpatrick
+	Graham
+	Hanson Haydon Hobbs Houser Huber Hungerford
+	Judd
+	Kellogg
+	Landenberger Larsen Latimore Lauvao Lee Lincoln Lowe
+	Milne Minett Mockler Moliga Moore Moyer
+	Parker Phelps Pollock Post Poyer
+	Ruth
+	Sabree Spore Stearns Sunia
+	Terhune Tilley Tulafono
+	Underwood
+	Wallace Wild Woodruff
+}
+
+ship_names = {
+	Aasu Afao Agugulu Alao Alataua Alega Alofau Amaluia "'Amanave" Amaua Amouli Anua "'Aoa" Aoloau Asili Atoll Atu'u Aua "'Au'asi" Aumi Aunu'u Auto Avaio
+	Faga'alu Faga'itua Fagali'l Fagamalo Faganeanea Fagasa Fagatogo Failolo Faleasao Faleniu Fatumafuti Futiga Fitiuta Fofo
+	"'Ili'ili" Itauau
+	Lauli'i Leloaloa Leasina Leone Leusoali'i Luma
+	Maia Malaeimi "Malaeloa Aitulagi" "Malaeloa Ituau" Maloata Ma'oputasi Mapusagafou Masausi Matu'u
+	Nu'uuli Nua
+	Ofu Olosega Onenoa
+	Pagai "Pago Pago" Pava'ia'i Poloa
+	Rose
+	Sa'ilele Sa'Ole Se'etaga Si'ufaga Sili Sua Swains
+	Tafuna Ta'u Taulaga Tualatia Tula Tulauta
+	Utulei "Utumea East" "Utumea West"
+	Vailoatai Vaitogi Valifanua Vatia
+}
