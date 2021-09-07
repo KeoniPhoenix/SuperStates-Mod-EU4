@@ -1,0 +1,26 @@
+#Tlaxcala
+
+owner = TLX
+controller = TLX
+add_core = TLX
+culture = tlaxcalan
+religion = s_catholic
+capital = "Tlaxcala"
+is_city = yes #8980
+trade_goods = cloth
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

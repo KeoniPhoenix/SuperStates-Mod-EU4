@@ -1,0 +1,49 @@
+#Nanaimo
+
+owner = BCO
+controller = BCO
+add_core = BCO
+add_core = VCV
+culture = british_columbian
+religion = s_protestant
+capital = "Nanaimo" 
+is_city = yes #9050
+trade_goods = naval_supplies
+hre = no 
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1444.10.1 = {
+	add_core = VCV
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = WCN
+	controller = WCN
+	remove_core = CSC
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

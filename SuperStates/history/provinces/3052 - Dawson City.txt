@@ -1,0 +1,32 @@
+#Dawson
+
+owner = YUK 
+controller = YUK 
+add_core = YUK 
+culture = yukoner 
+religion = s_protestant 
+capital = "Dawson City" 
+is_city = yes #1000 
+trade_goods = gems 
+hre = no 
+base_tax = 5
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = ACU
+	controller = ACU
+	add_core = ACU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

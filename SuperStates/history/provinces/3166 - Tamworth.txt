@@ -1,0 +1,21 @@
+#Tamworth
+
+owner = NSW
+controller = NSW
+add_core = NSW
+culture = new_south_welsh
+religion = austral_catholic
+capital = "Tamworth"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+is_city = yes #6100
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

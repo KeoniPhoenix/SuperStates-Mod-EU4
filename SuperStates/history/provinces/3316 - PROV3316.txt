@@ -1,0 +1,21 @@
+#Kings Island
+
+owner = TSM
+controller = TSM
+add_core = TSM
+culture = tasmanian
+religion = austral_protestant
+capital = "Currie"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

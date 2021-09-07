@@ -1,0 +1,32 @@
+#2738 - Waitaha
+
+culture = polynesian
+religion = animism
+hre = no
+trade_goods = unknown
+base_tax = 3
+base_production = 3
+base_manpower = 1
+capital = "Waitaha"
+native_size = 10
+native_ferocity = 4
+native_hostileness = 9
+discovered_by = australian
+
+1840.1.1 = {
+	culture = new_zealander
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}
+
+1852.6.30 = { 
+	add_core = NZL
+}
+
+1907.1.1 = {
+	owner = NZL
+	controller = NZL
+	remove_core = GBR
+}

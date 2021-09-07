@@ -1,0 +1,48 @@
+#Wayne
+
+owner = MIC
+controller = MIC
+add_core = MIC
+culture = michigander
+religion = s_protestant
+capital = "Detroit"
+trade_goods = iron
+is_city = yes #71380
+hre = no
+base_tax = 11
+base_production = 12
+base_manpower = 6
+discovered_by = north_american
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = GLK
+	controller = GLK
+	add_core = GLK
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MIC
+	controller = MIC
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

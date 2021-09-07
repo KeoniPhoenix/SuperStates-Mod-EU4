@@ -1,0 +1,29 @@
+#McKinley
+
+owner = NMX
+controller = NMX
+add_core = NMX
+add_core = NAH
+culture = new_mexican
+religion = s_catholic
+capital = "Gallup"
+is_city = yes #2170
+trade_goods = copper
+hre = no 
+base_tax = 1
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

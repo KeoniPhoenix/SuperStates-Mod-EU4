@@ -1,0 +1,50 @@
+#Allegheny
+
+owner = PNN
+controller = PNN
+add_core = PNN
+add_core = WST
+culture = western_pennsylvanian
+religion = s_protestant
+capital = "Pittsburgh"
+trade_goods = dyes
+hre = no
+base_tax = 7
+base_production = 8
+base_manpower = 5
+is_city = yes #30570
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WST
+	controller = WST
+	add_core = WST
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = PNN
+	controller = PNN
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

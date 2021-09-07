@@ -1,0 +1,28 @@
+#Nogales
+
+owner = SNA
+controller = SNA
+add_core = SNA
+culture = sonoran_culture
+religion = s_catholic
+capital = "Nogales"
+is_city = yes #22030
+trade_goods = iron
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

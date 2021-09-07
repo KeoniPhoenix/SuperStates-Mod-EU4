@@ -1,0 +1,22 @@
+#Poza Rica de Hidalgo
+
+owner = VRZ
+controller = VRZ
+add_core = VRZ
+culture = veracruzian
+religion = s_catholic
+capital = "Poza Rica de Hidalgo"
+is_city = yes #17450
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

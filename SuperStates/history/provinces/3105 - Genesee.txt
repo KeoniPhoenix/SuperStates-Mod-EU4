@@ -1,0 +1,44 @@
+#Genesee
+
+owner = MIC
+controller = MIC
+add_core = MIC
+culture = michigander
+religion = s_protestant
+capital = "Flint"
+trade_goods = naval_supplies
+is_city = yes #10240
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = GLK
+	controller = GLK
+	add_core = GLK
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MIC
+	controller = MIC
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}# No previous file for PROV3105

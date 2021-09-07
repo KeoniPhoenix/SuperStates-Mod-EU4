@@ -1,0 +1,39 @@
+#Avalon
+
+owner = NFL
+controller = NFL
+add_core = NFL
+add_core = NWF
+culture = newfoundlander
+religion = s_protestant
+capital = "St. John's" 
+is_city = yes #10620
+trade_goods = fish
+hre = no 
+base_tax = 5
+base_production = 4
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

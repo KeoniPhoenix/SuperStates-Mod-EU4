@@ -1,0 +1,26 @@
+#Chihuahua
+
+owner = HHC
+controller = HHC
+add_core = HHC
+culture = chihuahuan
+religion = s_catholic
+capital = "Chihuahua"
+is_city = yes #84150
+trade_goods = iron
+hre = no
+base_tax = 6
+base_production = 6
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

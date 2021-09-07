@@ -1,0 +1,23 @@
+#Deprecate de Morelos
+
+owner = EMX
+controller = EMX
+add_core = EMX
+culture = estado_mexican
+religion = s_catholic
+capital = "Deprecate de Morelos"
+is_city = yes #165880
+trade_goods = cloth
+hre = no
+base_tax = 9
+base_production = 9
+base_manpower = 8
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

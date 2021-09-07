@@ -1,0 +1,26 @@
+#Guanajuato
+
+owner = GJT
+controller = GJT
+add_core = GJT
+culture = guanajuatoan
+religion = s_catholic
+capital = "Guanajuato"
+is_city = yes #7080
+trade_goods = gold
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

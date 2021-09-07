@@ -1,0 +1,5 @@
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1543.1.1 = { discovered_by = SPA }
+1778.1.1 = { discovered_by = GBR }

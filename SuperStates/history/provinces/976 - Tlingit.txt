@@ -1,0 +1,45 @@
+#Ada
+
+owner = IDA
+controller = IDA
+add_core = IDA
+culture = idahoan
+religion = mormon
+trade_goods = livestock
+capital = "Boise"
+hre = no
+base_tax = 4
+base_production = 3
+base_manpower = 3
+is_city = yes #20570
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = IDA
+	controller = IDA
+	remove_core = CSC
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

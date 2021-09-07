@@ -1,0 +1,32 @@
+#Mackenzie, Alberta
+
+owner = ABR
+controller = ABR
+add_core = ABR
+culture = albertan
+religion = s_protestant
+capital = "Fort Vermillion" 
+is_city = yes #1000
+trade_goods = fur
+hre = no 
+base_tax = 3
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

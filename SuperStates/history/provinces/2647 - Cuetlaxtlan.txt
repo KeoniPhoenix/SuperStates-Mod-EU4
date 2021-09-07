@@ -1,0 +1,29 @@
+#Cochrane
+
+owner = ONT
+controller = ONT
+add_core = ONT
+add_core = NRO
+culture = northern_ontarian
+religion = s_catholic
+capital = "Timmins" 
+is_city = yes #4320
+trade_goods = gold
+hre = no 
+base_tax = 5
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

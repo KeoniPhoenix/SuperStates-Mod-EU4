@@ -1,0 +1,22 @@
+#Guadaulpe y Calvo
+
+owner = HHC
+controller = HHC
+add_core = HHC
+culture = chihuahuan
+religion = s_catholic
+capital = "Guachochi"
+is_city = yes #1240
+trade_goods = wool
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

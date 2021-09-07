@@ -1,0 +1,50 @@
+#Washington, DC
+
+owner = WDC
+controller = WDC
+add_core = WDC
+add_core = MYD
+culture = districter
+religion = s_protestant
+capital = "Washington"
+trade_goods = paper
+hre = no
+base_tax = 8
+base_production = 9
+base_manpower = 4
+is_city = yes #60180
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = MAA
+	controller = MAA
+	add_core = MAA
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = WDC
+	controller = WDC
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

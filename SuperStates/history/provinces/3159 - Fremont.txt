@@ -1,0 +1,28 @@
+#Fremont
+
+owner= WYO
+controller = WYO
+add_core = WYO
+culture = wyomingite 
+religion = mormon
+trade_goods = grain
+capital = "Lander"
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

@@ -1,0 +1,26 @@
+#Puerto Vallarta
+
+owner = JLC
+controller = JLC
+add_core = JLC
+culture = jaliscan
+religion = s_catholic
+capital = "Puerto Vallarta"
+is_city = yes #25570
+trade_goods = grain
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

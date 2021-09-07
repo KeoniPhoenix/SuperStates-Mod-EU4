@@ -1,0 +1,56 @@
+#Chatham
+
+owner = GRG
+controller = GRG
+add_core = GRG
+add_core = SGR
+culture = south_georgian
+religion = s_protestant
+capital = "Savannah"
+trade_goods = naval_supplies
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+is_city = yes #13630
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+add_permanent_province_modifier = {
+	name = savannah_estuary_modifier
+	duration = -1
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = GRG
+	controller = GRG
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

@@ -1,0 +1,45 @@
+#Penobscot
+
+owner = MNE
+controller = MNE
+add_core = MNE
+# add_core = MSS
+culture = mainer
+religion = s_protestant
+capital = "Bangor"
+trade_goods = wool
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #3310
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = NEW
+	controller = NEW
+	add_core = NEW
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MNE
+	controller = MNE
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

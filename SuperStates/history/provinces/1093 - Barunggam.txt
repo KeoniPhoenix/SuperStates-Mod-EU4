@@ -1,0 +1,21 @@
+#East Arnhem
+
+owner = NTT
+controller = NTT
+add_core = NTT
+culture = northern_territorian
+religion = austral_protestant
+capital = "Nhulunbuy"
+trade_goods = iron
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

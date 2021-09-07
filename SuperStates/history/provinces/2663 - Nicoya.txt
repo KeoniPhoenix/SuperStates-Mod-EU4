@@ -1,0 +1,44 @@
+# No previous file for Nicoya
+
+culture = muisca
+religion = animism
+capital = "Nicoya"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+1544.1.1 = {
+	capital = "San Blas de Nicoya"
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = s_catholic
+	trade_goods = naval_supplies
+	is_city = yes
+} # Founded 
+
+1810.9.16 = {
+#	add_core = MEX
+	add_core = CRC
+	add_core = CAM
+#	controller = MEX
+	culture = costa_rican
+} # Mexican War of Independence
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+	remove_core = SPA
+}
+
+1838.11.5 = {
+	owner = CRC
+	controller = CRC
+#	remove_core = MEX
+}

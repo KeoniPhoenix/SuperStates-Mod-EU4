@@ -1,0 +1,26 @@
+#Aguascalientes
+
+owner = AGC
+controller = AGC
+add_core = AGC
+culture = aquascalientian
+religion = s_catholic
+capital = "Aguascalientes"
+is_city = yes #93440
+trade_goods = wine
+hre = no
+base_tax = 7
+base_production = 7
+base_manpower = 6
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

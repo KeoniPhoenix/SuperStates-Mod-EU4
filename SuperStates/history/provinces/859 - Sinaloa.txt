@@ -1,0 +1,26 @@
+#Chilpancingo de los Bravo
+
+owner = GRR
+controller = GRR
+add_core = GRR
+culture = guerreroan
+religion = s_catholic
+capital = "Chilpancingo de los Bravo"
+is_city = yes #16680
+trade_goods = coffee
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

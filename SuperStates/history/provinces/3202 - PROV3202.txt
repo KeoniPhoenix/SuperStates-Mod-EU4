@@ -1,0 +1,22 @@
+#Eucla
+
+owner = WAU
+controller = WAU
+add_core = WAU
+add_core = AAL
+culture = western_australian
+religion = austral_catholic
+capital = "Eucla"
+trade_goods = salt
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

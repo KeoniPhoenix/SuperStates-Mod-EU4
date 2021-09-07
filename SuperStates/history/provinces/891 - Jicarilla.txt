@@ -1,0 +1,22 @@
+#Matehuala
+
+owner = SLP
+controller = SLP
+add_core = SLP
+culture = san_luis_potosian
+religion = s_catholic
+capital = "Matehuala"
+is_city = yes #7020
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,33 @@
+#1246 - Waihopai
+
+culture = maori
+religion = animism
+capital = "Invercargill"
+trade_goods = unknown
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+native_size = 10
+native_ferocity = 4
+native_hostileness = 9
+discovered_by = australian
+
+1840.1.1 = {
+	trade_goods = livestock
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}
+
+1852.6.30 = {	
+	culture = new_zealander
+	add_core = NZL
+}
+
+1907.1.1 = {
+	owner = NZL
+	controller = NZL
+	remove_core = GBR
+}

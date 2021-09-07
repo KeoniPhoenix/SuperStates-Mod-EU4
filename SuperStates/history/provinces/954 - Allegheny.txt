@@ -1,0 +1,34 @@
+#Washington, UT
+
+owner = UTA
+controller = UTA
+add_core = UTA
+add_core = SUT
+add_core = NAH
+culture = south_utahn
+religion = mormon
+capital = "St. George"
+is_city = yes #5050
+trade_goods = iron
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1444.10.1 = {
+	add_core = SUT
+}
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

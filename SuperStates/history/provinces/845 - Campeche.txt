@@ -1,0 +1,23 @@
+#Tizimín
+
+owner = YTN
+controller = YTN
+add_core = YTN
+culture = yucatanian
+religion = s_catholic
+capital = "Tizimín"
+is_city = yes #97040
+trade_goods = cloth
+hre = no
+base_tax = 8
+base_production = 8
+base_manpower = 8
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

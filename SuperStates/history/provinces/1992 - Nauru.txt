@@ -1,0 +1,43 @@
+#1992 - Nauru
+
+culture = polynesian
+religion = animism
+capital = "Yaren"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = oceanian
+#discovered_by = australian
+
+1888.10.1 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+	culture = nauruan
+}
+
+1920.12.17 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+	remove_core = GER
+}
+
+#1942.3.12 = {
+#	controller = JAP
+#}
+
+1966.1.1 = {
+	add_core = NAU
+}
+
+1968.1.31 = {
+	owner = NAU
+	controller = NAU
+	remove_core = AUS
+}

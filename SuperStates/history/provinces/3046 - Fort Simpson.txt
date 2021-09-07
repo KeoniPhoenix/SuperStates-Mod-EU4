@@ -1,0 +1,28 @@
+#Fort Simpson
+
+owner = NWT
+controller = NWT
+add_core = NWT
+culture = northwest_territorian
+religion = s_catholic
+capital = "Fort Simpson" 
+is_city = yes #1000
+trade_goods = gems
+hre = no 
+base_tax = 4
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = ACU
+	controller = ACU
+	add_core = ACU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

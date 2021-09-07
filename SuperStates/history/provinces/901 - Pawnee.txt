@@ -1,0 +1,22 @@
+#Bahia de Banderas
+
+owner = NAY
+controller = NAY
+add_core = NAY
+culture = nayaritian
+religion = s_catholic
+capital = "Valle de Banderas"
+is_city = yes #1000
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

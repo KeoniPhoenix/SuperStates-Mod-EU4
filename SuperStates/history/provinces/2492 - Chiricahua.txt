@@ -1,0 +1,65 @@
+#Caddo
+
+owner = LOU
+controller = LOU
+add_core = LOU
+culture = louisianan
+religion = s_protestant
+capital= "Shreveport"
+trade_goods = cotton
+is_city = yes #19940
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1444.11.11 = {
+	owner = LOU
+	controller = LOU
+	add_core = LOU
+}
+
+1444.11.12 = {
+	owner = LOU
+	controller = LOU
+	add_core = LOU
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = LOU
+	controller = LOU
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

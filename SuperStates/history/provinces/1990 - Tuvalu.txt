@@ -1,0 +1,36 @@
+#1990 - Tuvalu
+
+culture = polynesian
+religion = animism
+capital = "Funafuti"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = oceanian
+#discovered_by = australian
+
+1892.10.9 = {
+	is_city = yes
+	owner = GBR
+	controller = GBR
+}#British Protectorate
+
+1916.1.12 = {
+	add_core = GBR
+}#British Colony
+
+1975.10.1 = {
+	add_core = TUV
+	culture = tuvaluan
+}#Path to Self Dertermination
+
+1978.10.1 = {
+	owner = TUV
+	controller = TUV
+	remove_core = GBR
+}#Independence

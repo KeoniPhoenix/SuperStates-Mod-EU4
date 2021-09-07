@@ -1,0 +1,52 @@
+#Arlington
+
+owner = VIR
+controller = VIR
+add_core = VIR
+add_core = NVI
+culture = northern_virginian
+religion = s_protestant
+capital = "Arlington"
+trade_goods = tobacco
+hre = no
+base_tax = 8
+base_production = 7
+base_manpower = 3
+is_city = yes #20770
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = VIR
+	controller = VIR
+	remove_core = CSA
+}
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

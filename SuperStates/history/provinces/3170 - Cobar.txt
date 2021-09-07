@@ -1,0 +1,21 @@
+#Cobar
+
+owner = NSW
+controller = NSW
+add_core = NSW
+culture = new_south_welsh
+religion = austral_catholic
+capital = "Cobar"
+trade_goods = gold
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

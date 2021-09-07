@@ -1,0 +1,28 @@
+#Felipe Carrillo Puerto
+
+owner = QTR
+controller = QTR
+add_core = QTR
+culture = quintanaroan
+religion = s_catholic
+capital = "Felipe Carrillo Puerto"
+is_city = yes #2570
+trade_goods = fish
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = YTN
+	controller = YTN
+	add_core = YTN
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

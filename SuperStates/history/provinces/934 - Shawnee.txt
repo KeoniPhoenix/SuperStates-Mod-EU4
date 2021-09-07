@@ -1,0 +1,27 @@
+#Tijuana
+
+owner = BCN
+controller = BCN
+add_core = BCN
+culture = baja_californian
+religion = s_catholic
+capital = "Tijuana"
+is_city = yes #130100
+trade_goods = dyes
+hre = no
+base_tax = 9
+base_production = 9
+base_manpower = 8
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

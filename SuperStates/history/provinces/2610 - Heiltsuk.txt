@@ -1,0 +1,41 @@
+#Worcester
+
+owner = MSS
+controller = MSS
+add_core = MSS
+add_core = WMA
+culture = springfielder
+religion = s_catholic
+capital = "Worcester"
+trade_goods = glass
+hre = no
+base_tax = 4
+base_production = 3
+base_manpower = 4
+is_city = yes #18110
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NEW
+	controller = NEW
+	add_core = NEW
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MSS
+	controller = MSS
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

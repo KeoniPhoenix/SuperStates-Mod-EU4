@@ -1,0 +1,28 @@
+#Cajeme
+
+owner = SNA
+controller = SNA
+add_core = SNA
+culture = sonoran_culture
+religion = s_catholic
+capital = "Ciudad Obregon"
+is_city = yes #40500
+trade_goods = grain
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

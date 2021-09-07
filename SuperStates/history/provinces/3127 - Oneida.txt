@@ -1,0 +1,45 @@
+#Oneida
+
+owner = NYS
+controller = NYS
+add_core = NYS
+culture = new_yorker
+religion = s_protestant
+capital = "Utica"
+trade_goods = cloth
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 2
+is_city = yes #6220
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = MAA
+	controller = MAA
+	add_core = MAA
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NYS
+	controller = NYS
+	remove_core = FSA
+}
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

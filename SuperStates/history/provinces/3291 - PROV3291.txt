@@ -1,0 +1,41 @@
+#Block Island
+
+owner = RIS
+controller = RIS
+add_core = RIS
+add_core = NSH
+culture = rhode_islander
+religion = s_catholic
+capital = "New Shoreham"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NEW
+	controller = NEW
+	add_core = NEW
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = RIS
+	controller = RIS
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

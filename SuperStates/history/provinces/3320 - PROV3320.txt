@@ -1,0 +1,42 @@
+#Middlesex, NJ
+
+owner = NJY
+controller = NJY
+add_core = NJY
+#add_core = EJY
+#add_core = NOJ
+culture = new_jerseyan
+religion = s_catholic
+capital = "New Brunswick"
+trade_goods = glass
+hre = no
+base_tax = 4
+base_production = 5
+base_manpower = 5
+is_city = yes #5520
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = MAA
+	controller = MAA
+	add_core = MAA
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NJY
+	controller = NJY
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

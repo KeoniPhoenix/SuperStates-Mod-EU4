@@ -1,0 +1,47 @@
+# No previous file for Lenca
+
+culture = miskito
+religion = animism
+capital = "Lenca"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+1525.1.1 = {
+	
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = s_catholic
+	is_city = yes
+	capital = "Choluteca"
+	trade_goods = fish
+} # First settlers
+
+1578.1.1 = { capital = "Tegucigalpa" }
+
+1810.9.16 = {
+#	add_core = MEX
+	add_core = HND
+	add_core = CAM
+#	controller = MEX 
+	culture = honduran
+} # Mexican War of Independence
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+	remove_core = SPA
+}
+
+1838.11.5 = {
+	owner = HND
+	controller = HND
+#	remove_core = MEX
+}

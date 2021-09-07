@@ -1,0 +1,27 @@
+#Puebla
+
+owner = PBL
+controller = PBL
+add_core = PBL
+culture = pueblan
+religion = s_catholic
+capital = "Puebla"
+is_city = yes #153980
+trade_goods = grain
+hre = no
+base_tax = 7
+base_production = 7
+base_manpower = 7
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

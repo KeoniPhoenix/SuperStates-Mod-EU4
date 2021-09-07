@@ -1,0 +1,28 @@
+#Sherbrooke
+
+owner = QUE
+controller = QUE
+add_core = QUE
+culture = quebecois
+religion = s_catholic
+capital = "Sherbrooke" 
+is_city = yes #15460
+trade_goods = grain
+hre = no 
+base_tax = 4
+base_production = 4
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

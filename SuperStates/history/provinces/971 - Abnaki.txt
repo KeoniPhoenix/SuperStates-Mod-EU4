@@ -1,0 +1,27 @@
+#Ketchikan
+
+owner = ALA
+controller = ALA
+add_core = ALA
+# add_core = BCO
+culture = juneauvian
+religion = s_protestant
+capital = "Ketchikan"
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

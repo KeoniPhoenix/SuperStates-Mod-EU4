@@ -1,0 +1,42 @@
+#Kootenai
+
+owner = IDA
+controller = IDA
+add_core = IDA
+add_core = LNC
+add_core = KOO
+culture = lincolnite
+religion = mormon
+capital = "Lewiston" 
+is_city = yes #3220
+trade_goods = wool
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = PCF
+	controller = PCF
+	add_core = PCF
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = IDA
+	controller = IDA
+	remove_core = CSC
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

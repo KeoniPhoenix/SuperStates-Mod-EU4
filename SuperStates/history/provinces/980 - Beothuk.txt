@@ -1,0 +1,36 @@
+#Lewis and Clark
+
+owner = MNT
+controller = MNT
+add_core = MNT
+culture = montanan
+religion = s_protestant
+trade_goods = iron
+capital = "Helena"
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #2820
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

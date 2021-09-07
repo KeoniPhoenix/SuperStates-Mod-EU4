@@ -1,0 +1,50 @@
+#Palm Beach
+
+owner = FLO
+controller = FLO  
+add_core = FLO
+add_core = SFL
+culture = south_floridian
+religion = s_catholic
+capital = "West Palm Beach"
+trade_goods = sugar
+is_city = yes #9990
+hre = no
+base_tax = 6
+base_production = 6
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_catholic
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = FLO
+	controller = FLO
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

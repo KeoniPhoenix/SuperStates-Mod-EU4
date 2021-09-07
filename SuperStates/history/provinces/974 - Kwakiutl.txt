@@ -1,0 +1,23 @@
+#Aleutians West
+
+owner = ALA
+controller = ALA
+add_core = ALA
+add_core = ALU
+culture = aleutian_islander
+religion = orthodox
+capital = "Unalaska"
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

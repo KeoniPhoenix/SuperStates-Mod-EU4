@@ -1,0 +1,51 @@
+#Clark
+
+owner = NVA
+controller = NVA
+add_core = NVA
+add_core = LSV
+#add_core = ARZ
+culture = las_vegan
+religion = s_protestant
+capital = "Las Vegas" 
+is_city = yes #58930
+trade_goods = gold
+hre = no 
+base_tax = 4
+base_production = 7
+base_manpower = 6
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NVA
+	controller = NVA
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

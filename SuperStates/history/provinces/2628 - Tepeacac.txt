@@ -1,0 +1,34 @@
+#Northern
+
+owner = MTB
+controller = MTB
+add_core = MTB
+add_core = KTN
+culture = mantarian
+religion = s_catholic
+capital = "Gillam" 
+is_city = yes #1000
+trade_goods = fur
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+add_permanent_province_modifier = {
+	name = nelson_eastuary_modifier
+	duration = -1
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

@@ -1,0 +1,38 @@
+#Halifax
+
+owner = NVS
+controller = NVS
+add_core = NVS
+add_core = ACD
+culture = nova_scotian
+religion = s_protestant
+capital = "Halifax" 
+is_city = yes #41370
+trade_goods = fish
+hre = no 
+base_tax = 5
+base_production = 4
+base_manpower = 4
+center_of_trade = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

@@ -1,0 +1,31 @@
+#Anchorage
+
+owner = ALA
+controller = ALA
+add_core = ALA
+culture = alaskan
+religion = s_protestant
+capital = "Anchorage"
+trade_goods = paper
+hre = no
+base_tax = 5
+base_production = 4
+base_manpower = 3
+is_city = yes #29190
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+
+1399.1.1 = { fort_15th = yes 
+}
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

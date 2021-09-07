@@ -1,0 +1,46 @@
+#Mercer
+
+owner = NJY
+controller = NJY
+add_core = NJY
+#add_core = NOJ
+#add_core = WJY
+culture = new_jerseyan
+religion = s_catholic
+capital = "Trenton"
+trade_goods = paper
+hre = no
+base_tax = 5
+base_production = 3
+base_manpower = 3
+is_city = yes #27820
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = MAA
+	controller = MAA
+	add_core = MAA
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NJY
+	controller = NJY
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

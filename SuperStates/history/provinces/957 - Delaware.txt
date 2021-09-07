@@ -1,0 +1,29 @@
+#Bernalillo
+
+owner = NMX
+controller = NMX
+add_core = NMX
+culture = new_mexican
+religion = s_catholic
+capital = "Albuquerque"
+is_city = yes #55290
+trade_goods = grain
+hre = no 
+base_tax = 3
+base_production = 3
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

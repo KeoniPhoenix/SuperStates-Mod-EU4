@@ -1,0 +1,21 @@
+#Roper Gulf
+
+owner = NTT
+controller = NTT
+add_core = NTT
+culture = northern_territorian
+religion = austral_protestant
+capital = "Roper Gulf"
+trade_goods = wool
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

@@ -1,0 +1,26 @@
+#Morelia
+
+owner = MCN
+controller = MCN
+add_core = MCN
+culture = michoacanian
+religion = s_catholic
+capital = "Morelia"
+is_city = yes #59790
+trade_goods = grain
+hre = no
+base_tax = 4
+base_production = 4 
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

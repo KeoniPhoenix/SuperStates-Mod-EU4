@@ -1,0 +1,22 @@
+#Lerdo
+
+owner = DRG
+controller = DRG
+add_core = DRG
+culture = durangoan
+religion = s_catholic
+capital = "Lerdo"
+is_city = yes #7140
+trade_goods = cotton
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

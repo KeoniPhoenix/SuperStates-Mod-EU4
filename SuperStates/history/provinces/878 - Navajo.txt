@@ -1,0 +1,22 @@
+#Cadereyta
+
+owner = QRT
+controller = QRT
+add_core = QRT
+culture = queretan
+religion = s_catholic
+capital = "Cadereyta de Montes"
+is_city = yes #5720
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

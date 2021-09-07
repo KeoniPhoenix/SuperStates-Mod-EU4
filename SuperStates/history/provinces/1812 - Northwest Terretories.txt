@@ -1,0 +1,32 @@
+#Westmorland, NB
+
+owner = NBR
+controller = NBR
+add_core = NBR
+culture = acadian
+religion = s_catholic
+capital = "Moncton" 
+is_city = yes #6910
+trade_goods = grain
+hre = no 
+base_tax = 4
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

@@ -1,0 +1,54 @@
+#Butler
+
+owner = MOU
+controller = MOU
+add_core = MOU
+culture = ozarker
+religion = s_protestant
+capital = "Poplar Bluff" 
+is_city = yes #1710
+trade_goods = grain 
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = MOU
+	controller = MOU
+	remove_core = FSA
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

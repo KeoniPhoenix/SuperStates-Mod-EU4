@@ -1,0 +1,30 @@
+#Gatineau
+
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = GAT
+culture = quebecois
+religion = s_catholic
+capital = "Gatineau" 
+is_city = yes #26540
+trade_goods = fur
+hre = no 
+base_tax = 5
+base_production = 4
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

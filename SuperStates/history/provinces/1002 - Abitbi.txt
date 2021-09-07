@@ -1,0 +1,36 @@
+#Lancaster
+
+owner = NEB
+controller = NEB
+add_core = NEB
+culture = nebraskan
+religion = s_protestant
+capital = "Lincoln"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes #25840
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

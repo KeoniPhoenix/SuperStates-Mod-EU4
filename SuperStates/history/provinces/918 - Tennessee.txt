@@ -1,0 +1,27 @@
+#Durango
+
+owner = DRG
+controller = DRG
+add_core = DRG
+culture = durangoan
+religion = s_catholic
+capital = "Victoria de Durango"
+is_city = yes #63170
+trade_goods = copper
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

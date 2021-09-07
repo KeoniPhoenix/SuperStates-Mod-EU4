@@ -1,0 +1,21 @@
+#Toowoomba
+
+owner = QLD
+controller = QLD
+add_core = QLD
+culture = queenslander
+religion = austral_protestant
+capital = "Toowoomba"
+trade_goods = grain
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+is_city = yes #16420
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

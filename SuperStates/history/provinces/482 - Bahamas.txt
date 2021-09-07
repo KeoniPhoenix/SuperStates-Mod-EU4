@@ -1,0 +1,35 @@
+#482 - New Providence
+
+culture = arawak
+religion = animism
+capital = "New Providence"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 4
+base_manpower = 3
+native_size = 5
+native_ferocity = 2
+native_hostileness = 5
+
+center_of_trade = 1
+
+1648.1.1 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = SPA
+	religion = protestant
+	culture = english
+} # Became a British colony
+1655.1.1 = { capital = "Charles Town" }
+1695.1.1 = { capital = "Nassau" } # The town is renamed Nassau
+1718.7.26 = {
+	owner = BHM
+	controller = BHM
+	add_core = BHM
+	culture = bahamian
+}
+1973.7.10 = {
+	remove_core = GBR
+}

@@ -1,0 +1,49 @@
+#Clarke
+
+owner = GRG
+controller = GRG
+add_core = GRG
+culture = us_georgian
+religion = s_protestant
+capital = "Athens"
+trade_goods = cotton
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 3
+is_city = yes #11550
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = GRG
+	controller = GRG
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

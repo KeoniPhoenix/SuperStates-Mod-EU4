@@ -1,0 +1,53 @@
+#Muskogee
+
+owner = OKL
+controller = OKL
+add_core = OKL
+add_core = SEQ
+culture = oklahoman
+religion = s_protestant
+capital = "Muskogee"
+is_city = yes #3930
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = TEX
+	controller = TEX
+	add_core = TEX
+}
+
+1675.2.4 = {
+	owner = GPL
+	controller = GPL
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = TEX
+	controller = TEX
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

@@ -1,0 +1,37 @@
+#Rocky View
+
+owner = ABR
+controller = ABR
+add_core = ABR
+culture = albertan
+religion = s_protestant
+capital = "Calgary" 
+is_city = yes #109690
+trade_goods = livestock
+hre = no 
+base_tax = 10
+base_production = 10
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

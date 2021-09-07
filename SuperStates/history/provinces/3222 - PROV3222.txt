@@ -1,0 +1,28 @@
+#Candelaria
+
+owner = CPE
+controller = CPE
+add_core = CPE
+culture = campechian
+religion = s_catholic
+capital = "Candelaria"
+is_city = yes #4120
+trade_goods = grain
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = YTN
+	controller = YTN
+	add_core = YTN
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

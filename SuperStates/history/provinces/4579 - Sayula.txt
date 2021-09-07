@@ -1,0 +1,27 @@
+#Saba
+
+culture = arawak
+religion = animism
+capital = "The Bottom"
+
+trade_goods = unknown 
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+
+1640.1.1 = {
+	owner = NED
+	controller = NED
+	add_core = NED
+	is_city = yes
+	culture = dutch
+	trade_goods = sugar
+}
+1943.1.1 = {
+	add_core = SBA
+}

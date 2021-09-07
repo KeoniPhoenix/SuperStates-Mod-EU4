@@ -1,0 +1,45 @@
+#Ford
+
+owner = KNS
+controller = KNS
+add_core = KNS
+add_core = WSK
+culture = west_kansan
+religion = s_protestant
+capital = "Dodge City"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+is_city = yes #2740
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = KNS
+	controller = KNS
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

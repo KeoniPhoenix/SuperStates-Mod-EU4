@@ -1,0 +1,22 @@
+#Villanueva
+
+owner = ZCT
+controller = ZCT
+add_core = ZCT
+culture = zacatecan
+religion = s_catholic
+capital = "Villanueva"
+is_city = yes #3280
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

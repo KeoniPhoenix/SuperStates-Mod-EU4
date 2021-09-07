@@ -1,0 +1,21 @@
+#Rockhampton
+
+owner = QLD
+controller = QLD
+add_core = QLD
+culture = queenslander
+religion = austral_protestant
+capital = "Rockhampton"
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes #8130
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

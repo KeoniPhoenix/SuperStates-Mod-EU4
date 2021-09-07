@@ -1,0 +1,53 @@
+#3332 - Bonaire
+
+culture = arawak
+religion = animism
+capital = "Bonaire"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 6
+#discovered_by = north_american
+discovered_by = mesoamerican
+
+1499.1.1 = {
+	
+	owner = CAS
+	controller = CAS
+	culture = castillian
+	add_core = CAS
+	religion = catholic
+	is_city = yes
+	trade_goods = sugar
+} # Christopher Columbus 
+1516.1.23 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	remove_core = CAS
+}
+1634.1.1 = {
+	owner = NED
+	controller = NED
+	add_core = NED
+	culture = dutch
+	religion = reformed
+	capital = "Kralendijk"
+	remove_core = SPA
+} # Dutch occupation, Punda is founded ( later: Willemstad )
+1807.1.1 = {
+	owner = GBR
+	controller = GBR
+} # Occupied by British forces
+1815.6.9 = {
+	owner = NED
+	controller = NED
+} # Restored to the Netherlands
+1954.12.15 = {
+	culture = bonairean 
+	add_core = BNR
+}

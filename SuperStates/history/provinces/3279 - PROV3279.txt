@@ -1,0 +1,41 @@
+#Nye
+
+owner = NVA
+controller = NVA
+add_core = NVA
+# add_permanent_claim = UTA
+culture = nevadan 
+religion = mormon
+trade_goods = copper
+capital = "Tonopah"
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NVA
+	controller = NVA
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

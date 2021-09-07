@@ -1,0 +1,32 @@
+#Grey
+
+owner = ONT
+controller = ONT
+add_core = ONT
+culture = ontarian
+religion = s_protestant
+capital = "Owen Sound" 
+is_city = yes #2130
+trade_goods = grain
+hre = no 
+base_tax = 4
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

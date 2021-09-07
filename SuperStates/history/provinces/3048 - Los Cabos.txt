@@ -1,0 +1,29 @@
+#Los Cabos
+
+owner = BCS
+controller = BCS
+add_core = BCS
+culture = south_baja_californian
+religion = s_catholic
+capital = "Cabo San Lucas"
+is_city = yes #23850
+trade_goods = grain
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1555.1.1 = {
+	owner = BCN
+	controller = BCN
+	add_core = BCN
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,21 @@
+#Fraser Coast
+
+owner = QLD
+controller = QLD
+add_core = QLD
+culture = queenslander
+religion = austral_protestant
+capital = "Fraser Coast"
+trade_goods = fish
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+is_city = yes #10300
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

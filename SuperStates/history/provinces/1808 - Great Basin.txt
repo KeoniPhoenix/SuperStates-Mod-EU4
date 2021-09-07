@@ -1,0 +1,32 @@
+#Queens
+
+owner = PEI
+controller = PEI
+add_core = PEI
+culture = prince_edward_islander
+religion = s_protestant
+capital = "Charlottetown" 
+is_city = yes #3460
+trade_goods = fish
+hre = no 
+base_tax = 4
+base_production = 4
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

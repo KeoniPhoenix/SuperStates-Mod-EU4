@@ -1,0 +1,54 @@
+#501 - Barbados
+
+culture = carib
+religion = animism
+capital = "Barbados"
+trade_goods = unknown
+hre = no
+base_tax = 4 
+base_production = 5
+base_manpower = 1
+native_size = 15
+native_ferocity = 1
+native_hostileness = 5
+#discovered_by = north_american
+discovered_by = mesoamerican
+
+center_of_trade = 1
+
+1620.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	culture = english
+	religion = protestant
+	is_city = yes
+	trade_goods = sugar
+} # The British found the island uninhabited
+1628.1.1 = { capital = "Bridgetown" } # British settlers began to arrive. Under uninterrupted British control until 1966
+1707.5.12 = {
+	
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1816.4.14 = { revolt = { type = nationalist_rebels size = 2 } controller = REB } # Bussa's Rebellion
+1817.1.1 = { revolt = {} controller = GBR }
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+	add_core = BBD
+	culture = barbadian
+}
+1962.5.31 = {
+	owner = GBR
+	controller = GBR
+	remove_core = WSI
+}
+1966.11.30 = {
+	owner = BBD
+	controller = BBD
+	remove_core = GBR
+}

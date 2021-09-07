@@ -1,0 +1,26 @@
+#Toluca de Lerdo
+
+owner = EMX
+controller = EMX
+add_core = EMX
+culture = estado_mexican
+religion = s_catholic
+capital = "Toluca de Lerdo"
+is_city = yes #81960
+trade_goods = iron
+hre = no
+base_tax = 7
+base_production = 7
+base_manpower = 6
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

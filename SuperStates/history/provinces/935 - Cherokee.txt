@@ -1,0 +1,23 @@
+#Mexicali
+
+owner = BCN
+controller = BCN
+add_core = BCN
+culture = baja_californian
+religion = s_catholic
+capital = "Mexicali"
+is_city = yes #68980
+trade_goods = grain
+hre = no
+base_tax = 6
+base_production = 6
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

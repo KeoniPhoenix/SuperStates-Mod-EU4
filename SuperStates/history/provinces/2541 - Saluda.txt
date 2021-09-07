@@ -1,0 +1,55 @@
+#Monongalia
+
+owner = WVA
+controller = WVA
+add_core = WVA
+# add_core = VIR
+culture = west_virginian
+religion = s_protestant
+capital = "Morgantown"
+trade_goods = iron
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 2
+is_city = yes #2970
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WST
+	controller = WST
+	add_core = WST
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = WVA
+	controller = WVA
+	remove_core = FSA
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

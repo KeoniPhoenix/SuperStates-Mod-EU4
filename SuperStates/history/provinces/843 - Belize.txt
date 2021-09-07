@@ -1,0 +1,44 @@
+#843 - Belize
+
+culture = mayan
+religion = mesoamerican_religion
+capital = "Belize" 
+trade_goods = unknown 
+hre = no 
+base_tax = 4 
+base_production = 4
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+center_of_trade = 1
+
+1638.1.1  = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	culture = english
+	religion = protestant
+	is_city = yes
+	trade_goods = sugar 
+} # British privateers settled in the area 
+
+1650.1.1  = { capital = "Belize town" }
+
+1707.5.12  = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+
+1862.1.1 = {
+	owner = BLZ
+	controller = BLZ
+	add_core = BLZ
+	culture = belizean
+}
+
+1981.9.21 = {
+	remove_core = GBR
+}

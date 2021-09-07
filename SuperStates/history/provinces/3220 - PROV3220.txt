@@ -1,0 +1,22 @@
+#Vieques
+
+owner = PRT
+controller = PRT
+add_core = PRT
+culture = puerto_rican
+religion = s_catholic
+capital = "Vieques" 
+is_city = yes #1000
+trade_goods = sugar
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

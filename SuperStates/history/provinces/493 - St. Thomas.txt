@@ -1,0 +1,23 @@
+#St. Thomas
+
+owner = UVI
+controller = UVI
+add_core = UVI
+culture = virgin_islander
+religion = s_catholic
+capital = "Charlotte Amalie" 
+is_city = yes #1900
+trade_goods = sugar
+hre = no 
+base_tax = 4
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

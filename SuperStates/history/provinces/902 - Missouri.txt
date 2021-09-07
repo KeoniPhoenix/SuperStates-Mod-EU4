@@ -1,0 +1,26 @@
+#Tepic
+
+owner = NAY
+controller = NAY
+add_core = NAY
+culture = nayaritian
+religion = s_catholic
+capital = "Tepic"
+is_city = yes #33290
+trade_goods = grain
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

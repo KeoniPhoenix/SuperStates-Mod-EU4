@@ -1,0 +1,30 @@
+#Tuxtla Gutierrez
+
+owner = CPS
+controller = CPS
+add_core = CPS
+culture = chiapan
+religion = s_catholic
+capital = "Tuxtla Gutiérrez"
+is_city = yes #53710
+trade_goods = livestock
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}
+
+1823.9.15 = {
+	add_core = CAM
+}

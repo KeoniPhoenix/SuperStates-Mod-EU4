@@ -1,0 +1,45 @@
+#Okanogan
+
+owner = WAS
+controller = WAS
+add_core = WAS
+add_core = LNC
+culture = lincolnite 
+religion = s_protestant
+capital = "Okanogan" 
+trade_goods = wool 
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #2560
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = PCF
+	controller = PCF
+	add_core = PCF
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = WAS
+	controller = WAS
+	remove_core = CSC
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

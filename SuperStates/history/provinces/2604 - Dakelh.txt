@@ -1,0 +1,48 @@
+#Merrimack
+
+owner = NWH
+controller = NWH
+add_core = NWH
+culture = new_hampshirite
+religion = s_protestant
+capital = "Concord"
+trade_goods = fish
+hre = no
+base_tax = 4
+base_production = 2
+base_manpower = 2
+is_city = yes #4270
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = NEW
+	controller = NEW
+	add_core = NEW
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NWH
+	controller = NWH
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

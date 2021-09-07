@@ -1,0 +1,40 @@
+#Lyon
+
+owner = MNN
+controller = MNN
+add_core = MNN
+culture = minnesotan
+religion = s_catholic
+capital = "Marshall"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #1370
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MNN
+	controller = MNN
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

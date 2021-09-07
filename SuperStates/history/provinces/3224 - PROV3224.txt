@@ -1,0 +1,28 @@
+#Cozumel
+
+owner = QTR
+controller = QTR
+add_core = QTR
+culture = quintanaroan
+religion = s_catholic
+capital = "San Miguel"
+is_city = yes #7720
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = YTN
+	controller = YTN
+	add_core = YTN
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

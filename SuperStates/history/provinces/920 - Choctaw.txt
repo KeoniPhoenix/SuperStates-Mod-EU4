@@ -1,0 +1,28 @@
+#Mazatlan
+
+owner = SLA
+controller = SLA
+add_core = SLA
+culture = sinaloan
+religion = s_catholic
+capital = "Mazatlán"
+is_city = yes #43840
+trade_goods = fish
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

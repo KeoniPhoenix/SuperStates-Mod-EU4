@@ -1,0 +1,26 @@
+#Oaxaca de Juarez
+
+owner = OAX
+controller = OAX
+add_core = OAX
+culture = oaxacan
+religion = s_catholic
+capital = "Oaxaca de Juárez"
+is_city = yes #26340
+trade_goods = cloth
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

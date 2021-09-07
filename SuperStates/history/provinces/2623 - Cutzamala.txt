@@ -1,0 +1,33 @@
+#Corman Park
+
+owner = SSK
+controller = SSK
+add_core = SSK
+culture = saskatchewanian
+religion = s_protestant
+capital = "Saskatoon" 
+is_city = yes #22220
+trade_goods = grain
+hre = no 
+base_tax = 5
+base_production = 4
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

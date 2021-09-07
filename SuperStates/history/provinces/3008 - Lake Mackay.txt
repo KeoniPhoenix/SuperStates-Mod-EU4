@@ -1,0 +1,3 @@
+#3008 - Lake Mackay
+
+discovered_by = australian

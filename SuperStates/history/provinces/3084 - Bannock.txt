@@ -1,0 +1,28 @@
+#Bannock
+
+owner = IDA
+controller = IDA
+add_core = IDA
+culture = idahoan 
+religion = mormon
+trade_goods = grain
+capital = "Pocatello"
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #5430
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

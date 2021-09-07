@@ -1,0 +1,29 @@
+#Coconino
+
+owner = ARZ
+controller = ARZ
+add_core = ARZ
+add_core = NAH
+culture = arizonan 
+religion = mormon
+capital = "Flagstaff"
+is_city = yes #6590
+trade_goods = iron
+hre = no 
+base_tax = 3
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

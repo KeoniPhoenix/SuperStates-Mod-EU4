@@ -1,0 +1,22 @@
+#Zihuatanejo de Azueta
+
+owner = GRR
+controller = GRR
+add_core = GRR
+culture = guerreroan
+religion = s_catholic
+capital = "Zihuatanejo"
+is_city = yes #10460
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

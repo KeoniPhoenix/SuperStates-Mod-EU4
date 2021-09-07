@@ -1,0 +1,23 @@
+#Veracruz
+
+owner = VRZ
+controller = VRZ
+add_core = VRZ
+culture = veracruzian
+religion = s_catholic
+capital = "Veracruz"
+is_city = yes #55480
+trade_goods = coffee
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

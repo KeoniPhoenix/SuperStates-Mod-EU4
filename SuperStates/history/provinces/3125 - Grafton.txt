@@ -1,0 +1,45 @@
+#Grafton
+
+owner = NWH
+controller = NWH
+add_core = NWH
+#add_core = IST
+culture = new_hampshirite
+religion = s_protestant
+capital = "Haverhill"
+trade_goods = fish
+hre = no
+base_tax = 4
+base_production = 2
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = NEW
+	controller = NEW
+	add_core = NEW
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NWH
+	controller = NWH
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

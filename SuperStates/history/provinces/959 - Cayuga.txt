@@ -1,0 +1,53 @@
+#Dona Ana
+
+owner = NMX
+controller = NMX
+add_core = NMX
+#add_core = KER
+culture = new_mexican
+religion = s_catholic
+capital = "Las Cruces" 
+is_city = yes #9770
+trade_goods = copper
+hre = no 
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1675.2.4 = {
+	add_core = CSA
+}
+
+1675.2.5 = {
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1862.2.14 = {
+	controller = CSA
+}
+
+1862.7.1 = {
+	controller = USA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

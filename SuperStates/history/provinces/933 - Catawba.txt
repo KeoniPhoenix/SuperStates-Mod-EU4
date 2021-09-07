@@ -1,0 +1,22 @@
+#Ensenada
+
+owner = BCN
+controller = BCN
+add_core = BCN
+culture = baja_californian
+religion = s_catholic
+capital = "Ensenada"
+is_city = yes #2800
+trade_goods = iron
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

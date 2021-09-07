@@ -1,0 +1,44 @@
+# No previous file for Managua
+
+culture = miskito
+religion = animism
+capital = "Managua"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+1523.1.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	capital = "Managua"
+	culture = castillian
+	religion = s_catholic
+	is_city = yes
+	trade_goods = coffee
+} # First permanent Spanish settlement 
+
+1810.9.16 = {
+#	add_core = MEX
+	add_core = NCG
+	add_core = CAM
+#	controller = MEX
+	culture = nicaraguan
+} # Mexican War of Independence
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+	remove_core = SPA
+}
+
+1838.11.5 = {
+	owner = NCG
+	controller = NCG
+#	remove_core = MEX
+}

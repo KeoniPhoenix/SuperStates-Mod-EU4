@@ -1,0 +1,4 @@
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1497.6.24 = { discovered_by = ENG } # John Cabbot

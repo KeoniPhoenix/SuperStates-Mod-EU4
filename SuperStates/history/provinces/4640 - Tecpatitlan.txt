@@ -1,0 +1,37 @@
+#Auckland/TÄ?maki Makaurau
+
+culture = maori
+religion = animism
+capital = "Auckland"
+trade_goods = unknown 
+hre = no
+
+center_of_trade = 1
+
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = australian
+
+1840.1.1 = {
+	trade_goods = gems
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}
+
+1852.6.30 = {	
+	culture = new_zealander
+	add_core = NZL
+}
+
+1907.1.1 = {
+	owner = NZL
+	controller = NZL
+	remove_core = GBR
+}

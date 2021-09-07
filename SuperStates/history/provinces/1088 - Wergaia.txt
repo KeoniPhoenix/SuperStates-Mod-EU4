@@ -1,0 +1,27 @@
+#Adelaide
+
+owner = SAU
+controller = SAU
+add_core = SAU
+add_core = PLD
+culture = south_australian
+religion = austral_protestant
+capital = "Adelaide"
+trade_goods = naval_supplies
+hre = no
+base_tax = 6
+base_production = 5
+base_manpower = 6
+is_city = yes #122520
+discovered_by = australian
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

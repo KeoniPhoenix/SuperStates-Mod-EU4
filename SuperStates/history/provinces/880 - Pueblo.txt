@@ -1,0 +1,22 @@
+#Celaya
+
+owner = GJT
+controller = GJT
+add_core = GJT
+culture = guanajuatoan
+religion = s_catholic
+capital = "Celaya"
+is_city = yes #31040
+trade_goods = glass
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,53 @@
+#Texas, OK
+
+owner = OKL
+controller = OKL
+add_core = OKL
+add_core = CIM
+culture = high_plainer
+religion = s_protestant
+capital = "Guymon"
+is_city = yes #1140
+trade_goods = livestock
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = TEX
+	controller = TEX
+	add_core = TEX
+}
+
+1675.2.4 = {
+	owner = GPL
+	controller = GPL
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = TEX
+	controller = TEX
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

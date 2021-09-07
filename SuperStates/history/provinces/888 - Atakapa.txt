@@ -1,0 +1,27 @@
+#Guadalajara
+
+owner = JLC
+controller = JLC
+add_core = JLC
+culture = jaliscan
+religion = s_catholic
+capital = "Guadalajara"
+is_city = yes #149520
+trade_goods = copper
+hre = no
+base_tax = 9
+base_production = 9
+base_manpower = 8
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,31 @@
+#Manu'a
+
+owner = ASM
+controller = ASM
+add_core = ASM
+culture = samoan_american
+religion = s_protestant
+capital = "Luma"
+is_city = yes #1000
+trade_goods = fish
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+discovered_by = oceanian
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = PCO
+	controller = PCO
+	add_core = PCO
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

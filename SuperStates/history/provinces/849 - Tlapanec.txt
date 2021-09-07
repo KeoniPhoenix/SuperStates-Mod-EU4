@@ -1,0 +1,32 @@
+#Campeche
+
+owner = CPE
+controller = CPE
+add_core = CPE
+culture = campechian
+religion = s_catholic
+capital = "Campeche"
+is_city = yes #21170
+trade_goods = naval_supplies
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = YTN
+	controller = YTN
+	add_core = YTN
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

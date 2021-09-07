@@ -1,0 +1,46 @@
+#Qumarkaj
+
+culture = highland_mayan 
+religion = mesoamerican_religion
+capital = "Qumarkaj" 
+trade_goods = cocoa 
+hre = no 
+base_tax = 3 
+base_production = 3
+base_manpower = 1 
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+discovered_by = mesoamerican
+
+1524.1.1 = {
+	discovered_by = SPA 
+	owner = SPA 
+	controller = SPA
+	culture = castillian
+	religion = catholic
+} # Colonized and conquered by Spanish armies 
+1527.1.1 = { capital = "Ciudad Vieja" }
+1542.1.1 = { capital = "Antigua" } 
+1549.1.1 = { add_core = SPA }
+1578.1.1 = { discovered_by = ENG } # Drake 
+1776.1.1 = { capital = "Guatemala city" } 1810.9.16 = {
+#	add_core = MEX
+	add_core = GTM
+	add_core = CAM
+#	controller = MEX 
+	culture = guatemalan
+} # Mexican War of Independence
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+	remove_core = SPA
+}
+
+1841.2.18 = {
+	owner = GTM
+	controller = GTM
+#	remove_core = MEX
+}

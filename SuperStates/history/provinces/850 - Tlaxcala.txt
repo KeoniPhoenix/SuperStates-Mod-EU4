@@ -1,0 +1,26 @@
+#Tampachula
+
+owner = CPS
+controller = CPS
+add_core = CPS
+culture = chiapan
+religion = s_catholic
+capital = "Tapachula"
+is_city = yes #21170
+trade_goods = coffee
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}
+
+1823.9.15 = {
+	add_core = CAM
+}

@@ -1,0 +1,22 @@
+#Port Pirie
+
+owner = SAU
+controller = SAU
+add_core = SAU
+add_core = PLD
+culture = south_australian
+religion = austral_protestant
+capital = "Mount Gambier"
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+is_city = yes #2710
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

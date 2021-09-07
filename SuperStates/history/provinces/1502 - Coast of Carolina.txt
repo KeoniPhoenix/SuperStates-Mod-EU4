@@ -1,0 +1,6 @@
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1521.1.1 = { discovered_by = SPA } # Lucas Vásquez de Ayllón
+1526.1.1 = { discovered_by = FRA }
+

@@ -1,0 +1,32 @@
+#Culiacan
+
+owner = SLA
+controller = SLA
+add_core = SLA
+culture = sinaloan
+religion = s_catholic
+capital = "Culiacán"
+is_city = yes #67580
+trade_goods = fish
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

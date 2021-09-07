@@ -1,0 +1,47 @@
+#Albany
+
+owner = NYS
+controller = NYS
+add_core = NYS
+culture = new_yorker
+religion = s_catholic
+capital = "Albany"
+trade_goods = paper
+hre = no
+base_tax = 5
+base_production = 3
+base_manpower = 2
+is_city = yes #9790
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1000.1.1 = { add_permanent_province_modifier = {
+			name = erie_canal_albany_toll
+			duration = -1
+		}
+}
+
+1555.1.1 = {
+	owner = MAA
+	controller = MAA
+	add_core = MAA
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = NYS
+	controller = NYS
+	remove_core = FSA
+}
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

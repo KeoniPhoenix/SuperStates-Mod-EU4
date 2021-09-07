@@ -1,0 +1,38 @@
+#Tortola
+
+culture = arawak
+religion = animism
+capital = "Road Town"
+trade_goods = unknown
+hre = no
+base_tax = 4 
+base_production = 4
+base_manpower = 2
+native_size = 5
+native_ferocity = 2
+native_hostileness = 4
+discovered_by = PRT
+discovered_by = UVI
+
+1648.1.1 = {
+	owner = NED
+	controller = NED
+	culture = dutch
+	religion = protestant
+} # Dutch Settlement
+1672.1.1 = {
+	owner = ENG
+	controller = ENG
+	culture = english
+	religion = anglican
+}
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1680.1.1 = { 
+	trade_goods = sugar
+	is_city = yes
+}

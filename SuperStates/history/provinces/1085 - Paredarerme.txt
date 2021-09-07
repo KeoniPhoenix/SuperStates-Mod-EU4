@@ -1,0 +1,23 @@
+#Boulder
+
+owner = WAU
+controller = WAU
+add_core = WAU
+add_core = AAL
+culture = western_australian
+religion = austral_protestant
+capital = "Kalgoorlie"
+trade_goods = gold
+hre = no
+base_tax = 5
+base_production = 3
+base_manpower = 1
+is_city = yes #3110
+discovered_by = australian
+center_of_trade = 1
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

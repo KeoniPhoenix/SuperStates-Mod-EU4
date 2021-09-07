@@ -1,0 +1,26 @@
+#Kodiak Island
+
+owner = ALA
+controller = ALA
+add_core = ALA
+culture = alaskan
+religion = s_protestant
+capital = "Kodiak"
+trade_goods = fur
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes #1000
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1518.1.1 = {
+	religion = orthodox
+}

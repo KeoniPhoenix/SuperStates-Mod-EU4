@@ -1,0 +1,33 @@
+#Missoula
+
+owner = MNT
+controller = MNT
+add_core = MNT
+add_core = KOO
+culture = montanan
+religion = s_protestant
+capital = "Missoula" 
+is_city = yes #6680
+trade_goods = iron
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

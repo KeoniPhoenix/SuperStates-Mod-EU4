@@ -1,0 +1,22 @@
+#Tehuacan
+
+owner = PBL
+controller = PBL
+add_core = PBL
+culture = pueblan
+religion = s_catholic
+capital = "Tehuacán"
+is_city = yes #27490
+trade_goods = cloth
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

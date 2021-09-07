@@ -1,0 +1,60 @@
+#3328 Tobago
+
+culture = carib
+religion = animism
+capital = "Scarborough"
+trade_goods = unknown
+hre = no 
+base_tax = 4 
+base_production = 5
+base_manpower = 1
+native_size = 25
+native_ferocity = 2
+native_hostileness = 9
+
+1654.1.1 = {
+	owner = NED
+	controller = NED
+	add_core = KUR 		#Courland settled the island along with the Dutch
+	add_core = NED
+	is_city = yes
+	culture = prussian	#Courland was the primary operators of the colony
+	religion = protestant
+	trade_goods = tobacco	#Origin of the island's name
+}
+1659.1.1 = { culture = dutch }	#Dutch majority
+1690.1.1 = { remove_core = KUR }#Courland abandon's colony for final time leaving the island to the Dutch
+1691.1.1 = { 
+	revolt = { 
+		type = animism_rebels 
+		size = 2 
+	}
+	religion = animism
+	controller = REB
+	unrest = 3
+} #Neutral Island Period until British take possession
+1763.1.1 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = NED
+	culture = english
+	religion = anglican
+}
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+	add_core = TTB
+	culture = trinidadian
+}
+1962.5.31 = {
+	owner = GBR
+	controller = GBR
+	remove_core = WSI
+}
+1962.8.27 = {
+	owner = TTB
+	controller = TTB
+	remove_core = GBR
+}

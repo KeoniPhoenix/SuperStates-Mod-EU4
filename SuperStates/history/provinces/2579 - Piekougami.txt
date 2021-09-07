@@ -1,0 +1,47 @@
+#Cuyahoga
+
+owner = OHI
+controller = OHI
+add_core = OHI
+#add_core = WCT
+# add_core = CUT
+culture = clevelander
+religion = s_catholic
+capital = "Cleveland"
+trade_goods = wine
+hre = no
+base_tax = 7
+base_production = 8
+base_manpower = 5
+is_city = yes #39690
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1555.1.1 = {
+	owner = GLK
+	controller = GLK
+	add_core = GLK
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = OHI
+	controller = OHI
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

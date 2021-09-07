@@ -1,0 +1,28 @@
+#1989 - Tonga
+
+#owner = TGA
+#controller = TGA
+#add_core = TGA
+#is_city = yes
+culture = tongan
+religion = animism
+capital = "Nuku'alofa"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = oceanian
+
+1900.5.18 = {
+	owner = GBR
+	controller = GBR
+}#British Protectorate
+
+1970.6.4 = {
+	owner = TGA
+	controller = TGA
+}#End of Protectorate

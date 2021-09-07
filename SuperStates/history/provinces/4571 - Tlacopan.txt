@@ -1,0 +1,28 @@
+#Luna
+
+owner = NMX
+controller = NMX
+add_core = NMX
+culture = new_mexican
+religion = s_catholic
+capital = "Deming"
+is_city = yes #1490
+trade_goods = gold
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

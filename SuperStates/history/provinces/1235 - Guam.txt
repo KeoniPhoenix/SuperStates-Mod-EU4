@@ -1,0 +1,27 @@
+#Hagatna
+
+owner = GUM
+controller = GUM
+add_core = GUM
+culture = guamanian
+religion = austral_catholic
+capital = "Agana"
+trade_goods = fish
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 2
+is_city = yes #1000
+discovered_by = oceanian
+
+1555.1.1 = {
+	owner = PCO
+	controller = PCO
+	add_core = PCO
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

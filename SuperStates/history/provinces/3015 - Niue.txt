@@ -1,0 +1,41 @@
+#3016 - Niue
+
+#owner = NIU
+#controller = NIU
+#add_core = NIU
+#is_city = yes
+culture = niuean
+religion = austral_protestant
+capital = "Niue"
+#trade_goods = fish
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+#native_size = 40
+#native_ferocity = 2
+#native_hostileness = 9
+discovered_by = oceanian
+
+1900.9.2 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}
+
+1901.1.1 = {
+	add_core = NZL
+}
+
+1907.1.1 = {
+	owner = NZL
+	controller = NZL
+	add_core = NZL
+	remove_core = GBR
+}
+
+1974.10.19 = {
+	owner = CKI
+	controller = CKI
+	remove_core = NZL
+}

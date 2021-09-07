@@ -1,0 +1,34 @@
+#Trinity
+
+owner = NFL
+controller = NFL
+add_core = NFL
+add_core = NWF
+culture = newfoundlander
+religion = s_protestant
+capital = "Clarenville" 
+is_city = yes #1000
+trade_goods = fish
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

@@ -1,0 +1,22 @@
+#Colotlan
+
+owner = JLC
+controller = JLC
+add_core = JLC
+culture = jaliscan
+religion = s_catholic
+capital = "Colotlán"
+is_city = yes #1760
+trade_goods = cloth
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

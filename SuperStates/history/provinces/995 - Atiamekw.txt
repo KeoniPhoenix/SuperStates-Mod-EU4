@@ -1,0 +1,37 @@
+#Cass
+
+owner = NDK
+controller = NDK
+add_core = NDK
+culture = north_dakotan
+religion = s_protestant
+trade_goods = grain
+capital = "Fargo"
+hre = no
+base_tax = 4
+base_production = 2
+base_manpower = 2
+is_city = yes #10560
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

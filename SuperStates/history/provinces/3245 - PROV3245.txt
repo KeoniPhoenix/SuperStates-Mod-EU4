@@ -1,0 +1,45 @@
+#Sonoma
+
+owner = CAL
+controller = CAL
+add_core = CAL
+add_core = SFB
+culture = san_franciscan
+religion = s_protestant
+capital = "Santa Rosa"
+is_city = yes #16710
+trade_goods = wine
+hre = no 
+base_tax = 4
+base_production = 5
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = PCF
+	controller = PCF
+	add_core = PCF
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = CAL
+	controller = CAL
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

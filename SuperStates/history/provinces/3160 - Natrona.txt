@@ -1,0 +1,32 @@
+#Natrona
+
+owner= WYO
+controller = WYO
+add_core = WYO
+culture = wyomingite 
+religion = s_protestant
+trade_goods = fur
+capital = "Casper"
+hre = no
+base_tax = 4
+base_production = 3
+base_manpower = 2
+is_city = yes #5530
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

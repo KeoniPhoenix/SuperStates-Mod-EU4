@@ -1,0 +1,23 @@
+#St. John
+
+owner = UVI
+controller = UVI
+add_core = UVI
+culture = virgin_islander
+religion = s_catholic
+capital = "Cruz Bay" 
+is_city = yes #1000
+trade_goods = sugar
+hre = no 
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

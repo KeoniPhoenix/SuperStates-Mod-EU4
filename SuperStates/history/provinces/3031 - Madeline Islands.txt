@@ -1,0 +1,30 @@
+#Îles-de-la-Madeleine
+
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = ACD
+#add_core = PEI
+culture = acadian
+religion = s_catholic
+capital = "Les Îles-de-la-Madeleine" 
+is_city = yes #1230
+trade_goods = fish
+hre = no 
+base_tax = 2
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

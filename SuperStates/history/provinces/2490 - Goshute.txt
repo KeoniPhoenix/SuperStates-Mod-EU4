@@ -1,0 +1,63 @@
+#Orleans
+
+owner = LOU
+controller = LOU
+add_core = LOU
+culture = louisianan
+religion = s_catholic
+capital = "New Orleans"
+is_city = yes #34390
+trade_goods = naval_supplies
+hre = no
+base_tax = 5
+base_production = 6
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+add_permanent_province_modifier = {
+	name = mississippi_estuary_modifier
+	duration = -1
+}
+
+1444.11.11 = {
+	owner = LOU
+	controller = LOU
+	add_core = LOU
+}
+
+1444.11.12 = {
+	owner = LOU
+	controller = LOU
+	add_core = LOU
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = LOU
+	controller = LOU
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

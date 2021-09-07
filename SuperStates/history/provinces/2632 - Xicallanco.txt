@@ -1,0 +1,32 @@
+#Wood Buffalo
+
+owner = ABR
+controller = ABR
+add_core = ABR
+culture = albertan
+religion = s_protestant
+capital = "Fort McMurray" 
+is_city = yes #6560
+trade_goods = fur
+hre = no 
+base_tax = 6
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

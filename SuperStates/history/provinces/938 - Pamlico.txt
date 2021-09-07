@@ -1,0 +1,48 @@
+#Yuma
+
+owner = ARZ
+controller = ARZ
+add_core = ARZ
+culture = arizonan
+religion = s_protestant
+capital = "Yuma" 
+is_city = yes #9310
+trade_goods = cotton
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1675.2.4 = {
+	add_core = CSA
+}
+
+1675.2.5 = {
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = {
+	add_core = CSA
+}
+
+1865.5.9 = {
+	remove_core = CSA
+}

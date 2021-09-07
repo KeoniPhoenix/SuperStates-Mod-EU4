@@ -1,0 +1,21 @@
+#Mandurah
+
+owner = WAU
+controller = WAU
+add_core = WAU
+culture = western_australian
+religion = austral_catholic
+capital = "Mandurah"
+trade_goods = fish
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 2
+is_city = yes #8330
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

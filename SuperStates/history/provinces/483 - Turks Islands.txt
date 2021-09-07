@@ -1,0 +1,49 @@
+#483 - Turks Islands
+
+culture = carib
+religion = animism
+capital = "Cockburn Town"
+trade_goods = unknown
+hre = no
+base_tax = 4
+base_production = 3
+base_manpower = 2
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+
+1700.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	remove_core = SPA
+	culture = english
+	religion = protestant
+} # Settlers from Bermuda
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+	is_city = yes
+}
+1753.1.1 = { unrest = 6 } # France claimed the island
+1754.1.1 = { unrest = 0 } # ...but were repelled just a year later
+1848.1.1 = {
+	owner = JMC
+	controller = JMC
+	add_core = JMC
+	remove_core = GBR
+}
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+}
+1962.5.31 = {
+	owner = TCI
+	controller = TCI
+	add_core = TCI
+	remove_core = WSI
+	culture = turk_caicos_islander
+}

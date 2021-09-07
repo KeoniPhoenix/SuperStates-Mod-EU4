@@ -1,0 +1,22 @@
+#Gomez Palacio
+
+owner = DRG
+controller = DRG
+add_core = DRG
+culture = durangoan
+religion = s_catholic
+capital = "Gómez Palacio"
+is_city = yes #32820
+trade_goods = wool
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

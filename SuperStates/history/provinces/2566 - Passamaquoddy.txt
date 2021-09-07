@@ -1,0 +1,44 @@
+#Champaign
+
+owner = ILI
+controller = ILI
+add_core = ILI
+culture = illinoisan
+religion = s_protestant
+capital = "Urbana"
+is_city = yes #4130
+trade_goods = glass
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = GLK
+	controller = GLK
+	add_core = GLK
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = ILI
+	controller = ILI
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

@@ -1,0 +1,30 @@
+#Madawaska
+
+owner = NBR
+controller = NBR
+add_core = NBR
+add_core = MDW
+# add_core = MNE
+culture = brayon
+religion = s_catholic
+capital = "Edmundston" 
+is_city = yes #1600
+trade_goods = paper
+hre = no 
+base_tax = 4
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

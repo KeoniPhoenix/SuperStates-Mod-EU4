@@ -1,0 +1,28 @@
+#Nuevo Laredo
+
+owner = TML
+controller = TML
+add_core = TML
+culture = tamaulipasian
+religion = s_catholic
+capital = "Nuevo Laredo"
+is_city = yes #37370
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RRG
+	controller = RRG
+	add_core = RRG
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

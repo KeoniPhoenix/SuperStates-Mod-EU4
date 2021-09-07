@@ -1,0 +1,44 @@
+#Clay
+
+owner = MNN
+controller = MNN
+add_core = MNN
+culture = minnesotan
+religion = s_protestant
+capital = "Moorhead"
+is_city = yes #3860
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MNN
+	controller = MNN
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

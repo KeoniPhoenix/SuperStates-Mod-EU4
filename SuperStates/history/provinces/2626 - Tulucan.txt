@@ -1,0 +1,38 @@
+#Winnipeg
+
+owner = MTB
+controller = MTB
+add_core = MTB
+add_core = MTA
+culture = manitoban
+religion = s_protestant
+capital = "Winnipeg" 
+is_city = yes #66370
+trade_goods = grain
+hre = no 
+base_tax = 5
+base_production = 7
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

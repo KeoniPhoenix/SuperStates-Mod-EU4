@@ -1,0 +1,34 @@
+#Hermosillo
+
+owner = SNA
+controller = SNA
+add_core = SNA
+#add_core = YAQ
+culture = sonoran_culture
+religion = s_catholic
+capital = "Hermosillo"
+is_city = yes #78430
+trade_goods = naval_supplies
+hre = no
+base_tax = 7
+base_production = 7
+base_manpower = 7
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

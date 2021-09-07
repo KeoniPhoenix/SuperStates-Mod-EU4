@@ -1,0 +1,22 @@
+#Mildura
+
+owner = VCT
+controller = VCT
+add_core = VCT
+add_core = PLD
+culture = victorian
+religion = austral_catholic
+capital = "Mildura"
+trade_goods = wine
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes #5470
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

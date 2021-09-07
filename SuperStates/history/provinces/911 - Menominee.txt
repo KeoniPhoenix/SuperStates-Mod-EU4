@@ -1,0 +1,28 @@
+#Torreon
+
+owner = COA
+controller = COA
+add_core = COA
+culture = coahuilan
+religion = s_catholic
+capital = "Torreón"
+is_city = yes #63960
+trade_goods = cotton
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = RRG
+	controller = RRG
+	add_core = RRG
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

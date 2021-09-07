@@ -1,0 +1,22 @@
+#Arecibo
+
+owner = PRT
+controller = PRT
+add_core = PRT
+culture = puerto_rican
+religion = s_catholic
+capital = "Arecibo" 
+is_city = yes #9640
+trade_goods = sugar
+hre = no 
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

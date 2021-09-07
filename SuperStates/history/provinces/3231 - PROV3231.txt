@@ -1,0 +1,55 @@
+#Houston
+
+owner = ALM
+controller = ALM
+add_core = ALM
+add_core = YZU
+culture = alabaman
+religion = s_protestant
+capital = "Dothan" 
+is_city = yes #6550
+trade_goods = cotton
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = GRG
+	controller = GRG
+	add_core = GRG
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = ALA
+	controller = ALA
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

@@ -1,0 +1,28 @@
+#La Cote-de-Gaspe
+
+owner = QUE
+controller = QUE
+add_core = QUE
+culture = quebecois
+religion = s_catholic
+capital = "Gaspe" 
+is_city = yes #1520
+trade_goods = copper
+hre = no 
+base_tax = 3
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

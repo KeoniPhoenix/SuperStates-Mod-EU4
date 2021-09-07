@@ -1,0 +1,37 @@
+#York, NB
+
+owner = NBR
+controller = NBR
+add_core = NBR
+# add_core = MNE
+culture = new_brunswicker
+religion = s_protestant
+capital = "Fredricton" 
+is_city = yes #5630
+trade_goods = fur
+hre = no 
+base_tax = 4
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = MTU
+	controller = MTU
+	add_core = MTU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

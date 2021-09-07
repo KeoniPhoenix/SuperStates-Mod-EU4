@@ -1,0 +1,28 @@
+#Ahome
+
+owner = SLA
+controller = SLA
+add_core = SLA
+culture = sinaloan
+religion = s_catholic
+capital = "Los Mochis"
+is_city = yes #25660
+trade_goods = sugar
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = EOC
+	controller = EOC
+	add_core = EOC
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

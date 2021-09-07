@@ -1,0 +1,29 @@
+#Mackenzie
+
+owner = NWT
+controller = NWT
+add_core = NWT
+culture = northwest_territorian
+religion = s_catholic
+capital = "Yellowknife" 
+is_city = yes #4150
+trade_goods = fur
+hre = no 
+base_tax = 4
+base_production = 3
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
+
+1555.1.1 = {
+	owner = ACU
+	controller = ACU
+	add_core = ACU
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

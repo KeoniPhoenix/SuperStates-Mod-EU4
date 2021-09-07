@@ -1,0 +1,49 @@
+#Volusia
+
+owner = FLO
+controller = FLO  
+add_core = FLO
+culture = floridian
+religion = s_protestant
+capital = "DeLand"
+trade_goods = paper
+is_city = yes #4160
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_catholic
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = FLO
+	controller = FLO
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

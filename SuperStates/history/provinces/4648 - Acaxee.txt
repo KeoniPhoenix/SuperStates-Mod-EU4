@@ -1,0 +1,26 @@
+#Canberra
+
+owner = JBT
+controller = JBT
+add_core = JBT
+add_core = ACT
+culture = canberran
+religion = austral_protestant
+capital = "Canberra"
+trade_goods = naval_supplies
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1399.1.1 = {
+	fort_15th = yes #Military Base
+}
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

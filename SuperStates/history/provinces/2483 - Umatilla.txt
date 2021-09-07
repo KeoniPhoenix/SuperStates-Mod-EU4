@@ -1,0 +1,51 @@
+#Midland
+
+owner = TEX
+controller = TEX
+add_core = TEX
+add_core = LPN
+add_core = COM
+culture = high_plainer
+religion = s_protestant
+capital = "Midland" 
+is_city = yes #11120
+trade_goods = grain
+hre = no 
+base_tax = 5
+base_production = 5
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = TEX
+	controller = TEX
+	remove_core = CSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

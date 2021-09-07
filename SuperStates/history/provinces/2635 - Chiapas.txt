@@ -1,0 +1,50 @@
+#Vancouver
+
+owner = BCO
+controller = BCO
+add_core = BCO
+#add_core = VCV
+culture = vancouverite
+religion = s_protestant
+capital = "Vancouver" 
+is_city = yes #60350
+trade_goods = paper
+hre = no 
+base_tax = 9
+base_production = 11
+base_manpower = 7
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = WCN
+	controller = WCN
+	remove_core = CSC
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

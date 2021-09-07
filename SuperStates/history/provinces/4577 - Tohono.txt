@@ -1,0 +1,80 @@
+#Anguilla
+
+culture = arawak
+religion = animism
+capital = "The Valley"
+
+trade_goods = unknown 
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 4
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+discovered_by = PRT
+discovered_by = UVI
+
+1631.1.1 = {
+	owner = NED
+	controller = NED
+	culture = dutch
+	religion = protestant
+}
+
+1633.1.1 = {
+	owner = SPA
+	controller = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = livestock
+}
+1650.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	culture = english
+	religion = anglican
+	is_city = yes
+}
+1688.1.1 = {
+	owner = FRA
+	controller = FRA
+	unrest = 6
+}#French seizure of island
+1689.1.1 = {
+	owner = ENG
+	controller = ENG
+	unrest = 0
+}
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1871.1.1 = {
+	add_core = STN
+}
+1952.1.1 = { add_core = ANG }
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+}
+1962.5.31 = {
+	owner = GBR
+	controller = GBR
+	remove_core = WSI
+	culture = anguillian
+}
+1980.1.1 = {
+	owner = ANG
+	controller = ANG
+}
+
+
+
+
+

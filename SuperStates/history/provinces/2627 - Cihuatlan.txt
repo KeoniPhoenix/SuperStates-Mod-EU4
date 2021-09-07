@@ -1,0 +1,32 @@
+#Thompson
+
+owner = MTB
+controller = MTB
+add_core = MTB
+culture = mantarian
+religion = s_protestant
+capital = "Thompson" 
+is_city = yes #1290
+trade_goods = fur
+hre = no 
+base_tax = 5
+base_production = 3
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = WCN
+	controller = WCN
+	add_core = WCN
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}

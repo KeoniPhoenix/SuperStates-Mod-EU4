@@ -1,0 +1,32 @@
+#Pierce
+
+owner = NDK
+controller = NDK
+add_core = NDK
+culture = north_dakotan
+religion = s_protestant
+capital = "Rugby" 
+is_city = yes #1000
+trade_goods = grain
+hre = no 
+base_tax = 3
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
+
+1555.1.1 = {
+	owner = GPL
+	controller = GPL
+	add_core = GPL
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

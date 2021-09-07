@@ -1,0 +1,42 @@
+#Montserrat
+
+culture = arawak
+religion = animism
+capital = "Plymouth"
+trade_goods = unknown 
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+
+1632.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	is_city = yes
+	trade_goods = sugar
+}
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+	add_core = STN
+	culture = kittitian
+}
+1962.5.31 = {
+	owner = GBR
+	controller = GBR
+	remove_core = WSI
+}
+	

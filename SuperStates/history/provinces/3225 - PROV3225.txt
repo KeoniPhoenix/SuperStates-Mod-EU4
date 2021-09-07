@@ -1,0 +1,22 @@
+#Valladolid
+
+owner = YTN
+controller = YTN
+add_core = YTN
+culture = yucatanian
+religion = s_catholic
+capital = "Valladolid"
+is_city = yes #4900
+trade_goods = sugar
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,35 @@
+#Montreal
+
+owner = QUE
+controller = QUE
+add_core = QUE
+add_core = MTL
+culture = montrealer
+religion = s_catholic
+capital = "Montreal" 
+is_city = yes #163760
+trade_goods = cloth
+hre = no 
+base_tax = 10
+base_production = 10
+base_manpower = 8
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1399.1.1 = {
+	fort_15th = yes
+}
+
+1555.1.1 = {
+	owner = NFR
+	controller = NFR
+	add_core = NFR
+}
+
+1867.7.1 = {
+	owner = CAN
+	controller = CAN
+	add_core = CAN
+}
+

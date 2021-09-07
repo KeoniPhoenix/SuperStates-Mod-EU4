@@ -1,0 +1,48 @@
+#840 - Honduras
+
+culture = highland_mayan
+religion = mesoamerican_religion
+capital = "Honduras" 
+trade_goods = unknown
+hre = no 
+base_tax = 1
+base_production = 1
+base_manpower = 1 
+native_size = 15
+native_ferocity = 1
+native_hostileness = 2
+
+1525.1.1 = {
+ 	owner = SPA
+	controller = SPA
+	add_core = SPA
+	capital = "Trujillo"
+	culture = castillian
+	trade_goods = fish
+	religion = catholic
+	is_city = yes
+ } # de Olid
+
+1548.1.1 = { unrest = 5 } # Slave rebellion 
+
+1549.1.1 = { unrest = 0 } 
+
+1810.9.16 = {
+#	add_core = MEX
+	add_core = HND
+	add_core = CAM
+#	controller = MEX
+	culture = honduran
+} # Mexican War of Independence
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+	remove_core = SPA
+}
+
+1838.11.5 = {
+	owner = HND
+	controller = HND
+#	remove_core = MEX
+}

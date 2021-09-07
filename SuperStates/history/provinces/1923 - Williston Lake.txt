@@ -1,0 +1,5 @@
+discovered_by = north_american
+discovered_by = mesoamerican
+
+ # Vitus Bering
+1784.1.1 = { discovered_by = RUS } # Vitus Bering

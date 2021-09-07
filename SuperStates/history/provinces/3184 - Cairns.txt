@@ -1,0 +1,23 @@
+#Cairns
+
+owner = QLD
+controller = QLD
+add_core = QLD
+add_core = NQL
+culture = queenslander
+religion = austral_catholic
+capital = "Cairns"
+trade_goods = fish
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 5
+is_city = yes #16160
+discovered_by = australian
+center_of_trade = 1
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

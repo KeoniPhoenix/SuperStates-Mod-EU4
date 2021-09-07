@@ -1,0 +1,23 @@
+#Greater Geelong
+
+owner = VCT
+controller = VCT
+add_core = VCT
+add_core = PLD
+culture = victorian
+religion = austral_catholic
+capital = "Geelong"
+trade_goods = gold
+hre = no
+base_tax = 4
+base_production = 6
+base_manpower = 4
+is_city = yes #21500
+discovered_by = australian
+center_of_trade = 1
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

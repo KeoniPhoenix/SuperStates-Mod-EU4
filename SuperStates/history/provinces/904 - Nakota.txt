@@ -1,0 +1,33 @@
+#Matamoros
+
+owner = TML
+controller = TML
+add_core = TML
+culture = tamaulipasian
+religion = s_catholic
+capital = "Matamoros"
+is_city = yes #48920
+trade_goods = iron
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+add_permanent_province_modifier = {
+	name = rio_grande_estuary_modifier
+	duration = -1
+}
+
+1555.1.1 = {
+	owner = RRG
+	controller = RRG
+	add_core = RRG
+}
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

@@ -1,0 +1,32 @@
+#La Plata
+
+owner = CLO
+controller = CLO
+add_core = CLO
+culture = coloradan
+religion = s_protestant
+capital = "Durango"
+is_city = yes #1690
+trade_goods = copper
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

@@ -1,0 +1,22 @@
+#Salinas
+
+owner = SLP
+controller = SLP
+add_core = SLP
+culture = san_luis_potosian
+religion = s_catholic
+capital = "Salinas de Hidalgo"
+is_city = yes #1340
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	owner = MEX
+	controller = MEX
+	add_core = MEX
+}

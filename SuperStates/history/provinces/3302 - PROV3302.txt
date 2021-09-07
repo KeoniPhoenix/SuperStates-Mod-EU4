@@ -1,0 +1,48 @@
+#San Juan Islands
+
+owner = WAS
+controller = WAS
+add_core = WAS
+culture = washingtonian
+religion = s_protestant
+capital =" Friday Harbor"
+is_city = yes #1000
+trade_goods = fish
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+# 1399.1.1 = {
+	# fort_15th = yes 
+# }
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = PCF
+	controller = PCF
+	add_core = PCF
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = WAS
+	controller = WAS
+	remove_core = CSC
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

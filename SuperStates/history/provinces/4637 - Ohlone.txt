@@ -1,0 +1,21 @@
+#Norfolk Island
+
+owner = NFI
+controller = NFI
+add_core = NFI
+culture = norfolk_islander
+religion = austral_protestant
+capital = "Kingston"
+trade_goods = livestock
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

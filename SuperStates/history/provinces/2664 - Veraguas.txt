@@ -1,0 +1,41 @@
+# No previous file for Veraguas
+
+culture = muisca
+religion = animism
+capital = "Veraguas"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 2
+
+1569.11.1 = {
+ 	capital = "Santa Cruz"
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = s_catholic
+	trade_goods = naval_supplies
+	is_city = yes
+} # Founded 
+1579.1.1 = { capital = "Los Santos" }
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized
+
+1841.11.01 = { add_core = PNM }
+
+1903.11.3 = { 
+	owner = PNM
+	controller = PNM
+}
+1903.11.18 = {
+	remove_core = COL
+}

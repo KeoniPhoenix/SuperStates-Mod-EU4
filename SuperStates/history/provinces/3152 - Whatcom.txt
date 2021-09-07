@@ -1,0 +1,44 @@
+#Whatcom
+
+owner = WAS
+controller = WAS
+add_core = WAS
+culture = washingtonian
+religion = s_protestant
+capital = "Bellingham"
+is_city = yes #8090
+trade_goods = naval_supplies
+hre = no
+base_tax = 3
+base_production = 2
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+
+1555.1.1 = {
+	owner = PCF
+	controller = PCF
+	add_core = PCF
+}
+
+1675.2.4 = {
+	owner = CSC
+	controller = CSC
+	add_core = CSC
+}
+
+1675.2.5 = {
+	owner = WAS
+	controller = WAS
+	remove_core = CSC
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

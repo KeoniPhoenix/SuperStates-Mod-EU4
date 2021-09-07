@@ -1,0 +1,60 @@
+#Warwick
+
+owner = VIR
+controller = VIR
+add_core = VIR
+culture = virginian
+religion = s_protestant
+capital = "Newport News"
+trade_goods = naval_supplies
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes #18080
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1000.1.1 = { add_permanent_province_modifier = {
+			name = hampton_roads_estuary_modifier
+			duration = -1
+		}
+}
+
+1399.1.1 = {
+	fort_15th = yes 
+}
+
+1531.1.1 = {
+	religion = s_baptist
+}
+
+1675.2.4 = {
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1675.2.5 = {
+	owner = VIR
+	controller = VIR
+	remove_core = CSA
+}
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+
+1861.2.4 = { 
+	owner = CSA
+	controller = CSA
+	add_core = CSA
+}
+
+1865.5.5 = {
+	owner = USA
+	controller = USA
+}

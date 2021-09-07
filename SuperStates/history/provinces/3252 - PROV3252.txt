@@ -1,0 +1,41 @@
+#Imperial
+
+owner = CAL
+controller = CAL
+add_core = CAL
+add_core = SCL
+culture = southern_californian 
+religion = s_catholic
+capital = "El Centro" 
+trade_goods = grain
+hre = no 
+base_tax = 2
+base_production = 4
+base_manpower = 6
+is_city = yes #5770
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = CAL
+	controller = CAL
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

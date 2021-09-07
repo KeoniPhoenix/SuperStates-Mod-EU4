@@ -1,0 +1,28 @@
+#Uintah
+
+owner = UTA
+controller = UTA
+add_core = UTA
+culture = utahn 
+religion = mormon
+capital = "Vernal" 
+is_city = yes #1000
+trade_goods = iron
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

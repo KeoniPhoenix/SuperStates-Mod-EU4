@@ -1,0 +1,53 @@
+#494 - St. Kitts	
+
+culture = arawak
+religion = animism
+capital = "St. Kitts"
+trade_goods = unknown 
+hre = no
+base_tax = 4
+base_production = 4
+base_manpower = 1
+native_size = 10
+native_ferocity = 2
+native_hostileness = 4
+
+center_of_trade = 1
+
+1623.1.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	religion = catholic
+	is_city = yes
+	trade_goods = tobacco 
+} # Eventually inhabited by both French and English
+1627.1.1 = { capital = "Basseterre" } # The territory went back & forth between the two, Basseterre was founded by the French
+1713.4.11 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = FRA
+	religion = protestant
+	culture = english
+} # Treaty of Utrecht
+1958.1.3 = {
+	owner = WSI
+	controller = WSI
+	add_core = WSI
+	add_core = STN
+	culture = kittitian
+}
+1962.5.31 = {
+	owner = GBR
+	controller = GBR
+	remove_core = WSI
+}
+1967.2.27 = {
+	owner = STN
+	controller = STN
+}
+1983.9.19 = {
+	remove_core = GBR
+}

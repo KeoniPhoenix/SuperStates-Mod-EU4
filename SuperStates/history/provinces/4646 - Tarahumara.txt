@@ -1,0 +1,23 @@
+#St. Croix
+
+owner = UVI
+controller = UVI
+add_core = UVI
+culture = virgin_islander
+religion = s_catholic
+capital = "Christiansted" 
+is_city = yes #1000
+trade_goods = sugar
+hre = no 
+base_tax = 4
+base_production = 3
+base_manpower = 3
+discovered_by = north_american
+discovered_by = mesoamerican
+
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
