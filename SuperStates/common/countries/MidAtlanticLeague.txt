@@ -1,0 +1,151 @@
+#Country Name: Mid-Atlantic League
+
+graphical_culture = westerngfx
+
+color = { 128  182  213 }
+
+historical_idea_groups = {
+	offensive_ideas
+	defensive_ideas
+	administrative_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	trade_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Albertis #0" = 1
+	"Alexander #0" = 5
+	"Andrew #0" = 15
+	"Anthony #0" = 5
+	"Arthur #0" = 5
+	"Benjamin #0" = 10
+	"Beverly #0" = -5
+	"Charles #0" = 15
+	"Claude #0" = 5
+	"Colgate #0" = 5
+	"Daniel #0" = 5
+	"David #0" = 20
+	"Douglas #0" = 5
+	"Edmund #0" = 20
+	"Edward #0" = 20
+	"Edwin #0" = 20
+	"Elbert #0" = 5
+	"Fitzhugh #0" = 1
+	"Francis #0" = 20
+	"Frederick #0" = 5
+	"George #0" = 20
+	"Gerald #0" = 5
+	"Gifford #0" = 5
+	"Gilbert #0" = 5
+	"Hardin #0" = 1
+	"Harry #0" = 5
+	"Henry #0" = 20
+	"Herbert #0" = 5
+	"Hugh #0" = 5
+	"Isaac #0" = 10
+	"James #0" = 20
+	"Jeffery #0" = 5
+	"John #0" = 20
+	"Joseph #0" = 20
+	"Lewis #0" = 5
+	"Linwood #0" = 5
+	"Littleton #0" = 1
+	"Mark #0" = 15
+	"Martin #0" = 5
+	"Matthew #0" = 5
+	"Mills #0" = 5
+	"Milton #0" = 5
+	"Nathaniel #0" = 5
+	"Nicholas #0" = 5
+	"Norborne #0" = 1
+	"Patrick #0" = 15
+	"Raymond #0" = 5
+	"Peyton #0" = 5
+	"Philip #0" = 5
+	"Ralph #0" = 5
+	"Richard #0" = 20
+	"Robert #0" = 20
+	"Samuel #0" = 20
+	"Simon #0" = 5
+	"Terry #0" = 5
+	"Thomas #0" = 20
+	"Timothy #0" = 5
+	"Walter #0" = 5
+	"Westmoreland #0" = 5
+	"William #0" = 20
+	"Wilson #0" = 5
+	"Wyndham #0" = 5
+}
+
+leader_names = {
+	Allen Almond Amherst Andros Argall
+	Bacon Baliles Barbour Battle Beaver Bell Bennett Berkeley Bigler Blackwell Blair Bridger Brooke Brumbaugh Burnley Burwell Bryan Byrd
+	Cabell Cameron Campbell Carpenter Carter Casey Chicheley Clayton Corbett Culpeper Curtin
+	Dale Dalton Darden Davis Denney Dickinson Digges Dinwiddie Drysdale Duff
+	Earle Evans
+	Fauquier Findlay Fine Fletcher Fleming Floyd Franklin
+	Gates Geary Giles Gilmer Gilmore Godwin Gooch Gookin Gordon Gregory
+	Hamilton Harrison Hartranft Hastings Harvey Hiester Henry Holliday Holton Howard Hoyt Hunter
+	Isaac
+	James Jameson Jefferson Jeffries Jenings Johnson
+	Kaine Keith Kemp Kemper
+	Lane Lawrence Leader Lee Letcher Lloyd Logan
+	Markham Martin Mathews McAuliffe McDonnell McDowell McKean McKinney Mifflin Monroe Montague Moore Morris Murray
+	Nelson Nelson Nicholas Nicholson Nott
+	O'Ferrall
+	Packer Page Palme Pattison Patton Peery Pendleton Penn Pennypacker Percy Pinchot Pleasants Pollard Pollock Porter Pott Preston Price Robb Robertson Rutherfoord
+	Raleigh Randolph Ratcliffe Reade Reed Rendell Ridge Ritner
+	Schweiker Scranton Scrivener Shafer Shapp Shipen Shulze Shunk Smith Snyder Spencer Spotwood Sproul Stanley Stone Stuart Swanson
+	Tazewell Tener Thomas Thornburgh Trinkle Tuck Tyler
+	Walker Warner Wells West Wharton White Wilder Wingfield Wise Wolf Wood Wyatt
+	Yeardley
+}
+
+ship_names = {
+	Accomack Adams Albemarle Alexandria Alleghany Allegheny Amelia Amherst Arlington Armstrong Augusta
+	Bath Baltimore Beaver Bedford Berkes Blair Bland "Bermuda Hundred" Botetourt Bourbon Bradford Bristol Brunswick Buchanan Buckingham Bucks "Buena Vista" Butler
+	Cambria Cameron Campbell Carbon Caroline Carroll Centre "Charles City" Charlotte Charlottesville Chesapeake Chester Chesterfield Clarion Clarke Clearfield Clinton "Colonial Heights" Columbia Covington Craig Crawford Culpeper Cumberland
+	Danville Dauphin Delaware Dickenson Dinwiddie
+	Elk Emporia Erie Essex
+	Fairfax "Falls Church" Fauquier Fayette Fincastle Floyd Fluvanna Franklin Frederick Fredericksburg Fulton
+	Galax Giles Gloucester Goochland Grayson Greene Greensville
+	Halifax Hampton Hanover Harrisburg Harrisonburg Henrico Henry Highland Hopewell Huntingdon
+	Indiana "Isle of Wight"
+	"James City" Jefferson Juniata
+	Kencoughtan Kentucky "King and Queen" "King George" "King William"
+	Lackawanna Lancaster Lawrence Lebanon Lee Lehigh Lexington Lincoln Loudoun Louisa Lunenburg Luzerne Lycoming Lynchburg
+	Madison Manassas "Manassas Park" Martinsville Mason McKean Medley Mercer Mathews Mecklenburg Middlesex Mifflin Monroe Montgomery Montour
+	Nelson "New Kent" "Newport News" Norfolk Northampton Northumberland Norton Nottoway
+	Orange
+	Page Patrick Perry Petersburg Philadelphia Pike Pittsburgh Pittsylvania Poquoson Portsmouth Potter Powhatan "Prince Edward" "Prince George" "Prince William" Pulaski
+	Radford Rappahannock Richmond Roanoke Rockbridge Rockingham Rockville Russell
+	Salem Schuylkill Scott Shenandoah Smyth Snyder Somerset Southhampton Spotsylvania Stafford Staunton Suffolk Sullivan Surry Susquehanna Sussex
+	Tazewell Tioga
+	Union
+	Venango Virginia "Virginia Beach"
+	Warren Washington Wayne Waynesboro Westmoreland Williamsburg Winchester Wise Woodford Wyoming Wythe
+	York
+}

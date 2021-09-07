@@ -1,0 +1,104 @@
+#Country Name: Guam
+
+graphical_culture = westerngfx
+
+color = { 69  157  208 }
+
+historical_idea_groups = {
+	defensive_ideas
+	exploration_ideas
+	naval_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Adelbert #0" = 1
+	"Alfred #0" = 5
+	"Benjamin #0" = 5
+	"Carl #0" = 5
+	"Carlos #0" = 5
+	"Carlton #0" = 5
+	"Eddie #0" = 5
+	"Edmund #0" = 5
+	"Edward #0" = 10
+	"Felix #0" = 5
+	"Ford #0" = 1
+	"Francisco Portusash" = 1
+	"Frank #0" = 5
+	"George #0" = 20
+	"Henry  #0" = 15
+	"Ivan  #0" = 5
+	"James  #0" = 20
+	"Joaquin  #0" = 15
+	"John #0" = 5
+	"Jose #0" = 15
+	"Joseph #0" = 10
+	"Lloyd #0" = 5
+	"Luke #0" = 5
+	"Manuel #0" = 1
+	"Paul #0" = 5
+	"Raymond #0" = 1
+	"Richard #0" = 10
+	"Richardo #0" = 5
+	"Robert #0" = 5
+	"Roy #0" = 5
+	"Seaton #0" = 1
+	"Templin #0" = 1
+	"Venancio #0" = 1
+	"William #0" = 20
+	"Willis #0" = 1
+}
+
+leader_names = {
+	Ada Alexander Althouse
+	Bardallo Bradley Brown
+	Calvo Camacho Coe Coontz Cronan
+	Daniel Dorn Dyer
+	Elvidge
+	Flores Freyer
+	Gilmer Glass Gutierrez
+	Hinds Hodgman
+	Leary "Leon Guerrero" Lowe
+	Martinez Maxwell McCandlish McMillin McNamee Miller
+	Perez Potts Price
+	Roberto Roof
+	Safford Salisbury Schofield Schroeder Sewell Shapley Simpson Sisto Skinner Smith Spore Stone Swifit
+	Taussig
+	Wettengel
+
+}
+
+ship_names = {
+	"Agana Heights" Agat "Asan-Maina"
+	Barrigada
+	"Chalan-Pago-Ordot"
+	Dededo
+	Hagåtña
+	Inarajan
+	Mangilao
+	Merizo "Mongmong-Toto-Maite"
+	Piti
+	"Santa Rita" Sinajana
+	Talofofo Tamuning Tuman
+	Umatac
+	Yigo Yona
+}

@@ -1,0 +1,107 @@
+#Country Name: Lincoln (Eastern Washington State)
+
+graphical_culture = westerngfx
+
+color = { 155  15  55 }
+
+historical_idea_groups = {
+	offensive_ideas
+	naval_ideas
+	exploration_ideas
+	diplomatic_ideas
+	trade_ideas
+	plutocracy_ideas
+	defensive_ideas
+	economic_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 10
+	"Alvan #0" = 5
+	"Arthur #0" = 5
+	"Booth #0" = 1
+	"Christine #0" = -5
+	"Clarence #0" = 5
+	"Daniel #0" = 5
+	"Dixy #0" = -1
+	"Edward #0" = 5
+	"Elisha #0" = 10
+	"Ernest #0" = 1
+	"Eugene #0" = 5
+	"Gary #0" = 5
+	"George #0" = 5
+	"Henry #0" = 5
+	"Isaac #0" = 5
+	"Jay #0" = 5
+	"John #0" = 15
+	"LaFayette #0" = 5
+	"Louis #0" = 5
+	"Marion #0" = 5
+	"Marshall #0" = 5
+	"Michael #0" = 5
+	"Miles #0" = 5
+	"Monrad #0" = 1
+	"Richard #0" = 5
+	"Roland #0" = 1
+	"Samuel #0" = 5
+	"Watson #0" = 5
+	"William #0" = 15
+}
+
+leader_names = {
+	Cole Cosgrove
+	Evans
+	Ferry Flanders
+	Gardern Gholson Gregoire
+	Hart Hartley Hay
+	Inslee
+	Langlie Lister Locke Lowry
+	Martin McBride McGraw McMullen Mead Moore
+	Newell
+	Pickering
+	Ray Rogers Rosellini
+	Salomon Semple Spellman Squire Stevens
+	Wallace Wallgren
+}
+
+ship_names = {
+	Adams Asotin
+	Benton "Big Bend" Buchanan
+	Chehalis Chelan Clallam Clark Colubmia Coulee Cowlitz
+	Douglas
+	Ferguson Ferry Franklin
+	Garfield Grant "Grays Harbor"
+	Island
+	Jefferson
+	King Kitsap Kittias Klickitat
+	Lewis Lincoln
+	Mason Madison McKinley
+	Okanogan
+	Pacific Palouse "Pend Oreille" Pierce
+	Quillehuyte
+	"San Juan" Sawamish Sherman Skagit Skamania Slaughter Snohomish Spokane Steptoe Stevens
+	Thurston
+	Vancouver
+	Wahkiakum "Walla Walla" Washington Whatcom Whitman
+	Yakima
+}

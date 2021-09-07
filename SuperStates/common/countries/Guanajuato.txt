@@ -1,0 +1,102 @@
+#Country Name: Guanajuato
+
+graphical_culture = westerngfx
+
+color = { 200 100 100 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustin #0" = 5
+	"Agustín #0" = 15
+	"Antonio #0" = 10
+	"Arturo #0" = 5
+	"Carlos #0" = 5
+	"Enrique #0" = 20
+	"Ernesto #0" = 10
+	"Federico #0" = 5
+	"Fernando #0" = 10
+	"Ignacio #0" = 5
+	"Jesús #0" = 20
+	"José #0" = 10
+	"Juan #0" = 15
+	"Luis #0" = 15
+	"Manuel #0" = 5
+	"Mauro #0" = 5
+	"Melchor #0" = 5
+	"Miguel #0" = 5
+	"Nicéforo #0" = 5
+	"Octaviano #0" = 5
+	"Rafael #0" = 10
+	"Ramón #0" = 5
+	"Toribio #0" = 5
+	"Vicente #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguilar Alcocer Arnoux Arroyo
+	Castorena Colunga Corrales
+	Dávila "de Ezcurdia" Díaz Ducoing
+	Fernández Fox
+	Guerrero
+	Hernández Hidalgo
+	Madrazo Márquez Martín Medina Mendoza Montes Moreno
+	Oliva Ortega
+	Rangel Reynoso Rodríguez Romero
+	Sierra Soto
+	Téllez Torres
+	Velasco Villaseñor Visoso
+	Yáñez
+}
+
+ship_names = {
+	Abasolo Acámbaro Allende Alto Apaseo Atarjea
+	Celaya Comonfort Coroneo Cortazar Cuerámaro
+	Doblado "Doctor Mora" Dolores
+	Grande Guanajuato
+	Hidalgo Huanímaro
+	Irapuato Iturbide
+	Jaral Jerécuaro "Juventino Rosas"
+	León
+	Manuel Maravatío Moroleón
+	Ocampo
+	Paz Pénjamo Progreso "Pueblo Nuevo" Purísima
+	Rincón Romita
+	Salamanca Salvatierra "San Diego" "San Filipe" "San Francisco" "San José" "San Luis" "Santa Catarina" "Santa Cruz" Santiago Silao
+	Tarandacuao Tarimoro "Tierra Blanca"
+	Uriangato
+	"Valle de Santiago" Victoria Villagrán
+	Xichú
+	Yuriria
+}

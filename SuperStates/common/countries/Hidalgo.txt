@@ -1,0 +1,101 @@
+#Country Name: Hidalgo
+
+graphical_culture = westerngfx
+
+color = { 150 75 75 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Adolfo #0" = 5
+	"Alfonso #0" = 5
+	"Bartolomé #0" = 5
+	"Carlos #0" = 5
+	"Donaciano #0" = 5
+	"Ernesto #0" = 5
+	"Francisco #0" = 5
+	"Guillermo #0" = 5
+	"Humberto #0" = 5
+	"Javier #0" = 5
+	"Jesús #0" = 5
+	"Jorge #0" = 5
+	"José #0" = 10
+	"Manuel #0" = 10
+	"Matías  #0" = 5
+	"Miguel #0" = 5
+	"Oswaldo #0" = 5
+	"Otilio #0" = 5
+	"Otoniel #0" = 5
+	"Quintín #0" = 5
+	"Raúl #0" = 5
+	"Vicente #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aguirre
+	Corona Cravioto
+	Lozano Lugo
+	Miranda Murillo
+	Núñez
+	Olvera Osorio
+	Ramírez Rodríguez Rojo Rossell Rueda
+	Sánchez Serna Suárez
+	Vargas Villegas Viveros
+}
+
+ship_names = {
+	Acatlán Acaxochitlán Actopan Ajacuba Aldama Alfajayucan Allende Almoloya Anaya Ángeles Apan Atitalaquía Atlapexco Atotonilco "Auga Blanca"
+	Bravo
+	Calnali Cardonal Chapantongo Chapulhuacán Chico Chilcuautla Cuautepec
+	Doria
+	"El Arsenal" Eloxochitlán Emiliano Epazoyucan Escamilla
+	Flores Francisco
+	Grande Guerrero
+	Hinojosa Huasca Huautla Huazalingo Huehuetla Huejutla Huichapan
+	Itrubide Ixmiquilpan
+	Jacala Jaltocan Juárez
+	"La Misión" Laltocan Ledezma Lolotla Lugo
+	Madero Metepec Metzquititlán Metztitlán Mineral Mixquiahuala Molango Monte
+	Nicolás Nopala
+	Obregón Ocampo Omitlán Orizatlán
+	Pachuca Pacula Pisaflores Progreso
+	Reforma Reyes Rio
+	"San Agustín" "San Bartolo" "San Felipe" "San Salvador"
+	Santiago Singuilucan Soto
+	Tasquillo Tecozautla Tenango Tepeapulco Tepehuacán Tepeji Tepetitlán Tetepango Tezontepec Tianguistengo Tizayuca Tlahuelilpan Tlahuitepa Tlanalapa Tlanchinol Tlaxcoapan Tlaxiaca Tolcayuca Tula Tulancingo Tulantepec Tutotepec
+	Villagrán 
+	Xochiatipan Xochicoatlán
+	Yahualica
+	Zacualtipan Zapata Zapotlán Zempoala Zimapan
+}

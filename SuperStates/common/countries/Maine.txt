@@ -1,0 +1,120 @@
+#Country Name: Maine
+
+graphical_culture = westerngfx
+
+color = { 8  0  255 }
+
+historical_idea_groups = {
+	defensive_ideas
+	naval_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	"Abner #0" = 1
+	"Albion #0" = 1
+	"Alonzo #0" = 1
+	"Angus #0" = 1
+	"Anson #0" = 1
+	"Benjamin #0" = 5
+	"Bert #0" = 1
+	"Burton #0" = 1
+	"Carl #0" = 5
+	"Clinton #0" = 5
+	"Daniel #0" = 10
+	"David #0" = 5
+	"Edmund #0" = 1
+	"Edward #0" = 10
+	"Edwin #0" = 1
+	"Enoch #0" = 1
+	"Frederic #0" = 5
+	"Frederick #0" = 15
+	"Hannibal #0" = 1
+	"Harris #0" = 5
+	"Henry #0" = 5
+	"Horace #0" = 5
+	"Hugh #0" = 5
+	"Israel #0" = 1
+	"James #0" = 5
+	"John #0" = 20
+	"Jonathan #0" = 5
+	"Joseph #0" = 15
+	"Joshua #0" = 10
+	"Kenneth #0" = 5
+	"Llewellyn #0" = 1
+	"Lot #0" = 1
+	"Louis #0" = 5
+	"Nathan #0" = 5
+	"Nathaniel #0" = 5
+	"Nelson #0" = 5
+	"Oakley #0" = 1
+	"Owen #0" = 5
+	"Paul #0" = 5
+	"Percival #0" = 1
+	"Richard #0" = 5
+	"Robert #0" = 10
+	"Samuel #0" = 15
+	"Sebastian #0" = 5
+	"Seldon #0" = 1
+	"Sidney #0" = 1
+	"Sumner #0" = 1
+	"William #0" = 20
+}
+
+leader_names = {
+	Ames Anderson
+	Baldacci Barrows Baxter Bodwell Brennen Brewster Burleigh
+	Chamberlain Clauson Cleaves Cobb Coburn Connor Cony Crosby Cross Curtis Cutler
+	Dana Davis Dingley Dunlap Dunn
+	Fairfield Fernald
+	Garcelon Gardiner
+	Haines Hall Hamlin Haskell Haskell Hildreth Hill Hubbard Hunton
+	Kavanagh Kent King
+	LePage Lincoln Longley
+	Marble McKernan Milliken Morrill Muskie
+	Parkhurst Parris Payne Perham Plaisted Plaisted Powers
+	Reed Robie Rose
+	Sewall Smith
+	Vose
+	Washburn Wells Williams Williamson
+}
+
+ship_names = {
+	Androscoggin Aroostook
+	Cumberland
+	Franklin
+	Hancock
+	Kennebec Knox
+	Lincoln Lobster
+	Maine
+	Oxford
+	Penobscot Piscataquis
+	Sagadahoc Somerset
+	Waldo Washington
+	York
+}

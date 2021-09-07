@@ -1,0 +1,103 @@
+#Country Name: Guerrero
+
+graphical_culture = westerngfx
+
+color = { 156 122 171 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Adrián #0" = 5
+	"Alberto #0" = 5
+	"Alejandro #0" = 10
+	"Ángel #0" = 5
+	"Arturo #0" = 5
+	"Baltazar #0" = 5
+	"Caritino #0" = 5
+	"Carlos #0" = 5
+	"Darío #0" = 5
+	"Enrique #0" = 5
+	"Francisco #0" = 5
+	"Gabriel #0" = 5
+	"Gerardo #0" = 5
+	"Héctor  #0" = 5
+	"José #0" = 10
+	"Juan #0" = 5
+	"Raúl #0" = 5
+	"Raumundo #0" = 5
+	"René #0" = 5
+	"Roberto #0" = 5
+	"Rubén #0" = 10
+	"Xavier #0" = 5
+	"Zeferino #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Abarca Aguirre Arrieta
+	Berber
+	Caballero Carranco Castrejón Catalán Cervantes
+	Figueroa
+	Gómez Guevara
+	Inocente
+	Juárez
+	Leyva López
+	Maldonado Martínez
+	Olea
+	Rodríguez Ruiz
+	Torreblanca
+}
+
+ship_names = {
+	Acapulco Acatepec Acatlán Ahuacuotzingo Ajuchitlán Alarcón Alcozauca Alpoyeca Alquisiras Álvarez Apaxtla Arcelia Ascencio Atenango Atlamajalcingo Atlixtac Atoyac Ayutla Azoyu Azueta
+	Benítez Benito Bravo Buenavista
+	Canuto Castillo Catalán Chilapa Chilpancingo Coahuayutla Cochoapa Cocula Comonfort Copala Copalillo Copanatoyac Coyuca Cuajinicuilapa Cualac Cuauhtémoc Cuautepec Cuéllar Cuetzala Cuilapán Cutzamala
+	Eduardo Escudero
+	Figueroa Florencio
+	Galeana "General Castillo" "General Neri" Grande Guerrero
+	Helidoro Herrera Huamuxtitlán Huitzuco
+	Iguala Igualapa Iliatenco Independencia Isidoro Ixcateopan Izazaga
+	Joaquín José Juan Juárez Juchitán
+	"La Unión" Leonardo Libres
+	Maldonado Malinaltepec María Marquelia Mártir Metlatonoc Monte Montes
+	Neri
+	Oca Olinalá Ometepec
+	Pedro Petatlán Pilcaya Progreso Pungarabato
+	Quechultenango 
+	Río
+	"San Luis" "San Marcos" "San Miguel"
+	Tablas Taxco Tecoanapa Tecpán Teloloapan Tepecoacuilco Tetipac Tixtla Tlacoachistlahuaca Tlacoapa Tlalchapa Tlalixtaquilla Tlapa Tlapehuala Totolapan Trujano
+	Villarreal
+	Xalpatlahuac Xochihuehuetlan Xochistlahuaca
+	Zapotitlán Zihuatanejo Zirándaro Zitlala
+}

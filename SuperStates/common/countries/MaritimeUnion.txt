@@ -1,0 +1,139 @@
+#Country Name: Maritime Union
+
+graphical_culture = westerngfx
+
+color = { 56  117  13 }
+
+historical_idea_groups = {
+	aristocracy_ideas
+	naval_ideas
+	exploration_ideas
+	offensive_ideas
+	defensive_ideas
+	administrative_ideas
+	trade_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_line
+	north_american_dragoon
+	canadian_red_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Albert #0" = 10
+	"Alexander #0" = 20
+	"Allison #0" = 10
+	"Andrew #0" = 10
+	"Angus #0" = 10
+	"Arthur #0" = 5
+	"Aubin #0" = 5
+	"Bennett #0" = 5
+	"Bernard #0" = 5
+	"Camille #0" = -5
+	"Catherine #0" = -5
+	"Charles #0" = 15
+	"Clifford #0" =5 
+	"Daniel #0" = 5
+	"Darrell #0" = 5
+	"David #0" = 5
+	"Donald #0" = 10
+	"Edgar #0" = 5
+	"Edward #0" = 5
+	"Ernest #0" = 5
+	"Francis #0" = 10
+	"Frederick #0" = 5
+	"George #0" = 20
+	"Gerald #0" = 5
+	"Gordon #0" = 5
+	"Harold #0" = 5
+	"Henry #0" = 10
+	"Hiram #0" = 5
+	"Hugh #0" = 5
+	"James #0" = 20
+	"John #0" = 20
+	"Joseph #0" = 20
+	"Keith #0" = 5
+	"Lemuel #0" = 10
+	"Leonard #0" = 5
+	"Louis #0" = 10
+	"Neil #0" = 5
+	"Patrick #0" = 5
+	"Peter #0" = 10
+	"Philip #0" = 5
+	"Richard #0" = 5
+	"Robert #0" = 15
+	"Rodney #0" = 5
+	"Roger #0" = 5
+	"Russell #0" = 5
+	"Samuel #0" = 5
+	"Shawn #0" = 5
+	"Simon #0" = 5
+	"Stephen #0" = 5
+	"Thane #0" = 5
+	"Walter #0" = 20
+	"William #0" = 20
+}
+
+leader_names = { 
+	Alward Annand Armstrong Arsenault
+	Bacon Baxter Bell Binns Blair Blanchard Buchanan
+	Callbeck Cameron Campbell Clarke Coles Connolly
+	Davies Dexter Dysart
+	Emmerson
+	Farquharson Fielding Fisher Flemming Foster Fraser Frenette
+	Ghiz Graham Gray
+	Hamm Hanington Harrington Haszard Hatfield Hathaway Haythorne Hazen Hensley Hicks Hill Holl Holmes Howe
+	Johnston Jones
+	King
+	Lea Lee Lord
+	Macdonald MacLean MacLellan MacMillan Matheson Mathieson McKenna McLeod McNair McNeil Milligan Mitchell Murray
+	Owen
+	Palmer Peters Pipes Pope Pugsley
+	Regan Rhodes Richards Robichaud Robinson
+	Saunders Savage Shaw Smith Stanfield Stewart Sullivan
+	Thérualt Thompson Tilley Tupper Tweedie
+	Uniacke
+	Veniot
+	Warburton Wetmore
+	Young
+}
+
+ship_names = {
+	"Abrams Village" Afton Alberton Alexandra Annandale
+	Bayview Bedeque Belfast Bideford Bonshaw Borden Brackley Breadabane Brudenell
+	Cardigan Carleton Cavendish "Central Bedeque" "Central Kings" Charlottetown "Clyde River" Corwall Crapaud
+	Darlington
+	"Eastern Kings" Ellerslie
+	Georgetown "Grand Tracadie" Greenmount
+	Hampshire Hazelbrook "Hope River" "Howe Bay" "Hunter River"
+	Kensington Kings Kinkora
+	"Lady Slipper" Linkletter "Little Pond" Lorne Valley "Lot 11 and Area" "Lower Montague"
+	"Malpeque Bay" Meadowbank "Miltonvale Park" Miminegash Miscouche Montague Montrose Morell "Mount Stewart" "Murray Harbour" "Murray River"
+	"New Haven" "North Rustico" "North Shore" "North Wiltshire" Northport
+	O'Leary
+	"Pleasant Grove" Prince
+	Queens
+	Resort Riverdale
+	Sherbrooke Souris "Souris West" "St. Felix" "St. Louis" "St. Nicholas" "St. Peters Bay" "Stanley Bridge" Stratford Summerside
+	Tignish "Tignish Shore" "Tyne Valley"
+	"Union Road"
+	Valleyfield Victoria
+	"Warren Grove" Wellington "West River" "Winsloe South"
+	York 
+}

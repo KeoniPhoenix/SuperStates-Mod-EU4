@@ -1,0 +1,103 @@
+#Country Name: Montana
+
+graphical_culture = westerngfx
+
+color = { 51  112  0 }
+
+historical_idea_groups = {
+	defensive_ideas
+	diplomatic_ideas
+	religious_ideas
+	economic_ideas
+	offensive_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_mounted_raiders
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_reformed_light_cavalry
+	north_american_impulse
+	north_american_huntsmen_cavalry
+	north_american_mixed_order
+}
+
+monarch_names = {
+	"Benjamin #0" = 10
+	"Brian #0" = 5
+	"Donald #0" = 5
+	"Edwin #0" = 5
+	"Elmer #0" = 5
+	"Forrest #0" = 5
+	"Frank #0" = 5
+	"Green #0" = 5
+	"Hugo #0" = 5
+	"James #0" = 10
+	"John #0" = 20
+	"Joseph #0" = 10
+	"Judith #0" = 5
+	"Marc #0" = 5
+	"Platt #0" = 5
+	"Preston #0" = 5
+	"Robert #0" = 5
+	"Roy #0" = 5
+	"Samuel #0" = 15
+	"Sidney #0" = 5
+	"Stan #0" = 5
+	"Steven #0" =5 
+	"Theodore #0" = 5
+	"Thomas #0" = 10
+	"Timothy #0" = 5
+	"Wiley #0" = 1
+}
+
+leader_names = {
+	Anderson Aronson Ashley Ayers
+	Babcock Bonner Bullock
+	Carpenter Cooney Crosby
+	Dixon
+	Edgerton Erickson
+	Ford
+	Hauser Holt
+	Judge
+	Leslie
+	Martz Meagher
+	Norris Nutter
+	Potts
+	Racicot Rickards
+	Schweitzer Schwinden Scribner Smith Stephens Stewart
+	Toole Tufts
+	White
+}
+
+ship_names = {
+	Beaverhead "Big Horn" Billings Blaine Bozeman Broadwater
+	Carbon Carter Cascade Chouteau Custer
+	Daniels Dawson "Deer Lodge"
+	Fallon Fergus
+	Gallatin Glacier "Golden Valley" Granite
+	Helena Hill
+	Jefferson "Judith Basin"
+	Lake "Lewis and Clark" Liberty
+	McCone Madison Mineral Missoula Musselshell
+	Park Petroleum Phillips Pondera "Powder River" Powell Prairie
+	Ravalli Richland Roosevelt Rosebud
+	Sanders Sheridan "Silver Bow" Stillwater "Sweet Grass"
+	Teton Treasure
+	Valley
+	Wheatland Wibaux
+	Yellowstone
+}

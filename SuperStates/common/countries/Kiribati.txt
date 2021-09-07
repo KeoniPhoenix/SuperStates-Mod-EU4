@@ -1,0 +1,74 @@
+#Country Name: Kiribati
+
+graphical_culture = westerngfx
+
+color = { 189  117  112 }
+
+historical_idea_groups = {
+	naval_ideas
+	diplomatic_ideas
+	quality_ideas
+	trade_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	oceanian_longspear
+	oceanian_off_footsoldier
+	oceanian_horsemen
+	oceanian_arquebusier
+	oceanian_cavalry
+	oceanian_infantry
+	oceanian_hussar
+	oceanian_mass_infantry
+	oceanian_musketeer
+	oceanian_swarm
+	oceanian_dragoon
+	oceanian_reformed_musketeer
+}
+
+monarch_names = {
+	"Ieremia #0" = 10
+	"Rota #0" = 10
+	"Teatao #0" = 10
+	"Tekiree #0" = 10
+	"Ata #0" = 10
+	"Teburoro #0" = 10
+	"Tion #0" = 10
+	"Anote #0" = 10
+	"Nabuti #0" = 10
+	"Patrick #0" = 10
+	"Timon #0" = 10
+	"Taomati #0" = 10
+	"Tewareka #0" = 10
+	"Beniamina #0" = 10
+	"Teima #0" = 10
+}
+
+leader_names = {
+	Teannaki Iuta Tentoa Tinga Onorio Tabai Tamuera Teaotai Tito Otang Tong
+	Mwemwenikarawa Tatireta Aneri
+}
+
+ship_names = {
+	Abaiang Abariringa Abemama Aranuka Arorae
+	Banaba Beru Birnie Butaritari
+	Canton Caroline Christmas
+	Enderbury
+	Fanning Flint
+	Gardner
+	Hull
+	Kiritimati Kuria
+	Maiana Makin Malden Manra Marakei McKean Millennium
+	Nikumaroro Nikunau Nonouti
+	Ocean Onotoa Orona
+	Phoenix
+	Rawaki
+	Starbuck Sydney
+	Tabiteuea Tabuaeran Tamana Tarawa Teraina
+	Vostok
+	Washington
+}

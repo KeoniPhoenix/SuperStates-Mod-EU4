@@ -1,0 +1,154 @@
+#Country Name: Maya
+
+graphical_culture = westerngfx
+
+color = { 104 215 126 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abel #0" = 5
+	"Agust?n #0" = 10
+	"ùlejandro #0" = 5
+	"Alonso #0" = 20
+	"ùlvaro #0" = 10
+	"Andr?s #0" = 5
+	"Antonio #0" = 20
+	"Arcadio #0" = 5
+	"Arias #0" = 5
+	"Arturo #0" = 5
+	"Bartolom? #0" = 5
+	"Benito #0" = 10
+	"Carlos #0" = 20
+	"C?sar #0" = 5
+	"Crescencio #0" = 5
+	"Crist?bal #0" = 5
+	"Daniel #0" = 5
+	"Diego #0" = 20
+	"Dulce #0" = 5
+	"Eleuerio #0" = 5
+	"Enrique #0" = 15
+	"Ernesto #0" = 5
+	"Esteban #0" = 5
+	"Eugenio #0" = 5
+	"Federico #0" = 5
+	"Felipe #0" = 15
+	"Fernando #0" = 20
+	"Florencio #0" = 5
+	"Francisco #0" = 20
+	"Frutos #0" = 5
+	"Garc?a #0" = 10
+	"Graciliano #0" = 5
+	"Guill?n #0" = 5
+	"Guillermo #0" = 5
+	"Hircano #0" = 5
+	"Hugo #0" = 5
+	"Humberto #0" = 10
+	"ù?igo #0" = 5
+	"Ivonne #0" = 5
+	"Jer?nimo #0" = 5
+	"Jes?s #0" = 5
+	"Jos? #0" = 20
+	"Juan #0" = 20
+	"Justo #0" = 5
+	"Lucas #0" = 5
+	"Luis #0" = 10
+	"Manuel #0" = 20
+	"Mariano #0" = 5
+	"Mart?n #0" = 10
+	"Melchor #0" = 10
+	"Miguel #0" = 20
+	"Nachi #0" = 5
+	"Nicol?s #0" = 5
+	"Octavio #0" = 5
+	"Olegario #0" = 5
+	"Patricio #0" = 5
+	"Pedro #0" = 15
+	"Priscilliano #0" = 5
+	"Protasio #0" = 5
+	"Ricardo #0" = 5
+	"Roberto #0" = 5
+	"Rodrigo #0" = 5
+	"Rolando #0" = 5
+	"Roque #0" = 5
+	"Salvador #0" = 5
+	"Sancho #0" = 5
+	"Santiago #0" = 10
+	"Tom?s #0" = 15
+	"Toribio #0" = 5
+	"Victor #0" = 15
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Ainz Alayola Alpuche Alvarado Alvarez Ancona Antonio Artazo Avila Ayuso Aznar
+	Barbachano Baz?n Berzunza Boilio Bolio
+	C?mara Campero Canto Cant?n C?rdenas Carrillo Carvajal Castro Centeno Cepeda Cervera Cocom Cord??ez Cortaire Cort?s Crespo Cunco
+	D?vila "de Aguirre" "de Ar?chiga" "de Argùello" "de Azc?rraga" "de Baz?n" "de C?rdenas" "de Castro" "de Castro" "de C?spedes" "de Figueroa" "de Figueroa" "de G?lvez" "de las Casas" "de Layseca" "de los Santos" "de Lozada" "de Luna" "de Meneses" "de Montejo" "de Navarrete" "de Oliver" "de Paredes" "de Quero" "de Quijada" "de Rivaguda" "de Robles" "de S?mano" "de Santill?n" "de Soberanis" "de Sol?s" "de Urz?a" "de Vald?s" "de Vargas" "de Vel?squez" "de V?rtiz" "de Zayas" Delgado
+	Echeverri Escobedo Esquivel
+	Fern?ndez Flores Francisco Franco
+	Garc?a Garrido Gonz?lez Granja Guerra
+	Iturralde
+	Jos? Jufr?
+	L?pez Loret Luna
+	Manuel Manzanilla Marentes Mar?a Mena M?ndez Merino Molina Mu?oz
+	Novelo N??ez
+	"O'Neill" Ord??ez Ortega Ortiz Palomino Palomo Pe?n P?rez Pino P?o Ram?rez Rasc?n Recio Rivas Romero Rosado
+	Sabido S?enz Salcedo Sauri Serrano Sol?s Sol?s
+	Tamayo T?llez Torre Torres Traconis
+	Vega
+	Zapata
+}
+
+ship_names = {
+	Abal? Acanceh Akil
+	Baca Bokob? Bravo Buctzotz
+	Cacalch?n Calotmul Cansahcab Cantamayec Celest?n Cenotillo Chacsink?n Chankom Chapab Chemax Chichimil? Chicxulub Chikindzonot Chochol? Chumayel Conkal Cuncunul Cuzam?
+	Dzan Dzemul Dzidzant?n Dzilam Dzit?s Dzonacauich
+	Espita
+	Gonz?lez
+	Halach? Hocab? Hoct?n Hom?n Huh? Hunucm?
+	Ixil Izamal
+	Kanas?n Kantunil Kaua Kinchil Kopom?
+	Mama Man? Maxcan? Mayap?n M?rida Mococh? Motul Muxupip
+	Opich?n Oxkutzcab
+	Panab? Peto Progreso Pueblo Puelbo
+	"Quintana Roo"
+	"R?o Lagartos"
+	Sacalum Samahil "San Felipe" Sanahcat "Santa Elena" Sey? Sinanch? Sotuta Sucil? Sudzal Suma
+	Tahdzi? Tahmek Teabo Tecoh Tekal Tekax Tekit Tekom Telach Temax Temozon Temoz?n Tepak?n Tetiz Teya Timucuy Tixkokob Tixm?huac Tixp?hual Tizim?n Tunk?s Tzucacab
+	Uayma Uc? Um?n
+	Valladolid Venegas
+	Xocchel
+	Yaxcaba Yaxkukul Yoba?n 
+}
