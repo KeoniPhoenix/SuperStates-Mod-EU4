@@ -16,7 +16,7 @@ Mod nations that are in the vanilla game and are to be modified for the mod are 
 Vanilla tags that are introduced due to an update take precedence over mod tags if the new vanilla tag is not in the area covered by the mod.
 New tags and reassigned tags for nations wthin the mod area should be checked agaist the master tag list used by the mod and by vanilla before being included.
 
-Too many tags is a performance hit to EU4 as the current game engine is required to assign an AI to each and every tag in the tag list, this is should be as compact as possible to minimize unnecessary assignment of an AI to a tag.
+Too many tags is a performance hit to EU4 as the current game engine is required to assign an AI to each and every tag in the tag list, this should be as compact as possible to minimize unnecessary assignment of an AI to a tag.
 
 ---Provinces---
 
