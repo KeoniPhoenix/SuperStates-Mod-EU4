@@ -1,4 +1,4 @@
-Important Standards when Modding SuperStates Mod for EU4
+Important Standards when Modding for SuperStates Mod for EU4
 
 ---Scope of Area---
 
