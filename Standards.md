@@ -6,7 +6,7 @@ The mod's scope of area is to defined as the subnational entities of nations wit
 
 Most nations that are added that aren't federal in nature are included as flavor and are only intended to appear as the game progresses (such as the currently implimented Caribbean nations not part of the United States) and others are implimented from the start due to their past association with the United States or other federal nation (UN Pacific Trust Territories in the late 20th century).
 
-The mod will not include any area or nation within Africa, Asia, or Europe.
+The mod will not include any area or nation within Africa, Asia, or Europe except in instances where particular territories are needed for accurace to one of the federal nations added in the mod (currently this is Australia with the Indian Ocean Territories).  However, there could be the need due to performance problems to either empty out Africa (everything south of the Sahara) or remove a number of tribal nations.  This will be addressed when needed however.
 
 ---Nation Tags--- (country_tags/00_countries.txt)
 
