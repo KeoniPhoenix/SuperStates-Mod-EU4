@@ -16,12 +16,25 @@ native_hostileness = 3
 discovered_by = PRT
 discovered_by = UVI
 
-1680.1.1 = {
+1648.1.1 = {
+	owner = NED
+	controller = NED
+	culture = dutch
+	religion = protestant
+} # Dutch Settlement
+1672.1.1 = {
 	owner = ENG
 	controller = ENG
 	culture = english
 	religion = anglican
-	is_city = yes
-	trade_goods = sugar
 }
-
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1680.1.1 = { 
+	trade_goods = sugar
+	is_city = yes
+}

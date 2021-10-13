@@ -550,48 +550,47 @@ province_event = {
 
 ### Scripted by Sara Wendel-Örtqvist ###
 
-# A Witch!
-#province_event = {
-#	id = colonial.8
-#	title = "colonial.EVTNAME8"
-#	desc = "colonial.EVTDESC8"
-#	picture = ANGRY_MOB_eventPicture
-#	goto = ROOT
-#	
-#	is_triggered_only = yes
-#	
-#	trigger = {
-#		OR = {
-#			province_id = 968 # Massachusets
-#			province_id = 965 # Manhattan
-#			province_id = 966 # Connecticut
-#			province_id = 967 # Narraganset
-#			province_id = 2547 # Roanoke
-#			province_id = 4414 # Salem
-#		}
-#		current_age = age_of_absolutism
-#		owner = {
-#			religion_group = christian
-#		}
-#	}
-#	
-#	mean_time_to_happen = {
-#		days = 1
-#	}
-#	
-#	option = {
-#		name = "colonial.EVTOPTA8"
-#		owner = {
-#			add_stability_or_adm_power = yes
-#		}
-#	}
-#	option = {
-#		name = "colonial.EVTOPTB8"
-#		owner = {
-#			add_dip_power = 50
-#		}
-#	}
-#}
+#A Witch!
+province_event = {
+	id = colonial.8
+	title = "colonial.EVTNAME8"
+	desc = "colonial.EVTDESC8"
+	picture = ANGRY_MOB_eventPicture
+	goto = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			province_id = 3325 # Salem
+			province_id = 2601 # Manhattan
+			province_id = 2613 # Connecticut
+			province_id = 2612 # Narraganset
+			province_id = 3129 # Roanoke
+		}
+		current_age = age_of_absolutism
+		owner = {
+			religion_group = christian
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "colonial.EVTOPTA8"
+		owner = {
+			add_stability_or_adm_power = yes
+		}
+	}
+	option = {
+		name = "colonial.EVTOPTB8"
+		owner = {
+			add_dip_power = 50
+		}
+	}
+}
 
 # Rival Settlements
 province_event = {
@@ -1120,79 +1119,79 @@ province_event = {
 }
 
 #Growth of Natural Port into CoT
-province_event = {
-	id = colonial.19
-	title = "colonial.19.t"
-	desc = "colonial.19.d"
-	picture = CITY_DEVELOPMENT_eventPicture
+# province_event = {
+	# id = colonial.19
+	# title = "colonial.19.t"
+	# desc = "colonial.19.d"
+	# picture = CITY_DEVELOPMENT_eventPicture
 	
-	trigger = {
-		province_has_center_of_trade_of_level = 1
-		has_port = yes
-		NOT = { province_has_center_of_trade_of_level = 2 }
-		OR = {
-			development = 15
-			has_building = marketplace
-			feudalism = 100
-		}
-		owner = {
-			stability = 1
-			has_institution = feudalism
-		}
-		OR = {
-			continent = new_world
-			continent = north_america
-			continent = south_america
-		}
-	}
+	# trigger = {
+		# province_has_center_of_trade_of_level = 1
+		# has_port = yes
+		# NOT = { province_has_center_of_trade_of_level = 2 }
+		# OR = {
+			# development = 15
+			# has_building = marketplace
+			# feudalism = 100
+		# }
+		# owner = {
+			# stability = 1
+			# has_institution = feudalism
+		# }
+		# OR = {
+			# continent = new_world
+			# continent = north_america
+			# continent = south_america
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		months = 300
+	# mean_time_to_happen = {
+		# months = 300
 		
-		modifier = {
-			factor = 0.9
-			owner = { full_idea_group = trade_ideas }
-		}
-		modifier = {
-			factor = 0.9
-			owner = { stability = 3 }
-		}
-		modifier = {
-			factor = 0.7
-			owner = { has_institution = global_trade }
-		}
-		modifier = {
-			factor = 0.8
-			development = 20
-		}
-		modifier = {
-			factor = 0.7
-			has_building = trade_depot
-		}
-		modifier = {
-			factor = 0.9
-			has_building = dock
-		}
-		modifier = {
-			factor = 0.5
-			development = 30
-		}
-		modifier = {
-			factor = 0.95
-			current_age = age_of_reformation
-		}
-		modifier = {
-			factor = 0.9
-			current_age = age_of_absolutism
-		}
-		modifier = {
-			factor = 0.85
-			current_age = age_of_revolutions
-		}
-	}
+		# modifier = {
+			# factor = 0.9
+			# owner = { full_idea_group = trade_ideas }
+		# }
+		# modifier = {
+			# factor = 0.9
+			# owner = { stability = 3 }
+		# }
+		# modifier = {
+			# factor = 0.7
+			# owner = { has_institution = global_trade }
+		# }
+		# modifier = {
+			# factor = 0.8
+			# development = 20
+		# }
+		# modifier = {
+			# factor = 0.7
+			# has_building = trade_depot
+		# }
+		# modifier = {
+			# factor = 0.9
+			# has_building = dock
+		# }
+		# modifier = {
+			# factor = 0.5
+			# development = 30
+		# }
+		# modifier = {
+			# factor = 0.95
+			# current_age = age_of_reformation
+		# }
+		# modifier = {
+			# factor = 0.9
+			# current_age = age_of_absolutism
+		# }
+		# modifier = {
+			# factor = 0.85
+			# current_age = age_of_revolutions
+		# }
+	# }
 	
-	option = {
-		name = "colonial.19.a"
-		add_center_of_trade_level = 1
-	}
-}
+	# option = {
+		# name = "colonial.19.a"
+		# add_center_of_trade_level = 1
+	# }
+# }

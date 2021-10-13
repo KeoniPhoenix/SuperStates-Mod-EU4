@@ -10,7 +10,7 @@ country_decisions = {
 			NOT = { exists = USA }
 			NOT = { exists = ASE }
 			#NOT = { exists = CHS }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = GCL }
 			OR = {
 				tag = NVI
@@ -62,10 +62,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			shenandoah_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = shenandoah_area
+				is_core = root
 			}
 			owns_core_province = 2536 # Arlington
 			owns_core_province = 2533 # Richmond

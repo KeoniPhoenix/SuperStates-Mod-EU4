@@ -55,7 +55,7 @@ vir_hegemony = {
 
 vir_colonial_ambitions = {
 	production_efficiency = 0.1
-	trade_efficiency = 0.025
+	trade_efficiency = 0.05
 }
 
 vir_chesapeake_trade = {
@@ -63,7 +63,7 @@ vir_chesapeake_trade = {
 	trade_range_modifier = 0.15
 }
 
-vir_norfolk_base = { #similar to toulon dockyards in france
+vir_norfolk_base = {
 	navy_tradition = 0.5
 	local_ship_cost = -0.1
 	local_ship_repair = 0.2
@@ -121,3 +121,176 @@ cal_uni = {
 	advisor_cost = -0.15
 	advisor_pool = 1
 }
+
+#Dakota
+dak_rushmore = {
+	local_development_cost = -0.1
+	prestige = 1
+}
+
+#Illinois
+ili_trade = {
+	trade_efficiency = 0.15
+}
+ili_capital = {
+	local_development_cost = -0.1
+	local_tax_modifier = 0.1
+}
+
+#Kansas
+kns_reconquer = {
+	land_morale = 0.1
+	recover_army_morale_speed = 0.15
+}
+
+#Vermont
+vrm_defeated_ny = {
+	land_morale = 0.1
+	recover_army_morale_speed = 0.15
+}
+
+vrm_green_boys_merc = {
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
+}
+
+vrm_rhode_island_navy = {
+	ship_durability = 0.1
+	navy_tradition = 1
+}
+
+#Rhode Island
+ris_shipyard = {
+	global_ship_repair = 0.15
+	navy_tradition = 1
+}
+
+ris_naval_supplies = {
+	naval_attrition = -0.1
+	trade_range_modifier = 0.33
+}
+
+ris_roads_to_rhodes = {
+	movement_speed = 0.1
+	movement_speed_onto_off_boat_modifier = 0.1
+}
+
+ris_spy = {
+	spy_offence = 0.25
+	envoy_travel_time = -0.33
+}
+
+#Connecticut
+cut_investments = {
+	global_tax_modifier = 0.1
+	yearly_corruption = -0.1
+	interest = -0.25
+}
+
+cut_manufactoring_modifier = {
+	development_cost = -0.05
+	production_efficiency = 0.1
+}
+
+cut_cape_navy_modifier = {
+	naval_maintenance_modifier = -0.1
+	naval_morale = 0.1
+}
+
+cut_victory_pennamite = {
+	land_morale = 0.10
+	culture_conversion_cost = -0.25
+}
+
+#New Hampshire
+nwh_granite_modifier = {
+	build_cost = -0.15
+	build_time = -0.33
+}
+
+#Massachusetts
+mss_subject_mne = {
+	reduced_liberty_desire = 10
+	diplomatic_reputation = 1
+}
+
+mss_city_on_hill = {
+	development_cost = -0.1
+	prestige = 0.5
+}
+
+mss_navy_expansion = {
+	naval_maintenance_modifier = -0.1
+	naval_morale = 0.1
+}
+
+mss_renaissance_modifier = {
+	advisor_cost = -0.1
+	num_accepted_cultures = 1
+}
+
+#Maine
+mne_fishing_modifier = {
+	sailors_recovery_speed = 0.10
+	sailor_maintenance_modifer = -0.1
+}
+
+mne_remember_maine_modifier = {
+	naval_morale = 0.1
+	heavy_ship_power = 0.15
+}
+
+#New England
+new_england_trade_ship = {
+	global_ship_trade_power = 0.20
+	light_ship_cost = -0.20
+}
+
+new_england_connecticut_taxes = {
+	global_tax_modifier = 0.1
+	interest = -0.5
+}
+
+new_england_forest_lodges = {
+	land_attrition = -0.1
+	production_efficiency = 0.1
+}
+
+new_england_fund_uni_lev = {
+	technology_cost = -0.05
+	great_project_upgrade_cost = -0.1
+}
+
+new_england_fund_uni_no_lev = {
+	technology_cost = -0.05
+	build_cost = -0.1
+}
+
+new_mid_atlantic_trade = {
+	trade_efficiency = 0.10
+	trade_range_modifier = 0.20
+}
+
+new_formed_modifier = {
+	monthly_splendor = 1
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+}
+
+new_looted_modifier = {
+	development_cost = 0.1
+	local_tax_modifier = -0.1
+}
+
+new_looted_nyc = {
+	development_cost = -0.1
+	local_tax_modifier = 0.1
+}
+
+#Mid Atlantic
+# mid_atlantic_bankers = {
+# 	interest = -0.5
+# 	state_maintenance_modifier = -0.2
+# }

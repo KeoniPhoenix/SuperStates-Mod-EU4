@@ -35,11 +35,11 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			australia_superregion = {
-				ROOT = { num_of_cities = 40}
-				owned_by = ROOT
-				is_core = ROOT
-				}
+			num_of_owned_provinces_with = {
+				value = 40
+				superregion = australia_superregion
+				is_core = root
+			}
 			OR = {
 				AND = {
 					owns_core_province = 1084		#Perth

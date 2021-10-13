@@ -1,5 +1,9 @@
 #Yellowstone
 
+latent_trade_goods = {
+	coal
+}
+
 owner = MNT
 controller = MNT
 add_core = MNT

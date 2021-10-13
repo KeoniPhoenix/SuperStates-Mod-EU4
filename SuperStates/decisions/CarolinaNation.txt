@@ -37,20 +37,20 @@ country_decisions = {
 			}
 		}
 		allow = {
-			north_carolina_area = {
-				ROOT = { num_of_cities = 4 }
-					owned_by = ROOT
-					is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = north_carolina_area
+				is_core = root
 			}
-			blue_ridge_area = {
-				ROOT = { num_of_cities = 4 }
-					owned_by = ROOT
-					is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = blue_ridge_area
+				is_core = root
 			}
-			south_carolina_area = {
-				ROOT = { num_of_cities = 4 }
-					owned_by = ROOT
-					is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = south_carolina_area
+				is_core = root
 			}
 		}
 		effect = {

@@ -47,10 +47,12 @@ defaults_reform = {
 	foreign_slave_rulers = no
 	royal_marriage = yes
 	nomad = no
+	raze_province = no
 	assimilation_cultures = { }
 	states_general_mechanic = { }
 	valid_for_nation_designer = yes
 	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = no
 	start_territory_to_estates = 0.8
 	has_term_election = no
 	force_admiral_leader = no
@@ -60,6 +62,8 @@ defaults_reform = {
 	uses_revolutionary_zeal = no
 	revolutionary = no
 	revolutionary_client_state = no
+	allow_draft_transport_ships = no
+	free_concentrate_development = no
 	disallowed_trade_goods = {}
 }
 
@@ -102,8 +106,10 @@ feudal_monarchy = {
 		factor = 2
 		modifier = {
 			factor = 0
-			NOT = { has_idea_group = aristocracy_ideas }
-			NOT = { has_reform = feudal_monarchy }
+			NOT = {
+				has_idea_group = aristocracy_ideas
+				has_reform = feudal_monarchy
+			}
 		}
 	}
 }
@@ -162,6 +168,9 @@ constitutional_monarchy = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 
 	ai = {
@@ -174,10 +183,6 @@ constitutional_monarchy = {
 			factor = 2
 			has_idea_group = innovativeness_ideas
 		}
-	}
-
-	custom_attributes = {
-		blocked_call_diet = yes
 	}
 }
 
@@ -268,6 +273,10 @@ revolutionary_empire = {
 				set_country_flag = is_gurkani_flag
 			}
 		}
+	}
+
+	ai = {
+		factor = 0
 	}
 }
 
@@ -420,6 +429,7 @@ venetian_merchant_republic = {
 	royal_marriage = no
 
 	boost_income = yes
+
 	factions = {
 		mr_aristocrats
 		mr_traders
@@ -836,15 +846,17 @@ administrative_republic = {
 		factor = 1
 		modifier = {
 			factor = 0
-			AND = {
-				NOT = { has_reform = merchant_republic }
-				NOT = { capital_scope = { has_port = no } }
-			}
-			AND = {
-				NOT = { has_reform = republican_dictatorship }
-				dip = 4
-				adm = 4
-				mil = 4
+			NOT = {
+				AND = {
+					has_reform = merchant_republic
+					capital_scope = { has_port = no }
+				}
+				AND = {
+					has_reform = republican_dictatorship
+					NOT = { dip = 4 }
+					NOT = { adm = 4 }
+					NOT = { mil = 4 }
+				}
 			}
 		}
 	}
@@ -856,7 +868,6 @@ military_dictatorship = {
 	legacy_government = yes
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
-	nation_designer_cost = 0
 	has_term_election = no
 	
 	republican_name = yes
@@ -892,12 +903,11 @@ protectorate_parliament_legacy = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	has_term_election = no
-
-	custom_attributes = {
-		blocked_call_diet = yes
-	}
 }
 
 
@@ -975,10 +985,9 @@ constitutional_republic = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	}
-
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 
 	ai = {
@@ -1342,6 +1351,7 @@ theocratic_government = {
 		tolerance_own = 2
 		tolerance_heretic = -1
 	}
+
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
@@ -1381,6 +1391,7 @@ monastic_order_government = {
 		tolerance_own = 1
 		fort_maintenance_modifier = -0.2
 	}
+
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
@@ -1446,6 +1457,7 @@ papal_government = {
 		prestige_per_development_from_conversion = 0.33
 		global_autonomy = -0.05
 	}
+
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
@@ -1515,6 +1527,7 @@ steppe_horde_legacy = {
 	allow_convert = no
 	tribal = yes
 	nomad = yes
+	raze_province = yes
 
 	nation_designer_cost = 0
 	nation_designer_trigger = {
@@ -1548,6 +1561,7 @@ great_mongol_state_legacy = {
 	allow_convert = no
 	tribal = yes
 	nomad = yes
+	raze_province = yes
 
 	nation_designer_cost = 0
 	nation_designer_trigger = {
@@ -1796,13 +1810,12 @@ english_monarchy_legacy = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	ai = {
 		factor = 5
-	}
-
-	custom_attributes = {
-		blocked_call_diet = yes
 	}
 }
 
@@ -2269,6 +2282,7 @@ daimyo_legacy = {
 		land_morale = 0.10
 		infantry_power = 0.10
 	}
+
 	ai = {
 		factor = 5
 	}
@@ -2340,6 +2354,7 @@ shogunate_legacy = {
 		envoy_travel_time = -0.25
 		max_absolutism = 5
 	}
+
 	ai = {
 		factor = 5
 	}

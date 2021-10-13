@@ -30,15 +30,15 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			labrador_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = labrador_area
+				is_core = root
 			}
-			newfoundland_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = newfoundland_area
+				is_core = root
 			}
 			owns_core_province = 1807 # St John's
 			owns_core_province = 1805 # Goose Bay

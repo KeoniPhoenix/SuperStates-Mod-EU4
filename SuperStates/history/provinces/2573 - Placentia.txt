@@ -13,6 +13,7 @@ base_tax = 11
 base_production = 12
 base_manpower = 6
 discovered_by = north_american
+discovered_by = mesoamerican
 center_of_trade = 2
 
 1399.1.1 = {

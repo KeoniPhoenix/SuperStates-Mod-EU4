@@ -90,7 +90,7 @@ country_event = {
 			}
 			any_country = {
 				capital_scope = {
-					region = carribeans_region
+					region = greater_antilles_region
 				}
 				war_exhaustion = 5
 			}
@@ -766,7 +766,7 @@ country_event = {
 			}
 			any_country = {
 				capital_scope = {
-					region = carribeans_region
+					region = greater_antilles_region
 				}
 				war_exhaustion = 5
 			}
@@ -956,7 +956,7 @@ country_event = {
 			}
 			any_country = {
 				capital_scope = {
-					region = carribeans_region
+					region = greater_antilles_region
 				}
 				war_exhaustion = 5
 			}
@@ -1150,7 +1150,7 @@ country_event = {
 		OR = {
 			any_subject_country = {
 				capital_scope = {
-					region = carribeans_region
+					region = greater_antilles_region
 				}
 			}
 			1516 = {
@@ -1163,7 +1163,7 @@ country_event = {
 				OR = {
 					any_subject_country = {
 						capital_scope = {
-							region = carribeans_region
+							region = greater_antilles_region
 						}
 					}
 					1516 = {

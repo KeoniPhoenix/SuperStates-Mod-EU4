@@ -34,7 +34,7 @@ confederate_claims_provincegroup = {
 	# Kentucky
 	2514 2515 2516 2517 3012 3099 3100
 	# Maryland and District of Columbia
-	2530 2531 2532 2729 2730 3025
+	2530 2531 2532 2729 2730 3025 4641
 	2616
 	# Missouri
 	2497 2498 2499 2500 2501 2669 3113 3114 3115 3116
@@ -341,7 +341,7 @@ maine_provincegroup = {
 
 # Maryland
 maryland_provincegroup = {
-	2530 2531 3025 2532 2729 2730
+	2530 2531 3025 2532 2729 2730 4641
 }
 
 # Massachusetts
@@ -470,7 +470,7 @@ oregon_provincegroup = {
 
 # Pennsylvania
 pennsylvania_provincegroup = {
-	2589 3028 3029 2585 3139 2586 2584 2587 3138 2588
+	2589 3028 3029 2585 3139 2586 2584 2587 3138 2588 4935 4936
 }
 
 west_pennsylvania_provincegroup = {
@@ -545,7 +545,7 @@ utah_provincegroup = {
 
 # New Hampshire
 # new_hampshire_provincegroup = {
-	# 2605 2604 3125
+	# 2605 2604 3125 4869
 # }
 
 # Vermont
@@ -554,7 +554,7 @@ utah_provincegroup = {
 # }
 
 vermont_new_hampshire_provincegroup = {
-	3161 2602 2603 2605 2604 3125
+	3161 2602 2603 2605 2604 3125 4869
 }
 
 # Virginia
@@ -917,11 +917,11 @@ central_australia_provincegroup = {
 
 ## New Zealand Province Groups
 south_island_provincegroup = {
-	4639 1246 4650 1109 4649 2738 4647 4644
+	4639 1246 4650 1109 4649 2738 4647 4644 4939
 }
 
 north_island_provincegroup = {
-	4643 2737 1107 4642 4637 1108 4641 2739 4640 1106
+	4643 2737 1107 4642 4637 1108 2739 4640 1106
 }
 
 nz_islands_provincegroup = {

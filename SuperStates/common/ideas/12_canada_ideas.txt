@@ -645,6 +645,7 @@ ONT_ideas = {
 		OR = {
 			tag = ONT
 			tag = OTW
+			#tag = TTO
 			}
 	}
 	free = yes		#will be added at load.
@@ -809,7 +810,7 @@ SSK_ideas = {
 
 #Toronto
 
-TTN_ideas = {
+TTO_ideas = {
 	start = {
 		global_trade_power = 0.10
 		trade_efficiency = 0.10
@@ -820,7 +821,7 @@ TTN_ideas = {
 	}
 	
 	trigger = {
-			tag = TNT
+			tag = TTO
 	}
 	free = yes		#will be added at load.
 	

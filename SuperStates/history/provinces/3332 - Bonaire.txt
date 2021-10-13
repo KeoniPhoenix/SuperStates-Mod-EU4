@@ -12,7 +12,7 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 6
 #discovered_by = north_american
-discovered_by = mesoamerican
+#discovered_by = mesoamerican
 
 1499.1.1 = {
 	

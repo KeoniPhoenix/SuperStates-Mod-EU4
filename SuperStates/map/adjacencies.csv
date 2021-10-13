@@ -66,7 +66,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 2693;632;sea;1355;-1;-1;-1;-1;Lombok-Sumbawa
 632;633;sea;1355;4666;511;4675;512;Sumbawa-Flores
 633;2695;sea;1401;4749;514;4758;512;Flores-East Timor
-2716;642;sea;1357;4714;569;4712;575;Buton-Kendari
+2716;4796;sea;1357;4714;569;4712;575;Buton-Kendari
 2700;4351;sea;1397;-1;-1;-1;-1;Cebu-Panay
 4353;4355;sea;1402;4765;804;4761;811;Leyte-Caraga
 2700;4350;sea;1397;4708;838;4702;846;Panay-Mindoro
@@ -77,7 +77,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 748;2890;sea;1529;2050;847;2046;850;Belem-Marajo
 2929;2890;sea;1661;-1;-1;-1;-1;Belem-Marajo
 2954;353;sea;1305;2973;1210;2972;1208;Djerba-Tataouine
-624;623;sea;1352;-1;-1;-1;-1;Banten-Tulungbewang
 431;2999;sea;1334;3693;1091;3689;1089;Mogostan-Hormuz
 398;2999;sea;1334;3686;1080;3684;1084;Qawasim-Hormuz
 146;3003;sea;1319;3174;1294;3175;1294;Athens - Euboea
@@ -89,6 +88,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4699;4698;sea;1312;-1;-1;-1;-1;Arta-Cephalonia
 4745;47;sea;1257;3013;1607;3012;1606;Rügen-Stralsund
 2994;48;sea;1257;-1;-1;-1;-1;Wolgast-Kolberg
+4938;4937;sea;1431;-1;-1;-1;-1;Vanua Levu-Lau
+4937;1242;sea;1431;-1;-1;-1;-1;Lau-Viti Levu
+1242;4938;sea;1431;-1;-1;-1;-1;Vitu Levu-Vanua Levu
 2634;964;sea;3311;-1;-1;-1;-1;Victoria-Thurston
 1808;1809;sea;3307;-1;-1;-1;-1;Queens-Colchester
 3060;1812;sea;3307;-1;-1;-1;-1;Prince-Westmorland
@@ -168,4 +170,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 2022;3317;sea;1421;-1;-1;-1;-1;Launceston-Flinders
 3030;2004;sea;1490;-1;-1;-1;-1;Anticosti-Sept-Rivieres
 1246;4639;sea;1428;-1;-1;-1;-1;Murihiku-Rakiura
+631;627;sea;1354;-1;-1;-1;-1;Bali-Blambangan
 -1;-1;;-1;-1;-1;-1;-1;-1;

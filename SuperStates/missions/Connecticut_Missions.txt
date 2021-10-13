@@ -1,0 +1,879 @@
+cut_conquests_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CUT
+			AND = {
+				tag = NEW
+				was_tag = CUT
+			}
+		}
+	}
+	has_country_shield = yes
+
+	cut_humiliate_ny = {
+		icon = all_bases_covered
+		required_missions = { }
+		position = 1
+		trigger = {
+			OR = {
+				OR = {
+					has_won_war_against = {
+						who = NYS
+						max_years_since = 30
+					}
+					NOT = {
+						exists = NYS
+					}
+				}
+				long_island_area = {
+					type = any
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			long_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_hudson_long_island = {
+		icon = mission_assemble_an_army
+		required_missions = { cut_humiliate_ny }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = long_island_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			long_island_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			new_york_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hudson_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_nyc = {
+		icon = mission_control_venice
+		required_missions = { cut_hudson_long_island cut_vermont_hamp }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = new_york_area
+				area = hudson_valley_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_york_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hudson_valley_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						2601 = {
+							is_capital = yes
+						}
+					}
+				}
+				country_event = { id = flavorNEW.1 }
+			}
+			add_adm_power = 150
+		}
+	}
+
+	cut_nys_trade = {
+		icon = mission_african_gold
+		required_missions = { cut_nyc }
+		position = 6
+		trigger = {
+			stock_exchange = 5
+			1500 = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = new_mid_atlantic_trade
+				duration = 9125
+			}
+		}
+	}
+}
+
+cut_conquests_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CUT
+			AND = {
+				tag = NEW
+				was_tag = CUT
+			}
+		}
+	}
+	has_country_shield = yes
+
+	cut_massa = {
+		icon = mission_cannons_firing
+		required_missions = { cut_disputes }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = massachusetts_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			massachusetts_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			vermont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_hampshire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_vermont_hamp = {
+		icon = mission_have_two_subjects
+		required_missions = { cut_massa }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = vermont_area
+				area = new_hampshire_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			vermont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			new_hampshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			maine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_mid_atlantic_1 = {
+		icon = mission_conquer_50_development
+		required_missions = { cut_is_eng cut_nyc }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = mid_atlantic_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = mid_atlantic_region
+			}
+		}
+		effect = {
+			mid_atlantic_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_mid_atlantic_2 = {
+		icon = mission_assemble_an_army
+		required_missions = { cut_mid_atlantic_1 }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = mid_atlantic_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mid_atlantic_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+		}
+	}
+}
+
+cut_conquests_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CUT
+			AND = {
+				tag = NEW
+				was_tag = CUT
+			}
+		}
+	}
+	has_country_shield = yes
+
+	cut_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.03
+			}
+			else = {
+				army_tradition = 10
+			}
+		}
+		effect = {
+			3104 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3140 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	cut_disputes = {
+		icon = mission_unite_home_region
+		required_missions = { cut_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3104
+				province_id = 3140
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				3104 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3140 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			massachusetts_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			rhode_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_rhodes = {
+		icon = mission_invade_island
+		required_missions = { cut_disputes }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = rhode_island_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			rhode_island_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			cape_cod_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_cape = {
+		icon = mission_landsknecht_soldier
+		required_missions = { cut_rhodes }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = cape_cod_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			cape_cod_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			add_country_modifier = {
+				name = "cut_cape_navy_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	cut_is_eng = {
+		icon = mission_empire
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				region = new_england_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tag = NEW
+			new_england_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "new_formed_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	cut_maritimes_1 = {
+		icon = mission_cannons_firing
+		required_missions = { cut_is_eng }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = maritimes_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = maritimes_region
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			maritimes_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+cut_conquests_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CUT
+			AND = {
+				tag = NEW
+				was_tag = CUT
+			}
+		}
+	}
+	has_country_shield = yes
+
+	cut_pennamite_1 = {
+		icon = army_reforms
+		required_missions = { cut_disputes }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2586
+			}
+			NOT = {
+				OR = {
+					is_core = ROOT
+					is_claim = ROOT
+				}
+			}
+		}
+		trigger = {
+			2586 = {
+				OR = {
+					is_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			2586 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4935 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2587 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3028 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2588 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	cut_pennamite_2 = {
+		icon = mission_conquer_5_states
+		required_missions = { cut_pennamite_1 }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2586
+				province_id = 2587
+				province_id = 3028
+				province_id = 2588
+				province_id = 4935
+				
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					province_id = 2586
+					province_id = 2587
+					province_id = 3028
+					province_id = 2588
+					province_id = 4935
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "cut_victory_pennamite"
+				duration = 9125
+			}
+			2579 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2583 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2569 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2570 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3091 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2565 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3126 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2592 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	cut_canada_1 = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { cut_is_eng }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = central_canada_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				region = central_canada_region
+			}
+		}
+		effect = {
+			central_canada_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	cut_canada_2 = {
+		icon = mission_conquer_5_states
+		required_missions = { cut_canada_1 }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = central_canada_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_canada_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+		}
+	}
+}
+
+cut_flavor = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CUT
+			AND = {
+				tag = NEW
+				was_tag = CUT
+			}
+		}
+	}
+	has_country_shield = yes
+
+	cut_yale = {
+		icon = leiden_university
+		required_missions = { }
+		position = 3
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				3261 = {
+					owned_by = ROOT
+					grown_by_development = 10
+					has_great_project = {
+						type = yale
+						tier = 1
+					}
+				}
+			}
+			else = {
+				3261 = {
+					owned_by = ROOT
+					grown_by_development = 12
+					has_building = university
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				3261 = {
+					if = {
+						limit = {
+							NOT = { has_building = university }
+						}
+						add_building = university
+					}
+				}
+				add_country_modifier = {
+					name = "new_england_fund_uni_lev"
+					duration = 9125
+				}
+			}
+			else = {
+				add_dip_power = 50
+				add_country_modifier = {
+					name = "new_england_fund_uni_no_lev"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	cut_investments = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 4
+		trigger = {
+			treasury = 2000
+			num_of_loans = 0
+			temple = 5
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "cut_investments"
+				duration = 9125
+			}
+		}
+	}
+
+	cut_fabrics = {
+		icon = mission_have_manufactories
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			owned_by = ROOT
+			area = connecticut_area
+			OR = {
+				trade_goods = cloth
+				trade_goods = wool
+			}
+			has_manufactory_trigger = no
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = cut_manufactory_tooltip
+				NOT = {
+					any_owned_province = {
+						area = connecticut_area
+						OR = {
+							AND = {
+								trade_goods = cloth
+								has_manufactory_trigger = no
+							}
+							AND = {
+								trade_goods = wool
+								has_manufactory_trigger = no
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			connecticut_area = {
+				add_province_modifier = {	
+					name = "cut_manufactoring_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	cut_develop_eng = {
+		icon = mission_hanseatic_city
+		required_missions = { }
+		position = 6
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = new_england_region
+			NOT = { development = 15 }
+		}
+		
+		trigger = {
+			new_england_region = {
+				type = all
+				owned_by = ROOT
+			}
+			NOT = {
+				any_owned_province = {
+					region = new_england_region
+					NOT = { development = 15 }
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = new_developed_new_england_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = new_england_region
+						NOT = { nationalism = 1 }
+					}
+					random_list = {
+						1 = { add_base_tax = 1 }
+						1 = { add_base_production = 1 }
+						1 = { add_base_manpower = 1 }
+					}
+				}
+			}
+		}
+	}
+}

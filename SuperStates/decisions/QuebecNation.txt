@@ -3,9 +3,9 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = QUE }
-			NOT = { exists = NFR }
+			#NOT = { exists = NFR }
 			NOT = { exists = CAN }
-			NOT = { exists = RUP }
+			#NOT = { exists = RUP }
 			OR = {
 				primary_culture = inuktitut
 				AND = {
@@ -46,25 +46,25 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			nord_du_quebec_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = nord_du_quebec_area
+				is_core = root
 			}
-			bois_francs_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = bois_francs_area
+				is_core = root
 			}
 			quebec_area = {
 				type = all 
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			baie_des_chaleurs_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = baie_des_chaleurs_area
+				is_core = root
 			}
 			owns_core_province = 2657 # Montreal
 			owns_core_province = 2652 # Quebec

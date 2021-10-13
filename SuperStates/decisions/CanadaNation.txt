@@ -31,7 +31,7 @@ country_decisions = {
 							type = any
 							owned_by = ROOT
 							}
-							NOT = { provincegroup = alaska_provincegroup }
+							#NOT = { provincegroup = alaska_provincegroup }
 						}
 				}
 				tag = TTO
@@ -140,27 +140,27 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = {
-			western_canada_region = {
-				ROOT = { num_of_cities = 20 }
-				owned_by = ROOT
-				is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 20
+					region = western_canada_region
+					is_core = root
 				}
-			central_canada_region = {
-				ROOT = { num_of_cities = 25 }
-				owned_by = ROOT
-				is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 25
+					region = central_canada_region
+					is_core = root
 				}
 			}
 			OR = {
-				maritimes_region = {
-					ROOT = { num_of_cities = 20 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 20
+					region = maritimes_region
+					is_core = root
 				}
-				arctic_region = {
-					ROOT = { num_of_cities = 18 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 18
+					region = arctic_region
+					is_core = root
 				}
 			}
 			OR = {

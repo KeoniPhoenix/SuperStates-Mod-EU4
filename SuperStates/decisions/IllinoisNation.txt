@@ -42,15 +42,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			illinois_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = illinois_area
+				is_core = root
 			}
-			little_egypt_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = little_egypt_area
+				is_core = root
 			}
 			owns_core_province = 2565 # Chicago
 			owns_core_province = 2562 # Springfield

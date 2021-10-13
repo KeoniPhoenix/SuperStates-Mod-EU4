@@ -6,7 +6,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_long_island } #Only once
 			NOT = { exists = LLI }
 			NOT = { tag = NYS }
-			NOT = { tag = MAA }
+			NOT = { tag = MID }
 			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			OR = {
@@ -35,15 +35,15 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			long_island_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = long_island_area
+				is_core = root
 			}
-			new_york_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = new_york_area
+				is_core = root
 			}
 		}
 		effect = {

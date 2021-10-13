@@ -1,0 +1,221 @@
+iow_conquest = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = IOW
+	}
+	has_country_shield = yes
+
+	iow_loess = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = loess_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			loess_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			the_lakes_area = {
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				add_permanent_claim = ROOT
+			}
+			nebraska_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	iow_minnesota = {
+		icon = mission_conquer_5_states
+		required_missions = { iow_loess }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = twin_cities_area
+				area = the_lakes_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = the_lakes_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = twin_cities_area
+			}
+		}
+		effect = {
+			east_river_area = {
+				add_permanent_claim = ROOT
+			}
+			missouri_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	iow_missouri = {
+		icon = mission_cannons_firing
+		required_missions = { iow_minnesota }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = missouri_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = missouri_area
+			}
+		}
+		effect = {
+			salem_area = {
+				add_permanent_claim = ROOT
+			}
+			illinois_area = {
+				add_permanent_claim = ROOT
+			}
+			sangamon_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	iow_salem = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { iow_missouri }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = salem_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			salem_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			kansas_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+iow_more = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = IOW
+	}
+	has_country_shield = yes
+
+	iow_south_dakota = {
+		icon = mission_have_two_subjects
+		required_missions = { iow_minnesota }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = east_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			sioux_area = {
+				add_claim = ROOT
+			}
+			sakakawea_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	iow_illinois = {
+		icon = mission_assemble_an_army
+		required_missions = { iow_missouri }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = illinois_area
+				area = sangamon_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = illinois_area
+			}
+			sangamon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			little_egypt_area = {
+				add_permanent_claim = ROOT
+			}
+			2565 = { #chicago
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	iow_chicago = {
+		icon = mission_conquer_5_states
+		required_missions = { iow_illinois }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = little_egypt_area
+				province_id = 2565
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			little_egypt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2565 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			add_adm_power = 50
+			chicagoland_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}

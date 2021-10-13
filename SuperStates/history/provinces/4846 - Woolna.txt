@@ -1,0 +1,6 @@
+#4846 - New York Bight
+
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1524.1.1 = { discovered_by = FRA } # Giovanni da Verrazzano

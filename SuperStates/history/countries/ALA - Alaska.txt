@@ -1,7 +1,8 @@
 government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
-primary_culture = alaskan
+primary_culture = juneauvian # Localized as Alaskan
+add_accepted_culture = alaskan # Localized as West Alaskan
 religion = s_protestant
 capital = 970  # Juneau
 
