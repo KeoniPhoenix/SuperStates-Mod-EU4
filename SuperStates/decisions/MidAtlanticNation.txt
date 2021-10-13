@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = FSA }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = NAM }
 			NOT = { exists = USA }
 			#technology_group = north_american
@@ -47,10 +47,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			mid_atlantic_region = {
-				ROOT = { num_of_cities = 30 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 30
+				region = mid_atlantic_region
+				is_core = root
 			}
 			owns_core_province = 2601	# New York City
 			owns_core_province = 2585	# Philadelphia
@@ -81,8 +81,8 @@ country_decisions = {
 				duration = 3650
 			}
 			add_prestige = 10
-			change_tag = MAA
-			MAA = {
+			change_tag = MID
+			MID = {
 			if = {
 					limit = {
 					NOT = { government_rank = 2 }
@@ -93,31 +93,31 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MAA
+				add_permanent_claim = MID
 			}
 			adirondack_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MAA
+				add_permanent_claim = MID
 			}
 			allegheny_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MAA
+				add_permanent_claim = MID
 			}
 			shenandoah_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MAA
+				add_permanent_claim = MID
 			}
 			erie_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MAA
+				add_permanent_claim = MID
 			}
 				}
 			swap_non_generic_missions = yes

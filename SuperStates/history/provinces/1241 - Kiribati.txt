@@ -12,6 +12,7 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 discovered_by = oceanian
+discovered_by = polynesian_tech
 
 1892.5.27 = {
 	is_city = yes

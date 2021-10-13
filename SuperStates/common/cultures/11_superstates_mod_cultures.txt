@@ -94,7 +94,8 @@ nau_group = {
 	}
 	
 	mexican = {
-		primary = EUM
+		#primary = EUM
+		primary = MEX
 		
 		male_names = {
 			Agustín Alfredo Álvaro Armando Ángel Arturo
@@ -2027,7 +2028,7 @@ great_laker = {
 	graphical_culture = westerngfx
 	
 	torontoan = {
-		primary = TTN
+		primary = TTO
 		
 		male_names = {
 			Adam Alexander Allan Angus Arthur
@@ -4533,7 +4534,7 @@ midwestern_group = {
 	}
 	
 	hoosier = {
-		primary = IND
+		primary = INI
 		
 		male_names = {
 			Abram Albert Alvin Ashbel
@@ -5407,6 +5408,73 @@ new_england_group = {
 	
 	vermonter = {
 		primary = VRM
+		
+		male_names = {
+			Allen Asahel
+			Bernard
+			Carlos Carroll charles Cornelius
+			Deane
+			Ebenzer Edward Erastus Ernest Ezra
+			Fletcher Franklin Frederick
+			George Gregory
+			Harold Hiland Horace Howard
+			Isaac Israel
+			James John Jonas Joseph Josiah Julius
+			Lee Levi
+			Martin Mortimer Moses
+			Paul Percival Peter Philip
+			Ray Redfield Richard Rober Roswell Ryland
+			Samuel Silas Stanley
+			Thomas
+			Urban
+			William
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Aiken Arthur
+			Barstow Bell Billings Brigham Butler
+			Chittenden Clement Converse Coolidge Crafts
+			Davis Dean Dillingham Douglas
+			Eaton Emerson
+			Fairbanks Fletcher Fuller
+			Galusha Gates Gibson Graham Grout
+			Hall Hartness Hendee Hoff Holbrook
+			Jennison Johnson
+			Keyser Kunin
+			Mattocks McCullough Mead
+			Page Paine Palmer Peck Pingree Proctor Prouty
+			Robinson
+			Salmon Sanders Shumlin Skinner Slade Smith Snelling Stafford Stewart Stickney
+			Tichenor
+			"Van Ness"
+			Washburn Weeks Williams Wills Wilson Woodbury
+		}
+	}
+	adirondack = {
 		
 		male_names = {
 			Allen Asahel
@@ -7069,10 +7137,48 @@ atlantic_canadian = {
 		primary = NBR
 		
 		male_names = {
+			Alexander Angus
+			Charles
+			Darrell Donald
+			Edgar Ernest
+			George Gerald Gordon
+			Harold Henry Hiram
+			James John Joseph
+			Philip
+			Robert Rodney Roger Russell
+			Simon Stephen
+			William
 		}
 		female_names = {
+			Ann Alison Allissa Amanda
+			Camille Catherine Colleen Christen Crystal
+			Deborah Donna
+			Edna Eva
+			Geraldine
+			Helen
+			Ione
+			Judith
+			Kathleen Kristen Krystal
+			Madorra Melissa
+			Nellie
+			Rachael
+			Sarah Stephany
 		}
 		dynasty_names = {
+			Annand Armstrong
+			Bacon Blanchard Buchanan
+			Cameron Connolly
+			Dexter
+			Fielding
+			Hamm Harrington Hicks Hill Holmes Howe
+			Johnston
+			Macdonald MacLellan MacMillan McNeil Murray
+			Pipes
+			Regan Rhodes
+			Savage Smith Stanfield
+			Thompson Tupper
+			Uniacke
+			Young
 		}
 	}
 	
@@ -10484,7 +10590,7 @@ caribbean_islander = {
 	}
 		
 	caymanian = {
-		primary = CAY
+		primary = CYM
 		
 		male_names = {
 			Alexander Archibald
@@ -10660,7 +10766,7 @@ caribbean_islander = {
 	}
 		
 	dominican = {
-		primary = SDR
+		primary = SDM
 		
 		male_names = {
 			Alejandro Anibal Arthur
@@ -11875,7 +11981,7 @@ caribbean_islander = {
 	}
 	
 	miamian = {
-		primary = MIA
+		primary = MIM
 		
 		male_names = {
 			Abraham Albert Andrew
@@ -12958,7 +13064,7 @@ micronesian-pacific_islander = {
 	}
 	
 	tahitian = {
-		primary = TAH
+		primary = THT
 		
 		female_names = {
 			Alamea Alaula Alika Elikapeka Halia Iokina Iolana Kailani Kalea Kamaile Kamea Kanoa Kawena Keala Keola Keona Kiele Kina 

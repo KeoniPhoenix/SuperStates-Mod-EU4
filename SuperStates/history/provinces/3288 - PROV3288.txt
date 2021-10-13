@@ -1,5 +1,9 @@
 #Pittsburg
 
+latent_trade_goods = {
+	coal
+}
+
 owner = OKL
 controller = OKL
 add_core = OKL

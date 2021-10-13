@@ -5,7 +5,7 @@ controller = PNN
 add_core = PNN
 add_core = WMO
 # add_core = CUT
-culture = pennsylvanian
+culture = western_pennsylvanian
 religion = s_protestant
 capital = "Williamsport"
 is_city = yes #2940
@@ -22,9 +22,9 @@ discovered_by = mesoamerican
 }
 
 1555.1.1 = {
-	owner = MAA
-	controller = MAA
-	add_core = MAA
+	owner = MID
+	controller = MID
+	add_core = MID
 }
 
 1675.2.4 = {

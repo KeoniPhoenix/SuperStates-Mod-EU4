@@ -36,20 +36,20 @@ country_decisions = {
 			}
 		}
 		allow = {
-			columbia_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = columbia_area
+				is_core = root
 			}
-			kootenay_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = kootenay_area
+				is_core = root
 			}
-			vancouver_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = vancouver_area
+				is_core = root
 			}
 			owns_core_province = 2635 # Vancouver
 			owns_core_province = 2634 # Victoria

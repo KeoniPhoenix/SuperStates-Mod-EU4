@@ -53,7 +53,7 @@ country_event = {
 		name = "CaymanIslandsFlavor.1opta"
 		cayman_islands_area = { 
 			change_culture = caymanian
-			add_core = CAY
+			add_core = CYM
 		}
 	}
 }

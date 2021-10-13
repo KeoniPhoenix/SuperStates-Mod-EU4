@@ -1,0 +1,37 @@
+#4939 - Te Urewera
+
+add_core = MAA
+owner = MAA
+controller = MAA
+culture = maori
+religion = animism
+hre = no
+capital = "Tauwhare"
+is_city = yes
+trade_goods = naval_supplies
+base_tax = 3
+base_production = 4
+base_manpower = 1
+discovered_by = polynesian_tech
+discovered_by = australian
+
+1642.1.1 = { discovered_by = NED } # Abel Tasman
+
+1840.1.1 = {
+	trade_goods = fish
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}
+
+1852.6.30 = {	
+	culture = new_zealander
+	add_core = NZL
+}
+
+1907.1.1 = {
+	owner = NZL
+	controller = NZL
+	remove_core = GBR
+}

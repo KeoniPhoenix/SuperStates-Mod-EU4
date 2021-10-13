@@ -254,7 +254,7 @@ MSH_ideas = { # Marshall Islands
 
 PAU_ideas = { # Palau
 	start = {
-		min_autonomy_in_territories = 0.20
+		min_autonomy_in_territories = -0.20
 		global_unrest = -1
 	}
 

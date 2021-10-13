@@ -10,7 +10,7 @@ country_decisions = {
 			NOT = { exists = ASE }
 			NOT = { exists = FSA }
 			NOT = { exists = NAM }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = GCL }
 			NOT = { has_country_flag = chesapeake_decision }
 			#technology_group = north_american
@@ -45,15 +45,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			potomac_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = potomac_area
+				is_core = root
 			}
-			virginia_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = virginia_area
+				is_core = root
 			}
 			delmarva_area = {
 				type = all

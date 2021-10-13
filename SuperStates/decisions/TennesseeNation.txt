@@ -36,10 +36,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			tennessee_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = tennessee_area
+				is_core = root
 			}
 			OR = {
 				owns_core_province = 2521 # Chattanooga

@@ -48,50 +48,50 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			baja_california_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = baja_california_area
+				is_core = root
 			}
-			baja_california_sur_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = baja_california_sur_area
+				is_core = root
 			}
-			sonora_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = sonora_area
+				is_core = root
 			}
-			chihuahua_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = chihuahua_area
+				is_core = root
 			}
-			coahuila_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = coahuila_area
+				is_core = root
 			}
-			durango_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = durango_area
+				is_core = root
 			}
-			nuevo_leon_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = nuevo_leon_area
+				is_core = root
 			}
-			tamaulipas_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = tamaulipas_area
+				is_core = root
 			}
-			sinaloa_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = sinaloa_area
+				is_core = root
 			}
 			owns_core_province = 935 # Mexicali
 			owns_core_province = 930 # Hermosillo

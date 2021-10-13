@@ -65,20 +65,20 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			deep_south_region = {
-				ROOT = { num_of_cities = 35 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 35
+				region = deep_south_region
+				is_core = root
 			}
-			old_southwest_region = {
-				ROOT = { num_of_cities = 25 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = old_southwest_region
+				is_core = root
 			}
-			appalachia_region = {
-				ROOT = { num_of_cities = 10 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 10
+				region = appalachia_region
+				is_core = root
 			}
 			owns_core_province = 2502			#Jackson, Mississippi
 			owns_core_province = 2507			#Birmingham, Alabama

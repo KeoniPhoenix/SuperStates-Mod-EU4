@@ -244,21 +244,21 @@ country_event = {
 	
 	option = {
 		name = "superstates_greatawakening.2opta"
-		enable_religion = s_methodist
+		enable_religion = reformed
 		random_owned_province = {
 			limit = {
 				can_have_center_of_reformation_trigger = {
 					religion = reformed
 				}
 			}
-			add_reform_center = s_methodist
+			add_reform_center = reformed
 			add_permanent_province_modifier = {
 				name = "religious_zeal_at_conv"
 				duration = 9000
 			}
 		}
 		capital_scope = {
-			change_religion = s_methodist
+			change_religion = reformed
 		}
 		set_country_flag = "great_awakening_methodist" 
 	}

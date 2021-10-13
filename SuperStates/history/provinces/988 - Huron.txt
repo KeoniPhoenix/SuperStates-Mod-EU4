@@ -1,5 +1,9 @@
 #Campbell
 
+latent_trade_goods = {
+	coal
+}
+
 owner = WYO
 controller = WYO
 add_core = WYO
@@ -7,7 +11,7 @@ add_core = ABS
 culture = wyomingite
 religion = s_protestant
 capital = "Gillette"
-trade_goods = grain
+trade_goods = wool
 hre = no
 base_tax = 4
 base_production = 2

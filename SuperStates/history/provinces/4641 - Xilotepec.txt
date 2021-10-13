@@ -1,35 +1,46 @@
-#Bay of Plenty/Tauranga
+#4939 - Washington, Maryland
 
-culture = maori
-religion = animism
-capital = "Whakatane"
-trade_goods = unknown 
+owner = MYD
+controller = MYD
+add_core = MYD
+add_core = WML
+culture = west_marylander
+religion = s_protestant
+capital = "Hagerstown"
+is_city = yes #6530
+trade_goods = tobacco
 hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 2
+discovered_by = north_american
+discovered_by = mesoamerican
 
-base_tax = 3
-base_production = 3
-base_manpower = 3
-
-native_size = 10
-native_ferocity = 1
-native_hostileness = 3
-discovered_by = australian
-
-1840.1.1 = {
-	trade_goods = grain
-	is_city = yes
-	owner = GBR
-	controller = GBR
-	add_core = GBR
+1528.1.1 = {
+	religion = s_methodist
 }
 
-1852.6.30 = {	
-	culture = new_zealander
-	add_core = NZL
+1555.1.1 = {
+	owner = WST
+	controller = WST
+	add_core = WST
+	add_core = MAA
 }
 
-1907.1.1 = {
-	owner = NZL
-	controller = NZL
-	remove_core = GBR
+1675.2.4 = {
+	owner = FSA
+	controller = FSA
+	add_core = FSA
+}
+
+1675.2.5 = {
+	owner = MYD
+	controller = MYD
+	remove_core = FSA
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
 }

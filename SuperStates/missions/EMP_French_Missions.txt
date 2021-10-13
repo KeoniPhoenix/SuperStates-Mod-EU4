@@ -377,7 +377,7 @@ emp_france_missions_1_b = {
 		}
 		effect = {
 			set_country_flag = fra_louis_mission
-			country_event = { id = flavor_fra.3132 }
+			# country_event = { id = flavor_fra.3132 }
 			add_mercantilism = 5
 		}
 	}

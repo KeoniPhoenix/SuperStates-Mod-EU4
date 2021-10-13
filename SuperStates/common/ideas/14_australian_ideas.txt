@@ -11,7 +11,7 @@ ACT_ideas = { # Australian Capital Territory/ACT/Canberra
 	}
 
 	bonus = {
-		administrative_efficiency = 0.25
+		administrative_efficiency = 0.025
 	}
 
 	trigger = {
@@ -566,6 +566,13 @@ australian_ideas = { # Generic Australian state ideas
 				tag = AUS
 				tag = NZL
 				tag = ZLD
+				tag = TTT
+				tag = TAN
+				tag = TEA
+				tag = MAA
+				tag = TNK
+				tag = TAK
+				tag = WAI
 			}
 		}
 	}

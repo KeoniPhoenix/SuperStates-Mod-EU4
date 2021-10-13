@@ -1,0 +1,11 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 3
+technology_group = north_american
+primary_culture = new_yorker
+religion = s_catholic
+capital = 2601	# New York City
+
+1528.1.1 = {
+    religion = catholic
+}

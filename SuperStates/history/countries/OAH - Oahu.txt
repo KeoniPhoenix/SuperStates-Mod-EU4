@@ -1,0 +1,6 @@
+government = tribal
+add_government_reform = polynesian_kingdom
+government_rank = 2
+primary_culture = polynesian
+religion = animism
+technology_group = polynesian_tech

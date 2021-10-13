@@ -11,7 +11,7 @@ country_decisions = {
 			NOT = { exists = NAM }
 			OR = {
 				primary_culture = us_georgian
-				primary_culture = us_piedmontese
+				primary_culture = south_georgian
 				tag = SGR
 			}
 			OR = {
@@ -35,15 +35,15 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			savannah_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = savannah_area
+				is_core = root
 			}
-			georgia_us_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = georgia_us_area
+				is_core = root
 			}
 			owns_core_province = 2510 # Atlanta
 			owns_core_province = 2512 # Savannah

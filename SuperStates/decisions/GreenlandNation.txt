@@ -40,10 +40,10 @@ greenland_nation = {
 		allow = {
 			NOT = { num_of_cities = 8 }
 			is_at_war = no
-			greenland_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = greenland_area
+				is_core = root
 			}
 		}
 		effect = {

@@ -19,13 +19,13 @@ country_event = {
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = tahitian }
-			NOT = { is_core = TAH }
+			NOT = { is_core = THT }
 		}
 		1987 = { 
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = tahitian }
-			NOT = { is_core = TAH }
+			NOT = { is_core = THT }
 		}
 	}
 	
@@ -74,11 +74,11 @@ country_event = {
 		name = "TahitianFlavor.1opta"
 		1244 = { 
 			change_culture = tahitian
-			add_core = TAH
+			add_core = THT
 		}
 		1987 = { 
 			change_culture = tahitian
-			add_core = TAH
+			add_core = THT
 		}
 	}
 }

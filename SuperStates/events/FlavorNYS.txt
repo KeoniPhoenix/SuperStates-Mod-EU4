@@ -20,7 +20,7 @@ country_event = {
 		OR = {
 			tag = NYS
 			tag = NYC
-			tag = MAA
+			tag = MID
 		}
 		owns = 2601
 		2601 = { controlled_by = ROOT }

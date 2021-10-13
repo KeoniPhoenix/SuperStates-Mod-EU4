@@ -20,10 +20,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			new_england_region = {
-				ROOT = { num_of_cities = 23 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 23
+				region = new_england_region
+				is_core = root
 			}
 			owns_core_province = 2609 # Boston
 			owns_core_province = 2606 # Augusta

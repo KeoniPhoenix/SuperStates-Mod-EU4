@@ -3,6 +3,8 @@
 ######################################################################
 s_baptist_rebels = {
 
+	color = { 240 235 200 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = s_baptist

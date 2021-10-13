@@ -34,20 +34,20 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			yucatan_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = yucatan_area
+				is_core = root
 			}
-			quintana_roo_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = quintana_roo_area
+				is_core = root
 			}
-			campeche_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = campeche_area
+				is_core = root
 			}
 			owns_core_province = 844 # Merida
 			owns_core_province = 847 # Chetumal

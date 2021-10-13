@@ -51,9 +51,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			american_southwest_region = {
-				ROOT = { num_of_cities = 20 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 20
+				region = american_southwest_region
+				is_core = root
 			}
 			owns_core_province = 936	# Phoenix
 			owns_core_province = 937	# Tucson
@@ -111,21 +112,12 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			942 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			3293 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			2485 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			}

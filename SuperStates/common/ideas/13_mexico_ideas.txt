@@ -634,7 +634,7 @@ JLC_ideas = {
 		core_creation = -0.20
 	}
 	mixton_rebellion = {
-		army_tradition_decay = -1.0
+		army_tradition_decay = -0.01
 	}
 	times_of_uncertainty = {
 		discipline = 0.05
@@ -685,8 +685,7 @@ MCN_ideas = {
 		max_revolutionary_zeal = 10
 	}
 	soul_of_mexico = {
-		tolerance_heretic = 1
-		num_accepted_cultures = 1
+		prestige = 1
 	}
 	bequeath_social_justice = {
 		num_accepted_cultures = 1
@@ -752,7 +751,7 @@ NAY_ideas = {
 	}
 
 	bonus = {
-		max_states = 5
+		governing_capacity_modifier = 0.10
 	}
 	
 	trigger = {

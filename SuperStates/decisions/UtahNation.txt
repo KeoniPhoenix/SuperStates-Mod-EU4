@@ -10,7 +10,7 @@ country_decisions = {
 			NOT = { exists = FSA }
 			NOT = { exists = NAU }
 			NOT = { exists = USA }
-			NOT = { exists = ACA }
+			#NOT = { exists = ACA }
 			NOT = { exists = AZL }
 			NOT = { exists = NSP }
 			OR = {
@@ -44,10 +44,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			south_utah_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = south_utah_area
+				is_core = root
 			}
 			owns_core_province = 952 # Salt Lake
 			owns_core_province = 953 # Provo

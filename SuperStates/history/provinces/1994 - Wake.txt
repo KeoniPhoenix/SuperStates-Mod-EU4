@@ -12,6 +12,7 @@ native_size = 1
 native_ferocity = 1
 native_hostileness = 1
 discovered_by = oceanian
+discovered_by = polynesian_tech
 
 1555.1.1 = {
 	owner = PCO
