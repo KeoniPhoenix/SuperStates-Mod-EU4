@@ -476,6 +476,20 @@
  flo_defend_against_texas_modifier:0 "Guarded Against Texas"
  desc_flo_defend_against_texas_modifier:0 "We have successfully deterred Texan aggression, inspiring our soldiers."
  
+ #Dakota Mission Modifiers
+ dak_rushmore:0 "Custodians of Rushmore"
+ desc_dak_rushmore:0 "Our efforts to restore Rushmore have paid off, glory to us and these historical presidents!"
+ 
+ #Illinois Mission Modifiers
+ ili_trade:0 "Expanded Trade Networks"
+ desc_ili_trade:0 "Our efforts to control the Midwest and Great Lakes trade has been successful. We can now reap greater benefits from our merchants."
+ ili_capital:0 "A Grand Capital"
+ desc_ili_capital:0 "We have constructed a grand capital for our mighty state!"
+ 
+ #Kansas Mission Modifiers
+ kns_reconquer:0 "Reconquer Kansas City!"
+ desc_kns_reconquer:0 "Missouri has rejected our ultimatum, we must fight for control over Kansas City!"
+ 
  # New Jersey Mission Modifiers
  njy_industry:0 "Home of Industry"
  desc_njy_industry:0 "Our efforts to increase production have paid off!"
@@ -499,6 +513,74 @@
  desc_vir_norfolk_base:0 "Norfolk is the largest largest naval base in the entire United States."
  vir_richmond:0 "Renovated Richmond"
  desc_vir_richmond:0 "Our renovations of this historic city will truely benefit us."
+ 
+ #Massachusetts
+ mss_subject_mne:0 " "
+ desc_mss_subject_mne:0 " "
+ mss_city_on_hill:0 " "
+ desc_mss_city_on_hill:0 " "
+ mss_navy_expansion:0 " "
+ desc_mss_navy_expansion:0 " "
+ mss_renaissance_modifier:0 " "
+ desc_mss_renaissance_modifier:0 " "
+ 
+ #Rhode Island
+ ris_spy:0 " "
+ desc_ris_spy:0 " "
+ ris_shipyard:0 " "
+ desc_ris_shipyard:0 " "
+ ris_naval_supplies:0 " "
+ desc_ris_naval_supplies:0 " "
+ ris_roads_to_rhodes:0 "All Roads Lead to Rhodes"
+ desc_ris_roads_to_rhodes:0 " "
+ 
+ #Connecticut
+ cut_cape_navy_modifier:0 " "
+ desc_cut_cape_navy_modifier:0 " "
+ cut_victory_pennamite:0 " "
+ desc_cut_victory_pennamite:0 " "
+ cut_investments:0 " "
+ desc_cut_investments:0 " "
+ cut_manufactoring_modifier:0 " "
+ desc_cut_manufactoring_modifier:0 " "
+ 
+ #Vermont
+ vrm_defeated_ny:0 "Defeated New York"
+ desc_vrm_defeated_ny:0 "Our forces have successfully pushed back the New Yorker invaders, invigorating the morale of our troops."
+ vrm_rhode_island_navy:0 "Competent Admiralty"
+ desc_vrm_rhode_island_navy:0 "Vermont has never had a coastline nor a navy. Our recent endeavours have allowed for the establishment of a competent admiralty to rule the seas!"
+ vrm_green_boys_merc:0 "Green Mountain Boys"
+ desc_vrm_green_boys_merc:0 "The Green Mountain Boys have once again proven their loyalty and support in aiding against our enemies."
+ 
+ #New Hampshire
+ nwh_granite_modifier:0 "Granite State"
+ desc_nwh_granite_modifier:0 "High quality granite from quarries around our state have brought cheap and accessible building materials."
+ 
+ #Maine
+ mne_fishing_modifier:0 " "
+ desc_mne_fishing_modifier:0 " "
+ mne_remember_maine_modifier:0 " "
+ desc_mne_remember_maine_modifier:0 " "
+ 
+ #New England
+ new_england_trade_ship:0 " "
+ desc_new_england_trade_ship:0 " "
+ new_england_connecticut_taxes:0 " "
+ desc_new_england_connecticut_taxes:0 " "
+ new_england_forest_lodges:0 " "
+ desc_new_england_forest_lodges:0 " "
+ new_england_fund_uni_lev:0 " "
+ desc_new_england_fund_uni_lev:0 " "
+ new_england_fund_uni_no_lev:0 " "
+ desc_new_england_fund_uni_no_lev:0 " "
+ new_mid_atlantic_trade:0 " "
+ desc_new_mid_atlantic_trade:0 " "
+ new_formed_modifier:0 " "
+ desc_new_formed_modifier:0 " "
+ new_looted_modifier:0 " "
+ desc_new_looted_modifier:0 " "
+ new_looted_nyc:0 " "
+ desc_new_looted_nyc:0 " "
  
  #Misc Text
  random_new_world_region:0 "REPLACE_ME"
