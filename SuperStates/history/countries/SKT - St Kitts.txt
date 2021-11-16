@@ -2,7 +2,7 @@ government = monarchy
 add_government_reform = constitutional_monarchy
 technology_group = north_american
 primary_culture = kittitian
-add_accepted_culture = nevisan
+add_accepted_culture = nevisian
 religion = s_protestant
 capital = 494
 

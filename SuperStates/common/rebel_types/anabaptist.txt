@@ -3,6 +3,8 @@
 ######################################################################
 anabaptist_rebels = {
 
+	color = { 235 210 200 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = anabaptist

@@ -9,9 +9,9 @@ namespace = BarbudanFlavor
 
 #Barbudan Culture Event
 country_event = {
-	id = BarbudaFlavor.1
-	title = "BarbudaFlavor.1t"
-	desc = "BarbudaFlavor.1d"
+	id = BarbudanFlavor.1
+	title = "BarbudanFlavor.1t"
+	desc = "BarbudanFlavor.1d"
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {

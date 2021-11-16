@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { exists = APL }
 			NOT = { exists = NAM }
 			NOT = { exists = USA }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { has_country_flag = formed_appalachia_flag }
 			OR = {
 				culture_group = appalachian
@@ -18,7 +18,7 @@ country_decisions = {
 				tag = WVA
 				tag = FKL
 				AND = {
-					tag = TEN
+					tag = TNN
 					NOT = { owns = 2519 }	# West Tennessee and Memphis
 					NOT = { owns = 3144 }	# West Tennessee
 					NOT = { owns = 2518 }	# Middle Tennessee Nashville
@@ -60,10 +60,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			appalachia_region = {
-				ROOT = { num_of_cities = 25 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = appalachia_region
+				is_core = root
 			}
 			owns_core_province = 2520 # Knoxville
 			owns_core_province = 2523 # Asheville

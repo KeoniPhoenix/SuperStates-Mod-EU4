@@ -3,6 +3,8 @@
 ######################################################################
 austral_catholic_rebels = {
 
+	color = { 235 200 210 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = austral_catholic

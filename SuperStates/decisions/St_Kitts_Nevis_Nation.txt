@@ -11,7 +11,7 @@ country_decisions = {
 			NOT = { tag = MEX }
 			OR = {
 				tag = NES
-				primary_culture = nevisan
+				primary_culture = nevisian
 				primary_culture = kittitian
 			}
 			OR = {

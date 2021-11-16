@@ -559,7 +559,7 @@ MEX_ideas = {
 
 #Mid-Atlantic League
 
-MAA_ideas = {
+MID_ideas = {
 	start = {
 		advisor_cost = -0.15
 		light_ship_power = 0.10
@@ -570,7 +570,7 @@ MAA_ideas = {
 	}
 
 	trigger = {
-			tag = MAA
+			tag = MID
 	}
 	free = yes		#will be added at load.
 
@@ -911,7 +911,7 @@ WSI_ideas = {
 	trigger = {
 	OR = {
 		tag = WSI
-		tag = ANL
+		tag = ANI
 		}
 	}
 	free = yes      #will be added at load.

@@ -1,7 +1,8 @@
 #Miquelon
 
 culture = saint_pierrais
-religion = catholic
+# religion = catholic
+religion = s_catholic
 capital = "Miquelon-Langlade"
 trade_goods = unknown
 hre = no
@@ -9,8 +10,8 @@ base_tax = 1
 base_production = 1 
 base_manpower = 1
 
-native_size = 0
-native_ferocity = 0
+native_size = 1
+native_ferocity = 1
 native_hostileness = 0
 discovered_by = north_american
 discovered_by = mesoamerican

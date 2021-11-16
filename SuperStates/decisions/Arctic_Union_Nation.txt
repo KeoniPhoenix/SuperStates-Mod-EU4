@@ -41,9 +41,11 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 2619 # Yellowknife
 			owns_core_province = 2621 # Rankin Inlet
-			owns_core_province = 2620 # Iqaluit
 			owns_core_province = 2618 # Whitehorse
-			owns_core_province = 970  # Juneau
+			OR = {
+				owns_core_province = 2620 # Iqaluit
+				owns_core_province = 970  # Juneau
+			}
 		}
 		effect = {
 			add_country_modifier = {

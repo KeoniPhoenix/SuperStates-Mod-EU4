@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = american_state_reform
+technology_group = north_american
+religion = s_protestant
+primary_culture = south_dakotan
+capital = 1001	# Porcupine
+
+1518.1.1 = {
+    religion = s_lutheran
+}

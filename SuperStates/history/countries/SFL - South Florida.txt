@@ -5,7 +5,7 @@ primary_culture = south_floridian
 add_accepted_culture = miamian
 religion = s_catholic
 capital = 2545  # Miami
-historical_friend = MIA
+historical_friend = MIM
 historical_friend = KYS
 
 1528.1.1 = {

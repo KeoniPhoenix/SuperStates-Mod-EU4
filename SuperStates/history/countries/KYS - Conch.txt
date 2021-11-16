@@ -7,5 +7,5 @@ add_accepted_culture = south_floridian
 add_accepted_culture = cuban
 religion = s_catholic
 capital = 3029  # Monroe
-historical_friend = MIA
+historical_friend = MIM
 historical_friend = CUB

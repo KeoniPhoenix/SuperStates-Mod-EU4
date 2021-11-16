@@ -44,25 +44,37 @@ country_event = {
 
 	option = {	# We are a natural part of Massachusetts. Let us reunite our states.
 		name = "flavorMSS.2opta"
+		tooltip = {
+			FROM = {
+				vassalize = ROOT
+			}
+		}
 		ai_chance = {
 			factor = 30
 			modifier = {
 					factor = 0
 					is_rival = FROM
 			}
-			}
-		FROM = { country_event = {
-		id = flavorMSS.3
-		days = 5
+		}
+		FROM = {
+			hidden_effect = {
+				country_event = {
+					id = flavorMSS.3
+					days = 5
+				}
 			}
 		}
 	}
 	option = {	# Maine is an independent state, and will continue to be.
 		name = "flavorMSS.2optb"
+		add_prestige = 10
 		ai_chance = { factor = 70 }
-		FROM = { country_event = {
-		id = flavorMSS.4
-		days = 5
+		FROM = {
+			hidden_effect = {
+				country_event = {
+					id = flavorMSS.4
+					days = 5
+				}
 			}
 		}
 	}

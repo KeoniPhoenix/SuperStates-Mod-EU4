@@ -261,3 +261,8 @@
 # american_empire_nation_desc:0 "The revolution has been victorious! We now rightfully control the American states as an Empire of the greatest magintude ever seen on this Earth!"
 #instacore_title:0 "Instacore"
 #instacore_desc:0 "Instacore all provinces owned."
+
+s_ask_for_cardinal_title:0 "Ask Pope for Cardinal"
+s_ask_for_cardinal_desc:0 "We have finally reconnected with Rome, and for a small sum, we can have a Cardinal permanently residing in our nation."
+s_move_cardinal_title:0 "Move Cardinal to Capital"
+s_move_cardinal_desc:0 "We have been granted a Permanent Cardinal by His Holiness, yet lack a permanent cardinal in our nation. We can relocate the Cardinal to our Capital."

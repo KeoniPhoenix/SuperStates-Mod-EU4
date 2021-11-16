@@ -128,7 +128,7 @@ gov_hawaiian_monarchy = {
 
 	trigger = {
 		government = monarchy
-		tag = HAW
+		tag = HWI
 	}
 }
 

@@ -37,10 +37,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			intermountain_west_region = {
-				ROOT = { num_of_cities = 22 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 22
+				region = intermountain_west_region
+				is_core = root
 			}
 			owns_core_province = 990 # Denver
 			owns_core_province = 952 # Salt Lake

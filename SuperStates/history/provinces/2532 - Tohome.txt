@@ -24,7 +24,7 @@ discovered_by = mesoamerican
 	owner = WST
 	controller = WST
 	add_core = WST
-	add_core = MAA
+	add_core = MID
 }
 
 1675.2.4 = {

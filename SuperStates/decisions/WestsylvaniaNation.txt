@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = WST }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = FSA }
 			NOT = { exists = USA }
 			NOT = { exists = NAM }
@@ -38,15 +38,15 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			shenandoah_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = shenandoah_area
+				is_core = root
 			}
-			allegheny_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = allegheny_area
+				is_core = root
 			}
 			OR = {
 			owns_core_province = 2516 # Pikeville

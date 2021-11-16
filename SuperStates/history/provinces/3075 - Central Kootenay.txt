@@ -1,5 +1,9 @@
 #Central Kootenay
 
+latent_trade_goods = {
+	coal
+}
+
 owner = BCO
 controller = BCO
 add_core = BCO

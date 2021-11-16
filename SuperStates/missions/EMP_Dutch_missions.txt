@@ -1088,7 +1088,6 @@ emp_ned_slot4_colony_branch = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = ned_discovered_new_world
-					OR = {
 					new_world = {
 						has_discovered = ROOT
 					}
@@ -1133,7 +1132,7 @@ emp_ned_slot4_colony_branch = {
 				custom_trigger_tooltip = {
 					tooltip = cas_carib_rnw
 					any_owned_province = {
-						continent = new_world
+						superregion = america_superregion
 					}
 				}
 			}

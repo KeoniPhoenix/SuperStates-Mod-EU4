@@ -351,6 +351,13 @@ ned_colonial_group_two = {
 			create_admiral = {
 				tradition = 80
 			}
+			north_malaya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			malaya_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -359,6 +366,13 @@ ned_colonial_group_two = {
 				add_permanent_claim = ROOT
 			}
 			malacca_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			johor_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -419,19 +433,29 @@ ned_colonial_group_three = {
 		
 		provinces_to_highlight = {
 			OR = {
+				area = north_malaya_area
 				area = malaya_area
 				area = malacca_area
+				area = johor_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
+			north_malaya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			malaya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			malacca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			johor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

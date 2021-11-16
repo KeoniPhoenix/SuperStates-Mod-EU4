@@ -57,7 +57,6 @@ country_event = {
 			name = "Elizabeth"
 			dynasty = "Tudor"
 			culture = english
-			fixed = yes
 			adm = 6
 			dip = 6
 			mil = 5
@@ -73,7 +72,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = inspiring_leader_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = inspiring_leader } }
 		}
 	}
 	option = {
@@ -141,7 +140,6 @@ country_event = {
 		define_ruler = {
 			name = "Yekaterina"
 			dynasty = "Romanov"
-			fixed = yes
 			adm = 6
 			dip = 6
 			mil = 5
@@ -158,7 +156,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = expansionist_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = expansionist } }
 		}
 	}
 	option = {
@@ -224,7 +222,6 @@ country_event = {
 				name = "Kösem Sultan"
 				dynasty = "Osmanoglu"
 				culture = ruthenian
-				fixed = yes
 				adm = 5
 				dip = 4
 				mil = 5
@@ -252,7 +249,7 @@ country_event = {
 				female = yes
 			}
 			hidden_effect = {
-				add_queen_personality = incorruptible_personality
+				add_queen_personality_ancestor = { key = incorruptible }
 			}
 		}
 		else = {
@@ -260,7 +257,6 @@ country_event = {
 				name = "Kösem Sultan"
 				dynasty = "Osmanoglu"
 				culture = ruthenian
-				fixed = yes
 				adm = 5
 				dip = 4
 				mil = 5
@@ -336,7 +332,6 @@ country_event = {
 			name = "Maria Theresia"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 5
 			dip = 5
 			mil = 4
@@ -469,7 +464,6 @@ country_event = {
 			dynasty = "Vasa"
 			female = yes
 			culture = swedish
-			fixed = yes
 			adm = 2
 			dip = 3
 			mil = 3
@@ -484,7 +478,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = free_thinker_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = free_thinker } }
 		}
 	}
 	option = {
@@ -778,7 +772,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = expansionist_personality }
+			hidden_effect = { add_heir_personality_ancestor = { key = expansionist } }	
 		}
 	}
 	option = {
@@ -948,7 +942,6 @@ country_event = {
 			name = "Catherine"
 			dynasty = "de' Medici"
 			culture = tuscan
-			fixed = yes
 			adm = 4
 			dip = 2
 			mil = 3
@@ -964,7 +957,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = careful_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = careful } }
 		}
 	}
 	option = {
@@ -1022,7 +1015,6 @@ country_event = {
 		define_ruler = {
 			name = "Amalie Elisabeth"
 			culture = hessian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 2
@@ -1038,7 +1030,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = zealot_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = zealot } }
 		}
 	}
 	option = {
@@ -1099,7 +1091,6 @@ country_event = {
 	option = {
 		name = women_history_events.18.a
 		define_ruler = {
-			fixed = yes
 			name = "Jeanne"
 			dynasty = "d'Albret"
 			culture = basque
@@ -1118,7 +1109,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = entrepreneur_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = entrepreneur } }
 		}
 	}
 	option = {
@@ -1143,7 +1134,18 @@ country_event = {
 	id = women_history_events.19
 	title = women_history_events.19.t
 	desc = women_history_events.19.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
+	picture = {
+		trigger = {
+			has_dlc = "Origins"
+		}
+		picture = NZINGHA_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "Origins" }
+		}
+		picture = wihgfx_FEMALE_RULER_eventPicture
+	}
 
 	trigger = {
 		tag = NDO
@@ -1181,13 +1183,12 @@ country_event = {
 	option = {
 		name = women_history_events.19.a
 		define_ruler = {
-			fixed = yes
 			name = "Nzinga Mbandi"
 			dynasty = "Ngola"
 			culture = kongolese
-			DIP = 3
-			ADM = 2
-			MIL = 3
+			DIP = 5
+			ADM = 5
+			MIL = 5
 		}
 		if = {
 			limit = {
@@ -1199,7 +1200,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = tactical_genius_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = tactical_genius } }
 		}
 	}
 	option = {
@@ -1262,7 +1263,6 @@ country_event = {
 	option = {
 		name = women_history_events.20.a
 		define_ruler = {
-			fixed = yes
 			name = "Tarabai"
 			culture = marathi
 			dynasty = "Mohite"
@@ -1280,7 +1280,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = inspiring_leader_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = inspiring_leader } }
 		}
 	}
 	option = {
@@ -1431,12 +1431,11 @@ country_event = {
 			adm = 3
 			dip = 4
 			mil = 5
-			fixed = yes
 			culture = irish
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -1731,7 +1730,6 @@ country_event = {
 			name = "Margaret"
 			dynasty = "d'Anjou"
 			culture = cosmopolitan_french
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -1747,7 +1745,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = righteous_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = righteous } }
 		}
 	}
 	option = {
@@ -1770,7 +1768,7 @@ country_event = {
 			female = yes
 		}
 		hidden_effect = {
-			add_queen_personality = righteous_personality
+			add_queen_personality_ancestor = { key = righteous }
 		}
 	}
 	option = {
@@ -1881,7 +1879,6 @@ country_event = {
 	option = {
 		name = women_history_events.29.a
 		define_ruler = { #Change to Queen
-			fixed = yes
 			name = "Ayse Hafsa Sultan"
 			dynasty = "Osmanoglu"
 			culture = crimean
@@ -1900,7 +1897,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = silver_tongue_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = silver_tongue } }
 		}
 	}
 	option = {
@@ -1964,7 +1961,6 @@ country_event = {
 			name = "Roshanara Begum"
 			dynasty = "Timurid"
 			culture = kanauji
-			fixed = yes
 			adm = 3
 			dip = 2
 			mil = 4
@@ -1982,7 +1978,7 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = intricate_web_weaver_personality 
+				add_ruler_personality_ancestor = { key = intricate_web_weaver }
 				add_ruler_personality = embezzler_personality 
 			}
 		}
@@ -2126,7 +2122,6 @@ country_event = {
 			name = "Abbakka"
 			dynasty = "Chowta"
 			culture = kannada
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -2136,7 +2131,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = bold_fighter_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = bold_fighter } }
 		}
 	}
 	option = {
@@ -2201,7 +2196,6 @@ country_event = {
 			name = "Pari Khan Khanum"
 			dynasty = "Safavid"
 			culture = persian
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -2217,7 +2211,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = well_connected_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = well_connected } }
 		}
 	}
 	option = {
@@ -2338,7 +2332,6 @@ country_event = {
 		define_ruler = {
 			name = "Amina"
 			dynasty = "Zazzau"
-			fixed = yes
 			culture = hausa
 			dip = 4
 			adm = 5
@@ -2349,7 +2342,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = martial_educator_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = martial_educator } }
 		}
 	}
 	option = {
@@ -2433,7 +2426,6 @@ country_event = {
 		define_ruler = {
 			name = "Mandukhai Khatun"
 			dynasty = "Borjigin"
-			fixed = yes
 			dip = 4
 			adm = 5
 			mil = 6
@@ -2450,7 +2442,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = intricate_web_weaver_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = intricate_web_weaver } }
 		}
 	}
 	option = {
@@ -2561,7 +2553,6 @@ country_event = {
 			name = "Inion Dubh"
 			dynasty = "Dhomhnaill"
 			culture = irish
-			fixed = yes
 			dip = 4
 			adm = 5
 			mil = 4
@@ -2577,7 +2568,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = well_connected_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = well_connected } }
 		}
 	}
 	option = {
@@ -2634,7 +2625,6 @@ country_event = {
 			name = "Durgavati"
 			dynasty = "Garha-Mandli"
 			culture = gondi
-			fixed = yes
 			ADM = 3
 			DIP = 4
 			MIL = 5
@@ -2650,7 +2640,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = scholar_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = scholar } }
 		}
 	}
 	option = {
@@ -3088,7 +3078,6 @@ country_event = {
 		define_ruler = {
 			name = "Xiaozhuang"
 			dynasty = "Aisin Gioro"
-			fixed = yes
 			culture = chihan
 			adm = 4
 			dip = 4
@@ -3105,7 +3094,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = benevolent_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = benevolent } }
 		}
 	}
 }
@@ -3420,7 +3409,6 @@ country_event = {
 		define_ruler = {
 			name = "Ilona"
 			dynasty = "Zrinyi"
-			fixed = yes
 			culture = croatian
 			adm = 3
 			dip = 4
@@ -3437,7 +3425,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = inspiring_leader_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = inspiring_leader } }
 		}
 	}
 	option = {
@@ -4009,7 +3997,6 @@ country_event = {
 			name = "Mary"
 			dynasty = "von Habsburg"
 			culture = hungarian
-			fixed = yes
 			adm = 4
 			dip = 5
 			mil = 3
@@ -4025,7 +4012,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = silver_tongue_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = silver_tongue } }
 		}
 	}
 }
@@ -4083,7 +4070,6 @@ country_event = {
 			name = "Margaret"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 3
@@ -4099,7 +4085,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = charismatic_negotiator_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = charismatic_negotiator } }
 		}
 	}
 }
@@ -4164,7 +4150,6 @@ country_event = {
 			name = "Isabella Clara Eugenia"
 			dynasty = "von Habsburg"
 			culture = castillian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 3
@@ -4180,7 +4165,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = midas_touched_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = midas_touched } }
 		}
 	}
 }
@@ -4248,7 +4233,6 @@ country_event = {
 			name = "Urszula"
 			dynasty = "Meyerin"
 			culture = bavarian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 2
@@ -4264,7 +4248,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = pious_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = pious } }
 		}
 	} 
 }
@@ -4332,7 +4316,6 @@ country_event = {
 			name = "Elzbieta Helena"
 			dynasty = "Sieniawska"
 			culture = polish
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 2
@@ -4348,7 +4331,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = incorruptible_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = incorruptible } }
 		}
 	}
 }
@@ -4424,7 +4407,6 @@ country_event = {
 			name = "Marie Louise"
 			dynasty = "Gonzaga"
 			culture = burgundian
-			fixed = yes
 			adm = 4
 			dip = 3
 			mil = 2
@@ -4440,7 +4422,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = industrious_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = industrious } }
 		}
 	}
 }
@@ -4504,7 +4486,6 @@ country_event = {
 			name = "Maria Carolina"
 			dynasty = "von Habsburg"
 			culture = austrian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -4520,7 +4501,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = expansionist_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = expansionist } }
 		}
 	}
 }
@@ -4714,7 +4695,7 @@ country_event = {
 				female = yes
 			}
 			hidden_effect = {
-				add_queen_personality = righteous_personality
+				add_queen_personality_ancestor = { key = righteous }
 				add_queen_personality = intricate_web_weaver_personality
 			}
 		}
@@ -4739,8 +4720,8 @@ country_event = {
 				change_statists_vs_orangists = 1
 			}
 			hidden_effect = {
-				add_ruler_personality = righteous_personality
-				add_ruler_personality = intricate_web_weaver_personality
+				add_ruler_personality_ancestor = { key = righteous }
+				add_queen_personality = intricate_web_weaver_personality
 			}
 		}
 	}
@@ -4815,7 +4796,6 @@ country_event = {
 			name = "Tun Fatimah"
 			dynasty = "Srivijaya"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -4831,7 +4811,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = careful_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = careful } }
 		}
 	}
 }
@@ -4891,7 +4871,6 @@ country_event = {
 			name = "Khayr al-Nisa Begum"
 			dynasty = "Safavid" #Marashi
 			culture = mazandarani
-			fixed = yes
 			adm = 5
 			dip = 4
 			mil = 2
@@ -4908,8 +4887,8 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = secretive_personality 
-				add_ruler_personality = well_connected_personality 
+				add_ruler_personality_ancestor = { key = secretive }
+				add_ruler_personality_ancestor = { key = well_connected }
 			}
 		}
 	}
@@ -4967,7 +4946,6 @@ country_event = {
 			name = "Sophia"
 			dynasty = "Romanov"
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -4977,7 +4955,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = fierce_negotiator_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = fierce_negotiator } }
 		}
 	}
 }
@@ -5157,7 +5135,6 @@ country_event = {
 		define_ruler = {
 			name = "Ratu Hijau"
 			dynasty = "Inland"
-			fixed = yes
 			culture = malayan
 			adm = 4
 			dip = 3
@@ -5174,7 +5151,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = industrious_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = industrious } }
 		}
 	}
 	option = {
@@ -5197,7 +5174,6 @@ country_event = {
 			name = "Ratu Biru"
 			dynasty = "Inland"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -5213,7 +5189,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = entrepreneur_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = entrepreneur } }
 		}
 	}
 	option = {
@@ -5237,7 +5213,6 @@ country_event = {
 			name = "Ratu Ingu"
 			dynasty = "Inland"
 			culture = malayan
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 4
@@ -5253,7 +5228,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = scholar_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = scholar } }
 		}
 	}
 }
@@ -5316,7 +5291,6 @@ country_event = {
 		define_ruler = {
 			name = "Rani Mangammal"
 			dynasty = "Nayak"
-			fixed = yes
 			culture = tamil
 			adm = 4
 			dip = 3
@@ -5333,7 +5307,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = tolerant_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = tolerant } }
 		}
 	}
 }
@@ -5457,7 +5431,6 @@ country_event = {
 			name = "Nur Jahan"
 			dynasty = "Timurid"
 			culture = afghani
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 4
@@ -5474,8 +5447,8 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = scholar_personality
-				add_ruler_personality = well_connected_personality 
+				add_ruler_personality_ancestor = { key = scholar }
+				add_ruler_personality_ancestor = { key = well_connected }
 			}
 		}
 	}
@@ -5529,6 +5502,17 @@ country_event = {
 		}
 		add_prestige = 10
 		set_country_flag = taj_mahal_exists
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			524 = {
+				add_great_project_tier = {
+					type = taj_mahal
+					tier = 1
+				}
+			}
+		}
 	}
 }
 
@@ -5661,7 +5645,6 @@ country_event = {
 			name = "Ahilyabai"
 			dynasty = "Holkar"
 			culture = marathi
-			fixed = yes
 			ADM = 6
 			DIP = 4
 			MIL = 2
@@ -5678,7 +5661,7 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = tactical_genius_personality
+				add_ruler_personality_ancestor = { key = tactical_genius }
 				add_ruler_personality = entrepreneur_personality 
 			}
 		}
@@ -5851,7 +5834,6 @@ country_event = {
 		define_ruler = {
 			name = "Mentewab"
 			dynasty = "Solomonid"
-			fixed = yes
 			culture = amhara
 			adm = 3
 			dip = 4
@@ -5869,7 +5851,7 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = inspiring_leader_personality
+				add_ruler_personality_ancestor = { key = inspiring_leader }
 				add_ruler_personality = architectural_visionary_personality
 			}
 		}
@@ -6043,7 +6025,6 @@ country_event = {
 			name = "Elizaveta"
 			dynasty = "Romanov"
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -6060,7 +6041,7 @@ country_event = {
 				has_dlc = "Rights of Man" 
 			}
 			hidden_effect = { 
-				add_ruler_personality = silver_tongue_personality
+				add_ruler_personality_ancestor = { key = silver_tongue }
 				add_ruler_personality = scholar_personality 
 			}
 		}
@@ -6135,7 +6116,6 @@ country_event = {
 			name = "Anna"
 			dynasty = Romanov
 			culture = russian
-			fixed = yes
 			adm = 3
 			dip = 3
 			mil = 2
@@ -6151,7 +6131,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = incorruptible_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = incorruptible } }
 		}
 	}
 }
@@ -6170,7 +6150,7 @@ country_event = {
 			is_year = 1583
 		}
 		is_female = no
-		has_regency = yes
+		has_regency = no
 		NOT = {
 			has_global_flag = wih_nurbanusultan_flag
 		}
@@ -6223,7 +6203,6 @@ country_event = {
 			define_ruler = {
 				name = "Nurbanu Sultan"
 				dynasty = "Osmanoglu"
-				fixed = yes
 				culture = greek
 				religion = sunni
 				adm = 4
@@ -6253,7 +6232,7 @@ country_event = {
 				female = yes
 			}
 			hidden_effect = { 
-				add_queen_personality = secretive_personality
+				add_queen_personality_ancestor = { key = secretive }
 				add_queen_personality = silver_tongue_personality
 			}
 		}

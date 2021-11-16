@@ -1,11 +1,11 @@
-#Windham
+#Tolland
 
 owner = CUT
 controller = CUT
 add_core = CUT
 culture = connecticuter
 religion = s_catholic
-capital = "Willimantic" 
+capital = "Vernon" 
 is_city = yes #1770
 trade_goods = cloth
 hre = no 

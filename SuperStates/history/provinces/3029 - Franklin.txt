@@ -1,11 +1,11 @@
-#Franklin
+#Huntingdon
 
 owner = PNN
 controller = PNN
 add_core = PNN
 culture = western_pennsylvanian
 religion = s_protestant
-capital = "Chambersburg"
+capital = "Huntingdon"
 is_city = yes #2030
 trade_goods = grain
 hre = no
@@ -20,9 +20,9 @@ discovered_by = mesoamerican
 }
 
 1555.1.1 = {
-	owner = MAA
-	controller = MAA
-	add_core = MAA
+	owner = MID
+	controller = MID
+	add_core = MID
 }
 
 1675.2.4 = {

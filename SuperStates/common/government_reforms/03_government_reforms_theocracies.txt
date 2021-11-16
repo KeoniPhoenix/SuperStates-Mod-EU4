@@ -7,6 +7,7 @@ theocracy_mechanic = {
 	different_religion_group_acceptance = -50
 	religion = yes
 	heir = yes
+	can_customise_heir = no
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
 
@@ -206,7 +207,7 @@ kingdom_of_god_reform = {
 		global_manpower_modifier = 0.1
 		prestige = 1
 		devotion = 1
-		appoint_cardinal_cost = -0.5
+		appoint_cardinal_cost = -0.3
 		papal_influence_from_cardinals = 1.0
 	}
 	allow_normal_conversion = yes
@@ -382,7 +383,7 @@ maintain_religious_head_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
 	modifiers = {
-		yearly_absolutism = 0.1
+		yearly_absolutism = 1
 	}
 }
 
@@ -420,7 +421,7 @@ conciliarism_reform = {
 		tag = PAP
 	}
 	modifiers = {
-		appoint_cardinal_cost = -0.5
+		appoint_cardinal_cost = -0.3
 	}
 	ai = {
 		factor = 3
@@ -451,7 +452,7 @@ crown_leader_reform = {
 	}
 	effect = {
 		set_country_flag = populists_in_government
-		lose_reforms = 2
+		lose_reforms = 3
 		change_government = monarchy
 	}
 	ai = {
@@ -467,7 +468,7 @@ proclaim_republic_reform = {
 	}
 	effect = {
 		set_country_flag = populists_in_government
-		lose_reforms = 1
+		lose_reforms = 2
 		change_government = republic
 	}
 	ai = {
@@ -562,18 +563,21 @@ theocratic_democracy_reform = {
 	
 	trigger = {
 		NOT = { has_reform = monastic_order_reform }
-		OR = {
-			NOT = { has_estate = estate_nobles }
-			crown_stronger_than_estate = { estate = estate_nobles }
+		if = {
+			limit = { has_dlc = "Common Sense" }
+			OR = {
+				NOT = { has_estate = estate_nobles }
+				crown_stronger_than_estate = { estate = estate_nobles }
+			}
 		}
 	}
 
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	ai = {
 		factor = 1
@@ -621,18 +625,21 @@ regionally_elected_commanders = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
-		OR = {
-			NOT = { has_estate = estate_nobles }
-			crown_stronger_than_estate = { estate = estate_nobles }
+		if = {
+			limit = { has_dlc = "Common Sense" }
+			OR = {
+				NOT = { has_estate = estate_nobles }
+				crown_stronger_than_estate = { estate = estate_nobles }
+			}
 		}
 	}
 
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	ai = {
 		factor = 1
@@ -687,6 +694,8 @@ monastic_elections_reform = {
 		allow = { has_dlc = "Res Publica" }
 		heir = no
 		election_on_death = yes
+		duration = 4
+		has_term_election = yes
 		states_general_mechanic = {
 			militarists = {
 				manpower_recovery_speed = 0.2
@@ -722,7 +731,7 @@ commander_king_reform = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
-		full_idea_group = aristocracy_ideas
+		full_idea_group = theocracy_gov_ideas
 	}
 	modifiers = {
 		devotion = 0.1
@@ -774,6 +783,8 @@ admiral_king_reform = {
 		admirals_become_rulers = yes
 	}
 	has_term_election = no
+	queen = yes
+	royal_marriage = yes
 	heir = no
 	ai = {
 		factor = 0.1
@@ -885,6 +896,7 @@ religion_in_one_country_reform = {
 religious_permanent_revolution_reform = {
 	icon = "religious_permanent_revolution_reform"
 	allow_normal_conversion = yes
+	force_conversion_gives_global_holy_war_released_modifier = yes
 	potential = {
 		NOT = {
 			religion = confucianism
@@ -901,7 +913,7 @@ religious_permanent_revolution_reform = {
 		custom_tooltip = world_crusade_tt
 	}
 	modifiers = {
-		enforce_religion_cost = -0.4
+		enforce_religion_cost = -0.25
 	}
 	ai = {
 		factor = 3

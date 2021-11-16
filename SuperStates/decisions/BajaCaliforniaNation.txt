@@ -5,13 +5,13 @@ country_decisions = {
 		major = yes
 		potential = {
 		NOT = { has_country_flag = formed_baja_flag }
-			NOT = { exists = EUM }
+			#NOT = { exists = EUM }
 			NOT = { exists = MEX }
 			NOT = { exists = NAM }
 			NOT = { exists = ROS }
 			NOT = { exists = LBC }
 			NOT = { exists = GCL }
-			NOT = { exists = LCA }
+			#NOT = { exists = LCA }
 			NOT = { exists = PCF }
 			NOT = { exists = NSP }
 			#technology_group = mesoamerican
@@ -46,15 +46,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			baja_california_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = baja_california_area
+				is_core = root
 			}
-			baja_california_sur_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = baja_california_sur_area
+				is_core = root
 			}
 			owns_core_province = 934 # Tijuana
 			owns_core_province = 935 # Mexicali

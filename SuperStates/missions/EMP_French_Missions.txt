@@ -88,16 +88,22 @@ emp_france_missions_1 = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = fra_auld_alliance_tt
-				any_country = {
-					NOT = { tag = ENG }
-					NOT = { tag = GBR }
-					capital_scope = {
-						region = british_isles_region
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = fra_auld_alliance_tt
+					any_country = {
+						NOT = { tag = ENG }
+						NOT = { tag = GBR }
+						capital_scope = {
+							region = british_isles_region
+						}
+						has_opinion = { who = ROOT value = 100 }
+						total_development = 70
 					}
-					has_opinion = { who = ROOT value = 100 }
-					total_development = 70
+				}
+				british_isles_region = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
 				}
 			}
 		}
@@ -377,7 +383,7 @@ emp_france_missions_1_b = {
 		}
 		effect = {
 			set_country_flag = fra_louis_mission
-			country_event = { id = flavor_fra.3132 }
+			# country_event = { id = flavor_fra.3132 }
 			add_mercantilism = 5
 		}
 	}
@@ -1813,6 +1819,7 @@ emp_france_missions_5 = {
 			adm_tech = 16
 			monthly_income = 100
 			crown_land_share = 80
+			owns_core_province = 183
 		}
 		effect = {
 			add_prestige = 33

@@ -465,16 +465,16 @@ spa_colonial_group_two_rnw_off = {
 		provinces_to_highlight = {
 			OR = {
 				area = mexico_area
-				owned_by = AZT
+				# owned_by = AZT
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
 			
 		trigger = {
-			NOT = {
-				exists = AZT 
-			}
+			# NOT = {
+			# 	exists = AZT 
+			# }
 			mexico_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

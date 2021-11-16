@@ -36,15 +36,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			alaska_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = alaska_area
+				is_core = root
 			}
-			aleutia_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = aleutia_area
+				is_core = root
 			}
 			owns_core_province = 970 # Juneau
 			owns_core_province = 973 # Anchorage

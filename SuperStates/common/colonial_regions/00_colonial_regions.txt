@@ -28,7 +28,7 @@ colonial_colombia = {
 	native_size = 12
 	native_ferocity = 1
 	native_hostileness = 2
-	
+
 	trade_goods = {
 		fur = 3
 		cocoa = 7
@@ -41,11 +41,11 @@ colonial_colombia = {
 		guajiro = 15
 		inca = 6
 	}
-	
+
 	religion = {
 		animism = 10
 	}
-	
+
 	provinces = {
 		815 816 817 818 819 820 821 2820 #Quito
 		822 823 824 825 826 827 832 2812 2814 2815 2816 2817 2818 #New Granada
@@ -88,7 +88,7 @@ colonial_peru = {
 	native_size = 12
 	native_ferocity = 1
 	native_hostileness = 1
-	
+
 	trade_goods = {
 		grain = 7
 		fish = 2
@@ -124,7 +124,7 @@ colonial_peru = {
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
 	}
-	
+
 	names = {
 		trigger = {
 			owns = 813 # Cajamarca
@@ -154,7 +154,7 @@ colonial_la_plata = {
 	native_size = 12
 	native_ferocity = 1
 	native_hostileness = 4
-	
+
 	trade_goods = {
 		grain = 15
 		fish = 5
@@ -165,13 +165,13 @@ colonial_la_plata = {
 	culture = {
 		aimara = 6
 		patagonian = 10
-		#chacoan = 2
+		chacoan = 2
 		guarani = 4
 	}
 	religion = {
 		animism = 10
 	}
-	
+
 	provinces = {
 		780 781 782 786 2863 2868 2869 2870 2875 2876 #Patagonia
 		785 2843 2844 2845 2847 2867 2871 2872 2877 #Cuyo
@@ -182,9 +182,8 @@ colonial_la_plata = {
 		772 773 2850 2851 2852 #Banda Oriental
 		783 784 787 792 793 796 2840 2841 2862 2873 2874 #Chile
 		775 776 799 2882 2883 #Paraguay
-		1095 2025
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -213,7 +212,7 @@ colonial_la_plata = {
 	}
 	names = {
 		trigger = {
-			any_owned_province = { 
+			any_owned_province = {
 				area = paraguay_area
 			}
 		}
@@ -221,11 +220,11 @@ colonial_la_plata = {
 	}
 	names = {
 		trigger = { # Amélioration la Pléiade
-			any_owned_province = { 
+			any_owned_province = {
 				OR = {
 					area = southern_chile_area
 					area = central_chile_area
-					area = northern_chile_area 
+					area = northern_chile_area
 				}
 			}
 		}
@@ -251,7 +250,7 @@ colonial_brazil = {
 	native_size = 8
 	native_ferocity = 1
 	native_hostileness = 4
-	
+
 	trade_goods = {
 		sugar = 13
 		grain = 4
@@ -259,16 +258,16 @@ colonial_brazil = {
 		gold = 4
 		tobacco = 3
 	}
-	
+
 	culture = {
 		guarani = 5
 		tupinamba = 12
 	}
-	
+
 	religion = {
 		animism = 10
 	}
-	
+
 	provinces = {
 		2857 2879 2884 2887 #Rio Grande
 		759 765 2891 2892 2894 2898 2899 #Minas Gerais
@@ -280,9 +279,9 @@ colonial_brazil = {
 		750 751 753 754 755 2885 2912 2913 2915 2917 2918 2921 2922 #Pernambuco
 		749 752 2886 2923 2924 2925 2926 2927 #Maranhao
 		747 748 2890 2928 2929 2930 2933 2934 2935 #Grao-Para
-		2889 2938 #Guyana
+		2889   2938 #Guyana
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -310,7 +309,7 @@ colonial_brazil = {
 				tag = GRA
 				tag = ALG
 			}
-			religion_group = muslim			
+			religion_group = muslim
 		}
 		name = "COLONIAL_BRAZIL_new_granada"
 	}
@@ -414,4 +413,12 @@ colonial_placeholder_18 = {
 
 colonial_placeholder_19 = {
 	color = { 140 60 30 }
+}
+
+colonial_placeholder_20 = {
+	color = { 140 30 70 }
+}
+
+colonial_placeholder_21 = {
+	color = { 140 130 70 }
 }

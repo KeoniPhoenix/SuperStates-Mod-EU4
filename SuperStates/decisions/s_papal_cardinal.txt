@@ -1,0 +1,101 @@
+country_decisions = {
+	s_ask_for_cardinal = { #Ask pope for permanent cardinal
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = s_has_permanent_cardinal
+			}
+			religion = catholic
+			OR = {
+				technology_group = mesoamerican
+				technology_group = north_american
+			}
+		}
+		allow = {
+			has_discovered = 118 #Rome
+			OR = {
+				treasury = 1000
+				is_papal_controller = yes
+			}
+			if = {
+				limit = {
+					exists = PAP
+				}
+				reverse_has_opinion = {
+					who = PAP
+					value = 100
+				}
+			}
+			capital_scope = {
+				religion = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				religion = catholic
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						is_papal_controller = yes
+					}
+				}
+				add_treasury = -1000
+				add_curia_treasury = 500
+			}
+			add_papal_influence = 25
+			capital_scope = {
+				add_cardinal = yes
+				add_province_modifier = {
+					name = "s_permanent_cardinal"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				set_country_flag = s_has_permanent_cardinal
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	s_move_cardinal = { #Move Cardinal to your capital
+		major = yes
+		potential = {
+			religion = catholic
+			OR = {
+				technology_group = mesoamerican
+				technology_group = north_american
+			}
+			had_country_flag = {
+				flag = s_has_permanent_cardinal
+				days = 180
+			}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = "s_permanent_cardinal"
+				}
+			}
+		}
+		allow = {
+			religion = catholic
+			capital_scope = {
+				religion = ROOT
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_cardinal = yes
+				add_province_modifier = {
+					name = "s_permanent_cardinal"
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

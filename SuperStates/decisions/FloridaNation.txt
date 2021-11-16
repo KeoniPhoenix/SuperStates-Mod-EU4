@@ -13,7 +13,7 @@ country_decisions = {
 			NOT = { exists = ASE }
 			OR  = {
 				tag = SFL
-				tag = MIA
+				tag = MIM
 				tag = KYS
 				tag = WFL
 				primary_culture = floridian
@@ -36,25 +36,25 @@ country_decisions = {
 			}
 		}
 		allow = {
-			north_florida_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = north_florida_area
+				is_core = root
 			}
-			south_florida_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = south_florida_area
+				is_core = root
 			}
-			st_johns_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = st_johns_area
+				is_core = root
 			}
-			suncoast_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = suncoast_area
+				is_core = root
 			}
 		}	
 		effect = {

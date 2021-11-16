@@ -343,25 +343,13 @@ country_event = {
 	option = { #give gold provinces a modifier
 		name = "flavorCAL.1000opta"
 		hidden_effect = {
-			3248 = { #Inyo
+			3252 = { #Imperial
 			add_province_modifier = {
 				name = "cal_gold_mining"
 				duration = -1
 				}
 			}
-			949 = { #Clark
-				add_province_modifier = {
-					name = "cal_gold_mining"
-					duration = -1
-				}
-			}
 			2734 = { #Placer
-				add_province_modifier = {
-					name = "cal_gold_mining"
-					duration = -1
-				}
-			}
-			2733 = { #Shasta
 				add_province_modifier = {
 					name = "cal_gold_mining"
 					duration = -1
@@ -374,6 +362,12 @@ country_event = {
 				}
 			}
 			951 = { #Washoe
+				add_province_modifier = {
+					name = "cal_gold_mining"
+					duration = -1
+				}
+			}
+			950 = { #Elko
 				add_province_modifier = {
 					name = "cal_gold_mining"
 					duration = -1

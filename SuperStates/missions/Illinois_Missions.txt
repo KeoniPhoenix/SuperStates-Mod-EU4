@@ -1,0 +1,412 @@
+ili_territorial = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+	
+	ili_milwaukee = {
+		icon = mission_assemble_an_army
+		required_missions = { ili_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2558 #Milwaukee
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2558 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wisconsin_area = {
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_wisconsin = {
+		icon = mission_cannons_firing
+		required_missions = { ili_milwaukee }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_group = wisconsin_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = wisconsin_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = green_bay_area
+			}
+		}
+		effect = {
+			2577 = { #marquette
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				add_permanent_claim = ROOT
+			}
+			superior_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_minnesota = {
+		icon = mission_have_two_subjects
+		required_missions = { ili_wisconsin }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = twin_cities_area
+				area = superior_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			superior_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			twin_cities_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			the_lakes_area = {
+				add_claim = ROOT
+			}
+			add_adm_power = 100
+		}
+	}
+}
+
+ili_west = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+	
+	ili_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.8
+			num_of_generals = 1
+		}
+		effect = {
+			chicagoland_area = {
+				add_permanent_claim = ROOT
+			}
+			2554 = { #Scott
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_scott = {
+		icon = mission_have_two_subjects
+		required_missions = { ili_buildup}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2554
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2554 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			iowa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_iowa = {
+		icon = mission_conquer_50_development
+		required_missions = { ili_scott }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = iowa_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			iowa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			missouri_area = {
+				add_permanent_claim = ROOT
+			}
+			loess_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	ili_missouri = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { ili_iowa }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = missouri_area
+				area = salem_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			missouri_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			salem_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			pennyroyal_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_kentucky = {
+		icon = mission_assemble_an_army
+		required_missions = { ili_missouri }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = pennyroyal_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			pennyroyal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			kentucky_area = {
+				add_claim = ROOT
+			}
+			add_mil_power = 100
+		}
+	}
+}
+
+ili_east = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+	
+	ili_east_chicago = {
+		icon = mission_unite_home_region
+		required_missions = { ili_buildup }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2570 #St Joseph
+				province_id = 3091 #Porter
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2570 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3091 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wabash_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_indiana = {
+		icon = mission_assemble_an_army
+		required_missions = { ili_east_chicago }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = wabash_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wabash_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ohio_area = {
+				add_permanent_claim = ROOT
+			}
+			maumee_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_ohio = {
+		icon = mission_cannons_firing
+		required_missions = { ili_indiana }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = ohio_area
+				area = maumee_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = ohio_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = maumee_area
+			}
+		}
+		effect = {
+			2579 = { #cuyahoga
+				add_claim = ROOT
+			}
+			michigan_area = {
+				add_claim = ROOT
+			}
+			add_dip_power = 100
+		}
+	}
+}
+
+ili_development = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+
+	ili_chicago = {
+		icon = mission_high_income
+		required_missions = { }
+		position = 3
+
+		provinces_to_highlight = {
+			province_id = 2565 #chicago
+		}
+		trigger = {
+			2565 = {
+				owned_by = ROOT
+				development = 32
+				has_manufactory_trigger = yes
+				num_of_buildings_in_province = 4
+				religion = ROOT
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorILI.1000
+			}
+		}
+	}
+
+	ili_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2553
+				province_id = 2642
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 30
+				}
+			}
+		}
+		trigger = {
+			2553 = {
+				trade_share = {
+					country = ROOT
+					share = 60
+				}
+			}
+			2642 = {
+				trade_share = {
+					country = ROOT
+					share = 30
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = "ili_trade"
+				duration = 7300
+			}
+		}
+	}
+}

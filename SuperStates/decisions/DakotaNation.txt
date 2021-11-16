@@ -44,25 +44,25 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			red_river_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = red_river_area
+				is_core = root
 			}
-			sioux_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = sioux_area
+				is_core = root
 			}
 			east_river_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			absaroka_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = absaroka_area
+				is_core = root
 			}
 			owns_core_province = 994 # Bismarck
 			owns_core_province = 998 # Pierre

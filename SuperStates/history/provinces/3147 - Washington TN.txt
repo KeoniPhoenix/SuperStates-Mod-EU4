@@ -1,8 +1,8 @@
 #Washington, Tennessee
 
-owner = TEN
-controller = TEN
-add_core = TEN
+owner = TNN
+controller = TNN
+add_core = TNN
 add_core = FKL
 # add_core = NCR
 culture = mountaineer
@@ -34,8 +34,8 @@ discovered_by = mesoamerican
 }
 
 1675.2.5 = {
-	owner = TEN
-	controller = TEN
+	owner = TNN
+	controller = TNN
 	remove_core = CSA
 }
 

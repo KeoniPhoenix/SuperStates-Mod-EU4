@@ -1,0 +1,16 @@
+﻿l_english:
+ tooltip_new_england_capital:0 "New England Capital"
+ tooltip_superstates_development_10:0 "North American 10 development province"
+ tooltip_superstates_development_20:0 "North American 20 development province"
+ tooltip_superstates_development_5_post_1500:0 "North American 5 development province - post 1500"
+ tooltip_santa_clara_massachusetts_delaware_bay:0 "Port in the Santa Clara, Massachusetts or Delaware Valley Area"
+ tooltip_sydney_area_melbourne_area:0 "Port in the Sydney or Bass Strait Area"
+ tooltip_australia_development_10:0 "Australian 10 development province"
+ tooltip_australia_development_20:0 "Australian 20 development province"
+ tooltip_australia_development_5_post_1500:0 "Australian 5 development province - post 1500"
+ tooltip_superstates_colonialism:0 "Capital of Country with North American, Mesoamerican or Australian Technology Group"
+ tooltip_has_colonies_new_world:0 "Port/Capital of Country with a Colony in the New World or Oceania"
+ tooltip_superstates_capital_development_20:0 "North American 20 development capital"
+ tooltip_australia_capital_development_20:0 "Australian 20 development capital"
+ tooltip_oceanian_renaissance:0 "Capital of Country with Oceanian Technology Group that has discovered a nation with Renaissance embraced"
+ 

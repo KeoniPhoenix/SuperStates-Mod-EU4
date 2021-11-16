@@ -1,0 +1,111 @@
+###############################################################################
+# AMERICAN FACTIONS
+###############################################################################
+
+superstates_amer_mil = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		drill_decay_modifier = -0.20
+		leader_cost = -0.1
+		global_manpower_modifier = 0.15
+		global_sailors_modifier = 0.15
+	}
+}
+
+superstates_amer_adm = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		prestige = 0.33
+		global_tax_modifier = 0.15
+		adm_advisor_cost = -0.25
+	}
+}
+
+superstates_amer_dip ={
+	monarch_power = DIP
+	always = yes
+	
+	modifier = {
+		advisor_pool = 1
+		global_tariffs = 0.10
+		range = 0.15
+	}
+}
+
+###############################################################################
+# AUSTRALIAN AND CANADIAN FACTIONS
+###############################################################################
+
+superstates_dominion_mil = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		discipline = 0.05
+	}
+}
+
+superstates_dominion_adm = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		army_tradition = 1
+		diplomatic_upkeep = 1
+		prestige_decay = -0.02
+	}
+}
+
+superstates_dominion_dip ={
+	monarch_power = DIP
+	always = yes
+	
+	modifier = 	{
+		advisor_cost = -0.10
+		development_cost = -0.10
+		global_trade_power = 0.10
+	}
+}
+
+
+
+###############################################################################
+# MEXICAN FACTIONS
+###############################################################################
+
+superstates_mex_mil = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = 	{
+		culture_conversion_cost = -0.10
+		missionaries = 1
+		free_leader_pool = 1
+	}
+}
+
+superstates_mex_dip = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = 	{
+		spy_offence = 0.2
+		envoy_travel_time = -0.10
+		leader_land_shock = 1
+	}
+}
+
+superstates_mex_adm ={
+	monarch_power = ADM
+	always = yes
+	
+	modifier = 	{
+		global_regiment_cost = -0.10
+		global_tariffs = 0.10
+		production_efficiency = 0.10
+	}
+}

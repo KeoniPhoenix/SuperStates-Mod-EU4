@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = NJY }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = FSA }
 			NOT = { exists = NAU }
 			NOT = { exists = USA }
@@ -33,15 +33,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			north_jersey_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = north_jersey_area
+				is_core = root
 			}
-			south_jersey_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = south_jersey_area
+				is_core = root
 			}
 		}	
 		

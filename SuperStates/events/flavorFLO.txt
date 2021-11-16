@@ -343,7 +343,6 @@ country_event = {
 			add_devastation = 50
 			change_religion = ROOT
 			change_culture = ROOT
-			}
 		}
 	}
 }

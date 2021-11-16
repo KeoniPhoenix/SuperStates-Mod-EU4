@@ -1,5 +1,9 @@
 #Mackay
 
+latent_trade_goods = {
+	coal
+}
+
 owner = QLD
 controller = QLD
 add_core = QLD

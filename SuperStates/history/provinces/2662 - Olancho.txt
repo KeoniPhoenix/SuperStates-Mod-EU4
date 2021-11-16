@@ -28,13 +28,13 @@ native_hostileness = 2
 
 1537.1.1 = { capital = "Comayagua" }
 
-#1810.9.16 = {
+1810.9.16 = {
 #	add_core = MEX
-#	add_core = HND
-#	add_core = CAM
-#	controller = MEX
-#	culture = honduran
-#} # Mexican War of Independence
+	add_core = HND
+	add_core = CAM
+#	controller = MEX 
+	culture = honduran
+} # Mexican War of Independence
 
 1823.9.15 = {
 	owner = CAM

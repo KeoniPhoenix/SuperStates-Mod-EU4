@@ -12,7 +12,8 @@ country_decisions = {
 			OR = {
 				tag = MSL
 				primary_culture = bay_stater
-				primary_culture = cape_codder
+				primary_culture = nantucketer
+				primary_culture = springfielder
 				tag = MNE
 			}
 			OR = {
@@ -35,15 +36,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			massachusetts_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = massachusetts_area
+				is_core = root
 			}
-			cape_cod_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = cape_cod_area
+				is_core = root
 			}
 			owns_core_province = 2609 # Boston
 		}

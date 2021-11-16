@@ -3,6 +3,7 @@
 owner = KEN
 controller = KEN
 add_core = KEN
+add_core = WST
 # add_core = VIR
 culture = kentuckian
 religion = s_protestant
