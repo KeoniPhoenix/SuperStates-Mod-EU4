@@ -13,7 +13,7 @@ native_ferocity = 1
 native_hostileness = 2
 
 
-discovered_by = mesoamerican
+#discovered_by = mesoamerican
 
 1522.1.1 = { discovered_by = SPA }
 

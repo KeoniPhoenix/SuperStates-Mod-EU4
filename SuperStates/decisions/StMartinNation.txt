@@ -6,7 +6,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_saint_martin } #Only once
 			NOT = { exists = USM }
 			NOT = { tag = WIS }
-			NOT = { tag = ANL }
+			NOT = { tag = ANI }
 			NOT = { tag = USA }
 			NOT = { tag = NAM }
 			NOT = { tag = MEX }

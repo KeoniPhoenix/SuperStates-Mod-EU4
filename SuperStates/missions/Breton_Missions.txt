@@ -213,10 +213,9 @@ bri_2 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = has_colony_in_colonial_canada
-				canada_superregion = {
-					owner = {
-						country_or_non_sovereign_subject_holds = root
-					}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					superregion = canada_superregion
 				}
 			}
 		}
@@ -238,10 +237,9 @@ bri_2 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = has_colony_in_colonial_caribbean
-				caribbean_superregion = {
-					owner = {
-						country_or_non_sovereign_subject_holds = root
-					}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					superregion = caribbean_superregion
 				}
 			}
 		}
@@ -263,14 +261,14 @@ bri_2 = {
 		provinces_to_highlight = {
 			#the two Atlantic trade nodes
 			OR = {
-				province_id = 1490
+				province_id = 3307
 				province_id = 1516
 			}
 			NOT = { is_strongest_trade_power = root }
 			has_discovered = root
 		}
 		trigger = {
-			1490 = { is_strongest_trade_power = root }
+			3307 = { is_strongest_trade_power = root }
 			1516 = { is_strongest_trade_power = root }
 			calc_true_if = {
 				amount = 2

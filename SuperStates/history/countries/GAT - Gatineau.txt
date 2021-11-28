@@ -5,7 +5,7 @@ technology_group = north_american
 religion = s_catholic
 primary_culture = quebecois
 capital = 2007	# Gatineau
-historical_rival = TTN
+historical_rival = TTO
 historical_rival = OTW
 historical_rival = MTL
 

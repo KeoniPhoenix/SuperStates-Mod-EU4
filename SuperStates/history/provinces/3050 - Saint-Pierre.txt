@@ -1,15 +1,16 @@
 #Saint-Pierre
 
 culture = saint_pierrais
-religion = catholic
+# religion = catholic
+religion = s_catholic
 capital = "Saint-Pierre"
 trade_goods = unknown
 hre = no
 base_tax = 3
 base_production = 2 
 base_manpower = 1
-native_size = 0
-native_ferocity = 0
+native_size = 1
+native_ferocity = 1
 native_hostileness = 0
 discovered_by = north_american
 discovered_by = mesoamerican

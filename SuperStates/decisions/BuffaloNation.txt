@@ -24,31 +24,31 @@ country_decisions = {
 				}
 						}
 		allow = {
-			alberta_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = alberta_area
+				is_core = root
 			}
-			north_saskatchewan_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = north_saskatchewan_area
+				is_core = root
 			}
-			saskatchewan_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = saskatchewan_area
+				is_core = root
 			}
 			OR = {
-				peace_river_area = {
-					ROOT = { num_of_cities = 3 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 3
+					area = peace_river_area
+					is_core = root
 				}
-				athabasca_area = {
-					ROOT = { num_of_cities = 3 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 3
+					area = athabasca_area
+					is_core = root
 				}
 			}
 		}	

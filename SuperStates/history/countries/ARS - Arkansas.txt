@@ -6,7 +6,7 @@ add_accepted_culture = ozarker
 religion = s_protestant
 capital = 2493  # Little Rock
 
-1399.1.3 = {
+1443.1.3 = {
 	monarch = {
 		name = "James Conway"
 		adm = 4

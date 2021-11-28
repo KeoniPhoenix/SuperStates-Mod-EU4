@@ -1,8 +1,8 @@
 #Dyer
 
-owner = TEN
-controller = TEN
-add_core = TEN
+owner = TNN
+controller = TNN
+add_core = TNN
 add_core = WTN
 # add_core = NCR
 culture = west_tennessean
@@ -34,8 +34,8 @@ discovered_by = mesoamerican
 }
 
 1675.2.5 = {
-	owner = TEN
-	controller = TEN
+	owner = TNN
+	controller = TNN
 	remove_core = CSA
 }
 

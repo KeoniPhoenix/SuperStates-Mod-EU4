@@ -6,7 +6,7 @@ primary_culture = nickajack
 add_accepted_culture = mountaineer
 religion = s_protestant
 capital = 2509  # Madison
-historical_rival = TEN
+historical_rival = TNN
 
 1531.1.1 = {
     religion = s_baptist

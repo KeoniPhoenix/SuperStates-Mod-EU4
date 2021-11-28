@@ -1,8 +1,8 @@
 #Saint Joseph
 
-owner = IND
-controller = IND
-add_core = IND
+owner = INI
+controller = INI
+add_core = INI
 culture = hoosier
 religion = s_protestant
 capital = "South Bend"
@@ -32,8 +32,8 @@ discovered_by = mesoamerican
 }
 
 1675.2.5 = {
-	owner = IND
-	controller = IND
+	owner = INI
+	controller = INI
 	remove_core = FSA
 }
 

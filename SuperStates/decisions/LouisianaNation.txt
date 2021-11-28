@@ -12,7 +12,7 @@ country_decisions = {
 			OR = {
 				primary_culture = louisianan
 				primary_culture = cajun
-				primary_culture = orleanais
+				#primary_culture = orleanais
 			}
 			#technology_group = north_american
 			OR = {
@@ -38,15 +38,15 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			louisiana_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = louisiana_area
+				is_core = root
 			}
-			acadiana_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = acadiana_area
+				is_core = root
 			}
 			owns_core_province = 2490 # New Orleans
 			owns_core_province = 2489 # Baton Rouge

@@ -1,6 +1,8 @@
-estate_church = {
+estate_church =
+{
 	icon = 1
-	
+
+	# If true, country will get estate
 	trigger = {
 		if = {
 			limit = {
@@ -150,6 +152,19 @@ estate_church = {
 	}
 	
 	custom_name = {
+		desc = estate_ogboni
+		trigger = {
+			tag = OYO
+		}
+	}
+	custom_name = {
+		desc = estate_tengbiise
+		trigger = {
+			primary_culture = mossi
+			religion = shamanism
+		}
+	}
+	custom_name = {
 		desc = estate_monasteries
 		trigger = {
 			OR = {
@@ -169,6 +184,78 @@ estate_church = {
 		desc = estate_brahmins
 		trigger = {
 			religion = hinduism
+		}
+	}
+	custom_name = {
+		desc = estate_pastors
+		trigger = {
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_popes
+		trigger = {
+			AND = {
+				religion = orthodox
+				OR = {
+					culture_group = east_slavic
+					culture_group = south_slavic
+					culture_group = west_slavic
+				}
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_shamans
+		trigger = {
+			OR = {
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_gurus
+		trigger = {
+			religion = sikhism
+		}
+	}
+	custom_name = {
+		desc = estate_medicine_men
+		trigger = {
+			religion = totemism
+		}
+	}
+	custom_name = {
+		desc = estate_godar
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+	}
+	custom_name = {
+		desc = estate_rabbis
+		trigger = {
+			religion = jewish
+		}
+	}
+	custom_name = {
+		desc = estate_mobeds
+			trigger = {
+				religion = zoroastrian
+			}
+	}
+	custom_name = {
+		desc = estate_kannushi
+			trigger = {
+				religion = shinto
+			}
+	}
+	custom_name = {
+		desc = estate_panacas
+		trigger = {
+			religion = inti
 		}
 	}
 	custom_name = {
@@ -198,7 +285,49 @@ estate_church = {
 			tag = KOR
 			religion = confucianism
 		}
+	}
+	custom_name = {
+		desc = estate_kahuna
+		trigger = {
+			capital_scope = {
+				area = western_polynesia_area
+			}
+			primary_culture = polynesian
+			religion = animism
+		}
+	}
+	custom_name = {
+		desc = estate_tohunga
+		trigger = {
+			primary_culture = maori
+			religion = animism
+		}
+	}		
+	custom_name = {
+		desc = estate_taula_otua
+		trigger = {
+			tag = TOG
+			religion = animism
+		}
 	}	
+	custom_name = {
+		desc = estate_taula_aitu
+		trigger = {
+			tag = SAM
+			religion = animism
+		}
+	}
+	custom_name = {
+		desc = estate_bete
+		trigger = {
+			OR = {
+				tag = LAI
+				tag = VIL
+				tag = VNL
+			}
+			religion = animism
+		}
+	}
 
 	contributes_to_curia_treasury = yes
 	color = { 200 150 0 }
@@ -214,11 +343,23 @@ estate_church = {
 		estate_church_inwards_perfection
 		estate_church_enforced_one_faith
 		estate_church_for_the_faith
+		estate_church_karma_temples
+		estate_church_influence_temples
+		estate_church_brahmins_at_court
+		estate_church_lao_animism
 		estate_church_monopoly_of_incense
 		estate_church_monopoly_of_wool
 		estate_church_monopoly_of_wine
 		estate_church_monopoly_of_slaves
 		estate_church_statutory_rights
+		estate_church_yakobs_churches
+		estate_church_one_faith_one_culture
+		estate_church_religious_diplomats
+		estate_church_heir_shrine
+		estate_church_embrace_singluar_cult
+		estate_church_flexible_cults
+		estate_church_scholar_connections
+		estate_church_integrated_school
 	}
 
 	agendas = {

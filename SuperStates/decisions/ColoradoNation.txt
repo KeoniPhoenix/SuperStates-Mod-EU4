@@ -9,7 +9,7 @@ country_decisions = {
 			NOT = { exists = FSA }
 			NOT = { exists = NAU }
 			NOT = { exists = USA }
-			NOT = { exists = ACA }
+			#NOT = { exists = ACA }
 			NOT = { exists = AZL }
 			NOT = { exists = NSP }
 			OR = {
@@ -37,15 +37,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			colorado_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = colorado_area
+				is_core = root
 			}
-			north_colorado_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = north_colorado_area
+				is_core = root
 			}
 			owns_core_province = 990 # Denver
 		}

@@ -1,0 +1,63 @@
+#################################
+#Events for Superstates Cardinals
+#written by: goik
+#################################
+
+namespace = s_cardinal
+
+# Gurantee a cardinal exists in the province with "Permanent Cardinal"
+province_event = {
+	id = s_cardinal.1
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = s_permanent_cardinal
+		religion = catholic
+		has_cardinal = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		add_cardinal = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Remove Cardinal if no longer catholic
+province_event = {
+	id = s_cardinal.2
+	title = none
+	desc = none
+	picture = none
+	hidden = yes
+
+	trigger = {
+		has_province_modifier = s_permanent_cardinal
+		owner = {
+			NOT = {
+				religion = catholic
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		remove_province_modifier = s_permanent_cardinal
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -15,7 +15,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			NOT = { tag = WSI }
-			NOT = { exists = ANL }
+			NOT = { exists = ANI }
 			#NOT = { exists = WSI }
 			NOT = { has_country_flag = formed_west_indies_flag }
 			NOT = { has_country_flag = formed_antilles_flag }
@@ -66,24 +66,24 @@ country_decisions = {
 				set_government_rank = 2
 			}
 
-			change_tag = ANL
-			basseterre_area = {
+			change_tag = ANI
+			basseterre_bay_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = ANL
+				add_permanent_claim = ANI
 			}
 			anguilla_channel_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = ANL
+				add_permanent_claim = ANI
 			}
 			leeward_antilles_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = ANL
+				add_permanent_claim = ANI
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

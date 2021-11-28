@@ -49,20 +49,20 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			black_rock_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = black_rock_area
+				is_core = root
 			}
-			mojave_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = mojave_area
+				is_core = root
 			}
-			arizona_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = arizona_area
+				is_core = root
 			}
 			OR = {
 				AND = {		

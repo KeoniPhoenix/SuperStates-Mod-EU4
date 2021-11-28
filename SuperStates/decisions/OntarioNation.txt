@@ -3,17 +3,17 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = ONT }
-			NOT = { exists = NFR }
+			#NOT = { exists = NFR }
 			NOT = { exists = CAN }
-			NOT = { exists = RUP }
+			#NOT = { exists = RUP }
 			OR = {
 				tag = OTW
 				tag = GAT
 				tag = OTG
-				tag = TNT
+				tag = TTO
 			}
 			primary_culture = ontarian
-			primary_culture = northern_onarian
+			primary_culture = northern_ontarian
 			primary_culture = mantarian
 			primary_culture = torontoan
 			#technology_group = north_american
@@ -38,20 +38,20 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			northern_ontario_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = northern_ontario_area
+				is_core = root
 			}
-			ontario_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = ontario_area
+				is_core = root
 			}
-			southwest_ontario_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = southwest_ontario_area
+				is_core = root
 			}
 			owns_core_province = 2642 # Toronto
 			owns_core_province = 2643 # Ottawa

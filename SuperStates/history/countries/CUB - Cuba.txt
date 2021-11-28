@@ -5,7 +5,7 @@ primary_culture = cuban
 add_accepted_culture = miamian
 religion = catholic
 capital = 484	# Havana
-historical_friend = MIA
+historical_friend = MIM
 historical_friend = KYS
 
 1898.8.12 = {

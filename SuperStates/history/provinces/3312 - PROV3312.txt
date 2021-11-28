@@ -23,9 +23,9 @@ discovered_by = mesoamerican
 }
 
 1555.1.1 = {
-	owner = MAA
-	controller = MAA
-	add_core = MAA
+	owner = MID
+	controller = MID
+	add_core = MID
 }
 
 1675.2.4 = {

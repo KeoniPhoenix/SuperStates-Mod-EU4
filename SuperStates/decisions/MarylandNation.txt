@@ -8,7 +8,7 @@ country_decisions = {
 			NOT = { exists = FSA }
 			NOT = { exists = CSA }
 			NOT = { exists = ASE }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = NAM }
 			NOT = { exists = USA }
 			#NOT = { exists = CHS }
@@ -50,15 +50,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-		AND = {
-			owns_core_province = 2531
-			owns_core_province = 2530
-			owns_core_province = 3025
-			owns_core_province = 2532
-			OR = {
-				owns_core_province = 2730
-				owns_core_province = 2729
-			}
+			AND = {
+				owns_core_province = 2531
+				owns_core_province = 2530
+				owns_core_province = 3025
+				owns_core_province = 2532
+				OR = {
+					owns_core_province = 2730
+					owns_core_province = 2729
+				}
 			}
 		}	
 		effect = {

@@ -56,26 +56,26 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			high_plains_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = high_plains_area
+				is_core = root
 			}
-			rio_grande_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = rio_grande_area
+				is_core = root
 			}
 			OR = {
-				trans_pecos_area = {
-					ROOT = { num_of_cities = 2 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 2
+					area = trans_pecos_area
+					is_core = root
 				}
-				texarkana_area = {
-					ROOT = { num_of_cities = 1 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 1
+					area = texarkana_area
+					is_core = root
 				}
 			}
 			owns_core_province = 2478 # Austin

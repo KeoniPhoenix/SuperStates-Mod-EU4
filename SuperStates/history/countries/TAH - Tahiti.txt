@@ -1,7 +1,0 @@
-government = republic
-add_government_reform = despotic_monarchy
-government_rank = 1
-technology_group = australian
-religion = austral_catholic
-primary_culture = tahitian
-capital = 1987 #Soceity Islands

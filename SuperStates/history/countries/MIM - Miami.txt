@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+technology_group = north_american
+primary_culture = miamian
+add_accepted_culture = cuban
+add_accepted_culture = south_floridian
+religion = s_catholic
+capital = 2545  # Miami
+historical_friend = SFL
+historical_friend = CBA
+historical_friend = KYS
+
+1528.1.1 = {
+    religion = catholic
+}

@@ -1,5 +1,9 @@
 #Natrona
 
+latent_trade_goods = {
+	coal
+}
+
 owner= WYO
 controller = WYO
 add_core = WYO

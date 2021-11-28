@@ -4,7 +4,7 @@
 	# lakotah_nation = {
 		# major = yes
 		# potential = {
-			# NOT = { exists = LAK }
+			# NOT = { exists = LKA }
 			# NOT = { exists = GPL }
 			# NOT = { exists = USA }
 			# NOT = { exists = IUS }
@@ -53,9 +53,9 @@
 				# duration = 1825
 			# }
 			# add_prestige = 10
-			# change_tag = LAK
+			# change_tag = LKA
 			# change_government = constitutional_republic
-			# LAK = {
+			# LKA = {
 				# set_capital = 1001	#Porcupine
 				# 1001 = {
 				# rename_capital = Porcupine

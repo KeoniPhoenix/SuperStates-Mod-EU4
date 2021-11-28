@@ -40,19 +40,19 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			OR = {
-				is_core = 2616		#Washington DC
-				is_core = 2643		#Ottawa
+				owns_core_province = 2616		#Washington DC
+				owns_core_province = 2643		#Ottawa
 			}
-			is_core = 2642			#Toronto
-			is_core = 2657			#Montreal
-			is_core = 2635			#Vancouver
-			is_core = 2601			#New York City
-			is_core = 944			#Los Angeles
-			is_core = 2565			#Chicago
-			is_core = 2609			#Boston
+			owns_core_province = 2642			#Toronto
+			owns_core_province = 2657			#Montreal
+			owns_core_province = 2635			#Vancouver
+			owns_core_province = 2601			#New York City
+			owns_core_province = 944			#Los Angeles
+			owns_core_province = 2565			#Chicago
+			owns_core_province = 2609			#Boston
 			OR = {
-				is_core = 2480		#Dallas
-				is_core = 2487		#Houston
+				owns_core_province = 2480		#Dallas
+				owns_core_province = 2487		#Houston
 			}
 			
 		}

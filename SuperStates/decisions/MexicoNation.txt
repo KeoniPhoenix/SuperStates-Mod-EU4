@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = MEX }
 			#NOT = { exists = NAM }
-			NOT = { exists = GCL }
+			#NOT = { exists = GCL }
 			#NOT = { exists = CSZ }
 			NOT = { exists = NSP }
 			#NOT = { exists = MAY }
@@ -19,6 +19,7 @@ country_decisions = {
 				culture_group = altiplano_central
 				culture_group = gulf_mexican
 				culture_group = pacific_mexican
+				culture_group = mazatlan_mexican
 				primary_culture = new_mexican
 				primary_culture = southern_californian
 				primary_culture = tejano
@@ -47,18 +48,21 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = {
-				mexican_gulf_coast_region = {
-					ROOT = { num_of_cities = 20 }
-					owned_by = ROOT
+				num_of_owned_provinces_with = {
+					value = 20
+					region = mexican_gulf_coast_region
+					is_core = root
 				}
-				costa_oeste_region = {
-					ROOT = { num_of_cities = 20 }
-					owned_by = ROOT
+				num_of_owned_provinces_with = {
+					value = 20
+					region = costa_oeste_region
+					is_core = root
 				}
 			}
-			mexico_region = {
-				ROOT = { num_of_cities = 20 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 20
+				region = mexico_region
+				is_core = root
 			}
 			owns_core_province = 871	#Mexico City
 			OR = {

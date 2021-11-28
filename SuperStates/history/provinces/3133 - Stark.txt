@@ -1,5 +1,9 @@
 #Stark
 
+latent_trade_goods = {
+	coal
+}
+
 owner = NDK
 controller = NDK
 add_core = NDK

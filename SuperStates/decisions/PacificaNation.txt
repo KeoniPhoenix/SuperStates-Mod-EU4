@@ -10,7 +10,7 @@ country_decisions = {
 			#NOT = { exists = AZL }
 			NOT = { exists = CSC }
 			NOT = { exists = PCF }
-			NOT = { exists = LCA }
+			#NOT = { exists = LCA }
 			#NOT = { exists = NAM }
 			#NOT = { exists = ACA }
 			#NOT = { exists = NSP }
@@ -53,17 +53,20 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			jefferson_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = jefferson_area
+				is_core = root
 			}
 			oregon_area = {
 				type = all
 				owned_by = ROOT
+				is_core = ROOT
 			}
 			puget_sound_area = {
 				type = all
 				owned_by = ROOT
+				is_core = ROOT
 			}
 			OR = {
 				3136 = { # Bend
@@ -73,9 +76,10 @@ country_decisions = {
 				owned_by = ROOT
 				}
 			}
-			central_valley_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = central_valley_area
+				is_core = root
 			}
 			san_pablo_area = {
 				type = all
@@ -85,13 +89,15 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			central_coast_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = central_coast_area
+				is_core = root
 			}
-			san_diego_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = san_diego_area
+				is_core = root
 			}
 			owns_core_province = 946		#San Francisco
 			owns_core_province = 961		#Portland

@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = NYS }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = FSA }
 			NOT = { exists = NAU }
 			NOT = { exists = USA }
@@ -48,25 +48,25 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			new_york_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = new_york_area
+				is_core = root
 			}
-			erie_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = erie_area
+				is_core = root
 			}
-			adirondack_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = adirondack_area
+				is_core = root
 			}
-			hudson_valley_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = hudson_valley_area
+				is_core = root
 			}
 			owns_core_province = 2593 # Albany
 			owns_core_province = 2601 # New York

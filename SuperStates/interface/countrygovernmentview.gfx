@@ -140,7 +140,7 @@ spriteTypes = {
 		name = "GFX_tech_group_strip"
 		texturefile = "gfx//interface//tech_group_strip.dds"
 		transparencecheck = yes
-		noOfFrames = 20
+		noOfFrames = 21
 	}
 
 	spriteType = {
@@ -219,7 +219,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_country_gov_view_bg_top"
 		texturefile = "gfx/interface/country_diplomacy_view_bg_top.dds"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 
 	
@@ -242,7 +242,6 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
-
 	
 	spriteType = {
 		name = "GFX_cossacks_bg"
@@ -324,6 +323,7 @@ spriteTypes = {
 
 
 
+
 	spriteType = {
 		name = "GFX_tribal_federation_bg"
 		texturefile = "gfx/interface/tribal_federation_bg.dds"
@@ -347,10 +347,11 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+
 	spriteType = {
 		name = "GFX_tribal_federation_bar_frame"
 		texturefile = "gfx/interface/tribal_federation_bar_frame.dds"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 
 	progressbartype = {
@@ -362,10 +363,6 @@ spriteTypes = {
 		size = { x = 230 y = 17 }
 		effectFile = "gfx/FX/progress.lua"
 	}
-
-
-
-
 
 	spriteType = {
 		name = "GFX_mamluk_mechanic_bg"
@@ -394,7 +391,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_mamluk_mechanic_bar_frame"
 		texturefile = "gfx/interface/mamluk_mechanic_bar_frame.dds"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 
 }

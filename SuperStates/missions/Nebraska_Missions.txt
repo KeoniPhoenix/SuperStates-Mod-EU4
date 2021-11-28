@@ -1,0 +1,233 @@
+neb_conquests = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = NEB
+	}
+	has_country_shield = yes
+
+	neb_loess = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = loess_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			loess_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			east_river_area = {
+				add_permanent_claim = ROOT
+			}
+			sioux_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	neb_south_dakota = {
+		icon = mission_cannons_firing
+		required_missions = { neb_loess }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = sioux_area
+				area = east_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sioux_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			absaroka_area = {
+				add_permanent_claim = ROOT
+			}
+			wyoming_area = {
+				add_permanent_claim = ROOT
+			}
+			iowa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	neb_wyoming = {
+		icon = mission_conquer_5_states
+		required_missions = { neb_south_dakota }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = absaroka_area
+				area = wyoming_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = wyoming_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = absaroka_area
+			}
+		}
+		effect = {
+			montana_area = {
+				add_permanent_claim = ROOT
+			}
+			east_montana_area = {
+				add_permanent_claim = ROOT
+			}
+			kansas_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	neb_montana = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { neb_wyoming }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = montana_area
+				area = east_montana_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_montana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			montana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			west_montana_area = {
+				add_claim = ROOT
+			}
+			sakakawea_area = {
+				add_claim = ROOT
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 10
+			}
+		}
+	}
+}
+
+neb_more = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = NEB
+	}
+	has_country_shield = yes
+
+	neb_iowa = {
+		icon = mission_assemble_an_army
+		required_missions = { neb_south_dakota }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = iowa_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = iowa_area
+			}
+		}
+		effect = {
+			missouri_area = {
+				add_claim = ROOT
+			}
+			the_lakes_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	neb_kansas = {
+		icon = mission_have_two_subjects
+		required_missions = { neb_wyoming }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = kansas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = kansas_area
+			}
+		}
+		effect = {
+			west_kansas_area = {
+				add_permanent_claim = ROOT
+			}
+			north_colorado_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	neb_south = {
+		icon = mission_cannons_firing
+		required_missions = { neb_kansas }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = west_kansas_area
+				area = north_colorado_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_kansas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = north_colorado_area
+			}
+		}
+		effect = {
+			colorado_area = {
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			add_adm_power = 50
+		}
+	}
+}

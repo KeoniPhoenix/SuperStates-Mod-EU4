@@ -3,6 +3,8 @@
 ######################################################################
 s_methodist_rebels = {
 
+	color = { 225 200 135 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = s_methodist

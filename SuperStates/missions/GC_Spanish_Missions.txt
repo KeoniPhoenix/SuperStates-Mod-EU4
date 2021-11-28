@@ -558,15 +558,30 @@ gc_spain_2_b = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mexico_holy_order_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					superregion = central_america_superregion
-					value = 5
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						superregion = central_america_superregion
+						value = 5
+					}
 				}
 			}
-			superregion = central_america_superregion = {
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_alternative_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						superregion = central_america_superregion
+						value = 25
+					}
+				}
+			}
+			central_america_superregion = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

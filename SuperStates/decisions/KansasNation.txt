@@ -18,7 +18,7 @@ country_decisions = {
 			OR = {
 				tag = WSK
 				primary_culture = kansan
-				primary_culture = jayhawker
+				#primary_culture = jayhawker
 				primary_culture = west_kansan
 			}
 			OR = {
@@ -45,10 +45,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			west_kansas_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = west_kansas_area
+				is_core = root
 			}
 				}
 		effect = {

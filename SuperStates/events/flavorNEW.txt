@@ -1,0 +1,31 @@
+#New England Flavor
+namespace = flavorNEW
+
+#Sack of New york
+# country_event = {
+# 	id = flavorNEW.1
+# 	title = "flavorNEW.1.t"
+# 	desc = "flavorNEW.1.d"
+# 	picture = WOUNDED_SOLDIERS_eventPicture
+	
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = "flavorNEW.1.a"
+# 		2601 = {
+# 			add_loot_from_rich_province_general_effect = {
+# 				LOOTER = owner
+# 			}
+# 			add_province_modifier = {
+# 				name = "new_looted_modifier"
+# 				duration = 1825
+# 			}
+# 		}
+# 		capital_scope = {
+# 			add_province_modifier = {
+# 				name = "new_looted_nyc"
+# 				duration = 7300
+# 			}
+# 		}
+# 	}
+# }

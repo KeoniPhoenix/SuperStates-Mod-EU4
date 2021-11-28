@@ -1,5 +1,9 @@
 #McLennan
 
+latent_trade_goods = {
+	coal
+}
+
 owner = TEX
 controller = TEX
 add_core = TEX

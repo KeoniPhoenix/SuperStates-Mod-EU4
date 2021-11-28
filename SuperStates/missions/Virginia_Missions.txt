@@ -34,7 +34,7 @@ vir_economy = {
 		position = 2
 
 		trigger = {
-			university = 3
+			university = 8
 		}
 		effect = {
 			if = {
@@ -74,37 +74,31 @@ vir_economy = {
 					development = 10
 				}
 				3150 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
 				}
 				3154 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
 				}
 				2538 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
 				}
 				3149 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
 				}
 				2541 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
 				}
 				3011 = {
-					type = all
 					owned_by = ROOT
 					is_core = ROOT
 					development = 10
@@ -113,7 +107,7 @@ vir_economy = {
 		effect = {
 			add_country_modifier = {
 				name = "production_improvements"
-				duration = 5475
+				duration = 9125 #25 years
 			}
 			add_years_of_income = 1.25
 		}
@@ -247,8 +241,7 @@ vir_colonial_conquest = {
 			}
 		}
 		effect = {
-			add_mil_power = 150
-			add_stability_or_adm_power = yes
+			add_mil_power = 100
 			add_country_modifier = {
 				name = "vir_colonial_ambitions"
 				duration = 10950
@@ -283,13 +276,7 @@ vir_conquest = {
 			monongahela_area = {
 				add_permanent_claim = ROOT
 			}
-			3011 = {
-				add_permanent_claim = ROOT
-			}
-			2541 = {
-				add_permanent_claim = ROOT
-			}
-			3154 = {
+			shenandoah_area = {
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -338,9 +325,6 @@ vir_conquest = {
 					add_permanent_claim = ROOT
 				}
 				potomac_area = {
-					add_permanent_claim = ROOT
-				}
-				2532 = { #frederick
 					add_permanent_claim = ROOT
 				}
 				add_prestige = 15
@@ -451,14 +435,9 @@ vir_conquest = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			stability = 3
-			development_in_provinces = {
-				value = 800
-			}
+			grown_by_development = 300
 		}
 		effect = {
-			#country_event blah blah
-			#event to change capital,
-			#to Richmond(capital of Virginia), DC(capital of US), or Baltimore(For Chesapeake)
 			deep_south_region = {
 				add_permanent_claim = ROOT
 			}
@@ -529,7 +508,6 @@ vir_navy = {
 				}
 			}
 			effect = {
-				add_navy_tradition = 10
 				2534 = {
 					add_province_modifier = {
 					name = "vir_norfolk_base"
@@ -561,7 +539,6 @@ vir_chesapeake = {
 			OR = {
 				area = potomac_area
 				area = delmarva_area
-				province_id = 2532
 			}
 			NOT = {country_or_non_sovereign_subject_holds = ROOT }
 			}
@@ -571,11 +548,8 @@ vir_chesapeake = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 2
-						area = delmarva_area
-				}
-				2532 = {
+				delmarva_area = {
+					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}			
 			}
@@ -606,7 +580,6 @@ vir_chesapeake = {
 				delaware_area = {
 					add_permanent_claim = ROOT
 				}
-				add_mil_power = 100
 			}	
 		}
 
@@ -616,10 +589,10 @@ vir_chesapeake = {
 		position = 5
 
 		provinces_to_highlight = {
-			province_id = 1501
+			province_id = 3306
 		}
 		trigger = {
-			1501 = {
+			3306 = {
 				trade_share = {
 					country = ROOT
 					share = 75
@@ -630,7 +603,7 @@ vir_chesapeake = {
 			add_mercantilism = 2
 			add_country_modifier = {
 				name = "vir_chesapeake_trade"
-				duration = -1
+				duration = 9125
 			}
 		}
 	}
@@ -657,7 +630,6 @@ vir_chesapeake = {
 			}
 		}
 		effect = {
-			add_prestige = 15
 			2533 = {
 				add_base_tax = 3
 				add_base_production = 2

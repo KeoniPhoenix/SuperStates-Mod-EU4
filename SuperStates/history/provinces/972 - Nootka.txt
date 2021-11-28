@@ -3,7 +3,7 @@
 owner = ALA
 controller = ALA
 add_core = ALA
-culture = alaskan
+culture = juneauvian
 religion = s_protestant
 capital = "Cordova"
 trade_goods = gold

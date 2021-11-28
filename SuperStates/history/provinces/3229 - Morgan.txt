@@ -3,7 +3,7 @@
 owner = ALM
 controller = ALM
 add_core = ALM
-culture = nickajacker
+culture = nickajack
 religion = s_protestant
 capital = "Decatur" 
 is_city = yes #5570

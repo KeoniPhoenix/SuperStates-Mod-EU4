@@ -1,0 +1,8 @@
+government = theocracy
+add_government_reform = papacy_reform
+government_rank = 2
+primary_culture = umbrian
+religion = s_catholic
+technology_group = mesoamerican
+capital = 871	# Mexico
+fixed_capital = 871  # Cannot move capital away from this province & no power cost to move to it

@@ -1,0 +1,46 @@
+##########################
+#
+#  Written by:
+#  goik
+#
+##########################
+
+namespace = flavorILI
+
+country_event = { #chicago capital or nah
+	id = flavorILI.1000
+	title = "flavorILI.1000t"
+	desc = "flavorILI.1000d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yes to chicago
+		name = "flavorILI.1000opta"
+		set_capital = 2565
+		2565 = {
+			add_province_modifier = {
+				name = "ili_capital"
+				duration = -1
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
+		}
+	}
+
+	option = { #nah springfield is better
+		name = "flavorILI.1000optb"
+		capital_scope = {
+			add_province_modifier = {
+				name = "ili_capital"
+				duration = -1
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
+		}
+	}
+}

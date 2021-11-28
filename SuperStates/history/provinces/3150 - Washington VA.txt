@@ -3,6 +3,7 @@
 owner = VIR
 controller = VIR
 add_core = VIR
+add_core = WST
 #add_core = KWH
 culture = mountaineer
 religion = s_protestant

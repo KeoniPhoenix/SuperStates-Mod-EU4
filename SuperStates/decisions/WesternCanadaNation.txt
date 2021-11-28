@@ -39,10 +39,10 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			western_canada_region = {
-				ROOT = { num_of_cities = 25 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = western_canada_region
+				is_core = root
 			}
 			owns_core_province = 2631 # Calgary
 			owns_core_province = 2630 # Edmonton

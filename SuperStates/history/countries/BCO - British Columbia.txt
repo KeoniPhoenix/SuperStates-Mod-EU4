@@ -6,7 +6,7 @@ primary_culture = british_columbian
 add_accepted_culture = vancouverite
 capital = 2634	# Victoria
 
-1397.3.11 = {
+1443.3.11 = {
 	monarch = {
 		name = "John McCreight"
 		adm = 3

@@ -70,36 +70,36 @@ country_decisions = {
 			}
 		}
 		allow = {
-			san_diego_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = san_diego_area
+				is_core = root
 			}
-			central_coast_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = central_coast_area
+				is_core = root
 			}
-			san_francisco_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = san_francisco_area
+				is_core = root
 			}
-			central_valley_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = central_valley_area
+				is_core = root
 			}
 			OR = {
-				mojave_area = {
-					ROOT = { num_of_cities = 2 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 2
+					area = mojave_area
+					is_core = root
 				}
-				jefferson_area = {
-					ROOT = { num_of_cities = 2 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 2
+					area = jefferson_area
+					is_core = root
 				}
 			}
 			owns_core_province = 946 # San Francisco
@@ -170,427 +170,427 @@ country_decisions = {
 		}
 	}
 
-	# Alta California
-	recreate_alta_california = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = formed_alta_california_flag }
-			NOT = { exists = ACA }
-			NOT = { exists = CSC }
-			NOT = { exists = EUM }
-			NOT = { exists = MEX }
-			NOT = { exists = NAM }
-			NOT = { exists = USA }
-			NOT = { exists = NSP }
-			NOT = { exists = AZL }
-			#NOT = { exists = LCA }
-			NOT = { exists = PCF }
-			AND = {
-				government_rank = 2
-				total_development = 500
-			}
-			OR = {
-				primary_culture = californian
-				primary_culture = southern_californian
-				primary_culture = san_franciscan
-				primary_culture = utahn
-				primary_culture = nevadan
-				primary_culture = wyomingite
-				primary_culture = arizonan
-				primary_culture = baja_californian
-				primary_culture = south_baja_californian
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}
-			OR = {
-				owns = 944
-				owns = 946
-				owns = 936
-				owns = 949
-				owns = 952
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 941	# Sacramemnto
-				province_id = 946	# San Francisco
-				province_id = 944	# Los Angeles
-				province_id = 949	# Las Vegas
-				province_id = 951	# Reno
-				province_id = 936 	# Phoenix
-				province_id = 938	# Yuma
-				province_id = 952	# Salt Lake City
-				#Either one:
-				AND = {
-					province_id = 943	# San Diego
-					ROOT = { NOT = { owns_core_province = 3251 } }
-				}
-				AND = {
-					province_id = 3251	# Anaheim
-					ROOT = { NOT = { owns_core_province = 943 } }
-				}
+# 	# Alta California
+# 	recreate_alta_california = {
+# 		major = yes
+# 		potential = {
+# 			NOT = { has_country_flag = formed_alta_california_flag }
+# 			#NOT = { exists = ACA }
+# 			NOT = { exists = CSC }
+# 			#NOT = { exists = EUM }
+# 			NOT = { exists = MEX }
+# 			NOT = { exists = NAM }
+# 			NOT = { exists = USA }
+# 			NOT = { exists = NSP }
+# 			NOT = { exists = AZL }
+# 			#NOT = { exists = LCA }
+# 			NOT = { exists = PCF }
+# 			AND = {
+# 				government_rank = 2
+# 				total_development = 500
+# 			}
+# 			OR = {
+# 				primary_culture = californian
+# 				primary_culture = southern_californian
+# 				primary_culture = san_franciscan
+# 				primary_culture = utahn
+# 				primary_culture = nevadan
+# 				primary_culture = wyomingite
+# 				primary_culture = arizonan
+# 				primary_culture = baja_californian
+# 				primary_culture = south_baja_californian
+# 			}
+# 			OR = {
+# 				ai = no
+# 				AND = {
+# 					ai = yes
+# 					num_of_cities = 10
+# 				}
+# 			}
+# 			OR = {
+# 				owns = 944
+# 				owns = 946
+# 				owns = 936
+# 				owns = 949
+# 				owns = 952
+# 			}
+# 		}
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				province_id = 941	# Sacramemnto
+# 				province_id = 946	# San Francisco
+# 				province_id = 944	# Los Angeles
+# 				province_id = 949	# Las Vegas
+# 				province_id = 951	# Reno
+# 				province_id = 936 	# Phoenix
+# 				province_id = 938	# Yuma
+# 				province_id = 952	# Salt Lake City
+# 				#Either one:
+# 				AND = {
+# 					province_id = 943	# San Diego
+# 					ROOT = { NOT = { owns_core_province = 3251 } }
+# 				}
+# 				AND = {
+# 					province_id = 3251	# Anaheim
+# 					ROOT = { NOT = { owns_core_province = 943 } }
+# 				}
 				
-				#One of these Three:
-				AND = {
-					province_id = 3247	# Stockton
-					ROOT = { NOT = { owns_core_province = 945 } }
-					ROOT = { NOT = { owns_core_province = 3249 } }
-				}
-				AND = {
-					province_id = 945	# Fresno
-					ROOT = { NOT = { owns_core_province = 3247 } }
-					ROOT = { NOT = { owns_core_province = 3249 } }
-				}
-				AND = {
-					province_id = 3249	# Bakersfield
-					ROOT = { NOT = { owns_core_province = 945 } }
-					ROOT = { NOT = { owns_core_province = 3247 } }
-				}				
-				#Either One:
-				AND = {
-					province_id = 2735	# San Jose
-					ROOT = { NOT = { owns_core_province = 3246 } }
-				}
-				AND = {
-					province_id = 3246	# Oakland
-					ROOT = { NOT = { owns_core_province = 2735 } }
-				}
-				#One of these Three:
-				AND = {
-					province_id = 947	# Eureka
-					ROOT = { NOT = { owns_core_province = 3245 } }
-					ROOT = { NOT = { owns_core_province = 3250 } }
-				}
-				AND = {
-					province_id = 3245	# Santa Rosa
-					ROOT = { NOT = { owns_core_province = 947 } }
-					ROOT = { NOT = { owns_core_province = 3250 } }
-				}
-				AND = {
-					province_id = 3250	# San Rafael
-					ROOT = { NOT = { owns_core_province = 947 } }
-					ROOT = { NOT = { owns_core_province = 3245 } }
-				}
-				#One of these Three:
-				AND = {
-					province_id = 948	# Carson City
-					ROOT = { NOT = { owns_core_province = 950 } }
-					ROOT = { NOT = { owns_core_province = 3279 } }
-				}
-				AND = {
-					province_id = 950	# Elko
-					ROOT = { NOT = { owns_core_province = 948 } }
-					ROOT = { NOT = { owns_core_province = 3279 } }
-				}
-				AND = {
-					province_id = 3279	# Tonopah/Pahrump
-					ROOT = { NOT = { owns_core_province = 948 } }
-					ROOT = { NOT = { owns_core_province = 950 } }
-				}
-				#Either One:
-				AND = {
-					province_id = 939	# Prescott
-					ROOT = { NOT = { owns_core_province = 940 } }
-				}
-				AND = {
-					province_id = 940	# Flagstaff
-					ROOT = { NOT = { owns_core_province = 939 } }
-				}
-				#Either One:
-				AND = {
-					province_id = 953	# Provo
-					ROOT = { NOT = { owns_core_province = 954 } }
-				}AND = {
-					province_id = 954	# St. George
-					ROOT = { NOT = { owns_core_province = 953 } }
-				}
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+# 				#One of these Three:
+# 				AND = {
+# 					province_id = 3247	# Stockton
+# 					ROOT = { NOT = { owns_core_province = 945 } }
+# 					ROOT = { NOT = { owns_core_province = 3249 } }
+# 				}
+# 				AND = {
+# 					province_id = 945	# Fresno
+# 					ROOT = { NOT = { owns_core_province = 3247 } }
+# 					ROOT = { NOT = { owns_core_province = 3249 } }
+# 				}
+# 				AND = {
+# 					province_id = 3249	# Bakersfield
+# 					ROOT = { NOT = { owns_core_province = 945 } }
+# 					ROOT = { NOT = { owns_core_province = 3247 } }
+# 				}				
+# 				#Either One:
+# 				AND = {
+# 					province_id = 2735	# San Jose
+# 					ROOT = { NOT = { owns_core_province = 3246 } }
+# 				}
+# 				AND = {
+# 					province_id = 3246	# Oakland
+# 					ROOT = { NOT = { owns_core_province = 2735 } }
+# 				}
+# 				#One of these Three:
+# 				AND = {
+# 					province_id = 947	# Eureka
+# 					ROOT = { NOT = { owns_core_province = 3245 } }
+# 					ROOT = { NOT = { owns_core_province = 3250 } }
+# 				}
+# 				AND = {
+# 					province_id = 3245	# Santa Rosa
+# 					ROOT = { NOT = { owns_core_province = 947 } }
+# 					ROOT = { NOT = { owns_core_province = 3250 } }
+# 				}
+# 				AND = {
+# 					province_id = 3250	# San Rafael
+# 					ROOT = { NOT = { owns_core_province = 947 } }
+# 					ROOT = { NOT = { owns_core_province = 3245 } }
+# 				}
+# 				#One of these Three:
+# 				AND = {
+# 					province_id = 948	# Carson City
+# 					ROOT = { NOT = { owns_core_province = 950 } }
+# 					ROOT = { NOT = { owns_core_province = 3279 } }
+# 				}
+# 				AND = {
+# 					province_id = 950	# Elko
+# 					ROOT = { NOT = { owns_core_province = 948 } }
+# 					ROOT = { NOT = { owns_core_province = 3279 } }
+# 				}
+# 				AND = {
+# 					province_id = 3279	# Tonopah/Pahrump
+# 					ROOT = { NOT = { owns_core_province = 948 } }
+# 					ROOT = { NOT = { owns_core_province = 950 } }
+# 				}
+# 				#Either One:
+# 				AND = {
+# 					province_id = 939	# Prescott
+# 					ROOT = { NOT = { owns_core_province = 940 } }
+# 				}
+# 				AND = {
+# 					province_id = 940	# Flagstaff
+# 					ROOT = { NOT = { owns_core_province = 939 } }
+# 				}
+# 				#Either One:
+# 				AND = {
+# 					province_id = 953	# Provo
+# 					ROOT = { NOT = { owns_core_province = 954 } }
+# 				}AND = {
+# 					province_id = 954	# St. George
+# 					ROOT = { NOT = { owns_core_province = 953 } }
+# 				}
+# 			}
+# 			OR = {
+# 				NOT = { owned_by = ROOT }
+# 				NOT = { is_core = ROOT }
+# 			}
 			
-		}
-		allow = {
-			is_subject = no
-			is_at_war = no
-			# California Cores
-			owns_core_province = 941	# Sacramemnto
-			owns_core_province = 946	# San Francisco
-			owns_core_province = 944	# Los Angeles
-			OR = {
-				owns_core_province = 943	# San Diego
-				owns_core_province = 3251	# Anaheim 
-			}
-			OR = {
-				owns_core_province = 3247	# Stockton
-				owns_core_province = 945	# Fresno
-				owns_core_province = 3249	# Bakersfield
-			}
-			OR = {
-				owns_core_province = 2735	# San Jose
-				owns_core_province = 3246	# Oakland
-			}
-			OR = {
-				owns_core_province = 947	# Eureka
-				owns_core_province = 3245	# Santa Rosa
-				owns_core_province = 3250	# San Rafael
-			}
-			# Nevada Cores
-			owns_core_province = 949		# Las Vegas
-			owns_core_province = 951		# Reno
-			OR = {
-				owns_core_province = 948	# Carson City
-				owns_core_province = 950	# Elko
-				owns_core_province = 3279	# Tonopah/Pahrump
-			}
-			# Arizona Cores
-				OR = {
-					owns_core_province = 939 # Prescott
-					owns_core_province = 940 # Flagstaff
-				}
-			owns_core_province = 936 		# Phoenix
-			owns_core_province = 938 		# Yuma
-			# Utah Cores
-			owns_core_province = 952 #Salt Lake City
-			OR = {
-				owns_core_province = 953	# Provo
-				owns_core_province = 954	# St. George
-			}
-		}
-		effect = {
-			set_country_flag = formed_alta_california_flag
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 10
-			change_tag = ACA
-			change_government = republic
-			ACA = {
-				set_capital = 2736		# Monterery
-			}
-			#country_event = { id = ideagroups.1 } #Swap
+# 		}
+# 		allow = {
+# 			is_subject = no
+# 			is_at_war = no
+# 			# California Cores
+# 			owns_core_province = 941	# Sacramemnto
+# 			owns_core_province = 946	# San Francisco
+# 			owns_core_province = 944	# Los Angeles
+# 			OR = {
+# 				owns_core_province = 943	# San Diego
+# 				owns_core_province = 3251	# Anaheim 
+# 			}
+# 			OR = {
+# 				owns_core_province = 3247	# Stockton
+# 				owns_core_province = 945	# Fresno
+# 				owns_core_province = 3249	# Bakersfield
+# 			}
+# 			OR = {
+# 				owns_core_province = 2735	# San Jose
+# 				owns_core_province = 3246	# Oakland
+# 			}
+# 			OR = {
+# 				owns_core_province = 947	# Eureka
+# 				owns_core_province = 3245	# Santa Rosa
+# 				owns_core_province = 3250	# San Rafael
+# 			}
+# 			# Nevada Cores
+# 			owns_core_province = 949		# Las Vegas
+# 			owns_core_province = 951		# Reno
+# 			OR = {
+# 				owns_core_province = 948	# Carson City
+# 				owns_core_province = 950	# Elko
+# 				owns_core_province = 3279	# Tonopah/Pahrump
+# 			}
+# 			# Arizona Cores
+# 				OR = {
+# 					owns_core_province = 939 # Prescott
+# 					owns_core_province = 940 # Flagstaff
+# 				}
+# 			owns_core_province = 936 		# Phoenix
+# 			owns_core_province = 938 		# Yuma
+# 			# Utah Cores
+# 			owns_core_province = 952 #Salt Lake City
+# 			OR = {
+# 				owns_core_province = 953	# Provo
+# 				owns_core_province = 954	# St. George
+# 			}
+# 		}
+# 		effect = {
+# 			set_country_flag = formed_alta_california_flag
+# 			add_country_modifier = {
+# 				name = "centralization_modifier"
+# 				duration = 7300
+# 			}
+# 			add_prestige = 10
+# 			change_tag = ACA
+# 			change_government = republic
+# 			ACA = {
+# 				set_capital = 2736		# Monterery
+# 			}
+# 			#country_event = { id = ideagroups.1 } #Swap
 			
-			san_diego_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			mojave_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			central_valley_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			central_coast_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			san_pablo_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			san_francisco_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			if = {
-				limit = {
-					NOT = { owns_core_province = 947 }
-				}
-				947 = {
-					add_permanent_claim = ACA
-				}
-			}
-			if = {
-				limit = {
-					NOT = { owns_core_province  = 2733 }
-				}
-				2733 = {
-					add_permanent_claim = ACA
-				}
-			}
-			arizona_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			black_rock_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			salt_lake_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			south_utah_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ACA
-			}
-			957 = { # Albuquerque
-				add_permanent_claim = ACA
-			}
-			959 = { # Las Cruces
-				add_permanent_claim = ACA
-			}
-			4570 = { # Gallop
-				add_permanent_claim = ACA
-			}
-			4571 = { # Deming
-				add_permanent_claim = ACA
-			}
-			987 = { # Green River
-				add_permanent_claim = ACA
-			}
-			991 = { # Grand Junction
-				add_permanent_claim = ACA
-			}
-			3260 = { # Monterose
-				add_permanent_claim = ACA
-			}
-			992 = { # Durango
-				add_permanent_claim = ACA
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+# 			san_diego_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			mojave_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			central_valley_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			central_coast_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			san_pablo_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			san_francisco_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { owns_core_province = 947 }
+# 				}
+# 				947 = {
+# 					add_permanent_claim = ACA
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { owns_core_province  = 2733 }
+# 				}
+# 				2733 = {
+# 					add_permanent_claim = ACA
+# 				}
+# 			}
+# 			arizona_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			black_rock_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			salt_lake_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			south_utah_area = {
+# 				limit = {
+# 					NOT = { owned_by = ROOT }
+# 				}
+# 				add_permanent_claim = ACA
+# 			}
+# 			957 = { # Albuquerque
+# 				add_permanent_claim = ACA
+# 			}
+# 			959 = { # Las Cruces
+# 				add_permanent_claim = ACA
+# 			}
+# 			4570 = { # Gallop
+# 				add_permanent_claim = ACA
+# 			}
+# 			4571 = { # Deming
+# 				add_permanent_claim = ACA
+# 			}
+# 			987 = { # Green River
+# 				add_permanent_claim = ACA
+# 			}
+# 			991 = { # Grand Junction
+# 				add_permanent_claim = ACA
+# 			}
+# 			3260 = { # Monterose
+# 				add_permanent_claim = ACA
+# 			}
+# 			992 = { # Durango
+# 				add_permanent_claim = ACA
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			factor = 1
+# 		}
+# 	}
 
-	## LAS CALIFORNIAS
-	las_californias_nation = {
-	major = yes
-	potential = {
-		NOT = { has_country_flag = formed_las_californias_flag }
-		NOT = { exists = CSC }
-		NOT = { exists = MEX }
-		NOT = { exists = NAM }
-		NOT = { exists = USA }
-		NOT = { exists = PCF }
-		NOT = { exists = ACA }
-		NOT = { has_country_flag = las_california_decision }
-		#OR = {
-		#	technology_group = north_american
-		#	technology_group = mesoamerican
-		#}
-			OR = {
-			primary_culture = californian
-			primary_culture = southern_californian
-			primary_culture = san_franciscan
-			primary_culture = baja_californian
-			primary_culture = south_baja_californian
-			primary_culture = jeffersonian
-		}
-		OR = {
-			ai = no
-			AND = {
-				ai = yes
-				num_of_cities = 5
-			}
-		}
-	}
-	provinces_to_highlight = {
-		OR = {
-			area = baja_california_area
-			area = baja_california_sur_area
-			area = san_diego_area
-			area = mojave_area
-			area = central_coast_area
-			area = central_valley_area
-			area = san_francisco_area
-			area = san_pablo_area
-			area = jefferson_area
-		}
-		OR = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-	}
-	allow = {
-		is_subject = no
-		is_at_war = no
-		baja_california_area = {
-			type = all
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		baja_california_sur_area = {
-			type = all
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		san_diego_area = {
-			type = all 
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		mojave_area = {
-			ROOT = { num_of_cities = 2 }
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		central_valley_area = {
-			ROOT = { num_of_cities = 4 }
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		central_coast_area = {
-			ROOT = { num_of_cities = 3 }
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		san_pablo_area = {
-			type = all 
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		san_francisco_area = {
-			type = all 
-			owned_by = ROOT
-			is_core = ROOT
-		}
-		jefferson_area = {
-			ROOT = { num_of_cities = 2 }
-			owned_by = ROOT
-			is_core = ROOT
-		}
-	}
-	effect = {
-	set_country_flag = formed_las_californias_flag
-		add_prestige = 10
-		override_country_name = LAS_CALIFORNIAS
-		hidden_effect = {
-			set_country_flag = las_california_decision
-		}
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
+# 	## LAS CALIFORNIAS
+# 	las_californias_nation = {
+# 	major = yes
+# 	potential = {
+# 		NOT = { has_country_flag = formed_las_californias_flag }
+# 		NOT = { exists = CSC }
+# 		NOT = { exists = MEX }
+# 		NOT = { exists = NAM }
+# 		NOT = { exists = USA }
+# 		NOT = { exists = PCF }
+# 		NOT = { exists = ACA }
+# 		NOT = { has_country_flag = las_california_decision }
+# 		#OR = {
+# 		#	technology_group = north_american
+# 		#	technology_group = mesoamerican
+# 		#}
+# 			OR = {
+# 			primary_culture = californian
+# 			primary_culture = southern_californian
+# 			primary_culture = san_franciscan
+# 			primary_culture = baja_californian
+# 			primary_culture = south_baja_californian
+# 			primary_culture = jeffersonian
+# 		}
+# 		OR = {
+# 			ai = no
+# 			AND = {
+# 				ai = yes
+# 				num_of_cities = 5
+# 			}
+# 		}
+# 	}
+# 	provinces_to_highlight = {
+# 		OR = {
+# 			area = baja_california_area
+# 			area = baja_california_sur_area
+# 			area = san_diego_area
+# 			area = mojave_area
+# 			area = central_coast_area
+# 			area = central_valley_area
+# 			area = san_francisco_area
+# 			area = san_pablo_area
+# 			area = jefferson_area
+# 		}
+# 		OR = {
+# 			NOT = { owned_by = ROOT }
+# 			NOT = { is_core = ROOT }
+# 		}
+# 	}
+# 	allow = {
+# 		is_subject = no
+# 		is_at_war = no
+# 		baja_california_area = {
+# 			type = all
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		baja_california_sur_area = {
+# 			type = all
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		san_diego_area = {
+# 			type = all 
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		mojave_area = {
+# 			ROOT = { num_of_cities = 2 }
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		central_valley_area = {
+# 			ROOT = { num_of_cities = 4 }
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		central_coast_area = {
+# 			ROOT = { num_of_cities = 3 }
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		san_pablo_area = {
+# 			type = all 
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		san_francisco_area = {
+# 			type = all 
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 		jefferson_area = {
+# 			ROOT = { num_of_cities = 2 }
+# 			owned_by = ROOT
+# 			is_core = ROOT
+# 		}
+# 	}
+# 	effect = {
+# 	set_country_flag = formed_las_californias_flag
+# 		add_prestige = 10
+# 		override_country_name = LAS_CALIFORNIAS
+# 		hidden_effect = {
+# 			set_country_flag = las_california_decision
+# 		}
+# 	}
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+# }
 }

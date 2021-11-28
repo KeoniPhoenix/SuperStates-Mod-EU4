@@ -2,6 +2,7 @@
 #
 #  Written by:
 #  KeoniPhoenix
+#  goik
 #
 ##########################
 
@@ -45,6 +46,192 @@ country_event = {
 				name = "gunfight_disturbance"
 				duration = 365
 			}
+		}
+	}
+}
+
+country_event = { #Kansas Crisis
+	id = flavorKNS.1000
+	title = "flavorKNS.1000t"
+	desc = "flavorKNS.1000d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "flavorKNS.1000opta" #Kansas demands Kansas City
+		trigger = {
+			NOT = {
+				OR = {
+					2499 = {
+						owned_by = ROOT
+					}
+					is_year = 1450
+				}
+			}
+			2499 = {
+				owned_by = MOU
+			}
+		}
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 20
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 20
+				has_any_disaster = yes
+			}
+		}
+		custom_tooltip = kansas_demand_city_tooltip
+		MOU = {
+			hidden_effect = { country_event = { id = flavorKNS.1001 days = 1 } }
+		}
+	}
+
+	option = { #Kansas doesn't demand Kansas City
+		name = "flavorKNS.1000optb"
+		trigger = {
+			NOT = {
+				OR = {
+					2499 = {
+						owned_by = ROOT
+					}
+					is_year = 1450
+				}
+			}
+			2499 = {
+				owned_by = MOU
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		2499 = {
+			remove_claim = ROOT
+		}
+		add_prestige = -10
+	}
+
+	option = { #Kansas fails to act before 1450 or missouri lost 
+		name = "flavorKNS.1000optc"
+		trigger = {
+			OR = {
+				is_year = 1450
+				NOT = {
+					2499 = {
+						owned_by = MOU
+					}
+				}
+			}
+			NOT = {
+				2499 = {
+					owned_by = ROOT
+				}
+			}
+		}
+		2499 = {
+			remove_claim = ROOT
+		}
+		add_prestige = -15
+	}
+
+	option = { #If Kansas already owns it no need to demand it
+		name = "flavorKNS.1000optd"
+		trigger = {
+			2499 = {
+				owned_by = ROOT
+			}
+		}
+		add_prestige = 5
+	}
+}
+
+country_event = { #Missouri reaction to demands
+	id = flavorKNS.1001
+	title = "flavorKNS.1001t"
+	desc = "flavorKNS.1001d"
+	picture = WOUNDED_SOLIDERS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Missouri says no to demands
+		name = "flavorKNS.1001opta"
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 85
+				is_at_war = yes
+			}
+		}
+		custom_tooltip = kansas_missouri_no_tooltip
+		KNS = { hidden_effect = { country_event = { id = flavorKNS.1002 days = 1 } } }
+	}
+
+	option = { #Missouri folds and says yes
+		name = "flavorKNS.1001optb"
+		ai_chance = {
+			factor = 5
+		}
+		tooltip = {
+			add_truce_with = KNS
+			2499 = {
+				cede_province = KNS
+			}
+		}
+		add_prestige = -15
+		add_stability = -1
+		KNS = { hidden_effect = { country_event = { id = flavorKNS.1003 days = 1 } } }
+	}
+}
+
+country_event = { #Kansas reaction to "no", gets core and morale
+	id = flavorKNS.1002
+	title = "flavorKNS.1002t"
+	desc = "flavorKNS.1002d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavorKNS.1002opta"
+		2499 = {
+			add_core = ROOT
+		}
+		add_country_modifier = {
+			name = "kns_reconquer"
+			duration = 5475
+		}
+	}
+}
+
+country_event = { #Kansas reaction to "yes", wow so lucky!
+	id = flavorKNS.1003
+	title = "flavorKNS.1003t"
+	desc = "flavorKNS.1003d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavorKNS.1003opta"
+		add_truce_with = MOU
+		2499 = {
+			cede_province = KNS
+			add_core = KNS
 		}
 	}
 }

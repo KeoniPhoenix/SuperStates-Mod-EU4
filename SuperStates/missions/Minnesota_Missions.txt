@@ -1,0 +1,228 @@
+mnn_conquest = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNN
+	}
+	has_country_shield = yes
+
+	mnn_wisconsin = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = wisconsin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = wisconsin_area
+			}
+		}
+		effect = {
+			east_river_area = {
+				add_permanent_claim = ROOT
+			}
+			red_river_area = {
+				add_permanent_claim = ROOT
+			}
+			sakakawea_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mnn_territorial = {
+		icon = mission_conquer_5_states
+		required_missions = { mnn_wisconsin }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = east_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			loess_area = {
+				add_permanent_claim = ROOT
+			}
+			iowa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mnn_iowa = {
+		icon = mission_assemble_an_army
+		required_missions = { mnn_territorial }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_group = iowa_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				province_group = iowa_provincegroup
+			}
+		}
+		effect = {
+			wisconsin_area = {
+				add_permanent_claim = ROOT
+			}
+			sioux_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mnn_nebraska = {
+		icon = mission_conquer_5_states
+		required_missions = { mnn_iowa }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = sioux_area
+				area = loess_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = sioux_area
+			}
+			loess_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			nebraska_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+mnn_more = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MNN
+	}
+	has_country_shield = yes
+
+	mnn_north_dakota = {
+		icon = mission_have_two_subjects
+		required_missions = { mnn_territorial }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_area
+				area = sakakawea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = sakakawea_area
+			}
+			red_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			3072 = { #hanover
+				add_claim = ROOT 
+			}
+			2672 = { #Patricia
+				add_claim = ROOT
+			}
+			2649 = { #Thunder Bay
+				add_claim = ROOT
+			}
+		}
+	}
+
+	mnn_wisconsin_2 = {
+		icon = mission_cannons_firing
+		required_missions = { mnn_iowa }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = wisconsin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wisconsin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			green_bay_area = {
+				add_permanent_claim = ROOT
+			}
+			upper_peninsula_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mnn_upper = {
+		icon = mission_conquer_50_development
+		required_missions = { mnn_wisconsin_2 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+				area = upper_peninsula_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			green_bay_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = upper_peninsula_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			illinois_area = {
+				add_claim = ROOT
+			}
+			chicagoland_area = {
+				add_claim = ROOT
+			}
+			northern_ontario_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
