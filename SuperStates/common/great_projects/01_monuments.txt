@@ -4583,6 +4583,7 @@ mesa_verde = {
 			religion = totemism
 			#culture_group = native_american
 			culture = navajo
+			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
 			}
@@ -4610,6 +4611,7 @@ mesa_verde = {
 			religion = totemism
 			#culture_group = native_american
 			culture = navajo
+			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
 			}
@@ -4625,8 +4627,10 @@ mesa_verde = {
 	can_upgrade_trigger = {
 		OR = {
 			religion = totemism
+			religion = mesoamerican_religion
 			#culture_group = native_american
 			culture = navajo
+			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
 			}
@@ -4693,7 +4697,8 @@ mesa_verde = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			technology_cost = -0.05
+			technology_cost = -0.025
+			move_capital_cost_modifier = -0.10
 		}
 
 		#what effects happen when this tier is achieved
@@ -4723,8 +4728,9 @@ mesa_verde = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {	
-			idea_cost = -0.05
+			idea_cost = -0.025
 			technology_cost = -0.05
+			move_capital_cost_modifier = -0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -4754,8 +4760,9 @@ mesa_verde = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			idea_cost = -0.1
-			technology_cost = -0.1
+			idea_cost = -0.05
+			technology_cost = -0.05
+			move_capital_cost_modifier = -0.25
 		}
 
 		#what effects happen when this tier is achieved
@@ -15297,6 +15304,7 @@ san_antonio_missions = {
 	type = monument
 
 	build_trigger = {
+		has_owner_religion = yes
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
@@ -15321,6 +15329,7 @@ san_antonio_missions = {
 	}
 
 	can_use_modifiers_trigger = {
+		has_owner_religion = yes
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
@@ -15339,6 +15348,7 @@ san_antonio_missions = {
 	}
 
 	can_upgrade_trigger = {
+		has_owner_religion = yes
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
@@ -17107,7 +17117,7 @@ statue_of_liberty = {
 	build_cost = 0
 	can_be_moved = yes
 	move_days_per_unit_distance = 15
-	starting_tier = 1
+	starting_tier = 0
 
 	type = monument
 	build_trigger = { }
@@ -17168,6 +17178,7 @@ statue_of_liberty = {
 
 		country_modifiers = {
 			reform_progress_growth = 0.10
+			improve_relation_modifier = 0.10
 		}
 
 		on_upgraded = {
@@ -17192,7 +17203,7 @@ statue_of_liberty = {
 
 		country_modifiers = {
 			reform_progress_growth = 0.15
-			improve_relation_modifier = 0.20
+			improve_relation_modifier = 0.15
 		}
 
 		on_upgraded = {
@@ -17217,7 +17228,7 @@ statue_of_liberty = {
 
 		country_modifiers = {
 			reform_progress_growth = 0.15
-			improve_relation_modifier = 0.25
+			improve_relation_modifier = 0.20
 			diplomatic_reputation = 1
 		}
 
@@ -17389,7 +17400,7 @@ castillo_de_san_marcos = {
 	build_trigger = {
 		OR = {
 					culture = floridian
-					culture = south_floridian
+					#culture = south_floridian
 					culture_group = british
 					culture_group = iberian
 				}
@@ -17407,7 +17418,7 @@ castillo_de_san_marcos = {
 	can_use_modifiers_trigger = {
 				OR = {
 					culture = floridian
-					culture = south_floridian
+					#culture = south_floridian
 					culture_group = british
 					culture_group = iberian
 				}
@@ -17420,7 +17431,7 @@ castillo_de_san_marcos = {
 	can_upgrade_trigger = {
 		OR = {
 					culture = floridian
-					culture = south_floridian
+					#culture = south_floridian
 					culture_group = british
 					culture_group = iberian
 				}
@@ -17465,9 +17476,8 @@ castillo_de_san_marcos = {
 		}
 
 		province_modifiers = {
+			local_defensiveness = 0.15
 			blockade_force_required = 0.50
-			hostile_disembark_speed = 1
-			local_defensiveness = 0.10
 		}
 		
 		area_modifier = {
@@ -17491,12 +17501,13 @@ castillo_de_san_marcos = {
 		}
 
 		province_modifiers = {
-			blockade_force_required = 0.75
-			hostile_disembark_speed = 1.5
-			local_defensiveness = 0.15
+			local_hostile_attrition = 0.50
+			blockade_force_required = 1
+			hostile_fleet_attrition = 5
 		}
 
 		area_modifier = {
+			local_defensiveness = 0.15
 		}
 
 		country_modifiers = {
@@ -17522,12 +17533,13 @@ castillo_de_san_marcos = {
 		}
 
 		province_modifiers = {
+			local_hostile_attrition = 1
 			blockade_force_required = 1
-			hostile_disembark_speed = 2
-			local_defensiveness = 0.20
+			hostile_fleet_attrition = 10
 		}
 
 		area_modifier = {
+			local_defensiveness = 0.25
 		}
 
 		country_modifiers = {
@@ -17687,6 +17699,7 @@ french_quarter = {
 	build_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture = louisianan
 		}
 		OR = {
@@ -17703,6 +17716,7 @@ french_quarter = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture = louisianan
 		}
 		OR = {
@@ -17714,6 +17728,7 @@ french_quarter = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture = louisianan
 		}
 		OR = {
@@ -17765,6 +17780,7 @@ french_quarter = {
 
 		country_modifiers = {
 			num_accepted_cultures = 1
+			same_culture_advisor_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -17789,8 +17805,9 @@ french_quarter = {
 		}
 
 		country_modifiers = {
-			num_accepted_cultures = 1
+			num_accepted_cultures = 2
 			tolerance_heretic = 1
+			same_culture_advisor_cost = -0.15
 		}
 
 		on_upgraded = {
@@ -17817,6 +17834,7 @@ french_quarter = {
 		country_modifiers = {
 			num_accepted_cultures = 2
 			tolerance_heretic = 2
+			same_culture_advisor_cost = -0.25
 		}
 
 		on_upgraded = {
@@ -17885,7 +17903,8 @@ alcatraz = {
 		}
 
 		province_modifiers = {
-			local_defensiveness = 0.25
+			local_defensiveness = 0.15
+			blockade_force_required = 0.50
 		}
 		
 		area_modifier = {
@@ -17893,6 +17912,8 @@ alcatraz = {
 
 		country_modifiers = {
 			global_spy_defence = 0.15
+			spy_offence = 0.10
+			fabricate_claims_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -17909,15 +17930,19 @@ alcatraz = {
 		}
 
 		province_modifiers = {
-			local_defensiveness = 0.25
+			local_hostile_attrition = 0.50
+			blockade_force_required = 1
+			hostile_fleet_attrition = 5
 		}
 
 		area_modifier = {
+			local_defensiveness = 0.15
 		}
 
 		country_modifiers = {
 			global_spy_defence = 0.20
-			army_tradition = 0.50
+			spy_offence = 0.15
+			fabricate_claims_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -17934,16 +17959,19 @@ alcatraz = {
 		}
 
 		province_modifiers = {
-			local_defensiveness = 0.30
+			local_hostile_attrition = 1
+			blockade_force_required = 1
+			hostile_fleet_attrition = 10
 		}
 
 		area_modifier = {
-			local_defensiveness = 0.05
+			local_defensiveness = 0.25
 		}
 
 		country_modifiers = {
 			global_spy_defence = 0.25
-			army_tradition = 1
+			spy_offence = 0.20
+			fabricate_claims_cost = -0.25
 		}
 
 		on_upgraded = {
@@ -18028,13 +18056,13 @@ golden_gate = {
 		}
 
 		province_modifiers = {
+		}
+		
+		area_modifier = {
 			local_friendly_movement_speed = 0.10
 			# 946 = {
 				# local_friendly_movement_speed = 0.10
 			# }
-		}
-		
-		area_modifier = {
 		}
 
 		country_modifiers = {
@@ -18256,7 +18284,7 @@ salt_lake_temple = {
 }
 
 palmyra_temple = {
-	start = 2597 #Monroe
+	start = 2597 #Monroe, NY
 	date = 1444.01.01 #1716.01.01
 	time = {
 		months = 0
@@ -18650,7 +18678,7 @@ fort_knox = {
 
 		country_modifiers = {
 			global_tax_income = 6
-			inflation_reduction = 0.10
+			inflation_reduction = 0.05
 		}
 
 		on_upgraded = {
@@ -18676,7 +18704,7 @@ fort_knox = {
 
 		country_modifiers = {
 			global_tax_income = 12
-			inflation_reduction = 0.15
+			inflation_reduction = 0.075
 			interest = -0.50
 		}
 
@@ -18702,7 +18730,7 @@ fort_knox = {
 
 		country_modifiers = {
 			global_tax_income = 18
-			inflation_reduction = 0.20
+			inflation_reduction = 0.10
 			interest = -1
 		}
 
@@ -18725,10 +18753,6 @@ nashville_parthenon = {
 
 	type = monument
 	build_trigger = {
-	AND = {
-			has_owner_accepted_culture = yes
-			has_owner_religion = yes
-		}
 	}
 	on_built = {
 		#show_ambient_object = parthenon
@@ -18739,17 +18763,9 @@ nashville_parthenon = {
 	}
 
 	can_use_modifiers_trigger = {
-		AND = {
-			has_owner_accepted_culture = yes
-			has_owner_religion = yes
-		}
 	}
 
 	can_upgrade_trigger = {
-		AND = {
-			has_owner_accepted_culture = yes
-			has_owner_religion = yes
-		}
 	}
 
 	keep_trigger = {
@@ -18964,6 +18980,7 @@ ryman_auditorium = {
 
 		country_modifiers = {
 			stability_cost_modifier = -0.10
+			years_of_nationalism = -2.5
 		}
 
 		on_upgraded = {
@@ -19039,8 +19056,9 @@ denali = {
 		OR = {
 			culture_group = western_canadian
 			culture_group = arctic_canadian
-			culture = vancouverite
+			#culture = juneauvian
 			culture = haida
+			religion = totemism
 		}
 		OR = {
 			has_owner_culture = yes
@@ -19057,7 +19075,7 @@ denali = {
 		OR = {
 			culture_group = western_canadian
 			culture_group = arctic_canadian
-			culture = vancouverite
+			#culture = juneauvian
 			culture = haida
 		}
 		OR = {
@@ -19070,7 +19088,7 @@ denali = {
 		OR = {
 			culture_group = western_canadian
 			culture_group = arctic_canadian
-			culture = vancouverite
+			#culture = juneauvian
 			culture = haida
 		}
 		OR = {
@@ -19126,7 +19144,7 @@ denali = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.10
+			land_attrition = -0.05
 			fort_maintenance_modifier = -0.10
 		}
 
@@ -19153,7 +19171,7 @@ denali = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.15
+			land_attrition = -0.10
 			fort_maintenance_modifier = -0.15
 		}
 
@@ -19181,7 +19199,7 @@ denali = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.20
+			land_attrition = -0.15
 			fort_maintenance_modifier = -0.20
 		}
 
@@ -19336,7 +19354,7 @@ everglades = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -19909,7 +19927,7 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.05
+			land_morale = 0.025
 			recover_army_morale_speed = 0.05
 		}
 
@@ -19934,7 +19952,7 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.10
+			land_morale = 0.05
 			recover_army_morale_speed = 0.10
 			leader_land_shock = 1
 		}
@@ -19960,10 +19978,9 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.10
+			land_morale = 0.075
 			recover_army_morale_speed = 0.15
 			leader_land_shock = 1
-			leader_land_manuever = 1
 		}
 
 		on_upgraded = {
@@ -19971,166 +19988,166 @@ washington_monument = {
 	}
 }
 
-lincoln_memorial = {
-	start = 2616 #Washington
-	date = 1444.01.01 #1716.01.01
-	time = {
-		months = 0
-	}
+# lincoln_memorial = {
+# 	start = 2616 #Washington
+# 	date = 1444.01.01 #1716.01.01
+# 	time = {
+# 		months = 0
+# 	}
 
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 1
-	starting_tier = 1
+# 	build_cost = 0
+# 	can_be_moved = no
+# 	move_days_per_unit_distance = 1
+# 	starting_tier = 1
 
-	type = monument
-	build_trigger = {
-		AND = {
-			owner = {
-				capital_scope = {
-					superregion = america_superregion
-				}
-			}
-			owner = {
-				NOT = { culture_group = southerner }
-			}
-		}
-	}
-	on_built = {
-	}
+# 	type = monument
+# 	build_trigger = {
+# 		AND = {
+# 			owner = {
+# 				capital_scope = {
+# 					superregion = america_superregion
+# 				}
+# 			}
+# 			owner = {
+# 				NOT = { culture_group = southerner }
+# 			}
+# 		}
+# 	}
+# 	on_built = {
+# 	}
 	
-	on_destroyed = {
-	}
+# 	on_destroyed = {
+# 	}
 
-	can_use_modifiers_trigger = {
-		AND = {
-			owner = {
-				capital_scope = {
-					superregion = america_superregion
-				}
-			}
-			owner = {
-				NOT = { culture_group = southerner }
-			}
-		}
-	}
+# 	can_use_modifiers_trigger = {
+# 		AND = {
+# 			owner = {
+# 				capital_scope = {
+# 					superregion = america_superregion
+# 				}
+# 			}
+# 			owner = {
+# 				NOT = { culture_group = southerner }
+# 			}
+# 		}
+# 	}
 
-	can_upgrade_trigger = {
-		AND = {
-			owner = {
-				capital_scope = {
-					superregion = america_superregion
-				}
-			}
-			owner = {
-				NOT = { culture_group = southerner }
-			}
-		}
-	}
+# 	can_upgrade_trigger = {
+# 		AND = {
+# 			owner = {
+# 				capital_scope = {
+# 					superregion = america_superregion
+# 				}
+# 			}
+# 			owner = {
+# 				NOT = { culture_group = southerner }
+# 			}
+# 		}
+# 	}
 
-	keep_trigger = {
-	}
+# 	keep_trigger = {
+# 	}
 
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
+# 	tier_0 = {
+# 		upgrade_time = {
+# 			months = 0
+# 		}
 
-		cost_to_upgrade = {
-			factor = 0
-		}
+# 		cost_to_upgrade = {
+# 			factor = 0
+# 		}
 
-		province_modifiers = {
-		}
+# 		province_modifiers = {
+# 		}
 
-		area_modifier = {
-		}
+# 		area_modifier = {
+# 		}
 
-		country_modifiers = {
-		}
+# 		country_modifiers = {
+# 		}
 
-		on_upgraded = {
-		}
-	}
+# 		on_upgraded = {
+# 		}
+# 	}
 
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
+# 	tier_1 = {
+# 		upgrade_time = {
+# 			months = 120
+# 		}
 
-		cost_to_upgrade = {
-			factor = 1000
-		}
+# 		cost_to_upgrade = {
+# 			factor = 1000
+# 		}
 
-		province_modifiers = {
+# 		province_modifiers = {
 			
-		}
+# 		}
 		
-		area_modifier = {
-		}
+# 		area_modifier = {
+# 		}
 
-		country_modifiers = {
-			legitimacy = 1
-			republican_tradition = 0.30
-		}
+# 		country_modifiers = {
+# 			legitimacy = 1
+# 			republican_tradition = 0.30
+# 		}
 
-		on_upgraded = {
-		}
-	}
+# 		on_upgraded = {
+# 		}
+# 	}
 
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
+# 	tier_2 = {
+# 		upgrade_time = {
+# 			months = 240
+# 		}
 
-		cost_to_upgrade = {
-			factor = 2500
-		}
+# 		cost_to_upgrade = {
+# 			factor = 2500
+# 		}
 
-		province_modifiers = {
+# 		province_modifiers = {
 			
-		}
+# 		}
 
-		area_modifier = {
-		}
+# 		area_modifier = {
+# 		}
 
-		country_modifiers = {
-			legitimacy = 1
-			republican_tradition = 0.30
-			global_unrest = -1
-		}
+# 		country_modifiers = {
+# 			legitimacy = 1
+# 			republican_tradition = 0.30
+# 			global_unrest = -1
+# 		}
 
-		on_upgraded = {
-		}
-	}
+# 		on_upgraded = {
+# 		}
+# 	}
 
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
+# 	tier_3 = {
+# 		upgrade_time = {
+# 			months = 480
+# 		}
 
-		cost_to_upgrade = {
-			factor = 5000
-		}
+# 		cost_to_upgrade = {
+# 			factor = 5000
+# 		}
 
-		province_modifiers = {
-		}
+# 		province_modifiers = {
+# 		}
 
-		area_modifier = {
+# 		area_modifier = {
 			
-		}
+# 		}
 
-		country_modifiers = {
-			legitimacy = 1
-			republican_tradition = 0.30
-			global_unrest = -2
-			prestige_decay = -0.01
-		}
+# 		country_modifiers = {
+# 			legitimacy = 1
+# 			republican_tradition = 0.30
+# 			global_unrest = -2
+# 			prestige_decay = -0.01
+# 		}
 
-		on_upgraded = {
-		}
-	}
-}
+# 		on_upgraded = {
+# 		}
+# 	}
+# }
 
 # washington_cathedral = {
 	# start = 2616 #Washington
@@ -20407,7 +20424,7 @@ gateway_arch = {
 		OR = {
 			culture_group = midwestern_group
 			culture_group = great_plainer_group
-			culture = chicagoan
+			#culture = chicagoan
 		}
 		OR = {
 			has_owner_culture = yes
@@ -20424,7 +20441,7 @@ gateway_arch = {
 		OR = {
 			culture_group = midwestern_group
 			culture_group = great_plainer_group
-			culture = chicagoan
+			#culture = chicagoan
 		}
 		OR = {
 			has_owner_culture = yes
@@ -20436,7 +20453,7 @@ gateway_arch = {
 		OR = {
 			culture_group = midwestern_group
 			culture_group = great_plainer_group
-			culture = chicagoan
+			#culture = chicagoan
 		}
 		OR = {
 			has_owner_culture = yes
@@ -20486,7 +20503,8 @@ gateway_arch = {
 		}
 
 		country_modifiers = {
-			
+			merchants = 1
+			center_of_trade_upgrade_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -20510,7 +20528,9 @@ gateway_arch = {
 		}
 
 		country_modifiers = {
-			
+			global_trade_power = 0.10
+			merchants = 1
+			center_of_trade_upgrade_cost = -0.15
 		}
 
 		on_upgraded = {
@@ -20534,7 +20554,9 @@ gateway_arch = {
 		}
 
 		country_modifiers = {
-			
+			global_trade_power = 0.15
+			merchants = 2
+			center_of_trade_upgrade_cost = -0.20
 		}
 
 		on_upgraded = {
@@ -20623,7 +20645,9 @@ independence_hall = {
 		}
 
 		country_modifiers = {
-			
+			governing_capacity_modifier = 0.05
+			state_governing_cost = -0.05
+			expand_administration_cost = -0.15
 		}
 
 		on_upgraded = {
@@ -20647,7 +20671,9 @@ independence_hall = {
 		}
 
 		country_modifiers = {
-			
+			governing_capacity_modifier = 0.075
+			state_governing_cost = -0.15
+			expand_administration_cost = -0.25
 		}
 
 		on_upgraded = {
@@ -20671,7 +20697,9 @@ independence_hall = {
 		}
 
 		country_modifiers = {
-			
+			governing_capacity_modifier = 0.10
+			state_governing_cost = -0.25
+			expand_administration_cost = -0.33
 		}
 
 		on_upgraded = {
@@ -20693,6 +20721,14 @@ art_institute = {
 
 	type = monument
 	build_trigger = {
+			OR = {
+			culture_group = midwestern_group
+			culture_group = great_laker
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 	on_built = {
 	}
@@ -20701,9 +20737,25 @@ art_institute = {
 	}
 
 	can_use_modifiers_trigger = {
+			OR = {
+			culture_group = midwestern_group
+			culture_group = great_laker
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 
 	can_upgrade_trigger = {
+			OR = {
+			culture_group = midwestern_group
+			culture_group = great_laker
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 
 	keep_trigger = {
@@ -20748,7 +20800,8 @@ art_institute = {
 		}
 
 		country_modifiers = {
-			
+			monthly_splendor = 0.05
+			prestige_decay = -0.05
 		}
 
 		on_upgraded = {
@@ -20772,7 +20825,9 @@ art_institute = {
 		}
 
 		country_modifiers = {
-			
+			advisor_cost = -0.10
+			monthly_splendor = 1
+			prestige_decay = -0.1
 		}
 
 		on_upgraded = {
@@ -20796,7 +20851,9 @@ art_institute = {
 		}
 
 		country_modifiers = {
-			
+			advisor_cost = -0.20
+			monthly_splendor = 2
+			prestige_decay = -0.1
 		}
 
 		on_upgraded = {
@@ -20875,7 +20932,7 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.025
+			development_cost = -0.05
 			build_cost = -0.025
 			nobles_loyalty_modifier = 0.05
 			#church_loyalty_modifier = 0.05
@@ -20905,7 +20962,7 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.05
+			development_cost = -0.075
 			build_cost = -0.10
 			nobles_loyalty_modifier = 0.10
 			#church_loyalty_modifier = 0.10
@@ -20934,7 +20991,7 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.075
+			development_cost = -0.10
 			build_cost = -0.15
 			nobles_loyalty_modifier = 0.10
 			#church_loyalty_modifier = 0.10
@@ -21384,7 +21441,7 @@ yosemite = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 
 	type = monument
 	build_trigger = {
@@ -21448,7 +21505,7 @@ yosemite = {
 		}
 
 		country_modifiers = {
-			
+				movement_speed = 0.05
 		}
 
 		on_upgraded = {
@@ -21474,7 +21531,7 @@ yosemite = {
 		}
 
 		country_modifiers = {
-			
+			movement_speed = 0.10
 		}
 
 		on_upgraded = {
@@ -21501,7 +21558,7 @@ yosemite = {
 		}
 
 		country_modifiers = {
-			
+			movement_speed = 0.15
 		}
 
 		on_upgraded = {
@@ -21584,7 +21641,7 @@ yellowstone = {
 		}
 
 		country_modifiers = {
-			
+			prestige = 0.25
 		}
 
 		on_upgraded = {
@@ -21610,7 +21667,7 @@ yellowstone = {
 		}
 
 		country_modifiers = {
-			
+			prestige = 0.50
 		}
 
 		on_upgraded = {
@@ -21637,7 +21694,7 @@ yellowstone = {
 		}
 
 		country_modifiers = {
-			
+			prestige = 1
 		}
 
 		on_upgraded = {
@@ -22008,9 +22065,9 @@ uluru = {
 		OR = {
 			culture_group = australian_new_zealander
 			religion = dreamtime
-			owner = {
-				technology_group = australian
-			}
+			# owner = {
+				# technology_group = australian
+			# }
 			#culture_group = aboriginal
 		}
 		OR = {
@@ -22101,7 +22158,7 @@ uluru = {
 
 		country_modifiers = {
 			missionaries = 1
-			global_missionary_strength = 0.005
+			global_missionary_strength = 0.01
 		}
 
 		on_upgraded = {
@@ -22175,12 +22232,7 @@ sydney_opera_house = {
 
 	type = monument
 	build_trigger = {
-		OR = {
-			owner = {
-				technology_group = australian
-			}
 			culture_group = australian_new_zealander
-		}
 		OR = {
 			has_owner_culture = yes
 			has_owner_accepted_culture = yes
@@ -22428,7 +22480,7 @@ aoraki = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.10
+			land_attrition = -0.05
 			fort_maintenance_modifier = -0.05
 		}
 
@@ -22455,7 +22507,7 @@ aoraki = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.15
+			land_attrition = -0.10
 			fort_maintenance_modifier = -0.15
 		}
 
@@ -22483,7 +22535,7 @@ aoraki = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.20
+			land_attrition = -0.15
 			fort_maintenance_modifier = -0.20
 		}
 
@@ -22830,6 +22882,15 @@ louisiana_state_capitol = {
 
 	type = monument
 	build_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = louisianan
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 	on_built = {
 	}
@@ -22838,9 +22899,27 @@ louisiana_state_capitol = {
 	}
 
 	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = louisianan
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 
 	can_upgrade_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = louisianan
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
 	}
 
 	keep_trigger = {
@@ -23035,14 +23114,15 @@ el_morro = {
 		}
 
 		province_modifiers = {
-			
+			local_defensiveness = 0.15
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			naval_forcelimit_modifier = 0.10
+			naval_maintenance_modifier = -0.10
 		}
 
 		on_upgraded = {
@@ -23059,14 +23139,17 @@ el_morro = {
 		}
 
 		province_modifiers = {
-			
+			blockade_force_required = 0.50
 		}
 
 		area_modifier = {
+			local_defensiveness = 0.15
 		}
 
 		country_modifiers = {
-			
+			naval_forcelimit_modifier = 0.20
+			naval_maintenance_modifier = -0.15
+			navy_tradition = 0.50
 		}
 
 		on_upgraded = {
@@ -23083,14 +23166,18 @@ el_morro = {
 		}
 
 		province_modifiers = {
+			blockade_force_required = 1
 		}
 
 		area_modifier = {
-			
+			local_defensiveness = 0.25
 		}
 
 		country_modifiers = {
-			
+			naval_forcelimit_modifier = 0.30
+			naval_maintenance_modifier = -0.20
+			navy_tradition = 1
+			admiral_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -23429,9 +23516,9 @@ nyse = {
 		}
 
 		country_modifiers = {
-			inflation_reduction = 0.05
-			interest = -0.50
-			burghers_loyalty_modifier = 0.05
+			global_trade_power = 0.05
+			trade_steering = 0.10
+			merchants = 1
 		}
 
 		on_upgraded = {
@@ -23455,9 +23542,9 @@ nyse = {
 		}
 
 		country_modifiers = {
-			inflation_reduction = 0.10
-			interest = -1
-			burghers_loyalty_modifier = 0.10
+			global_trade_power = 0.10
+			trade_steering = 0.15
+			merchants = 1
 		}
 
 		on_upgraded = {
@@ -23487,9 +23574,9 @@ nyse = {
 		}
 
 		country_modifiers = {
-			inflation_reduction = 0.15
-			interest = -1.5
-			burghers_loyalty_modifier = 0.10
+			global_trade_power = 0.20
+			trade_steering = 0.20
+			merchants = 2
 		}
 
 		on_upgraded = {
@@ -23893,7 +23980,7 @@ harvard = {
 }
 
 banff = {
-	start = 2633 #Bighorn
+	start = 2633 #Bighorn, Alberta
 	date = 1444.01.01 #1716.01.01
 	time = {
 		months = 0
@@ -23954,14 +24041,16 @@ banff = {
 		}
 
 		province_modifiers = {
-			
+			development_cost = -0.05
+			allowed_num_of_buildings = 1
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			diplomats = 1
+			#build_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -23978,14 +24067,17 @@ banff = {
 		}
 
 		province_modifiers = {
-			
+			allowed_num_of_buildings = 2
 		}
 
 		area_modifier = {
+			development_cost = -0.05
 		}
 
 		country_modifiers = {
-			
+			diplomats = 1
+			#build_cost = -0.15
+			diplomatic_reputation = 1
 		}
 
 		on_upgraded = {
@@ -24005,11 +24097,14 @@ banff = {
 		}
 
 		area_modifier = {
-			
+			development_cost = -0.10
+			allowed_num_of_buildings = 2
 		}
 
 		country_modifiers = {
-			
+			diplomats = 2
+			#build_cost = -0.15
+			diplomatic_reputation = 1
 		}
 
 		on_upgraded = {
@@ -24122,8 +24217,6 @@ breakers = {
 		}
 
 		province_modifiers = {
-			#global_trade_goods_size_modifier = 0.075
-			#nobility_loyalty_modifier = 0.10
 		}
 
 		area_modifier = {
@@ -24134,6 +24227,7 @@ breakers = {
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.075
 			burghers_loyalty_modifier = 0.10
+			nobles_loyalty_modifier = 0.10
 		}
 
 		on_upgraded = {
@@ -24186,10 +24280,6 @@ crater_lake = {
 			culture_group = pacific_coastal
 			culture = lincolnite
 		}
-		OR = {
-			has_owner_culture = yes
-			has_owner_accepted_culture = yes
-		}
 	}
 	on_built = {
 	}
@@ -24202,20 +24292,12 @@ crater_lake = {
 			culture_group = pacific_coastal
 			culture = lincolnite
 		}
-		OR = {
-			has_owner_culture = yes
-			has_owner_accepted_culture = yes
-		}
 	}
 
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = pacific_coastal
 			culture = lincolnite
-		}
-		OR = {
-			has_owner_culture = yes
-			has_owner_accepted_culture = yes
 		}
 	}
 
@@ -24261,7 +24343,8 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			
+			religious_unity = 0.10
+			institution_spread_from_true_faith = 0.20
 		}
 
 		on_upgraded = {
@@ -24285,7 +24368,9 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			
+			religious_unity = 0.20
+			institution_spread_from_true_faith = 0.33
+			tolerance_own = 0.5
 		}
 
 		on_upgraded = {
@@ -24309,14 +24394,15 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			
+			religious_unity = 0.30
+			institution_spread_from_true_faith = 0.50
+			tolerance_own = 1
 		}
 
 		on_upgraded = {
 		}
 	}
 }
-
 
 lions_gate = {
 	start = 2635 #Vancouver
@@ -24404,14 +24490,15 @@ lions_gate = {
 		}
 
 		province_modifiers = {
-			
 		}
 		
 		area_modifier = {
+			local_friendly_movement_speed = 0.10
 		}
 
 		country_modifiers = {
-			
+				envoy_travel_time = -0.10
+				build_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -24428,14 +24515,17 @@ lions_gate = {
 		}
 
 		province_modifiers = {
-			
 		}
 
 		area_modifier = {
+			local_friendly_movement_speed = 0.15
 		}
 
 		country_modifiers = {
-			
+			envoy_travel_time = -0.20
+			build_cost = -0.15
+			#movement_speed = 0.05
+			great_project_upgrade_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -24455,11 +24545,14 @@ lions_gate = {
 		}
 
 		area_modifier = {
-			
+			local_friendly_movement_speed = 0.20
 		}
 
 		country_modifiers = {
-			
+			envoy_travel_time = -0.30
+			build_cost = -0.15
+			#movement_speed = 0.05
+			great_project_upgrade_cost = -0.15
 		}
 
 		on_upgraded = {
@@ -24679,14 +24772,15 @@ rainier = {
 		}
 
 		province_modifiers = {
-			
+			local_development_cost = -0.10
+			local_monthly_devastation = -0.05
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			global_monthly_devastation = -0.025
 		}
 
 		on_upgraded = {
@@ -24703,14 +24797,17 @@ rainier = {
 		}
 
 		province_modifiers = {
-			
+			local_development_cost = -0.15
+			local_monthly_devastation = -0.05
+			local_tax_modifier = 0.15
 		}
 
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			global_prosperity_growth = 0.15
+			global_monthly_devastation = -0.05
 		}
 
 		on_upgraded = {
@@ -24727,14 +24824,19 @@ rainier = {
 		}
 
 		province_modifiers = {
+			local_development_cost = -0.20
+			local_monthly_devastation = -0.1
+			local_tax_modifier = 0.20
 		}
 
 		area_modifier = {
-			
+			local_monthly_devastation = -0.05
+			local_tax_modifier = 0.05
 		}
 
 		country_modifiers = {
-			
+			global_prosperity_growth = 0.25
+			global_monthly_devastation = -0.07
 		}
 
 		on_upgraded = {
@@ -25536,14 +25638,16 @@ goliad = {
 		}
 
 		province_modifiers = {
-			
+			local_unrest = -1
+			garrison_growth = 0.25
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			global_heretic_missionary_strength = 0.01
+			curia_powers_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -25560,14 +25664,16 @@ goliad = {
 		}
 
 		province_modifiers = {
-			
 		}
 
 		area_modifier = {
+			local_unrest = -1
+			garrison_growth = 0.25
 		}
 
 		country_modifiers = {
-			
+			global_heretic_missionary_strength = 0.02
+			curia_powers_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -25587,11 +25693,13 @@ goliad = {
 		}
 
 		area_modifier = {
-			
+			local_unrest = -2
+			garrison_growth = 0.50
 		}
 
 		country_modifiers = {
-			
+			global_heretic_missionary_strength = 0.03
+			curia_powers_cost = -0.20
 		}
 
 		on_upgraded = {
@@ -25609,7 +25717,7 @@ scotts_bluff = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -25698,7 +25806,7 @@ scotts_bluff = {
 		}
 
 		country_modifiers = {
-			caravan_power = 0.1
+			caravan_power = 0.15
 		}
 
 		on_upgraded = {
@@ -25722,7 +25830,7 @@ scotts_bluff = {
 		}
 
 		country_modifiers = {
-			trade_efficiency = 0.05
+			trade_efficiency = 0.10
 			caravan_power = 0.25
 		}
 
@@ -25749,8 +25857,8 @@ scotts_bluff = {
 
 		country_modifiers = {
 			caravan_power = 0.33
-			trade_efficiency = 0.1
-			global_colonial_growth = 15
+			trade_efficiency = 0.15
+			colonists = 1
 		}
 
 		on_upgraded = {
@@ -25827,7 +25935,7 @@ galapagos = {
 		}
 
 		country_modifiers = {
-			
+			innovativeness_gain = 0.10
 		}
 
 		on_upgraded = {
@@ -25851,7 +25959,7 @@ galapagos = {
 		}
 
 		country_modifiers = {
-			
+			innovativeness_gain = 0.20
 		}
 
 		on_upgraded = {
@@ -25875,7 +25983,7 @@ galapagos = {
 		}
 
 		country_modifiers = {
-			
+			innovativeness_gain = 0.35
 		}
 
 		on_upgraded = {
@@ -25955,14 +26063,14 @@ royal_mint = {
 		}
 
 		province_modifiers = {
-			
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			
+			interest = -0.50
+			inflation_reduction = 0.05
 		}
 
 		on_upgraded = {
@@ -25986,7 +26094,8 @@ royal_mint = {
 		}
 
 		country_modifiers = {
-			
+			interest = -1
+			inflation_reduction = 0.10
 		}
 
 		on_upgraded = {
@@ -26016,7 +26125,8 @@ royal_mint = {
 		}
 
 		country_modifiers = {
-			
+			interest = -2
+			inflation_reduction = 0.15
 		}
 
 		on_upgraded = {
@@ -26129,7 +26239,8 @@ grito = {
 		}
 
 		country_modifiers = {
-			
+			fire_damage = 0.05
+			recover_army_morale_speed = 0.05
 		}
 
 		on_upgraded = {
@@ -26153,7 +26264,9 @@ grito = {
 		}
 
 		country_modifiers = {
-			
+			fire_damage = 0.05
+			recover_army_morale_speed = 0.10
+			prestige_from_land = 0.50
 		}
 
 		on_upgraded = {
@@ -26183,7 +26296,9 @@ grito = {
 		}
 
 		country_modifiers = {
-			
+			fire_damage = 0.10
+			recover_army_morale_speed = 0.10
+			prestige_from_land = 1
 		}
 
 		on_upgraded = {
@@ -26237,6 +26352,9 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
+			local_hostile_movement_speed = -0.10
+			local_hostile_attrition = 0.5
+			local_defensiveness = 0.10
 		}
 
 		area_modifier = {
@@ -26259,14 +26377,18 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
-			
+			local_hostile_movement_speed = -0.25
+			local_hostile_attrition = 1
+			local_defensiveness = 0.10
+			trade_goods_size = 1
 		}
 		
 		area_modifier = {
+			trade_goods_size_modifier = 0.05
 		}
 
 		country_modifiers = {
-			
+			#inflation_reduction = 0.05
 		}
 
 		on_upgraded = {
@@ -26283,14 +26405,18 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
-			
+			local_hostile_movement_speed = -0.50
+			local_hostile_attrition = 1
+			local_defensiveness = 0.15
+			trade_goods_size = 2
 		}
 
 		area_modifier = {
+			trade_goods_size_modifier = 0.10
 		}
 
 		country_modifiers = {
-			
+			inflation_reduction = 0.10
 		}
 
 		on_upgraded = {
@@ -26307,14 +26433,18 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
+			local_hostile_movement_speed = -0.75
+			local_hostile_attrition = 1
+			local_defensiveness = 0.20
+			trade_goods_size = 3
 		}
 
 		area_modifier = {
-			
+			trade_goods_size_modifier = 0.15
 		}
 
 		country_modifiers = {
-			
+			inflation_reduction = 0.15
 		}
 
 		on_upgraded = {
@@ -26331,8 +26461,8 @@ grand_pre = {
 	}
 
 	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 1
+	can_be_moved = yes
+	move_days_per_unit_distance = 7
 	starting_tier = 0
 
 	type = monument
@@ -26367,6 +26497,173 @@ grand_pre = {
 		AND = {
 			culture_group = new_french
 			NOT = { culture = quebecois }
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+		AND = {
+			culture_group = new_french
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			discipline = 0.025
+			fire_damage_received = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			discipline = 0.05
+			fire_damage_received = -0.10
+			culture_conversion_cost = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			discipline = 0.10
+			fire_damage_received = -0.10
+			fire_damage = 0.05
+			culture_conversion_cost = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+# SUPERSTATES 1.32 MONUMENTS
+
+la_citadelle = {
+	start = 2652 #Quebec City
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = english
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = english
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = new_french
+			culture_group = french
+			culture = english
 		}
 		OR = {
 			has_owner_culture = yes
@@ -26416,7 +26713,8 @@ grand_pre = {
 		}
 
 		country_modifiers = {
-			
+			war_taxes_cost_modifier = -0.50
+			general_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -26440,7 +26738,9 @@ grand_pre = {
 		}
 
 		country_modifiers = {
-			
+			war_taxes_cost_modifier = -0.50
+			leader_cost = -0.10
+			global_regiment_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -26464,7 +26764,1510 @@ grand_pre = {
 		}
 
 		country_modifiers = {
+			war_taxes_cost_modifier = -1
+			leader_cost = -0.15
+			global_regiment_cost = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+bunker_hill = {
+	start = 2609 #Boston
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
 			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			prestige_from_land = 0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			prestige_from_land = 1
+			army_tradition_from_battle = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			prestige_from_land = 1.5
+			army_tradition_from_battle = 0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+casa_loma = {
+	start = 2642 #Toronto
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		owner = {
+			capital_scope = {
+				superregion = canada_superregion
+			}
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			capital_scope = {
+				superregion = canada_superregion
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			capital_scope = {
+				superregion = canada_superregion
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			mercenary_discipline = 0.025
+			mercenary_cost = -0.05
+			merc_maintenance_modifier = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			mercenary_discipline = 0.025
+			mercenary_cost = -0.075
+			merc_maintenance_modifier = -0.10
+			mercenary_manpower = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			mercenary_discipline = 0.05
+			mercenary_cost = -0.10
+			merc_maintenance_modifier = -0.20
+			mercenary_manpower = 0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+hatley_castle = {
+	start = 2634 #Victoria, BC
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = western_canadian
+			culture = english
+			culture = vancouverite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = western_canadian
+			culture = english
+			culture = vancouverite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = western_canadian
+			culture = english
+			culture = vancouverite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			republican_tradition = 0.10
+			legitimacy = 0.25
+			monthly_heir_claim_increase = 0.10
+			heir_chance = 0.5
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			republican_tradition = 0.25
+			legitimacy = 0.50
+			monthly_heir_claim_increase = 0.20
+			heir_chance = 0.33
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			republican_tradition = 0.50
+			legitimacy = 1
+			monthly_heir_claim_increase = 0.30
+			heir_chance = 0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+lawnfield = {
+	start = 2579 #Cleveland
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture = ohioan
+			culture = clevelander
+			culture = alleghenite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture = ohioan
+			culture = clevelander
+			culture = alleghenite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture = ohioan
+			culture = clevelander
+			culture = alleghenite
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			stability_cost_modifier = -0.10
+			advisor_pool = 1
+			adm_tech_cost_modifier = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			stability_cost_modifier = -0.20
+			advisor_pool = 1
+			adm_tech_cost_modifier = -0.075
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			stability_cost_modifier = -0.25
+			advisor_pool = 2
+			technology_cost = -0.075
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+fort_ticonderoga = {
+	start = 2594 #Clinton, NY
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture = vermonter
+			culture = new_yorker
+			culture = english
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture = vermonter
+			culture = new_yorker
+			culture = english
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture = vermonter
+			culture = new_yorker
+			culture = english
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			garrison_size = 0.15
+			global_garrison_growth = 0.10
+			rival_border_fort_maintenance = -0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.15
+		}
+
+		country_modifiers = {
+			garrison_size = 0.25
+			global_garrison_growth = 0.15
+			rival_border_fort_maintenance = -0.25
+			defensiveness = 0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+
+		country_modifiers = {
+			garrison_size = 0.25
+			global_garrison_growth = 0.25
+			rival_border_fort_maintenance = -0.50
+			defensiveness = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+cabot_tower = {
+	start = 1807 #St John's, Newfoundland
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		culture_group = atlantic_canadian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		culture_group = atlantic_canadian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		culture_group = atlantic_canadian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			range = 0.20
+			global_colonial_growth = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			range = 0.25
+			global_colonial_growth = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			range = 0.30
+			global_colonial_growth = 0.25
+			leader_naval_manuever = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+greenfield_village = {
+	start = 2573 #Detroit
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+			culture = michigander
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		culture = michigander
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		culture = michigander
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			production_efficiency = 0.10
+			idea_cost = -0.025
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			production_efficiency = 0.10
+			idea_cost = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			production_efficiency = 0.20
+			idea_cost = -0.075
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+st_paul = {
+	start = 2547 #St. Paul (surprising!)
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+			religion_group = christian
+			has_owner_religion = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		religion_group = christian
+		has_owner_religion = yes
+	}
+
+	can_upgrade_trigger = {
+		religion_group = christian
+		has_owner_religion = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			papal_influence = 0.5
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.05
+			enforce_religion_cost = -0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			papal_influence = 1
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.1
+			enforce_religion_cost = -0.25
+		}
+
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 5
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			papal_influence = 2
+			monthly_fervor_increase = 1
+			church_power_modifier = 0.15
+			enforce_religion_cost = -0.33
+		}
+
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+		}
+	}
+}
+
+royal_exhibition = {
+	start = 2018 #Melbourne
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			monthly_splendor = 0.05
+			prestige_decay = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			advisor_cost = -0.10
+			monthly_splendor = 1
+			prestige_decay = -0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			
+		}
+
+		country_modifiers = {
+			advisor_cost = -0.20
+			monthly_splendor = 2
+			prestige_decay = -0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+port_arthur = {
+	start = 2021 #Hobart
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = australian_new_zealander
+			culture_group = british
+		}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_autonomy = -0.05
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			army_tradition = 0.25
+			global_colonial_growth = 10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+			local_autonomy = -0.05
+		}
+
+		country_modifiers = {
+			army_tradition = 0.50
+			global_colonial_growth = 15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+			local_autonomy = -0.10
+		}
+
+		country_modifiers = {
+			army_tradition = 0.50
+			global_colonial_growth = 25
 		}
 
 		on_upgraded = {
