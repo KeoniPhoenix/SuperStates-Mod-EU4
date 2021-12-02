@@ -51,6 +51,12 @@ florida_local_expansion = {
 			}
 		}
 		effect = {
+			2508 = {
+				change_culture = west_floridian
+			}
+			2503 = {
+				change_culture = west_floridian
+			}
 			pearl_river_area = {
 				add_permanent_claim = ROOT
 				}
