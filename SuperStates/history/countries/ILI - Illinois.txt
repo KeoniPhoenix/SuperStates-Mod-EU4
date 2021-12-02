@@ -2,6 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = illinoisan
+add_accepted_culture = chicagoan
 religion = s_protestant
 capital = 2562 # Springfield
 historical_rival = IND
