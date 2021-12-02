@@ -1,0 +1,969 @@
+nova_scotia_reconquest = {
+    	slot = 1
+    	generic = yes
+    	ai = yes
+	
+	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+    	potential = {
+		OR = {
+			tag = NVS
+		}
+		has_dlc = "Rule Britannia"
+    	}
+    	has_country_shield = yes
+	nvs_prosperity = {
+		icon = mission_galleys_in_port
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+				province_id = 3063
+				province_id = 1810
+			}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				nova_scotia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				1811 = {
+					is_prosperous = yes
+				}
+				3063 = {
+					owned_by = ROOT
+					is_prosperous = yes
+				}
+				1810 = {
+					owned_by = ROOT
+					is_prosperous = yes
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				nova_scotia_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				3063 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				1810 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_prosperity"
+				duration = 9125
+			}
+			saint_george_area = { add_permanent_claim = ROOT }
+			add_permanent_claim = 3031
+		}
+	}
+	nvs_reconquest_of_nova_scotia = {
+		icon = mission_rb_nova_scotia
+		required_missions = { nvs_prosperity }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saint_george_area
+				province_id = 3031
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3031 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 5
+			new_brunswick_area = { add_permanent_claim = ROOT }
+			add_permanent_claim = 3071
+		}
+	}
+	nvs_new_brunswick = {
+		icon = mission_assemble_an_army
+		required_missions = { nvs_reconquest_of_nova_scotia }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				province_id = 3071
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3071 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			baie_des_chaleurs_area = { add_permanent_claim = ROOT }
+			add_permanent_claim = 3030
+		}
+	}
+	nvs_quebec = {
+		icon = mission_colonial_new_france
+		required_missions = { nvs_new_brunswick }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = baie_des_chaleurs_area
+				province_id = 3030
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baie_des_chaleurs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3030 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			newfoundland_area = { add_permanent_claim = ROOT }
+			labrador_area = { add_permanent_claim = ROOT }
+		}
+	}
+	nvs_newfoundland = {
+		icon = secure_the_republic
+		required_missions = { nvs_quebec }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = newfoundland_area
+				area = labrador_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			labrador_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	nvs_irish_kings = {
+		icon = mission_rb_rule_britannia_irish_version
+		required_missions = { maritime_into_the_isles }
+		position = 6
+		
+		trigger = {
+			government = monarchy
+			OR = {
+				primary_culture = irish
+				primary_culture = highland_scottish
+			}
+			if = {
+				limit = { primary_culture = irish}
+				373 = { owned_by = ROOT }
+			}
+			else = {
+				4364 = { owned_by = ROOT }
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "high_king_of_ireland"
+				duration = 7300
+			}
+			if = {
+				limit = { primary_culture = irish }
+				set_capital = 373
+				373 = {
+					add_base_tax = 5
+					add_base_production = 6
+					add_base_manpower = 6
+				}
+			}
+			else = {
+				set_capital = 4364
+				4364 = {
+					add_base_tax = 3
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+	nvs_british_trade = {
+		icon = mission_rb_empire
+		required_missions = { nvs_irish_kings }
+		position = 7
+		
+		trigger = {
+			236 = {
+				trade_share = {
+				country = ROOT
+				share = 85
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 25
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+}
+nova_scotia_naval = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+
+    	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+    	potential = {
+		OR = {
+			tag = NVS
+			AND = {
+				tag = MTU
+				was_tag	= NVS
+			}
+		}
+		has_dlc = "Rule Britannia"
+    	}
+	has_country_shield = yes
+	maritime_navy = {
+		icon = mission_sea_battles
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = { 
+			navy_size_percentage = 0.75
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				add_mil_power = 250
+				name = "naval_enthusiasm_mission"
+				duration = 7300
+			}
+		}
+	}
+	maritime_explore = {
+		icon = mission_consulate_of_the_sea
+		required_missions = { maritime_navy }
+		completed_by = 1492.1.1
+		position = 2
+		trigger = { 
+			has_idea_group = exploration_ideas
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+   				shock = 2
+   				fire = 2
+    				manuever = 6
+    				siege = 0
+			}
+		}
+	}
+	maritime_discovered_europe = {
+		icon = mission_look_west
+		required_missions = { maritime_explore }
+		completed_by = 1492.1.1
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				europe_superregion = {
+					has_discovered = ROOT
+				}
+				eastern_europe_superregion = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "maritime_europe_discovered"
+				duration = 9125
+			}
+		}
+	}
+	maritime_conquer_ireland = {
+		icon = mission_rb_conquer_ireland
+		required_missions = {
+		maritime_discovered_europe
+		nvs_colonial_island_hop
+		}
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = connacht_area
+				area = munster_area
+				area = leinster_area
+				area = ulster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			connacht_area = {
+				type = all
+				owned_by = ROOT
+			}
+			munster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			leinster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ulster_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			kingdom_of_the_isles_area = { add_permanent_claim = ROOT }
+			add_country_modifier = {
+				name = "conquest_of_ireland"
+				duration = 7300
+			}
+		}
+	}
+	maritime_into_the_isles = {
+		icon = mission_rb_into_ireland
+		required_missions = { maritime_conquer_ireland }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			highlands_area = { add_permanent_claim = ROOT }
+			lowlands_area = { add_permanent_claim = ROOT }
+			if = {
+				limit = {
+					exists = SCO
+				}
+				add_casus_belli = {
+					target = SCO
+					type = cb_vassalize_mission
+				}
+			}
+		}
+	}
+	nvs_scotland = {
+		icon = mission_rb_conquer_scotland
+		required_missions = { maritime_into_the_isles }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = lowlands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lowlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nvs_highplainer_acceptance"
+				duration = -1
+			}
+			add_accepted_culture = highland_scottish
+			british_isles_region = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_british_empire = {
+		icon = mission_rb_rule_britannia_scottish_version
+		required_missions = { nvs_scotland }
+		position = 7
+
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			british_isles_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "rule_britannia"
+				duration = 7300
+			}
+		}
+	}
+	nvs_panama_canal = {
+		icon = construct_the_kiel_canal
+		required_missions = { nvs_colombia_landfall }
+		position = 8
+		
+		provinces_to_highlight = {
+			area = panama_area
+			area = costa_rica_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			835 = {
+				has_construction = canal
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 10
+			add_navy_tradition = 25
+			create_admiral = { tradition = 80 }
+		}
+	}
+}
+nova_scotia_colonial = {
+    	slot = 3
+    	generic = yes
+    	ai = yes
+
+    	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+    	potential = {
+		OR = {
+			tag = NVS
+			AND = {
+				tag = MTU
+				was_tag	= NVS
+			}
+		}
+		has_dlc = "Rule Britannia"
+    	}
+    	has_country_shield = yes
+	nvs_alliance = {
+		icon = mission_alliances
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						exists = MTU
+					}
+				}
+				OR = {
+					AND = {
+						alliance_with = NBR
+						reverse_has_opinion = {
+							who = NBR
+							value = 100
+						}
+					}
+					is_rival = NBR
+					NOT = { exists = NBR }
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						alliance_with = MTU
+						reverse_has_opinion = {
+							who = MTU
+							value = 100
+						}
+					}
+					is_rival = MTU
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 150
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 1825
+			}
+		}
+	}
+	maritime_fog_of_sailors = {
+		icon = mission_galleys_in_port
+		required_missions = { 
+		maritime_navy
+		nvs_alliance
+		}
+		position = 2
+		trigger = { 
+			navy_size_percentage = 1.0
+			OR = {
+				num_of_heavy_ship = 20
+				num_of_light_ship = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_fog_of_sailors"
+				duration = -1
+			}
+		}
+	}
+	nvs_colonial_island_hop = {
+		icon = mission_colonial
+		required_missions = { maritime_explore }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = greenland_area
+				province_id = 481
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				greenland_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				481 = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			connacht_area = { add_permanent_claim = ROOT }
+			munster_area = { add_permanent_claim = ROOT }
+			leinster_area = { add_permanent_claim = ROOT }
+			ulster_area = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_bahamas = {
+		icon = mission_caribbean_cn
+		required_missions = { nvs_colonial_island_hop }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				bahamas_area = {
+					type = any
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			bahamas_area = {
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+			jamaica_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			cayman_islands_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			south_windward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			central_leeward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			basseterre_bay_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			add_permanent_claim = 843
+			843 = { discover_country = ROOT }
+			add_permanent_claim = 4589
+			4589 = { discover_country = ROOT }
+			add_permanent_claim = 497
+			497 = { discover_country = ROOT }
+			add_permanent_claim = 501
+			501 = { discover_country = ROOT }
+			add_permanent_claim = 499
+			499 = { discover_country = ROOT }
+			add_permanent_claim = 500
+			500 = { discover_country = ROOT }
+			add_permanent_claim = 4574
+			4574 = { discover_country = ROOT }
+			add_permanent_claim = 4575
+			4575 = { discover_country = ROOT }
+		}
+	}
+	maritime_british_caribbean = {
+		icon = mission_rb_grow_the_channel
+		required_missions = { maritime_bahamas }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+				area = jamaica_area
+				area = cayman_islands_area
+				area = basseterre_bay_area
+				area = south_windward_area
+				area = central_leeward_area
+				province_id = 843
+				province_id = 4589
+				province_id = 497
+				province_id = 501
+				province_id = 499
+				province_id = 500
+				province_id = 4574
+				province_id = 4575
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bahamas_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			jamaica_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			cayman_islands_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			basseterre_bay_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			south_windward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			central_leeward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			843 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4589 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			497 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			501 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			499 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4574 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			500 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4575 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_carribean"
+				duration = 18250
+			}
+			capital_scope = {
+					add_base_tax = 3
+					add_base_manpower = 1
+					add_base_production = 5
+			}
+		}
+	}
+	nvs_discovers_colombia = {
+		icon = mission_iberian_conquistador
+		required_missions = { }
+		position = 6
+		
+		trigger = {
+			colombia_region = { has_discovered = ROOT }
+		}
+		
+		effect = {
+			add_dip_power = 100
+			add_navy_tradition = 20
+		}
+	}
+	nvs_colombia_landfall = {
+		icon = mission_rb_scottish_the_darien_scheme
+		required_missions = { nvs_discovers_colombia }
+		position = 7
+		
+		provinces_to_highlight = {
+			region = colombia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			colombia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			panama_area = {
+				add_permanent_claim = ROOT
+			}
+			costa_rica_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nvs_darien_success = {
+		icon = mission_rb_monopolize_the_channel
+		required_missions = { nvs_colombia_landfall }
+		position = 8
+		
+		provinces_to_highlight = {
+			area = panama_area
+			area = costa_rica_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			panama_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			costa_rica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_prestige = 30
+			835 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 5
+			}
+		}
+	}
+}

@@ -1,0 +1,242 @@
+canadian_conquest = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NWF
+			tag = LBD
+			tag = NTS
+			tag = MTL
+			tag = GAT
+			tag = SAG
+			tag = NUV
+			tag = TTO
+			tag = MTA
+			tag = VCV
+			tag = KTN
+			tag = NRO
+		}
+    	}
+    	has_country_shield = yes
+	canadian_minors_claim_state = {
+		icon = mission_canada
+		required_missions = {  }
+		provinces_to_highlight = {
+			OR = {
+				area_for_scope_province = {
+					is_capital_of = ROOT
+				}
+				is_core = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				region_for_scope_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	canadian_minors_claim_region = {
+		icon = mission_unite_home_region
+		required_missions = { canadian_minors_claim_state }
+		provinces_to_highlight = {
+			OR = {
+				region_for_scope_province = {
+					is_capital_of = ROOT
+				}
+				is_core = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			create_general = { tradition = 100 }
+			ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	canadian_minors_ottawa = {
+		icon = mission_early_modern_university
+		required_missions = { canadian_minors_claim_region }
+		provinces_to_highlight = {
+			province_id = 2643
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		trigger = {
+			owns_core_province = 2643
+		}
+		effect = {
+			add_mil_power = 200
+			canada_superregion = {
+				limit = {
+					NOT = { owned_by = ALA }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	canadian_minors_become_canada = {
+		icon = canadian_flag
+		required_missions = { canadian_minors_ottawa }
+		provinces_to_highlight = {
+			owned_by = FRA
+		}
+		trigger = {
+			is_subject = no
+			owns_core_province = 2643
+			NOT = {
+				exists = CAN
+			}
+			is_at_war = no
+		}
+		effect = {
+			# can form france without meeting normal requirements
+			2643 = {
+				move_capital_effect = yes
+			}
+			set_country_flag = formed_canada_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			change_tag = CAN
+				CAN = {
+			if = {
+					limit = {
+					NOT = { government_rank = 3 }
+							}
+				set_government_rank = 3
+			}
+			canada_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CAN
+			}
+			}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+	}
+}
+canadian_independence = {
+    	slot = 3
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = PEI
+			tag = CBI
+			tag = NWF
+			tag = LBD
+			tag = MDW
+			tag = ACD
+			tag = NTS
+			tag = MTL
+			tag = GAT
+			tag = SAG
+			tag = NUV
+			tag = TTO
+			tag = MTA
+			tag = VCV
+			tag = KTN
+			tag = NRO
+		}
+    	}
+    	has_country_shield = yes
+	canadian_independence = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			prestige = 5
+			is_subject = no
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	canadian_government = {
+		icon = support_american_independence
+		required_missions = { canadian_independence }
+		position = 2
+
+		trigger = {
+			prestige = 25
+			OR = {
+				republican_tradition = 100
+				legitimacy_or_horde_unity = 100
+				devotion = 100
+				meritocracy = 100
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			change_government_reform_progress = 150
+		}
+	}
+	canadian_army = {
+		icon = mission_assemble_an_army
+		required_missions = { canadian_government }
+		position = 3
+
+		trigger = {
+			army_size = 80
+			army_tradition = 30
+		}
+		effect = {
+			add_mil_power = 25	
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	canadian_status = {
+		icon = mission_empire
+		required_missions = { canadian_army }
+		position = 4
+
+		trigger = {
+			prestige = 75
+			power_projection = 50
+		}
+		effect = {
+			add_republican_tradition = 5
+			add_legitimacy = 5
+			add_devotion = 5
+			add_horde_unity = 5
+			add_meritocracy = 5
+			change_adm = 1
+			change_dip = 2
+		}
+	}
+}

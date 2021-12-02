@@ -1,0 +1,208 @@
+saint_george_conquest = {
+    	slot = 1
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = PEI
+			tag = CBI
+		}
+    	}
+    	has_country_shield = yes
+	pei_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			saint_george_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	unite_saint_george_island = {
+		icon = mission_unite_home_region
+		required_missions = { pei_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saint_george_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			nova_scotia_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 3031
+		}
+	}
+	george_isl_into_scotia = {
+		icon = mission_invade_island
+		required_missions = { unite_saint_george_island }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+				province_id = 3031
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nova_scotia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3031 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			new_brunswick_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 3071
+		}
+	}
+	george_isl_unite_maritime = {
+		icon = mission_assemble_an_army
+		required_missions = { george_isl_into_scotia }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				province_id = 3071
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3071 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 10
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+saint_george_prosperity = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = PEI
+			tag = CBI
+		}
+    	}
+    	has_country_shield = yes
+	saint_george_prosperity = {
+		icon = mission_galleys_in_port
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saint_george_area
+			}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				saint_george_area = {
+					type = all
+					owned_by = ROOT
+				}
+				1808 = {
+					is_prosperous = yes
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				saint_george_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_prosperity"
+				duration = 9125
+			}
+		}
+	}
+	saint_george_development = {
+		icon = mission_america
+		required_missions = { saint_george_prosperity }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saint_george_area
+			}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			development_in_provinces = {
+				value = 50
+				area = saint_george_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 18250
+			}
+		}
+	}
+	saint_george_total_development = {
+		icon = mission_early_modern_university
+		required_missions = { saint_george_development }
+		position = 3
+
+		trigger = {
+			total_development = 200
+			capital_scope = {
+				has_building = university
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_adm_tech = 1
+		}
+	}
+}

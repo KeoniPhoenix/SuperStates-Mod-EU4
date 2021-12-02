@@ -1,0 +1,304 @@
+acadiana_reconquest = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = ACD
+			tag = MDW
+			AND = {
+				is_playing_custom_nation = yes
+				OR = {
+					primary_culture = acadian
+					primary_culture = brayon
+				}
+			}
+		}
+    	}
+    	has_country_shield = yes
+	acd_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			new_brunswick_area = {
+				add_permanent_claim = ROOT
+			}
+			nova_scotia_area = {
+				add_permanent_claim = ROOT
+			}
+			saint_george_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 3031
+		}
+	}
+	acd_unification = {
+		icon = mississippi_company
+		required_missions = { acd_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				area = nova_scotia_area
+				area = saint_george_area
+				province_id = 3031
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			nova_scotia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 35
+			baie_des_chaleurs_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 3030
+		}
+	}
+	acd_quebec_conquest = {
+		icon = establish_the_musketeers
+		required_missions = { acd_unification }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = baie_des_chaleurs_area
+				province_id = 3030
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baie_des_chaleurs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3030 = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_mil_power = 50
+		}
+	}
+	acd_prosperity = {
+		icon = mission_galleys_in_port
+		required_missions = { acd_quebec_conquest }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				area = nova_scotia_area
+				area = saint_george_area
+				area = baie_des_chaleurs_area
+				province_id = 3030
+				province_id = 3031
+			}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				new_brunswick_area = {
+					type = all
+					owned_by = ROOT
+				}
+				nova_scotia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				saint_george_area = {
+					type = all
+					owned_by = ROOT
+				}
+				baie_des_chaleurs_area = {
+					type = all
+					owned_by = ROOT
+				}
+				1811 = {
+					is_prosperous = yes
+				}
+				1808 = {
+					is_prosperous = yes
+				}
+				1814 = {
+					is_prosperous = yes
+				}
+				3059 = {
+					is_prosperous = yes
+				}
+				3030 = {
+					owned_by = ROOT
+					is_prosperous = yes
+				}
+				3031 = {
+					owned_by = ROOT
+					is_prosperous = yes
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				new_brunswick_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				nova_scotia_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				saint_george_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				baie_des_chaleurs_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				3030 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				3031 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_prosperity"
+				duration = 12775
+			}
+		}
+	}
+	acd_development = {
+		icon = mission_america
+		required_missions = { acd_prosperity }
+		position = 5
+
+		trigger = {
+			total_development = 350
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 18250
+			}
+		}
+	}
+}
+acadiana_conquest_of_new_france = {
+    	slot = 1
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = ACD
+			tag = MDW
+			AND = {
+				is_playing_custom_nation = yes
+				primary_culture = acadian
+			}
+		}
+    	}
+    	has_country_shield = yes
+	acd_quebec_rivary = {
+		icon = mission_alliances
+		required_missions = { acd_unification }
+		position = 3
+
+		trigger = {
+			OR = {
+				AND = {
+					is_rival = QUE
+				}
+				NOT = { exists = QUE }
+			}
+		}
+		effect = {
+			bois_francs_area = {
+				add_permanent_claim = ROOT
+			}
+			nord_du_quebec_area = {
+				add_permanent_claim = ROOT
+			}
+			quebec_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	acd_quebec_absolute_conquest = {
+		icon = mission_colonial_new_france
+		required_missions = { acd_quebec_rivary }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bois_francs_area
+				area = nord_du_quebec_area
+				area = quebec_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bois_francs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			nord_du_quebec_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			quebec_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 150
+		}
+	}
+}

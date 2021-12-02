@@ -1,0 +1,120 @@
+Lincoln_conquest = {
+	slot = 1
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			tag = LNC
+			AND = {
+				is_playing_custom_nation = yes
+				primary_culture = lincolnite
+			}
+		}
+    	}
+    	has_country_shield = yes
+	lincoln_independence = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			is_subject = no
+		}
+		effect = {
+			add_dip_power = 50
+		}
+	}
+	lincoln_unification = {
+		icon = mission_eastern_european_city
+		required_missions = { lincoln_independence }
+		position = 2
+		
+		trigger = {
+			lincoln_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 5
+			high_desert_area = { add_permanent_claim = ROOT }
+		}
+	}
+	lnc_high_desert = {
+		icon = mission_assemble_an_army
+		required_missions = { lincoln_unification }
+		position = 3
+		
+		trigger = {
+			high_desert_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = { tag = LNC }
+				add_country_modifier = {
+					name = "rise_of_lincoln"
+					duration = -1
+				}
+			}
+			if = {
+				limit = { is_playing_custom_nation = yes }
+				add_country_modifier = {
+					name = "rise_of_lincoln"
+					duration = 9125
+				}
+			}
+			add_prestige = 25
+			high_desert_area = {
+					remove_core = JEF
+					remove_core = ORE
+			}
+		}
+	}
+	lnc_integrate_territories = {
+		icon = mission_asian_trader
+		required_missions = { lnc_high_desert }
+		position = 4
+		
+		trigger = {
+			lincoln_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				has_owner_culture = yes
+			}
+			high_desert_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				has_owner_culture = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "lnc_cultural_unification"
+				duration = -1
+			}
+		}
+	}
+	lnc_form_washington = {
+		icon = mission_america
+		required_missions = { lnc_integrate_territories }
+		position = 5
+		
+		trigger = {
+			is_at_war = no
+			NOT = { exists = WAS }
+			NOT = { exists = ORE }
+		}
+		effect = {
+			country_event = { id = flavorplusLNC.11 }
+		}
+	}
+}

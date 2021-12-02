@@ -1,0 +1,335 @@
+New_France_conquest = {
+	slot = 1
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+		}
+    	}
+    	has_country_shield = yes
+	que_mil_buildup = {
+		icon = mission_colonial_new_france
+		required_missions = { }
+		position = 1
+		completed_by = 1492.1.1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			labrador_area = {
+				add_permanent_claim = ROOT
+			}
+			newfoundland_area = {
+				add_permanent_claim = ROOT
+			}
+			ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			southwest_ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			northern_ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 2650
+			add_permanent_claim = 2672
+		}
+	}
+	que_ontario = {
+		icon = the_hundred_years_war
+		required_missions = { que_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = ontario_area
+				area = southwest_ontario_area
+				area = northern_ontario_area
+				province_id = 2672
+				province_id = 2650
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			southwest_ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			northern_ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2672 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2650 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			hudson_islands_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	que_hudson_islands = {
+		icon = brest_dockyards
+		required_missions = { que_ontario }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 5
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	que_form_new_france = {
+		icon = mission_the_french_menace
+		required_missions = { que_hudson_islands }
+		position = 4
+		
+		trigger = {
+			prestige = 25
+			is_at_war = no
+			NOT = { exists = NFR }
+
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 20
+			change_tag = NFR
+			swap_non_generic_missions = yes
+			NFR = {
+				if = {
+					limit = {
+					NOT = { government_rank = 3 }
+					}
+				set_government_rank = 3
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+		}
+	}
+}
+Quebec_diplomatic = {
+	slot = 3
+    	generic = yes
+    	ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+		}
+    	}
+    	has_country_shield = yes
+	que_trade = {
+		icon = mississippi_company
+		required_missions = {  }
+		position = 1
+		
+		trigger = {
+			2657 = {
+				trade_share = {
+				country = ROOT
+				share = 75
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 15
+			if = {
+				limit = {
+					2657 = { owned_by = ROOT }
+				}
+			2657 = { center_of_trade = 1 }
+			}
+		}
+	}
+	building_alliances = {
+		icon = mission_alliances
+		required_missions = { que_trade }
+		position = 2
+		has_country_shield = no
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	have_two_subjects = {
+		icon = mission_have_two_subjects
+		required_missions = { building_alliances }
+		position = 3
+		has_country_shield = no
+		trigger = { num_of_non_tributary_subjects = 2 }
+		effect = {
+			add_country_modifier = {
+				name = "obedient_subjects"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	trade_company_region_abroad = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { 
+		have_two_subjects
+		nfr_caribbean
+		}
+		position = 4
+		has_country_shield = no
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = trade_company_region_abroad_tooltip
+				calc_true_if = {
+					all_trade_node = {
+						calc_true_if = {
+							all_trade_node_member_province = {
+								owned_by = ROOT
+								is_node_in_trade_company_region = yes
+								NOT = { continent = CAPITAL }
+							}
+							amount = 5
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "east_india_trade_rush"
+				duration = 9125 #25 years
+			}
+		}
+	}
+}
+military_missions = { 
+	slot = 2
+	generic = yes
+	ai = no
+	potential = {
+		tag = QUE
+	}
+	expand_country_mission = {
+		icon = mission_conquer_50_development
+		required_missions = { que_mil_buildup }
+		trigger = { grown_by_development = 50 }
+		position = 2
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 9125 #25 years
+					}
+				}
+			}
+		}
+	}
+	conquer_states = {
+		icon = mission_cannons_firing
+		required_missions = { expand_country_mission }
+		trigger = { grown_by_states = 5 }
+		position = 3
+		effect = {
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	assemble_an_army = {
+		icon = mission_assemble_an_army
+		required_missions = { conquer_states }
+		trigger = { army_size = 80 }
+		position = 4
+		effect = {
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	unite_home_region = {
+		icon = mission_unite_home_region
+		required_missions = { assemble_an_army }
+		position = 5
+		provinces_to_highlight = {
+			region_for_scope_province = {
+				is_capital_of = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					owned_by = ROOT #Subjects won't count, empty provinces will need to be colonized.
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_adm_power = 50
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+		}
+	}
+}

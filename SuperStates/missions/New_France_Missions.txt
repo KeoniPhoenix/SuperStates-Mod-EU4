@@ -1,0 +1,408 @@
+New_France_Forts = {
+	slot = 3
+    	generic = yes
+    	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nfr_build_forts = {
+		icon = mission_conquer_50_development
+		required_missions = {  }
+		position = 1
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						fort_level = 2
+					}
+				}
+				amount = 30
+			}
+		}
+		effect = {
+			add_mil_power = 150
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	assemble_an_army = {
+		icon = mission_assemble_an_army
+		required_missions = { nfr_build_forts }
+		position = 2
+		trigger = {
+			army_size_percentage = 1
+			army_size = 150
+		}
+		effect = {
+			add_mil_power = 250
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 18250
+			}
+		}
+	}
+	conquer_states = {
+		icon = mission_unite_home_region
+		required_missions = { assemble_an_army }
+		position = 3
+		trigger = { 
+			grown_by_states = 30
+		}
+		effect = {
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 300
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+		}
+	}	
+}
+New_France_economic = {
+	slot = 4
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			tag = NFR
+		}
+    	}
+    	has_country_shield = yes
+	nfr_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			share_of_starting_income = 2
+			workshop = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+	nfr_development = {
+		icon = mission_america
+		required_missions = { nfr_economy }
+		position = 2
+
+		trigger = {
+			total_development = 500
+		}
+		effect = {
+			add_dip_power = 150
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 18250
+			}
+		}
+	}
+	nfr_universities = {
+		icon = mission_early_modern_university
+		required_missions = { nfr_development }
+		position = 3
+
+		trigger = {
+			capital_scope = {
+				has_building = university
+			}
+			university = 25
+		}
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = "nfr_technology"
+				duration = 18250
+			}
+		}
+	}
+	nfr_unite_culture = {
+		icon = establish_the_musketeers
+		required_missions = {  }
+		position = 4
+		trigger = {
+			owns_all_provinces = {
+				culture_group = new_french	
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_country_modifier = {
+				name = "nfr_cultural_unification"
+				duration = -1
+			}
+		}
+	}
+	nfr_culture = {
+		icon = support_american_independence
+		required_missions = { nfr_unite_culture }
+		position = 5
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_owner_culture = yes
+						has_owner_accepted_culture = yes
+					}
+				}
+				amount = 150
+			}
+		}
+		effect = {
+			add_stability = 3
+			add_country_modifier = {
+				name = "new_french_unity"
+				duration = -1
+			}
+		}
+	}	
+	nfr_rival = {
+		icon = weaken_france
+		required_missions = { nfr_france_discovered }
+		position = 7
+
+		trigger = {
+			OR = {
+				is_rival = FRA
+				NOT = { exists = FRA }
+			}
+		}
+		effect = {
+			add_historical_rival = FRA
+			france_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+New_France_trade_and_ships = {
+	slot = 5
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			tag = NFR
+		}
+    	}
+    	has_country_shield = yes
+	nrf_trade = {
+		icon = mississippi_company
+		required_missions = { nfr_economy }
+		position = 2
+		
+		trigger = {
+			capital_scope = {
+				trade_share = {
+				country = ROOT
+				share = 75
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 15
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+	nrf_dominate_two_trade_nodes = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { nrf_trade }
+		position = 3
+		
+		trigger = {
+			2490 = {
+				trade_share = {
+				country = ROOT
+				share = 90
+				}
+			}
+			2652 = {
+				trade_share = {
+				country = ROOT
+				share = 90
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 25
+			add_country_modifier = {
+				name = "american_monopoly"
+				duration = -1
+			}
+		}
+	}
+	nfr_trade_company_region = {
+		icon = mission_asian_trader
+		required_missions = { nrf_dominate_two_trade_nodes }
+		position = 4
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					owned_by = ROOT
+					is_owned_by_trade_company = yes	
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			add_mercantilism = 10
+			add_country_modifier = {
+				name = "nfr_trade_company"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	nfr_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 5
+		trigger = { 
+			OR = {
+				num_of_heavy_ship = 30
+				num_of_light_ship = 45
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				add_mil_power = 250
+				name = "naval_enthusiasm_mission"
+				duration = 9125
+			}
+		}
+	}
+	nfr_france_discovered = {
+		icon = centralize_france
+		required_missions = { nfr_navy }
+		completed_by = 1674.1.1
+		position = 6
+		provinces_to_highlight = {
+			region = france_region
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			france_region = {
+				type = any
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = { exists = FRA }
+				FRA = {
+					country_event = { 
+    					id = flavorplusNFR.5
+					}
+				}
+			}
+		}
+	}
+	nfr_french_annexation = {
+		icon = mission_the_french_menace
+		required_missions = { nfr_france_discovered }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = france_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			france_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 250
+			add_country_modifier = {
+				name = "nfr_france"
+				duration = -1
+			}
+		}
+	}
+}
