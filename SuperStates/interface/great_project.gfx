@@ -547,6 +547,8 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_zacatecas_mine_city.dds"
 	}
 	
+	## SUPERSTATES MONUMENTS
+	
 	spriteType = {
 		name = "GFX_great_project_castillo_de_san_marcos"
 		texturefile = "gfx//interface//great_projects//great_project_castillo_de_san_marcos.dds"
@@ -632,10 +634,10 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_washington_monument.dds"
 	}
 	
-	spriteType = {
-		name = "GFX_great_project_lincoln_memorial"
-		texturefile = "gfx//interface//great_projects//great_project_lincoln_memorial.dds"
-	}
+	#spriteType = {
+	#	name = "GFX_great_project_lincoln_memorial"
+	#	texturefile = "gfx//interface//great_projects//great_project_lincoln_memorial.dds"
+	#}
 	
 	# spriteType = {
 		# name = "GFX_great_project_washington_cathedral"
@@ -760,10 +762,10 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_fort_sumter.dds"
 	}
 	
-	spriteType = {
-		name = "GFX_great_project_la_cabana"	
-		texturefile = "gfx//interface//great_projects//great_project_la_cabana.dds"
-	}
+	# spriteType = {
+		# name = "GFX_great_project_la_cabana"	
+		# texturefile = "gfx//interface//great_projects//great_project_la_cabana.dds"
+	# }
 	
 	spriteType = {
 		name = "GFX_great_project_lions_gate"	
@@ -854,5 +856,59 @@ spriteTypes = {
 		name = "GFX_great_project_rushmore"
 		texturefile = "gfx//interface//great_projects//great_project_rushmore.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_great_project_lawnfield"
+		texturefile = "gfx//interface//great_projects//great_project_lawnfield.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_fort_ticonderoga"
+		texturefile = "gfx//interface//great_projects//great_project_fort_ticonderoga.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_cabot_tower"
+		texturefile = "gfx//interface//great_projects//great_project_cabot_tower.dds"
+	}
 
+	spriteType = {
+		name = "GFX_great_project_greenfield_village"
+		texturefile = "gfx//interface//great_projects//great_project_greenfield_village.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_st_paul"
+		texturefile = "gfx//interface//great_projects//great_project_st_paul.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_hatley_castle"
+		texturefile = "gfx//interface//great_projects//great_project_hatley_castle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_casa_loma"
+		texturefile = "gfx//interface//great_projects//great_project_casa_loma.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_la_citadelle"
+		texturefile = "gfx//interface//great_projects//great_project_la_citadelle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_bunker_hill"
+		texturefile = "gfx//interface//great_projects//great_project_bunker_hill.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_royal_exhibition"
+		texturefile = "gfx//interface//great_projects//great_project_royal_exhibition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_port_arthur"
+		texturefile = "gfx//interface//great_projects//great_project_port_arthur.dds"
+	}
 }
