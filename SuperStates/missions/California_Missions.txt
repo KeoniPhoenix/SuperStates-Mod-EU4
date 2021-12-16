@@ -3,10 +3,7 @@ cal_alta = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = CAL
-			tag = PCF
-		}
+		tag = CAL
 	}
 	has_country_shield = yes
 
@@ -36,9 +33,17 @@ cal_alta = {
 		}
 		effect = {
 			salt_lake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			south_utah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -67,13 +72,29 @@ cal_alta = {
 		}
 		effect = {
 			arizona_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			3236 = { #Mohave
-				add_permanent_claim = ROOT
+			3236 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
-			938 = { #Yuma
-				add_permanent_claim = ROOT
+			938 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -104,6 +125,10 @@ cal_alta = {
 		}
 		effect = {
 			baja_arizona_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			add_prestige = 10
@@ -117,12 +142,11 @@ cal_alta = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-			province_id = 2733
-			province_id = 2734
-			province_id = 3244
-			province_id = 3248
-			province_id = 949
-			province_id = 951
+				province_id = 2734
+				province_id = 3244
+				province_id = 3252
+				province_id = 951
+				province_id = 950
 			}
 				OR = {
 					NOT = { base_production = 5 }
@@ -130,10 +154,6 @@ cal_alta = {
 			}
 		}	
 		trigger = {#If any new gold provinces are added in NV and CA, add em here. This mission doesn't care about any gold in Utah or Arizona
-			2733 = { #Shasta
-				owned_by = ROOT
-				base_production = 5
-			}
 			2734 = { #Placer
 				owned_by = ROOT
 				base_production = 5
@@ -142,15 +162,15 @@ cal_alta = {
 				owned_by = ROOT
 				base_production = 5
 			}
-			3248 = { #Inyo
-				owned_by = ROOT
-				base_production = 5
-			}
-			949 = { #Clark
+			3252 = { #Imperial
 				owned_by = ROOT
 				base_production = 5
 			}
 			951 = { #Washoe
+				owned_by = ROOT
+				base_production = 5
+			}
+			950 = { #Elko
 				owned_by = ROOT
 				base_production = 5
 			}
@@ -173,10 +193,7 @@ cal_las_and_gran = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = CAL
-			tag = PCF
-		}
+		tag = CAL
 	}
 	has_country_shield = yes
 
@@ -192,12 +209,24 @@ cal_las_and_gran = {
 		}
 		effect = {
 			black_rock_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			mojave_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			baja_california_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -222,6 +251,10 @@ cal_las_and_gran = {
 		}
 		effect = {
 			baja_california_sur_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -262,6 +295,10 @@ cal_las_and_gran = {
 				}
 			}
 			jefferson_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -315,9 +352,8 @@ cal_las_and_gran = {
 		position = 5
 
 		trigger = {
-			is_subject = no
 			stability = 3
-			total_development = 800
+			grown_by_development = 750
 		}
 		effect = {
 			if = {
@@ -332,9 +368,17 @@ cal_las_and_gran = {
 				duration = 5475
 			}
 			sonora_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			sinaloa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -377,10 +421,7 @@ cal_pacific = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = CAL
-			tag = PCF
-		}
+		tag = CAL
 	}
 	has_country_shield = yes
 
@@ -431,7 +472,6 @@ cal_pacific = {
 		position = 3
 
 		trigger = {
-			is_subject = no
 			num_of_owned_provinces_with = {
 				value = 8
 				OR = {
@@ -469,7 +509,11 @@ cal_pacific = {
 			}
 		}
 		effect = {
-			oregon_area = {
+			oregon_area= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			puget_sound_area = {
@@ -511,10 +555,18 @@ cal_pacific = {
 				}
 			}
 			gulf_islands_area = {
-				add_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			vancouver_area = {
-				add_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -525,10 +577,7 @@ cal_trade_and_navy = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = CAL
-			tag = PCF
-		}
+		tag = CAL
 	}
 	has_country_shield = yes
 
@@ -697,7 +746,6 @@ cal_trade_and_navy = {
 			}
 		}
 		trigger = {
-			is_subject = no
 			973 = {
 				trade_share = {
 					country = ROOT
@@ -723,9 +771,17 @@ cal_trade_and_navy = {
 		effect = {
 			add_mercantilism = 2
 			hawaii_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			leeward_hawaiian_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 		}
@@ -737,10 +793,7 @@ cal_dev_and_tech = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = CAL
-			tag = PCF
-		}
+		tag = CAL
 	}
 
 	cal_economy = { #similar to generic economic
@@ -890,7 +943,6 @@ cal_dev_and_tech = {
 			}
 		}
 		trigger = {
-			is_subject = no
 			AND = {
 				946 = { #San Francisco
 					has_building = university
