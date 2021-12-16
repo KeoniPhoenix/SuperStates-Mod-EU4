@@ -1,0 +1,624 @@
+Quebec_New_France_war = {
+	slot = 1
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				NOT = { was_tag	= LOU }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nfr_mil_buildup = {
+		icon = mission_colonial_new_france
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			upper_peninsula_area = {
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				add_permanent_claim = ROOT
+			}
+			mantario_area = {
+				add_permanent_claim = ROOT
+			}
+			manitoba_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_michigan = {
+		icon = mission_galleys_in_port
+		required_missions = { nfr_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = upper_peninsula_area
+				area = michigan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			upper_peninsula_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			michigan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			great_lakes_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_great_lakes = {
+		icon = mission_look_west
+		required_missions = { nfr_michigan }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				region = great_lakes_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			great_lakes_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_permanent_claim = 3156
+			ohio_area = {
+				add_permanent_claim = ROOT
+			}
+			allegheny_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_ohio = {
+		icon = the_russian_campaign
+		required_missions = { nfr_great_lakes }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = ohio_area
+				area = allegheny_area
+				province_id = 3156
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ohio_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			allegheny_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3156 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			american_midwest_region = {
+				add_permanent_claim = ROOT
+			}
+			tennessee_area = {
+				add_permanent_claim = ROOT
+			}
+			pennyroyal_area = {
+				add_permanent_claim = ROOT
+			}
+			kentucky_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_american_midwest = {
+		icon = mission_cannons_firing
+		required_missions = { nfr_ohio }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = tennessee_area
+				area = pennyroyal_area
+				area = kentucky_area
+				region = american_midwest_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			american_midwest_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			tennessee_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			pennyroyal_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kentucky_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			ozarks_area = {
+				add_permanent_claim = ROOT
+			}
+			texarkana_area = {
+				add_permanent_claim = ROOT
+			}
+			white_river_area = {
+				add_permanent_claim = ROOT
+			}
+			oklahoma_area = {
+				add_permanent_claim = ROOT
+			}
+			louisana_area = {
+				add_permanent_claim = ROOT
+			}
+			acadiana_area = {
+				add_permanent_claim = ROOT
+			}
+			mississippi_delta_area = {
+				add_permanent_claim = ROOT
+			}
+			pearl_river_area = {
+				add_permanent_claim = ROOT
+			}
+			black_prairie_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 2503
+			add_permanent_claim = 2508
+			add_permanent_claim = 3292
+			add_permanent_claim = 2480
+			add_permanent_claim = 3294
+			add_permanent_claim = 3289
+			add_permanent_claim = 2482
+			add_permanent_claim = 2481
+		}
+	}
+	nfr_southwest = {
+		icon = mission_louisiana_heron
+		required_missions = { nfr_american_midwest }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = ozarks_area
+				area = texarkana_area
+				area = white_river_area
+				area = oklahoma_area
+				area = acadiana_area
+				area = mississippi_delta_area
+				area = pearl_river_area
+				area = black_prairie_area
+				province_id = 2503
+				province_id = 2508
+				province_id = 3292
+				province_id = 2480
+				province_id = 3294
+				province_id = 3482
+				province_id = 2481
+				province_id = 2482
+				province_id = 3289
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ozarks_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			texarkana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			white_river_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			oklahoma_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			louisana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			acadiana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mississippi_delta_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			pearl_river_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			black_prairie_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2503 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2508 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3292 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2480 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3294 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3482 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2481 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2482 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3289 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			great_plains_region = {
+				add_permanent_claim = ROOT
+			}
+			colorado_area = {
+				add_permanent_claim = ROOT
+			}
+			north_colorado_area = {
+				add_permanent_claim = ROOT
+			}
+			wyoming_area = {
+				add_permanent_claim = ROOT
+			}
+			abasaroka_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 956
+			add_permanent_claim = 3121
+			add_permanent_claim = 980
+			add_permanent_claim = 983
+			add_permanent_claim = 3117
+		}
+	}
+	nfr_great_plains = {
+		icon = the_hundred_years_war
+		required_missions = { nfr_southwest }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				region = great_plains_region
+				area = colorado_area
+				area = north_colorado_area
+				area = wyoming_area
+				area = abasaroka_area
+				province_id = 956
+				province_id = 3121
+				province_id = 980
+				province_id = 983
+				province_id = 3117
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			great_plains_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			colorado_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			north_colorado_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			wyoming_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			abasaroka_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			956 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3121 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			980 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			983 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3117 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "nfr_american_unification"
+				duration = -1
+			}
+		}
+	}
+}
+New_France_Canadian_war = {
+	slot = 2
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				NOT = { was_tag	= LOU }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nfr_manitoba = {
+		icon = mission_crusade_for_varna
+		required_missions = { nfr_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = mantario_area
+				area = manitoba_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mantario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			manitoba_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			alberta_area = {
+				add_permanent_claim = ROOT
+			}
+			saskatchewan_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_alberta = {
+		icon = polish_subjects
+		required_missions = { nfr_manitoba }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saskatchewan_area
+				area = alberta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saskatchewan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alberta_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 5
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+	nfr_maritime_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { }
+		position = 4
+
+		trigger = {
+			3059 = {
+				trade_share = {
+				country = ROOT
+				share = 75
+				}
+			}
+		}
+		effect = {
+			labrador_area = {
+				add_permanent_claim = ROOT
+			}
+			newfoundland_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_newfoundland = {
+		icon = develop_the_po_valley
+		required_missions = { nfr_maritime_trade }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = labrador_area
+				area = newfoundland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			labrador_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			baie_des_chaleurs_area = {
+				add_permanent_claim = ROOT
+			}
+			new_brunswick_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_new_brunswick = {
+		icon = mission_galleys_in_port
+		required_missions = { nfr_newfoundland }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = baie_des_chaleurs_area
+				area = new_brunswick_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baie_des_chaleurs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			nova_scotia_area = {
+				add_permanent_claim = ROOT
+			}
+			saint_george_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	nfr_nova_scotia = {
+		icon = mission_invade_island
+		required_missions = { nfr_new_brunswick }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+				area = saint_george_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nova_scotia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+		}
+	}
+}

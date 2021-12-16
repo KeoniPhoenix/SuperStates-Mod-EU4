@@ -1,0 +1,1000 @@
+texan_reconquest = {
+    	slot = 1
+    	generic = no
+    	ai = yes
+    	potential = {
+     	       tag = TEX
+    	}
+    	has_country_shield = yes
+	tex_new_mexico = {
+		icon = mission_tex_fights
+		required_missions = { tex_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 956
+				province_id = 4572
+				province_id = 958
+				province_id = 3289
+				province_id = 957
+				province_id = 959
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 956
+			owns_core_province = 4572
+			owns_core_province = 958
+			owns_core_province = 3289
+			owns_core_province = 957
+			owns_core_province = 959
+		}
+		effect = {
+			add_prestige = 10
+			add_permanent_claim = 3097
+			add_permanent_claim = 3258
+			add_permanent_claim = 3259
+			add_permanent_claim = 3260
+			add_permanent_claim = 991
+		}
+	}
+	tex_colorado = {
+		icon = mission_tex_colorado
+		required_missions = { tex_new_mexico }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3097
+				province_id = 3258
+				province_id = 3259
+				province_id = 3260
+				province_id = 991
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 3097
+			owns_core_province = 3258
+			owns_core_province = 3259
+			owns_core_province = 3260
+			owns_core_province = 991
+		}
+		effect = {
+			add_prestige = 30
+			add_permanent_claim = 992
+			add_permanent_claim = 4570
+			add_permanent_claim = 3236
+			add_permanent_claim = 949
+			baja_arizona_area = {
+				add_permanent_claim = ROOT
+			}
+			arizona_area = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "texas_reunited"
+				duration = 36500
+			}
+		}
+	}
+	tex_alamo = {
+		icon = mission_tex_alamo
+		required_missions = { tex_colorado }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2486
+			}
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 2486
+			army_size_percentage = 1
+			num_of_generals = 2
+			2486 = {
+				fort_level = 3
+			}
+		}
+		effect = {
+			2486= {
+				change_province_name = "Alamo City"
+				add_base_manpower = 1
+				add_province_modifier = { 
+    					name = remilitarized_alamo
+   					duration = -1
+  					hidden = no
+				}
+			}
+		}
+	}
+	tex_unity = {
+		icon = promote_urbanization
+		required_missions = { tex_alamo }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2488
+				area = texas_area
+				area = trans_pecos_area
+				area = texas_gulf_area
+				area = rio_grande_area
+				area = new_mexico_area
+			}
+		}
+		trigger = {
+			2488 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			texas_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			trans_pecos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			texas_gulf_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			rio_grande_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			new_mexico_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			add_stability = 5
+			add_country_modifier = { 
+ 		   		name = texas_unity
+    				duration = -1  
+    				hidden = no
+			}
+			
+		}
+	}
+	tex_subdue = {
+		icon = mission_impaled_soldies
+		required_missions = { 
+		tex_unity
+		tex_control
+		}
+		position = 8
+		
+		provinces_to_highlight = {
+			OR = {
+				area = high_plains_area
+			}
+		}
+		trigger = {
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				not = { unrest = 1 }
+				has_owner_culture = yes
+			}
+		}
+		effect = {
+			add_stability = 1
+			2478 = {
+				add_base_manpower = 2
+			}
+			2486 = {
+				add_base_manpower = 2
+			}
+			2480 = {
+				add_base_manpower = 1
+			}
+			2487 = {
+				add_base_manpower = 3
+			}
+			2483 = {
+				add_base_manpower = -2
+			}
+			2481 = {
+				add_base_manpower = -1
+			}
+			2482 = {
+				add_base_manpower = -2
+			}
+		}
+	}
+}
+texan_trade_conquest = {
+    	slot = 3
+    	generic = no
+    	ai = yes
+    	potential = {
+     	       tag = TEX
+    	}
+	has_country_shield = yes
+	tex_oklahoma = {
+		icon = mission_landsknecht_soldier
+		required_missions = { tex_mil_buildup }
+		position = 2
+		completed_by = 1492.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1011
+				province_id = 3287
+				province_id = 2477
+				province_id = 1010
+				province_id = 3288
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1011
+			owns_core_province = 3287
+			owns_core_province = 2477
+			owns_core_province = 1010
+			owns_core_province = 3288
+		}
+		effect = {
+			ozarks_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tex_ozarks = {
+		icon = mission_settlers_north_america
+		required_missions = { tex_oklahoma }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2476
+				province_id = 2495
+				province_id = 3242
+				province_id = 2500
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 2476
+			owns_core_province = 2495
+			owns_core_province = 3242
+			owns_core_province = 2500
+		}
+		effect = {
+			west_kansas_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tex_kansas = {
+		icon = mission_cannons_firing
+		required_missions = { tex_ozarks }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1008
+				province_id = 3096
+				province_id = 1009
+				province_id = 3097
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 1008
+			owns_core_province = 3096
+			owns_core_province = 1009
+			owns_core_province = 3097
+		}
+		effect = {
+			add_dip_power = 50
+			add_adm_power = 50
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125
+			}
+		}
+	}
+	tex_monopoly = {
+		icon = mission_war_chest
+		required_missions = { tex_kansas }
+		position = 6
+		
+		trigger = {
+			2480 = {
+				trade_share = {
+				country = ROOT
+				share = 95
+				}
+			}
+			2487 = {
+				trade_share = {
+				country = TEX
+				share = 75
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { 
+ 		   		name = american_monopoly
+    				duration = -1  
+    				hidden = no
+			}
+		}
+	}
+}
+texan_mexican_conquest = {
+    	slot = 2
+    	generic = no
+    	ai = yes
+    	potential = {
+		tag = TEX
+    	}
+	has_country_shield = yes
+	tex_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		completed_by = 1492.1.1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			high_plains_area = {
+				add_permanent_claim = ROOT
+			}
+			oklahoma_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 956
+			add_permanent_claim = 4572
+			add_permanent_claim = 957
+			add_permanent_claim = 959
+			add_permanent_claim = 905
+		}
+	}
+	tex_laredo = {
+		icon = mission_arabian_fort
+		required_missions = { tex_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 905
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 905
+			905 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = {
+			tamaulipas_area = {
+				add_permanent_claim = ROOT
+			}
+			nuevo_leon_area = {
+				add_permanent_claim = ROOT
+			}
+			coahuila_area = {
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = RRG
+		}
+	}
+	tex_rio_grande = {
+		icon = mission_italian_condottiere
+		required_missions = { tex_laredo }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 904
+				province_id = 903
+				province_id = 906
+				province_id = 907
+				province_id = 908
+				province_id = 909
+				province_id = 910
+				province_id = 911
+				province_id = 912
+				province_id = 913
+				province_id = 914
+				province_id = 896
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			914 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			910 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			906 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = tamaulipas_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = nuevo_leon_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = coahuila_area
+			}
+		}
+		effect = {
+			chihuahua_area = {
+				add_permanent_claim = ROOT
+			}
+			durango_area = {
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = NOM
+		}
+	}
+	tex_mexico = {
+		icon = mission_found_havana
+		required_missions = { tex_rio_grande }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 915
+				province_id = 916
+				province_id = 917
+				province_id = 918
+				province_id = 922
+				province_id = 923
+				province_id = 924
+				province_id = 925
+				province_id = 926
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = chihuahua_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = durango_area
+			}
+		}
+		effect = {
+			sinaloa_area = {
+				add_permanent_claim = ROOT
+			}
+			sonora_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gran_tejas = {
+		icon = mission_unite_home_region
+		required_missions = {
+				tex_colorado 
+				tex_mexico
+				tex_kansas
+		}
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3236
+				province_id = 949
+				province_id = 4570
+				province_id = 992
+				province_id = 4571
+				province_id = 938
+				province_id = 937
+				province_id = 3239
+				province_id = 940
+				province_id = 939
+				province_id = 936
+				province_id = 3238
+				province_id = 3237
+				province_id = 929
+				province_id = 928
+				province_id = 930
+				province_id = 927
+				province_id = 920
+				province_id = 921
+				province_id = 919
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			government_rank = 2
+			owns_core_province = 3236
+			owns_core_province = 949
+			owns_core_province = 4570
+			owns_core_province = 992
+			baja_arizona_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			arizona_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = sinaloa_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = sonora_area
+			}
+		}
+		effect = {
+			add_prestige = 70
+			set_government_rank = 3
+			add_country_modifier = { 
+ 		   		name = gran_tejas
+    				duration = 5475
+    				hidden = no
+			}
+		}
+	}
+	tex_control = {
+		icon = mission_have_two_subjects
+		required_missions = { tex_alamo }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = high_plains_area
+			}
+		}
+		trigger = {
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				not = {
+					average_autonomy = 1
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 350
+			country_event = { 
+    				id = flavorplusTEX.1001
+   				days = 182
+    				random = 91
+			}
+		}
+	}
+}
+texan_north_dev = {
+    	slot = 4
+    	generic = no
+    	ai = yes
+    	potential = {
+		tag = TEX
+    	}
+	has_country_shield = yes
+	tex_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			share_of_starting_income = 2
+			workshop = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+	tex_north = {
+		icon = mission_america
+		required_missions = { tex_economy }
+		position = 2
+		trigger = {
+			development_in_provinces = {
+				value = 90
+				area = texas_area
+			}
+			2488 = {
+				development = 15
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			texas_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			2480 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			add_years_of_income = 5
+			add_mercantilism = 5
+		}
+	}
+	tex_oklahoma_dev = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = { 
+			tex_north
+			tex_oklahoma
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1011
+				province_id = 3287
+				province_id = 2477
+				province_id = 1010
+				province_id = 3288
+				province_id = 3289
+				province_id = 2476
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			development_in_provinces = {
+			value = 50
+			area = oklahoma_area
+			}
+			3289 = {
+				development = 15
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2476 = {
+				development = 20
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			oklahoma_area = {
+				development = 50
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			country_event = { 
+    				id = flavorplusTEX.1002
+			}
+		}
+	}
+	tex_high_plains = {
+		icon = mission_colonial
+		required_missions = { 
+		tex_oklahoma_dev
+		tex_control
+		}
+		position = 8
+		trigger = {
+			development_in_provinces = {
+			value = 60
+			area = high_plains_area
+			}
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			2483 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			add_years_of_income = 5
+			add_mercantilism = 5
+		}
+	}
+}
+texan_south_dev = {
+    	slot = 5
+    	generic = no
+    	ai = yes
+    	potential = {
+		tag = TEX
+    	}
+	has_country_shield = yes
+	tex_south = {
+		icon = mission_mexico
+		required_missions = { tex_economy }
+		position = 2
+		trigger = {
+			development_in_provinces = {
+			value = 50
+			area = rio_grande_area
+			}
+			development_in_provinces = {
+			value = 40
+			area = trans_pecos_area
+			}
+			rio_grande_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			trans_pecos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			2486 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			2484 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			add_years_of_income = 7
+			add_mercantilism = 5
+		}
+	}
+	tex_east = {
+		icon = secure_the_republic
+		required_missions = { tex_north
+		tex_south }
+		position = 3
+		trigger = {
+			development_in_provinces = {
+			value = 80
+			area = texas_gulf_area
+			}
+			texas_gulf_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 7
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 18250
+			}
+		}
+	}
+	build_manufactories = {
+		icon = mission_industria_sedera
+		required_missions = { tex_east }
+		position = 4
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+			workshop = 20
+		}
+		effect = {
+			add_mercantilism = 10
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 1.5
+		}
+	}
+	establish_high_seas_navy = {
+		has_country_shield = no
+		icon = mission_establish_high_seas_navy
+		required_missions = {  }
+		position = 6
+		trigger = { 
+			OR = {
+				num_of_heavy_ship = 10 
+				num_of_galley = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	dominate_home_trade_node = {
+		has_country_shield = no
+		icon = mission_dominate_home_trade_node
+		required_missions = { establish_high_seas_navy }
+		position = 7
+		trigger = {
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+	trade_company_region_abroad = {
+		has_country_shield = no
+		icon = mission_trade_company_region_abroad
+		required_missions = { dominate_home_trade_node }
+		position = 8
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = trade_company_region_abroad_tooltip
+				calc_true_if = {
+					all_trade_node = {
+						calc_true_if = {
+							all_trade_node_member_province = {
+								owned_by = ROOT
+								is_node_in_trade_company_region = yes
+								NOT = { continent = CAPITAL }
+							}
+							amount = 5
+						}
+					}
+					amount = 3
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "east_india_trade_rush"
+				duration = 9125 #25 years
+			}
+		}
+	}
+}

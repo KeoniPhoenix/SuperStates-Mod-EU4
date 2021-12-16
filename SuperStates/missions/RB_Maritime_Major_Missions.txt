@@ -1,0 +1,673 @@
+maritime_navy = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+    	potential = {
+		AND = {
+			tag = MTU
+			NOT = { was_tag	= NVS }
+		}
+		has_dlc = "Rule Britannia"
+    	}
+    	has_country_shield = yes
+	maritime_navy = {
+		icon = mission_sea_battles
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = { 
+			navy_size_percentage = 0.75
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				add_mil_power = 250
+				name = "naval_enthusiasm_mission"
+				duration = 7300
+			}
+		}
+	}
+	maritime_explore = {
+		icon = mission_consulate_of_the_sea
+		required_missions = {
+		nvs_alliance
+		maritime_navy
+		}
+		completed_by = 1492.1.1
+		position = 2
+		trigger = { 
+			has_idea_group = exploration_ideas
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+   				shock = 2
+   				fire = 2
+    				manuever = 6
+    				siege = 0
+			}
+		}
+	}
+	maritime_discovered_europe = {
+		icon = mission_look_west
+		required_missions = { maritime_explore }
+		completed_by = 1492.1.1
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				europe_superregion = {
+					has_discovered = ROOT
+				}
+				eastern_europe_superregion = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "maritime_europe_discovered"
+				duration = 9125
+			}
+		}
+	}
+	maritime_conquer_ireland = {
+		icon = mission_rb_conquer_ireland
+		required_missions = {
+		maritime_discovered_europe
+		maritime_rival
+		}
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = connacht_area
+				area = munster_area
+				area = leinster_area
+				area = ulster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			connacht_area = {
+				type = all
+				owned_by = ROOT
+			}
+			munster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			leinster_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ulster_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			kingdom_of_the_isles_area = { add_permanent_claim = ROOT }
+			add_country_modifier = {
+				name = "conquest_of_ireland"
+				duration = 7300
+			}
+		}
+	}
+	maritime_into_the_isles = {
+		icon = mission_rb_into_ireland
+		required_missions = { maritime_conquer_ireland }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			highlands_area = { add_permanent_claim = ROOT }
+			lowlands_area = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_scotland = {
+		icon = mission_rb_conquer_scotland
+		required_missions = { maritime_into_the_isles }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = lowlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lowlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			british_isles_region = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_british_empire = {
+		icon = mission_rb_rule_britannia_scottish_version
+		required_missions = { maritime_scotland }
+		position = 6
+
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			british_isles_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "rule_britannia"
+				duration = 7300
+			}
+		}
+	}
+	maritime_south_africa = {
+		icon = mission_rb_scottish_north_sea_trade
+		required_missions = { maritime_discovers_africa }
+		position = 8
+		
+		provinces_to_highlight = {
+			region = south_africa_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			south_africa_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_navy_tradition = 10
+			south_africa_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	maritime_south_africa_expand = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = { maritime_south_africa }
+		position = 9
+		
+		provinces_to_highlight = {
+			region = south_africa_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			south_africa_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 15
+			add_army_tradition = 20
+			add_navy_tradition = 10
+			add_years_of_income = 5.0
+		}
+	}
+}
+maritime_navy_two = {
+    	slot = 3
+    	generic = yes
+    	ai = yes
+	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+    	potential = {
+		AND = {
+			tag = MTU
+			NOT = { was_tag	= NVS }
+		}
+		has_dlc = "Rule Britannia"
+    	}
+    	has_country_shield = yes
+	maritime_bahamas = {
+		icon = mission_caribbean_cn
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				bahamas_area = {
+					type = any
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			bahamas_area = {
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+			jamaica_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			cayman_islands_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			south_windward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			central_leeward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			basseterre_bay_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			add_permanent_claim = 843
+			843 = { discover_country = ROOT }
+			add_permanent_claim = 4589
+			4589 = { discover_country = ROOT }
+			add_permanent_claim = 497
+			497 = { discover_country = ROOT }
+			add_permanent_claim = 501
+			501 = { discover_country = ROOT }
+			add_permanent_claim = 499
+			499 = { discover_country = ROOT }
+			add_permanent_claim = 500
+			500 = { discover_country = ROOT }
+			add_permanent_claim = 4574
+			4574 = { discover_country = ROOT }
+			add_permanent_claim = 4575
+			4575 = { discover_country = ROOT }
+		}
+	}
+	maritime_british_caribbean = {
+		icon = mission_rb_grow_the_channel
+		required_missions = { maritime_bahamas }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+				area = jamaica_area
+				area = cayman_islands_area
+				area = basseterre_bay_area
+				area = south_windward_area
+				area = central_leeward_area
+				province_id = 843
+				province_id = 4589
+				province_id = 497
+				province_id = 501
+				province_id = 499
+				province_id = 500
+				province_id = 4574
+				province_id = 4575
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bahamas_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			jamaica_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			cayman_islands_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			basseterre_bay_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			south_windward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			central_leeward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			843 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4589 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			497 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			501 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			499 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4574 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			500 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4575 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_carribean"
+				duration = 18250
+			}
+			capital_scope = {
+					add_base_tax = 3
+					add_base_manpower = 1
+					add_base_production = 5
+			}
+		}
+	}
+	maritime_rival = {
+		icon = mission_rb_empire
+		required_missions = { maritime_explore }
+		position = 3
+
+		trigger = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				is_rival = GBR
+			}
+			else = {
+				OR = {
+					is_rival = ENG
+					NOT = { exists = ENG }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				add_historical_rival = GBR
+			}
+			else = {
+				add_historical_rival = ENG
+			}
+			connacht_area = { add_permanent_claim = ROOT }
+			munster_area = { add_permanent_claim = ROOT }
+			leinster_area = { add_permanent_claim = ROOT }
+			ulster_area = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_discovers_india = {
+		icon = mission_junk_boat
+		required_missions = { }
+		position = 4
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = england_discovers_india.tooltip
+				west_india_region = { has_discovered = ROOT }
+				bengal_region = { has_discovered = ROOT }
+				coromandel_region = { has_discovered = ROOT }
+				deccan_region = { has_discovered = ROOT }
+			}
+		}
+		
+		effect = {
+			add_dip_power = 100
+			add_navy_tradition = 20
+		}
+	}
+	maritime_india_landfall = {
+		icon = mission_rb_conquer_bengal
+		required_missions = { maritime_discovers_india }
+		position = 5
+		
+		provinces_to_highlight = {
+			superregion = india_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			india_superregion = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			india_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	maritime_crown_of_india = {
+		icon = mission_rb_take_indian_coast
+		required_missions = { maritime_india_landfall }
+		position = 6
+		
+		provinces_to_highlight = {
+			superregion = india_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			india_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 15
+			add_army_tradition = 20
+			add_navy_tradition = 10
+			add_years_of_income = 5.0
+		}
+	}
+	maritime_discovers_africa = {
+		icon = mission_african_soldier
+		required_missions = { }
+		completed_by = 1492.1.1
+		position = 7
+		
+		trigger = {
+			OR = {
+				africa_superregion = { has_discovered = ROOT }
+				southern_africa_superregion = { has_discovered = ROOT }
+			}
+		}
+		
+		effect = {
+			add_dip_power = 100
+			add_navy_tradition = 20
+		}
+	}
+	maritime_africa_landfall = {
+		icon = mission_rb_inland_india
+		required_missions = { maritime_discovers_africa }
+		position = 8
+		
+		provinces_to_highlight = {
+			superregion = africa_superregion
+			superregion = southern_africa_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			OR = {
+				africa_superregion = {
+					type = any
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				southern_africa_superregion = {
+					type = any
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		
+		effect = {
+			guinea_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	maritime_guinea = {
+		icon = mission_portuguese_interference
+		required_missions = { maritime_africa_landfall }
+		position = 9
+		
+		provinces_to_highlight = {
+			region = guinea_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		ai_priority = {
+			factor = 3
+		}
+		
+		trigger = {
+			add_navy_tradition = 10
+			guinea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		
+		effect = {
+			add_mercantilism = 15
+			add_army_tradition = 20
+			add_navy_tradition = 10
+			add_years_of_income = 5.0
+		}
+	}
+}

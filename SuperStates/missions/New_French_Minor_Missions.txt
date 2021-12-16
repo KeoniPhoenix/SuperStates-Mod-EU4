@@ -1,0 +1,287 @@
+New_French_colonize = {
+	slot = 4
+    	generic = yes
+    	ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			tag = ACD
+			tag = CJN
+		}
+    	}
+    	has_country_shield = yes
+	que_saint_pierre = {
+		icon = mission_colonial
+		required_missions = { que_navy }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4576
+				province_id = 3050
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			4576 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3050 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			3050 = {
+				add_base_production = 3
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	nfr_caribbean = {
+		icon = mission_caribbean_cn
+		required_missions = { que_explore }
+		position = 3
+		provinces_to_highlight = {
+			region = greater_antilles_region
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			greater_antilles_region = {
+				type = any
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			north_haiti_area = {
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+			south_haiti_area = {
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+			add_permanent_claim = 496
+			496 = { discover_country = ROOT }
+			add_permanent_claim = 498
+			498 = { discover_country = ROOT }
+			add_country_modifier = {
+				name = "nfr_caribbean_discovered"
+				duration = 18250
+			}
+		}
+	}
+	nfr_french_caribbean = {
+		icon = mission_colonial_new_france
+		required_missions = { nfr_caribbean }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = north_haiti_area
+				area = south_haiti_area
+				province_id = 496
+				province_id = 498
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_haiti_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			south_haiti_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			496 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			498 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 10
+			capital_scope = {
+					add_base_tax = 3
+					add_base_manpower = 1
+					add_base_production = 5
+			}
+		}
+	}
+}
+New_French_explore = {
+	slot = 5
+    	generic = yes
+    	ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			tag = ACD
+			tag = CJN
+		}
+    	}
+    	has_country_shield = yes
+	que_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = { 
+			OR = {
+				num_of_heavy_ship = 15
+				num_of_light_ship = 25
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125
+			}
+		}
+	}
+	que_explore = {
+		icon = indian_dominance
+		required_missions = { que_navy }
+		completed_by = 1492.1.1
+		position = 2
+		trigger = { 
+			has_idea_group = exploration_ideas
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+   				shock = 3
+   				fire = 3
+    				manuever = 6
+    				siege = 1
+			}
+		}
+	}
+	que_discovered_europe = {
+		icon = mission_look_west
+		required_missions = { que_explore }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				europe_superregion = {
+					has_discovered = ROOT
+				}
+				eastern_europe_superregion = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "que_europe_discovered"
+				duration = 9125
+			}
+		}
+	}
+	que_stance_on_france = {
+		icon = french_empire
+		required_missions = { que_discovered_europe }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				region = france_region
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			if = {
+				limit = { exists = FRA }
+				OR = {
+					alliance_with = FRA
+					is_rival = FRA
+				}
+			}
+			france_region = {
+				type = any
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			if = {
+				limit = { exists = FRA }
+				FRA = {
+					country_event = { 
+    					id = flavorplusQUE.12
+					}
+				}
+			}
+		}
+	}
+	que_cosmopolitan_french = {
+		icon = support_american_independence
+		required_missions = { que_stance_on_france }
+		position = 5
+		trigger = {
+			if {
+				limit = { primary_culture = cosmopolitan_french }
+				bois_francs_area = {
+				type = all
+				culture = cosmopolitan_french
+				}
+				nord_du_quebec_area = {
+				type = all
+				culture = cosmopolitan_french
+				}
+				quebec_area = {
+				type = all
+				culture = cosmopolitan_french
+				}
+				baie_des_chaleurs_area = {
+				type = all
+				culture = cosmopolitan_french
+				}
+			
+			}
+			else = {
+				calc_true_if = {
+					all_owned_province = {
+						culture = cosmopolitan_french
+					}
+					amount = 1
+				}
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_adm_tech = 1
+		}
+	}
+}

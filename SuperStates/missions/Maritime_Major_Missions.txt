@@ -1,0 +1,557 @@
+maritime_new_england_conquest = {
+    	slot = 1
+    	generic = yes
+    	ai = yes
+    	potential = {
+		AND = {
+			tag = MTU
+			NOT = { was_tag	= NBR }
+			NOT = { was_tag	= NFL }
+		}
+    	}
+    	has_country_shield = yes
+	martime_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			maine_area = { add_permanent_claim = ROOT }
+		}
+	}
+	martime_maine = {
+		icon = mission_assemble_an_army
+		required_missions = { martime_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = maine_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maine_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			new_england_region = { add_permanent_claim = ROOT }
+		}
+	}
+	martime_new_england = {
+		icon = mission_have_manufactories
+		required_missions = { martime_maine }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				region = new_england_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_england_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 3
+				add_base_manpower = 1
+			}
+		}
+	}
+	martime_new_england_centralization = {
+		icon = mission_high_income
+		required_missions = { martime_new_england }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				region = new_england_region
+			}
+		}
+		trigger = {
+			new_england_region = {
+				type = all
+				owned_by = ROOT
+				unrest = 0
+				OR = {
+					has_owner_accepted_culture = yes
+					has_owner_culture = yes
+				}
+			}
+		}
+		effect = {
+			add_stability = 1
+			long_island_area = { add_permanent_claim = ROOT }
+			new_york_area = { add_permanent_claim = ROOT }
+		}
+	}
+	martime_new_york = {
+		icon = mission_empire
+		required_missions = { martime_new_england_centralization }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = long_island_area
+				area = new_york_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_york_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			long_island_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 7
+			}
+			2601 = {
+				add_base_tax = -2
+				add_base_production = -2
+			}
+			3282 = {
+				add_base_production = -2
+			}
+			3283 = {
+				add_base_production = -2
+			}
+		}
+	}
+	maritime_universities = {
+		icon = mission_early_modern_university
+		required_missions = {  }
+		position = 6
+
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				OR = {
+					AND = {
+						innovativeness = 30
+						university = 10
+					}
+					AND = {
+						has_institution = enlightenment
+						university = 15
+					}
+				}
+			}
+			else = {
+				university = 25
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				add_country_modifier = {
+				name = "maritime_technology"
+				duration = 18250
+				}
+			}
+			else = {
+				add_adm_power = 100
+				add_dip_power = 25
+			}
+		}
+	}
+	maritime_invent = {
+		icon = mission_asian_trader
+		required_missions = { maritime_universities }
+		position = 7
+
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				innovativeness = 100
+			}
+			else = {
+				has_institution = enlightenment
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				add_country_modifier = {
+				name = "maritime_invent_modifier"
+				duration = -1
+				}
+			}
+			else = {
+				add_adm_power = 50
+				add_dip_power = 50
+			}
+		}
+	}
+}
+maritime_navy = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+    	potential = {
+		AND = {
+			tag = MTU
+			NOT = { was_tag	= NVS }
+		}
+		NOT = { has_dlc = "Rule Britannia" }
+    	}
+    	has_country_shield = yes
+	maritime_navy = {
+		icon = mission_sea_battles
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = { 
+			navy_size_percentage = 0.75
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				add_mil_power = 250
+				name = "naval_enthusiasm_mission"
+				duration = 7300
+			}
+		}
+	}
+	maritime_explore = {
+		icon = mission_consulate_of_the_sea
+		required_missions = {
+		nvs_alliance
+		maritime_navy
+		}
+		completed_by = 1492.1.1
+		position = 2
+		trigger = { 
+			has_idea_group = exploration_ideas
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+   				shock = 2
+   				fire = 2
+    				manuever = 6
+    				siege = 0
+			}
+		}
+	}
+	maritime_discovered_europe = {
+		icon = mission_look_west
+		required_missions = { maritime_explore }
+		completed_by = 1492.1.1
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				europe_superregion = {
+					has_discovered = ROOT
+				}
+				eastern_europe_superregion = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "maritime_europe_discovered"
+				duration = 9125
+			}
+		}
+	}
+}
+maritime_navy_two = {
+    	slot = 3
+    	generic = yes
+    	ai = yes
+    	potential = {
+		AND = {
+			tag = MTU
+			NOT = { was_tag	= NVS }
+		}
+		NOT = { has_dlc = "Rule Britannia" }
+    	}
+    	has_country_shield = yes
+	maritime_bahamas = {
+		icon = mission_caribbean_cn
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				bahamas_area = {
+					type = any
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			bahamas_area = {
+				add_permanent_claim = ROOT
+				discover_country = ROOT
+			}
+			jamaica_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			cayman_islands_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			south_windward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			central_leeward_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			basseterre_bay_area = {
+			add_permanent_claim = ROOT
+			discover_country = ROOT
+			}
+			add_permanent_claim = 843
+			843 = { discover_country = ROOT }
+			add_permanent_claim = 4589
+			4589 = { discover_country = ROOT }
+			add_permanent_claim = 497
+			497 = { discover_country = ROOT }
+			add_permanent_claim = 501
+			501 = { discover_country = ROOT }
+			add_permanent_claim = 499
+			499 = { discover_country = ROOT }
+			add_permanent_claim = 500
+			500 = { discover_country = ROOT }
+			add_permanent_claim = 4574
+			4574 = { discover_country = ROOT }
+			add_permanent_claim = 4575
+			4575 = { discover_country = ROOT }
+		}
+	}
+	maritime_british_caribbean = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { nvs_bahamas }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bahamas_area
+				area = jamaica_area
+				area = cayman_islands_area
+				area = basseterre_bay_area
+				area = south_windward_area
+				area = central_leeward_area
+				province_id = 843
+				province_id = 4589
+				province_id = 497
+				province_id = 501
+				province_id = 499
+				province_id = 500
+				province_id = 4574
+				province_id = 4575
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bahamas_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			jamaica_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			cayman_islands_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			basseterre_bay_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			south_windward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			central_leeward_area = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			843 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4589 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			497 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			501 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			499 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4574 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			500 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+			4575 = {
+				owned_by = ROOT
+				OR = {
+					is_core = ROOT
+					is_territorial_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_carribean"
+				duration = 18250
+			}
+			capital_scope = {
+					add_base_tax = 3
+					add_base_manpower = 1
+					add_base_production = 5
+			}
+		}
+	}
+	maritime_rival = {
+		icon = mission_rb_empire
+		required_missions = { maritime_explore }
+		position = 3
+
+		trigger = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				is_rival = GBR
+			}
+			else = {
+				OR = {
+					is_rival = ENG
+					NOT = { exists = ENG }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = GBR
+				}
+				add_historical_rival = GBR
+			}
+			else = {
+				add_historical_rival = ENG
+			}
+			add_mil_power = 25
+		}
+	}
+}

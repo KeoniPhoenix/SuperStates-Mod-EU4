@@ -1,0 +1,642 @@
+new_brunswick_maine = {
+    	slot = 1
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NBR
+			AND = {
+				tag = MTU
+				was_tag	= NBR
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nbr_houlton = {
+		icon = mission_assemble_an_army
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3018
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			3018 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			maine_area = { add_permanent_claim = ROOT }
+		}
+	}
+	maritime_maine = {
+		icon = mission_settlers_north_america
+		required_missions = { nbr_houlton }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = maine_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maine_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			new_england_region = { add_permanent_claim = ROOT }
+		}
+	}
+	martime_new_england = {
+		icon = mission_have_manufactories
+		required_missions = { martime_maine }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				region = new_england_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_england_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			mid_atlantic_region = { add_permanent_claim = ROOT }
+		}
+	}
+	nbr_mid_atlantic = {
+		icon = mission_hanseatic_city
+		required_missions = { martime_new_england }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				region = mid_atlantic_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mid_atlantic_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 3
+				add_base_manpower = 2
+			}
+		}
+	}
+	nbr_university_of_new_brunswick = {
+		icon = mission_early_modern_university
+		required_missions = {  }
+		position = 5
+
+		trigger = {
+			1814 = {
+				has_building = university
+				unrest = 0
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				change_innovativeness = 2
+				add_country_modifier = {
+				name = "maritime_technology"
+				duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+				name = "maritime_technology"
+				duration = 9125
+				}
+			}
+		}
+	}
+	nbr_university_of_new_brunswick_extend = {
+		icon = mission_colonial
+		required_missions = { nbr_university_of_new_brunswick }
+		position = 6
+
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				innovativeness = 30
+			}
+			1813 = {
+				has_building = university
+				unrest = 0
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				add_country_modifier = {
+				name = "maritime_invent_modifier"
+				duration = 18250
+				}
+			}
+			else = {
+				add_republican_tradition = 10
+				add_legitimacy = 10
+			}
+		}
+	}
+	maritime_the_great_expulsion = {
+		icon = mission_expel_the_moriscos
+		required_missions = {  }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			all_owned_province = {
+				NOT = { culture = acadian }
+				NOT = { culture = brayon }
+				NOT = { culture = cajun }
+			}
+			nova_scotia_area = {
+				type = all
+				NOT = { culture = acadian }
+				NOT = { culture = brayon }
+				NOT = { culture = cajun }
+			}
+		}
+		effect = {
+			add_stability = 1
+			add_dip_power = 50
+			add_war_exhaustion = -10
+			hidden_effect = {
+				every_country = {
+					limit = { 
+						NOT = { tag = NBR }
+						NOT = { tag = MTU }
+						OR = {
+							owns = 3101
+							owns = 3123
+							owns = 2491
+							owns = 3021
+							owns = 2490
+						}
+					}
+					country_event = { id = flavorplusNBR.8 }
+				}
+			}
+		}
+	}
+}
+new_brunswick_conquest = {
+    	slot = 2
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NBR
+		}
+    	}
+    	has_country_shield = yes
+	nbr_prosperity = {
+		icon = mission_galleys_in_port
+		required_missions = {  }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				province_id = 3071
+			}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				new_brunswick_area = {
+					type = all
+					owned_by = ROOT
+				}
+				1814 = {
+					is_prosperous = yes
+				}
+				3071 = {
+					owned_by = ROOT
+					is_prosperous = yes
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				new_brunswick_area = {
+					type = all
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+				3071 = {
+					owned_by = ROOT
+					NOT = { unrest = 1 }
+					NOT = { devastation = 1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "maritime_prosperity"
+				duration = 9125
+			}
+			saint_george_area = { add_permanent_claim = ROOT }
+			add_permanent_claim = 3031
+		}
+	}
+	nbr_nova_scotia = {
+		icon = mission_unite_home_region
+		required_missions = { nbr_prosperity }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nova_scotia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			saint_george_area = { add_permanent_claim = ROOT }
+			add_permanent_claim = 3031
+		}
+	}
+	nbr_saint_george = {
+		icon = mission_invade_island
+		required_missions = { nbr_nova_scotia }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = saint_george_area
+				province_id = 3031
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3031 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+	nbr_new_england_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { martime_new_england }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				region = new_england_region
+			}
+		}
+		trigger = {
+			2609 = {
+				trade_share = {
+					country = ROOT
+					share = 90
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 10
+			if = {
+				limit = { owns = 2607 }
+				2607 = {
+					add_center_of_trade_level = 1
+				}
+			}
+			if = {
+				limit = { owns = 3325 }
+				3325 = {
+					add_center_of_trade_level = 1
+				}
+			}
+			if = {
+				limit = { 
+					AND = {
+						NOT = { owns = 2607 }
+						NOT = { owns = 3325 }
+					}
+				}
+				1813 = {
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+	nbr_maritime_trade_node = {
+		icon = mission_high_income
+		required_missions = {  }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1814
+			}
+		}
+		trigger = {
+			1814 = {
+				trade_share = {
+					country = ROOT
+					share = 90
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "american_monopoly"
+				duration = -1
+			}
+		}
+	}
+	nbr_end_trade_europe = {
+		icon = mission_war_chest
+		required_missions = { 
+		nbr_maritime_trade_node
+		nbr_return_to_europe
+		}
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236
+				province_id = 112
+				province_id = 101
+			}
+		}
+		trigger = {
+			OR = {
+				236 = {
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+				101 = {
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+				112 = {
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 15
+			add_dip_tech = 1
+		}
+	}
+}
+new_brunswick_diplomatic = {
+    	slot = 3
+    	generic = yes
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NBR
+		}
+    	}
+    	has_country_shield = yes
+	nbr_alliance = {
+		icon = mission_alliances
+		required_missions = {  }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						exists = MTU
+					}
+				}
+				OR = {
+					AND = {
+						alliance_with = NVS
+						reverse_has_opinion = {
+							who = NVS
+							value = 100
+						}
+					}
+					is_rival = NVS
+					NOT = { exists = NVS }
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						alliance_with = MTU
+						reverse_has_opinion = {
+							who = MTU
+							value = 100
+						}
+					}
+					is_rival = MTU
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 150
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 1825
+			}
+		}
+	}
+	maritime_navy = {
+		icon = mission_sea_battles
+		required_missions = { nbr_alliance }
+		completed_by = 1492.1.1
+		position = 2
+		trigger = { 
+			navy_size_percentage = 0.75
+			OR = {
+				num_of_heavy_ship = 10
+				num_of_light_ship = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				add_mil_power = 250
+				name = "naval_enthusiasm_mission"
+				duration = 7300
+			}
+		}
+	}
+	maritime_explore = {
+		icon = mission_consulate_of_the_sea
+		required_missions = { maritime_navy }
+		completed_by = 1492.1.1
+		position = 3
+		trigger = { 
+			has_idea_group = exploration_ideas
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+   				shock = 2
+   				fire = 2
+    				manuever = 6
+    				siege = 0
+			}
+		}
+	}
+	maritime_discovered_europe = {
+		icon = mission_look_west
+		required_missions = { maritime_explore }
+		completed_by = 1492.1.1
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { has_discovered = ROOT }
+		}
+		
+		trigger = {
+			OR = {
+				europe_superregion = {
+					has_discovered = ROOT
+				}
+				eastern_europe_superregion = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = "maritime_europe_discovered"
+				duration = 9125
+			}
+		}
+	}
+	nbr_return_to_europe = {
+		icon = mission_conquer_50_development
+		required_missions = { maritime_discovered_europe }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			eastern_europe_superregion = {
+				type = any
+				owned_by = ROOT
+			}
+			europe_superregion = {
+				type = any
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_absolutism = 10
+			change_dip = 2
+			change_mil = 1
+		}
+	}
+	nbr_empire_within_europe = {
+		icon = mission_empire
+		required_missions = { nbr_return_to_europe }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				superregion = europe_superregion
+				superregion = eastern_europe_superregion
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				government = monarchy
+				development_in_provinces = {
+					value = 250
+					superregion = europe_superregion
+				}
+				development_in_provinces = {
+					value = 250
+					superregion = eastern_europe_superregion
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				add_prestige = 70
+			}
+			change_mil = 3
+		}
+	}
+}

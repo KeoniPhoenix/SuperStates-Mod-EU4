@@ -1,0 +1,506 @@
+Louisiana_New_French_war = {
+	slot = 1
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag	= LOU
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nfr_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			southwest_ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			oklahoma_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_toronto = {
+		icon = develop_the_po_valley
+		required_missions = { nfr_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = southwest_ontario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			southwest_ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			northern_ontario_area = {
+				add_permanent_claim = ROOT
+			}
+			mantario_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_eastern_canada = {
+		icon = the_hundred_years_war
+		required_missions = { lou_toronto }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = ontario_area
+				area = northern_ontario_area
+				area = mantario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			northern_ontario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mantario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			manitoba_area = {
+				add_permanent_claim = ROOT
+			}
+			saskatchewan_area = {
+				add_permanent_claim = ROOT
+			}
+			alberta_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_alberta = {
+		icon = polish_subjects
+		required_missions = { lou_eastern_canada }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = manitoba_area
+				area = saskatchewan_area
+				area = alberta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			manitoba_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saskatchewan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alberta_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			bois_francs_area = {
+				add_permanent_claim = ROOT
+			}
+			nord_du_quebec_area = {
+				add_permanent_claim = ROOT
+			}
+			quebec_area = {
+				add_permanent_claim = ROOT
+			}
+			baie_des_chaleurs_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_quebec = {
+		icon = mission_colonial_new_france
+		required_missions = { lou_alberta }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = bois_francs_area
+				area = nord_du_quebec_area
+				area = quebec_area
+				area = baie_des_chaleurs_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bois_francs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			nord_du_quebec_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			quebec_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			baie_des_chaleurs_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			labrador_area = {
+				add_permanent_claim = ROOT
+			}
+			newfoundland_area = {
+				add_permanent_claim = ROOT
+			}
+			new_brunswick_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_labrador = {
+		icon = france_antarctique
+		required_missions = { lou_quebec }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = labrador_area
+				area = newfoundland_area
+				area = new_brunswick_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			labrador_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			nova_scotia_area = {
+				add_permanent_claim = ROOT
+			}
+			saint_george_area = {
+				add_permanent_claim = ROOT
+			}
+			iles_saint_laurent_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_nova_scotia = {
+		icon = mission_invade_island
+		required_missions = { lou_labrador }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nova_scotia_area
+				area = saint_george_area
+				area = iles_saint_laurent_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nova_scotia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saint_george_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			iles_saint_laurent_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			capital_scope = {
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}
+Louisiana_american_war = {
+	slot = 2
+    	generic = no
+    	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag	= LOU
+			}
+		}
+    	}
+    	has_country_shield = yes
+	lou_oklahoma = {
+		icon = mission_landsknecht_soldier
+		required_missions = { nfr_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = oklahoma_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			oklahoma_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			west_kansas_area = {
+				add_permanent_claim = ROOT
+			}
+			colorado_area = {
+				add_permanent_claim = ROOT
+			}
+			north_colorado_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_lesser_mid_america = {
+		icon = mission_tex_colorado
+		required_missions = { lou_oklahoma }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = west_kansas_area
+				area = colorado_area
+				area = north_colorado_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_kansas_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			colorado_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			north_colorado_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			nebraska_area = {
+				add_permanent_claim = ROOT
+			}
+			sioux_area = {
+				add_permanent_claim = ROOT
+			}
+			loess_area = {
+				add_permanent_claim = ROOT
+			}
+			east_river_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_nebraska = {
+		icon = mission_noble_council
+		required_missions = { lou_lesser_mid_america }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = nebraska_area
+				area = sioux_area
+				area = loess_area
+				area = east_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nebraska_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sioux_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			loess_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			east_river_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			wyoming_area = {
+				add_permanent_claim = ROOT
+			}
+			absaroka_area = {
+				add_permanent_claim = ROOT
+			}
+			sakakawea_area = {
+				add_permanent_claim = ROOT
+			}
+			red_river_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_dekota_proper = {
+		icon = mission_cossack_cavalry
+		required_missions = { lou_nebraska }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = wyoming_area
+				area = absaroka_area
+				area = sakakawea_area
+				area = red_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			wyoming_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			absaroka_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			sakakawea_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			red_river_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			east_montana_area = {
+				add_permanent_claim = ROOT
+			}
+			montana_area = {
+				add_permanent_claim = ROOT
+			}
+			west_montana_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	lou_montana = {
+		icon = alpine_defenses
+		required_missions = { lou_dekota_proper }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				area = east_montana_area
+				area = montana_area
+				area = west_montana_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_montana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			montana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			west_montana_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			capital_scope = {
+				add_base_tax = 5
+				add_base_production = 5
+				add_base_manpower = 5
+			}
+		}
+	}
+}

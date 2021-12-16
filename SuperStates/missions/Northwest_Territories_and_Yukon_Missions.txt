@@ -1,0 +1,911 @@
+conquest_northwesterner_1 = {
+    	slot = 1
+    	generic = no
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NWT
+			tag = YUK
+			AND = {
+				tag = ACU
+				NOT = { was_tag	= NUN }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	northwesterner_unification = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 1
+		completed_by = 1492.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = northwest_territories_area
+				province_id = 3052
+				province_id = 2618
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			northwest_territories_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3052 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2618 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			else = {
+				add_prestige = 25
+			}
+			hudson_islands_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NWT_hudson_islands = {
+		icon = mission_invade_island
+		required_missions = { northwesterner_unification }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			inside_passage_area = {
+				add_permanent_claim = ROOT
+			}
+			alaska_area = {
+				add_permanent_claim = ROOT
+			}
+			aleutia_area = {
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim = 3040
+			add_permanent_claim = 3041
+		}
+	}
+	NWT_alaska_area = {
+		icon = alaskan_flag
+		required_missions = { NWT_hudson_islands }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = inside_passage_area
+				area = alaska_area
+				area = aleutia_area
+				province_id = 3040
+				province_id = 3041
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			3040 = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3041 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alaska_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			aleutia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			inside_passage_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			columbia_area = {
+				add_permanent_claim = ROOT
+			}
+			vancouver_area = {
+				add_permanent_claim = ROOT
+			}
+			kootenay_area = {
+				add_permanent_claim = ROOT
+			}
+			strait_of_georgia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NWT_cascadia = {
+		icon = cascadian_flag
+		required_missions = { NWT_alaska_area }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = strait_of_georgia_area
+				area = columbia_area
+				area = vancouver_area
+				area = kootenay_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			columbia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			vancouver_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kootenay_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			strait_of_georgia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_army_tradition = 20
+		}
+	}
+	NWT_maritime_region = {
+		icon = mission_galleys_in_port
+		required_missions = { NWT_western_central_canada }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				region = maritimes_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maritimes_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 35
+			add_army_tradition = 15
+		}
+	}
+}
+conquest_northwesterner_2 = {
+    	slot = 2
+    	generic = no
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NWT
+			tag = YUK
+			AND = {
+				tag = ACU
+				NOT = { was_tag	= NUN }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	NWT_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			peace_river_area = { add_permanent_claim = ROOT }
+			athabasca_area = { add_permanent_claim = ROOT }
+			if = {
+				limit = {
+					AND = {
+						tag = NWT
+						ai = yes
+					}
+				}
+				hidden_effect = {
+					add_claim = 2618
+					add_claim = 3052
+					add_claim = 2621
+				}
+			}
+		}
+	}
+	NWT_northern_west_canada = {
+		icon = mission_canada
+		required_missions = {
+		NWT_mil_buildup
+		northwesterner_unification
+		}
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = peace_river_area
+				area = athabasca_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			peace_river_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			athabasca_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			northern_saskatchewan_area = {
+				add_permanent_claim = ROOT
+			}
+			alberta_area = {
+				add_permanent_claim = ROOT
+			}
+			saskatchewan_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NWT_southern_west_canada = {
+		icon = mission_assemble_an_army
+		required_missions = { NWT_northern_west_canada }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = northern_saskatchewan_area
+				area = alberta_area
+				area = saskatchewan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			northern_saskatchewan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			alberta_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			saskatchewan_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			manitoba_area = {
+				add_permanent_claim = ROOT
+			}
+			mantario_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NWT_western_central_canada = {
+		icon = mission_cannons_firing
+		required_missions = { NWT_southern_west_canada }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = manitoba_area
+				area = mantario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			manitoba_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			mantario_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nwt_northwest_territories_restored"
+				duration = 36500
+			}
+			maritimes_region = {
+				add_permanent_claim = ROOT
+			}
+			central_canada_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NWT_central_canada_region = {
+		icon = canadian_flag
+		required_missions = { NWT_western_central_canada }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				region = central_canada_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_canada_region = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nwt_canada_unification"
+				duration = 18250
+			}
+		}
+	}
+}
+nwt_diplomacy = {
+    	slot = 3
+    	generic = no
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NWT
+			tag = YUK
+			AND = {
+				tag = ACU
+				NOT = { was_tag	= NUN }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nwt_allied_the_protector = {
+		icon = mission_alliances
+		required_missions = {  }
+		completed_by = 1492.1.1
+		trigger = {
+			if = {
+				limit = {
+					tag = YUK
+				}
+				OR = {
+					AND = {
+						alliance_with = ALA
+						reverse_has_opinion = {
+							who = ALA
+							value = 100
+						}
+					}
+					is_rival = ALA
+					NOT = { exists = ALA }
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						alliance_with = ABR
+						reverse_has_opinion = {
+							who = ABR
+							value = 100
+						}
+					}
+					is_rival = ABR
+					NOT = { exists = ABR }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	nwt_trade_centers = {
+		icon = mission_early_game_buildings
+		required_missions = { nwt_allied_the_protector }
+		position = 2
+
+		trigger = {
+			canada_superregion = {
+				type = any
+				owned_by = ROOT
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+	nwt_invest = {
+		icon = mission_high_income
+		required_missions = { nwt_trade_centers }
+		position = 3
+		
+		trigger = {
+			marketplace = 10
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_modifier = building_spree }
+				}
+				add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+				}
+			}
+			else = {
+			add_dip_power = 50
+			}
+			add_mercantilism = 5
+		}
+	}
+	nwt_dominate_two_trade_nodes = {
+		icon = mission_war_chest
+		required_missions = { nwt_invest }
+		position = 4
+		
+		trigger = {
+			2631 = {
+				trade_share = {
+				country = ROOT
+				share = 50
+				}
+			}
+			2652 = {
+				trade_share = {
+				country = ROOT
+				share = 50
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 15
+			add_dip_power = 50
+		}
+	}
+	nwt_centralize_state = {
+		icon = mission_asian_trader
+		required_missions = { nwt_dominate_two_trade_nodes }
+		position = 5
+		
+		trigger = {
+			mercantilism = 80
+			crown_land_share = 50
+			NOT = { corruption = 1 }
+		}
+		effect = {
+			add_mercantilism = 20
+			add_stability = 2
+		}
+	}
+}
+yukon_development = {
+    	slot = 4
+    	generic = no
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = NWT
+			tag = YUK
+			AND = {
+				tag = ACU
+				NOT = { was_tag	= NUN }
+			}
+		}
+    	}
+    	has_country_shield = yes
+	nwt_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			share_of_starting_income = 2
+			OR = {
+				workshop = 10
+				temple = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+	nwt_development = {
+		icon = mission_america
+		required_missions = { nwt_economy }
+		position = 2
+
+		trigger = {
+			hudson_islands_area = {
+				type = any
+				owned_by = ROOT
+				grown_by_development = 2
+			}
+			northwest_territories_area = {
+				type = any
+				owned_by = ROOT
+				grown_by_development = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 9125
+			}
+		}
+	}
+	nwt_yukon = {
+		icon = american_gold_rush
+		required_missions = { nwt_development }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2618
+			}
+		}
+		trigger = {
+			2621 = {
+				owned_by = ROOT
+				development = 15
+				unrest = 0
+			}
+		}
+		effect = {
+			3052 = {
+				add_province_modifier = {
+				name = "nwt_gold_rush"
+				duration = -1
+				}
+			}
+			2618 = {
+				add_province_modifier = {
+				name = "nwt_gold_rush"
+				duration = -1
+				}
+			}
+		}
+	}
+	nwt_yukon_buildings = {
+		icon = mission_colonial
+		required_missions = { nwt_yukon }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2618
+			}
+		}
+		trigger = {
+			2618 = {
+				owned_by = ROOT
+			}
+			calc_true_if = {
+				2621 = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			2618 = {
+				add_province_modifier = {
+				name = "nun_development_initiative"
+				duration = 9125
+				}
+				add_center_of_trade_level = 1
+			}
+			3052 = {
+				add_province_modifier = {
+				name = "nun_development_initiative"
+				duration = 9125
+				}
+			}
+		}
+	}
+	nwt_build_manufactories = {
+		icon = mission_state_manufactories
+		required_missions = { nwt_yukon_buildings }
+		position = 3
+
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 3
+		}
+	}
+}
+yukon_gold_tree = {
+    	slot = 5
+    	generic = no
+    	ai = yes
+    	potential = {
+		OR = {
+			tag = YUK
+			AND = {
+				tag = ACU
+				was_tag	= YUK
+			}
+		}
+    	}
+    	has_country_shield = yes
+	yuk_have_two_subjects = {
+		icon = mission_have_two_subjects
+		required_missions = {  }
+		position = 1
+		trigger = { num_of_non_tributary_subjects = 2 }
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = "obedient_subjects"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	yukoner_empire = {
+		icon = mission_empire
+		required_missions = { yuk_have_two_subjects }
+		position = 2
+		
+		trigger = {
+			government_rank = 3
+		}
+		effect = {
+			add_prestige = 30
+			add_country_modifier = {
+				name = "imperial_ambition"
+				duration = 18250
+			}
+		}
+	}
+	yuk_stikine = {
+		icon = american_gold_rush
+		required_missions = { nwt_development }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3041
+			}
+		}
+		trigger = {
+			3041 = {
+				owned_by = ROOT
+				development = 15
+				unrest = 0
+			}
+		}
+		effect = {
+			3041 = {
+				add_province_modifier = {
+				name = "nwt_gold_rush"
+				duration = -1
+				}
+				change_trade_goods = gold
+			}
+		}
+	}
+	yuk_gold = {
+		icon = mission_war_chest
+		required_missions = { yuk_stikine }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = gold
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			gold = 4
+		}
+		effect = {
+			add_country_modifier = {
+				name = "yuk_gold_rush"
+				duration = -1
+			}
+			add_years_of_income = 1.0
+		}
+	}
+	yuk_monopolize_gold = {
+		icon = mission_zambezi_gold
+		required_missions = { yuk_gold }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = gold
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				owns_all_provinces = {
+					superregion = america_superregion
+					trade_goods = gold
+				}
+				owns_all_provinces = {
+					superregion = canada_superregion
+					trade_goods = gold
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "american_monopoly"
+				duration = -1
+			}
+			add_years_of_income = 2.0
+		}
+	}
+}
