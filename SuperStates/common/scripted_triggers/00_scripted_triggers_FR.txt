@@ -1017,7 +1017,7 @@ frloc_tags_noart_sg_fem_vow_d_a_12b = {
 		# Far East / Extrême-Orient
 		tag = ATJ tag = IND
 		# Oceanic tags
-		tag = HAW tag = OAH tag = UHW
+		# tag = HAW tag = OAH tag = UHW
 		# Leviathan Maori tags
 		tag = AOT
 	}

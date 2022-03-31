@@ -1,8 +1,0 @@
-# No previous file for Joara
-#Both De Soto's Joara chiefdom and later populations of Eastern Siouan people. 
-government = native
-add_government_reform = native_clan_council_reform
-government_rank = 1
-primary_culture = catawba
-religion = totemism
-technology_group = north_american

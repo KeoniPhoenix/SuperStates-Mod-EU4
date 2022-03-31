@@ -54,9 +54,9 @@ mss_conquests_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			hudson_valley_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = hudson_valley_area
 			}
 		}
 		effect = {
@@ -284,6 +284,9 @@ mss_conquests_3 = {
 				}
 				MNE = { #OR has been insulted
 					has_been_insulted_by_root = yes
+					NOT = {
+						alliance_with = ROOT
+					}
 				}
 				hidden_trigger = {
 					AND = { #if ai, is 1448
@@ -292,8 +295,24 @@ mss_conquests_3 = {
 					}
 				}
 				hidden_trigger = {
+					AND = { #if ai, with no alliance
+						ai = yes
+						MNE = {
+							NOT = {
+								alliance_with = ROOT
+							}
+						}
+						is_year = 1446
+					}
+				}
+				hidden_trigger = {
 					NOT = {
 						exists = MNE
+					}
+				}
+				hidden_trigger = {
+					MNE = {
+						vassal_of = ROOT
 					}
 				}
 			}
@@ -443,7 +462,7 @@ mss_conquests_3 = {
 	}
 
 	mss_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -708,9 +727,15 @@ mss_flavor_2 = {
 				2609 = {
 					owned_by = ROOT
 					grown_by_development = 10
-					has_great_project = {
-						type = harvard
-						tier = 2
+					OR = {
+						has_great_project = {
+							type = harvard
+							tier = 2
+						}
+						has_great_project = {
+							type = harvard
+							tier = 3
+						}
 					}
 				}
 			}

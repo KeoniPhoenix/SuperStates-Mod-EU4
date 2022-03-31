@@ -303,6 +303,9 @@ mne_conquests_3 = {
 						is_year = 1450
 					}
 				}
+				hidden_trigger = {
+					is_vassal = MSS
+				}
 			}
 		}
 		effect = {
@@ -409,7 +412,7 @@ mne_conquests_3 = {
 	}
 
 	mne_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {

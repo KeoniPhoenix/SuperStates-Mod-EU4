@@ -1296,18 +1296,23 @@ merc_mongol_mercenaries = {
     cavalry_weight = 0.4
     artillery_weight = 0.1
 	cavalry_cap = 6
-	home_province = 2190
+	home_province = 4678
 	cost_modifier = 1.5
 	sprites = { dlc069_kha_sprite_pack muslimgfx_sprite_pack }
 	trigger = {
 		OR = {
 			any_neighbor_country = {
-				culture_group = altaic
+				OR = {
+					primary_culture = altaic_new 
+					culture_group = altaic
+				}
 			}
 			culture_group = altaic
+			primary_culture = altaic_new 
 			any_owned_province = {
 				OR = {
 					culture_group = altaic
+					culture = altaic_new 
 					region = north_china_region
 					region = mongolia_region
 					region = manchuria_region
@@ -1466,7 +1471,6 @@ merc_buryat_band = {
 	}
     modifier = {
         movement_speed = 0.1
-		raze_power_gain = 0.1
 	}
 }
 
@@ -2254,6 +2258,7 @@ merc_oyo_cavalry = {
 	regiments_per_development = 0.04
 	cost_modifier = 0.25
 	cavalry_weight = 1
+	home_province = 1144
 	sprites = { dlc062_ben_sprite_pack africangfx_sprite_pack }
 	trigger = {
 		has_unlocked_merc_company = {
@@ -3334,4 +3339,59 @@ merc_mexican_company = {
 			}
 		}
 	}
+}
+
+merc_texan_rangers = {
+	regiments_per_development = 0.025
+	cavalry_weight = 0.4
+    artillery_weight = 0.2
+	cavalry_cap = 6
+	cost_modifier = 1.1
+	home_province = 2478 #Travis
+	sprites = { westerngfx_sprite_pack }
+	trigger = {
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		OR = {
+			any_owned_province = {
+				OR = {
+					area = texas_area
+					area = texas_gulf_area
+					area = rio_grande_area
+					area = trans_pecos_area
+					area = high_plains_area
+					area = texarkana_area
+					area = oklahoma_area
+				}
+			}
+			tag = TEX
+			tag = LPN
+			tag = NTX
+			tag = ETX
+			primary_culture = texan
+		}
+	}
+	modifier = {
+		cavalry_power = 0.10
+	}
+}
+
+merc_metis_company = {
+	regiments_per_development = 0.025
+	artillery_weight = 0.2
+	home_province = 2623 #Corman Parks
+	sprites = { westerngfx_sprite_pack }
+	trigger = {
+		OR = {
+			any_owned_province = {
+				OR = {
+					region = western_canada_region
+					area = mantario_area
+				}
+			}
+		}
+	}
+	modifier = { }
 }

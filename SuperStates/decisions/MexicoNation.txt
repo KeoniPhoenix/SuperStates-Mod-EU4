@@ -15,9 +15,9 @@ country_decisions = {
 			OR = {
 				culture_group = peninsular_mexican
 				culture_group = occidental_mexican
-				culture_group = oriental_mexican
+				# culture_group = oriental_mexican
 				culture_group = altiplano_central
-				culture_group = gulf_mexican
+				# culture_group = gulf_mexican
 				culture_group = pacific_mexican
 				culture_group = mazatlan_mexican
 				primary_culture = new_mexican
@@ -87,6 +87,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

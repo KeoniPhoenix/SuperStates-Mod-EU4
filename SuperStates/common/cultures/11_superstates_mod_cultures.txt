@@ -218,6 +218,74 @@ appalachian = {
 		}
 	}
 	
+	appalachian_ohioan = {
+		primary = OHI
+		
+		male_names = {
+			Allen Andrew Arthur Asa
+			Charles
+			David Duncan
+			Edward Ethan
+			Frank
+			George
+			Harry
+			Jacob James Jeremiah John Joseph Judson
+			Martin Michael Mordecai Myers Myron
+			Nancy
+			Othniel
+			Return Reuben Richard Robert Rutherford
+			Salmn Samuel Seabury
+			Theodore Thomas
+			Victor
+			William Wilson
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen Anderson
+			Bartley Bebb Bishop Bricker Brough Brown Bushnell Byrd
+			Campbell Celeste Chase Cooper Corwin Cox
+			Davey Davis Dennison DiSalle Donahey Foraker Ford Foster
+			Gilligan
+			Harmon Harris Hayes Herbert Herrick Hoadly Hollister Huntington
+			Kasich Kirker
+			Lausche Looker Lucas
+			McArthur McKinley Medill Meigs Morrow
+			Nash Noyes
+			O'Neill
+			Pattison
+			Rhodes
+			Shannon "St. Clair" Strickland
+			Taft Tiffin Todd Trimble
+			Vance Voinovich
+			White Willis Wood Worthington
+			Young
+		}
+	}
+	
 	west_marylander = {
 		primary = WML
 		
@@ -342,6 +410,70 @@ appalachian = {
 			Campbell Cannon Carroll Clement Cooper Cox
 			Dunn
 			East Ellington
+			Frazier
+			Hall Harris Haslam Hawkins Hopper Horton Houston
+			Johnson Jones
+			Marks McAlister McCord McMillin McMinn McWherter
+			Patterson Peay Polk Porter Roane Roberts Rye
+			Senter Sevier Sundquist
+			Taylor Trousdale Turney
+		}
+	}
+	
+	appalachian_tennessean = {
+		primary = TNN
+		
+		male_names = {
+			Aaron Albert Alfred Alvin Archibald Austin
+			Benjamin Benton Buford
+			DeWitt Donald
+			Edward
+			Frank
+			Gordon
+			Harry Henry
+			Isham
+			James John Joseph
+			Lamar
+			Malcolm
+			Ned Newton
+			Peter Philip Prentice
+			Ray Robert
+			Samuel
+			Thomas
+			William Winfield
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Alexander
+			Bate Blanton Blount Bredesen Brown Browning Brownlow Buchanan
+			Campbell Cannon Carroll Clement Cooper Cox
+			Dunn
+			East
+			Ellington
 			Frazier
 			Hall Harris Haslam Hawkins Hopper Horton Houston
 			Johnson Jones
@@ -538,6 +670,68 @@ appalachian = {
 		}
 	}
 	
+	appalachian_pennsylvanian = {
+		primary = PNN
+		
+		male_names = {
+			Albert Arch Aretas Arthur
+			Cecil Clarence
+			Daniel
+			Earl Emanuel Ephraim
+			Gaston George
+			Henry Herman Homer Howard Hulett
+			Jacob Jay John Joseph
+			Matthew
+			Okey
+			Robert
+			William
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Atkinson
+			Barron Boreman
+			Caperton Conley Cornwell
+			Dawson
+			Farnsworth Fleming
+			Glasscock Gore
+			Hatfield Holt
+			Jackson Jacob
+			Kump
+			MacCorkle Machin Marland Mathews Meadows Moore Morgan
+			Neely
+			Petterson
+			Rockefeller
+			Smith Stevenson
+			Tomblin
+			Underwood
+			White Wilson Wise
+		}
+	}
+	
 	mountaineer = {
 		male_names = {
 			Aaron Albert Alfred Alvin Archibald Austin
@@ -600,6 +794,75 @@ appalachian = {
 			Taylor Trousdale Turney
 		}
 }
+
+	appalachian_virginian = {
+		primary = VIR
+		male_names = {
+			Albertis Alexander Andrew
+			Benjamin
+			Charles Claude Colgate
+			David Douglas
+			Edmund Edward Elbert
+			Fitzhugh Francis Frederick
+			George Gerald Gilbert
+			Hardin Harry Henry Herbert Hugh
+			James Jeffery John Joseph
+			Lewis Linwood Littleton
+			Mark Matthew Mills
+			Nathaniel Nicholas Norburne
+			Patrick Peyton Philip
+			Ralph Richard Robert
+			Samuel
+			Terry Thomas Timothy
+			Walter Westmoreland
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen Almond Amherst Andros Argall
+			Bacon Baliles Barbour Battle Bennett Berkeley Blair Bridger Brooke Burnley Burwell Byrd
+			Cabell Cameron Campbell Carter Chicheley Culpeper
+			Dale Dalton Darden Davis Digges Dinwiddie Drysdale
+			Fauquier Fleming Floyd
+			Gates Giles Gilmer Gilmore Godwin Gooch Gregory
+			Hamilton Harrison Harvey Henry Holliday Holton Howard Hunter
+			Jameson Jefferson Jeffries Jenings Johnson
+			Kaine Kemp Kemper
+			Lane Lee Letcher
+			Mathews McAuliffe McDonnell McDowell McKinney Monroe Montague Murray
+			Nelson Nicholas Nicholson Nott
+			O'Ferrall
+			Page Patton Peery Pendleton Percy Pleasants Pollard Pott Preston Price
+			Raleigh Randolph Ratcliffe Reade Robb Robertson Rutherfoord
+			Scrivener Smith Spencer Spotwood Stanley Stuart Swanson
+			Tazewell Trinkle Tuck Tyler
+			Walker Warner Wells West White Wilder Wingfield Wise Wood Wyatt
+			Yeardley
+		}
+	}
 }
 
 # alaskan_group = {
@@ -952,6 +1215,134 @@ southerner = {
 		}
 	}
 	
+	southern_kentuckian = {
+		primary = KEN
+		
+		male_names = {
+			Aaron Albert Alfred Alvin Andrew Archibald Austin
+			Benjamin Benton Buford
+			DeWitt Donald
+			Edward
+			Frank
+			Gordon
+			Harry Henry
+			Isham
+			James John Joseph
+			Lamar
+			Malcolm
+			Ned Newton
+			Peter Philip Prentice
+			Ray Robert
+			Samuel
+			Thomas
+			William Winfield
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Alexander
+			Bate Blanton Blount Bredesen Brown Browning Brownlow Buchanan
+			Campbell Cannon Carroll Clement Cooper Cox
+			Dunn
+			East Ellington
+			Frazier
+			Hall Harris Haslam Hawkins Hopper Horton Houston
+			Johnson Jones
+			Marks McAlister McCord McMillin McMinn McWherter
+			Patterson Peay Polk Porter Roane Roberts Rye
+			Senter Sevier Sundquist
+			Taylor Trousdale Turney
+		}
+	}
+	
+	southern_missourian = {
+		primary = MOU
+		
+		male_names = {
+			Abraham Albert Alexander Arthur Austin
+			Charles Christopher Claiborne
+			Daniel David
+			Elliot
+			Forrest Frederick
+			Gratz Guy
+			Hamilton Hancock Henry Herbert
+			James Jay John Joseph
+			Lawrence Lilburn Lloyd
+			Matthew Melvin Meredith
+			Phillip Robert Roger
+			Samuel Silas Sterling
+			Thomas Trusten
+			Warren William Williard
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Ashcroft
+			Baker Bates Blair Blunt Boggs Bond Brown
+			Carnahan Caulfield Clark Crittenden
+			Dalton Dockery Donnell Donnelly Dunkin
+			Edwards
+			Fletcher Folk Francis
+			Gamble Gardner
+			Hadley Hall Hardin Hearnes Holden Hyde
+			Jackson
+			King
+			Major Marmaduke McClurg McNair Miller Morehouse
+			Nixon
+			Park Phelps Polk Price
+			Reynolds
+			Smith Stark Stephens Stewart Stone
+			Teasdale
+			Williams Wilson Woodson
+		}
+	}
+	
 	eastern_texan = {
 		primary = ETX
 		
@@ -976,6 +1367,74 @@ southerner = {
 		}
 		female_names = {
 			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allred Austin
+			Bell Briscoe Burnet Bush
+			Campbell Clark Clements Coke Colquitt Connally Culberson
+			Daniel Davis
+			Ferguson
+			Hamilton Henderson Hobby Hogg Houston Hubbard
+			Ireland
+			Jester Jones
+			Lamar Lanham Lubbock
+			Moody Murrah
+			Neff
+			O'Daniel
+			Pease Perry
+			Richards Roberts Robinson Ross Runnels
+			Sayers Shivers Smith Sterling Stevenson Stockdale
+			Throckmorton
+			White Wood
+		}
+	}
+	
+	southern_texan = {
+		primary = TEX
+		
+		male_names = {
+			Allan Andrew Anson
+			Beauford
+			Charles Coke
+			Daniel David Dolph
+			Edmund Edward Elisha
+			Flectcher Francis
+			George
+			Hardin Henry
+			James John Joseph
+			Lawrence Lee
+			Mark Mirabeau
+			Oran Oscar
+			Patrick Pendleton Peter Preston Price
+			Richard Ross
+			Samuel Stephen
+			Thomas
+			William
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Ann Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
 			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
 			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
 			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
@@ -1697,7 +2156,7 @@ southerner = {
 	}
 	
 	mississippian = {
-		primary = MIS
+		primary = MPP
 		male_names = {
 			Abram Adelbert Albert Alexander Andrew Anselm
 			Benjamin
@@ -2312,6 +2771,74 @@ great_laker = {
 		}
 	}
 	
+	great_laker_ohioan = {
+		primary = OHI
+		
+		male_names = {
+			Allen Andrew Arthur Asa
+			Charles
+			David Duncan
+			Edward Ethan
+			Frank
+			George
+			Harry
+			Jacob James Jeremiah John Joseph Judson
+			Martin Michael Mordecai Myers Myron
+			Nancy
+			Othniel
+			Return Reuben Richard Robert Rutherford
+			Salmn Samuel Seabury
+			Theodore Thomas
+			Victor
+			William Wilson
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen Anderson
+			Bartley Bebb Bishop Bricker Brough Brown Bushnell Byrd
+			Campbell Celeste Chase Cooper Corwin Cox
+			Davey Davis Dennison DiSalle Donahey Foraker Ford Foster
+			Gilligan
+			Harmon Harris Hayes Herbert Herrick Hoadly Hollister Huntington
+			Kasich Kirker
+			Lausche Looker Lucas
+			McArthur McKinley Medill Meigs Morrow
+			Nash Noyes
+			O'Neill
+			Pattison
+			Rhodes
+			Shannon "St. Clair" Strickland
+			Taft Tiffin Todd Trimble
+			Vance Voinovich
+			White Willis Wood Worthington
+			Young
+		}
+	}
+	
 	western_new_yorker = {
 		primary = WNY
 				
@@ -2519,6 +3046,75 @@ great_laker = {
 	}
 	chicagoan = {
 		primary = CCK
+		
+		male_names = {
+			Adlai Augustus
+			Charles
+			Daniel Dwight
+			Edward
+			Frank
+			George
+			Henry
+			James Joel John Joseph
+			Len Louis
+			Ninian
+			Otto
+			Patrick
+			Richard Rod
+			Samuel Shadrach Shelby
+			Thomas
+			William
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Altgeld
+			Beveridge Bissell Blagojevich Bond
+			Carlin Coles Cullom
+			Deneen Duncan Dunne
+			Edgar Edwards Emmerson Ewing
+			Fifer Ford French
+			Green
+			Hamilton Horner
+			Kerner
+			Lowden
+			Matteson
+			Ogilvie Oglesby
+			Palmer
+			Quinn
+			Reynolds Ryan
+			Shapiro Small Stelle Stevenson Stratton
+			Tanner Thompson
+			Walker Wood
+			Yates
+		}
+	}
+	
+	great_laker_illinoisan = {
+		primary = ILI
 		
 		male_names = {
 			Adlai Augustus
@@ -3431,6 +4027,75 @@ midatlantic_group = {
 		}
 	}
 	
+	midatlantic_virginian = {
+		primary = VIR
+		male_names = {
+			Albertis Alexander Andrew
+			Benjamin
+			Charles Claude Colgate
+			David Douglas
+			Edmund Edward Elbert
+			Fitzhugh Francis Frederick
+			George Gerald Gilbert
+			Hardin Harry Henry Herbert Hugh
+			James Jeffery John Joseph
+			Lewis Linwood Littleton
+			Mark Matthew Mills
+			Nathaniel Nicholas Norburne
+			Patrick Peyton Philip
+			Ralph Richard Robert
+			Samuel
+			Terry Thomas Timothy
+			Walter Westmoreland
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen Almond Amherst Andros Argall
+			Bacon Baliles Barbour Battle Bennett Berkeley Blair Bridger Brooke Burnley Burwell Byrd
+			Cabell Cameron Campbell Carter Chicheley Culpeper
+			Dale Dalton Darden Davis Digges Dinwiddie Drysdale
+			Fauquier Fleming Floyd
+			Gates Giles Gilmer Gilmore Godwin Gooch Gregory
+			Hamilton Harrison Harvey Henry Holliday Holton Howard Hunter
+			Jameson Jefferson Jeffries Jenings Johnson
+			Kaine Kemp Kemper
+			Lane Lee Letcher
+			Mathews McAuliffe McDonnell McDowell McKinney Monroe Montague Murray
+			Nelson Nicholas Nicholson Nott
+			O'Ferrall
+			Page Patton Peery Pendleton Percy Pleasants Pollard Pott Preston Price
+			Raleigh Randolph Ratcliffe Reade Robb Robertson Rutherfoord
+			Scrivener Smith Spencer Spotwood Stanley Stuart Swanson
+			Tazewell Trinkle Tuck Tyler
+			Walker Warner Wells West White Wilder Wingfield Wise Wood Wyatt
+			Yeardley
+		}
+	}
+	
 	delmarvan = {
 		primary = DMV
 		
@@ -4066,6 +4731,74 @@ great_plainer_group = {
 		}
 	}
 	
+	plains_texan = {
+		primary = TEX
+		
+		male_names = {
+			Allan Andrew Anson
+			Beauford
+			Charles Coke
+			Daniel David Dolph
+			Edmund Edward Elisha
+			Flectcher Francis
+			George
+			Hardin Henry
+			James John Joseph
+			Lawrence Lee
+			Mark Mirabeau
+			Oran Oscar
+			Patrick Pendleton Peter Preston Price
+			Richard Ross
+			Samuel Stephen
+			Thomas
+			William
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Ann Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allred Austin
+			Bell Briscoe Burnet Bush
+			Campbell Clark Clements Coke Colquitt Connally Culberson
+			Daniel Davis
+			Ferguson
+			Hamilton Henderson Hobby Hogg Houston Hubbard
+			Ireland
+			Jester Jones
+			Lamar Lanham Lubbock
+			Moody Murrah
+			Neff
+			O'Daniel
+			Pease Perry
+			Richards Roberts Robinson Ross Runnels
+			Sayers Shivers Smith Sterling Stevenson Stockdale
+			Throckmorton
+			White Wood
+		}
+	}
+	
 	west_kansan = {
 		primary = WSK
 		
@@ -4129,6 +4862,71 @@ great_plainer_group = {
 			Walker Woodring
 		}
 	}
+	
+	plains_kansan = {
+		primary = KNS
+		
+		male_names = {
+			Alfred Andrew Arthur
+			Benjamin
+			Charles Clyde
+			Edmund Edward
+			Frank Frederick
+			George
+			Harry Henry
+			James John Jonathan
+			Lorenzo Lyman
+			Mark Michael
+			Nehemiah
+			Payne
+			Robert
+			Samuel
+			Thomas
+			Walter William Willis Wilson
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joan Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen Anderson Anthony Arn Avery
+			Bailey Bennett Brownback
+			Capper Carlin Carlson Carney Crawford
+			Davis Denver Docking
+			Finney
+			Geary Glick Graves Green
+			Hall Harvey Hayden Hoch Hodges Humphrey Huxman
+			Landon Leedy Lewelling
+			Martin Medary Morrill
+			Osborn
+			Parkinson Paulen
+			Ratner Reed Reeder Robinson
+			Schoeppel Sebelius Shannon "St. John" Stanley Stubbs
+			Walker Woodring
+		}
+	}
+	
 	nebraskan = {
 		primary = NEB
 		
@@ -4461,6 +5259,133 @@ midwestern_group = {
 			Vance Voinovich
 			White Willis Wood Worthington
 			Young
+		}
+	}
+	
+	midwestern_kentuckian = {
+		primary = KEN
+		
+		male_names = {
+			Aaron Albert Alfred Alvin Andrew Archibald Austin
+			Benjamin Benton Buford
+			DeWitt Donald
+			Edward
+			Frank
+			Gordon
+			Harry Henry
+			Isham
+			James John Joseph
+			Lamar
+			Malcolm
+			Ned Newton
+			Peter Philip Prentice
+			Ray Robert
+			Samuel
+			Thomas
+			William Winfield
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Alexander
+			Bate Blanton Blount Bredesen Brown Browning Brownlow Buchanan
+			Campbell Cannon Carroll Clement Cooper Cox
+			Dunn
+			East Ellington
+			Frazier
+			Hall Harris Haslam Hawkins Hopper Horton Houston
+			Johnson Jones
+			Marks McAlister McCord McMillin McMinn McWherter
+			Patterson Peay Polk Porter Roane Roberts Rye
+			Senter Sevier Sundquist
+			Taylor Trousdale Turney
+		}
+	}
+	
+	midwestern_tennessean = {
+		primary = TNN
+		
+		male_names = {
+			Aaron Albert Alfred Alvin Archibald Austin
+			Benjamin Benton Buford
+			DeWitt Donald
+			Edward
+			Frank
+			Gordon
+			Harry Henry
+			Isham
+			James John Joseph
+			Lamar
+			Malcolm
+			Ned Newton
+			Peter Philip Prentice
+			Ray Robert
+			Samuel
+			Thomas
+			William Winfield
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Alexander
+			Bate Blanton Blount Bredesen Brown Browning Brownlow Buchanan
+			Campbell Cannon Carroll Clement Cooper Cox
+			Dunn
+			East
+			Ellington
+			Frazier
+			Hall Harris Haslam Hawkins Hopper Horton Houston
+			Johnson Jones
+			Marks McAlister McCord McMillin McMinn McWherter
+			Patterson Peay Polk Porter Roane Roberts Rye
+			Senter Sevier Sundquist
+			Taylor Trousdale Turney
 		}
 	}
 	
@@ -5740,6 +6665,70 @@ pacific_coastal = {
 		# }
 	# }
 	
+	pacific_nevadan = {
+		primary = NVA
+		
+		male_names = {
+			Brian
+			Charles
+			Denver
+			Edward Emmet
+			Frank Frederick
+			Grant
+			Henry
+			Isaac
+			James Jewett John
+			Kenneth
+			Lewis
+			Michael Morley
+			Paul
+			Reinhold Richard Robert Rosewell
+			Tasker
+			Vail
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Adams
+			Balzar Bell Blasdel Boyle Bradley Bryan
+			Carville Colcord
+			Dickerson
+			Gibbons Griswold Guinn
+			Jones
+			Kinkead Kirman
+			Laxalt List
+			Miller
+			Nye
+			O'Calloghan Oddie
+			Pittman
+			Roop Russell
+			Sadler Sandoval Sawyer Scrugham Sparks Stevenson
+		}
+	}
+	
 	oregonian = {
 		primary = ORE
 		
@@ -5809,6 +6798,118 @@ pacific_coastal = {
 			Smith Snell Sprague Straub
 			Thayer
 			West Whiteaker Withycombe Woods
+		}
+	}
+	
+	pacific_british_columbian = {
+		primary = BCO
+		
+		male_names = {
+			Alexander Amor Andrew
+			Byron
+			Charles
+			Daniel David
+			Edward
+			George Glen Gordon
+			Harlan
+			James John Joseph
+			Michael
+			Richard Robert
+			Simon
+			Theodore Thomas
+			Ujjal
+			William
+		}
+		female_names = {
+			Ann Alison Allissa Amanda
+			Camille Catherine Colleen Christen Crystal
+			Deborah Donna
+			Edna Eva
+			Geraldine
+			Helen
+			Ione
+			Judith
+			Kathleen Kristen Krystal
+			Madorra Melissa
+			Nellie
+			Rachael
+			Sarah Stephany
+		}
+		dynasty_names = {
+			Barrett Beaven Bennett Bowser Brewster
+			Campbell Clark
+			Davie "De Cosmos" Dosanjh Dunsmuir
+			Elliot
+			Harcourt Hart
+			Johnson
+			MacLean Martin McBride McCreight Miller
+			Oliver
+			Pattullo Prior
+			Robinson
+			Semlin Smithe
+			Tolmie Turner
+			Walkem
+			Zalm
+		}
+	}
+	
+	pacific_alaskan = {
+		
+		male_names = {
+			Alfred Arhtur
+			Edgar Edward Ernest
+			Frank Frederick
+			George
+			Harvey Henry
+			James Jay Jefferson John "John Green" "John Henry" Joseph
+			"Keith Harvey"
+			Lester "Lyman Enos"
+			Michael Montgomery Mottrom
+			Scott Sean Steve
+			Thomas tony
+			"Waino Edward" Walter "Walter Ei" "Wilford Bacon" William "William Allen"
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen
+			Ball Beardslee Berry Brady
+			Campbell Clark Coghlan Cordelle Cowper
+			Davis
+			Egan
+			Glass Gruening
+			Hammon Heintzleman Hendrickson Hickel Hoggatt
+			Kinkead Knapp Knowles
+			Lull
+			Mendenhall Merriman Miller Morris Murkowski
+			Nichols
+			Palin Parks Parnell Person
+			Riggs Rodney
+			Sheakley Sheffield Stepovich Stewart Strong Swineford
+			Tidball Troy
 		}
 	}
 	
@@ -6245,6 +7346,70 @@ southwestern = {
 			Thornton Tingley
 			Vigil
 			Wallace Washington
+		}
+	}
+	
+	southwestern_nevadan = {
+		primary = NVA
+		
+		male_names = {
+			Brian
+			Charles
+			Denver
+			Edward Emmet
+			Frank Frederick
+			Grant
+			Henry
+			Isaac
+			James Jewett John
+			Kenneth
+			Lewis
+			Michael Morley
+			Paul
+			Reinhold Richard Robert Rosewell
+			Tasker
+			Vail
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lurleen Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Miriam Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Adams
+			Balzar Bell Blasdel Boyle Bradley Bryan
+			Carville Colcord
+			Dickerson
+			Gibbons Griswold Guinn
+			Jones
+			Kinkead Kirman
+			Laxalt List
+			Miller
+			Nye
+			O'Calloghan Oddie
+			Pittman
+			Roop Russell
+			Sadler Sandoval Sawyer Scrugham Sparks Stevenson
 		}
 	}
 	
@@ -7831,6 +8996,66 @@ western_canadian = {
 		}
 	}
 	
+	canadian_alaskan = {
+		
+		male_names = {
+			Alfred Arhtur
+			Edgar Edward Ernest
+			Frank Frederick
+			George
+			Harvey Henry
+			James Jay Jefferson John "John Green" "John Henry" Joseph
+			"Keith Harvey"
+			Lester "Lyman Enos"
+			Michael Montgomery Mottrom
+			Scott Sean Steve
+			Thomas tony
+			"Waino Edward" Walter "Walter Ei" "Wilford Bacon" William "William Allen"
+		}
+		female_names = {
+			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+			Faith Felicia
+			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+			Isabel Isabella 
+			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+			Nancy Naomi Natalie Natasha Nichole Nicole
+			Olivia
+			Paige Patricia Priscilla 
+			Rachael Rachel Raven Rebecca Rebekah Renee
+			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+			Tabitha Tara Taylor Teresa Tiffany Tori 
+			Valerie Vanessa Veronica Victoria
+			Whitney
+			Yesenia
+			Zoe
+		}
+		dynasty_names = {
+			Allen
+			Ball Beardslee Berry Brady
+			Campbell Clark Coghlan Cordelle Cowper
+			Davis
+			Egan
+			Glass Gruening
+			Hammon Heintzleman Hendrickson Hickel Hoggatt
+			Kinkead Knapp Knowles
+			Lull
+			Mendenhall Merriman Miller Morris Murkowski
+			Nichols
+			Palin Parks Parnell Person
+			Riggs Rodney
+			Sheakley Sheffield Stepovich Stewart Strong Swineford
+			Tidball Troy
+		}
+	}
+	
 	mantarian = {
 		#primary = NWO
 		
@@ -8316,85 +9541,85 @@ peninsular_mexican = {
 	}
 }
 		
-costa_chican = {
-	graphical_culture = westerngfx
-	oaxacan = {
-		primary = OAX
+# costa_chican = {
+	# graphical_culture = westerngfx
+	# oaxacan = {
+		# primary = OAX
 		
-		male_names = {
-			Alfonso Anastasio
-			Constantino
-			Diódoro
-			Edmundo Eduardo Eliseo
-			Fernando Flavio Francisco
-			Gabino Genaro
-			Heladio
-			Jesús José Juan
-			Manuel Miguel
-			Onofre
-			Pedro
-			Rodolfo
-			Ulises
-			Vicente Victor
-		}
-		female_names = {
-			Laura
-			Marciela Maria
-			Perla
-		}
-		dynasty_names = {
-			Bravo Brena
-			Cabrera Carrasco Chapital Cué
-			García Gómez González
-			Jiménez
-			López
-			Manjardín Martínez Mayoral Murat
-			Pacheco Pérez
-			Ramírez Ruiz
-			Sánchez
-			Vasconcelos Vázquez
-			Zárate
-		}
-	}
+		# male_names = {
+			# Alfonso Anastasio
+			# Constantino
+			# Diódoro
+			# Edmundo Eduardo Eliseo
+			# Fernando Flavio Francisco
+			# Gabino Genaro
+			# Heladio
+			# Jesús José Juan
+			# Manuel Miguel
+			# Onofre
+			# Pedro
+			# Rodolfo
+			# Ulises
+			# Vicente Victor
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Bravo Brena
+			# Cabrera Carrasco Chapital Cué
+			# García Gómez González
+			# Jiménez
+			# López
+			# Manjardín Martínez Mayoral Murat
+			# Pacheco Pérez
+			# Ramírez Ruiz
+			# Sánchez
+			# Vasconcelos Vázquez
+			# Zárate
+		# }
+	# }
 	
-	guerreroan = {
-		primary = GRR
+	# guerreroan = {
+		# primary = GRR
 		
-		male_names = {
-			Adrián Alberto Alejandro Ángel Arturo
-			Baltazar
-			Caritino Carlos
-			Darío
-			Enrique
-			Francisco
-			Gabriel Gerardo
-			Héctor
-			José Juan
-			Raúl Raumundo René Roberto Rubén
-			Xavier
-			Zeferino
-		}
-		female_names = {
-			Laura
-			Marciela Maria
-			Perla
-		}
-		dynasty_names = {
-			Abarca Aguirre Arrieta
-			Berber
-			Caballero Carranco Castrejón Catalán Cervantes
-			Figueroa
-			Gómez Guevara
-			Inocente
-			Juárez
-			Leyva López
-			Maldonado Martínez
-			Olea
-			Rodríguez Ruiz
-			Torreblanca
-		}
-	}
-}
+		# male_names = {
+			# Adrián Alberto Alejandro Ángel Arturo
+			# Baltazar
+			# Caritino Carlos
+			# Darío
+			# Enrique
+			# Francisco
+			# Gabriel Gerardo
+			# Héctor
+			# José Juan
+			# Raúl Raumundo René Roberto Rubén
+			# Xavier
+			# Zeferino
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Abarca Aguirre Arrieta
+			# Berber
+			# Caballero Carranco Castrejón Catalán Cervantes
+			# Figueroa
+			# Gómez Guevara
+			# Inocente
+			# Juárez
+			# Leyva López
+			# Maldonado Martínez
+			# Olea
+			# Rodríguez Ruiz
+			# Torreblanca
+		# }
+	# }
+# }
 
 mazatlan_mexican = {
 	graphical_culture = westerngfx
@@ -8651,6 +9876,83 @@ mazatlan_mexican = {
 			Sagredo
 			Terán
 			Vázquez
+		}
+	}
+	
+	oaxacan = {
+		primary = OAX
+		
+		male_names = {
+			Alfonso Anastasio
+			Constantino
+			Diódoro
+			Edmundo Eduardo Eliseo
+			Fernando Flavio Francisco
+			Gabino Genaro
+			Heladio
+			Jesús José Juan
+			Manuel Miguel
+			Onofre
+			Pedro
+			Rodolfo
+			Ulises
+			Vicente Victor
+		}
+		female_names = {
+			Laura
+			Marciela Maria
+			Perla
+		}
+		dynasty_names = {
+			Bravo Brena
+			Cabrera Carrasco Chapital Cué
+			García Gómez González
+			Jiménez
+			López
+			Manjardín Martínez Mayoral Murat
+			Pacheco Pérez
+			Ramírez Ruiz
+			Sánchez
+			Vasconcelos Vázquez
+			Zárate
+		}
+	}
+	
+	guerreroan = {
+		primary = GRR
+		
+		male_names = {
+			Adrián Alberto Alejandro Ángel Arturo
+			Baltazar
+			Caritino Carlos
+			Darío
+			Enrique
+			Francisco
+			Gabriel Gerardo
+			Héctor
+			José Juan
+			Raúl Raumundo René Roberto Rubén
+			Xavier
+			Zeferino
+		}
+		female_names = {
+			Laura
+			Marciela Maria
+			Perla
+		}
+		dynasty_names = {
+			Abarca Aguirre Arrieta
+			Berber
+			Caballero Carranco Castrejón Catalán Cervantes
+			Figueroa
+			Gómez Guevara
+			Inocente
+			Juárez
+			Leyva López
+			Maldonado Martínez
+			Olea
+			Rodríguez Ruiz
+			Torreblanca
 		}
 	}
 }
@@ -8937,9 +10239,305 @@ altiplano_central = {
 	}
 }
 	
-gulf_mexican = {
-	graphical_culture = westerngfx
+# gulf_mexican = {
+	# graphical_culture = westerngfx
 	
+	# tamaulipasian = {
+		# primary = TML
+		
+		# male_names = {
+			# Adrian Albino Alejandro Américo Andrés Aniceto Antonio Ascensión
+			# Baudelio Benecio Benito
+			# Candelrio
+			# Desiderio Diego Don
+			# Egidio Eleno Emilio Enrique Espiridión Eugenio
+			# Federico Felipe Flores Francisco
+			# Gómez Gonzalo Gregorio
+			# Horacio Hugo
+			# Ignacio
+			# Jesús Joaquín José Juan
+			# Loreto Lucas Luis
+			# Magdaleno Manuel Marte Matías Máximo Melchor Modesto
+			# Norberto
+			# Pedro Pelayo Praxedis
+			# Rafael Ramon Raúl Rmulo Romulo
+			# Santiago Servando
+			# Tomás
+			# Vicente Victorino
+			# Zeferino
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Aguilar Antonio Argüelles Ascensión
+			# Balboa Berriozábal Blanco
+			# Caballero Camilo Canales Canseco Cardenas Cárdenas Castellanos Castelló Castro Cavazos Chovel Comonfort Cuellar
+			# "de Alba" "de Arredondo" "de Cárdenas" "de Echeandía" "de Echegaray" "de Escandón" "de Haro" "de Itrube" "de Ixart" "de la Garza" "de la Serna" "de León" "de Saldaña" "de Vargas" Diaz
+			# Echartea Escandón Espiridión
+			# Fajardo Fermín Fernandez Fernández Fernando Francisco
+			# Garate García Garza Gojón Gómez González Guadalupe Guerra 
+			# Hernández Honorato
+			# Ignacio Illizaliturri
+			# José Juárez
+			# Lazago Lino López
+			# Mainero Manuel Maria María Martin Martínez Maximiliano Medina Miguel Morante Moreno Muñoz
+			# Nepomuceno Núñez
+			# Ortíz Osuna
+			# Pavón Pedrero Portes Prieto
+			# Quintana
+			# Rabago Rabize Rincón Rocha Rubio Ruiz
+			# Saavedra Salazar Saldaña
+			# Tapia Terán Torre Trejo Treviño Troconis
+			# Vidal Villanueva Villarreal Vital
+			# Woll
+			# Yarrington
+			# Zaragoza
+		# }
+	# }
+
+	# veracruzian = {
+		# primary = VRZ
+		
+		# male_names = {
+			# Abel Adalberto Adolfo Agustín Ángel Antonio Apolinar
+			# Cándido
+			# Dante
+			# Emilio
+			# Fernando Fidel Francisco
+			# Gonzalo Guillermo
+			# Heriberto
+			# Ignacio
+			# Javier Jorge José Juan
+			# Leandro León Luis
+			# Manuel Maroc Mauro Miguel
+			# Patricio Rafael
+			# Sebastián
+			# Teodoro
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+		# }
+	# }
+# }
+	
+# oriental_mexican = {
+	# graphical_culture = westerngfx
+	
+	# san_luis_potosian = {
+		# primary = SLP
+		
+		# male_names = {
+			# Abel Adolfo Agustín Alfredo Ángel Antonio Arnulfo Arturo Aureliano Aurelio
+			# Baldormero Benigno Benito Blas
+			# Camilo Carlos Cayetano Celedonio
+			# David
+			# Emiliano Eugenio Eulalio
+			# Fausto Frederico Felipe Fernando Florencio
+			# Gabriel Gonzalo Graciano Guillermo
+			# Herminio Hilario Joracio
+			# Ignacio Ildefonso Ismael
+			# Jesús Joaquín Jorge José Juan
+			# Leopoldino Lorenzo Luiz
+			# Manuel Marcelino Mariano Mateo Miguel
+			# Nicasio
+			# Octaviano
+			# Pablo Pedro Pío
+			# Rafael Ranaldo Ricardo Rubén Rutiló
+			# Santiago Saturnino Severino
+			# Timoteo
+			# Vicente
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Aguilera Aguirre Alamilla Aldape Alonso Álvarez Amaya Anaya Arguinzoni
+			# Barragán
+			# Cano Cardiel Carlos Castillo Cedillo Cepeda Chapoy Chávez Cuellar Curiel
+			# Dávila Díez
+			# Encarnación Escobedo Escontría Espinosa
+			# Fernández Flores Fonseca Fraga
+			# Garavia García Garza González Guerrero Gutiérrez
+			# Hermosillo
+			# Jiménez Jonguitud
+			# Lárraga Leija López Lozano
+			# Macías Manrique Marcelo Martínez Mendoza Moctezuma Muñoz Nieto 	Noyola
+			# Olivo Ortiz
+			# Palau Pedroza Pérez Pilar Prieto
+			# Rangel Refugio Rincón Rocha Rodríguez Romero
+			# Salas Salazar Sánchez Sandoval Santos Sarabia Segura Silva Solís
+			# Terrazas Toranzo Turrubiartes
+			# Vildósola Vives
+			# Zapata Zúñiga
+		# }
+	# }
+
+	# nuevo_leonian = {
+		# primary = NLN
+		
+		# male_names = {
+			# Aarón Agapito Agustín Alfonso Alfredo Alonso Anacleto Anastacio Ángel Antonio Arturo
+			# Benjamin Bernardino Bernardo Bernardon Blas Bonifacio
+			# Canuto Carlos Cipriano
+			# Diego Domingo
+			# Eduardo
+			# Felipe Fernando Francisco Froilán
+			# Genaro Generoso Gregorin Gregorio
+			# Idefonso Ignacio
+			# Jerónimo Jesús Joaquín Jorge José Juan
+			# Lázaro Leobardo León Luis
+			# Manuel Mariano Martín Melchor
+			# Narciso Nicolás
+			# Pablo Pedro Plutarco
+			# Rafael Ramón Raúl Rodrigo
+			# Salomé Santiago Simón Sócrates
+			# Vicente Viviano
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Ángeles Antonio
+			# Báez Bahamonde Benítez Botello Bruno Bueno
+			# Canales Cárdenas Cardona Carvajal Cepeda Chapa Clariond Cuervo
+			# Dávila "de Alza" "de Ampudia" "de Arriaga" "de Azcárraga" "de Barbadillo" "de Echandía" "de Echegaray" "de Echevérez" "de Echeverría" "de Herrera" "de la Calancha" "de la Garza" "de la Paz" "de León" "de Mier" "de Montemayor" "de Prudena" "de Salinas" "de Santa María" "de Sarabia" "de Velasco" "de Videgaray" "de Villarreal" "de Zavala" Díaz
+			# Eleuterio Elías Elizondo Escobedo
+			# Farías Fernández Flores Francisco Fuero
+			# García Garza Gómez González Guerrero
+			# José Juan Junco
+			# Leal Livas
+			# Madero María Martínez Medina Mier Monroy Morales Morones Morret	Muñoz
+			# Nepomuceno
+			# Pérez
+			# Quiroga
+			# Rangel Reyes Rizzo Rodríguez
+			# Sáenz Salinas Santiago Santos Siller Silvestre
+			# Treviño
+			# Ussel
+			# Vázquez Viaurri Vidal Villamil Villareal Villarreal Vivanco
+			# Zorrilla
+		# }
+	# }
+
+	# coahuilan = {
+		# primary = COA
+		
+		# male_names = {
+			# Agustín Alfredo Alonso Andrés Ángel Antonio Arnulfo
+			# Bartolomé Benecio Blas Braulio Bruno
+			# Carlos Clemente
+			# Diego Domingo
+			# Eduardo Eliseo Encarnación Enrique Eulalio Evaristo
+			# Francisco
+			# Gregorio Gustavo
+			# Hipólito Humberto
+			# Ignacio Isidro Ismael
+			# Jacinto Jacobo Jerónimo Jesús Jorge Jose Juan Julio
+			# Lorenzo Luis
+			# Manuel Marcial Martín Matías Melchor Miguel
+			# Nazario
+			# Oscar
+			# Paz Pedro Praxedis
+			# Rafael Ramón Raúl Rogelio Rubén
+			# Santiago Simón
+			# Telésforo
+			# Venustiano Vicente Victor Victoriano
+		# }
+		# female_names = {
+			# Laura
+			# Marciela Maria
+			# Perla
+		# }
+		# dynasty_names = {
+			# Alcocer Antonio Arizpe Azlo
+			# Blanco Borrego Breceda
+			# Cancio Cárdenas Cardona Carranza Cepeda Cervantes Charles Claudio Cordero Costilla Crespo Cuervo
+			# Dávila "de Aguirre" "de Alarcón" "de Barríos" "de Cárdenas" "de la Aguirre" "de la Garza" "de la Peña" "de las Fuentes" "de León" "de Padilla" "de Paula" "de Rábago" "de Salinas" "de Sandoval" "de Sesman" "de Terán" "de Ugarte" "de Valdes" "de Valle"
+			# Elosúa Espinoza
+			# Faz Fermín Fernández Flores Franco Fuentes Fuero Fueros
+			# Galindo García Garza Gómez González Gutiérrez
+			# Hernández
+			# Ignacio
+			# Joaquín Jose José Lobo
+			# López
+			# Madero María Martín Martínez Martos Mejía Mendoza Miguel Montemayor Moreira
+			# Neyra
+			# Ortiz
+			# Palacios Pardo Pérez
+			# Quesada
+			# Rafael Ramón Reyes Rodríguez
+			# Salas Sánchez
+			# Torres
+			# Valdés Valdez Valerio Vázquez Vicente Vidaurri Viesca
+		# }
+	# }
+# }
+	
+occidental_mexican = { # Northern Mexican, Norteno
+	graphical_culture = westerngfx
+
+	san_luis_potosian = {
+		primary = SLP
+		
+		male_names = {
+			Abel Adolfo Agustín Alfredo Ángel Antonio Arnulfo Arturo Aureliano Aurelio
+			Baldormero Benigno Benito Blas
+			Camilo Carlos Cayetano Celedonio
+			David
+			Emiliano Eugenio Eulalio
+			Fausto Frederico Felipe Fernando Florencio
+			Gabriel Gonzalo Graciano Guillermo
+			Herminio Hilario Joracio
+			Ignacio Ildefonso Ismael
+			Jesús Joaquín Jorge José Juan
+			Leopoldino Lorenzo Luiz
+			Manuel Marcelino Mariano Mateo Miguel
+			Nicasio
+			Octaviano
+			Pablo Pedro Pío
+			Rafael Ranaldo Ricardo Rubén Rutiló
+			Santiago Saturnino Severino
+			Timoteo
+			Vicente
+		}
+		female_names = {
+			Laura
+			Marciela Maria
+			Perla
+		}
+		dynasty_names = {
+			Aguilera Aguirre Alamilla Aldape Alonso Álvarez Amaya Anaya Arguinzoni
+			Barragán
+			Cano Cardiel Carlos Castillo Cedillo Cepeda Chapoy Chávez Cuellar Curiel
+			Dávila Díez
+			Encarnación Escobedo Escontría Espinosa
+			Fernández Flores Fonseca Fraga
+			Garavia García Garza González Guerrero Gutiérrez
+			Hermosillo
+			Jiménez Jonguitud
+			Lárraga Leija López Lozano
+			Macías Manrique Marcelo Martínez Mendoza Moctezuma Muñoz Nieto 	Noyola
+			Olivo Ortiz
+			Palau Pedroza Pérez Pilar Prieto
+			Rangel Refugio Rincón Rocha Rodríguez Romero
+			Salas Salazar Sánchez Sandoval Santos Sarabia Segura Silva Solís
+			Terrazas Toranzo Turrubiartes
+			Vildósola Vives
+			Zapata Zúñiga
+		}
+	}
+
 	tamaulipasian = {
 		primary = TML
 		
@@ -9021,61 +10619,6 @@ gulf_mexican = {
 			Perla
 		}
 		dynasty_names = {
-		}
-	}
-}
-	
-oriental_mexican = {
-	graphical_culture = westerngfx
-	
-	san_luis_potosian = {
-		primary = SLP
-		
-		male_names = {
-			Abel Adolfo Agustín Alfredo Ángel Antonio Arnulfo Arturo Aureliano Aurelio
-			Baldormero Benigno Benito Blas
-			Camilo Carlos Cayetano Celedonio
-			David
-			Emiliano Eugenio Eulalio
-			Fausto Frederico Felipe Fernando Florencio
-			Gabriel Gonzalo Graciano Guillermo
-			Herminio Hilario Joracio
-			Ignacio Ildefonso Ismael
-			Jesús Joaquín Jorge José Juan
-			Leopoldino Lorenzo Luiz
-			Manuel Marcelino Mariano Mateo Miguel
-			Nicasio
-			Octaviano
-			Pablo Pedro Pío
-			Rafael Ranaldo Ricardo Rubén Rutiló
-			Santiago Saturnino Severino
-			Timoteo
-			Vicente
-		}
-		female_names = {
-			Laura
-			Marciela Maria
-			Perla
-		}
-		dynasty_names = {
-			Aguilera Aguirre Alamilla Aldape Alonso Álvarez Amaya Anaya Arguinzoni
-			Barragán
-			Cano Cardiel Carlos Castillo Cedillo Cepeda Chapoy Chávez Cuellar Curiel
-			Dávila Díez
-			Encarnación Escobedo Escontría Espinosa
-			Fernández Flores Fonseca Fraga
-			Garavia García Garza González Guerrero Gutiérrez
-			Hermosillo
-			Jiménez Jonguitud
-			Lárraga Leija López Lozano
-			Macías Manrique Marcelo Martínez Mendoza Moctezuma Muñoz Nieto 	Noyola
-			Olivo Ortiz
-			Palau Pedroza Pérez Pilar Prieto
-			Rangel Refugio Rincón Rocha Rodríguez Romero
-			Salas Salazar Sánchez Sandoval Santos Sarabia Segura Silva Solís
-			Terrazas Toranzo Turrubiartes
-			Vildósola Vives
-			Zapata Zúñiga
 		}
 	}
 
@@ -9180,10 +10723,59 @@ oriental_mexican = {
 			Valdés Valdez Valerio Vázquez Vicente Vidaurri Viesca
 		}
 	}
-}
 	
-occidental_mexican = {
-	graphical_culture = westerngfx
+	mexican_texan = {
+		primary = TEX
+		
+		male_names = {
+			Agustín Alfredo Alonso Andrés Ángel Antonio Arnulfo
+			Bartolomé Benecio Blas Braulio Bruno
+			Carlos Clemente
+			Diego Domingo
+			Eduardo Eliseo Encarnación Enrique Eulalio Evaristo
+			Francisco
+			Gregorio Gustavo
+			Hipólito Humberto
+			Ignacio Isidro Ismael
+			Jacinto Jacobo Jerónimo Jesús Jorge Jose Juan Julio
+			Lorenzo Luis
+			Manuel Marcial Martín Matías Melchor Miguel
+			Nazario
+			Oscar
+			Paz Pedro Praxedis
+			Rafael Ramón Raúl Rogelio Rubén
+			Santiago Simón
+			Telésforo
+			Venustiano Vicente Victor Victoriano
+		}
+		female_names = {
+			Laura
+			Marciela Maria
+			Perla
+		}
+		dynasty_names = {
+			Alcocer Antonio Arizpe Azlo
+			Blanco Borrego Breceda
+			Cancio Cárdenas Cardona Carranza Cepeda Cervantes Charles Claudio Cordero Costilla Crespo Cuervo
+			Dávila "de Aguirre" "de Alarcón" "de Barríos" "de Cárdenas" "de la Aguirre" "de la Garza" "de la Peña" "de las Fuentes" "de León" "de Padilla" "de Paula" "de Rábago" "de Salinas" "de Sandoval" "de Sesman" "de Terán" "de Ugarte" "de Valdes" "de Valle"
+			Elosúa Espinoza
+			Faz Fermín Fernández Flores Franco Fuentes Fuero Fueros
+			Galindo García Garza Gómez González Gutiérrez
+			Hernández
+			Ignacio
+			Joaquín Jose José Lobo
+			López
+			Madero María Martín Martínez Martos Mejía Mendoza Miguel Montemayor Moreira
+			Neyra
+			Ortiz
+			Palacios Pardo Pérez
+			Quesada
+			Rafael Ramón Reyes Rodríguez
+			Salas Sánchez
+			Torres
+			Valdés Valdez Valerio Vázquez Vicente Vidaurri Viesca
+		}
+	}
 
 	chihuahuan = {
 		primary = HHC

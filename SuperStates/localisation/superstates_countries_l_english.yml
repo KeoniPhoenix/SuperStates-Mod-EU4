@@ -8,7 +8,7 @@
 
 #Arctic Formables
  ACU:0 "Arctic Union"
- GLR:0 "Greenland"
+ GRL:0 "Greenland"
 
 #Canadian Provinces 
  ABR:0 "Alberta"
@@ -352,6 +352,6 @@
  #Argentine Provinces and Territories
  #
 
- #American Pope
+ # Other
  DPO:0 "Papal Legate"
  
