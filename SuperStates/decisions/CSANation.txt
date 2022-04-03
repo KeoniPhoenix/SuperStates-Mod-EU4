@@ -100,6 +100,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 		change_tag = CSA
 		CSA = {
 			if = {

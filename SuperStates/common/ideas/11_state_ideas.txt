@@ -2544,6 +2544,7 @@ WAS_ideas = {
 	}
 	george_vancouver = {
 		may_explore = yes
+		range = 0.2
 	}
 	puget_sound = {
 		global_ship_cost = -0.15

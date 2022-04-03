@@ -385,6 +385,10 @@ vrm_conquests_3 = {
 		}
 		effect = {
 			rhode_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -416,7 +420,7 @@ vrm_conquests_3 = {
 	}
 
 	vrm_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -648,7 +652,7 @@ vrm_flavor = {
 	}
 
 	vrm_green_boys = {
-		icon = army_reforms
+		icon = mission_green_mountain_boys
 		required_missions = { }
 		position = 5
 		trigger = {

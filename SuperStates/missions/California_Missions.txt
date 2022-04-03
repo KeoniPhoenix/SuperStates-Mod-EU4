@@ -148,9 +148,9 @@ cal_alta = {
 				province_id = 951
 				province_id = 950
 			}
-				OR = {
-					NOT = { base_production = 5 }
-					NOT = { owned_by = ROOT }
+			OR = {
+				NOT = { base_production = 5 }
+				NOT = { owned_by = ROOT }
 			}
 		}	
 		trigger = {#If any new gold provinces are added in NV and CA, add em here. This mission doesn't care about any gold in Utah or Arizona
@@ -176,14 +176,15 @@ cal_alta = {
 			}
 		}
 		effect = {
-			add_inflation = -2.0
 			country_event = { id = flavorCAL.1000 } # <-- Any gold changes should also change the event
 			define_advisor = {
 				type = master_of_mint
 				skill = 3
 				cost_multiplier = 0.25
-				culture = californian
+				culture = ROOT
 			}
+			set_country_flag = por_bandeirantes_flag #Increased chance to find gold
+			custom_tooltip = por_bandeirantes_tooltip
 		}
 	}
 }

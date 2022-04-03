@@ -73,7 +73,7 @@ ABR_ideas = {
 	prairie_militia = {
 		cavalry_flanking = 0.50
 	}
-	fields_of_wheat = {
+	early_harvest = {
 		global_manpower_modifier = 0.33
 	}
 	old_growth_forests = {
@@ -336,7 +336,7 @@ MTL_ideas = {
 	}
 	free = yes		#will be added at load.
 	
-	economic_center = {
+	goods_and_services_tax2 = {
 		global_trade_power = 0.15
 		center_of_trade_upgrade_cost = -0.10
 	}
@@ -560,7 +560,7 @@ NWT_ideas = {
 	polar_warfare = {
 		land_attrition = -0.25
 	}
-	reclaim_our_right = {
+	blizzard_blast = {
 		ae_impact = -0.10
 		province_warscore_cost = -0.05
 	}
@@ -835,14 +835,14 @@ TTO_ideas = {
 	goods_and_services_tax = {
 		global_tax_modifier = 0.10
 	}
-	battle_of_york = {
+	mollys_woods = {
 		fire_damage_received = -0.10
 	}
-	william_lyon_mackenzie = {
+	western_argonauts = {
 		advisor_cost = -0.10
 		advisor_pool = 1
 	}
-	old_york = {
+	ford_who = {
 		build_cost = -0.15
 	}
 	economic_progress = {

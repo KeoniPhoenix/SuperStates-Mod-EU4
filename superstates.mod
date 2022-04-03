@@ -20,5 +20,5 @@ tags={
 	"United States"
 }
 picture="superstates.png"
-supported_version="1.30.*.*"
+supported_version="1.33.*.*"
 path="/mod/SuperStates"

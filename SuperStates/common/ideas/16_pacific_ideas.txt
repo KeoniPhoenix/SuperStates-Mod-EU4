@@ -30,7 +30,7 @@ FSM_ideas = { # Federated States of Micronesia
 	mwehin_sau_deleur = {
 		reduced_liberty_desire = 10
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 		vassal_forcelimit_bonus = 1
 	}
@@ -110,7 +110,7 @@ KSR_ideas = { # Kosrae
 	isokelekel = {
 		years_of_nationalism = -5
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 		vassal_forcelimit_bonus = 1
 	}
@@ -154,7 +154,7 @@ PNP_ideas = { # Pohnpei
 	mwehin_sau_deleur = {
 		reduced_liberty_desire = 10
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 	}
 	venice_of_the_pacific = {

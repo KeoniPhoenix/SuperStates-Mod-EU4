@@ -553,7 +553,7 @@ GRR_ideas = {
 	port_of_acapulco = {
 		global_trade_power = 0.10
 	}
-	acapulco_slave_trade = {
+	acapulco_trade = {
 		production_efficiency = 0.10
 	}
 	vicente_guerrero = {
@@ -1401,11 +1401,11 @@ mexican_ideas = {
 		AND = {
 			OR = {
 					culture_group = peninsular_mexican
-					culture_group = costa_chican
+					# culture_group = costa_chican
 					culture_group = mazatlan_mexican
 					culture_group = altiplano_central
-					culture_group = gulf_mexican
-					culture_group = oriental_mexican
+					# culture_group = gulf_mexican
+					# culture_group = oriental_mexican
 					culture_group = occidental_mexican
 					culture_group = pacific_mexican
 					capital_scope = { superregion = central_america_superregion }
@@ -1450,6 +1450,7 @@ mexican_ideas = {
 				#tag = ROS
 				#tag = CSZ
 				#tag = YUC
+				tag = MSQ
 			}
 		}
 	}

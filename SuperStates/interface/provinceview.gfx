@@ -1341,7 +1341,7 @@ spriteTypes = {
 	}	
 
 	spriteType = {
-		name = "GFX_settlement_growth_button"
+		name = "GFX_settlement_g_button"
 		#texturefile = "gfx/interface/settlement_growth_button.dds"
 		texturefile = "gfx/interface/development_button_tax.dds"
 	}

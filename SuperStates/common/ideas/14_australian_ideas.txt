@@ -37,7 +37,7 @@ ACT_ideas = { # Australian Capital Territory/ACT/Canberra
 	pristine_monuments_and_museums = {
 		prestige = 1
 	}
-	jervis_bay_territory = {
+	ACT_jervis_bay_territory = {
 		fire_damage = 0.10
 	}
 	ACT_quality_living = {

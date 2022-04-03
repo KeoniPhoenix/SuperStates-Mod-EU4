@@ -414,7 +414,7 @@ cut_conquests_3 = {
 	}
 
 	cut_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -737,9 +737,15 @@ cut_flavor = {
 				3261 = {
 					owned_by = ROOT
 					grown_by_development = 10
-					has_great_project = {
-						type = yale
-						tier = 2
+					OR = {
+						has_great_project = {
+							type = yale
+							tier = 2
+						}
+						has_great_project = {
+							type = yale
+							tier = 3
+						}
 					}
 				}
 			}

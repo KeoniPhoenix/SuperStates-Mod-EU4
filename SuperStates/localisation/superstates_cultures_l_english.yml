@@ -1,4 +1,26 @@
 ﻿l_english:
+ #Event culture flip cultures
+ appalachian_pennsylvanian:0 "Pennsylvanian"
+ canadian_alaskan:0 "Alaskan"
+ pacific_alaskan:0 "Alaskan"
+ southern_texan:0 "Texan"
+ mexican_texan:0 "Tejano"
+ plains_texan:0 "Texan"
+ midatlantic_virginian:0 "Virginian"
+ appalachian_virginian:0 "Virginian"
+ midwestern_tennessean:0 "Tennessean"
+ appalachian_tennessean:0 "Tennessean"
+ plains_kansan:0 "Kansan"
+ southern_missourian:0 "Missourian"
+ southern_kentuckian:0 "Kentuckian"
+ midwestern_kentuckian:0 "Kentuckian"
+ great_laker_ohioan:0 "Ohioan"
+ appalachian_ohioan:0 "Ohioan"
+ pacific_british_columbian:0 "British Columbian"
+ pacific_nevadan:0 "Nevadan"
+ southwestern_nevadan:0 "Nevadan"
+ great_laker_illinoisan:0 "Illinoisan"
+ nordic_greenlandic:0 "Greenlandic"
  #Appalachian
  appalachian_group:0 "Appalachian"
  appalachian:0 "Appalachian"
@@ -123,7 +145,7 @@
  southern_californian:0 "South Californian"
  washingtonian:0 "Washingtonian"
  #Micronesian-Pacific Islander
- micronesian-pacific_islander:0 "Micronesian-Pacific"
+ micronesian-pacific_islander:0 "Pacific"
  chuukese:0 "Chuukese"
  guamanian:0 "Guamanian"
  hawaiian:0 "Hawaiian"
@@ -199,7 +221,7 @@
  altiplano_central:0 "Altiplano"
  gulf_mexican:0 "Gulf Mexican"
  oriental_mexican:0 "Oriental"
- occidental_mexican:0 "Occidental"
+ occidental_mexican:0 "Norteño" # Norteno
  pacific_mexican:0 "Pacifico"
  
  aquascalientian:0 "Hidrocalido"

@@ -59,63 +59,63 @@ gen_new_england = {
 }
 
 #Mid-Atlantic Regional
-# gen_mid_atlantic = {
-# 	slot = 5
-# 	generic = yes
-# 	ai = yes
+gen_mid_atlantic = {
+	slot = 5
+	generic = yes
+	ai = yes
 
-# 	potential = {
-# 		capital_scope = {
-# 			region = mid_atlantic_region
-# 		}
-# 	}
-# 	has_country_shield = no
+	potential = {
+		capital_scope = {
+			region = mid_atlantic_region
+		}
+	}
+	has_country_shield = no
 
-# 	gen_mid_atlantic_trade_node = {
-# 		icon = mission_war_chest
-# 		required_missions = { }
-# 		position = 1
+	gen_mid_atlantic_trade_node = {
+		icon = mission_war_chest
+		required_missions = { }
+		position = 1
 		
-# 		trigger = {
-# 			home_trade_node = {
-# 				highest_value_trade_node = yes
-# 				is_strongest_trade_power = ROOT
-# 			}
+		trigger = {
+			home_trade_node = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
+			}
 			
-# 		}
+		}
 		
-# 		effect = {
-# 			add_prestige = 30
-# 			add_country_modifier = {
-# 				name = "gen_eur_trade_node_mod"
-# 				duration = 7300
-# 			}
-# 		}
-# 	}
+		effect = {
+			add_prestige = 30
+			add_country_modifier = {
+				name = "gen_eur_trade_node_mod"
+				duration = 7300
+			}
+		}
+	}
 
-# 	gen_mid_atlantic_banking = {
-# 		icon = medici_bank_ledgers
-# 		required_missions = { }
-# 		position = 2
+	gen_mid_atlantic_banking = {
+		icon = medici_bank_ledgers
+		required_missions = { }
+		position = 2
 
-# 		trigger = {
-# 			num_of_loans = 0
-# 			treasury = 2000
-# 			custom_trigger_tooltip = {
-# 				tooltip = mid_atlantic_banking_tooltip
-# 				OR = {
-# 					all_neighbor_country = {
-# 						inflation = ROOT
-# 					}
-# 					NOT = { inflation = 0.1 }
-# 				}
-# 			}
-# 		}
-# 		effect = {
-# 			add_country_modifier = {
-# 				name = "mid_atlantic_bankers"
-# 				duration = 9125
-# 			}
-# 		}
-# 	}
-# }
+		trigger = {
+			num_of_loans = 0
+			treasury = 2000
+			custom_trigger_tooltip = {
+				tooltip = mid_atlantic_banking_tooltip
+				OR = {
+					all_neighbor_country = {
+						inflation = ROOT
+					}
+					NOT = { inflation = 0.1 }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mid_atlantic_bankers"
+				duration = 9125
+			}
+		}
+	}
+}

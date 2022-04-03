@@ -1,8 +1,0 @@
-# No previous file for Cofitachequi
-#For the purpose of the game, essentially used to both represent the Cofitachequi chiefdom of De Soto and the later Catawba tribe. 
-government = native
-add_government_reform = native_clan_council_reform
-government_rank = 1
-primary_culture = catawba
-religion = totemism
-technology_group = north_american

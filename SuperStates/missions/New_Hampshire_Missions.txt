@@ -397,7 +397,7 @@ nwh_conquests_3 = {
 	}
 
 	nwh_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
