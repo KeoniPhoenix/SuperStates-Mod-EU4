@@ -259,7 +259,6 @@ CAL_ideas = {
 	}
 	tule_fog = {
 		leader_land_shock = 1
-		leader_land_manuever = 1
 	}
 	the_melting_pot = {
 		no_religion_penalty = yes
@@ -2332,7 +2331,7 @@ TEX_ideas = {
 
 UTA_ideas = {
 	start = {
-		tolerance_heretic = 1
+		land_attrition = -0.10
 		global_missionary_strength = 0.03
 	}
 
@@ -2376,7 +2375,7 @@ UTA_ideas = {
 		global_tax_modifier = 0.05
 	}
 	beehive_state = {
-		religious_unity = 0.50
+		religious_unity = 0.25
 	}
 }
 
