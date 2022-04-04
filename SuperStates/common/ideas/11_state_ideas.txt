@@ -2330,7 +2330,7 @@ TEX_ideas = {
 
 UTA_ideas = {
 	start = {
-		land_attrition = -0.10
+		land_attrition = -0.15
 		global_missionary_strength = 0.03
 	}
 
