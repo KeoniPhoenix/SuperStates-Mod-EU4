@@ -228,7 +228,7 @@ CAL_ideas = {
 	}
 	
 	bonus = {
-		manpower_recovery_speed = 0.20
+		manpower_recovery_speed = 0.15
 	}
 
 	trigger = {
