@@ -2397,8 +2397,7 @@ VRM_ideas = {
 	free = yes
 	
 	green_mountain_boys = {
-		fire_damage = 0.05
-		shock_damage = 0.05
+		shock_damage = 0.15
 	}
 	correcting_the_gores = {
 		global_tax_modifier = 0.10
