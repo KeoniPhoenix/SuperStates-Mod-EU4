@@ -223,7 +223,7 @@ ARZ_ideas = {
 
 CAL_ideas = {
 	start = {
-		global_tax_modifier = 0.20
+		global_tax_modifier = 0.10
 		diplomatic_reputation = 1
 	}
 	
@@ -255,7 +255,7 @@ CAL_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	hollywood = {
-		prestige_decay = -0.02
+		prestige_decay = -0.01
 	}
 	tule_fog = {
 		leader_land_shock = 1
