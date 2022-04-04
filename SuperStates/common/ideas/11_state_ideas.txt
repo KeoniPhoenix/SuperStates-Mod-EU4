@@ -993,7 +993,7 @@ MNE_ideas = {
 	}
 	
 	bonus = {
-		sunk_ship_morale_hit_recieved = -0.20
+		naval_force_limit = 0.2
 	}
 	
 	trigger = {
@@ -1005,11 +1005,12 @@ MNE_ideas = {
 		navy_tradition = 1
 	}
 	trawler_experience = {
-		naval_morale = 0.20
+		naval_morale = 0.15
+		sunk_ship_morale_hit_recieved = -0.1
 	}
 	pine_tree_state = {
-		build_cost = -0.10
 		global_ship_cost = -0.10
+		build_cost = -0.05
 	}
 	kittery_shipyard = {
 		ship_durability = 0.10
