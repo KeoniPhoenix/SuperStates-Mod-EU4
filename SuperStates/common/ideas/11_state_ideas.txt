@@ -1459,8 +1459,7 @@ NWH_ideas = {
 		envoy_travel_time = -0.25
 	}
 	live_free_or_die = {
-		years_of_nationalism = -5
-		enemy_core_creation = 0.25
+		republican_tradition = 0.3
 	}
 	prosperous_citizens = {
 		global_unrest = -1
@@ -1579,7 +1578,7 @@ NYS_ideas = {
 	
 	financial_center = {
 		inflation_reduction = 0.10
-		interest = -1.0
+		interest = -0.5
 	}
 	sons_of_liberty = {
 		global_spy_defence = 0.20
@@ -1589,14 +1588,14 @@ NYS_ideas = {
 		army_tradition = 0.50
 	}
 	marble_decor_capitol = {
-		prestige_decay = -0.01
+		prestige_decay = -0.005
 		diplomatic_reputation = 1
 	}
 	junction_for_information = {
 		technology_cost = -0.05
 	}
 	statue_of_liberty = {
-		ae_impact = -0.15
+		national_manpower_modifier = 0.15
 	}
 	halls_of_diplomacy = {
 		diplomats = 1
