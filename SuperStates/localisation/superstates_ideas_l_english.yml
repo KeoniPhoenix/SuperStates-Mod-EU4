@@ -2433,6 +2433,8 @@
  harvesting_crown_woodlands_desc:0 "The large, plentiful tracts of mature woodlands are prime for our use."
  community_integration:0 "Community Integration"
  community_integration_desc:0 "As our nation comes together, the abrasiveness of religious strife melts when everybody sees themselves as Canadians neighboring Canadians."
+ settling_the_interior:0 "Traversing the Interior"
+ settling_the_interior_desc:0 "Canada is a nation frought with geographic difficulties, and defending both sides of the country is proving to be an increasingly difficult task. In order to fix this, we need to establish a better road system linking the two halves of the country, and train our army's endurance so that they can go on forced marches when necessary."
  
  # Base game ideas
  singing_lumberjacks:0 "Singing Lumberjacks"
