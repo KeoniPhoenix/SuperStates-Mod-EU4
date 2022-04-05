@@ -38,7 +38,7 @@ ACT_ideas = { # Australian Capital Territory/ACT/Canberra
 		prestige = 1
 	}
 	ACT_jervis_bay_territory = {
-		fire_damage = 0.10
+		discipline = 0.05
 	}
 	ACT_quality_living = {
 		yearly_corruption = -0.10
@@ -51,7 +51,7 @@ ACT_ideas = { # Australian Capital Territory/ACT/Canberra
 
 NSW_ideas = { # New South Wales
 	start = {
-		global_manpower_modifier = 0.10
+		global_manpower_modifier = 0.2
 		core_creation = -0.10
 	}
 
@@ -69,20 +69,20 @@ NSW_ideas = { # New South Wales
 	}
 	NSW_legacy_of_cook = {
 		may_explore = yes
-		naval_attrition = -0.10
+		range = 0.25
 	}
 	admiral_phillips_efforts = {
-		ae_impact = -0.10
+		ae_impact = -0.05
 		governing_capacity_modifier = 0.10
 	}
 	rum_rebellion = {
 		discipline = 0.05
 	}
 	NSW_autocratic_rule = {
-		yearly_absolutism = 1
+		max_absolutism = 10
 	}
 	flinders_voyage = {
-		heavy_ship_power = 0.1
+		naval_morale = 0.1
 		navy_tradition = 0.25
 	}
 	NSW_gold_rush = {
@@ -109,10 +109,10 @@ QLD_ideas = { # Queensland
 	free = yes		#will be added at load.
 
 	moreton_bay_settlement = {
-		core_creation = -0.20
+		core_creation = -0.15
 	}
 	QLD_frontier_wars = {
-		shock_damage = 0.10
+		army_tradition = 0.5
 	}
 	bowen_proclamation = {
 		republican_tradition = 0.30
@@ -126,7 +126,7 @@ QLD_ideas = { # Queensland
 		province_warscore_cost = -0.10
 	}
 	construction_of_railroads = {
-		global_own_trade_power = 0.20
+		global_own_trade_power = 0.10
 		movement_speed = 0.10
 	}
 	the_labor_party = {
@@ -180,7 +180,8 @@ SAU_ideas = { # South Australia
 		production_efficiency = 0.10
 	}
 	SAU_disestablishment_of_religion = {
-		no_religion_penalty = yes
+		tolerance_heretic = 2
+		tolerance_heathen = 1
 	}
 }
 
