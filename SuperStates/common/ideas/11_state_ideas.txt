@@ -882,7 +882,7 @@ KNS_Ideas = {
 		fabricate_claims_cost= -0.25
 	}
 	agricultural_heartland = {
-		national_manpower_modifier = 0.2
+		global_manpower_modifier = 0.2
 	}
 	were_not_in_kansas_anymore = {
 		core_creation = -0.2
@@ -1068,7 +1068,7 @@ MYD_ideas = {
 		stability_cost_modifier = -0.15
 	}
 	the_b_and_o = {
-		tech_cost_modifier = -0.10
+		technology_cost = -0.10
 	}
 }
 
@@ -1603,7 +1603,7 @@ NYS_ideas = {
 		technology_cost = -0.05
 	}
 	statue_of_liberty = {
-		national_manpower_modifier = 0.15
+		global_manpower_modifier = 0.15
 	}
 	halls_of_diplomacy = {
 		diplomats = 1
@@ -2122,8 +2122,8 @@ SCR_ideas = {
 	free = yes		#will be added at load.
 	
 	nullification_acts = {
-		global_autonomy = -0.05
-		liberty_desire = 10
+		land_morale = 0.05
+		hostile_attrition = 1
 	}
 	charleston_harbor = {
 		global_sailors_modifier = 0.20
