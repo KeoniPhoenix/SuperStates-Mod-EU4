@@ -156,28 +156,23 @@ SAU_ideas = { # South Australia
 	free = yes		#will be added at load.
 
 	ngurunderi = {
-		native_assimilation = 0.50
-		native_uprising_chance = -0.50
+		years_of_nationalism = -5
 	}
-	systematic_colonisation = {
-		global_colonial_growth = 20
+	south_australian_wine = {
+		production_efficiency = 0.10
 	}
 	old_gum_tree = {
-		years_of_nationalism = -5
+		prestige = 1
 	}
 	torrens_title = {
 		development_cost = -0.05
 		yearly_corruption = -0.05
 	}
 	vanguard_of_change = {
-		republican_tradition = 0.30
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
+		idea_cost = -0.1
 	}
-	south_australian_wine = {
-		production_efficiency = 0.10
+	systematic_colonisation = {
+		global_colonial_growth = 20
 	}
 	SAU_disestablishment_of_religion = {
 		tolerance_heretic = 2
@@ -187,8 +182,8 @@ SAU_ideas = { # South Australia
 
 TSM_ideas = { # Tasmania
 	start = {
-		trade_range_modifier = 0.20
-		ship_durability = 0.05
+		naval_forcelimit_modifier = 0.25
+		ship_durability = 0.1
 	}
 
 	bonus = {
@@ -201,7 +196,7 @@ TSM_ideas = { # Tasmania
 	free = yes		#will be added at load.
 
 	TSM_palawa = {
-		global_autonomy = -0.075
+		global_unrest = -2
 	}
 	TSM_van_diemens_land = {
 		merchants = 1
@@ -214,6 +209,7 @@ TSM_ideas = { # Tasmania
 		naval_morale = 0.20
 	}
 	distributing_our_population = {
+		global_autonomy = -0.05
 		global_colonial_growth = 15
 		expel_minorities_cost = -0.10
 	}
@@ -232,7 +228,7 @@ VCT_ideas = { # Victoria
 	}
 
 	bonus = {
-		advisor_pool = 1
+		advisor_cost = -0.15
 	}
 
 	trigger = {
@@ -244,8 +240,7 @@ VCT_ideas = { # Victoria
 		governing_capacity_modifier = 0.10
 	}
 	VCT_eureka_rebellion = {
-		land_morale = 0.10
-		global_manpower_modifier = 0.10
+		global_manpower_modifier = 0.2
 	}
 	VCT_catholic_immigration = {
 		papal_influence = 2
@@ -253,17 +248,15 @@ VCT_ideas = { # Victoria
 		church_power_modifier = 0.10
 	}
 	VCT_god_save_the_queen = {
-		yearly_absolutism = 0.50
-		legitimacy = 0.50
-		devotion = 0.50
-		horde_unity = 0.50
-		meritocracy = 0.50
+		land_morale = 0.10
+		yearly_absolutism = 0.5
 	}
 	NSW_gold_rush = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	execution_of_kelly = {
 		global_autonomy = -0.05
+		harsh_treatment_cost = -0.10
 	}
 	sporting_capital = {
 		prestige = 1
@@ -300,28 +293,26 @@ WAU_ideas = { # Western Australia
 	}
 	australian_gold = {
 		global_trade_goods_size_modifier = 0.10
-		inflation_reduction = 0.10
 	}
 	WAU_settling_the_interior = {
 		development_cost = -0.15
 	}
 	WAU_export_economy = {
-		trade_range_modifier = 0.20
+		global_trade_power = 0.10
 	}
 	no_longer_isolated = {
-		global_own_trade_power = 0.10
-		caravan_power = 0.10
+		prestige = 1
 	}
 }
 
 NTT_ideas = { # Northern Territory
 	start = {
-		free_leader_pool = 1
-		manpower_recovery_speed = 0.10
+		land_forcelimit_modifier = 0.25
+		manpower_recovery_speed = 0.15
 	}
 
 	bonus = {
-		defensiveness = 0.10
+		defensiveness = 0.2
 	}
 
 	trigger = {
@@ -340,7 +331,7 @@ NTT_ideas = { # Northern Territory
 		governing_capacity_modifier = 0.10
 	}
 	lessons_of_the_land = {
-		idea_cost = -0.10
+		idea_cost = -0.05
 	}
 	makassan_merchants = {
 		merchants = 1
@@ -349,11 +340,9 @@ NTT_ideas = { # Northern Territory
 		core_creation = -0.15
 	}
 	aboriginal_land_rights = {
-		stability_cost_modifier = -0.10
-		global_tax_modifier = 0.10
+		years_of_nationalism = -5
 	}
 	rebuild_from_rubble = {
-		development_cost = -0.05
 		build_cost = -0.10
 	}
 }
@@ -365,7 +354,7 @@ JBT_ideas = { # Jervis Bay Territory
 	}
 
 	bonus = {
-		artillery_fire = 1
+		artillery_fire = 0.5
 	}
 
 	trigger = {
@@ -382,28 +371,28 @@ JBT_ideas = { # Jervis Bay Territory
 	}
 	sydney_cove = {
 		sunk_ship_morale_hit_recieved = -0.33
-		disengagement_chance = 0.05
+		ship_durability = 0.075
 	}
 	JBT_naval_bases = {
-		global_sailors_modifier = 0.20
-		allowed_marine_fraction = 0.05
+		global_sailors = 1000
+		allowed_marine_fraction = 0.2
 	}
 	integration_of_the_locals = {
 		land_morale = 0.15
 	}
 	hmas_creswell = {
-		navy_tradition = 1
+		navy_tradition = 0.25
 		leader_naval_manuever = 1
 	}
 	JBT_economic_ties = {
-		core_creation = -0.25
+		core_creation = -0.1
 	}
 }
 
 XMS_ideas = { # Christmas Island
 	start = {
-		naval_morale = 0.20
-		trade_steering = 0.10
+		naval_morale = 0.15
+		global_own_trade_power = 0.2
 	}
 
 	bonus = {
@@ -436,7 +425,7 @@ XMS_ideas = { # Christmas Island
 		improve_relation_modifier = 0.20
 	}
 	reunite_our_families = {
-		warscore_cost_vs_other_religion = -0.25
+		province_warscore_cost = -0.2
 	}
 }
 
@@ -470,18 +459,17 @@ CCI_ideas = { # Cocos / Keeling Islands
 	}
 	battle_of_cocos = {
 		navy_tradition = 0.50
-		prestige_from_naval = 0.25
+		prestige_from_naval = 1
 	}
 	no_more_foreign_rule = {
-		global_spy_defence = 0.20
-		enemy_core_creation = 0.25
+		land_morale = 0.1
 	}
 	CCI_local_government = {
 		candidate_random_bonus = 1
 		yearly_absolutism = 0.50
 	}
 	reunite_our_families = {
-		warscore_cost_vs_other_religion = -0.25
+		province_warscore_cost = -0.2
 	}
 }
 
