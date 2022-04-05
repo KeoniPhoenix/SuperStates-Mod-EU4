@@ -9,13 +9,13 @@
 ACU_ideas = {
 	start = {
 		land_attrition = -0.33
-		land_forcelimit_modifier = 0.15
+		land_forcelimit_modifier = 0.25
 	}
 
 	bonus = {
-		reinforce_speed = 0.25
-	}
+		global_supply_limit_modifier = 0.33
 
+	}
 	trigger = {
 			tag = ACU
 	}
@@ -23,27 +23,28 @@ ACU_ideas = {
 
 	
 	implementing_new_tech_for_arctic_development = {
-		global_manpower_modifier = 0.20
+		global_manpower_modifier = 0.33
 	}
 	no_vacation_for_the_enemy = {
 		defensiveness = 0.25
+		hostile_attrition = 2
 	}
 	arctic_pride = {
-		land_morale = 0.20
-		naval_morale = 0.20
+		land_morale = 0.15
+		naval_morale = 0.15
 	}
 	hudson_strait1 = {
-		trade_range_modifier = 0.15
+		global_trade_power = 0.2
 	}
 	endless_fur_supply = {
 		global_trade_goods_size_modifier = 0.15
 	}
 	merchant_espionage = {
-		idea_cost = -0.20
-		global_regiment_cost = -0.10
+		idea_cost = -0.1
 	}
 	ice_palace = {
 		prestige = 1
+		max_absolutism = 5
 	}
 }
 
@@ -51,12 +52,12 @@ ACU_ideas = {
 
 MTU_ideas = {
 	start = {
-		naval_morale = 0.25
-		diplomatic_upkeep = 1
+		naval_morale = 0.2
+		diplomatic_upkeep = 2
 	}
 
 	bonus = {
-		navy_tradition_decay = -0.02
+		naval_forcelimit_modifier = 0.5
 	}
 
 	trigger = {
@@ -66,19 +67,22 @@ MTU_ideas = {
 
 	new_food_preservation_techniques = {
 		naval_attrition = -0.25
+		range = 0.5
 	}
 	improved_naval_ordnance = {
-		heavy_ship_power = 0.15
-		heavy_ship_cost = -0.10
+		heavy_ship_power = 0.2
+		heavy_ship_cost = -0.1
 	}
 	enticements_and_effective_recruiting = {
-		global_manpower_modifier = 0.15
+		global_sailors_modifier = 0.33
 	}
 	reduce_upper_house_legislative_powers = {
 		stability_cost_modifier = -0.20
+	 	max_absolutism = 10
 	}
 	commercializing_research_and_develop_successes = {
-		technology_cost = -0.15
+		technology_cost = -0.05
+	 	global_trade_goods_size_modifier = 0.1
 	}
 	stress_formality_in_the_diplomatic_corps = {
 		diplomatic_reputation = 3
@@ -132,13 +136,12 @@ MTU_ideas = {
 
 CAN_ideas = {
 	start = {
-		trade_efficiency = 0.1
-		land_attrition = -0.15
+		trade_efficiency = 0.15
+		land_forcelimit_modifier = 0.25
 	}
 	
 	bonus = {
-		republican_tradition = 0.3
-		legitimacy = 1
+	  	discipline = 0.05
 	}
 	
 	trigger = {
@@ -148,25 +151,30 @@ CAN_ideas = {
 	
 		
 	singing_lumberjacks = {
-		production_efficiency = 0.10
+		production_efficiency = 0.15
 	}	
 	the_hudson_bay_company = {
 		merchants = 1
+		mercantilism_cost = -0.3
 	}
     settling_the_interior = {
 		colonists = 1
+		range = 0.2
 	}
 	the_maritimes = {
 		navy_tradition = 1
+		naval_morale = 0.15
 	}
 	the_quebec_act = {
-		tolerance_heretic = 2
+		tolerance_heretic = 3
 	}
 	legacy_of_the_empire = {
-		trade_steering = 0.15
+		global_trade_power = 0.2
+		legitimacy = 1
 	}
 	the_forests_of_canada = {
 		global_ship_cost = -0.1
+		naval_forcelimit_modifier = 0.2
 	}
 }
 
@@ -179,11 +187,11 @@ CAN_ideas = {
 CSC_ideas = {
 	start = {
 		diplomatic_reputation = 2
-		advisor_cost = -0.15
+		advisor_cost = -0.25
 	}
 
 	bonus = {
-		infantry_power = 0.10
+		infantry_power = 0.15
 	}
 
 	trigger = {
@@ -196,23 +204,25 @@ CSC_ideas = {
 		trade_efficiency = 0.10
 	}
 	economic_sanctions = {
-		embargo_efficiency = 0.5
+		embargo_efficiency = 1
 	}
 	merchant_fleet_registry = {
 		naval_maintenance_modifier = -0.20
 	}
 	astorian_empire = {
-		trade_steering = 0.15
-		global_spy_defence = 0.15
+		trade_steering = 0.3
+		global_spy_defence = 0.2
 	}
 	natural_harbors_of_great_economic_importance = {
-		trade_efficiency = 0.10
+		naval_forcelimit_modifier = 0.25
+		global_ship_trade_power = 0.5
 	}
 	captain_vancouvers_naval_academy = {
-		leader_naval_manuever = 1
+		naval_morale = 0.2
+	 	global_naval_engagement_modifier = 0.1
 	}
 	the_vulcan_artillery = {
-		artillery_power = 0.15
+	 	artillery_fire = 0.5
 	}
 }
 
@@ -220,12 +230,12 @@ CSC_ideas = {
 
 CSA_ideas = {
 	start = {
-		cavalry_power = 0.10
-		global_regiment_cost = -0.10
+		cavalry_power = 0.25
+	 	free_leader_pool = 2
 	}
 
 	bonus = {
-		hostile_attrition = 1
+		discipline = 0.05
 	}
 
 	trigger = {
@@ -240,24 +250,27 @@ CSA_ideas = {
 		production_efficiency = 0.20
 	}
 	never_a_tariff_of_abominations = {
-		merchants = 1
-		trade_steering = 0.15
+		global_unrest = -2
+		global_own_trade_power = 0.1
 	}
 	state_military_colleges = {
 		infantry_power = 0.25
-		mil_tech_cost_modifier = -0.15
+		mil_tech_cost_modifier = -0.1
 	}
 	commerce_raiders1 = {
-		light_ship_power = 0.20
+		light_ship_power = 0.1
+	 	privateer_efficiency = 0.33
 	}
 	legends_in_command = {
 		leader_land_fire = 1
+		leader_land_shock = 1
 	}
 	knights_of_the_golden_circle = {
 		unjustified_demands = -0.33
+		province_warscore_cost = -0.25
 	}
 	reform_drill_training = {
-		discipline = 0.075
+		drill_gain_modifier = 1
 	}
 }
 
@@ -270,11 +283,11 @@ CSA_ideas = {
 DES_ideas = {
 	start = {
 		global_tax_modifier = 0.10
-		ae_impact = -0.05
+		ae_impact = -0.15
 	}
 	
 	bonus = {
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	
 	trigger = {
@@ -283,20 +296,20 @@ DES_ideas = {
 	free = yes		#will be added at load
 	
 	miracle_of_the_gulls2 = {
-		land_attrition = -0.20
+		land_attrition = -0.25
 	}
 	mormon_tabernacle_choir = {
 		prestige = 1
 	}
 	a_proclamation_on_family = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.25
 	}
 	legacy_of_the_pioneers = {
 		colonists = 1
 		leader_land_manuever = 1
 	}
 	reform_the_mormon_battalion = {
-		discipline = 0.075
+		discipline = 0.05
 		infantry_power = 0.10
 	}
 	re-establish_the_united_order_of_enoch = {
