@@ -206,7 +206,7 @@ TSM_ideas = { # Tasmania
 		range = 0.33
 	}
 	TSM_our_island_spirit = {
-		naval_morale = 0.20
+		naval_morale = 0.15
 	}
 	distributing_our_population = {
 		global_autonomy = -0.05
@@ -214,7 +214,7 @@ TSM_ideas = { # Tasmania
 		expel_minorities_cost = -0.10
 	}
 	tasmanian_devil = {
-		infantry_power = 0.10
+		infantry_power = 0.15
 	}
 	TSM_port_arthur = {
 		harsh_treatment_cost = -0.20

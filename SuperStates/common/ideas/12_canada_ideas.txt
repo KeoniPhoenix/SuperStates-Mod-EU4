@@ -399,7 +399,7 @@ NBR_ideas = {
 		build_cost = -0.10
 	}
 	drive_back_the_fenians = {
-		fire_damage = 0.10
+		land_morale = 0.1
 	}
 }
 
@@ -799,7 +799,7 @@ SSK_ideas = {
 		prestige_from_land = 1
 	}
 	orientation_for_social_justice = {
-		national_unrest = -1
+		global_unrest = -1
 	}
 }
 
