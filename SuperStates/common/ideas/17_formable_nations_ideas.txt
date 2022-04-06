@@ -261,7 +261,7 @@ CSA_ideas = {
 	legends_in_command = {
 		leader_land_fire = 1
 		leader_land_shock = 1
-	 	leader_land_manuever = 2
+	 	leader_land_manuever = 1
 	}
 	knights_of_the_golden_circle = {
 		unjustified_demands = -0.33
