@@ -761,12 +761,12 @@ NAM_ideas = {
 
 PCF_ideas = {
 	start = {
-		land_forcelimit_modifier = 0.10
-		global_manpower_modifier = 0.15
+		land_forcelimit_modifier = 0.25
+		global_manpower_modifier = 0.33
 	}
 
 	bonus = {
-		infantry_power = 0.10
+		infantry_power = 0.15
 	}
 
 	trigger = {
@@ -775,27 +775,28 @@ PCF_ideas = {
 	free = yes		#will be added at load.
 
 	strategic_mountian_ranges = {
-		defensiveness = 0.15
+		defensiveness = 0.25
 	}
 	well_focused_foreign_affairs = {
 		diplomats = 1
 	}
 	adaptability_of_our_cavalry = {
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	skilled_diplomacy = {
-		diplomatic_reputation = 3
+		diplomatic_reputation = 2
 		diplomatic_upkeep = 2
 	}
 	appeal_to_the_masses_with_referendums = {
 		stability_cost_modifier = -0.10
+		global_unrest = -2
 	}
 	seeking_peace_through_trade = {
-		merchants = 2
-		trade_range_modifier = 0.20
+		merchants = 1
+		improve_relation_modifier = 0.2
 	}
 	economic_controls = {
-		technology_cost = -0.25
+		technology_cost = -0.05
 		build_cost = -0.10
 	}
 }
