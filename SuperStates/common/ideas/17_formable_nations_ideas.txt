@@ -229,11 +229,11 @@ CSC_ideas = {
 CSA_ideas = {
 	start = {
 		cavalry_power = 0.2
-	 	free_leader_pool = 2
+		free_leader_pool = 2
 	}
 
 	bonus = {
-		hostile_attrition = 1
+		land_morale = 0.2
 	}
 
 	trigger = {
@@ -252,7 +252,6 @@ CSA_ideas = {
 		global_own_trade_power = 0.1
 	}
 	state_military_colleges = {
-		infantry_power = 0.05
 	 	army_tradition = 1
 	}
 	commerce_raiders1 = {
@@ -260,12 +259,11 @@ CSA_ideas = {
 	 	privateer_efficiency = 0.33
 	}
 	legends_in_command = {
-		leader_land_fire = 2
 		leader_land_shock = 2
 	}
 	knights_of_the_golden_circle = {
 		unjustified_demands = -0.33
-		province_warscore_cost = -0.15
+		province_warscore_cost = -0.2
 	}
 	reform_drill_training = {
 		discipline = 0.05
@@ -1021,7 +1019,7 @@ NZL_ideas = {
 AUS_ideas = {
 	start = {	
 		naval_morale = 0.15
-		global_colonial_growth = 25
+		governing_capacity = 0.2
 	}
 	bonus = {
 	 	trade_efficiency = 0.2
@@ -1032,8 +1030,8 @@ AUS_ideas = {
 	free = yes
 	
 	AUS_outback_stations = {
-		colonists = 1
-		production_efficiency = 0.1
+		development_cost = -0.15
+		production_efficiency = 0.05
 	}
 	AUS_land_down_under = {
 		land_attrition = -0.1

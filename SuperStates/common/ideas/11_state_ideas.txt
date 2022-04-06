@@ -2300,8 +2300,8 @@ TNN_ideas = {
 
 TEX_ideas = {
 	start = {	
-		fire_damage_received = -0.1
-		global_missionary_strength = 0.02
+		land_morale = 0.15
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
 		infantry_fire = 0.15
@@ -2318,9 +2318,10 @@ TEX_ideas = {
 	free = yes
 	lone_star_state = {
 		prestige = 1
+	 	num_accepted_cultures = 1
 	}
 	tex_revolution = {
-		land_morale = 0.15
+		fire_damage_received = -0.1
 	}
 	cotton_plantations = {
 		global_trade_goods_size_modifier = 0.1
@@ -2330,8 +2331,7 @@ TEX_ideas = {
 		cavalry_power = 0.1
 	}
 	tex_native_frontiers = {
-		army_tradition_decay = -0.005
-		movement_speed = 0.15
+		defensivenss = 0.25
 	}
 	tejanos = {
 		stability_cost_modifier = -0.1
