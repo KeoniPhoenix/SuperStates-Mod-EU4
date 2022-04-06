@@ -229,7 +229,7 @@ CSC_ideas = {
 CSA_ideas = {
 	start = {
 		cavalry_power = 0.2
-		free_leader_pool = 2
+		free_leader_pool = 1
 	}
 
 	bonus = {
