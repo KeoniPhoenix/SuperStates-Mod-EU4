@@ -2,7 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = marylander
-add_accepted_culture = delmarvan
+#add_accepted_culture = delmarvan
 religion = s_protestant
 capital = 2530  # Annapolis
 

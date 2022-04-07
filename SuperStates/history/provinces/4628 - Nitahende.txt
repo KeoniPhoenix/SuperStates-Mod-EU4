@@ -45,7 +45,7 @@ native_hostileness = 3
 	add_core = WSI
 }
 1959.11.6 = {
-	add_core = CAY
+	add_core = CYM
 	culture = caymanian
 }
 1962.5.31 = {
@@ -54,6 +54,6 @@ native_hostileness = 3
 	remove_core = WSI
 }
 1972.1.1 = {
-	owner = CAY
-	controller = CAY
+	owner = CYM
+	controller = CYM
 }

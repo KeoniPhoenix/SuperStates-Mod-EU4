@@ -64,6 +64,7 @@ has_river_estuary_trigger = {
 			has_province_modifier = red_river_estuary_modifier
 			has_province_modifier = irrawaddy_estuary_modifier
 			has_province_modifier = kongo_estuary_modifier
+			has_province_modifier = amur_estuary_modifier
 			##ADD Superstates Mod Province Modifiers
 		}
 	}
@@ -133,6 +134,7 @@ has_no_river_estuary_trigger = {
 			has_province_modifier = red_river_estuary_modifier
 			has_province_modifier = irrawaddy_estuary_modifier
 			has_province_modifier = kongo_estuary_modifier
+			has_province_modifier = amur_estuary_modifier
 		}
 	}
 }
@@ -149,13 +151,13 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = spice_islands_modifier
 		has_province_modifier = comet_ore_modifier
 		has_province_modifier = paradise_modifier
-		has_province_modifier = cerro_rico_modifier
 		has_province_modifier = ned_house_of_elzevir
 		has_province_modifier = bookmarket_of_x
 		has_province_modifier = grand_bank_fisheries
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		has_active_triggered_province_modifier = cerro_rico_modifier
 	}
 }
 
@@ -171,13 +173,13 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = spice_islands_modifier
 		has_province_modifier = comet_ore_modifier
 		has_province_modifier = paradise_modifier
-		has_province_modifier = cerro_rico_modifier
 		has_province_modifier = ned_house_of_elzevir
 		has_province_modifier = bookmarket_of_x
 		has_province_modifier = grand_bank_fisheries
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		has_active_triggered_province_modifier = cerro_rico_modifier
 		has_latent_trade_goods = coal
 	}
 }

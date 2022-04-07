@@ -1,5 +1,9 @@
 #Newcastle
 
+latent_trade_goods = {
+	coal
+}
+
 owner = NSW
 controller = NSW
 add_core = NSW

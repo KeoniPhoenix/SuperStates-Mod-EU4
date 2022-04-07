@@ -46,6 +46,14 @@ country_event = {
 			change_religion = ROOT
 			change_culture = ROOT
 		}
+		# every_owned_province = {
+			# limit = {
+				# culture = south_floridian
+				# has_owner_culture = no
+			# }
+			# change_religion = ROOT
+			# change_culture = ROOT
+		# }
 		
 		south_florida_area = {
 			add_province_modifier = {
@@ -343,7 +351,6 @@ country_event = {
 			add_devastation = 50
 			change_religion = ROOT
 			change_culture = ROOT
-			}
 		}
 	}
 }

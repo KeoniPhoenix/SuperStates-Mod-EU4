@@ -57,8 +57,8 @@
  superstates_scandal.1t:0 "[Root.Monarch.GetTitle] Faces Scandal!"
  superstates_scandal.1d:0 "News of a scandal that has ties to the Administration has surfaced and the Legislature is convening to empanel a committee to investigate the claims.  Unfortunately, the scandal has direct links to the [Root.Monarch.GetTitle]."
  superstates_scandal.1opta:0 "The [Root.Monarch.GetTitle] resigns to escape serious charges."
- superstates_scandal.1optb:0 "The [Root.Monarch.GetTitle] resigns as the lies have disillusioned [Root.Monarch.GetHerHim]."
- superstates_scandal.1optc:0 "The [Root.Monarch.GetTitle] resigns after conversing with [Root.Monarch.GetHerHim] cabinet."
+ superstates_scandal.1optb:0 "The [Root.Monarch.GetTitle] resigns as the lies have disillusioned [Root.Monarch.GetHimHer]."
+ superstates_scandal.1optc:0 "The [Root.Monarch.GetTitle] resigns after conversing with [Root.Monarch.GetHimHer] cabinet."
  superstates_scandal.1optd:0 "The [Root.Monarch.GetTitle] denies any misdeeds and defends the actions taken."
  superstates_scandal.2t:0 "[Root.Monarch.GetTitle] Impeached"
  superstates_scandal.2d:0 "Articles of Impeachment have been passed by the Lower House and the Senate is trying the Governor, and others in the Administration involved, with the specific abuses of office.  Numerous peices of evidence have been presented in the Senate chambers on the matter bringing considerably political emotion.  A supermajority is required to convict through impeachement and remove [Root.Monarch.GetTitle] from office."
@@ -179,12 +179,12 @@
  
  ##########American States Flavor
  #####Flavor for Alabama
- flavorALA.1t:0 "The Jubilee" #Beneficial Event
- flavorALA.1d:0 "The Jubilee is a mysterious event where large amount of fish and crustacean gather in large numbers along the shallow waters of Mobile Bay esutary.  This Jubilee is one of the best and numerous fish and crab have been caught."
- flavorALA.1opta:0 "Good this will have a positive effect."
- flavorALA.2t:0 "The Jubilee" #Detrimental Event
- flavorALA.2d:0 "The Jubilee is a mysterious event that normally results in large number of fish and crustacean gathering in the shallow waters of Mobile Bay esutary.  Unfortunately, the Jubilee has been absent with very few fish and crustacean seen and even fewer caught.  Nobody knows what's going on as its been long overdue."
- flavorALA.2opta:0 "This is not going to be easy for us to take."
+ flavorALM.1t:0 "The Jubilee" #Beneficial Event
+ flavorALM.1d:0 "The Jubilee is a mysterious event where large amount of fish and crustacean gather in large numbers along the shallow waters of Mobile Bay esutary.  This Jubilee is one of the best and numerous fish and crab have been caught."
+ flavorALM.1opta:0 "Good this will have a positive effect."
+ flavorALM.2t:0 "The Jubilee" #Detrimental Event
+ flavorALM.2d:0 "The Jubilee is a mysterious event that normally results in large number of fish and crustacean gathering in the shallow waters of Mobile Bay esutary.  Unfortunately, the Jubilee has been absent with very few fish and crustacean seen and even fewer caught.  Nobody knows what's going on as its been long overdue."
+ flavorALM.2opta:0 "This is not going to be easy for us to take."
  jubilee_good:0 "Good Jubilee"
  desc_jubilee_good:0 "The Jubilee was very good."
  jubilee_bad:0 "Bad Jubilee"
@@ -194,36 +194,36 @@
  
  #####Flavor for Alaska
  #Emergency Transport to Nome
- flavorASK.1t:0 "Epidemic Breaks Out in Isolated Town"
- flavorASK.1d:0 "An epidemic of diphtheria has broken out in an islated town.  They request we send them necessary medicines as they're running dangerously low, but with the condition of the trails to and from the town, its a very hazardous task.  Should we mount an expedition to deliver the requested medicines?"
- flavorASK.1opta:0 "It may be dangerous, but there will be glory!"
- flavorASK.1optb:0 "No, the town is too far away and isolated for us to attempt such."
+ flavorALA.1t:0 "Epidemic Breaks Out in Isolated Town"
+ flavorALA.1d:0 "An epidemic of diphtheria has broken out in an islated town.  They request we send them necessary medicines as they're running dangerously low, but with the condition of the trails to and from the town, its a very hazardous task.  Should we mount an expedition to deliver the requested medicines?"
+ flavorALA.1opta:0 "It may be dangerous, but there will be glory!"
+ flavorALA.1optb:0 "No, the town is too far away and isolated for us to attempt such."
  #Valuable Resource
- flavorASK.2t:0 "Discovery of Valuable Resource"
- flavorASK.2d:0 "A minor but highly profitable resource was recently discovered in our lands, people are rushing to our state to attempt to make their fortune."
- flavorASK.2opta:0 "Invest in keeping them here long term."
- flavorASK.2optb:0 "Invest in improving their economy."
- flavorASK.2optc:0 "Invest in their local security."
- flavorASK.2optd:0 "They're not likely to stay very long, so lets just profit from them in the short term."
+ flavorALA.2t:0 "Discovery of Valuable Resource"
+ flavorALA.2d:0 "A minor but highly profitable resource was recently discovered in our lands, people are rushing to our state to attempt to make their fortune."
+ flavorALA.2opta:0 "Invest in keeping them here long term."
+ flavorALA.2optb:0 "Invest in improving their economy."
+ flavorALA.2optc:0 "Invest in their local security."
+ flavorALA.2optd:0 "They're not likely to stay very long, so lets just profit from them in the short term."
  #Orthodox Alaska
- #flavorASK.3t:0 "Orthodoxy Springs Up"
- #flavorASK.3d:0 "With the local Catholic heirarchy unsure what to do with out reliable guidance from the Papacy, the disarray has caused a number of priests on Kodiak Island to align their doctrines with the Orthodox church that has been a small minority over the last several generations."
- #flavorASK.3opta:0 "A welcomed revival of Orthodoxy in Alaska."
- #flavorASK.3optb:0 "Worrisome for the Catholic clergy."
- #flavorASK.4t:0 "Disarray with the Catholic Parishes"
- #flavorASK.4d:0 "After the rejection of proper Roman Catholic doctrine on Kodiak Island, the remaining Catholic parishes have become divided on practically every doctrinal issue.  The dispute is leading to other parishes of the state to convert."
- #flavorASK.4opta:0 "Another province converts to Orthodoxy."
- #flavorASK.5t:0 "Doctrinal Dispute Involves State"
- #flavorASK.5d:0 "The dispute between the Catholic parishes has reached a point where it now divides the state.  There's a call for the state to side with the Orthodox position and there is a counter-call to side with the Catholic position."
- #flavorASK.5opta:0 "Officially Support the Orthodox doctrine."
- #flavorASK.5optb:0 "Officially Support the Catholic doctrine."
- #flavorASK.5optc:0 "Officially Support neutrality between doctrines."
- #flavorASK.6t:0 "Catholic Doctrine Prevails"
- #flavorASK.6d:0 "The parishes that rejected Catholic doctrine in favor of the Orthodox position have been restored and the divisions of doctrine mended so as to promote a unified Catholic position in the state."
- #flavorASK.6opta:0 "I'm glad its over."
- #flavorASK.7t:0 "Orthodox Doctrine Prevails"
- #flavorASK.7d:0 "The Catholic parishes having been in dispute and disorder succumbed to the pressures and have been abandoned their doctrine for Orthodoxy.  Our great state has returned to a faith it hasn't seen in generations."
- #flavorASK.7opta:0 "A new glory for Alaska." 
+ #flavorALA.3t:0 "Orthodoxy Springs Up"
+ #flavorALA.3d:0 "With the local Catholic heirarchy unsure what to do with out reliable guidance from the Papacy, the disarray has caused a number of priests on Kodiak Island to align their doctrines with the Orthodox church that has been a small minority over the last several generations."
+ #flavorALA.3opta:0 "A welcomed revival of Orthodoxy in Alaska."
+ #flavorALA.3optb:0 "Worrisome for the Catholic clergy."
+ #flavorALA.4t:0 "Disarray with the Catholic Parishes"
+ #flavorALA.4d:0 "After the rejection of proper Roman Catholic doctrine on Kodiak Island, the remaining Catholic parishes have become divided on practically every doctrinal issue.  The dispute is leading to other parishes of the state to convert."
+ #flavorALA.4opta:0 "Another province converts to Orthodoxy."
+ #flavorALA.5t:0 "Doctrinal Dispute Involves State"
+ #flavorALA.5d:0 "The dispute between the Catholic parishes has reached a point where it now divides the state.  There's a call for the state to side with the Orthodox position and there is a counter-call to side with the Catholic position."
+ #flavorALA.5opta:0 "Officially Support the Orthodox doctrine."
+ #flavorALA.5optb:0 "Officially Support the Catholic doctrine."
+ #flavorALA.5optc:0 "Officially Support neutrality between doctrines."
+ #flavorALA.6t:0 "Catholic Doctrine Prevails"
+ #flavorALA.6d:0 "The parishes that rejected Catholic doctrine in favor of the Orthodox position have been restored and the divisions of doctrine mended so as to promote a unified Catholic position in the state."
+ #flavorALA.6opta:0 "I'm glad its over."
+ #flavorALA.7t:0 "Orthodox Doctrine Prevails"
+ #flavorALA.7d:0 "The Catholic parishes having been in dispute and disorder succumbed to the pressures and have been abandoned their doctrine for Orthodoxy.  Our great state has returned to a faith it hasn't seen in generations."
+ #flavorALA.7opta:0 "A new glory for Alaska." 
  
  
  
@@ -380,7 +380,7 @@
  #flavorFLO.2optb:0 "The people must have the freedom to choose their religion."
  #"x" rebels regiments rise up, -5% tech cost, -10% stability cost
  flavorFLO.1t:0 "Cuban Diaspora"
- flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture.GetName] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
+ flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
  flavorFLO.1opta:0 "Evict the Cuban Exiles"
  flavorFLO.1optb:0 "Settle all Cubans in Florida"
  flavorFLO.1optc:0 "We have no business in this. Let it be."
@@ -404,19 +404,19 @@
  #For next 30 years... Increase global trade by 10%, +2 corruption
  
  #####Flavor for Hawaii
- #flavorHAW.1t:0 "Fire and Water"
- #flavorHAW.1d:0 "Disaster governor! A massive volcanic eruption on the Big Island has shaken, and damaged our infrastructure. To make things worse, several tidal waves have devistated our coasts. What will we do to aid in the recovery?"
- #flavorHAW.1opta:0 "Open the coffers, and keep the economy afloat until we rebuild."
+ #flavorHWI.1t:0 "Fire and Water"
+ #flavorHWI.1d:0 "Disaster governor! A massive volcanic eruption on the Big Island has shaken, and damaged our infrastructure. To make things worse, several tidal waves have devistated our coasts. What will we do to aid in the recovery?"
+ #flavorHWI.1opta:0 "Open the coffers, and keep the economy afloat until we rebuild."
  #lose 500 ducats, +5 interest per annum. 10 years.
- #flavorHAW.1optb:0 "Invest the money in certain markets which will pay into our private fund."
+ #flavorHWI.1optb:0 "Invest the money in certain markets which will pay into our private fund."
  #lose 200 ducats, corruption +2. 10 years.
- #flavorHAW.1optc:0 "All governing members get a free vaccation to California. Let the little people do the work."
+ #flavorHWI.1optc:0 "All governing members get a free vaccation to California. Let the little people do the work."
  #unrest +5. 10 years.
- #flavorHAW.2t:0 "Pineapple Party!"
- #flavorHAW.2d:0 "This year's harvest in pineapple, and other luxurious tropical fruits has been like no other. We can either benefit from this now, or reap a bigger reward later.
- #flavorHAW.2a:0 "Let there be Luaus!"
+ #flavorHWI.2t:0 "Pineapple Party!"
+ #flavorHWI.2d:0 "This year's harvest in pineapple, and other luxurious tropical fruits has been like no other. We can either benefit from this now, or reap a bigger reward later.
+ #flavorHWI.2a:0 "Let there be Luaus!"
  #gain 300 gold immediately
- #flavorHAW.2b:0 "Invest in canning"
+ #flavorHWI.2b:0 "Invest in canning"
  #30% increase in trade range
  
  
@@ -445,14 +445,18 @@
  #-200 ducats, +250 adm points
  flavorILI.3optc:0 "Invest sparingly"
  #-50 ducats, +50 adm points
+ flavorILI.1000t:0 "Move Capital to Chicago?"
+ flavorILI.1000d:0 "Chicago is the largest city in Illinois and the third most populous city in the United States. Chicago has stood as an important transportation hub, manufacturing and economic center, it is undeniable that the economic and political influence Chicago has over the entire Midwest is immense. Due to Chicago's enormous influence over our state, we have the option to move our state capital."
+ flavorILI.1000opta:0 "Chicago should be the new Capital!"
+ flavorILI.1000optb:0 "We should keep $CAPITAL_CITY$ as our capital."
  
  #####Flavor for Indiana
- flavorIND.1t:0 "EARTHQUAKES IN THE MIDWEST!"
- flavorIND.1d:0 "In 1811, the New Madrid fault line shifted, creating a 7.9 magnitude earthquake. The effects were felt over 1,000 miles away."
- flavorIND.opt1:0 "The people go wild in the streets! #lose 1 stab"
- flavorIND.2t:0 "University of Notre Dame"
- flavorIND.2d:0 "Founded in 1842, it was one of the first major universities in Indiana. Despite major damage due to fire, it became one of the most important educational facilities in the state."
- flavorIND.1opt:0 "To God be the glory!"
+ flavorINI.1t:0 "EARTHQUAKES IN THE MIDWEST!"
+ flavorINI.1d:0 "In 1811, the New Madrid fault line shifted, creating a 7.9 magnitude earthquake. The effects were felt over 1,000 miles away."
+ flavorINI.opt1:0 "The people go wild in the streets! #lose 1 stab"
+ flavorINI.2t:0 "University of Notre Dame"
+ flavorINI.2d:0 "Founded in 1842, it was one of the first major universities in Indiana. Despite major damage due to fire, it became one of the most important educational facilities in the state."
+ flavorINI.1opt:0 "To God be the glory!"
  #university, if catholic +5 Papal
  
  #####Flavor for Iowa
@@ -468,6 +472,22 @@
  flavorKNS.1t:0 "The Gunfight at Hide Park"
  flavorKNS.1d:0 "An argument over local politics turned two lawmen, William Bailey and Michael McCluskie, against each other and what was a fist fight esclated into to a shooting.  Fearing arrest McCluskie fled town, however returned several days later after getting word the shooting was likely to be deemed self-defense.  However unbeknownst to McCluskie, Bailey had three of his Texan cowboy friends in town who sought to avenge his death.  McCluskie went into to the Hide Park district of Newtown, Kansas and gambled in the Tuttles Dance Hall.  During McCluskie time gambling the three cowboys, William Garrett, Henry Kearnes, and James Wilkerson entered the saloon along with Hugh Anderson.  Anderson approached McCluskie and exchanged words resulting in McCluskie's friend James Martin to intervene.  In the ensuing scuffle, Anderson shot McCluskie in the neck who fell to the floor.  Attempting to respond in kind with fire McCluskie tired to fire back but his weapon misfired and in the following seconds was gunned down by Anderson.  All while the three cowboys (Garrett, Kearnes, and Wilkerson) intervened to also shoot at McCluskie on the floor and keep the crowd back.\n\nIntervening in all of it was a young man suffering of Tuberculosis named James Riley who fired upon the assailing men in the cloud of smoke, in the end he ended up hitting seven people including all four assailants, killing them all.  After the shooting stopped Riley walked away, mysteriously disappeared leading to much speculation as to who he really was and where he went."
  flavorKNS.1opta:0 "The townsfolk and reporters want to know about James Riley."
+ flavorKNS.1000t:0 "Kansas Crisis"
+ flavorKNS.1000d:0 "Kansas City is rightful Kansan territory, an ultimatum should be sent demanding the return of Kansas City. It is ulikely that Missouri will accept our demands, we should prepare for war!"
+ flavorKNS.1000opta:0 "Demand Kansas City"
+ flavorKNS.1000optb:0 "It would be unwise to escalate this conflict."
+ flavorKNS.1000optc:0 "Our failure to act has weakened our claims to Kansas City."
+ flavorKNS.1000optd:0 "No need to demand a city we already own!"
+ flavorKNS.1001t:0 "Kansas Demands Kansas City!"
+ flavorKNS.1001d:0 "Kansas has sent a weak ultimatum demanding the 'return' of Kansas City. We could either refuse the demand which will anger the Kansan government, or keep peace between our states and give in to the demands."
+ flavorKNS.1001opta:0 "Refuse the demands."
+ flavorKNS.1001optb:0 "We can't risk conflict, cede the city."
+ flavorKNS.1002t:0 "Missouri Refuses!"
+ flavorKNS.1002d:0 "As expected, Missouri has refused our demands. The only logical course of action is to mobilize our troops and prepare to fight!"
+ flavorKNS.1002opta:0 "Mobilize the Troops!"
+ flavorKNS.1003t:0 "Missouri Cedes Kansas City!"
+ flavorKNS.1003d:0 "To our suprise, Missouri has ceded Kansas City to us. With Kansas City under our control we can continue our expansion over the Great Plains."
+ flavorKNS.1003opta:0 "Glory to Kansas!"
  
  #####Flavor for Kentucky
  flavorKEN.1t:0 "The Wilderness Road"
@@ -501,17 +521,17 @@
  flavorMSS.6d:0 "Massachusetts, like the rest of the states, experienced many economic problems in their early years of independence. One of these issues was a lack of reliable roads. Timber, fur, and other goods cost merchantmen much money to transport over long distances to the ports along the Atlantic. Thus, water transit was usually the preferred method, but rivers could not be expected to travel exactly the way businesses wanted them to. Sometimes, canals would be dug to connect two rivers together, or to create a passage to the sea. Such was the case of the Middlesex Canal. Built in 1803, it was the first great civil engineering project in the USA, and would become a subject of study for future canal projects. The canal was designed to connect Boston to the Merrimack river, which was a major trade highway. The contruction of the canal would see the inventions of a crude dump truck, watertight locks. The canal's contruction, while expensive, was very successful, and remained so until replaced by the railroad. Today, parts of the canal still stand as a testimony to the ingenuity of Colonial Massachusites."
  flavorMSS.6opta:0 "Our canals shall be rivers of gold!"
  flavorMSS.1t:0 "The Maine Question"
- flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root.GetName]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine\: In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
+ flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine: In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
  flavorMSS.1opta:0 "Very well. Send an envoy immediately."
  flavorMSS.2t:0 "Reunite with $FROMCOUNTRY$?"
  flavorMSS.2d:0 "$FROMCOUNTRY$ has sent us an envoy, offering us their superior economic and military assistance in exchange for 'reunification' with their state. They claim that [Root.GetName] used to be a part of their territory, and that our modern success is owed to them. As ludicrous as this claim is, the proposal is not without merit. How shall we respond?"
  flavorMSS.2opta:0 "We are a natural part of $FROMCOUNTRY$. Let us reunite our states."
  flavorMSS.2optb:0 "Remove this scoundrel from my sight!"
  flavorMSS.3t:0 "$FROMCOUNTRY$ Accepts!"
- flavorMSS.3d:0 "[Root.Monarch.GetTitle] [Root.Monarch.Dynasty.GetName]! $FROMCOUNTRY$ has accepted our offer and now swears fealty to us!"
+ flavorMSS.3d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName]! $FROMCOUNTRY$ has accepted our offer and now swears fealty to us!"
  flavorMSS.3opta:0 "Excellent!"
  flavorMSS.4t:0 "$FROMCOUNTRY$ Refuses!"
- flavorMSS.4d:0 "[Root.Monarch.GetTitle] [Root.Monarch.Dynasty.GetName]! $FROMCOUNTRY$ has rejected our offer and spurned our envoy! How dare they?!"
+ flavorMSS.4d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName]! $FROMCOUNTRY$ has rejected our offer and spurned our envoy! How dare they?!"
  flavorMSS.4opta:0 "Outrageous! I will show them proper diplomacy!"
  
  
@@ -738,17 +758,17 @@
  flavorSDK.1optb:0 "Build a Hall of Heroes that will remind the generations of our soldiers' honor and duty to the defense of this nation."
  
  #####Flavor for Tennessee
- flavorTEN.1t:0 "Scopes 'Monkey' Trial"
- flavorTEN.1d:0 "It all began as just a simple courtroom in a backwoods town of Tennessee. The case? If John Scopes, a high school teacher, had taught evolution in his classroom. If he did, then he had violated a newly incorporated law in Tennessee which forbade the teaching of evolution. The ACLU, who had been opposed to the state's law, in conjunction with George Rappelya who was a miner from Dayton, convinced Scopes to plead guilty in order to challenge the law. Lawyers Clarence Darrow, and William Jennings Bryan came to the case to represent the two parties. Bryan, former secretary of state, had not practiced law for 30 years, but was still active as an author, and a spokesman for fundamentalism. Darrow had just finished a case in Chicago, where he was able to prevent two murderers from receiving the death penalty by reason of insanity. Darrow, and Bryan were both outspoken, but Bryan in religious matters, and Darrow in agnosticism. The media failed to remain unbalanced, calling Bryan a symbol of narrowmindedness, and tribalism, while promoting Darrow as tolerant, and clear-headed. As the trial progressed, it would soon become clear that this was not a matter of whether Scopes broke the law or not, but became a matter of whether the religious and the scientific were unified, or divided. Darrow pressed Bryan on the stand with a battery of tough questions concerning the origin of life, and mankind. However, before Bryan was permitted to question Darrow, Scopes pleaded guilty, which meant Bryan was never able to launch an offensive against Bryan. The significance of this, is that many people were listening to this event over the radio. Many people were swayed by Darrow's perspective, but were never given the option of hearing Bryan's point of view. But who truly has the correct point of view? This event shaped the people of Tennessee, and many other states' world view, with its legacy still ringing out to this day."
- flavorTEN.1opta:0 "Mandate textbooks supporting evolution." 
+ flavorTNN.1t:0 "Scopes 'Monkey' Trial"
+ flavorTNN.1d:0 "It all began as just a simple courtroom in a backwoods town of Tennessee. The case? If John Scopes, a high school teacher, had taught evolution in his classroom. If he did, then he had violated a newly incorporated law in Tennessee which forbade the teaching of evolution. The ACLU, who had been opposed to the state's law, in conjunction with George Rappelya who was a miner from Dayton, convinced Scopes to plead guilty in order to challenge the law. Lawyers Clarence Darrow, and William Jennings Bryan came to the case to represent the two parties. Bryan, former secretary of state, had not practiced law for 30 years, but was still active as an author, and a spokesman for fundamentalism. Darrow had just finished a case in Chicago, where he was able to prevent two murderers from receiving the death penalty by reason of insanity. Darrow, and Bryan were both outspoken, but Bryan in religious matters, and Darrow in agnosticism. The media failed to remain unbalanced, calling Bryan a symbol of narrowmindedness, and tribalism, while promoting Darrow as tolerant, and clear-headed. As the trial progressed, it would soon become clear that this was not a matter of whether Scopes broke the law or not, but became a matter of whether the religious and the scientific were unified, or divided. Darrow pressed Bryan on the stand with a battery of tough questions concerning the origin of life, and mankind. However, before Bryan was permitted to question Darrow, Scopes pleaded guilty, which meant Bryan was never able to launch an offensive against Bryan. The significance of this, is that many people were listening to this event over the radio. Many people were swayed by Darrow's perspective, but were never given the option of hearing Bryan's point of view. But who truly has the correct point of view? This event shaped the people of Tennessee, and many other states' world view, with its legacy still ringing out to this day."
+ flavorTNN.1opta:0 "Mandate textbooks supporting evolution." 
  #(recommend lose 1 stab, tolerance of heathens/heretics +2)
- flavorTEN.1optb:0 "Mandate textbooks supporting creation." 
+ flavorTNN.1optb:0 "Mandate textbooks supporting creation." 
  #(recommend lose 1 stab, missionary strength +2)
- flavorTEN.1optc:0 "Mandate individual schools decide." 
+ flavorTNN.1optc:0 "Mandate individual schools decide." 
  #(recommend lose 1 stab, tolerance of heathens/heretics +1 and missionary strength +1)
- flavorTEN.1t:0 "Festival of Music"
- flavorTEN.1d:0 "Tennessee is often referred to as the 'Birthplace of Country Music.' From Blues to Southern Rock, from classical to Gospel music, Tennessee has its own unique flair of artists, which contributes greatly to its culture."
- flavorTEN.1opta:0 "Nashville wouldn't be Nashville without you!" 
+ flavorTNN.1t:0 "Festival of Music"
+ flavorTNN.1d:0 "Tennessee is often referred to as the 'Birthplace of Country Music.' From Blues to Southern Rock, from classical to Gospel music, Tennessee has its own unique flair of artists, which contributes greatly to its culture."
+ flavorTNN.1opta:0 "Nashville wouldn't be Nashville without you!" 
  # Rise of East Tennessee
  TNflavor.1tit:0 "Rise of East Tennessee..."
  TNflavor.1desc:0 "It would be hard to ignore the economic progress of East Tennessee, particularly the great city of Knoxville which has become the subject of recent debate. Representatives from East Tennessee argue that they carry an unfair economic burden relative to their political repreesntation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyranical', and 'having very poor manners'. While obviously none of this is true, the East Tennesseeans have reached a breaking point and are threatening secesion if things aren't changed. How shall we respond?"
@@ -968,7 +988,9 @@
  
  
  #####Flavor for New England
- 
+ #New England Missions Events
+ #flavorNEW.1t:0 " "
+ flavorNEW.1d:0 " "
  
  #####Flavor for New France
  
@@ -1025,9 +1047,9 @@
  BarbadosFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Barbuda
- BarbudaFlavor.1t:0 "Barbudan Culture Bounces Forward"
- BarbudaFlavor.1d:0 "The locals in Barbuda view themselves as being different than us and recognize themselves as their own culture."
- BarbudaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ BarbudanFlavor.1t:0 "Barbudan Culture Bounces Forward"
+ BarbudanFlavor.1d:0 "The locals in Barbuda view themselves as being different than us and recognize themselves as their own culture."
+ BarbudanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Bermuda
  BermudaFlavor.1t:0 "Bermudian Cultural Beginnings"
@@ -1262,7 +1284,7 @@
  SolomonIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Tahiti
- TahitianFlavor.1t:0 "Tahitian Indentity"
+ TahitianFlavor.1t:0 "Tahitian Identity"
  TahitianFlavor.1d:0 "The Tahitians have adopted their own cultural identity and view themselves as a distinct society."
  TahitianFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
@@ -1272,7 +1294,7 @@
  TokelauanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Tonga
- TonganFlavor.1t:0 "Tonga Island Indentity"
+ TonganFlavor.1t:0 "Tonga Island Identity"
  TonganFlavor.1d:0 "The island people of Tonga have initiated their own cultural identity and view themselves as a distince society from us."
  TonganFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
@@ -1298,7 +1320,7 @@
  WesternSamoanFlavor.1d:0 "Western Samoan society has created its own distinct identity and culture as a people."
  WesternSamoanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
-  #Montgomery
+ #Montgomery
  MociteFlavor.1t:0 "Montgomery County"
  MociteFlavor.1d:0 "Montgomery County has usurped Anne Arundel as the most important county in the area."
  MociteFlavor.1opta:0 "Great!"

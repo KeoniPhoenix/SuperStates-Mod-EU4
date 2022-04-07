@@ -105,6 +105,8 @@
  anabaptist_rebels_army:0 "$RELIGION$ Army"
 
  #Mormon Exclusive Church Blessings
+ mormon_blessings:0 "Mormon Blessings"
+ pick_mormon_blessing:0 "Pick Blessing"
  mormon_theodemocracy_blessing:0 "Mormon Theodemocracy"
  resist_the_invaders_blessing:0 "Resist the Invaders"
  temple_constructions_blessing:0 "Temple Constructions"

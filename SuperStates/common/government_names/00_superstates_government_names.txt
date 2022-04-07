@@ -128,7 +128,7 @@ gov_hawaiian_monarchy = {
 
 	trigger = {
 		government = monarchy
-		tag = HAW
+		tag = HWI
 	}
 }
 
@@ -157,11 +157,11 @@ gov_mex_state_governor = {
 		has_reform = mexican_state_reform
 		OR = {
 				culture_group = peninsular_mexican
-				culture_group = costa_chican
+				# culture_group = costa_chican
 				culture_group = mazatlan_mexican
 				culture_group = altiplano_central
-				culture_group = gulf_mexican
-				culture_group = oriental_mexican
+				# culture_group = gulf_mexican
+				# culture_group = oriental_mexican
 				culture_group = pacific_mexican
 				culture_group = occidental_mexican
 			}

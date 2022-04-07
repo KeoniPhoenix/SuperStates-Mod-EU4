@@ -3,6 +3,8 @@
 ######################################################################
 s_lutheran_rebels = {
 
+	color = { 55 55 235 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = s_lutheran
@@ -183,7 +185,7 @@ s_lutheran_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "mormon_rebels_demand"
+	demands_description = "s_lutheran_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -232,7 +234,7 @@ s_lutheran_rebels = {
 		else_if = {
 			limit = {
 				NOT = { religion = s_lutheran }
-				NOT = { dominant_religion = mormom }
+				NOT = { dominant_religion = s_lutheran }
 				NOT = { has_country_modifier = heretic_tolerance }
 				religion_group = christian
 			}

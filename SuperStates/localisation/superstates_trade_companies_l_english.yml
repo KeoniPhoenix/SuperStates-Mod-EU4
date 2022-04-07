@@ -22,7 +22,7 @@
  trade_company_ruperts_land:0 "Hudson's Bay Company"
  trade_company_quebec:0 "North West Company"
  trade_company_prairies:0 "Calgary Company"
- trade_company_casacadia:0 "Cascadian Charter"
+ trade_company_cascadia:0 "Cascadian Charter"
  # Caribbean
  trade_company_greater_antilles:0 "West Indies Company"
  trade_company_lesser_antilles:0 "Antilles Company"

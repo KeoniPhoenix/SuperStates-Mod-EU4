@@ -6,9 +6,23 @@
  
  # Tooltips
  ## Florida
- flo_defend_against_texas_tooltip:0 "§YTexas§! loses all §Rclaims§! on any provinces in the §YAcadiana§!, §YLouisiana§!, and §YWest Florida§! areas, and loses any §Rcores§! on provinces owned by §Yus§!."
+ flo_defend_against_texas_tooltip:0 "§YTexas§! loses all §Rclaims§! on any provinces in the §YAcadiana§!, §YLouisiana§!, and §YWest Florida§! areas, and loses any §Rcores§! on provinces owned by §Y[Root.GetName]§!."
  flo_evict_cubans_tooltip:0 "All owned §YAmero-Catholic§! and §YMiamian§! provinces will be converted to the §Ytrue faith§! and §Yculture§!. All provinces in the §YEast Cuba§! and §YWest Cuba§! areas will gain §Rdevelopment§! and become §YCuban§! culture. Gain §YCuban§! as an accepted culture.
  flo_settle_cubans_tooltip:0 "All provinces in §YSouth Florida§! region will adopt §YMiamian§! culture and gain §Rdevelopment§!. All owned provinces in the §YEast Cuba§! and §YWest Cuba§! areas will become §Your culture§!.
  
  ## Texas
  tex_germans_tooltip:0 "The German refugees might expect more in the future."
+ 
+ ## Kansas
+ kansas_demand_city_tooltip:0 "We will send an ultimatum to §YMissouri§! demanding Kansas City."
+ kansas_missouri_no_tooltip:0 "Refusing these demands might make §YKansas§! angry..."
+ 
+ ## New England
+ ris_ny_claim_tooltip:0 "At least one province in the Long Island area:\n   One of the following must be true:\n      Is a §Y[Root.GetAdjective]§! core\n      Is a §Y[Root.GetAdjective]§! claim"
+ vrm_defeat_new_york_tooltip:0 "§YNew York§! will lose all §YCores§! and §YClaims§! in the Vermont area"
+ vrm_defeat_new_hampshire_tooltip:0 "§YNew Hampshire§! will lose all §YCores§! and §YClaims§! in the Vermont area"
+ vrm_green_boys_tooltip:0 "§Y[Root.GetName]§! has won a war while hiring the §YGreen Mountain Boys§!"
+ cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! area that produce §YCloth§! or §YWool§! have a §YManufactory§!"
+ mss_subject_tooltip:0 "If we complete this mission by making §MMaine§! our subject:"
+ new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region that does NOT have separatism:\n   Gain §Y1§! development."
+ 

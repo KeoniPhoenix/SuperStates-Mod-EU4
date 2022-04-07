@@ -34,21 +34,21 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			micronesia_region = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = micronesia_area
+				is_core = root
 			}
 			OR = {
-				polynesia_region = {
-					ROOT = { num_of_cities = 3 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 8
+					region = pacific_islands_region
+					is_core = root
 				}
-				melanesia_region = {
-					ROOT = { num_of_cities = 3 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 3
+					region = melanesia_region
+					is_core = root
 				}
 			}
 			owns_core_province = 1235 # Guam
@@ -81,19 +81,13 @@ country_decisions = {
 				}
 				add_permanent_claim = PCO
 			}
-			hawaii_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PCO
-			}
 			micronesia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = PCO
 			}
-			polynesia_region = {
+			pacific_islands_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

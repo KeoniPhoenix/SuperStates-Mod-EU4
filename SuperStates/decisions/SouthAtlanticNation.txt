@@ -10,7 +10,7 @@ country_decisions = {
 			NOT = { exists = FSA }
 			NOT = { exists = USA }
 			NOT = { exists = CRL }
-			NOT = { tag = MAA }
+			NOT = { tag = MID }
 			#technology_group = north_american
 			OR = {
 				primary_culture = north_carolinian
@@ -22,7 +22,7 @@ country_decisions = {
 				primary_culture = west_floridian
 				primary_culture = miamian
 				primary_culture = high_tider
-				primary_culture = us_piedmontese
+				primary_culture = south_georgian
 			}
 			OR = {
 				ai = no
@@ -50,30 +50,30 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			north_carolina_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = north_carolina_area
+				is_core = root
 			}
-			south_carolina_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = south_carolina_area
+				is_core = root
 			}
-			north_florida_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = north_florida_area
+				is_core = root
 			}
-			st_johns_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = st_johns_area
+				is_core = root
 			}
-			georgia_us_area = {
-				ROOT = { num_of_cities = 4 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 4
+				area = georgia_us_area
+				is_core = root
 			}
 			savannah_area = {
 				type = all
@@ -94,6 +94,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650

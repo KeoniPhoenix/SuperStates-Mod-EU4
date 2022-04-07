@@ -12,7 +12,7 @@ country_decisions = {
 			NOT = { exists = LBC }
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
-			NOT = { exists = MSO }
+			#NOT = { exists = MSO }
 			NOT = { exists = EOC }
 			#technology_group = north_american
 			OR = {
@@ -40,15 +40,15 @@ country_decisions = {
 			}
 		}
 		allow = {
-			baja_california_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = baja_california_area
+				is_core = root
 			}
-			sonora_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = sonora_area
+				is_core = root
 			}
 			baja_california_sur_area = {
 				type = all

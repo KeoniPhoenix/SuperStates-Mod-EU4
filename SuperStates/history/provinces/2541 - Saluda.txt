@@ -1,9 +1,14 @@
 #Monongalia
 
+latent_trade_goods = {
+	coal
+}
+
 owner = WVA
 controller = WVA
 add_core = WVA
 # add_core = VIR
+add_core = WST
 culture = west_virginian
 religion = s_protestant
 capital = "Morgantown"

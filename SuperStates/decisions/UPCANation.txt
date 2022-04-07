@@ -43,25 +43,25 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			guatemala_lowlands_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = guatemala_lowlands_area
+				is_core = root
 			}
-			guatemala_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = guatemala_area
+				is_core = root
 			}
-			honduras_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = honduras_area
+				is_core = root
 			}
-			nicaragua_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = nicaragua_area
+				is_core = root
 			}
 			costa_rica_area = {
 				type = all

@@ -1,96 +1,96 @@
-country_decisions = {
+# country_decisions = {
 
-## LAS CALIFORNIAS
-	las_californias_nation = {
-		major = yes
-		potential = {
-			NOT = { exists = CSC }
-			NOT = { exists = EUM }
-			NOT = { exists = MEX }
-			NOT = { exists = NAM }
-			NOT = { exists = USA }
-			NOT = { exists = IUS }
-			NOT = { exists = PCF }
-			technology_group = states
-			OR = {
-				primary_culture = californian
-				primary_culture = southern_californian
-				primary_culture = san_franciscan
-				primary_culture = baja_californian
-				primary_culture = south_baja_californian
-				primary_culture = jeffersonian
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 5
-				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = baja_california_area
-				area = baja_california_sur_area
-				area = san_diego_area
-				area = mojave_area
-				area = central_coast_area
-				area = central_valley_area
-				area = san_francisco_area
-				area = san_pablo_area
-				area = jefferson_area
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_subject = no
-			is_at_war = no
-			baja_california_area = {
-				type = 3 
-				owns_core_province = ROOT
-			}
-			baja_california_sur_area = {
-				type = 2
-				owns_core_province = ROOT
-			}
-			san_diego_area = {
-				type = all 
-				owns_core_province = ROOT
-			}
-			mojave_area = {
-				type = 2
-				owns_core_province = ROOT
-			}
-			central_valley_area = {
-				type = 4 
-				owns_core_province = ROOT
-			}
-			central_coast_area = {
-				type = 3
-				owns_core_province = ROOT
-			}
-			san_pablo_area = {
-				type = all 
-				owns_core_province = ROOT
-			}
-			san_francisco_area = {
-				type = all 
-				owns_core_province = ROOT
-			}
-			jefferson_area = {
-				type = 2
-				owns_core_province = ROOT
-			}
-		}
-		effect = {
-			add_prestige = 10
-			override_country_name = LAS_CALIFORNIAS
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-}
+# ## LAS CALIFORNIAS
+# 	las_californias_nation = {
+# 		major = yes
+# 		potential = {
+# 			NOT = { exists = CSC }
+# 			NOT = { exists = EUM }
+# 			NOT = { exists = MEX }
+# 			NOT = { exists = NAM }
+# 			NOT = { exists = USA }
+# 			NOT = { exists = IUS }
+# 			NOT = { exists = PCF }
+# 			technology_group = states
+# 			OR = {
+# 				primary_culture = californian
+# 				primary_culture = southern_californian
+# 				primary_culture = san_franciscan
+# 				primary_culture = baja_californian
+# 				primary_culture = south_baja_californian
+# 				primary_culture = jeffersonian
+# 			}
+# 			OR = {
+# 				ai = no
+# 				AND = {
+# 					ai = yes
+# 					num_of_cities = 5
+# 				}
+# 			}
+# 		}
+# 		provinces_to_highlight = {
+# 			OR = {
+# 				area = baja_california_area
+# 				area = baja_california_sur_area
+# 				area = san_diego_area
+# 				area = mojave_area
+# 				area = central_coast_area
+# 				area = central_valley_area
+# 				area = san_francisco_area
+# 				area = san_pablo_area
+# 				area = jefferson_area
+# 			}
+# 			OR = {
+# 				NOT = { owned_by = ROOT }
+# 				NOT = { is_core = ROOT }
+# 			}
+# 		}
+# 		allow = {
+# 			is_subject = no
+# 			is_at_war = no
+# 			baja_california_area = {
+# 				type = 3 
+# 				owns_core_province = ROOT
+# 			}
+# 			baja_california_sur_area = {
+# 				type = 2
+# 				owns_core_province = ROOT
+# 			}
+# 			san_diego_area = {
+# 				type = all 
+# 				owns_core_province = ROOT
+# 			}
+# 			mojave_area = {
+# 				type = 2
+# 				owns_core_province = ROOT
+# 			}
+# 			central_valley_area = {
+# 				type = 4 
+# 				owns_core_province = ROOT
+# 			}
+# 			central_coast_area = {
+# 				type = 3
+# 				owns_core_province = ROOT
+# 			}
+# 			san_pablo_area = {
+# 				type = all 
+# 				owns_core_province = ROOT
+# 			}
+# 			san_francisco_area = {
+# 				type = all 
+# 				owns_core_province = ROOT
+# 			}
+# 			jefferson_area = {
+# 				type = 2
+# 				owns_core_province = ROOT
+# 			}
+# 		}
+# 		effect = {
+# 			add_prestige = 10
+# 			override_country_name = LAS_CALIFORNIAS
+# 		}
+# 		ai_will_do = {
+# 			factor = 1
+# 		}
+# 	}
+# }

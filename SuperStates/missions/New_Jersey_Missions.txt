@@ -123,14 +123,14 @@ njy_development = {
 			OR = {
 				area = south_jersey_area
 			}
-			NOT = { development = 12 }
+			NOT = { development = 15 }
 		}
 		trigger = {
 			south_jersey_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
-				development = 12
+				development = 15
 			}
 		}
 		effect = {

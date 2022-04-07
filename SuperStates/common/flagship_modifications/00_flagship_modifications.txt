@@ -81,7 +81,7 @@ command_aftercastle = {
 					tag = SEU
 					tag = SAB
 					tag = SNM
-					tag = ANL
+					tag = ANI
                 }
             }
             normal_or_historical_nations = no
@@ -165,7 +165,7 @@ portuguese_navigators = {
 		OR = {
 			tag = POR
 			tag = BRZ
-			culture_group = pacific_islander
+			culture_group = micronesian-pacific_islander
 			culture_group = caribbean_islander
 		}
         normal_or_historical_nations = yes
@@ -340,7 +340,7 @@ dutch_courage = {
 			tag = SEU
 			tag = SAB
 			tag = SNM
-			tag = ANL
+			tag = ANI
         }
         normal_or_historical_nations = yes
     }
@@ -364,7 +364,7 @@ dutch_courage = {
 				tag = SEU
 				tag = SAB
 				tag = SNM
-				tag = ANL
+				tag = ANI
             }
         }
     }

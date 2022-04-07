@@ -1,5 +1,9 @@
 #Clearwater
 
+latent_trade_goods = {
+	coal
+}
+
 owner = ABR
 controller = ABR
 add_core = ABR

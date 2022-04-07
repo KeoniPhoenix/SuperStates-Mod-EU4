@@ -574,9 +574,9 @@
  #toronto_area_name:1 "Toronto"
  #toronto_area_adj:1 "Torontonian"
  
- southwest_ontario_area:1 "Toronto"
- southwest_ontario_area_name:1 "Toronto"
- southwest_ontario_area_adj:1 "Torontoan"
+ southwest_ontario_area:1 "Southwest Ontario"
+ southwest_ontario_area_name:1 "Southwest Ontario"
+ southwest_ontario_area_adj:1 "Southwestern Ontarian"
  
  #Quebec
  nord_du_quebec_area:1 "Nord du Quebec"
@@ -788,9 +788,9 @@
  tasmania_area_adj:1 "Tasmanian"
  
  #Western Australian
- western_australia_area:1 "Western Australia"
- western_australia_area_name:1 "Western Australia"
- western_australia_area_adj:1 "Western Australian"
+ west_australia_area:1 "Western Australia"
+ west_australia_area_name:1 "Western Australia"
+ west_australia_area_adj:1 "Western Australian"
  
  goldfields_area:1 "Goldfields"
  goldfields_area_name:1 "Goldfields"
@@ -854,9 +854,9 @@
  southeastern_melanesia_area_adj:1 "Southeastern Melanesian"
  
  #Micronesia
- micronesia_area:1 "Microneasia"
- micronesia_area_name:1 "Micronesia"
- micronesia_area_adj:1 "Micronesian"
+ micronesia_area:2 "Micronesia"
+ micronesia_area_name:2 "Micronesia"
+ micronesia_area_adj:2 "Micronesian"
  
  eastern_micronesia_area:1 "Eastern Micronesia"
  eastern_micronesia_area_name:1 "Eastern Micronesia"

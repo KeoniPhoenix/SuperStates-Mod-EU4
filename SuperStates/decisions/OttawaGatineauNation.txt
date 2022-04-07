@@ -6,9 +6,9 @@ country_decisions = {
 		potential = {
 			NOT = { exists = OTG }
 			NOT = { exists = CAN }
-			NOT = { exists = NFR }
-			NOT = { exists = NAM }
-			NOT = { exists = RUP }
+			#NOT = { exists = NFR }
+			#NOT = { exists = NAM }
+			#NOT = { exists = RUP }
 			#technology_group = north_american
 			OR = {
 				tag = OTW

@@ -3,7 +3,6 @@
 #
 # Effects are fully scriptable here.
 
-
 ###########################################
 # Discovery of the East Indian trade route.
 ###########################################
@@ -305,6 +304,7 @@ catholic_rome = {
 		NOT = { overlord_of = PAP }
 		owns_or_vassal_of = 118 # Roma		
 		NOT = { tag = ITA }
+		NOT = { tag = HLR }
 		NOT = { tag = ROM }
 	}
 
@@ -324,6 +324,31 @@ papal_subjugation = {
 	trigger = {	
 		overlord_of = PAP
 		NOT = { tag = ITA }
+		NOT = { tag = HLR }
+		if = {
+			limit = {
+				is_emperor = yes
+				has_dlc = "Emperor"
+			}
+			OR = {
+				PAP = {
+					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				}
+				NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
+			}
+		}
+		else_if = {
+			limit = {
+				is_emperor = yes
+				NOT = { has_dlc = "Emperor" }
+			}
+			OR = {
+				PAP = {
+					NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				}
+				NOT = { hre_reform_passed = privilegia_de_non_appelando }
+			}
+		}
 	}
 
 	diplomatic_reputation = -2
@@ -371,8 +396,11 @@ counter_revolution = {
 		is_revolutionary = no
 		any_country = {
 			is_revolution_target = yes
-			capital_scope = {
-				continent = ROOT
+			OR = {
+				capital_scope = {
+					continent = ROOT
+				}
+				is_neighbor_of = ROOT
 			}
 		}
 	}
@@ -553,6 +581,30 @@ the_mandate_of_heaven_lost = {
 	global_unrest = 10
 }
 
+ai_wants_chinese_capitals = {
+	potential = {
+		ai = yes
+		OR = {
+			owns = 1816
+			owns = 1821
+			owns = 667
+		}
+		has_dlc = "Mandate of Heaven"
+		capital_scope = {
+			superregion = china_superregion
+		}
+	}
+	trigger = {
+		owns = 1816
+		owns = 1821
+		owns = 667
+	}
+
+	ai_weight = {
+		factor = 100 # Makes AI try to conquer the cities
+	}
+}
+
 lost_control_of_beijing = {
 	potential = {
 		has_reform = celestial_empire
@@ -564,6 +616,10 @@ lost_control_of_beijing = {
 			NOT = { owns = 1816 }
 			NOT = { controls = 1816 }
 		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -582,6 +638,10 @@ lost_control_of_nanjing = {
 		}
 	}
 
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
 	imperial_mandate = -0.05
 }
 
@@ -596,6 +656,10 @@ lost_control_of_canton = {
 			NOT = { owns = 667 }
 			NOT = { controls = 667 }
 		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -835,4 +899,35 @@ defense_of_the_empire_modifier = {
 		}
 	}
 	war_taxes_cost_modifier = -1.0
+}
+
+######################################
+# Judaism Defensive Aspect
+######################################
+
+judaism_yom_kippur_aspect_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_yom_kippur_aspect
+	}
+	trigger = {
+		is_at_war = yes
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
+}
+
+judaism_yom_kippur_aspect_defensive_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_yom_kippur_aspect
+	}
+	trigger = {
+		is_at_war = yes
+		is_in_war = {
+			defenders = ROOT
+		}
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
 }

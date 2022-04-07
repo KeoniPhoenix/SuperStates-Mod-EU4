@@ -11,7 +11,7 @@ country_decisions = {
 			NOT = { exists = PCF }
 			NOT = { exists = WCN }
 			#NOT = { exists = NAM }
-			NOT = { exists = ACA }
+			#NOT = { exists = ACA }
 			#technology_group = north_american
 			OR = {
 				primary_culture = oregonian
@@ -61,31 +61,34 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			high_desert_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = high_desert_area
+				is_core = root
 			}
 			oregon_area = {
 				type = all
 				owned_by = ROOT
 			}
-			jefferson_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = jefferson_area
+				is_core = root
 			}
-			lincoln_area = {
-				ROOT = { num_of_cities = 3 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				area = lincoln_area
+				is_core = root
 			}
 			puget_sound_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			gulf_islands_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = gulf_islands_area
+				is_core = root
 			}
 			owns_core_province = 961	# Portland
 			owns_core_province = 965	# Seattle

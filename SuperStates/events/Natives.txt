@@ -336,7 +336,10 @@ province_event = {
 		NOT = {
 			has_province_modifier = merchant_investement
 		}
-		NOT = { culture = ROOT }
+		NOT = { 
+			is_capital = yes
+		}
+		native_size = 1
 	}
 	
 	mean_time_to_happen = {

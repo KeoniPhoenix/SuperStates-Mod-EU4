@@ -15,7 +15,7 @@
 #######################################
 
 feudalism = {
-	penalty = 0.5
+
 	bonus = {
 		free_leader_pool = 1
 	}
@@ -271,7 +271,6 @@ feudalism = {
 #######################################
 
 renaissance = {
-	penalty = 0.5
 
 	bonus = {
 		development_cost = -0.05
@@ -296,16 +295,18 @@ renaissance = {
 				continent = europe
 				owner = {
 					OR = {
-					technology_group = australstates
-					technology_group = states
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+						technology_group = oceanian
 					}
 				}
 			}
 			AND = {
 				is_year = 1500
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -314,8 +315,8 @@ renaissance = {
 			AND = {
 				is_year = 1500
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -324,8 +325,8 @@ renaissance = {
 			AND = {
 				is_year = 1500
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -414,36 +415,14 @@ renaissance = {
 			
 		}
 		modifier = {
-			factor = 1
-			potential = {
-				region = new_england_region
-			}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_new_england_capital
-				is_capital = yes
-				region = new_england_region
-				culture_group = new_england_group
-			}
-			
-			
-		}
-		modifier = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-					}	
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_10
-				OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-					}
 				development = 10
 			}
 		}
@@ -451,39 +430,23 @@ renaissance = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-					}	
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_20
 				development = 20
-				OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-					}	
 			}
 		}
 		modifier = {
 			factor = 0.1
 			scale = yes
 			potential = {
-			OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-				}	
-						}
+			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_5_post_1500
-				OR = {
 				continent = europe
-				technology_group = australstates
-				technology_group = states
-					}
 				is_year = 1500
 				development = 5
 			}
@@ -532,20 +495,114 @@ renaissance = {
 			scale = yes
 			potential = {
 				owner = {
-					OR = {
-					technology_group = australstates
-					technology_group = states
-					}
+					has_institution = renaissance
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = tooltip_renaissance_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = renaissance
+				}
+			}
+		}
+
+		#Superstates Renaissance Spread
+
+		modifier = { #New England Capital
+			factor = 1
+			potential = {
+				region = new_england_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_new_england_capital
+				is_capital = yes
+				region = new_england_region
+				culture_group = new_england_group
+			}
+		}
+
+		modifier = { #North America 10 dev
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = north_america
+				NOT = {
+					region = central_america_region
+					region = greater_antilles_region
+					area = greenland_area
+					area = east_virgin_islands_area
+					area = anguilla_channel_area
+					area = basseterre_bay_area
+					area = central_leeward_area
+					area = south_leeward_area
+					area = barlovento_area
+					area = south_windward_area
+					area = leeward_antilles_area
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_superstates
-				continent = europe
+				tooltip = tooltip_superstates_development_10
+				continent = north_america
+				development = 10
+			}
+		}
+
+		modifier = { #North America 20 dev
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = north_america
+				NOT = {
+					region = central_america_region
+					region = greater_antilles_region
+					area = greenland_area
+					area = east_virgin_islands_area
+					area = anguilla_channel_area
+					area = basseterre_bay_area
+					area = central_leeward_area
+					area = south_leeward_area
+					area = barlovento_area
+					area = south_windward_area
+					area = leeward_antilles_area
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_superstates_development_20
+				development = 20
+				continent = north_america
+			}
+		}
+
+		modifier = { #North America 5 dev post 1500
+			factor = 0.1
+			scale = yes
+			potential = {
+				continent = north_america
+				NOT = {
+					region = central_america_region
+					region = greater_antilles_region
+					area = greenland_area
+					area = east_virgin_islands_area
+					area = anguilla_channel_area
+					area = basseterre_bay_area
+					area = central_leeward_area
+					area = south_leeward_area
+					area = barlovento_area
+					area = south_windward_area
+					area = leeward_antilles_area
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_superstates_development_5_post_1500
+				continent = north_america
 				is_year = 1500
 				development = 5
 			}
 		}
-		modifier = {
+
+		modifier = { #San Francisco, Massachusetts, Delaware Valley
 			factor = 0.5
 			scale = yes
 			potential = {
@@ -566,8 +623,8 @@ renaissance = {
 				}
 			}
 		}
-		
-		modifier = {
+
+		modifier = { #Sydney, Melbourne
 			factor = 0.5
 			scale = yes
 			potential = {
@@ -586,20 +643,73 @@ renaissance = {
 				}
 			}
 		}
-		modifier = {
-			factor = 2
+		modifier = { #Australia 10 dev
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = australia_continent
+				NOT = {
+					region = new_zealand_region
+					region = melanesia_region
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_australia_development_10
+				continent = australia_continent
+				development = 10
+			}
+		}
+
+		modifier = { #Australia 20 dev
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = australia_continent
+				NOT = {
+					region = new_zealand_region
+					region = melanesia_region
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_australia_development_20
+				development = 20
+				continent = australia_continent
+			}
+		}
+
+		modifier = { #Australia 5 dev post 1500
+			factor = 0.1
+			scale = yes
+			potential = {
+				continent = australia_continent
+				NOT = {
+					region = new_zealand_region
+					region = melanesia_region
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_australia_development_5_post_1500
+				continent = australia_continent
+				is_year = 1500
+				development = 5
+			}
+		}
+
+		modifier = { #Oceanian tech that discovered a nation that has renaissance
+			factor = 0.5
 			scale = yes
 			potential = {
 				owner = {
-					has_institution = renaissance
+					technology_group = oceanian
 				}
 			}
-			
 			custom_trigger_tooltip = {
-				tooltip = tooltip_renaissance_embraced
-				is_owned_by_trade_company = no
+				tooltip = tooltip_oceanian_renaissance
+				is_capital = yes
 				owner = {
-					has_institution = renaissance
+					any_known_country = {
+						has_institution = renaissance
+					}
 				}
 			}
 		}
@@ -638,7 +748,6 @@ renaissance = {
 # Colonising is good.. mkay.-.
 #######################################
 new_world_i = {
-	penalty = 0.5
 
 	bonus = {
 		global_prov_trade_power_modifier = 0.10
@@ -664,16 +773,18 @@ new_world_i = {
 				is_year = 1500
 				owner = {
 					OR = {
-					technology_group = australstates
-					technology_group = states
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+						technology_group = oceanian
 					}
 				}
 			}
 			AND = {
 				is_year = 1550
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -682,8 +793,8 @@ new_world_i = {
 			AND = {
 				is_year = 1550
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -692,8 +803,8 @@ new_world_i = {
 			AND = {
 				is_year = 1550
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -751,7 +862,32 @@ new_world_i = {
 		}
 		is_in_capital_area = yes
 		owner = { 
-			has_idea = quest_for_the_new_world 
+			has_any_exploration_idea = yes
+			#at least one province colonised or colonising, or have a subject colony
+			OR = {
+				any_owned_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = new_world
+					}
+				}
+				any_subject_country = {
+					OR = {
+						is_subject_of_type = colony
+						is_subject_of_type = crown_colony
+						is_subject_of_type = private_enterprise
+						is_subject_of_type = self_governing_colony
+					}
+					capital_scope = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = new_world
+						}
+					}
+				}
+			}
 			OR = {
 				north_america = { has_discovered = PREV }
 				south_america = { has_discovered = PREV }
@@ -845,77 +981,6 @@ new_world_i = {
 			}
 		}
 		
-		#SuperStates
-		modifier = {
-			factor = 0.5
-			potential = {
-					is_capital = yes
-				owner = {
-					OR = {
-						technology_group = australstates
-						technology_group = states
-						}
-					}
-				}
-			custom_trigger_tooltip = {
-				tooltip = tooltip_superstates_colonialism
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
-				owner = {
-						OR = {
-							technology_group = australstates
-							technology_group = states
-						}
-					}
-				}
-			}
-			
-		modifier = {
-		factor = 10
-		potential = 	{
-				OR = {
-					has_port = yes
-					is_capital = yes
-				}
-		owner = {
-				OR = 	{
-					technology_group = australstates
-					technology_group = states
-		}
-				}
-			}
-		custom_trigger_tooltip = {
-		tooltip = tooltip_has_colonies_new_world 
-			is_capital = yes
-		owner = {
-	  AND = {
-				# NOT = { province_id = 3024 } #Puerto Rico
-				# NOT = { province_id = 492 } #Puerto Rico
-				# NOT = { province_id = 493 } #US Virgin Islands
-		   OR = {
-					any_subject_country = {
-						is_colonial_nation = yes
-					}
-					greater_antilles_region = { owned_by = ROOT }
-					lesser_antilles_region = { owned_by = ROOT }
-					greenland_area = { owned_by = ROOT }
-					south_america_superregion = { owned_by = ROOT }
-					central_america_superregion = { owned_by = ROOT }
-					new_zealand_region = { owned_by = ROOT }
-					oceania_superregion = { owned_by = ROOT }
-					papua_area = { owned_by = ROOT }
-				}
-				OR =	 {
-					technology_group = australstates
-					technology_group = states
-				}
-			}
-				}
-			}
-		}
-		
 		modifier = {
 			factor = 5
 			scale = yes
@@ -953,6 +1018,85 @@ new_world_i = {
 				}
 			}
 		}
+
+		#SuperStates Colonialism Spread
+
+		modifier = { #North American, Australian, Mesoamerican 
+			factor = 0.5
+			potential = {
+				is_capital = yes
+				owner = {
+					OR = {
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_superstates_colonialism
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+						OR = {
+							technology_group = north_american
+							technology_group = australian
+							technology_group = mesoamerican
+						}
+					}
+				}
+			}
+			
+		modifier = { #Has a colony in new world/oceania
+			factor = 10
+			potential = {
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+					OR = {
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_colonies_new_world 
+				OR = {
+					has_port = yes
+					is_capital = yes
+				}
+				owner = {
+	  				AND = {
+						# NOT = { province_id = 3024 } #Puerto Rico
+						# NOT = { province_id = 492 } #Puerto Rico
+						# NOT = { province_id = 493 } #US Virgin Islands
+		   				OR = {
+							any_subject_country = {
+								is_colonial_nation = yes
+							}
+							greater_antilles_region = { owned_by = ROOT }
+							lesser_antilles_region = { owned_by = ROOT }
+							greenland_area = { owned_by = ROOT }
+							south_america_superregion = { owned_by = ROOT }
+							central_america_region = { owned_by = ROOT }
+							new_zealand_region = { owned_by = ROOT }
+							oceania_superregion = { owned_by = ROOT }
+							papua_area = { owned_by = ROOT }
+						}
+						OR = {
+							technology_group = north_american
+							technology_group = australian
+							technology_group = mesoamerican
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -987,7 +1131,6 @@ new_world_i = {
 # Printing Press
 #######################################
 printing_press = {
-	penalty = 0.5
 
 	bonus = {
 		stability_cost_modifier = -0.05
@@ -1017,8 +1160,9 @@ printing_press = {
 				is_year = 1560
 				owner = {
 					OR = {
-						technology_group = australstates
-						technology_group = states
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
 					}
 				}
 			}
@@ -1034,8 +1178,8 @@ printing_press = {
 			AND = {
 				is_year = 1600
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1044,8 +1188,8 @@ printing_press = {
 			AND = {
 				is_year = 1600
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1054,8 +1198,8 @@ printing_press = {
 			AND = {
 				is_year = 1600
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1210,6 +1354,12 @@ printing_press = {
 							religion = reformed
 							religion = anglican
 							religion = hussite
+							religion = austral_protestant
+							religion = s_lutheran
+							religion = s_protestant
+							religion = s_methodist
+							religion = s_baptist
+							religion = anabaptist
 						}
 					}
 				}
@@ -1224,6 +1374,12 @@ printing_press = {
 							religion = reformed
 							religion = anglican
 							religion = hussite
+							religion = austral_protestant
+							religion = s_lutheran
+							religion = s_protestant
+							religion = s_methodist
+							religion = s_baptist
+							religion = anabaptist
 						}
 					}
 				}
@@ -1242,6 +1398,12 @@ printing_press = {
 						religion = protestant
 						religion = anglican
 						religion = hussite
+						religion = austral_protestant
+						religion = s_lutheran
+						religion = s_protestant
+						religion = s_methodist
+						religion = s_baptist
+						religion = anabaptist
 					}
 				}
 			}
@@ -1253,6 +1415,12 @@ printing_press = {
 						religion = protestant
 						religion = anglican
 						religion = hussite
+						religion = austral_protestant
+						religion = s_lutheran
+						religion = s_protestant
+						religion = s_methodist
+						religion = s_baptist
+						religion = anabaptist
 					}
 				}
 			}
@@ -1305,11 +1473,57 @@ printing_press = {
 			}
 			
 			custom_trigger_tooltip = {
-				tooltip = tooltip_global_trade_embraced_other_continent
+				tooltip = tooltip_printing_press_embraced
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = printing_press
 				}
+			}
+		}
+
+		#Superstates Printing Press Spread
+		modifier = { #North America 20 dev cap
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = north_america
+				NOT = {
+					region = central_america_region
+					region = greater_antilles_region
+					area = greenland_area
+					area = east_virgin_islands_area
+					area = anguilla_channel_area
+					area = basseterre_bay_area
+					area = central_leeward_area
+					area = south_leeward_area
+					area = barlovento_area
+					area = south_windward_area
+					area = leeward_antilles_area
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_superstates_capital_development_20
+				development = 20
+				is_capital = yes
+				continent = north_america
+			}
+		}
+
+		modifier = { #Australia 20 dev cap
+			factor = 0.05
+			scale = yes
+			potential = {
+				continent = australia_continent
+				NOT = {
+					region = new_zealand_region
+					region = melanesia_region
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_australia_capital_development_20
+				development = 20
+				is_capital = yes
+				continent = australia_continent
 			}
 		}
 	}
@@ -1348,7 +1562,6 @@ printing_press = {
 # Global Trade
 #######################################
 global_trade = {
-	penalty = 0.5
 
 	bonus = {
 		merchants = 1
@@ -1374,8 +1587,8 @@ global_trade = {
 			AND = {
 				is_year = 1660
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1384,8 +1597,8 @@ global_trade = {
 			AND = {
 				is_year = 1660
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1394,8 +1607,8 @@ global_trade = {
 			AND = {
 				is_year = 1660
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1403,7 +1616,6 @@ global_trade = {
 			}
 			AND = {
 				is_year = 1700
-				is_capital = no
 				OR = {
 					region = maghreb_region
 					region = egypt_region
@@ -1414,7 +1626,6 @@ global_trade = {
 			AND = {
 				is_year = 1720
 				has_port = yes
-				is_capital = no
 				OR = {
 					superregion = india_superregion
 					superregion = persia_superregion
@@ -1424,7 +1635,6 @@ global_trade = {
 			AND = {
 				is_year = 1750
 				has_port = yes
-				is_capital = no
 				superregion = africa_superregion
 			}
 		}
@@ -1654,7 +1864,6 @@ global_trade = {
 # Manufactories
 #######################################
 manufactories = {
-	penalty = 0.5
 
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -1676,8 +1885,9 @@ manufactories = {
 				is_year = 1680
 				owner = {
 					OR = {
-					technology_group = australstates
-					technology_group = states
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
 					}
 				}
 			}
@@ -1708,8 +1918,8 @@ manufactories = {
 			AND = {
 				is_year = 1760
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1718,8 +1928,8 @@ manufactories = {
 			AND = {
 				is_year = 1760
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1728,8 +1938,8 @@ manufactories = {
 			AND = {
 				is_year = 1760
 				owner = {
-					NOT = { technology_group = north_american }
-					NOT = { technology_group = mesoamerican }
+					#NOT = { technology_group = north_american }
+					#NOT = { technology_group = mesoamerican }
 					NOT = { technology_group = south_american }
 					NOT = { technology_group = andean }
 				}
@@ -1894,6 +2104,7 @@ manufactories = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -2027,6 +2238,7 @@ manufactories = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -2167,7 +2379,6 @@ manufactories = {
 # Enlightenment
 #######################################
 enlightenment = {
-	penalty = 0.5
 
 	bonus = {
 		culture_conversion_cost = -0.25
@@ -2189,8 +2400,9 @@ enlightenment = {
 				is_year = 1700
 				owner = {
 					OR = {
-					technology_group = australstates
-					technology_group = states
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
 					}
 				}
 			}
@@ -2259,8 +2471,13 @@ enlightenment = {
 		development = 30
 		OR = {
 			OR = {
-				technology_group = australstates
-				technology_group = states
+				owner = {
+					OR = {
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+					}
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_has_seat_in_parliament
@@ -2575,7 +2792,6 @@ enlightenment = {
 # Industrialisation
 #######################################
 industrialization = {
-	penalty = 0.5
 	
 	trade_company_efficiency = 2.0
 
@@ -2745,7 +2961,7 @@ industrialization = {
 		}
 		#Rule Britannia specific
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -2760,7 +2976,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -2775,7 +2991,7 @@ industrialization = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			force_potential = yes
 			potential = {
 				has_dlc = "Rule Britannia"
@@ -2913,6 +3129,7 @@ industrialization = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}
@@ -3046,6 +3263,7 @@ industrialization = {
 					trade_goods = ivory
 					trade_goods = slaves
 					trade_goods = spices
+					trade_goods = cloves
 					trade_goods = fur
 					trade_goods = incense
 				}

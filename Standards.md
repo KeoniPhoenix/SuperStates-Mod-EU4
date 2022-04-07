@@ -1,4 +1,4 @@
-Important Standards when Modding SuperStates Mod for EU4
+Important Standards when Modding for SuperStates Mod for EU4
 
 ---Scope of Area---
 
@@ -6,7 +6,7 @@ The mod's scope of area is to defined as the subnational entities of nations wit
 
 Most nations that are added that aren't federal in nature are included as flavor and are only intended to appear as the game progresses (such as the currently implimented Caribbean nations not part of the United States) and others are implimented from the start due to their past association with the United States or other federal nation (UN Pacific Trust Territories in the late 20th century).
 
-The mod will not include any area or nation within Africa, Asia, or Europe.
+The mod will not include any area or nation within Africa, Asia, or Europe except in instances where particular territories are needed for accuracy to one of the federal nations added in the mod (currently this is Australia with the Indian Ocean Territories).  However, there could be the need due to performance problems to either empty out Africa (everything south of the Sahara) or remove a number of tribal nations.  This will be addressed when needed however.
 
 ---Nation Tags--- (country_tags/00_countries.txt)
 
@@ -16,7 +16,7 @@ Mod nations that are in the vanilla game and are to be modified for the mod are 
 Vanilla tags that are introduced due to an update take precedence over mod tags if the new vanilla tag is not in the area covered by the mod.
 New tags and reassigned tags for nations wthin the mod area should be checked agaist the master tag list used by the mod and by vanilla before being included.
 
-Too many tags is a performance hit to EU4 as the current game engine is required to assign an AI to each and every tag in the tag list, this is should be as compact as possible to minimize unnecessary assignment of an AI to a tag.
+Too many tags is a performance hit to EU4 as the current game engine is required to assign an AI to each and every tag in the tag list, this should be as compact as possible to minimize unnecessary assignment of an AI to a tag.
 
 ---Provinces---
 

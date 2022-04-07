@@ -34,6 +34,39 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 
+	### Zoroastrina Holy sites ###
+	
+		spriteType = {
+		name = "GFX_holy_site_4430"
+		texturefile = "gfx//interface//holy_sites//daman.dds"
+		loadType = "INGAME"
+	}
+	
+		spriteType = {
+		name = "GFX_holy_site_441"
+		texturefile = "gfx//interface//holy_sites//khiva.dds"
+		loadType = "INGAME"
+	}
+	
+		spriteType = {
+		name = "GFX_holy_site_2223"
+		texturefile = "gfx//interface//holy_sites//larestan.dds"
+		loadType = "INGAME"
+	}
+	
+		spriteType = {
+		name = "GFX_holy_site_2235"
+		texturefile = "gfx//interface//holy_sites//sabzevar.dds"
+		loadType = "INGAME"
+	}
+	
+		spriteType = {
+		name = "GFX_holy_site_421"
+		texturefile = "gfx//interface//holy_sites//shirvan.dds"
+		loadType = "INGAME"
+	}
+
+
 	spriteType = {
 		name = "GFX_holy_site_952"
 		texturefile = "gfx//interface//holy_sites//salt_lake.dds"

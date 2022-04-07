@@ -50,10 +50,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			great_lakes_region = {				
-				ROOT = { num_of_cities = 30 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = great_lakes_region
+				is_core = root
 			}
 			owns_core_province = 2565		# Chicago
 			owns_core_province = 2579		# Cleveland
@@ -65,6 +65,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650

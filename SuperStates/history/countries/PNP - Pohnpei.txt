@@ -3,7 +3,7 @@ add_government_reform = american_state_reform
 government_rank = 1
 technology_group = oceanian
 primary_culture = pohnpeian
-religion = s_catholic
+religion = austral_catholic
 capital = 2728	#Pohnpei
 
 1528.1.1 = {

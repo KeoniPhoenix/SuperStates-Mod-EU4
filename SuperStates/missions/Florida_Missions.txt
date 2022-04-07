@@ -3,10 +3,7 @@ florida_local_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = FLO
-			primary_culture = floridian
-		}
+		tag = FLO
 	}
 	has_country_shield = yes
 
@@ -54,6 +51,12 @@ florida_local_expansion = {
 			}
 		}
 		effect = {
+			2508 = {
+				change_culture = west_floridian
+			}
+			2503 = {
+				change_culture = west_floridian
+			}
 			pearl_river_area = {
 				add_permanent_claim = ROOT
 				}
@@ -234,7 +237,7 @@ florida_local_expansion = {
 		trigger = {
 			2546 = {
 				fort_level = 4
-				owns_core_province = ROOT
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -259,10 +262,7 @@ florida_internal = {
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			tag = FLO
-			primary_culture = floridian
-		}
+		tag = FLO
 	}
 	has_country_shield = yes
 
@@ -351,10 +351,7 @@ florida_colonial = {
 	ai = yes
 	
 	potential = {
-		OR = {
-			tag = FLO
-			primary_culture = floridian
-		}
+		tag = FLO
 	}
 	has_country_shield = yes
 
@@ -374,10 +371,8 @@ florida_colonial = {
 						limit = {
 								has_dlc = Dharma
 						}
-						AND = {
-							province_has_center_of_trade_of_level = 3
-							development = 30
-							}
+						province_has_center_of_trade_of_level = 3
+						development = 30
 					}
 					else = {
 						development = 30
@@ -667,10 +662,7 @@ florida_texas = {
 	ai = yes
 
 	potential = {
-		OR = {
-			tag = FLO
-			primary_culture = floridian
-		}
+		tag = FLO
 	}
 	has_country_shield = yes
 

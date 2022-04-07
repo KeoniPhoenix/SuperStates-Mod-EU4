@@ -261,11 +261,11 @@ cloth = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 18 }
+			NOT = { development_discounting_tribal = 18 }
 		}
 		modifier = {
 			factor = 2.0
-			development = 22
+			development_discounting_tribal = 22
 		}
 	}
 }
@@ -378,6 +378,12 @@ fur = {
 			factor = 2.5
 			has_winter = severe_winter
 			NOT = { has_terrain = glacier }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -811,6 +817,12 @@ slaves = {
 			factor = 0.5
 			region = south_africa_region
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -863,6 +875,12 @@ ivory = {
 			OR = {
 				has_terrain = jungle
 				has_terrain = savannah
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
 			}
 		}
 	}
@@ -962,6 +980,12 @@ tea = {
 				area = west_sao_paolo_area  #Yerba Mate
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -995,7 +1019,13 @@ chinaware = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 8 }
+			NOT = { development_discounting_tribal = 8 }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1044,9 +1074,24 @@ spices = {
 		}
 		modifier = {
 			factor = 1.25
-			region = malaya_region
-			region = indonesia_region
-			region = moluccas_region
+			OR = {
+				region = malaya_region
+				region = indonesia_region
+				region = moluccas_region
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = molluca_area
+				area = spice_islands_area
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1106,6 +1151,12 @@ coffee = {
 			is_random_new_world = yes
 			continent = new_world #Always in RNW
 			NOT = { has_climate = tropical }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1177,6 +1228,12 @@ cotton = {
 				region = deep_south_region
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -1233,6 +1290,12 @@ sugar = {
 				area = bahia_area
 				area = guyana_area
 				area = suriname_area
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
 			}
 		}
 	}
@@ -1394,7 +1457,13 @@ silk = {
 				region = deccan_region
 				region = coromandel_region
 			}
-			development = 20
+			development_discounting_tribal = 20
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1438,6 +1507,12 @@ dyes = {
 			NOT = { region = mexico_region }
 			NOT = { superregion = caribbean_superregion }
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -1470,6 +1545,12 @@ tropical_wood = {
 			region = malaya_region
 			region = moluccas_region
 			region = indonesia_region
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1607,6 +1688,12 @@ incense = {
 			factor = 1.25
 			region = arabia_region
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -1626,11 +1713,11 @@ glass = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 18 }
+			NOT = { development_discounting_tribal = 18 }
 		}
 		modifier = {
 			factor = 2.0
-			development = 22
+			development_discounting_tribal = 22
 		}
 	}
 }
@@ -1651,11 +1738,11 @@ paper = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 18 }
+			NOT = { development_discounting_tribal = 18 }
 		}
 		modifier = {
 			factor = 2.0
-			development = 22
+			development_discounting_tribal = 22
 		}
 	}
 }
@@ -1800,6 +1887,12 @@ gems = {
 			factor = 1.5
 			normal_or_historical_nations = no
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -1812,7 +1905,7 @@ coal = {
 	
 	trigger = {
 		OR = {
-			development = 20
+			development_discounting_tribal = 20
 			owner = { innovativeness = 20 }
 		}
 		provincial_institution_progress = {
@@ -1832,6 +1925,34 @@ coal = {
 
 	chance = {
 		factor = 1
+	}
+}
+
+cloves = {
+	color = { 1.0 0.5 0.85 }
+	modifier = {
+		trade_efficiency = 0.05
+	}
+	province = {
+		province_trade_power_modifier = 0.2
+	}
+	chance = {
+		factor = 150
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					area = molluca_area
+					area = spice_islands_area
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 

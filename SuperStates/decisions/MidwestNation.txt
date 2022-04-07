@@ -58,9 +58,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			american_midwest_region = {
-				ROOT = { num_of_cities = 35 }
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 35
+				region = american_midwest_region
+				is_core = root
 			}
 			owns_core_province = 2565	# Chicago
 			owns_core_province = 2498	# St. Louis
@@ -139,9 +140,6 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			2579 = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			}

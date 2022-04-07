@@ -46,10 +46,10 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
-			great_plains_region = {
-				ROOT = { num_of_cities = 25 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				region = great_plains_region
+				is_core = root
 			}
 			owns_core_province = 1006	# Topeka
 			owns_core_province = 1010	# Oklahoma City
@@ -62,6 +62,9 @@ country_decisions = {
 				}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650

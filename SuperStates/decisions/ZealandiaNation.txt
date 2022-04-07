@@ -1,1 +1,103 @@
-### Currently Empty
+country_decisions = {
+
+aotearoa_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			primary_culture = maori
+			capital_scope = {
+				region = new_zealand_region
+				is_core = ROOT
+			}
+			new_zealand_region = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2737
+				province_id = 1107
+				province_id = 1109
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				region = new_zealand_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = new_ulster_area
+					area = auckland_area
+					area = south_island_area
+					area = nelson_area
+				}
+				is_city = yes
+			}
+			NOT = { exists = AOT }
+		}
+		effect = {
+			change_tag = AOT
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = maori_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			new_ulster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			auckland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			south_island_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			nelson_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 		NOT = { has_country_flag = formed_delmarva_flag }
 			NOT = { exists = DMV }
-			NOT = { exists = MAA }
+			NOT = { exists = MID }
 			NOT = { exists = FSA }
 			NOT = { exists = USA }
 			NOT = { exists = NAM }
@@ -70,7 +70,7 @@ country_decisions = {
 							}
 				set_government_rank = 2
 			}
-			change_culture = delmarvan
+			change_primary_culture = delmarvan
 			delmarva_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

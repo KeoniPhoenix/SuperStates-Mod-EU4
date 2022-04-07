@@ -1,0 +1,267 @@
+kns_conquests = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KNS
+	}
+	has_country_shield = yes
+
+	kns_crisis = {
+		icon = mission_unite_home_region
+		required_missions = {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2499 #Jackson (Kansas City)
+			}
+			NOT = {
+				2499 = {
+					OR = {
+						is_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					is_year = 1450
+				}
+				else = {
+					manpower_percentage = 0.7
+					OR = {
+						is_claim = 2499
+						is_core = 2499
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorKNS.1000
+			}
+		}
+	}
+
+	kns_kansas_city = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+			kns_crisis
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2499 #Jackson (Kansas City)
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2499 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			missouri_area = {
+				add_permanent_claim = ROOT
+			}
+			salem_area = {
+				add_permanent_claim = ROOT
+			}
+			993 = {
+				add_permanent_claim = ROOT
+			}
+			3258 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	kns_dominate_mou = {
+		icon = mission_have_two_subjects
+		required_missions = {
+			kns_kansas_city
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = missouri_area
+				area = salem_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = missouri_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = salem_area
+			}
+		}
+		effect = {
+			nebraska_area = {
+				add_permanent_claim = ROOT
+			}
+			ozarks_area = {
+				add_permanent_claim = ROOT
+			}
+			loess_area = {
+				add_permanent_claim = ROOT
+			}
+			iowa_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	kns_iowa = {
+		icon = mission_conquer_5_states
+		required_missions = {
+			kns_dominate_mou
+		}
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = iowa_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				area = iowa_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = loess_area
+			}
+		}
+		effect = {
+			add_prestige = 15
+			illinois_area = {
+				add_claim = ROOT
+			}
+			sangamon_area = {
+				add_claim = ROOT
+			}
+			little_egypt_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+kns_midwest_expansion = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KNS
+	}
+	has_country_shield = yes
+
+	kns_territory = {
+		icon = mission_cannons_firing
+		required_missions = {
+			kns_kansas_city
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3258
+				province_id = 993
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+				993 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3258 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		effect = {
+			colorado_area = {
+				add_claim = ROOT
+			}
+			north_colorado_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	kns_nebraska = {
+		icon = mission_assemble_an_army
+		required_missions = {
+			kns_dominate_mou
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = nebraska_area
+				area = loess_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nebraska_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = loess_area
+			}
+		}
+		effect = {
+			sioux_area = {
+				add_permanent_claim = ROOT
+			}
+			east_river_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	kns_south_dakota = {
+		icon = mission_landsknecht_soldier
+		required_missions = {
+			kns_nebraska
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = sioux_area
+				area = east_river_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sioux_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_river_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			add_adm_power = 50
+			sakakawea_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}

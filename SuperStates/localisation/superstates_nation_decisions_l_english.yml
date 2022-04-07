@@ -33,7 +33,7 @@
  reform_colorado_desc:0 "The unification of our lands allows us to restore Colorado whole again."
 # Confederate States of America
  confederate_states_nation_title:0 "Form the Confederate States of America"
- confederate_states_nation_desc:0 "Our regional cultural identity has been unified and now its time to challenge our neighbors as the Confederate States of America."
+ confederate_states_nation_desc:0 "Our regional cultural identity has been unified and now it's time to challenge our neighbors as the Confederate States of America."
 # Dakota
  dakota_nation_title:0 "Form a united Dakotas"
  dakota_nation_desc:0 "The territory of Dakota was destined to be a proper state but instead was divided into two.  Correct this misdeed and bring glory to the state!"
@@ -57,7 +57,7 @@
  great_lakes_nation_desc:0 "We must proclaim the Great Lakes nation to serve the interests of citizens and merchants alike."
 # Great Plains
  great_plains_nation_title:0 "Form the Great Plains Federation"
- great_plains_nation_desc:0 "Establish the Great Plains Federation to unify the Great Plains under the sprits of the great tribal leaders that inhabited this region in the ancient past."
+ great_plains_nation_desc:0 "Establish the Great Plains Federation to unify the Great Plains under the spirits of the great tribal leaders that inhabited this region in the ancient past."
 # Illinois
  reform_illinois_title:0 "Reform into Illinois"
  reform_illinois_desc:0 "The lands that once belonged to Illinois are now ours. We must take their title for ourselves, and proclaim this nation the true and only Illinois."
@@ -67,6 +67,9 @@
 # Lakotah
  lakotah_nation_title:0 "Proclaim the Republic of Lakotah"
  lakotah_nation_desc:0 "The proposed boundaries of Lakotah are the Yellowstone River to the north, the North Platte River to the south, the Missouri River to the east and an irregular line marking the west. These borders coincide with those set by the 1851 Treaty of Fort Laramie."
+# Long Island
+ long_island_nation_title:0 "Reform into Long Island"
+ long_island_nation_desc:0 "The lands that once belonged to Long Island are now ours. We must take their title for ourselves, and proclaim this nation the true and only Long Island."
 # Louisiana
  louisiana_nation_title:0 "Restore Louisiana Nation"
  louisiana_nation_desc:0 "Restoration of Louisiana will bring immense praise to our people."
@@ -79,12 +82,15 @@
 # Mid-Atlantic League
  midatlantic_nation_title:0 "Form the Mid-Atlantic League"
  midatlantic_nation_desc:0 "Our unification of the Mid-Atlantic region allows us to greatly expand our influence, and grants us a better position in world affairs."
+# Michigan
+ michigan_nation_title:0 "Reform into Michigan"
+ michigan_nation_desc:0 "The lands that once belonged to Michigan are now ours. We must take their title for ourselves, and proclaim this nation the true and only Michigan."
  # Midwest Nation
  midwest_nation_title:0 "Unite the Midwestern States"
  midwest_nation_desc:0 "The states of the Midwest are far better united than they are divided. By consolidating them, we can become a regional power on the continent."
 # Navajo Nation
  navajo_nation_title:0 "Form the nation of Navajo"
- navajo_nation_desc:0 "There has been a mysterious power in possessing the four cornered provinces that meet together between Arizona, Utah, Colorado, and New Mexico and it calls upon us proclaim a new nation around this important human geographical feature."
+ navajo_nation_desc:0 "There has been a mysterious power in possessing the four cornered provinces that meet together between Arizona, Utah, Colorado, and New Mexico and it calls upon us to proclaim a new nation around this important human geographical feature."
 # New England
  new_england_nation_title:0 "Form the nation of New England"
  new_england_nation_desc:0 "Consolidating the various state governments into New England gives the region a better standing in the world."
@@ -94,9 +100,15 @@
 # New York
  reform_new_york_title:0 "Reform into New York"
  reform_new_york_desc:0 "The lands that once belonged to New York are now ours. We must take their title for ourselves, and proclaim this nation the true and only New York."
+# Nevada
+ reform_nevada_title:0 "Reform into Nevada"
+ reform_nevada_desc:0 "The lands that once belonged to Nevada are now ours. We must take their title for ourselves, and proclaim this nation the true and only Nevada."
+# Oklahoma
+ oklahoma_nation_title:0 "Reform into Oklahoma"
+ oklahoma_nation_desc:0 "The lands that once belonged to Oklahoma are now ours. We must take their title for ourselves, and proclaim this nation the true and only Oklahoma."
 # Pacifica
  pacifica_nation_title:0 "Form Pacifica Nation"
- pacifica_nation_desc:0 "By decreeing Pacifica, the Pacific costal region will be politically unified for its entrance into world politics."
+ pacifica_nation_desc:0 "By decreeing Pacifica, the Pacific coastal region will be politically unified for its entrance into world politics."
 # Pennsylvania
  reform_pennsylvania_title:0 "Reform into Pennsylvania"
  reform_pennsylvania_desc:0 "The lands that once belonged to Pennsylvania are now ours. We must take their title for ourselves, and proclaim this nation the true and only Pennsylvania."
@@ -106,6 +118,9 @@
 # South-Atlantic Confederacy
  southatlantic_nation_title:0 "Proclaim the South-Atlantic Confederacy"
  southatlantic_nation_desc:0 "Our unification of the South-Atlantic region allows us to both expand our influence, and grant ourselves a better position in world affairs."
+# Tennessee
+ reform_tennessee_title:0 "Reform into Tennessee"
+ reform_tennessee_desc:0 "The lands that once belonged to Tennessee are now ours. We must take their title for ourselves, and proclaim this nation the true and only Tennessee."
 # United States of America
  united_states_nation_title:0 "Form the United States of America"
  united_states_nation_desc:0 "The bells of freedom ring with the ratification of a new Constitution for a United States of America."
@@ -113,7 +128,7 @@
  reform_utah_title:0 "Reform into Utah"
  reform_utah_desc:0 "The lands that once belonged to Utah are now ours. We must take their title for ourselves, and proclaim this nation the true and only Utah."
 # Virginia
- reform_virginia:0 "Reform into Virginia"
+ reform_virginia_title:0 "Reform into Virginia"
  reform_virginia_desc:0 "The lands that once belonged to Virginia are now ours. We must take their title for ourselves, and proclaim this nation the true and only Virginia."
 # Wabash Union
  wabash_union_nation_title:0 "Form the Wabash Union"
@@ -147,7 +162,10 @@
  form_province_of_buffalo_desc:0 "Let us unite these lands of Western Canada to form a new province, mightier than the others who are divided."
 # Canada
  canada_nation_title:0 "Unification of Canada"
- canada_nation_desc:0 "Unifying of the realms of Canada brings great prestige to the new monarch."
+ canada_nation_desc:0 "Unifying the realms of Canada brings great prestige to the new monarch."
+# Labrador
+ labrador_nation_title:0 "Reform into Labrador"
+ labrador_nation_desc:0 "The lands that once belonged to Labrador are now ours. We must take their title for ourselves, and proclaim this nation the true and only Labrador."
 # Mantario
  reform_into_mantario_title:0 "Reform Into Mantario"
  reform_into_mantario_desc:0 "We have brought together the similar cultures of Manitoba and Northwestern Ontario. This can be represented by the creation of the new province of Mantario."
@@ -156,13 +174,22 @@
  maritime_union_nation_desc:0 "The Maritime States have been properly unified, but now they need to be properly organized.  Forming the Maritime Union allows the new nation much influence in the world."
 # Newfoundland and Labrador
  newfoundland_and_labrador_nation_title:0 "Form Newfondland and Labrador Nation"
- newfoundland_and_labrador_nation_desc:0 "Reuniting the seperated Newfoundland and Labrador has finally come!"
+ newfoundland_and_labrador_nation_desc:0 "Reuniting the separated Newfoundland and Labrador has finally come!"
+# Newfoundland
+ newfoundland_nation_title:0 "Form Newfoundland"
+ newfoundland_nation_desc:0 "The lands that once belonged to Newfoundland are now ours. We must take their title for ourselves, and proclaim this nation the true and only Newfoundland."
+# New Brunswick
+ new_brunswick_nation_title:0 "Reform into New Brunswick"
+ new_brunswick_nation_desc:0 "The lands that once belonged to New Brunswick are now ours. We must take their title for ourselves, and proclaim this nation the true and only New Brunswick."
 # New France
  new_france_nation_title:0 "Form New France Nation"
  new_france_nation_desc:0 "We have rescued our culture, our language, and our historical homeland, and now we can return in glory to what was... no, what is NOW our destiny!"
+# Nova Scotia
+ reform_nova_scotia_title:0 "Reform into Nova Scotia"
+ reform_nova_scotia_desc:0 "The lands that once belonged to Nova Scotia are now ours. We must take their title for ourselves, and proclaim this nation the true and only Nova Scotia."
 # Ontario
  ontario_nation_title:0 "Restore the Ontario nation."
- ontario_nation_desc:0 "The long journey reunite the lands of Ontario has been completed, let us fly her banner once more!"
+ ontario_nation_desc:0 "The long journey to reunite the lands of Ontario has been completed, let us fly her banner once more!"
 # Ottawa-Gatineau National Capital Region
  form_national_capital_region_title:0 "Unite the National Capital Region"
  form_national_capital_region_desc:0 "Ottawa and Gatineau have been connected for as long as we can remember. We shall reunite with our brethren and create one state out of both cities."
@@ -188,6 +215,9 @@
  #las_californias_nation_desc:0 "The Californias have been reunited and now its time to govern them as one!"
  LAS_CALIFORNIAS:0 "Las Californias"
  LAS_CALIFORNIAS_ADJ:0 "Las Californian"
+# El Norte
+ el_norte_nation_title:0 "Form El Norte"
+ el_norte_nation_desc:0 "The northern regions of Mexico are very culturally and economically different than that of the south. Let us unify the region and establish the nation of El Norte!"
 # Golden Circle
  golden_circle_nation_title:0 "Form the Golden Circle Nation"
  golden_circle_nation_desc:0 "The Confederate goals of forming a counter to Yankee cultural and political influence has been realized by proclaiming the \"Great Republic of the Golden Circle\"."
@@ -209,6 +239,9 @@
 # Rio Grande
  rio_grande_nation_title:0 "Form the Rio Grande Nation"
  rio_grande_nation_desc:0 "Become a safe haven for those resisting the tyranny of the Mexican dysfunction and stand up for justice."
+# Yucatan
+ greater_yucatan_nation_title:0 "Form the Yucatán Nation"
+ greater_yucatan_nation_desc:0 "Become a safe haven for those resisting the tyranny of the Mexican dysfunction and stand up for justice by unifying the Yucatán Peninsula."
 
 # Caribbean Regions
  antilles_nation_title:0 "Unify the Antilles"
@@ -244,6 +277,9 @@
 # North America Union
  north_american_union_nation_title:0 "Form the North American Union"
  north_american_union_nation_desc:0 "Gloat to the world as to how small they appear in the face of our giant nation!"
+# Greenland
+ greenland_nation_title:0 "Form Greenland"
+ greenland_nation_desc:0 "A kingdom of snow is better than no kingdom at all."
 
 # Other Decisions
 # New England State term extension
@@ -254,10 +290,15 @@
  release_csa_decision_desc:0 "Apparently there's some sort of trouble that is best solved by releasing the Confederate states from our control."
 # Release Haiti
  release_haiti_decision_title:0 "Release Haiti Nation"
- release_haiti_decision_desc:0 "The provinces of Haiti are no longer beneficial to us and to released as the independant nation of Haiti."
+ release_haiti_decision_desc:0 "The provinces of Haiti are no longer beneficial to us and to released as the independent nation of Haiti."
 
 # American Empire
 # american_empire_nation_title:0 "Imperii Americae est novus ordo seclorum!"
-# american_empire_nation_desc:0 "The revolution has been victorious! We now rightfully control the American states as an Empire of the greatest magintude ever seen on this Earth!"
+# american_empire_nation_desc:0 "The revolution has been victorious! We now rightfully control the American states as an Empire of the greatest magnitude ever seen on this Earth!"
 #instacore_title:0 "Instacore"
 #instacore_desc:0 "Instacore all provinces owned."
+
+s_ask_for_cardinal_title:0 "Ask Pope for Cardinal"
+s_ask_for_cardinal_desc:0 "We have finally reconnected with Rome, and for a small sum, we can have a Cardinal permanently residing in our nation."
+s_move_cardinal_title:0 "Move Cardinal to Capital"
+s_move_cardinal_desc:0 "We have been granted a Permanent Cardinal by His Holiness, yet lack a permanent cardinal in our nation. We can relocate the Cardinal to our Capital."

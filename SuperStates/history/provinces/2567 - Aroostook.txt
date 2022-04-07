@@ -1,5 +1,9 @@
 #Williamson
 
+latent_trade_goods = {
+	coal
+}
+
 owner = ILI
 controller = ILI
 add_core = ILI

@@ -1,4 +1,5 @@
 discovered_by = australian
 discovered_by = oceanian
+discovered_by = polynesian_tech
 
 1568.1.1 = { discovered_by = SPA }

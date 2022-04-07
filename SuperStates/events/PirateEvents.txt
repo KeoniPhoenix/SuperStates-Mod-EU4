@@ -84,6 +84,15 @@ country_event = {
 			}
 			add_scaled_republican_tradition = -10
 		}
+		if = {
+			limit = {
+				faction_in_power = pr_buccaneers 
+			}
+			add_faction_influence = {
+				faction = pr_buccaneers
+				influence = -10
+			}	
+		}
 		random_list = {
 			10 = {
 				add_adm_power = 50
@@ -106,7 +115,6 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1
-				fixed = yes
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -115,7 +123,6 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1					
-				fixed = yes
 			}
 		}
 		if = {
@@ -138,7 +145,6 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
-				fixed = yes
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -147,7 +153,6 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
-				fixed = yes
 			}
 		}
 		if = {
@@ -170,7 +175,6 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
-				fixed = yes
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -179,7 +183,6 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
-				fixed = yes
 			}
 		}
 		if = {
@@ -209,12 +212,11 @@ country_event = {
 			adm = 3
 			dip = 3
 			mil = 6
-			fixed = yes
 			culture = english
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -259,12 +261,11 @@ country_event = {
 			adm = 2
 			dip = 4
 			mil = 4
-			fixed = yes
 			culture = english
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -309,13 +310,12 @@ country_event = {
 			adm = 4
 			dip = 2
 			mil = 5
-			fixed = yes
 			culture = irish
 			female = yes
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -360,7 +360,6 @@ country_event = {
 			adm = 3
 			dip = 3
 			mil = 5
-			fixed = yes
 			culture = english
 			female = yes
 		}
@@ -384,12 +383,11 @@ country_event = {
 			adm = 2
 			dip = 3
 			mil = 5
-			fixed = yes
 			culture = english
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -434,7 +432,6 @@ country_event = {
 			adm = 4
 			dip = 3
 			mil = 5
-			fixed = yes
 			culture = yorumba
 		}
 		custom_tooltip = historical_pirate_tooltip
@@ -460,13 +457,12 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 6
-			fixed = yes
 			culture = cantonese
 			female = yes
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -511,12 +507,11 @@ country_event = {
 			adm = 3
 			dip = 3
 			mil = 5
-			fixed = yes
 			culture = english
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -561,12 +556,11 @@ country_event = {
 			adm = 2
 			dip = 4
 			mil = 5
-			fixed = yes
 			culture = dutch
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -611,12 +605,11 @@ country_event = {
 			adm = 3
 			dip = 3
 			mil = 5
-			fixed = yes
 			culture = cosmopolitan_french
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -659,12 +652,11 @@ country_event = {
 			adm = 3
 			dip = 4
 			mil = 5
-			fixed = yes
 			culture = dutch
 		}
 		if = {
 			limit = {
-				has_flagship = no
+				has_or_building_flagship = no
 				capital_scope = {
 					has_port = yes
 				}
@@ -724,7 +716,6 @@ country_event = {
 			adm = 3
 			dip = 1
 			mil = 5
-			fixed = yes
 			culture = cosmopolitan_french
 		}
 		custom_tooltip = historical_pirate_tooltip
@@ -850,10 +841,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_captains
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 	option = { # the captain's word is law
@@ -862,10 +855,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_captains
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 }
@@ -899,6 +894,7 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_smugglers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
@@ -911,6 +907,7 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_captains
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
@@ -1090,10 +1087,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_smugglers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 }
@@ -1208,10 +1207,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_captains
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 	
@@ -1226,10 +1227,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_captains
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 }
@@ -1257,10 +1260,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_smugglers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 	
@@ -1270,10 +1275,12 @@ country_event = {
 		add_faction_influence = {
 			faction = pr_buccaneers
 			influence = 10
+			perform_readjustment = no #will be balanced by the below line
 		}
 		add_faction_influence = {
 			faction = pr_smugglers
 			influence = -10
+			perform_readjustment = no
 		}
 	}
 }

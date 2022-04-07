@@ -16,7 +16,7 @@ country_decisions = {
 				AND = {
 					OR = {
 						primary_culture = acadian
-						primary_culture = gaspesie
+						#primary_culture = gaspesie
 					}
 					capital_scope = {
 					area = new_brunswick_area
@@ -40,10 +40,10 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			new_brunswick_area = {
-				ROOT = { num_of_cities = 5 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 5
+				area = new_brunswick_area
+				is_core = root
 			}
 		}
 		effect = {

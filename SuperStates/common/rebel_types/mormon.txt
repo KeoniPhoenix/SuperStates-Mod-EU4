@@ -3,6 +3,8 @@
 ######################################################################
 mormon_rebels = {
 
+	color = { 250 210 235 }
+
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = mormon

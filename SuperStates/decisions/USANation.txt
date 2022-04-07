@@ -108,7 +108,7 @@ country_decisions = {
 			NOT = { tag = ENG }
 			#technology_group = north_american
 			OR = {
-				culture_group = appalachian_group
+				culture_group = appalachian
 				#culture_group = alaskan_group
 				culture_group = southerner
 				culture_group = great_laker
@@ -144,7 +144,7 @@ country_decisions = {
 				primary_culture = dominican
 				primary_culture = haitian
 				primary_culture = nicaraguan
-				primary_culture = grenadan
+				primary_culture = grenadian
 				# Central American, Mexican, inc. former territories/occupied areas
 				primary_culture = tejano
 				primary_culture = panamanian
@@ -188,90 +188,90 @@ country_decisions = {
 			OR = {
 				# Western-based USA
 					AND = {
-						pacific_coast_region = {
-							ROOT = { num_of_cities = 25 }
-							owned_by = ROOT
-							is_core = ROOT
+						num_of_owned_provinces_with = {
+							value = 25
+							region = pacific_coast_region
+							is_core = root
 						}
-						intermountain_west_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
+						num_of_owned_provinces_with = {
+							value = 20
+							region = intermountain_west_region
+							is_core = root
 						}
-						american_southwest_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
+						num_of_owned_provinces_with = {
+							value = 20
+							region = american_southwest_region
+							is_core = root
 						}
 						OR = {
-							great_plains_region = {
-								ROOT = { num_of_cities = 15 }
-								owned_by = ROOT
-								is_core = ROOT
+							num_of_owned_provinces_with = {
+								value = 15
+								region = great_plains_region
+								is_core = root
 							}
-							old_southwest_region = {
-								ROOT = { num_of_cities = 15 }
-								owned_by = ROOT
-								is_core = ROOT
+							num_of_owned_provinces_with = {
+								value = 15
+								region = old_southwest_region
+								is_core = root
 							}
 						}
 					}
 				# Eastern-based USA
 					AND = {
-						mid_atlantic_region = {
-							ROOT = { num_of_cities = 25 }
-							owned_by = ROOT
-							is_core = ROOT
-											}
-						deep_south_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
-										}
-						appalachia_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
-										}
-						new_england_region = {
-							ROOT = { num_of_cities = 15 }
-							owned_by = ROOT
-							is_core = ROOT
-										}
+						num_of_owned_provinces_with = {
+							value = 25
+							region = mid_atlantic_region
+							is_core = root
 						}
+						num_of_owned_provinces_with = {
+							value = 20
+							region = deep_south_region
+							is_core = root
+						}
+						num_of_owned_provinces_with = {
+							value = 20
+							region = appalachia_region
+							is_core = root
+						}
+						num_of_owned_provinces_with = {
+							value = 15
+							region = new_england_region
+							is_core = root
+						}
+					}
 				# Central-based USA
 					AND = {
-						great_lakes_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
-											}
-						american_midwest_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
-										}
-						appalachia_region = {
-							ROOT = { num_of_cities = 20 }
-							owned_by = ROOT
-							is_core = ROOT
-										}
+						num_of_owned_provinces_with = {
+							value = 20
+							region = great_lakes_region
+							is_core = root
+						}
+						num_of_owned_provinces_with = {
+							value = 20
+							region = american_midwest_region
+							is_core = root
+						}
+						num_of_owned_provinces_with = {
+							value = 20
+							region = appalachia_region
+							is_core = root
+						}
 						OR = {
-								great_plains_region = {
-									ROOT = { num_of_cities = 15 }
-									owned_by = ROOT
-									is_core = ROOT
-								}
-								old_southwest_region = {
-									ROOT = { num_of_cities = 15 }
-									owned_by = ROOT
-									is_core = ROOT
-								}
-								mid_atlantic_region = {
-									ROOT = { num_of_cities = 20 }
-									owned_by = ROOT
-									is_core = ROOT
-								}
+							num_of_owned_provinces_with = {
+								value = 15
+								region = great_plains_region
+								is_core = root
+							}
+							num_of_owned_provinces_with = {
+								value = 15
+								region = old_southwest_region
+								is_core = root
+							}
+							num_of_owned_provinces_with = {
+								value = 20
+								region = mid_atlantic_region
+								is_core = root
+							}
 						}
 					}
 			}
@@ -303,6 +303,9 @@ country_decisions = {
 			owns_core_province = 2585 # Philadelphia
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 9125

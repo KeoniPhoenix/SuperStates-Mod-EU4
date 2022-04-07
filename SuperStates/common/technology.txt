@@ -1,6 +1,6 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new technology, make sure they are uniquely named.
-
+# If adding new technology, make sure they are AFTER THE LAST TECHNOLOGY
 
 # Groups must be defined BEFORE tables.
 
@@ -24,7 +24,7 @@ groups = {
 			value = 75
 		}
 	}
-	north_american = {    #US and Canadian nations
+	north_american = {
 		start_level = 3
 		start_cost_modifier = 0
 		nation_designer_cost = {
@@ -40,24 +40,7 @@ groups = {
 			value = 75
 		}
 	}
-	eastern = {
-		start_level = 3
-		start_cost_modifier = 0.20
-		nation_designer_cost = {
-			trigger = {
-				capital_scope = {
-					OR = {
-						continent = new_world
-						continent = north_america
-						continent = south_america
-						continent = oceania
-					}
-				}
-			}
-			value = 75
-		}
-	}
-	mesoamerican = {    #Central American nations
+	mesoamerican = {
 		start_level = 3
 		start_cost_modifier = 0.20
 		nation_designer_cost = {
@@ -83,6 +66,23 @@ groups = {
 						continent = europe
 						continent = asia
 						continent = africa
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	eastern = {
+		start_level = 3
+		start_cost_modifier = 0.20
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
 					}
 				}
 			}
@@ -144,11 +144,37 @@ groups = {
 		start_level = 3
 		start_cost_modifier = 0.5
 		nation_designer_unit_type = sub_saharan
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
 	}
 	central_african = {
 		start_level = 2
 		start_cost_modifier = 0.65
 		nation_designer_unit_type = sub_saharan
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 50
+		}
 	}
 	chinese = {
 		start_level = 3
@@ -167,8 +193,50 @@ groups = {
 			value = 75
 		}
 	}
-	oceanian = {      #Pacific Island Nations
+	nomad_group = {
+		start_level = 3
+		start_cost_modifier = 0.75
+		nation_designer_trigger = {
+			has_reform = steppe_horde
+		}
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	sub_saharan = { #West African
 		start_level = 2
+		start_cost_modifier = 0.6
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 50
+		}
+	}
+	tribal_american = {			#Vanilla North American Tech
+		start_level = 1
+		start_cost_modifier = 2.5
+		is_primitive = yes
+	}
+	oceanian = {
+		start_level = 3
 		start_cost_modifier = 0.6
 		nation_designer_cost = {
 			trigger = {
@@ -183,22 +251,6 @@ groups = {
 			value = 75 
 		}
 	}
-	nomad_group = {
-		start_level = 3
-		start_cost_modifier = 0.75
-		nation_designer_trigger = {
-			has_reform = steppe_horde
-		}
-	}
-	sub_saharan = { #West African
-		start_level = 2
-		start_cost_modifier = 0.6
-	}
-	tribal_american = {			#Vanilla North American Tech
-		start_level = 1
-		start_cost_modifier = 2.5
-		is_primitive = yes
-	}
 	south_american = {
 		start_level = 1
 		start_cost_modifier = 2.5
@@ -209,8 +261,33 @@ groups = {
 		start_cost_modifier = 1.5
 		nation_designer_unit_type = south_american
 		is_primitive = yes
-	}	
-	
+	}
+	aboriginal_tech = {
+		start_level = 1
+		start_cost_modifier = 2.5
+		is_primitive = yes
+		nation_designer_cost = {
+			value = 50
+		}
+	}
+	polynesian_tech = {
+		start_level = 2
+		start_cost_modifier = 2
+		is_primitive = yes
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 50
+		}
+	}
 	
 	high_american = {
 		start_level = 3

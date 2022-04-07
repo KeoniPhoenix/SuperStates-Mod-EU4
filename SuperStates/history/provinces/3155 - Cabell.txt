@@ -1,8 +1,13 @@
 #Cabell
 
+latent_trade_goods = {
+	coal
+}
+
 owner = WVA
 controller = WVA
 add_core = WVA
+add_core = WST
 # add_core = VIR
 culture = west_virginian
 religion = s_protestant

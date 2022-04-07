@@ -1008,13 +1008,16 @@ malaya_region = {	#Western Indonesia Malaya.
 		north_sumatra_area
 		central_sumatra_area
 		south_sumatra_area
-		indian_ocean_islands_area
+		jambi_area
 		tenasserim_area
 		malaya_area
+		johor_area
+		north_malaya_area
 		north_tenasserim_area
 		malacca_area
 		batak_area
 		minangkabau_area
+		indian_ocean_islands_area
 	}
 	monsoon = {
 		00.10.01
@@ -1041,7 +1044,7 @@ moluccas_region = {
 		#vogelkop_area
 		timor_area
 		south_sulawesi_area
-		ceram_area
+		makassar_area
 		spice_islands_area
 	}
 	monsoon = {
@@ -1061,11 +1064,15 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		kutai_area
 		brunei_area
 		kalimantan_area
+		banjar_area
+		sabah_area
 		east_java_area
 		central_java_area
 		west_java_area
 		lesser_sunda_islands_area
 		indonesian_islands_area
+		surabaya_area
+		banten_area
 	}
 	monsoon = {
 		00.11.01
@@ -1080,15 +1087,19 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 indo_china_region = {
 	areas = {
 		vietnam_area
-		south_laos_area
 		north_laos_area
 		central_thai_area
 		northern_thai_area
 		cambodia_area
 		mekong_area
+		angkor_area
 		champa_area
 		khorat_area
+		tay_nguyen_area
 		red_river_delta_area
+		sukhothai_area
+		champasak_area
+		vientiane_area
 	}
 	monsoon = {
 		00.05.01
@@ -1263,10 +1274,10 @@ east_australia_region = { #11
 	}
 }
 
-west_australia_region = { #7
+west_australia_region = { #8
 	areas = {
 		perth_area
-		western_australia_area
+		west_australia_area
 		goldfields_area
 		south_coast_area
 		south_australia_area
@@ -1277,7 +1288,7 @@ west_australia_region = { #7
 }
 
 #MELANESIA
-melanesia_region = { #2
+melanesia_region = { #4
 	areas = {
 		vogelkop_area
 		papua_area
@@ -1289,22 +1300,20 @@ melanesia_region = { #2
 #MICRONESIA
 micronesia_region = { #3
 	areas = {
-		marianas_area
 		micronesia_area
 		eastern_micronesia_area
+		marianas_area
 	}
 }
 
-pacific_islands_region = { #8
+pacific_islands_region = { #6
 	areas = {
 		hawaii_area
 		leeward_hawaiian_islands_area
 		western_polynesia_area
 		central_polynesia_area
 		eastern_polynesia_area
-		marianas_area
-		micronesia_area
-		eastern_micronesia_area
+		fiji_area
 	}
 }
 

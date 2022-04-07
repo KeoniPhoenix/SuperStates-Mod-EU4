@@ -1,5 +1,9 @@
 #Christian
 
+latent_trade_goods = {
+	coal
+}
+
 owner = KEN
 controller = KEN
 add_core = KEN

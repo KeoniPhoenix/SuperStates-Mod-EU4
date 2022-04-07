@@ -58,7 +58,7 @@ wooden_wall =
 			culture_group = british
 			culture_group = new_england_group
 			primary_culture = tasmanian
-			primary_culture = cocossian
+			primary_culture = cocos_islander
 		}
 	}
 
@@ -73,17 +73,19 @@ grand_armada =
 {
 	can_select = {
 		is_primitive = no
-		OR = {
+		AND = {
 			NOT = {
 				OR = {
 					primary_culture = portugese
 					primary_culture = brazilian
 				}
 			}
+			OR = {
 			culture_group = iberian
 			culture_group = caribbean_islander
 			primary_culture = floridian
 			primary_culture = south_floridian
+				}
 		}
 	}
 
@@ -110,7 +112,7 @@ portuguese_marines =
 	country_modifier = {
 		siege_blockade_progress = 1
 		global_naval_barrage_cost = -0.4
-		allowed_marine_fraction = 0.10
+		allowed_marine_fraction = 0.5
 	}
 
 	button_gfx = 7

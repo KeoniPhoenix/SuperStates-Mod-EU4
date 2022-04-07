@@ -117,6 +117,12 @@ st_johns_estuary_modifier = {
 	picture = "estuary_icon"
 }
 
+#New London, Connecticut
+connecticut_estuary_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
 #Commented modifiers below are from the default game and will not be changed but are listed for completeness.
 
 #Portland
@@ -446,4 +452,9 @@ cal_adm_silicon = {
 
 cal_inno_silicon = {
 	innovativeness_gain = 0.33
+}
+
+#Cardinal
+s_permanent_cardinal = {
+	papal_influence = 0.5
 }

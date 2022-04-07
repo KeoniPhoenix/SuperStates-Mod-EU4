@@ -37,15 +37,15 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			michigan_area = {
-				ROOT = { num_of_cities = 5 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 5
+				area = michigan_area
+				is_core = root
 			}
-			upper_peninsula_area = {
-				ROOT = { num_of_cities = 2 }
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 2
+				area = upper_peninsula_area
+				is_core = root
 			}
 			owns_core_province = 2573 # Detroit
 		}

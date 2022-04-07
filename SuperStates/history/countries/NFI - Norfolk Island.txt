@@ -3,5 +3,5 @@ add_government_reform = hybrid_westminster_reform
 government_rank = 1
 technology_group = australian
 religion = austral_protestant
-primary_culture = canberran
+primary_culture = norfolk_islander
 capital =  4637	# Kingston

@@ -25,7 +25,7 @@ christian = {
 		}
 		country = {
 			tolerance_own = 1
-			tolerance_heretic = -1
+			global_heathen_missionary_strength = 0.01
 		}
 		
 		country_as_secondary = {
@@ -60,7 +60,7 @@ christian = {
 			
 			#Council of Trent Positions
 			harsh = {
-				relation_with_heretics = -20
+				relation_with_heretics = -10
 				global_religious_conversion_resistance = 0.25
 				global_institution_spread = -0.25
 				global_missionary_strength = 0.02
@@ -69,7 +69,7 @@ christian = {
 				global_religious_conversion_resistance = -0.33
 			}
 			concilatory = {
-				relation_with_heretics = 10
+				relation_with_heretics = 5
 				global_religious_conversion_resistance = 0.25
 				global_heretic_missionary_strength = -0.05
 				improve_relation_modifier = 0.25
@@ -79,41 +79,41 @@ christian = {
 			concessions = {
 				first_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						global_heretic_missionary_strength  = 0.02
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						tolerance_heretic = 2
 					}
 				}
 				second_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						institution_spread_from_true_faith = 0.30
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						global_institution_spread = 0.10
 					}
 				}
 				third_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						manpower_in_true_faith_provinces  = 0.1
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						global_manpower_modifier = 0.05
 					}
 				}
 				fourth_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						warscore_cost_vs_other_religion  = -0.10
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						curia_powers_cost = -0.10
 					}
 				}
@@ -153,7 +153,6 @@ christian = {
 				}
 				allow = {
 					NOT = { war_with = PAP }
-					NOT = { prestige = 100 }
 					NOT = { has_country_modifier = papal_blessing }
 				}
 				effect = {
@@ -169,12 +168,10 @@ christian = {
 			indulgence_for_sins = {
 				cost = 50
 				potential = {
-					government = monarchy
 					NOT = { tag = PAP }
 				}
 				allow = {
 					NOT = { war_with = PAP }
-					NOT = { legitimacy = 100 }
 					NOT = { has_country_modifier = papal_indulgence }
 				}
 				effect = {
@@ -319,6 +316,7 @@ christian = {
 	anglican = {
 		color = { 135 77 255 }
 		icon = 28
+		allow_female_defenders_of_the_faith = yes
 
 		allowed_center_conversion = {
 			catholic
@@ -672,7 +670,7 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 1
+					factor = 0.05
 					modifier = {
 						factor = 0
 						is_at_war = no
@@ -692,7 +690,7 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 1
+					factor = 0.02
 					modifier = {
 						factor = 0
 						NOT = {
@@ -735,7 +733,7 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.5
+					factor = 0.01
 				}
 			}
 
@@ -746,7 +744,7 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.8
+					factor = 0.02
 					modifier = {
 						factor = 0
 						NOT = {
@@ -817,7 +815,7 @@ christian = {
 		}
 		country = {
 			tolerance_own = 1
-			tolerance_heretic = -1
+			global_heathen_missionary_strength = 0.01
 		}
 		
 		country_as_secondary = {
@@ -841,6 +839,8 @@ christian = {
 		}
 		
 		heretic = { AUSTRALREFORMIST NEOCATHOLIC KENNEDYIANS }
+
+		misguided_heretic = yes		# Other christians hate them less
 		
 		papacy = {
 			papal_tag = PAP
@@ -889,12 +889,10 @@ christian = {
 			indulgence_for_sins = {
 				cost = 50
 				potential = {
-					government = monarchy
 					NOT = { tag = PAP }
 				}
 				allow = {
 					NOT = { war_with = PAP }
-					NOT = { legitimacy = 100 }
 					NOT = { has_country_modifier = papal_indulgence }
 				}
 				effect = {
@@ -1028,7 +1026,7 @@ christian = {
 		}
 		country = {
 			tolerance_own = 1
-			tolerance_heretic = -1
+			global_heathen_missionary_strength = 0.01
 		}
 		province = {
 			local_tax_modifier = -0.1
@@ -1039,6 +1037,8 @@ christian = {
 			advisor_pool = 1
 		}
 		#hre_religion = yes
+
+		misguided_heretic = yes		# Other christians hate them less
 		
 		
 		on_convert = {
@@ -1059,17 +1059,17 @@ christian = {
 		heretic = { VENKMANIST STANTZIST SPENGLERIST }
 		
 		papacy = {
-			papal_tag = PAP
+			papal_tag = DPO
 			election_cost = 5
-			seat_of_papacy = 118 # rome
+			seat_of_papacy = 871 # Mexico
 			
 			levy_church_tax = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
 				}
 				effect = {
@@ -1085,10 +1085,10 @@ christian = {
 			bless_monarch = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { prestige = 100 }
 					NOT = { has_country_modifier = papal_blessing }
 				}
@@ -1105,12 +1105,10 @@ christian = {
 			indulgence_for_sins = {
 				cost = 50
 				potential = {
-					government = monarchy
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
-					NOT = { legitimacy = 100 }
+					NOT = { war_with = DPO }
 					NOT = { has_country_modifier = papal_indulgence }
 				}
 				effect = {
@@ -1126,10 +1124,10 @@ christian = {
 			local_saint = {
 				cost = 100
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { stability = 3 }
 				}
 				effect = {
@@ -1146,10 +1144,10 @@ christian = {
 			forgiveness_for_usury = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { has_country_modifier = usury_forgiven }
 				}
 				effect = {
@@ -1169,11 +1167,11 @@ christian = {
 			proclaim_holy_war = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
 					is_at_war = yes
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { has_country_modifier = papal_sanction_for_holy_war }
 				}
 				effect = {
@@ -1193,10 +1191,10 @@ christian = {
 			send_papal_legate = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { has_country_modifier = papal_legate }
 				}
 				effect = {
@@ -1212,10 +1210,10 @@ christian = {
 			sanction_commercial_monopoly = {
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
+					NOT = { tag = DPO }
 				}
 				allow = {
-					NOT = { war_with = PAP }
+					NOT = { war_with = DPO }
 					NOT = { mercantilism = 100 }
 				}
 				effect = {
@@ -1241,7 +1239,7 @@ christian = {
 		}
 		
 		country = {
-			manpower_recovery_speed = -0.1
+			manpower_recovery_speed = 0.1
 			defensiveness = 0.10
 		}
 		
@@ -1302,7 +1300,7 @@ christian = {
 	
 	mormon = {
 		color = { 153 51 153 }
-		icon = 29
+		icon = 30
 		
 		country = {
 			defensiveness = 0.15
@@ -1339,7 +1337,7 @@ christian = {
 	
 	s_lutheran = {
 		color = { 50 101 153 }
-		icon = 32
+		icon = 33
 		allowed_conversion = {
 			protestant
 			reformed
@@ -1354,7 +1352,7 @@ christian = {
 		}
 		country = {
 			tolerance_own = 2
-			tolerance_heretic = -1
+			global_heathen_missionary_strength = 0.01
 		}
 		country_as_secondary = {
 			diplomatic_reputation = 1
@@ -1370,7 +1368,7 @@ christian = {
 			aspect_dominus_reget_me					#-10% Land Attrition
 			aspect_welcoming_churches				#10% Stability Cost Modifier
 			aspect_passionate_theology				#2% Missionary Strength
-			aspect_onward_christian_soliders		#+5% Discipline
+			#aspect_onward_christian_soliders		#+5% Discipline
 			aspect_soliders_of_the_cross			#+5% Morale of Army/Navy
 			aspect_glory_under_the_cross			#+0.5 Yearly Prestige
 			aspect_confessions_from_the_state		#+0.25 Yearly Legitimacy/Devotion/Horde Unity/Republican Tradition 
@@ -1415,7 +1413,7 @@ christian = {
 	
 	s_methodist = {
 		color = { 50 101 255 }
-		icon = 30
+		icon = 31
 		allowed_conversion = {
 			protestant
 			reformed
@@ -1430,7 +1428,7 @@ christian = {
 		}
 		country = {
 			tolerance_own = 2
-			tolerance_heretic = -1
+			global_heathen_missionary_strength = 0.01
 		}
 		country_as_secondary = {
 			diplomatic_reputation = 1
@@ -1454,7 +1452,7 @@ christian = {
 			aspect_missions_of_diplomacy					#-10% Envoy Travel Time
 			aspect_sermons_for_change						#-10% idea costs
 			aspect_pastor_and_innkeeper						#+10% Caravan Power
-			aspect_compassion_for_the_tribes				#-50% Native Uprising Chance
+			#aspect_compassion_for_the_tribes				#-50% Native Uprising Chance
 		}
 		aspects_name = S_METHODIST_ASPECTS
 
@@ -1492,7 +1490,7 @@ christian = {
 	
 	s_baptist = {
 		color = { 51 51 179 }
-		icon = 31
+		icon = 32
 		
 		allowed_conversion = {
 			protestant
@@ -1551,7 +1549,7 @@ christian = {
 	
 	anabaptist = {
 		color = { 161 134 236 }
-		icon = 33
+		icon = 34
 		
 		allowed_center_conversion = {
 			s_protestant
@@ -1626,12 +1624,21 @@ muslim = {
 	religious_schools = {
 		hanafi_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_hanafi_school
+					has_country_flag = privilege_can_always_invite_hanafi_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -1639,22 +1646,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				NOT = { has_country_modifier = hanafi_scholar_modifier }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_hanafi_school }
+						NOT = { has_country_flag = privilege_can_always_invite_hanafi_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
+				NOT = { has_country_modifier = hanafi_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = hanafi_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1667,12 +1697,21 @@ muslim = {
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_hanbali_school
+					has_country_flag = privilege_can_always_invite_hanbali_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -1680,22 +1719,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_hanbali_school }
+						NOT = { has_country_flag = privilege_can_always_invite_hanbali_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = hanbali_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = hanbali_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1707,12 +1769,21 @@ muslim = {
 		}
 		maliki_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_maliki_school
+					has_country_flag = privilege_can_always_invite_maliki_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -1720,22 +1791,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_maliki_school }
+						NOT = { has_country_flag = privilege_can_always_invite_maliki_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = maliki_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = maliki_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1747,12 +1841,21 @@ muslim = {
 		}
 		shafii_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_shafii_school
+					has_country_flag = privilege_can_always_invite_shafii_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -1760,22 +1863,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_shafii_school }
+						NOT = { has_country_flag = privilege_can_always_invite_shafii_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = shafii_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = shafii_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1788,12 +1914,21 @@ muslim = {
 		#Shias
 		ismaili_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_ismaili_school
+					has_country_flag = privilege_can_always_invite_ismaili_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -1801,22 +1936,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_ismaili_school }
+						NOT = { has_country_flag = privilege_can_always_invite_ismaili_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = ismaili_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = ismaili_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1831,12 +1989,21 @@ muslim = {
 		}
 		jafari_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_jafari_school
+					has_country_flag = privilege_can_always_invite_jafari_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -1844,22 +2011,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_jafari_school }
+						NOT = { has_country_flag = privilege_can_always_invite_jafari_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = jafari_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = jafari_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -1871,12 +2061,21 @@ muslim = {
 		}
 		zaidi_school = {
 			potential_invite_scholar = {
-				knows_of_scholar_country_capital_trigger = yes
+				OR = {
+					knows_of_scholar_country_capital_trigger = yes
+					has_country_flag = can_always_invite_zaidi_school
+					has_country_flag = privilege_can_always_invite_zaidi_school
+				}
 			}
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -1884,22 +2083,45 @@ muslim = {
 					}
 					NOT = { piety = -0.5 }
 				}
-				reverse_has_opinion = { who = FROM value = 150 }
-				OR = {
-					alliance_with = FROM
-					is_subject_of = FROM
-					overlord_of = FROM
+				if = {
+					limit = {
+						NOT = { has_country_flag = can_always_invite_zaidi_school }
+						NOT = { has_country_flag = privilege_can_always_invite_zaidi_school }
+					}
+					reverse_has_opinion = { who = FROM value = 150 }
+					OR = {
+						alliance_with = FROM
+						is_subject_of = FROM
+						overlord_of = FROM
+					}
+					hidden_progressive_opinion_for_scholar_trigger = yes
 				}
-				hidden_progressive_opinion_for_scholar_trigger = yes
+				if = {
+					limit = {
+						ai = yes
+					}
+					NOT = { has_country_modifier = has_invited_scholar_recently }
+				}
 				NOT = { has_country_modifier = zaidi_scholar_modifier }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				adm_power_cost = 50
+				if = {
+					limit = {
+						NOT = { has_country_flag = no_scholar_adm_cost }
+					}
+					adm_power_cost = 50
+				}
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = zaidi_scholar_modifier duration = 7300 }
+				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+					limit = {
+						ai = yes
+					}
+					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+				}
 			}
 			
 			# If you don't set this it will expand on_invite_scholar effect which might be super big
@@ -2095,6 +2317,7 @@ eastern = {
 		icon = 10
 		country = {
 			land_morale = 0.1
+			tolerance_heathen = 1
 		}
 		province = {
 			local_missionary_strength = -0.02
@@ -2183,6 +2406,583 @@ dharmic = {
 		heretic = { MASANDIS }
 
 		date = 1499.01.01
+
+		gurus = {
+			guru_nanak = {
+				trigger = {
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					share_and_consume = {
+						type = ADM
+						cost = 50
+
+						global_unrest = -1
+					}
+					work_honestly = {
+						type = DIP
+						cost = 50
+
+						production_efficiency = 0.05
+					}
+					recite_his_name = {
+						type = MIL
+						cost = 50
+
+						global_regiment_cost = -0.025
+					}
+				}
+			}
+			guru_angad = {
+				trigger = {
+					is_year = 1539
+					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1540
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1541
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1542
+					}
+					modifier = {
+						factor = 2
+						is_year = 1543
+					}
+					modifier = {
+						factor = 2
+						is_year = 1544
+					}
+				}
+				modifier = {
+					country_military_power = 1
+				}
+				teachings = {
+					gurmukhi_script_teaching = {
+						type = ADM
+						cost = 50
+
+						technology_cost = -0.025
+					}
+					temple_langar = {
+						type = DIP
+						cost = 50
+
+						church_loyalty_modifier = 0.05
+					}
+					wrestling_akhara = {
+						type = MIL
+						cost = 50
+
+						yearly_army_professionalism = 0.005
+					}
+				}
+			}
+			guru_amar_das = {
+				trigger = {
+					is_year = 1552
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1553
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1554
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1555
+					}
+					modifier = {
+						factor = 2
+						is_year = 1556
+					}
+					modifier = {
+						factor = 2
+						is_year = 1557
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					dasvandh_collection = {
+						type = ADM
+						cost = 50
+
+						global_tax_modifier = 0.05
+					}
+					anand_karaj = {
+						type = DIP
+						cost = 50
+
+						diplomatic_reputation = 1
+					}
+					sanghat_equality = {
+						type = MIL
+						cost = 50
+
+						nobles_loyalty_modifier = 0.05
+						rajput_exclusive_loyalty_modifier = 0.05
+						maratha_exclusive_loyalty_modifier = 0.05
+					}
+				}
+			}
+			guru_ram_das = {
+				trigger = {
+					is_year = 1574
+					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1575
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1576
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1577
+					}
+					modifier = {
+						factor = 2
+						is_year = 1578
+					}
+					modifier = {
+						factor = 2
+						is_year = 1579
+					}
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					legitimize_inheritance = {
+						type = ADM
+						cost = 50
+
+						legitimacy = 0.25
+						republican_tradition = 0.1
+						devotion = 0.25
+						horde_unity = 0.25
+						meritocracy = 0.1
+					}
+					scripture_hymns = {
+						type = DIP
+						cost = 50
+
+						prestige = 0.5
+					}
+					masand_system = {
+						type = MIL
+						cost = 50
+
+						global_manpower_modifier = 0.1
+					}
+				}
+			}
+			guru_arjan = {
+				trigger = {
+					is_year = 1581
+					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1582
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1583
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1584
+					}
+					modifier = {
+						factor = 2
+						is_year = 1585
+					}
+					modifier = {
+						factor = 2
+						is_year = 1586
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					adi_granth = {
+						type = ADM
+						cost = 50
+
+						global_institution_spread = 0.1
+					}
+					the_abode_of_god = {
+						type = DIP
+						cost = 50
+
+						religious_unity = 0.1
+					}
+					martyrdom = {
+						type = MIL
+						cost = 50
+
+						land_morale = 0.05
+					}
+				}
+			}
+			guru_hargobind = {
+				trigger = {
+					is_year = 1606
+					is_month = 6
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1607
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1608
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1609
+					}
+					modifier = {
+						factor = 2
+						is_year = 1610
+					}
+					modifier = {
+						factor = 2
+						is_year = 1611
+					}
+				}
+				modifier = {
+					country_military_power = 1
+				}
+				teachings = {
+					throne_of_the_timeless_one = {
+						type = ADM
+						cost = 50
+
+						legitimacy = 0.25
+						republican_tradition = 0.1
+						devotion = 0.25
+						horde_unity = 0.25
+						meritocracy = 0.1
+					}
+					protection_of_the_poor = {
+						type = DIP
+						cost = 50
+
+						war_exhaustion = -0.025
+					}
+					miri_and_piri = {
+						type = MIL
+						cost = 50
+
+						discipline = 0.025
+					}
+				}
+			}
+			guru_har_rai = {
+				trigger = {
+					is_year = 1644
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1645
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1646
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1647
+					}
+					modifier = {
+						factor = 2
+						is_year = 1648
+					}
+					modifier = {
+						factor = 2
+						is_year = 1649
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					impartial_manjis = {
+						type = ADM
+						cost = 50
+
+						yearly_corruption = -0.05
+					}
+					the_fragrance_of_a_flower = {
+						type = DIP
+						cost = 50
+
+						improve_relation_modifier = 0.1
+					}
+					one_guru = {
+						type = MIL
+						cost = 50
+
+						nobles_loyalty_modifier = 0.05
+						rajput_exclusive_loyalty_modifier = 0.05
+						maratha_exclusive_loyalty_modifier = 0.05
+					}
+				}
+			}
+			guru_har_krishan = {
+				trigger = {
+					is_year = 1661
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1662
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1663
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1664
+					}
+					modifier = {
+						factor = 2
+						is_year = 1665
+					}
+					modifier = {
+						factor = 2
+						is_year = 1666
+					}
+				}
+				modifier = {
+					country_diplomatic_power = 1
+				}
+				teachings = {
+					treat_the_sick = {
+						type = ADM
+						cost = 50
+
+						monarch_admin_power = 1
+					}
+					illiterate_recites_saloks = {
+						type = DIP
+						cost = 50
+
+						monarch_diplomatic_power = 1
+					}
+					young_humility = {
+						type = MIL
+						cost = 50
+
+						monarch_military_power = 1
+					}
+				}
+			}
+			guru_tegh_bahadur = {
+				trigger = {
+					is_year = 1665
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1666
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1667
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1668
+					}
+					modifier = {
+						factor = 2
+						is_year = 1669
+					}
+					modifier = {
+						factor = 2
+						is_year = 1670
+					}
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					the_word_of_sikh = {
+						type = ADM
+						cost = 50
+
+						missionaries = 1
+					}
+					all_kings_must_pass = {
+						type = DIP
+						cost = 50
+
+						tolerance_heretic = 2
+					}
+					resist_persecution = {
+						type = MIL
+						cost = 50
+
+						hostile_attrition = 1
+					}
+				}
+			}
+			guru_gobind_singh = {
+				trigger = {
+					is_year = 1675
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1676
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1677
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1678
+					}
+					modifier = {
+						factor = 2
+						is_year = 1679
+					}
+					modifier = {
+						factor = 2
+						is_year = 1680
+					}
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					pluralism = {
+						type = ADM
+						cost = 50
+
+						advisor_cost = -0.1
+					}
+					dharam_yudh = {
+						type = DIP
+						cost = 50
+
+						war_taxes_cost_modifier = -0.5
+					}
+					the_khalsa_sikh = {
+						type = MIL
+						cost = 50
+
+						yearly_army_professionalism = 0.005
+					}
+				}
+			}
+			guru_granth_sahib = {
+				trigger = {
+					is_year = 1708
+					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1709
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1710
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1711
+					}
+					modifier = {
+						factor = 2
+						is_year = 1712
+					}
+					modifier = {
+						factor = 2
+						is_year = 1713
+					}
+				}
+				modifier = {
+					state_maintenance_modifier = -0.5
+					drill_decay_modifier = -0.25
+				}
+				teachings = {
+					eternally_living_guru = {
+						type = ADM
+						cost = 50
+
+						development_cost = -0.1
+					}
+					divine_justice = {
+						type = DIP
+						cost = 50
+
+						trade_efficiency = 0.1
+					}
+					the_unchanging_writing = {
+						type = MIL
+						cost = 50
+
+						drill_gain_modifier = 0.5
+					}
+				}
+			}
+		}
 	}
 	
 	harmonized_modifier = harmonized_dharmic
@@ -2219,9 +3019,6 @@ pagan = {
 			tolerance_heathen = 2
 			diplomatic_reputation = 1
 		}
-		province = {
-			local_missionary_strength = 0.02
-		}
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
@@ -2244,6 +3041,8 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
+
+		ancestors = yes
 		
 		heretic = { BEAR_SPIRIT }	
 	}
@@ -2349,6 +3148,22 @@ pagan = {
 		heretic = { OLD_TENGRI }
 	}
 	
+	dreamtime = {
+		icon = 29
+		color = { 197 133 43 }
+		country = {
+			shock_damage_received = -0.05
+			diplomatic_reputation = 1
+		}
+		country_as_secondary = {
+			shock_damage = 0.1
+			hostile_attrition = 2
+		}
+		
+		fetishist_cult = yes
+		heretic = { WAGYLKOOP MOORAMOORA GINGARRURNDE }
+	}
+	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pagan
 }
@@ -2360,7 +3175,7 @@ jewish_group = {
 
 	jewish = {
 		icon = 20
-		color = { 153 25 102 }
+		color = { 0 156 231 }
 		country = {
 			tolerance_own = 2
 			advisor_pool = 1
@@ -2373,7 +3188,93 @@ jewish_group = {
 			local_missionary_strength = -0.02
 		}
 		
+		uses_judaism_power = yes
+		aspects_name = JEWISH_ASPECTS
+			
+		aspects = {
+			judaism_rosh_hashanah_aspect
+			judaism_simchat_torah_aspect
+			judaism_sukkot_aspect
+			judaism_communities_aspect
+			jewish_abrahamic_aspect
+			judaism_diplomatic_rabbi_aspect
+			judaism_yom_kippur_aspect
+			judaism_remember_passover_aspect
+			judaism_purim_teachings_aspect
+		}
+		
 		heretic = { SAMARITAN KARAITE }
+
+		celebrate = {
+			cost = 200
+			potential = {
+			}
+			allow = {
+				custom_trigger_tooltip = {
+					tooltip = JUDAISM_HAS_ADM_ASPECT
+					OR = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+						has_church_aspect = judaism_simchat_torah_aspect
+						has_church_aspect = judaism_sukkot_aspect
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+					}
+					NOT = { stability = 3 }
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_church_aspect = judaism_rosh_hashanah_aspect
+					}
+					add_stability = 1
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_simchat_torah_aspect
+					}
+					change_government_reform_progress = 20
+					add_legitimacy_equivalent = {
+						amount = 5
+						republican_tradition = 5
+					}
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						add_heir_claim = 5
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = judaism_sukkot_aspect
+					}
+					add_years_of_income = 0.3
+					add_inflation = -1
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							NOT = { has_church_aspect = judaism_communities_aspect }
+							NOT = { has_church_aspect = jewish_abrahamic_aspect }
+							NOT = { has_church_aspect = judaism_diplomatic_rabbi_aspect }
+						}
+						AND = {
+							NOT = { has_church_aspect = judaism_yom_kippur_aspect }
+							NOT = { has_church_aspect = judaism_remember_passover_aspect }
+							NOT = { has_church_aspect = judaism_purim_teachings_aspect }
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	harmonized_modifier = harmonized_jewish_group
@@ -2398,6 +3299,16 @@ zoroastrian_group = {
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
+		}
+
+		holy_sites = { 421 4430 2223 441 2235 }
+
+		blessings = {
+			blessing_yasna
+			blessing_haoma
+			blessing_navjote
+			blessing_manthras
+			blessing_dakhma
 		}
 		
 		heretic = { MAZDAKI MANICHEAN }	

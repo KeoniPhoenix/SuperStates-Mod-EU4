@@ -22,7 +22,7 @@ ONT = {
 
 NYS = {
 	NOT = { 
-		exists = MAA
+		exists = MID
 		is_year = 1650
 	}
 }

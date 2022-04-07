@@ -40,6 +40,33 @@ cb_restore_personal_union = {
 	war_goal = take_capital_personal_union
 }
 
+#Hundred Years War
+cb_hundred_years_war = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 240
+
+	prerequisites = {
+		OR = {
+			government = monarchy
+			has_reform = dutch_republic
+		}
+		is_revolutionary = no
+		FROM = {
+			OR = {
+				government = monarchy
+				has_reform = ambrosian_republic
+				# has_reform = military_dictatorship_reform
+				has_country_flag = neapolitan_republic
+			}
+			is_subject = no
+		}
+	}
+
+	war_goal = take_capital_hundred_years_war
+}
+
 # Defected province
 cb_defection = {
 	valid_for_subject = no
@@ -106,7 +133,7 @@ cb_dishonored_call = {
 	valid_for_subject = no
 
 	is_triggered_only = yes
-	months = 36
+	months = 96
 
 	war_goal = superiority_insult
 }
@@ -167,7 +194,9 @@ cb_trade_war_triggered = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -188,8 +217,10 @@ cb_trade_conflict = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_form_personal_union
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_transfer_vassals
 	}
 }
@@ -212,7 +243,9 @@ cb_trade_league_conflict = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -305,6 +338,12 @@ cb_humiliate = {
 		is_revolutionary = no
 	}
 
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_subjugate_vassal
+	}
+
 	war_goal = humiliate
 }
 
@@ -338,6 +377,7 @@ cb_independence_war = {
 		is_subject_other_than_tributary_trigger = yes
 		is_subject_of = FROM
 		NOT = { is_colonial_nation_of = FROM }
+		NOT = { has_country_flag = burgundy_during_imperial_incident }
 		OR = {
 			AND = {
 				NOT = { has_reform = daimyo }
@@ -349,6 +389,16 @@ cb_independence_war = {
 							has_reform = pirate_king_reform
 							has_reform = war_against_the_world_doctrine_reform
 							has_reform = black_market_consortium_reform
+						}
+					}
+				}
+				NOT = {
+					AND = {
+						has_country_flag = ikko_ikki_peasants_flag
+						OR = {
+							has_reform = leading_clergy_reform
+							has_reform = monastic_order_reform
+							has_reform = peasants_republic
 						}
 					}
 				}
@@ -453,6 +503,14 @@ cb_daimyo_annex = {
 					has_reform = black_market_consortium_reform
 				}
 			}
+			AND = {
+				has_country_flag = ikko_ikki_peasants_flag
+				OR = {
+					has_reform = leading_clergy_reform
+					has_reform = monastic_order_reform
+					has_reform = peasants_republic
+				}
+			}
 		}
 		from = { has_reform = shogunate }
 		is_revolutionary = no
@@ -482,6 +540,14 @@ cb_independent_daimyo_annex = {
 					has_reform = black_market_consortium_reform
 				}
 			}
+			AND = {
+				has_country_flag = ikko_ikki_peasants_flag
+				OR = {
+					has_reform = leading_clergy_reform
+					has_reform = monastic_order_reform
+					has_reform = peasants_republic
+				}
+			}
 		}
 		from = { has_reform = shogunate }
 		is_revolutionary = no
@@ -505,6 +571,14 @@ cb_shogun_annex = {
 						has_reform = pirate_king_reform
 						has_reform = war_against_the_world_doctrine_reform
 						has_reform = black_market_consortium_reform
+					}
+				}
+				AND = {
+					has_country_flag = ikko_ikki_peasants_flag
+					OR = {
+						has_reform = leading_clergy_reform
+						has_reform = monastic_order_reform
+						has_reform = peasants_republic
 					}
 				}
 			}
@@ -535,6 +609,14 @@ cb_sengoku = {
 					has_reform = black_market_consortium_reform
 				}
 			}
+			AND = {
+				has_country_flag = ikko_ikki_peasants_flag
+				OR = {
+					has_reform = leading_clergy_reform
+					has_reform = monastic_order_reform
+					has_reform = peasants_republic
+				}
+			}
 		}
 		is_neighbor_of = FROM
 		is_subject = yes
@@ -548,6 +630,14 @@ cb_sengoku = {
 						has_reform = pirate_king_reform
 						has_reform = war_against_the_world_doctrine_reform
 						has_reform = black_market_consortium_reform
+					}
+				}
+				AND = {
+					has_country_flag = ikko_ikki_peasants_flag
+					OR = {
+						has_reform = leading_clergy_reform
+						has_reform = monastic_order_reform
+						has_reform = peasants_republic
 					}
 				}
 			}
@@ -652,6 +742,7 @@ cb_liberation = {
 # Holy War
 cb_crusade = {
 	valid_for_subject = no
+	holy_war = yes
 
 	prerequisites = {
 		NOT = { has_reform = religious_permanent_revolution_reform }
@@ -693,6 +784,7 @@ cb_crusade = {
 # Holy War
 cb_crusade_pheasants = {
 	valid_for_subject = no
+	holy_war = yes
 	is_triggered_only = yes
 	months = 60
 
@@ -749,10 +841,6 @@ cb_heretic = {
 			FROM = { capital_scope = { is_part_of_hre = no } }
 		}
 		is_revolutionary = no
-	}
-
-	allowed_provinces = {
-		always = yes
 	}
 
 	war_goal = superiority_heretic
@@ -819,7 +907,9 @@ cb_trade_war = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -844,7 +934,9 @@ cb_trade_league_dispute = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -894,10 +986,6 @@ cb_super_badboy = {
 		coalition_target = FROM
 		NOT = { FROM = { is_in_coalition_war = yes } }
 		num_of_coalition_members = 3
-		has_opinion_modifier = {
-			modifier = aggressive_expansion
-			who = FROM
-		}
 		is_revolutionary = no
 	}
 
@@ -1023,8 +1111,13 @@ cb_crush_the_revolution = {
 
 	prerequisites = {
 		OR = {
-			capital_scope = { continent = europe }
 			is_neighbor_of = FROM
+			NOT = {
+				border_distance = {
+					who = FROM
+					distance = 200
+				}
+			}
 		}
 		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
@@ -1134,7 +1227,9 @@ cb_humiliate_rotw = {
 		po_release_annexed
 		po_return_cores
 		po_become_vassal
+		po_subjugate_vassal
 		po_become_tributary_state
+		po_subjugate_tributary_state
 		po_form_personal_union
 		po_transfer_vassals
 	}
@@ -1162,6 +1257,7 @@ cb_chinese_unification = {
 					NOT = { primary_culture = manchu }
 				}
 			}
+			has_government_attribute = has_unify_china_cb
 		}
 		
 		FROM = { #Applies against other powers in China unless they have the Mandate of Heaven
@@ -1178,8 +1274,14 @@ cb_chinese_unification = {
 				}
 			}
 			NOT = { has_country_modifier = the_mandate_of_heaven }
+			is_emperor_of_china = no
 		}
 		is_neighbor_of = FROM
+	}
+
+	attacker_disabled_po = {
+		po_become_tributary_state
+		po_subjugate_tributary_state
 	}
 
 	war_goal = superiority_chinese_unification
@@ -1201,26 +1303,18 @@ cb_take_mandate = {
 		}
 		NOT = { truce_with = FROM }
 		is_revolutionary = no
+		
+		OR = {
+			ai = no
+			culture_group = east_asian
+			any_owned_province = {
+				culture_group = east_asian
+				has_owner_accepted_culture = yes
+			}
+		}
 	}
 
 	war_goal = take_capital_take_mandate
-}
-
-# Force migration
-cb_force_migration = {
-
-	valid_for_subject = no
-
-	prerequisites = {
-		has_dlc = "The Cossacks"
-		is_neighbor_of = FROM
-		is_free_or_tributary_trigger = yes
-		FROM = {
-			can_migrate = yes
-			is_free_or_tributary_trigger = yes
-		}
-	}
-	war_goal = force_migration
 }
 
 # Forced our ally to break alliance
@@ -1242,7 +1336,36 @@ cb_force_tributary = {
 		is_emperor_of_china = yes
 		FROM = { is_subject = no }
 		is_neighbor_of = FROM
+		OR = {
+			ai = no
+			AND = {
+				OR = {
+					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+					AND = {
+						ROOT = { capital_scope = { superregion = china_superregion } }
+						NOT = { FROM = { any_owned_province = { superregion = china_superregion } } }
+					}
+				}
+				OR = {
+					NOT = { ROOT = { capital_scope = { region = japan_region } } }
+					AND = {
+						ROOT = { capital_scope = { region = japan_region } }
+						NOT = { FROM = { any_owned_province = { region = japan_region } } }
+					}
+				}
+			}
+		}
 	}
+	
+	war_goal = take_capital_force_tributary
+}
+
+cb_force_tributary_mission = {
+
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 300
 	
 	war_goal = take_capital_force_tributary
 }
@@ -1293,6 +1416,15 @@ cb_force_join_hre = {
 	war_goal = take_capital_force_join_hre
 }
 
+cb_reintegrate_into_hre = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 120
+
+	war_goal = take_capital_reintegrate_into_hre
+}
+
 # A HRE prince has been annexed
 cb_imperial_realm_war = {
 	valid_for_subject = no
@@ -1323,10 +1455,194 @@ cb_world_crusade = {
 				FROM = { religion_group = pagan }
 			}
 		}
-		NOT = { religion_group = FROM }
+		NOT = { religion = FROM }
 		NOT = {	has_matching_religion = FROM }
 		is_revolutionary = no
 	}
 
 	war_goal = superiority_world_crusade
+}
+
+# CB for Majapahit
+cb_vassalize_majapahit = {
+	valid_for_subject = no
+
+	prerequisites = {
+		mission_completed = mnd_maj_enforce_loyalty
+		FROM = {
+			is_free_or_tributary_trigger = yes
+			OR = {
+				culture_group = malay
+				AND = {
+					technology_group = chinese
+					ROOT = { mission_completed = mnd_maj_gaja_madas_oath }
+				}
+				ROOT = { mission_completed = mnd_maj_subjugate_the_mainland }
+			}
+		}
+	}
+
+	war_goal = take_capital_vassalize_maj
+}
+
+# For Malacca
+cb_vassalize_malacca = {
+	valid_for_subject = no
+
+	prerequisites = {
+		mission_completed = mnd_mlc_destroy_majapahit
+		FROM = {
+			is_free_or_tributary_trigger = yes
+			culture_group = malay
+		}
+	}
+
+	war_goal = take_capital_vassalize_maj
+}
+
+cb_sword_of_islam = {
+	valid_for_subject = no
+
+	prerequisites = {
+		mission_completed = atj_porch_of_mecca
+		religion = sunni
+		FROM = {
+			NOT = { religion_group = muslim }
+			OR = {
+				primary_culture = sumatran
+				AND = {
+					ROOT = { mission_completed = atj_sumatra_islam }
+					OR = {
+						primary_culture = javanese
+						primary_culture = sundanese
+					}
+				}
+				AND = {
+					ROOT = { mission_completed = atj_java_islam }
+					OR = {
+						primary_culture = sulawesi
+						primary_culture = moluccan
+					}
+				}
+				AND = {
+					ROOT = { mission_completed = atj_moluccas_islam }
+					is_neighbor_of = ROOT
+				}
+			}
+		}
+	}
+
+	war_goal = superiority_world_crusade
+}
+
+# Force migration
+cb_force_migration = {
+
+	valid_for_subject = no
+
+	prerequisites = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			is_native_tribe = yes
+			is_migratory_tribe = yes
+		}
+		FROM = {
+			is_migratory_tribe = yes
+			OR = {
+				AND = {
+					is_native_tribe = yes
+					capital_scope = {
+						tribal_land_of = ROOT
+					}
+				}
+				is_native_tribe = no
+			}
+		}
+	}
+	war_goal = force_migration
+}
+
+# 
+cb_native_american_tribal_feud = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_dlc = "Conquest of Paradise"
+		is_native_tribe = yes
+		FROM = {
+			is_native_tribe = yes
+			if = {
+				limit = { 
+					capital_scope = {
+						tribal_land_of = FROM
+					}
+				}
+				is_neighbor_of = ROOT # This is faster method so let's do this for the general case
+			}
+			else = {
+				any_tribal_land = {
+					any_neighbor_province = {
+						tribal_land_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	war_goal = take_native_american_land
+
+	attacker_disabled_po = {
+		po_become_vassal
+		po_subjugate_vassal
+		po_become_tributary_state
+		po_subjugate_tributary_state
+	}
+}
+
+# Burn European Colonies
+cb_push_back_colonizers = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_dlc = "Conquest of Paradise"
+		is_native_tribe = yes
+		FROM = {
+			is_native_tribe = no
+			OR = {
+				is_neighbor_of = ROOT
+				any_owned_province = {
+					tribal_land_of = ROOT
+				}
+			}
+		}
+	}
+
+	war_goal = push_back_colonizers
+}
+
+##SuperStates
+
+#Conquer America
+cb_successor_america = {
+	valid_for_subject = no
+
+	prerequisites = {
+		mission_completed = wdc_successor
+		FROM = {
+			is_neighbor_of = ROOT
+			any_owned_province = {
+				OR = {
+					superregion = america_superregion
+					area = aleutia_area
+					area = alaska_area
+					area = hawaii_area
+					area = leeward_hawaiian_islands_area
+					province_id = 970
+					province_id = 971
+				}
+			}
+		}
+	}
+
+	war_goal = take_province_successor
+	
 }

@@ -1,0 +1,236 @@
+ini_conquest = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = INI
+	}
+	has_country_shield = yes
+
+	ini_chicago = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2565 #Chicago
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2565 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			chicagoland_area = {
+				add_permanent_claim = ROOT
+			}
+			illinois_area = {
+				add_permanent_claim = ROOT
+			}
+			sangamon_area = {
+				add_permanent_claim = ROOT
+			}
+			little_egypt_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ini_illinois = {
+		icon = mission_cannons_firing
+		required_missions = { ini_chicago }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = illinois_area
+				area = sangamon_area
+				area = little_egypt_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = illinois_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = sangamon_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = little_egypt_area
+			}
+		}
+		effect = {
+			kentucky_area = {
+				add_permanent_claim = ROOT
+			}
+			pennyroyal_area = {
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ini_michigan = {
+		icon = mission_assemble_an_army
+		required_missions = { ini_illinois }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = michigan_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			michigan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			maumee_area = {
+				add_permanent_claim = ROOT
+			}
+			wisconsin_area = {
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ini_wisconsin = {
+		icon = mission_have_two_subjects
+		required_missions = { ini_michigan }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+				area = wisconsin_area
+				province_id = 2558
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			green_bay_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = wisconsin_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1
+				province_id = 2558 #Milwaukee
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			add_adm_power = 50
+			upper_peninsula_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+ini_more = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = INI
+	}
+	has_country_shield = yes
+
+	ini_kentucky = {
+		icon = mission_conquer_50_development
+		required_missions = { ini_illinois }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = kentucky_area
+				area = pennyroyal_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kentucky_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pennyroyal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			tennessee_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	ini_maumee = {
+		icon = mission_conquer_5_states
+		required_missions = { ini_michigan }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = maumee_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maumee_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			ohio_area = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "army_enthusiasm"
+				duration = 9125 #25 years
+			}
+		}
+	}
+
+	ini_ohio = {
+		icon = mission_cannons_firing
+		required_missions = { ini_maumee }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = ohio_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maumee_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 75
+			erie_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}

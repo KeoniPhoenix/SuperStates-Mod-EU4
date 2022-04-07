@@ -20,7 +20,7 @@ country_event = {
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = hawaiian }
-			NOT = { is_core = HAW }
+			NOT = { is_core = HWI }
 			NOT = { is_core = MWA }
 		}
 	}

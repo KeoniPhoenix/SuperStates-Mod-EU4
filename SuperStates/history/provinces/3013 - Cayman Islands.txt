@@ -12,7 +12,7 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 #discovered_by = north_american
-discovered_by = mesoamerican
+#discovered_by = mesoamerican
 
 center_of_trade = 1
 
@@ -45,7 +45,7 @@ center_of_trade = 1
 	add_core = WSI
 }
 1959.11.6 = {
-	add_core = CAY
+	add_core = CYM
 	culture = caymanian
 }
 1962.5.31 = {
@@ -54,6 +54,6 @@ center_of_trade = 1
 	remove_core = WSI
 }
 1972.1.1 = {
-	owner = CAY
-	controller = CAY
+	owner = CYM
+	controller = CYM
 }

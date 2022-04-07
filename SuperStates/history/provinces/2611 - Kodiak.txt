@@ -1,11 +1,11 @@
-#Worcester
+#Bristol
 
 owner = MSS
 controller = MSS
 add_core = MSS
 culture = bay_stater
 religion = s_catholic
-capital = "Worcester"
+capital = "Taunton"
 trade_goods = naval_supplies
 hre = no
 base_tax = 4
