@@ -39,36 +39,8 @@ country_decisions = {
 			}
 		}
 		allow = {
-			average_unrest = 1	#This is not suppose to be an easy tag to form because its overpowered in its effects
 			adm_tech = 15
-			stability = 3
-			OR = {
-				AND = {
-					adm_power = 400
-					NOT = { full_idea_group = administrative_ideas }
-				}
-				full_idea_group = administrative_ideas
-			}
-			OR = {
-				AND = {
-					dip_power = 400
-					NOT = { full_idea_group = diplomatic_ideas }
-				}
-				full_idea_group = diplomatic_ideas
-			}
-			OR = {
-				AND = {
-					mil_power = 400
-					OR = {
-						NOT = { full_idea_group = plutocracy_ideas }
-						NOT = { full_idea_group = aristocracy_ideas }
-					}
-				}
-				OR = {
-					full_idea_group = aristocracy_ideas
-					full_idea_group = plutocracy_ideas
-				}
-			}
+			stability = 2
 			is_subject = no
 			is_at_war = no
 			owns_core_province = 484 	# Havana
@@ -129,24 +101,7 @@ country_decisions = {
 		effect = {
 			hidden_effect = {
 				restore_country_name = yes
-			}
-			if = {
-				limit = { NOT = { full_idea_group = administrative_ideas } }
-				add_adm_power = -400
-			}
-			if = {
-				limit = { NOT = { full_idea_group = diplomatic_ideas } }
-				add_dip_power = -400
-			}
-			if = {
-				limit = {
-					OR = {
-						NOT = { full_idea_group = aristocracy_ideas }
-						NOT = { full_idea_group = plutocracy_ideas }
-					}
-				}
-				add_mil_power = -400
-			}		
+			}	
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

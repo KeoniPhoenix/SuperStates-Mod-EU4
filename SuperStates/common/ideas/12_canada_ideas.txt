@@ -23,7 +23,6 @@ ACD_ideas = {
 
 	throw_out_the_occupiers = {
 		culture_conversion_cost = -0.20
-		enemy_core_creation = 0.10
 	}
 	reorganization_of_the_defenses = {
 		defensiveness = 0.15
@@ -33,7 +32,6 @@ ACD_ideas = {
 	}
 	the_new_acadian_navy = {
 		naval_morale = 0.10
-		global_ship_trade_power = 0.05
 	}
 	resources_for_recovery = {
 		development_cost = -0.10
@@ -51,11 +49,11 @@ ACD_ideas = {
 ABR_ideas = {
 	start = {
 		land_morale = 0.15
-		trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 
 	bonus = {
-		army_tradition = 1
+		army_tradition = 0.5
 	}
 	
 	trigger = {
@@ -64,14 +62,14 @@ ABR_ideas = {
 	free = yes		#will be added at load.
 	
 	dominion_lands_act = {
-		development_cost = -0.05
+		development_cost = -0.1
 		tolerance_heretic = 1
 	}
 	northwest_mounted_police = {
 		cavalry_power = 0.20
 	}
 	prairie_militia = {
-		cavalry_flanking = 0.50
+		cavalry_flanking = 1
 	}
 	early_harvest = {
 		global_manpower_modifier = 0.33
@@ -92,7 +90,7 @@ ABR_ideas = {
 
 BCO_ideas = {
 	start = {
-		naval_morale = 0.20
+		naval_morale = 0.15
 		global_sailors_modifier = 0.20
 	}
 
@@ -123,7 +121,7 @@ BCO_ideas = {
 		technology_cost = -0.10
 	}
 	columbia_district = {
-		trade_steering = 0.20
+		global_trade_power = 0.15
 	}
 	ferry_network = {
 		transport_cost = -0.10
@@ -254,7 +252,7 @@ MDW_ideas = {
 	}
 	neither_mainer_quebecois_or_acadian = {
 		culture_conversion_cost = -0.20
-		enemy_core_creation = 0.10
+		hostile_attrition = 1
 	}
 	assessing_our_own_taxes = {
 		global_tax_modifier = 0.10
@@ -267,7 +265,6 @@ MDW_ideas = {
 	}
 	porcupine_and_eagle_diplomacy = {
 		diplomatic_reputation = 1
-		diplomatic_upkeep = 1
 	}
 	the_legend_of_aroostooks_baker = {
 		diplomats = 1
@@ -314,8 +311,8 @@ MTB_ideas = {
 		production_efficiency = 0.10
 	}
 	york_factory_express = {
-		trade_range_modifier = 0.10
-		trade_steering = 0.10
+		trade_range_modifier = 0.2
+		caravan_power = 0.25
 	}
 }
 
@@ -323,7 +320,7 @@ MTB_ideas = {
 
 MTL_ideas = {
 	start = {
-		trade_range_modifier = 0.15
+		trade_steering = 0.2
 		merchants = 1
 	}
 	
@@ -338,7 +335,7 @@ MTL_ideas = {
 	
 	goods_and_services_tax2 = {
 		global_trade_power = 0.15
-		center_of_trade_upgrade_cost = -0.10
+		center_of_trade_upgrade_cost = -0.2
 	}
 	grand_exposition = {
 		prestige = 1
@@ -350,7 +347,7 @@ MTL_ideas = {
 		interest = -0.5
 	}
 	port_on_the_seaway = {
-		global_sailors_modifier = 0.15
+		global_sailors = 3000
 		light_ship_cost = -0.20
 	}
 	ville_marie = {
@@ -370,7 +367,7 @@ NBR_ideas = {
 	}
 
 	bonus = {
-		naval_attrition = -0.10
+		naval_attrition = -0.20
 	}
 	
 	trigger = {
@@ -390,20 +387,19 @@ NBR_ideas = {
 		global_ship_cost = -0.05
 	}
 	bay_of_fundy = {
-		technology_cost = -0.05
 		trade_efficiency = 0.10
 	}
 	north_shore_regiment = {
 		discipline = 0.05
 	}
 	center_for_transport = {
-		trade_range_modifier = 0.20
+		global_trade_power = 0.1
 	}
 	timber_economy = {
 		build_cost = -0.10
 	}
 	drive_back_the_fenians = {
-		fire_damage = 0.10
+		land_morale = 0.1
 	}
 }
 
@@ -416,7 +412,7 @@ NFL_ideas = {
 	}
 
 	bonus = {
-		global_ship_cost = -0.05
+		global_ship_cost = -0.1
 	}
 	
 	trigger = {
@@ -438,7 +434,6 @@ NFL_ideas = {
 		land_morale = 0.10
 	}
 	goose_bay = {
-		leader_land_manuever = 1
 		leader_naval_manuever = 1
 	}
 	resource_rich = {
@@ -460,7 +455,7 @@ NWF_ideas = {
 	}
 
 	bonus = {
-		global_ship_cost = -0.05
+		global_ship_cost = -0.1
 	}
 	
 	trigger = {
@@ -531,7 +526,7 @@ NVS_ideas = {
 		prestige = 1
 	}
 	william_d_lawrence = {
-		heavy_ship_power = 0.10
+		global_trade_power = 0.15
 		navy_tradition = 0.25
 	}
 	a_home_for_all = {
@@ -569,7 +564,7 @@ NWT_ideas = {
 		governing_capacity_modifier = 0.15
 	}
 	diamond_mine_income = {
-		global_trade_goods_size_modifier = 0.05
+		global_trade_goods_size_modifier = 0.1
 	}
 	ice_roads = {
 		movement_speed = 0.15
@@ -606,13 +601,13 @@ NUN_ideas = {
 	free = yes		#will be added at load.
 	
 	land_of_the_inuit = {
-		land_morale = 0.10
+		land_morale = 0.15
 	}
 	hudson_strait = {
-		trade_steering = 0.20
+		global_trade_power = 0.15
 	}
 	helluland_repulsers = {
-		infantry_power = 0.10
+		infantry_power = 0.15
 	}
 	far_and_wide = {
 		governing_capacity_modifier = 0.20
@@ -710,7 +705,7 @@ PEI_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	birthplace_of_confederation = {
-		free_dip_policy = 1
+		diplomatic_reputation = 2
 	}
 	acadian_immigration = {
 		tolerance_heretic = 1
@@ -791,7 +786,7 @@ SSK_ideas = {
 		global_tax_modifier = 0.10
 	}
 	saskatchewan_dragoons = {
-		cav_to_inf_ratio = 0.10
+		cav_to_inf_ratio = 0.2
 		cavalry_flanking = 0.50
 	}
 	fur_trade_station = {
@@ -804,7 +799,7 @@ SSK_ideas = {
 		prestige_from_land = 1
 	}
 	orientation_for_social_justice = {
-		stability_cost_modifier = -0.10
+		global_unrest = -1
 	}
 }
 
@@ -817,7 +812,7 @@ TTO_ideas = {
 	}
 	
 	bonus = {
-		merchants = 2
+		merchants = 1
 	}
 	
 	trigger = {
@@ -826,14 +821,14 @@ TTO_ideas = {
 	free = yes		#will be added at load.
 	
 	raccoons_and_umbrellas = {
-		embargo_efficiency = 0.25
+		embargo_efficiency = 0.75
 		privateer_efficiency = 0.15
 	}
 	golden_horseshoe = {
 		development_cost = -0.10
 	}
 	goods_and_services_tax = {
-		global_tax_modifier = 0.10
+		global_tax_modifier = 0.15
 	}
 	mollys_woods = {
 		fire_damage_received = -0.10
@@ -847,7 +842,6 @@ TTO_ideas = {
 	}
 	economic_progress = {
 		idea_cost = -0.10
-		technology_cost = -0.10
 	}
 }
 
@@ -860,7 +854,7 @@ YUK_ideas = {
 	}
 
 	bonus = {
-		core_creation = -0.20
+		core_creation = -0.15
 	}
 	
 	trigger = {
@@ -870,13 +864,14 @@ YUK_ideas = {
 	
 	masters_of_tundra_warfare = {
 		land_attrition = -0.20
+		hostile_attrition = 1
 	}
 	klondike_gold_rush = {
 		inflation_reduction = 0.10
-		production_efficiency = 0.05
 	}
 	the_great_yukon = {
 		trade_range_modifier = 0.20
+		global_own_trade_power = 0.1
 	}
 	winter_whiteouts = {
 		defensiveness = 0.20
@@ -888,7 +883,7 @@ YUK_ideas = {
 		leader_land_manuever = 1
 	}
 	highway_systems = {
-		global_institution_spread = 0.10
+		global_institution_spread = 0.2
 	}
 }
 
