@@ -1824,8 +1824,7 @@ OHI_ideas = {
 		caravan_power = 0.25
 	}
 	buckeye_prowess = {
-		infantry_power = 0.10
-		cavalry_power = 0.10
+	 	shock_damage_received = -0.10
 	}
 	mother_of_presidents = {
 		adm_tech_cost_modifier = -0.1

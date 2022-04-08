@@ -1049,7 +1049,7 @@ AUS_ideas = {
 		allowed_marine_fraction = 0.25
 	}
 	AUS_royal_navy = {
-		naval_forcelimit_modifier = 0.25
+		naval_morale = 0.2
 		disengagement_chance = 0.05
 	}
 	AUS_bushrangers = {
