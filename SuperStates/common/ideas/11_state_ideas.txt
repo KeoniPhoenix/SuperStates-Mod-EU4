@@ -2248,54 +2248,7 @@ TNN_ideas = {
 	}
 }
 
-#Texas
-
-# TEX_ideas = {
-	# start = {
-		# global_missionary_strength = 0.02
-		# army_tradition = 0.5
-	# }
-	
-	# bonus = {
-		# heavy_ship_power = 0.10
-	# }
-	
-	# trigger = {
-	# OR = {
-		# tag = TEX
-		# #tag = COM
-		# tag = LPN
-		# tag = ETX
-		# tag = NTX
-		# }
-	# }
-	# free = yes
-	
-	# the_alamo_the_goliad = {
-		# discipline = 0.05
-		# defensiveness = 0.15
-	# }
-	# galvaston_bay = {
-		# naval_forcelimit_modifier = 0.25
-	# }
-	# six_flags = {
-		# land_morale = 0.15
-	# }
-	# chisholm_trail2 = {
-		# cavalry_power = 0.20
-		# cavalry_cost = -0.05
-	# }
-	# sam_houstons_disciples = {
-		# leader_land_manuever = 1
-	# }
-	# fort_worth_stockyard = {
-		# merchants = 1
-	# }
-	# san_jacinto = {
-		# prestige_from_land = 0.50
-		# army_tradition_decay = -0.01
-	# }
-# }
+# Texas
 
 TEX_ideas = {
 	start = {	
@@ -2330,7 +2283,7 @@ TEX_ideas = {
 		cavalry_power = 0.1
 	}
 	tex_native_frontiers = {
-		defensivenss = 0.25
+		defensivness = 0.25
 	}
 	tejanos = {
 		stability_cost_modifier = -0.1
