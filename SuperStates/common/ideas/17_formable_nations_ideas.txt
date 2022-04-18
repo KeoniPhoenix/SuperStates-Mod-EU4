@@ -762,7 +762,7 @@ NAM_ideas = {
 
 PCF_ideas = {
 	start = {
-		land_forcelimit_modifier = 0.25
+		naval_morale = 0.2
 		global_manpower_modifier = 0.33
 	}
 
@@ -786,7 +786,7 @@ PCF_ideas = {
 	}
 	skilled_diplomacy = {
 		diplomatic_reputation = 2
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
 	}
 	appeal_to_the_masses_with_referendums = {
 		stability_cost_modifier = -0.10
