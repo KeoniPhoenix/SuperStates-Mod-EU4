@@ -2283,7 +2283,7 @@ TEX_ideas = {
 		cavalry_power = 0.1
 	}
 	tex_native_frontiers = {
-		defensivness = 0.25
+		defensiveness = 0.25
 	}
 	tejanos = {
 		stability_cost_modifier = -0.1
