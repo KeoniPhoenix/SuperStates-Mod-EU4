@@ -1347,9 +1347,9 @@ christian = {
 		country = {
 			tolerance_own = 2
 			leader_land_shock = 1
+			tolerance_heretic = -2
 		}
 		country_as_secondary = {
-			diplomatic_reputation = 1
 			leader_land_shock = 1
 		}
 		province = {

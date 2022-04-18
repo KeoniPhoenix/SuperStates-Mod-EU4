@@ -92,10 +92,10 @@ aspect_glory_under_the_cross = {
 aspect_confessions_from_the_state = {
 	cost = 100
 	modifier = {
-		legitimacy = 0.25
-		devotion = 0.25
-		horde_unity = 0.25
-		republican_tradition = 0.1
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		republican_tradition = 0.25
 	}
 	ai_will_do = {
 		factor = 12

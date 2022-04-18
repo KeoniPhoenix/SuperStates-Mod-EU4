@@ -102,9 +102,9 @@ aspect_support_for_local_investment = {
 aspect_faith_to_the_government = {
 	cost = 100
 	modifier = {
-		legitimacy = 0.25
-		devotion = 0.25
-		horde_unity = 0.25
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
 		republican_tradition = 0.25
 	}
 	ai_will_do = {
