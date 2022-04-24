@@ -291,7 +291,7 @@ PAU_ideas = { # Palau
 	}
 	nauru_agreement = {
 		global_prov_trade_power_modifier = 0.10
-		embargo_efficiency = 0.10==2
+		embargo_efficiency = 0.10
 	}
 }
 
