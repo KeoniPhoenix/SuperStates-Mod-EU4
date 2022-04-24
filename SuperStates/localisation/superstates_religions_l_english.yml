@@ -24,6 +24,12 @@
  s_baptist_religion_desc:0 "Baptists are those who belong to the branch of Protestantism that is distinguished by its practice of believer's baptism"
  anabaptist_religion_desc:0 "Anabaptism is a distinct branch of Christianity with its roots in the Radical Reformation, whose followers subscribe to the Schleitheim Confession"
  
+ S_METHODIST_ASPECTS_POWER_NAME:0 "Church Power"
+ S_LUTHERAN_ASPECTS_POWER_NAME:0 "Church Power"
+ S_PROTESTANT_ASPECTS_POWER_NAME:0 "Church Power"
+ AUSTRAL_PROTESTANT_ASPECTS_POWER_NAME:0 "Church Power"
+ AUSTRAL_PROTESTANT_ASPECTS_LONG: "Church Aspect"
+ 
  #friends:0 "Quaker"
  #SHAKERS:0 "Shakers"
  

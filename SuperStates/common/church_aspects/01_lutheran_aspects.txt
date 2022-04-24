@@ -1,7 +1,8 @@
 #Lutherans are more geared towards warfare
 aspect_dominus_reget_me = {
+	cost = 100
 	modifier = {
-		land_attrition = -0.10
+		land_attrition = -0.15
 	}
 	ai_will_do = {
 		factor = 1
@@ -14,6 +15,7 @@ aspect_dominus_reget_me = {
 }
 
 aspect_welcoming_churches = {
+	cost = 100
 	modifier = {
 		stability_cost_modifier = -0.10
 	}
@@ -32,6 +34,7 @@ aspect_welcoming_churches = {
 }
 
 aspect_passionate_theology = {
+	cost = 100
 	modifier = { 
 		global_missionary_strength = 0.02
 	}
@@ -45,6 +48,7 @@ aspect_passionate_theology = {
 }
 
 aspect_mighty_fortress = {
+	cost = 100
 	modifier = { 
 		defensiveness = 0.25
 	}
@@ -58,8 +62,9 @@ aspect_mighty_fortress = {
 }
 
 aspect_soliders_of_the_cross = {
+	cost = 100
 	modifier = { 
-		discipline = 0.05
+		discipline = 0.025
 	}	
 	ai_will_do = {
 		factor = 12
@@ -71,8 +76,9 @@ aspect_soliders_of_the_cross = {
 }
 
 aspect_glory_under_the_cross = {
+	cost = 100
 	modifier = { 
-		prestige = 0.5
+		prestige = 0.75
 	}
 	ai_will_do = {
 		factor = 12
@@ -84,11 +90,12 @@ aspect_glory_under_the_cross = {
 }
 
 aspect_confessions_from_the_state = {
+	cost = 100
 	modifier = {
-		legitimacy = 0.25
-		devotion = 0.25
-		horde_unity = 0.25
-		republican_tradition = 0.33
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		republican_tradition = 0.25
 	}
 	ai_will_do = {
 		factor = 12
@@ -100,6 +107,7 @@ aspect_confessions_from_the_state = {
 }
 
 aspect_missions_to_the_tribes = {
+	cost = 100
 	modifier = {
 		global_colonial_growth = 15
 	}
@@ -117,6 +125,7 @@ aspect_missions_to_the_tribes = {
 }
 
 aspect_answering_the_call_to_serve = {
+	cost = 100
 	modifier = {
 		manpower_recovery_speed = 0.1
 	}
@@ -135,8 +144,9 @@ aspect_answering_the_call_to_serve = {
 }
 
 aspect_cross_on_the_front_line = {
+	cost = 100
 	modifier = { 
-		reinforce_speed = 0.05
+		land_morale = 0.1
 	}
 	ai_will_do = {
 		factor = 10
@@ -149,8 +159,9 @@ aspect_cross_on_the_front_line = {
 }
 
 aspect_military_chaplains = {
+	cost = 100
 	modifier = { 
-		production_efficiency = 0.1
+		army_tradition = 0.5
 	}
 	ai_will_do = {
 		factor = 10
@@ -167,6 +178,7 @@ aspect_military_chaplains = {
 }
 
 aspect_integrity_through_faith = {
+	cost = 100
 	modifier = {
 		yearly_corruption = -0.1
 	}

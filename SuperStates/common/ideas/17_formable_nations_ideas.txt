@@ -412,7 +412,7 @@ GPL_ideas = {
 	}
 
 	bonus = {
-			movement_speed = 0.20
+		movement_speed = 0.20
 	}
 
 	trigger = {
@@ -731,11 +731,11 @@ NAM_ideas = {
 	}
 	our_collective_strength = {
 		global_manpower_modifier = 0.33
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.5
 	}
-	deep_supply_lines = {
-		land_attrition = -0.20
-		manpower_recovery_speed = 0.20
+	the_best_guns = {
+		backrow_artillery_damage = 0.2
+		artillery_fire = 0.75
 	}
 	power_projector = {
 		naval_attrition = -0.5
@@ -743,6 +743,7 @@ NAM_ideas = {
 	}
 	large_mighty_navy = {
 		naval_forcelimit_modifier = 0.5
+		naval_morale = 0.15
 	}
 	manifestating_our_destiny = {
 	 	administrative_efficiency = 0.1
@@ -761,7 +762,7 @@ NAM_ideas = {
 
 PCF_ideas = {
 	start = {
-		land_forcelimit_modifier = 0.25
+		naval_morale = 0.2
 		global_manpower_modifier = 0.33
 	}
 
@@ -785,7 +786,7 @@ PCF_ideas = {
 	}
 	skilled_diplomacy = {
 		diplomatic_reputation = 2
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
 	}
 	appeal_to_the_masses_with_referendums = {
 		stability_cost_modifier = -0.10
@@ -1048,7 +1049,7 @@ AUS_ideas = {
 		allowed_marine_fraction = 0.25
 	}
 	AUS_royal_navy = {
-		naval_forcelimit_modifier = 0.25
+		naval_morale = 0.2
 		disengagement_chance = 0.05
 	}
 	AUS_bushrangers = {
