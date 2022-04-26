@@ -1694,8 +1694,8 @@ confederate_republic = {
 	#}
 	legacy_equivalent = confederate_republic_legacy
 	modifiers = {
-		recover_army_morale_speed = 0.02
-		global_spy_defence = 0.1
+		infantry_power = 0.1
+		global_spy_defence = 0.2
 		max_absolutism = -30
 	}
 	
