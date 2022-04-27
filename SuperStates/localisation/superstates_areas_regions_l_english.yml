@@ -1204,6 +1204,7 @@
  michigan_provincegroup:1 "Michigan"
  lower_michigan_provincegroup:1 "Lower Michigan"
  minnesota_provincegroup:1 "Minnesota"
+ twin_cities_provincegroup:1 "Twin Cities"
  mississippi_provincegroup:1 "Mississippi"
  yazoo_provincegroup:1 "Yazoo"
  missouri_provincegroup:1 "Missouri"
@@ -1314,6 +1315,7 @@
  long_island_provincegroup:1 "Long Island"
  south_australia_provincegroup:1 "South Australia"
  western_australia_provincegroup:1 "Western Australia"
+ victoria_provincegroup:1 "Victoria"
  ## New Zealand
  south_island_provincegroup:1 "South Island"
  north_island_provincegroup:1 "North Island"
