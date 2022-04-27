@@ -159,7 +159,7 @@ country_decisions = {
 				}
 				add_permanent_claim = ASE
 			}
-			swap_non_generic_missions = yes
+			# swap_non_generic_missions = yes #Currently has no missions
 			add_government_reform = confederate_republic
 		}
 		ai_will_do = {

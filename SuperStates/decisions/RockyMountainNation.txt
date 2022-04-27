@@ -57,6 +57,7 @@ country_decisions = {
 				duration = 730
 			}
 			set_country_flag = formed_rocky_mountain_flag
+			# swap_non_generic_missions = yes #Currently has no missions
 			add_prestige = 20
 			change_tag = RKY
 			RKY = {
