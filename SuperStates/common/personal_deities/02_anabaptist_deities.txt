@@ -71,7 +71,7 @@ doctrine_the_sword =
 		modifier = {
 			factor = 0.25
 			ruler_has_personality = babbling_buffoon_personality
-			ruler_has_personality = naive_enthusiast_personality
+			ruler_has_personality = naive_personality
 		}
 	}	
 }
@@ -187,7 +187,7 @@ doctrine_the_oath =
 		}	
 		modifier = {
 			factor = 0
-			ruler_has_personality = indulgent_personality
+			ruler_has_personality = drunkard_personality
 		}		
 	}	
 }
