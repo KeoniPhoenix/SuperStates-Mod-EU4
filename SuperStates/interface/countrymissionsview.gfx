@@ -671,6 +671,11 @@ spriteTypes = {
 		name = "mission_allegheny_mountain"
 		texturefile = "gfx/interface/missions/easternamerica/mission_allegheny_mountain.dds"
 	}
+	
+	spriteType = {
+		name = "mission_lake_ontario"
+		texturefile = "gfx/interface/missions/greatlakes/mission_lake_ontario.dds"
+	}
 
 
 
