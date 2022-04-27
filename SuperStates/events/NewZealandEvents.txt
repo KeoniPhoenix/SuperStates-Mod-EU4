@@ -13,7 +13,7 @@ country_event = {
 	desc = "new_zealand_culture.1d"
 	picture = COLONIZATION_eventPicture
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
 	trigger = {
 		any_owned_province = {
@@ -87,7 +87,7 @@ country_event = {
 	desc = "new_zealand_culture.2d"
 	picture = COLONIZATION_eventPicture
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
 	trigger = {
 		any_owned_province = {
