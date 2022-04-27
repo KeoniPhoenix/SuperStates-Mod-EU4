@@ -41,8 +41,14 @@ monarch_names = {
 	"Eva #0" = -5
 	"Helen #0" = -5
 	"Nellie #0" = -1
-	"Paul#0" = 5
-	"Peter#0" = 10
+	"Paul #0" = 5
+	"Peter #0" = 5
+	"Joanna #0" = -2
+	"John #0" = 5
+	"Alexander #0" = 5
+	"Daniel #0" = 1
+	"George #0" = 1
+	"Joe #0" = 1
 }
 
 leader_names = {
