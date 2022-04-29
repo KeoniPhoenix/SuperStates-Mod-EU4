@@ -70,8 +70,10 @@ doctrine_the_sword =
 		}	
 		modifier = {
 			factor = 0.25
+			OR = {
 			ruler_has_personality = babbling_buffoon_personality
 			ruler_has_personality = naive_enthusiast_personality
+			}
 		}
 	}	
 }
