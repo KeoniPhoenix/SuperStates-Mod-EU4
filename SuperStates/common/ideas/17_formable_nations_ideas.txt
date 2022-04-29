@@ -269,6 +269,8 @@ CSA_ideas = {
 	}
 	reform_drill_training = {
 		discipline = 0.05
+		infantry_power = 0.1
+		drill_gain_modifier = 0.5
 	}
 }
 
