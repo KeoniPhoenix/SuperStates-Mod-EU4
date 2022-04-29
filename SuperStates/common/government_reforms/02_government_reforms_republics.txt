@@ -1957,7 +1957,10 @@ states_rights_reform = {
 		}
 	}
 	trigger = {
-		has_reform = slave_state_reform
+		OR = {
+			has_reform = confederate_republic
+			has_reform = slave_state_reform
+		}
 	}
 	modifiers = {
 		production_efficiency = 0.2
