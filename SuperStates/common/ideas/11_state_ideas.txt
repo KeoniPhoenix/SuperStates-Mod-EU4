@@ -1970,7 +1970,7 @@ PNN_ideas = {
 PRT_ideas = {
 	start = {
 	   	global_ship_cost = -0.10
-		ship_durability = 0.10
+		ship_durability = 0.05
 	}
 	
 	bonus = {
@@ -2003,7 +2003,7 @@ PRT_ideas = {
 		harsh_treatment_cost = -0.2
 	}
 	vieques_naval_range = {
-		naval_morale = 0.20
+		naval_morale = 0.15
 	}
 }
 
