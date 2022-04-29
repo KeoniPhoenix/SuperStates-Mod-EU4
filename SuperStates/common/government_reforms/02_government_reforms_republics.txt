@@ -1256,6 +1256,7 @@ federal_republic = {
 	modifiers = {
 		diplomatic_reputation = 1
 		global_spy_defence = 0.1
+		global_unrest = -1
 		max_absolutism = 10
 	}
 	
@@ -1310,7 +1311,7 @@ american_state_reform = {
 	valid_for_new_country = yes
 	nation_designer_cost = 10
 	modifiers = {
-		global_autonomy = -0.025
+		global_unrest = -1
 		max_absolutism = -30
 	}
 	
@@ -1383,7 +1384,6 @@ commonwealth_state_reform = {
 	valid_for_new_country = yes
 	nation_designer_cost = 10
 	modifiers = {
-		global_autonomy = -0.025
 		republican_tradition = 0.15
 		max_absolutism = -30
 	}
@@ -1423,7 +1423,8 @@ new_england_state_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
-		global_autonomy = -0.025
+		reform_progress_growth = 0.05
+		global_unrest = -1
 		max_absolutism = -30
 	}
 	
@@ -1501,7 +1502,8 @@ slave_state_reform = {
 	nation_designer_cost = 15
 	modifiers = {
 		embracement_cost = 0.20
-		global_unrest = -0.50
+		global_unrest = -1
+		production_efficiency = 0.1
 		max_absolutism = -45
 	}
 	
@@ -1549,7 +1551,8 @@ pure_westminster_reform = {
 	#	has_dlc = "American Dream"
 	#}
 	modifiers = {
-		production_efficiency = 0.05
+		global_autonomy = -0.025
+		republican_tradition = 0.15
 		max_absolutism = -25
 	}
 	
@@ -1596,8 +1599,8 @@ hybrid_westminster_reform = {
 	#	has_dlc = "American Dream"
 	#}
 	modifiers = {
-		trade_efficiency = 0.05
-		max_absolutism = -30
+		trade_efficiency = 0.1
+		max_absolutism = -25
 	}
 	
 	#factions = {
@@ -1644,6 +1647,8 @@ mexican_state_reform = {
 	#}
 	modifiers = {
 		global_autonomy = -0.025
+		global_tax_modifier = 0.1
+		stability_cost_modifier = -0.1
 		max_absolutism = -30
 	}
 	
@@ -1748,6 +1753,7 @@ texan_republic = {
 		governing_capacity = 100
 		reelection_cost = -0.10
 		free_leader_pool = 1
+		prestige = 0.5
 		max_absolutism = -30
 	}
 	
@@ -1946,15 +1952,15 @@ states_rights_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			has_reform = american_state_reform 
 			has_reform = confederate_republic
+			has_reform = slave_state_reform
 		}
 	}
 	trigger = {
 		has_reform = slave_state_reform
 	}
 	modifiers = {
-		production_efficiency = 0.10
+		production_efficiency = 0.2
 		harsh_treatment_cost = -0.10
 		global_unrest = 2
 	}
@@ -2159,8 +2165,8 @@ primary_elections_reform = {
 		}
 	}
 	modifiers = {
-		yearly_corruption = -0.025
-		global_spy_defence = 0.05
+		yearly_corruption = -0.01
+		stability_cost_modifier = -0.1
 	}
 }
 
@@ -2283,6 +2289,7 @@ parishes_reform = {
 	modifiers = {
 		build_cost = -0.10
 		global_missionary_strength = 0.01
+		governing_capacity = 75
 	}
 	ai = {
 		factor = 1
@@ -2315,8 +2322,9 @@ boroughs_reform = {
 		}
     }
 	modifiers = {
-		global_tax_modifier = 0.10
-		state_governing_cost = -0.10
+		global_tax_modifier = 0.1
+		governing_capacity = 150
+		global_autonomy = 0.025
 	}
 	ai = {
 		factor = 1
@@ -2396,7 +2404,6 @@ alaskan_boroughs_reform = {
 	}
 	modifiers = {
 		development_cost = -0.10
-		yearly_corruption = -0.05
 		state_governing_cost = -0.10
 	}
 	ai = {
@@ -2598,8 +2605,9 @@ semipresidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
-		global_institution_spread = 0.05
-		improve_relation_modifier = 0.05
+		embracement_cost = -0.05
+		global_unrest = -0.5
+		global_tax_modifier = 0.05
 	}
 	ai = {
 		factor = 1.5
@@ -2949,7 +2957,7 @@ bishopric_electors_reform  = {
 	modifiers = {
 		global_unrest = -1
 		missionaries = 1
-		global_missionary_strength = 0.05
+		global_missionary_strength = 0.03	
 	}
 	ai = {
 		factor = 1.5
@@ -2968,7 +2976,7 @@ senatorial_class_reform  = {
 	
 	modifiers = {
 		diplomatic_reputation = 1
-		leader_cost = -0.10
+		reelection_cost = -0.1
 	}
 	ai = {
 		factor = 1.5
@@ -2993,7 +3001,7 @@ freemen_and_slaveholders_reform = {
 	
 	modifiers = {
 		reelection_cost = -0.05
-		leader_cost = -0.05
+		global_unrest = -1.5
 	}
 	ai = {
 		factor = 1.5
