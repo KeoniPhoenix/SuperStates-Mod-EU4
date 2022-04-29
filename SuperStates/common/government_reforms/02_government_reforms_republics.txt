@@ -1648,7 +1648,6 @@ mexican_state_reform = {
 	modifiers = {
 		global_autonomy = -0.025
 		global_tax_modifier = 0.1
-		stability_cost_modifier = -0.1
 		max_absolutism = -30
 	}
 	
