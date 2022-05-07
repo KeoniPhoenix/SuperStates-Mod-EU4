@@ -1,4 +1,4 @@
-ili_territorial = {
+ili_slot_1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -6,149 +6,11 @@ ili_territorial = {
 		tag = ILI
 	}
 	has_country_shield = yes
-	
-	ili_milwaukee = {
-		icon = mission_assemble_an_army
-		required_missions = { ili_buildup }
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2558 #Milwaukee
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			2558 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			wisconsin_area = {
-				add_permanent_claim = ROOT
-			}
-			green_bay_area = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	ili_wisconsin = {
-		icon = mission_cannons_firing
-		required_missions = { ili_milwaukee }
-		position = 3
-		provinces_to_highlight = {
-			OR = {
-				province_group = wisconsin_provincegroup
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				area = wisconsin_area
-			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 2
-				area = green_bay_area
-			}
-		}
-		effect = {
-			2577 = { #marquette
-				add_permanent_claim = ROOT
-			}
-			twin_cities_area = {
-				add_permanent_claim = ROOT
-			}
-			superior_area = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	ili_minnesota = {
-		icon = mission_have_two_subjects
-		required_missions = { ili_wisconsin }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				area = twin_cities_area
-				area = superior_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			superior_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			twin_cities_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			the_lakes_area = {
-				add_claim = ROOT
-			}
-			add_adm_power = 100
-		}
-	}
-}
-
-ili_west = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = ILI
-	}
-	has_country_shield = yes
-	
-	ili_buildup = {
-		icon = mission_build_up_to_force_limit
-		required_missions = { }
-		position = 1
-		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.8
-			num_of_generals = 1
-		}
-		effect = {
-			chicagoland_area = {
-				add_permanent_claim = ROOT
-			}
-			2554 = { #Scott
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	ili_scott = {
-		icon = mission_have_two_subjects
-		required_missions = { ili_buildup}
-		position = 2
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2554
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			2554 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			iowa_area = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
 
 	ili_iowa = {
-		icon = mission_conquer_50_development
-		required_missions = { ili_scott }
-		position = 3
+		icon = mission_civil_war_battle
+		required_missions = { }
+		position = 1
 		provinces_to_highlight = {
 			OR = {
 				area = iowa_area
@@ -162,19 +24,75 @@ ili_west = {
 			}
 		}
 		effect = {
-			missouri_area = {
-				add_permanent_claim = ROOT
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
 			}
 			loess_area = {
-				add_claim = ROOT
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			the_lakes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ili_minnesota = {
+		icon = mission_have_two_subjects
+		required_missions = { ili_iowa ili_wisconsin }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = twin_cities_area
+				area = superior_area
+				area = the_lakes_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			superior_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			twin_cities_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			the_lakes_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			missouri_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			salem_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 
 	ili_missouri = {
-		icon = mission_build_up_to_force_limit
-		required_missions = { ili_iowa }
-		position = 4
+		icon = mission_unite_home_region
+		required_missions = { ili_minnesota }
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				area = missouri_area
@@ -193,42 +111,138 @@ ili_west = {
 			}
 		}
 		effect = {
+			add_adm_power = 100
 			pennyroyal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ili_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+
+	ili_wisconsin = {
+		icon = mission_cannons_firing
+		required_missions = { ili_chicagoland }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+				area = wisconsin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = wisconsin_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = green_bay_area
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			superior_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_peninsula_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
 
-	ili_kentucky = {
-		icon = mission_assemble_an_army
-		required_missions = { ili_missouri }
-		position = 5
+	ili_upper = {
+		icon = mission_ne_great_lakes_conquest
+		required_missions = { ili_wisconsin }
+		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = pennyroyal_area
+				area = upper_peninsula_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			pennyroyal_area = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = upper_peninsula_area
+			}
+		}
+		effect = {
+			northern_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "ili_lake_superior_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	ili_michigan = {
+		icon = mission_landsknecht_soldier
+		required_missions = { ili_indiana }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = michigan_area
+				province_id = 2573
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2573 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			michigan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "hegemonic_ambition"
-				duration = 9125 #25 years
+			southwest_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
-			kentucky_area = {
-				add_claim = ROOT
-			}
-			add_mil_power = 100
 		}
 	}
 }
 
-ili_east = {
+ili_slot_3 = {
 	slot = 3
 	generic = no
 	ai = yes
@@ -236,29 +250,43 @@ ili_east = {
 		tag = ILI
 	}
 	has_country_shield = yes
-	
-	ili_east_chicago = {
-		icon = mission_unite_home_region
-		required_missions = { ili_buildup }
-		position = 2
 
+	ili_chicagoland = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2570 #St Joseph
-				province_id = 3091 #Porter
+				area = chicagoland_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			2570 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			3091 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = chicagoland_area
 			}
 		}
 		effect = {
+			wisconsin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			wabash_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -266,7 +294,7 @@ ili_east = {
 
 	ili_indiana = {
 		icon = mission_assemble_an_army
-		required_missions = { ili_east_chicago }
+		required_missions = { ili_chicagoland }
 		position = 3
 
 		provinces_to_highlight = {
@@ -282,19 +310,35 @@ ili_east = {
 			}
 		}
 		effect = {
+			add_prestige = 20
 			ohio_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			maumee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
 
 	ili_ohio = {
-		icon = mission_cannons_firing
+		icon = mission_conquer_5_states
 		required_missions = { ili_indiana }
-		position = 5
+		position = 4
 
 		provinces_to_highlight = {
 			OR = {
@@ -305,7 +349,7 @@ ili_east = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 3
 				area = ohio_area
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -314,18 +358,195 @@ ili_east = {
 			}
 		}
 		effect = {
-			2579 = { #cuyahoga
-				add_claim = ROOT
+			erie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
-			michigan_area = {
-				add_claim = ROOT
+		}
+	}
+
+	ili_great_lakes = {
+		icon = mission_dominate_the_great_lakes
+		required_missions = { ili_ohio ili_michigan ili_trade }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = erie_area
+				area = southwest_ontario_area
 			}
-			add_dip_power = 100
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			erie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			southwest_ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+			add_country_modifier = {
+				name = "ili_great_lakes_secured"
+				duration = 18250
+			}
 		}
 	}
 }
 
-ili_development = {
+ili_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ILI
+	}
+	has_country_shield = yes
+
+	ili_economy_1 = { 
+		icon = mission_colonial
+		required_missions = { }
+		position = 1
+		trigger = {
+			temple = 5
+			workshop = 5
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 9125
+			}
+		}
+	}
+	
+	ili_economy_2 = {
+		icon = mission_hanseatic_city
+		required_missions = { ili_economy_1 }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = illinois_area
+				area = sangamon_area
+				area = little_egypt_area
+			}
+			NOT = {
+				development = 10
+			}
+		}
+		trigger = {
+			illinois_area = {
+				type = all
+				development = 10
+			}
+			sangamon_area = {
+				type = all
+				development = 10
+			}
+			little_egypt_area = {
+				type = all
+				development = 10
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "ili_invest_rural"
+				duration = 9125
+			}
+		}
+	}
+
+	ili_economy_3 = {
+		icon = mission_have_manufactories
+		required_missions = { ili_economy_2 }
+		position = 3
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 1.5
+		}
+	}
+
+	ili_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { ili_chicago }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2553
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 30
+						}
+					}
+				}
+				AND = {
+					province_id = 2642
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			2642 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			2553 = {
+				trade_share = {
+					country = ROOT
+					share = 30
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "ili_trade"
+				duration = 7300
+			}
+		}
+	}
+}
+
+ili_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -344,11 +565,17 @@ ili_development = {
 		}
 		trigger = {
 			2565 = {
-				owned_by = ROOT
-				development = 32
-				has_manufactory_trigger = yes
-				num_of_buildings_in_province = 4
-				religion = ROOT
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				has_building = temple
+				hidden_trigger = {
+					has_tax_building_trigger = yes
+				}
+				has_building = workshop
+				hidden_trigger = {
+					has_production_building_trigger = yes
+				}
 				if = {
 					limit = {
 						has_dlc = "Dharma"
@@ -364,48 +591,279 @@ ili_development = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = flavorILI.1000
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				chicagoland_area = {
+					add_prosperity = 100
+				}
+			}
+			else = {
+				2565 = {
+					add_province_modifier = {
+						name = "ili_chicago_investments"
+						duration = 9125
+					}
+				}
+			}
+
+			add_estate_loyalty_modifier = {
+				estate = estate_burghers
+				desc = est_ili_chicago_investments
+				loyalty = 10
+				duration = 9125
 			}
 		}
 	}
 
-	ili_trade = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { }
+	ili_culture = {
+		icon = purely_for_commerce
+		required_missions = { ili_chicago }
 		position = 4
-
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2553
-				province_id = 2642
-			}
-			NOT = {
-				trade_share = {
-					country = ROOT
-					share = 30
-				}
-			}
-		}
 		trigger = {
-			2553 = {
-				trade_share = {
-					country = ROOT
-					share = 60
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = illinoisan
+						primary_culture = little_egyptian
+						primary_culture = chicagoan
+						primary_culture = great_laker_illinoisan
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ili_has_unified_culture_tooltip
+						2565 = {
+							owned_by = ROOT
+							OR = {
+								culture = illinoisan
+								culture = little_egyptian
+							}
+							religion = ROOT
+						}
+					}
+					primary_culture = chicagoan
 				}
 			}
-			2642 = {
-				trade_share = {
-					country = ROOT
-					share = 30
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = illinoisan
+						primary_culture = chicagoan
+						primary_culture = great_laker_illinoisan
+						primary_culture = little_egyptian
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ili_has_unified_culture_tooltip_2
+						AND = {
+							2565 = {
+								owned_by = ROOT
+								OR = {
+									culture = chicagoan
+									culture = great_laker_illinoisan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = chicagoan
+									culture = great_laker_illinoisan
+								}
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ili_has_unified_culture_tooltip
+						2565 = {
+							owned_by = ROOT
+							OR = {
+								culture = illinoisan
+								culture = little_egyptian
+							}
+							religion = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				2565 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
 				}
 			}
 		}
 		effect = {
-			add_mercantilism = 2
-			add_country_modifier = {
-				name = "ili_trade"
-				duration = 7300
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = illinoisan
+						primary_culture = little_egyptian
+						primary_culture = chicagoan
+						primary_culture = great_laker_illinoisan
+					}
+				}
+				custom_tooltip = ili_illinoisan_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ili_chicagoan_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorILI.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = illinoisan
+						primary_culture = little_egyptian
+						primary_culture = chicagoan
+						primary_culture = great_laker_illinoisan
+					}
+				}
+				custom_tooltip = ili_illinoisan_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ili_chicagoan_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorILI.1000
+					}
+				}
+				custom_tooltip = ili_chicagoan_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to Illinoisan - buffs to your capital / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						2565 = {
+							owned_by = ROOT
+							religion = ROOT
+							OR = {
+								culture = illinoisan
+								culture = little_egyptian
+							}
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+
+				else_if = { #If completed by spreading Chicagoan - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						primary_culture = chicagoan
+					}
+					country_event = {
+						id = flavorILI.1000 #Event moves you to Great Laker group and moves capital to Chicago along with +2 tax and prod
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to Illinoisan - buffs to your capital 
+						2565 = {
+							owned_by = ROOT
+							religion = ROOT
+							OR = {
+								culture = illinoisan
+								culture = little_egyptian
+							}
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				else_if = { #If completed by spreading Chicagoan - trigger event 
+					limit = {
+						2565 = {
+							owned_by = ROOT
+							OR = {
+								culture = chicagoan
+								culture = great_laker_illinoisan
+							}
+						}
+						num_of_owned_provinces_with = {
+							value = 4
+							OR = {
+								culture = chicagoan
+								culture = great_laker_illinoisan
+							}
+						}
+					}
+					country_event = {
+						id = flavorILI.1000 #Event moves you to Great Laker group and moves capital to Chicago along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+				}
+			}
+		}
+	}
+
+	ili_chicago_2 = {
+		icon = mission_early_game_buildings
+		required_missions = { ili_culture }
+		position = 5
+		provinces_to_highlight = {
+			province_id = 2565 #chicago
+		}
+		trigger = {
+			2565 = {
+				owned_by = ROOT
+				development = 45
+				num_of_buildings_in_province = 6
+			}
+		}
+		effect = {
+			change_government_reform_progress = 100
+			2565 = {
+				add_province_modifier = {
+					name = "ili_chicago_permanent"
+					duration = -1
+				}
 			}
 		}
 	}

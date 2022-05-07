@@ -1,0 +1,932 @@
+wdc_slot_1 = {
+	slot = 1
+	generic = no
+	potential = {
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+		trigger = {
+			treasury = 150
+			share_of_starting_income = 2.0
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_economy_modifier" #-10 construction and production
+				duration = 9125
+			}
+		}
+	}
+
+	wdc_development = {
+		icon = mission_hanseatic_city
+		required_missions = { wdc_economy }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2616
+			}
+			AND = {
+				NOT = { development = 30 }
+				NOT = { num_of_buildings_in_province = 4 }
+			}
+		}
+		trigger = {
+			2616 = {
+				owned_by = ROOT
+				development = 30
+			}
+			2616 = {
+				num_of_buildings_in_province = 4
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_dlc = "Leviathan" }
+				2616 = {
+					add_province_modifier = {
+						name = "wdc_lev_deved_dc" #dev cost, prestige and great project cost
+						duration = -1
+					}
+				}
+			}
+			else = {
+				2616 = {
+					add_province_modifier = {
+						name = "wdc_no_lev_deved_dc" #dev cost, prestige and construction cost
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	wdc_monument_1 = {
+		icon = mission_washington_monument
+		required_missions = { wdc_development }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2616
+			}
+			NOT = {
+				AND = {
+					2616 = {
+						owned_by = ROOT
+						OR = {
+							has_great_project = {
+								type = white_house
+								tier = 2
+							}
+							has_great_project = {
+								type = white_house
+								tier = 3
+							}
+						}
+						OR = {
+							has_great_project = {
+								type = washington_monument
+								tier = 2
+							}
+							has_great_project = {
+								type = washington_monument
+								tier = 3
+							}
+						}
+						OR = {
+							has_great_project = {
+								type = smithsonian
+								tier = 2
+							}
+							has_great_project = {
+								type = smithsonian
+								tier = 3
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				custom_trigger_tooltip = {
+					tooltip = wdc_level_2_monuments_tooltip
+					2616 = {
+						owned_by = ROOT
+						OR = {
+							has_great_project = {
+								type = white_house
+								tier = 2
+							}
+							has_great_project = {
+								type = white_house
+								tier = 3
+							}
+						}
+						OR = {
+							has_great_project = {
+								type = washington_monument
+								tier = 2
+							}
+							has_great_project = {
+								type = washington_monument
+								tier = 3
+							}
+						}
+						OR = {
+							has_great_project = {
+								type = smithsonian
+								tier = 2
+							}
+							has_great_project = {
+								type = smithsonian
+								tier = 3
+							}
+						}
+					}
+				}
+			}
+			else = {
+				treasury = 2000
+				2616 = {
+					owned_by = ROOT
+					development = 40
+					num_of_buildings_in_province = 6
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 200
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				add_country_modifier = {
+					name = "wdc_lev_monument_builders"
+					duration = 10950 #30 years
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "wdc_no_lev_monument_builders"
+					duration = 10950 #30 years
+				}
+				2616 = {
+					add_province_modifier = {
+						name = "wdc_white_house_modifier" #gives bonus similiar to monument for non leviathan ppl
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+wdc_slot_1_b = {
+	slot = 1
+	generic = no
+	potential_on_load = {
+		has_dlc = "Leviathan"
+	}
+	potential = {
+		has_dlc = "Leviathan"
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_monument_2 = {
+		icon = mission_capitol_hill
+		required_missions = { wdc_monument_1 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2616
+			}
+			NOT = { development = 50 }
+		}
+		trigger = {
+			2616 = {
+				has_great_project = {
+					type = any
+					tier = 3
+				}
+			}
+			2616 = {
+				owned_by = ROOT
+				development = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_lots_of_monuments"
+				duration = -1
+			}
+		}
+	}
+}
+
+wdc_slot_2 = {
+	slot = 2
+	generic = no
+	potential = {
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_allys = {
+		icon = mission_alliances
+		required_missions = { }
+		position = 1
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+
+	wdc_statehood = {
+		icon = mission_wdc_flag
+		required_missions = { wdc_allys }
+		position = 3
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank = 2
+			}
+			else = {
+				OR = {
+					total_development = 200
+					government_rank = 2
+				}
+			}
+			grown_by_states = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_become_a_state"
+				duration = 9125
+			}
+		}
+	}
+
+	wdc_represention = {
+		icon = mission_african_gold
+		required_missions = { wdc_statehood wdc_monument_1 }
+		position = 4
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_tax_building_trigger = yes
+				value = 15
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				2616 = {
+					province_has_center_of_trade_of_level = 3
+					has_trade_building_trigger = yes
+				}
+			}
+			else = {
+				2616 = {
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_treasury = 800
+			add_country_modifier = {
+				name = "wdc_taxing_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	wdc_taxing = { #war reps/ something interesting
+		icon = mission_noble_council
+		required_missions = { wdc_represention }
+		position = 5
+		trigger = {
+			num_of_war_reparations = 5
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 30
+			}
+			add_country_modifier = {
+				name = "wdc_taxed_neighbors" #morale and wartax
+				duration = 9125
+			}
+		}
+	}
+}
+
+wdc_slot_3 = {
+	slot = 3
+	generic = no
+	potential = {
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_potomic = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = potomac_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			potomac_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			chesapeake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delmarva_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wdc_chesapeake = {
+		icon = mission_unite_home_region
+		required_missions = { wdc_allys wdc_potomic wdc_army }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = chesapeake_area
+				area = delmarva_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delmarva_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			chesapeake_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			virginia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delaware_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2585 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	wdc_virginia = {
+		icon = mission_civil_war_battle
+		required_missions = { wdc_chesapeake }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = virginia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			virginia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_in_virginia" #core cost and warscore cost
+				duration = 9125
+			}
+			blue_ridge_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_carolina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_carolina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wdc_south = {
+		icon = mission_conquer_5_states
+		required_missions = { wdc_virginia }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = north_carolina_area
+				area = blue_ridge_area
+				area = south_carolina_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_carolina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			blue_ridge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_carolina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			georgia_us_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savannah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wdc_successor = {
+		icon = mission_empire
+		required_missions = { wdc_taxing wdc_south wdc_nyc }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = mid_atlantic_region
+				area = georgia_us_area
+				area = savannah_area
+				area = blue_ridge_area
+				area = south_carolina_area
+				area = north_carolina_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			stability = 2
+			mid_atlantic_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			savannah_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			georgia_us_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "wdc_successor_modifier" #Rep tradition/Legitimacy and Stab hit reduction
+				duration = 9125
+			}
+			custom_tooltip = "wdc_get_special_cb_tooltip" #Get a Special CB, will be kept even if nation changed
+		}
+	}
+}
+
+wdc_slot_4 = {
+	slot = 4
+	generic = no
+	potential = {
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_army = {
+		icon = army_reforms
+		required_missions = { }
+		position = 1
+		trigger = {
+			num_of_generals = 1
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			3025 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2536 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	wdc_army_2 = {
+		icon = mission_washington
+		required_missions = { wdc_army }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = have_at_least_7point5_more_discipline
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.075
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.20
+			}
+			else = {
+				army_tradition = 50
+				has_commanding_three_star = yes
+			}
+		}
+		effect = {
+			add_mil_power = 200
+			add_country_modifier = {
+				name = "wdc_good_army" #discipline
+				duration = 9125
+			}
+		}
+	}
+
+	wdc_delaware = {
+		icon = mission_assemble_an_army
+		required_missions = { wdc_chesapeake }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_area
+				province_id = 2585 #Philadelphia
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2585 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			north_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delaware_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
+	wdc_jersey = {
+		icon = mission_have_two_subjects
+		required_missions = { wdc_delaware }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = north_jersey_area
+				area = south_jersey_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_jersey_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_jersey_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_conquered_jersey"
+				duration = 9125
+			}
+			new_york_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wdc_nyc = {
+		icon = mission_control_venice
+		required_missions = { wdc_jersey }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = new_york_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_york_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			long_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hudson_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+wdc_slot_5 = {
+	slot = 5
+	generic = no
+	potential = {
+		tag = WDC
+	}
+	has_country_shield = yes
+
+	wdc_navy = {
+		icon = mission_rb_a_mighty_fleet
+		required_missions = { }
+		position = 3
+		trigger = {
+			num_of_galley = 8
+			num_of_transport = 8
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wdc_navy_modifier" #33% naval range #allows to core Puerto Rico
+				duration = 9125
+			}
+			puerto_rico_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_virgin_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				discover_province = 1524
+			}
+		}
+	}
+
+	wdc_puerto = {
+		icon = mission_invade_island
+		required_missions = { wdc_navy }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = puerto_rico_area
+				area = west_virgin_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			puerto_rico_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_virgin_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			1235 = { #Guam
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			1240 = { #Saipan
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			2617 = { #Tutuila
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			3315 = { #Manua
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			create_explorer = {
+				tradition = 30
+			}
+			add_country_modifier = {
+				name = "wdc_colonizing"  #1 colonist
+				duration = 10950
+			}
+			hidden_effect = {
+				discover_province = 3315
+				discover_province = 2617
+				discover_province = 1240
+				discover_province = 1235
+				discover_province = 1726
+				discover_province = 1673
+				discover_province = 1674
+			}
+		}
+	}
+
+	wdc_territories = {
+		icon = mission_rb_grow_the_channel
+		required_missions = { wdc_puerto }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3315
+				province_id = 2617
+				province_id = 1240
+				province_id = 1235
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			1235 = {
+				owned_by = ROOT
+			}
+			1240 = {
+				owned_by = ROOT
+			}
+			2617 = {
+				owned_by = ROOT
+			}
+			3315 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			hawaii_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			leeward_hawaiian_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "wdc_navy_boost"
+				duration = 9125
+			}
+		}
+	}
+}

@@ -414,7 +414,7 @@ mss_conquests_3 = {
 	}
 
 	mss_new_hampshire = {
-		icon = mission_cannons_firing
+		icon = mission_new_hampshire_map
 		required_missions = { mss_maine_gained }
 		position = 3
 		provinces_to_highlight = {

@@ -324,7 +324,7 @@ vrm_conquests_3 = {
 	}
 
 	vrm_grants = {
-		icon = mission_landsknecht_soldier
+		icon = mission_new_hampshire_map
 		required_missions = { vrm_buildup }
 		position = 2
 		provinces_to_highlight = {
@@ -489,7 +489,7 @@ vrm_conquests_4 = {
 	has_country_shield = yes
 
 	vrm_maine = {
-		icon = mission_dominate_home_trade_node
+		icon = mission_landsknecht_soldier
 		required_missions = { vrm_grants }
 		position = 3
 		provinces_to_highlight = {
@@ -665,6 +665,10 @@ vrm_flavor = {
 			add_country_modifier = {
 				name = "vrm_green_boys_merc"
 				duration = -1
+			}
+			custom_tooltip = vrm_green_boys_ap_tooltip
+			hidden_effect = {
+				set_country_flag = vrm_green_boys_do_not_consume_ap
 			}
 		}
 	}
