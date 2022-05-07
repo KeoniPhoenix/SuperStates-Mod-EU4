@@ -677,11 +677,35 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/greatlakes/mission_lake_ontario.dds"
 	}
 
+	spriteType = {
+		name = "mission_dominate_the_great_lakes"
+		texturefile = "gfx/interface/missions/greatlakes/mission_dominate_the_great_lakes.dds"
+	}
 
+	spriteType = {
+		name = "mission_new_york_map"
+		texturefile = "gfx/interface/missions/easternamerica/mission_new_york_map.dds"
+	}
 
+	spriteType = {
+		name = "mission_massachusetts_map"
+		texturefile = "gfx/interface/missions/easternamerica/mission_massachusetts_map.dds"
+	}
 
+	spriteType = {
+		name = "mission_new_hampshire_map"
+		texturefile = "gfx/interface/missions/easternamerica/mission_new_hampshire_map.dds"
+	}
 
-	
+	spriteType = {
+		name = "mission_cowboy"
+		texturefile = "gfx//interface//missions//mission_cowboy.dds"
+	}
+
+	spriteType = {
+		name = "mission_staten_island"
+		texturefile = "gfx/interface/missions/easternamerica/mission_staten_island.dds"
+	}
 
 
 
