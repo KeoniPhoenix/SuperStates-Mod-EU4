@@ -7,40 +7,96 @@
 
 namespace = flavorILI
 
-country_event = { #chicago capital or nah
+country_event = { #Culture
 	id = flavorILI.1000
 	title = "flavorILI.1000t"
 	desc = "flavorILI.1000d"
-	picture = DEBATE_REPUBLICAN_eventPicture
+	picture = CULTURE_eventPicture
 
 	fire_only_once = yes
 
 	is_triggered_only = yes
 
-	option = { #yes to chicago
+	option = { #Yes to Chicago Capital
 		name = "flavorILI.1000opta"
-		set_capital = 2565
-		2565 = {
-			add_province_modifier = {
-				name = "ili_capital"
-				duration = -1
+		if = {
+			limit = {
+				NOT = {
+					2565 = {
+						is_capital = yes
+					}
+				}
 			}
+			set_capital = 2565
+		}
+		2565 = {
 			add_base_tax = 2
 			add_base_production = 2
-			add_base_manpower = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = great_laker_illinoisan
+				}
+			}
+			change_primary_culture = great_laker_illinoisan
+		}
+		custom_tooltip = flavorILI.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = chicagoan
+			remove_accepted_culture = illinoisan
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = chicagoan
+						culture = illinoisan
+					}
+				}
+				change_culture = great_laker_illinoisan
+			}
+		}
+		ai_chance = {
+			factor = 90
 		}
 	}
 
-	option = { #nah springfield is better
+	option = { #No to Chicago Capital
 		name = "flavorILI.1000optb"
-		capital_scope = {
-			add_province_modifier = {
-				name = "ili_capital"
-				duration = -1
+		trigger = {
+			NOT = {
+				2565 = {
+					is_capital = yes
+				}
 			}
+		}
+		capital_scope = {
 			add_base_tax = 2
 			add_base_production = 2
-			add_base_manpower = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = great_laker_illinoisan
+				}
+			}
+			change_primary_culture = great_laker_illinoisan
+		}
+		custom_tooltip = flavorILI.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = chicagoan
+			remove_accepted_culture = illinoisan
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = chicagoan
+						culture = illinoisan
+					}
+				}
+				change_culture = great_laker_illinoisan
+			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 }
