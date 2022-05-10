@@ -1,123 +1,405 @@
-njy_military_missions = { #slot 1
+njy_slot_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+
 	potential = {
 		or = {
 			tag = NJY
 			tag = SNJ
 		}
 	}
+	has_country_shield = yes
 
-
-	njy_build_army_mission = {
-		icon = mission_build_up_to_force_limit
-		required_missions = {  }
+	njy_island_dispute = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { }
 		position = 1
-		trigger = {
-			army_size_percentage = 1
-		}
-		effect = {
-			add_country_modifier = {
-				name = "thriving_arms_industry"
-				duration = 9125
-			}
-		}
-	}
 
-	njy_expand_country_mission = {
-		icon = mission_conquer_50_development
-		required_missions = { njy_build_army_mission }
-		position = 2
-		trigger = { grown_by_development = 50 }
+		trigger = {
+			OR = {
+				num_of_admirals = 1
+				sailors_percentage = 0.5
+			}
+			navy_size_percentage = 1
+		}
 		effect = {
-			capital_scope = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-				area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
-						name = "growth_of_capital"
-						duration = 9125
+			if = {
+				limit = {
+					OR = {
+						NYS = {
+							owns = 3281
+						}
+						NYC = {
+							owns = 3281
+						}
+					}
+				}
+				country_event = { id = flavorNJY.1 }
+			}
+			else = {
+				add_prestige = 20
+				3281 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+						}
+						add_core = ROOT
 					}
 				}
 			}
 		}
 	}
 
-	njy_conquer_states = {
-		icon = mission_cannons_firing
-		required_missions = { njy_expand_country_mission }
-		position = 3
-		trigger = { grown_by_states = 5 }
-		effect = {
-			add_country_modifier = {
-				name = "expansionist_country"
-				duration = 9125
-			}
-		}
-	}
+	njy_conquer_staten = {
+		icon = mission_staten_island
+		required_missions = { njy_island_dispute }
+		position = 2
 
-	njy_assemble_an_army = {
-		icon = mission_assemble_an_army
-		required_missions = { njy_conquer_states }
-		position = 4
-		trigger = { army_size = 80 }
-		effect = {
-			add_country_modifier = {
-				name = "army_enthusiasm"
-				duration = 9125
-			}
-		}
-	}
-
-	njy_unite_home_region = {
-		icon = mission_unite_home_region
-		required_missions = { njy_assemble_an_army }
-		position = 5
 		provinces_to_highlight = {
-			region_for_scope_province = {
-				is_capital_of = ROOT
+			OR = {
+				province_id = 3281
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			capital_scope = {
-				region_for_scope_province = {
-					type = all
-					owned_by = ROOT
-				}
+			3281 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_dip_power = 50
-			add_adm_power = 50
-			add_mil_power = 50
-			add_country_modifier = {
-				name = "hegemonic_ambition"
-				duration = 9125
+			country_event = { id = flavorNJY.1001 }
+			new_york_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	njy_conquer_ny = {
+		icon = mission_cannons_firing
+		required_missions = { njy_conquer_staten }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = new_york_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			new_york_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			hudson_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 20
+			country_event = { id = flavorNJY.1002 }
+		}
+	}
+
+	njy_control_hudson = {
+		icon = mission_have_two_subjects
+		required_missions = { njy_conquer_ny }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_valley_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			1500 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 10
+					key = njy_trade_hudson
+				}
+				long_island_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
 }
 
-
-njy_development = {
-	slot = 1
+njy_slot_2 = {
+	slot = 2
 	generic = no
 	ai = yes
+
 	potential = {
-		OR = {
+		or = {
 			tag = NJY
 			tag = SNJ
+		}
+	}
+	has_country_shield = yes
+
+	njy_philadelphia = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { njy_buildup }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_valley_area
+			}
+			NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			central_pennsylvania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	njy_pennsylvania = {
+		icon = mission_conquer_50_development
+		required_missions = { njy_philadelphia }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = central_pennsylvania_area
+				area = allegheny_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = central_pennsylvania_area
+					area = allegheny_area
+				}
+			}
+		}
+		effect = {
+			potomac_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shenandoah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
+	njy_maryland = {
+		icon = mission_conquer_5_states
+		required_missions = { njy_pennsylvania }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = potomac_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = potomac_area
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			chesapeake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	njy_capital_conquest = {
+		icon = mission_empire
+		required_missions = { njy_maryland njy_conquer_ny }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2531
+				province_id = 2585
+				province_id = 2616
+				province_id = 2590
+				province_id = 2601
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			2531 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2616 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2585 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2601 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = flavorNJY.1000 }
+		}
+	}
+}
+
+njy_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+
+	potential = {
+		or = {
+			tag = NJY
+			tag = SNJ
+		}
+	}
+	has_country_shield = yes
+
+	njy_buildup = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+			if = {
+				limit = {
+					exists = PNN
+				}
+				army_size = PNN
+			}
+		}
+		effect = {
+			delaware_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delaware_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	njy_delaware = {
+		icon = mission_assemble_an_army
+		required_missions = { njy_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "competitive_advantage"
+				duration = 7300
+			}
+			delmarva_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	njy_delmarva = {
+		icon = mission_landsknecht_soldier
+		required_missions = { njy_delaware }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = delmarva_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delmarva_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
 		}
 	}
 
 	njy_economy_1 = {
 		icon = mission_early_game_buildings
 		required_missions = { }
-		position = 6
+		position = 4
 
 		provinces_to_highlight = {
 			OR = {
@@ -135,9 +417,9 @@ njy_development = {
 		}
 		effect = {
 			south_jersey_area = {
-			add_province_modifier = {
-				name = "njy_south_development"
-				duration = -1
+				add_province_modifier = {
+					name = "njy_south_development"
+					duration = -1
 				}
 			}
 			if = {
@@ -153,7 +435,7 @@ njy_development = {
 	njy_economy_2 = {
 		icon = mission_have_manufactories
 		required_missions = { njy_economy_1 }
-		position = 7
+		position = 5
 
 		provinces_to_highlight = {
 			OR = {
@@ -204,568 +486,7 @@ njy_development = {
 	}
 }
 
-njy_diplomatic_missions = { #slot 2
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		or = {
-			tag = NJY
-			tag = SNJ
-		}
-	}
-
-	njy_building_alliances = {
-		icon = mission_alliances
-		required_missions = {  }
-		position = 1
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = building_alliances.tooltip
-				num_of_allies = 2
-				calc_true_if = {
-					all_ally = {
-						has_opinion = {
-							who = ROOT
-							value = 150
-						}
-					}
-					amount = 2
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "influential_diplomacy"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	njy_have_two_subjects = {
-		icon = mission_have_two_subjects
-		required_missions = { njy_building_alliances }
-		position = 2
-		trigger = { num_of_non_tributary_subjects = 2 }
-		effect = {
-			add_country_modifier = {
-				name = "obedient_subjects"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	njy_establish_high_seas_navy = {
-		icon = mission_establish_high_seas_navy
-		required_missions = { njy_have_two_subjects }
-		position = 3
-		trigger = {
-			OR = {
-				num_of_heavy_ship = 10
-				num_of_galley = 30
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "naval_enthusiasm_mission"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	njy_dominate_home_trade_node = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { njy_establish_high_seas_navy }
-		position = 4
-		trigger = {
-			home_trade_node = {
-				trade_share = {
-					country = ROOT
-					share = 75
-				}
-			}
-		}
-		effect = {
-			hidden_effect = {
-				home_trade_node_effect_scope = {
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							is_capital = yes
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 20
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 25
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 30
-						}
-						save_event_target_as = reward_province
-					}
-				}
-			}
-			if = {
-				limit = { has_saved_event_target = reward_province }
-				event_target:reward_province = {
-					add_province_modifier = {
-						name = "dominant_trade_hub"
-						duration = -1
-					}
-				}
-			}
-			else = {
-				custom_tooltip = dominant_home_node_reward_tooltip
-			}
-		}
-	}
-	njy_trade_company_region_abroad = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { njy_dominate_home_trade_node }
-		position = 5
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = trade_company_region_abroad_tooltip
-				calc_true_if = {
-					all_trade_node = {
-						calc_true_if = {
-							all_trade_node_member_province = {
-								owned_by = ROOT
-								is_node_in_trade_company_region = yes
-								NOT = { continent = CAPITAL }
-							}
-							amount = 5
-						}
-					}
-					amount = 3
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "east_india_trade_rush"
-				duration = 9125 #25 years
-			}
-		}
-	}
-}
-
-njy_uni = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		or = {
-			tag = NJY
-			tag = SNJ
-		}
-	}
-
-	njy_prince_uni = {
-		icon = mission_early_modern_university
-		required_missions = { }
-		position = 6
-
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2591 #might be wrong province, 2590
-			}
-			NOT = {
-				has_building = university
-				development = 24 #if it is lower to 16
-			}
-		
-		}
-		trigger = {
-			2591 = { #might be wrong province, 2590
-				owned_by = ROOT
-				has_building = university
-				development = 24 #if it is lower to 16
-			}
-		}
-		effect = {
-			if = {
-				limit = { has_dlc = "Rule Britannia" }
-				change_innovativeness = 3
-			}
-			else = {
-				add_adm_power = 50
-			}
-			#country_event = {
-			#	id = flavorNJY.1003
-			#	days = 1
-			#}
-			hidden_effect = {
-				random_list = {
-					20 = {
-						set_variable = {
-							which = princeton_subject
-							value = 1
-						}
-					}
-					20 = {
-						set_variable = {
-							which = princeton_subject
-							value = 2
-						}
-					}
-					20 = {
-						set_variable = {
-							which = princeton_subject
-							value = 3
-						}
-					}
-					20 = {
-						set_variable = {
-							which = princeton_subject
-							value = 4
-						}
-					}
-					20 = {
-						set_variable = {
-							which = princeton_subject
-							value = 5
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-njy_delaware = {
-	slot = 3
-	generic = no
-	ai = yes
-
-	potential = {
-		or = {
-			tag = NJY
-			tag = SNJ
-		}
-	}
-	has_country_shield = yes
-
-	njy_delaware_1 = {
-		icon = mission_cannons_firing
-		required_missions = { }
-		position = 1
-
-		trigger = {
-			army_size_percentage = 1
-			num_of_generals = 1
-			if = {
-				limit = {
-					exists = PNN
-				}
-				army_size = PNN
-			}
-			}
-			effect = {
-				delaware_area = {
-					add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	njy_delaware_2 = {
-		icon = mission_unite_home_region
-		required_missions = { njy_delaware_1 }
-		position = 2
-
-		provinces_to_highlight = {
-			OR = {
-				area = delaware_area
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			delaware_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			delaware_valley_area = {
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = "competitive_advantage"
-				duration = 7300
-			}
-		}
-	}
-
-	njy_delaware_3 = {
-		icon = mission_build_up_to_force_limit
-		required_missions = { njy_delaware_2 }
-		position = 3
-
-		provinces_to_highlight = {
-			OR = {
-				area = delaware_valley_area
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-					area = delaware_valley_area
-			}
-			2585 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_prestige = 10
-			2531 = {#baltimore
-				add_permanent_claim = ROOT
-			}
-			2530 = {#annapolis
-				add_permanent_claim = ROOT
-			}
-			2616 = {#dc
-				add_permanent_claim = ROOT
-			}
-			3025 = {#montgomery
-				add_permanent_claim = ROOT
-			}
-			2729 = {#cecil
-				add_permanent_claim = ROOT
-			}
-			2730 = {#wicomico
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	njy_capital_conquest = {
-		icon = mission_empire
-		required_missions = { njy_delaware_3 njy_conquer_ny }
-		position = 4
-
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2531
-				province_id = 2585
-				province_id = 2616
-				province_id = 2590
-				province_id = 2601
-			}
-			NOT = { owned_by = ROOT }
-		}
-		trigger = {
-			2531 = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			2616 = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			2585 = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			2601 = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
-		}
-		effect = {
-			country_event = { id = flavorNJY.1000 }
-		}
-	}
-}
-
-njy_ny_conquest = {
-	slot = 4
-	generic = no
-	ai = yes
-
-	potential = {
-		or = {
-			tag = NJY
-			tag = SNJ
-		}
-	}
-	has_country_shield = yes
-
-	njy_island_dispute = {
-		icon = mission_establish_high_seas_navy
-		required_missions = { }
-		position = 1
-
-		trigger = {
-			navy_size_percentage = 1
-			manpower_percentage = 0.75
-		}
-		effect = {
-		if = {
-			limit = {
-				NYS = {
-					owns = 3281
-				}
-		}
-			country_event = { id = flavorNJY.1 }
-		}
-			else = {
-				3281 = {
-					add_core = ROOT
-					add_prestige = 20
-				}
-			}
-		}
-	}
-
-	njy_conquer_staten = {
-		icon = mission_sea_battles
-		required_missions = { njy_island_dispute }
-		position = 2
-
-		provinces_to_highlight = {
-			OR = {
-				province_id = 3281
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			3281 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			country_event = { id = flavorNJY.1001 }
-			new_york_area = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	njy_conquer_ny = {
-		icon = mission_cannons_firing
-		required_missions = { njy_conquer_staten }
-		position = 3
-
-		provinces_to_highlight = {
-			OR = {
-				area = new_york_area
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			new_york_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			hudson_valley_area = {
-				add_permanent_claim = ROOT
-			}
-			add_prestige = 20
-			country_event = { id = flavorNJY.1002 }
-		}
-	}
-
-	njy_control_hudson = {
-		icon = mission_have_two_subjects
-		required_missions = { njy_conquer_ny }
-		position = 4
-
-		provinces_to_highlight = {
-			OR = {
-				area = hudson_valley_area
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			hudson_valley_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT }
-		}
-		effect = {
-			1500 = {
-				add_trade_modifier = {
-					who = ROOT
-					duration = -1
-					power = 10
-					key = njy_trade_hudson
-				}
-				long_island_area = {
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-	}
-
-	njy_long_island = {
-		icon = mission_assemble_an_army
-		required_missions = { njy_control_hudson }
-		position = 5
-
-		provinces_to_highlight = {
-			OR = {
-				area = long_island_area
-			}
-			NOT = {country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			long_island_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 15
-			}
-			add_mil_power = 50
-			connecticut_area = {
-				add_claim = ROOT
-			}
-			rhode_island_area = {
-				add_claim = ROOT
-			}
-			cape_cod_area = {
-				add_claim = ROOT
-			}
-		}
-	}
-}
-
-njy_administrative_missions = {
+njy_slot_5 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -777,83 +498,115 @@ njy_administrative_missions = {
 		}
 	}
 	has_country_shield = yes
-	njy_high_income_mission = {
-		icon = mission_high_income
-		required_missions = {  } #None
-		trigger = { share_of_starting_income = 1.5 }
-		effect = {
-			add_country_modifier = {
-				name = "growing_economy"
-				duration = 9125 #25 years
-			}
+
+	njy_prince_uni = {
+		icon = mission_early_modern_university
+		required_missions = { }
+		position = 3
+
+		provinces_to_highlight = {
+			province_id = 2591
 		}
-	}
-	njy_build_temples = {
-		icon = mission_early_game_buildings
-		required_missions = { njy_high_income_mission }
 		trigger = {
-			temple = 5
-			workshop = 5
-		}
-		effect = {
-			add_adm_power = 50
-			add_country_modifier = {
-				name = "building_spree"
-				duration = 9125
-			}
-		}
-	}
-	njy_build_treasury = {
-		icon = mission_war_chest
-		required_missions = { njy_build_temples }
-		trigger = { treasury = 2000 }
-		effect = {
-			add_country_modifier = {
-				name = "strong_treasury"
-				duration = 9125
-			}
-		}
-	}
-	njy_build_manufactories = {
-		icon = mission_have_manufactories
-		required_missions = { njy_build_treasury }
-		trigger = {
-			calc_true_if = {
-				desc = build_manufactories_mission_tooltip
-				all_owned_province = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				2591 = {
+					owned_by = ROOT
+					grown_by_development = 10
 					OR = {
-						has_building = mills
-						has_building = farm_estate
-						has_building = tradecompany
-						has_building = plantations
-						has_building = textile
-						has_building = weapons
-						has_building = wharf
-						has_building = furnace
+						has_great_project = {
+							type = princeton
+							tier = 2
+						}
+						has_great_project = {
+							type = princeton
+							tier = 3
+						}
 					}
 				}
-				amount = 20
+			}
+			else = {
+				2591 = {
+					owned_by = ROOT
+					grown_by_development = 12
+					has_building = university
+				}
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "proto_industrialization"
-				duration = 9125
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				change_innovativeness = 3
 			}
-			add_years_of_income = 1.5
+			else = {
+				add_adm_power = 50
+			}
+			2591 = {
+				if = {
+					limit = {
+						NOT = { has_building = university }
+					}
+					add_building = university
+				}
+			}
+			#country_event = {
+			#	id = flavorNJY.1003
+			#	days = 1
+			#}
+			# hidden_effect = {
+			# 	random_list = {
+			# 		20 = {
+			# 			set_variable = {
+			# 				which = princeton_subject
+			# 				value = 1
+			# 			}
+			# 		}
+			# 		20 = {
+			# 			set_variable = {
+			# 				which = princeton_subject
+			# 				value = 2
+			# 			}
+			# 		}
+			# 		20 = {
+			# 			set_variable = {
+			# 				which = princeton_subject
+			# 				value = 3
+			# 			}
+			# 		}
+			# 		20 = {
+			# 			set_variable = {
+			# 				which = princeton_subject
+			# 				value = 4
+			# 			}
+			# 		}
+			# 		20 = {
+			# 			set_variable = {
+			# 				which = princeton_subject
+			# 				value = 5
+			# 			}
+			# 		}
+			# 	}
+			# }
 		}
 	}
-	njy_imperial_ambition_mission = {
-		icon = mission_empire
-		required_missions = { njy_build_manufactories }
+
+	njy_flavor = { #Thomas Edison
+		icon = mission_thomas_edison
+		required_missions = { }
+		position = 4
 		trigger = {
-			total_development = 1000
+			has_institution = renaissance
+			monthly_adm = 10
 		}
 		effect = {
-			add_prestige = 30
-			add_country_modifier = {
-				name = "imperial_ambition"
-				duration = 9125
+			define_advisor = {
+				name = "Thomas Edison"
+				skill = 3
+				type = natural_scientist
+				location = 2590
+				cost_multiplier = 0.25
 			}
 		}
 	}

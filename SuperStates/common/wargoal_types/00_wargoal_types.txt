@@ -2545,8 +2545,8 @@ take_province_successor = {
 	type = take_province
 
 	attacker = {
-		badboy_factor = 0.75
-		prestige_factor = 1
+		badboy_factor = 0.5
+		prestige_factor = 1.25
 		peace_cost_factor = 0.75	
 		
 		
@@ -2557,8 +2557,14 @@ take_province_successor = {
 				area = alaska_area
 				area = hawaii_area
 				area = leeward_hawaiian_islands_area
+				area = puerto_rico_area
+				area = west_virgin_islands_area
 				province_id = 970
 				province_id = 971
+				province_id = 1235
+				province_id = 1240
+				province_id = 2617
+				province_id = 3315
 			}
 		}
 
@@ -2573,8 +2579,8 @@ take_province_successor = {
 	}
 	
 	defender = {
-		badboy_factor = 0.75
-		prestige_factor = 1
+		badboy_factor = 0.5
+		prestige_factor = 1.25
 		peace_cost_factor = 0.75	
 		
 		
@@ -2585,8 +2591,14 @@ take_province_successor = {
 				area = alaska_area
 				area = hawaii_area
 				area = leeward_hawaiian_islands_area
+				area = puerto_rico_area
+				area = west_virgin_islands_area
 				province_id = 970
 				province_id = 971
+				province_id = 1235
+				province_id = 1240
+				province_id = 2617
+				province_id = 3315
 			}
 		}
 

@@ -19,7 +19,7 @@ country_event = {
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = tongan }
-			NOT = { is_core = TON }
+			NOT = { is_core = TGA }
 		}
 	}
 	
@@ -56,7 +56,7 @@ country_event = {
 		name = "TonganFlavor.1opta"
 		1989 = { 
 			change_culture = tongan
-			add_core = TON
+			add_core = TGA
 		}
 	}
 }

@@ -1,0 +1,1051 @@
+nyc_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = NYC
+			AND = {
+				tag = LLI
+				was_tag = NYC
+			}
+		}
+
+	}
+	has_country_shield = yes
+
+	nyc_reform_army = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			manpower_percentage = 0.8
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			long_island_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_north_jersey = {
+		icon = mission_have_two_subjects
+		required_missions = { nyc_long_island }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = north_jersey_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = north_jersey_area
+			}
+		}
+		effect = {
+			south_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_south_jersey = {
+		icon = mission_cannons_firing
+		required_missions = { nyc_north_jersey }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = south_jersey_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = south_jersey_area
+			}
+		}
+		effect = {
+			delaware_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delmarva_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_chesapeake = {
+		icon = mission_trade_with_cathay
+		required_missions = { nyc_south_jersey }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_area
+				area = delmarva_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			delmarva_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3306 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_dip_power = 150
+		}
+	}
+}
+
+nyc_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = NYC
+			AND = {
+				tag = LLI
+				was_tag = NYC
+			}
+		}
+	}
+	has_country_shield = yes
+
+	nyc_long_island = {
+		icon = mission_unite_home_region
+		required_missions = { nyc_reform_army nyc_independence }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = long_island_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			long_island_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			hudson_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			connecticut_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_hudson = {
+		icon = mission_assemble_an_army
+		required_missions = { nyc_long_island }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_valley_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = hudson_valley_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nyc_control_hudson"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					new_york_area = {
+						owned_by = ROOT
+						is_core = NYS
+					}
+				}
+				new_york_area = {
+					remove_core = NYS
+				}
+			}
+			if = {
+				limit = {
+					long_island_area = {
+						owned_by = ROOT
+						is_core = NYS
+					}
+				}
+				long_island_area = {
+					remove_core = NYS
+				}
+			}
+		}
+	}
+
+	nyc_metropolitan = {
+		icon = mission_empire
+		required_missions = { nyc_south_jersey nyc_hudson nyc_rhode_island }
+		position = 5
+		trigger = {
+			trade_income_percentage = 0.25
+			stability = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nyc_metropolitan_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+
+nyc_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = NYC
+			AND = {
+				tag = LLI
+				was_tag = NYC
+			}
+		}
+	}
+	has_country_shield = yes
+
+	nyc_independence = {
+		icon = mission_alliances
+		required_missions = { }
+		position = 1
+		trigger = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+
+	nyc_connecticut = {
+		icon = mission_civil_war_battle
+		required_missions = { nyc_long_island }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = connecticut_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = connecticut_area
+			}
+		}
+		effect = {
+			rhode_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_rhode_island = {
+		icon = mission_conquer_5_states
+		required_missions = { nyc_connecticut }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = rhode_island_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = rhode_island_area
+			}
+		}
+		effect = {
+			cape_cod_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			massachusetts_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nyc_new_england = {
+		icon = mission_new_england_soldier
+		required_missions = { nyc_rhode_island }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = cape_cod_area
+				area = massachusetts_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			massachusetts_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cape_cod_area= {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2609 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "nys_defeated_massa"
+				duration = 9125
+			}
+		}
+	}
+}
+
+nyc_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = NYC
+			AND = {
+				tag = NYS
+				was_tag = NYC
+			}
+			AND = {
+				tag = LLI
+				was_tag = NYC
+			}
+		}
+	}
+	has_country_shield = yes
+
+	nyc_renovate_the_boroughs = {
+		icon = mission_colonial
+		required_missions = { }
+		position = 1
+		completed_by = 1550.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 3283
+						province_id = 3282
+						province_id = 2601
+					}
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							development = 25
+						}
+					}
+				}
+				AND = {
+					province_id = 3281
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							development = 20
+						}
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			3283 = { #Queens
+				development = 25
+				owned_by = ROOT
+			}
+			3282 = { #Kings
+				development = 25
+				owned_by = ROOT
+			}
+			3281 = { #Richmond
+				development = 20
+				owned_by = ROOT
+			}
+			2601 = { #New York
+				development = 25
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			new_york_area = {
+				add_province_modifier = {
+					name = "nys_renovated_boroughs"
+					duration = -1
+				}
+			}
+			new_york_area = {
+				add_province_modifier = {
+					name = "nys_renovated_boroughs_temporary"
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	nyc_the_big_apple = {
+		icon = mission_hanseatic_city
+		required_missions = { nyc_renovate_the_boroughs }
+		position = 2
+		completed_by = 1600.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2601
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							has_trade_building_trigger = yes
+							if = {
+								limit = {
+									has_dlc = "Dharma"
+								}
+								province_has_center_of_trade_of_level = 3
+							}
+							else = {
+								development = 35
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 3282
+						province_id = 3283
+					}
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							has_trade_building_trigger = yes
+							if = {
+								limit = {
+									has_dlc = "Dharma"
+								}
+								province_has_center_of_trade_of_level = 2
+							}
+							else = {
+								development = 30
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			2601 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					development = 35
+				}
+				has_trade_building_trigger = yes
+			}
+			3283 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 2
+				}
+				else = {
+					development = 30
+				}
+				has_trade_building_trigger = yes
+			}
+			3282 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 2
+				}
+				else = {
+					development = 30
+				}
+				has_trade_building_trigger = yes
+			}
+		}
+		effect = {
+			new_york_area = {
+				add_province_modifier = {
+					name = "nys_big_apple"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	nyc_capital_of_the_world = {
+		icon = mission_control_venice
+		required_missions = { nyc_the_big_apple nyc_expand_the_metro }
+		position = 4
+		completed_by = 1700.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2601
+					NOT = { development = 50 }
+				}
+				AND = {
+					province_id = 1500
+					NOT = {
+						AND = {
+							is_strongest_trade_power = ROOT
+							highest_value_trade_node = yes
+						}
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			1500 = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
+			}
+			
+			2601 = {
+				development = 50
+			}
+		}
+		
+		effect = {
+			add_dip_power = 200
+			add_country_modifier = {
+				name = "nys_trade_winds"
+				duration = 9125
+			}
+		}
+	}
+
+	nyc_league_of_nations = {
+		icon = all_bases_covered
+		required_missions = { }
+		position = 5
+		
+		trigger = {
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "nys_have_world_alliance_tt"
+					OR = {
+						any_ally = {
+							capital_scope = {
+								continent = europe
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								continent = europe
+							}
+						}
+					}
+					OR = {
+						any_ally = {
+							capital_scope = {
+								continent = south_america
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								continent = south_america
+							}
+						}
+					}
+					OR = {
+						any_ally = {
+							capital_scope = {
+								continent = africa
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								continent = africa
+							}
+						}
+					}
+					OR = {
+						any_ally = {
+							capital_scope = {
+								continent = asia
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								continent = asia
+							}
+						}
+					}
+					OR = {
+						any_ally = {
+							capital_scope = {
+								OR = {
+									continent = oceania
+									continent = australia_continent
+								}
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								OR = {
+									continent = oceania
+									continent = australia_continent
+								}
+							}
+						}
+					}
+					OR = {
+						any_ally = {
+							capital_scope = {
+								continent = north_america
+							}
+						}
+						any_subject_country = {
+							capital_scope = {
+								continent = north_america
+							}
+						}
+					}
+				}
+				amount = 6
+			}
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = {
+					has_dlc = "The Cossacks"
+				}
+				add_country_modifier = {
+					name = "nys_league_of_nations_modifier"
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "nys_league_of_nations_no_dlc_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+nyc_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = NYC
+			AND = {
+				tag = NYS
+				was_tag = NYC
+			}
+			AND = {
+				tag = LLI
+				was_tag = NYC
+			}
+		}
+	}
+	has_country_shield = yes
+
+	nyc_columbia_university = {
+		icon = mission_early_modern_university
+		required_missions = { }
+		position = 1
+		completed_by = 1600.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2601 #New York
+					NOT = {
+						has_building = university
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			2601 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				has_building = university
+			}
+			has_adm_advisor_3 = yes
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "nys_ivy_mod"
+				duration = 5475
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				change_innovativeness = 3
+			}
+			else = {
+				add_dip_power = 50
+			}
+			# country_event = {
+			# 	id = flavornys.1000
+			# 	days = 1
+			# }
+		}
+	}
+
+	nyc_bankings = {
+		icon = mission_african_gold
+		required_missions = {  }
+		position = 2
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				2601 = {
+					owned_by = ROOT
+					OR = {
+						has_great_project = {
+							type = nyse
+							tier = 2
+						}
+						has_great_project = {
+							type = nyse
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				stock_exchange = 5
+			}
+			num_of_loans = 0
+			treasury = 2000
+			custom_trigger_tooltip = {
+				tooltip = mid_atlantic_banking_tooltip
+				OR = {
+					all_neighbor_country = {
+						inflation = ROOT
+					}
+					NOT = { inflation = 0.1 }
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Wealth of Nations"
+						has_dlc = "Dharma"
+					}
+				}
+				add_country_modifier = {
+					name = "nys_stock_exchange_modifier"
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "nys_stock_exchange_modifier_no_dlc"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	nyc_expand_the_metro = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 3
+		completed_by = 1650.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 3285
+						province_id = 3128
+					}
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							development = 20
+						}
+					}
+				}
+				AND = {
+					province_id = 3026
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							development = 25
+						}
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			3026 = {
+				development = 25
+				owned_by = ROOT
+			}
+			3128 = {
+				development = 20
+				owned_by = ROOT
+			}
+			3285 = {
+				development = 20
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				3026 = {
+					center_of_trade = 1
+				}
+			}
+			else = {
+				add_mercantilism = 3
+			}
+			long_island_area = {
+				add_province_modifier = {
+					name = "nys_expanded_metro_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	nyc_economy_1 = {
+		icon = mission_have_manufactories
+		required_missions = { nyc_expand_the_metro }
+		position = 4
+		trigger = {
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 15
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 1.5
+		}
+	}
+
+
+	nyc_port_of_new_york = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		completed_by = 1550.1.1
+		position = 5
+		provinces_to_highlight = {
+			AND = {
+				province_id = 3282
+				NOT = {
+					AND = {
+						owned_by = ROOT
+						has_shipyard_building_trigger = yes
+						has_dock_building_trigger = yes
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			3282 = {
+				has_shipyard_building_trigger = yes
+			}
+			3282 = {
+				has_dock_building_trigger = yes
+			}
+			hidden_trigger = {
+				3282 = {
+					owned_by = ROOT
+				}
+			}
+			num_of_heavy_ship = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}
+			3282 = {
+				add_province_modifier = {
+					name = "brooklyn_harbor"
+					duration = -1
+				}
+			}
+			97 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	nyc_old_amsterdam = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { nyc_port_of_new_york }
+		completed_by = 1700.1.1
+		position = 6
+		provinces_to_highlight = {
+			province_id = 97
+			has_discovered = ROOT
+		}
+		trigger = {
+			97 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			yorkshire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

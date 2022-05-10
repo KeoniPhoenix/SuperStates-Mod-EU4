@@ -616,7 +616,7 @@ alberta_provincegroup = {
 
 # British Columbia
 british_columbia_provincegroup = {
-	2634 3215 3214 3038 3075 3039 2641 3076 3077 2639 2635 3074 2638 3040 3041 3042
+	2634 3215 3214 3038 3075 3039 2641 3076 3077 2639 2635 3074 2638 3040 3041 3042 3216
 }
 
 # Manitoba
@@ -666,7 +666,7 @@ northern_ontario_provincegroup = {
 }
 
 # Quebec
-qubec_provincegroup = {
+quebec_provincegroup = {
 	3030 3031 3059 2003 2004 3032 2006 2005 2657 2008 2007 3055 3056 3058 2652 3057 2665
 }
 

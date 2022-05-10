@@ -7,10 +7,10 @@ capital = 2618	# Whitehorse
 
 1442.11.20 = {
 	monarch = {
-		name = "Alexander Rutherford"
-		adm = 2
+		name = "Chris Pearson"
+		adm = 3
 		dip = 2
-		mil = 5
+		mil = 4
 	}
 }
 

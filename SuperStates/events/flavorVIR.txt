@@ -1,0 +1,121 @@
+namespace = flavorVIR
+
+country_event = {
+	id = flavorVIR.1000
+	title = flavorVIR.1000t
+	desc = flavorVIR.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Stay Southern Virginian
+		name = flavorVIR.1000a
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = virginian
+				}
+			}
+			change_primary_culture = virginian
+		}
+		custom_tooltip = flavorVIR.1000a.tt
+		hidden_effect = {
+			virginia_provincegroup = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture = virginian
+						culture = northern_virginian
+						culture = mountaineer
+						culture = midatlantic_virginian
+						culture = appalachian_virginian
+					}
+				}
+				change_culture = virginian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Mid-Atlantic Virginian
+		name = flavorVIR.1000b
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = midatlantic_virginian
+				}
+			}
+			change_primary_culture = midatlantic_virginian
+		}
+		custom_tooltip = flavorVIR.1000b.tt
+		hidden_effect = {
+			virginia_provincegroup = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture = virginian
+						culture = northern_virginian
+						culture = mountaineer
+						culture = midatlantic_virginian
+						culture = appalachian_virginian
+					}
+				}
+				change_culture = midatlantic_virginian
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { #Move to Appalachian Virginian
+		name = flavorVIR.1000c
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_virginian
+				}
+			}
+			change_primary_culture = appalachian_virginian
+		}
+		custom_tooltip = flavorVIR.1000c.tt
+		hidden_effect = {
+			virginia_provincegroup = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture = virginian
+						culture = northern_virginian
+						culture = mountaineer
+						culture = midatlantic_virginian
+						culture = appalachian_virginian
+					}
+				}
+				change_culture = appalachian_virginian
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { #Incase you finish this mission while not being any virginian culture and wanna nope out
+		name = flavorVIR.1000e
+		trigger = {
+			NOT = {
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = mountaineer
+				}
+			}
+		}
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

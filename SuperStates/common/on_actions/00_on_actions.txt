@@ -4297,6 +4297,10 @@ on_mercenary_recruited = {
 				FROM = { NOT = { has_country_flag = oyo_cavalry_do_not_consume_ap } }
 				ROOT = { NOT = { mercenary_company = merc_oyo_cavalry } }
 			}
+			OR = {
+				FROM = { NOT = { has_country_flag = vrm_green_boys_do_not_consume_ap } }
+				ROOT = { NOT = { mercenary_company = merc_green_mountain_boys } }
+			}
 		}
 		FROM = {
 			add_army_professionalism = -0.05
