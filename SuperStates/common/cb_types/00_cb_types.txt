@@ -1626,7 +1626,10 @@ cb_successor_america = {
 	valid_for_subject = no
 
 	prerequisites = {
-		mission_completed = wdc_successor
+		OR = {
+			mission_completed = wdc_successor
+			tag = USA
+		}
 		FROM = {
 			is_neighbor_of = ROOT
 			any_owned_province = {
@@ -1636,8 +1639,14 @@ cb_successor_america = {
 					area = alaska_area
 					area = hawaii_area
 					area = leeward_hawaiian_islands_area
+					area = puerto_rico_area
+					area = west_virgin_islands_area
 					province_id = 970
 					province_id = 971
+					province_id = 1235
+					province_id = 1240
+					province_id = 2617
+					province_id = 3315
 				}
 			}
 		}

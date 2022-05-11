@@ -8,7 +8,7 @@ cal_alta = {
 	has_country_shield = yes
 
 	cal_nevada = {
-		icon = mission_cannons_firing
+		icon = mission_sw_against_the_desert
 		required_missions = { cal_mil_buildup }
 		position = 2
 		provinces_to_highlight = {
@@ -176,15 +176,15 @@ cal_alta = {
 			}
 		}
 		effect = {
-			country_event = { id = flavorCAL.1000 } # <-- Any gold changes should also change the event
+			custom_tooltip = por_bandeirantes_tooltip
+			set_country_flag = por_bandeirantes_flag #Increased chance to find gold
 			define_advisor = {
 				type = master_of_mint
 				skill = 3
 				cost_multiplier = 0.25
 				culture = ROOT
 			}
-			set_country_flag = por_bandeirantes_flag #Increased chance to find gold
-			custom_tooltip = por_bandeirantes_tooltip
+			country_event = { id = flavorCAL.1000 } # <-- Any gold changes should also change the event
 		}
 	}
 }
@@ -306,7 +306,7 @@ cal_las_and_gran = {
 	}
 
 	cal_las_cali = {
-		icon = mission_assemble_an_army
+		icon = mission_unite_home_region
 		required_missions = { cal_baja_sur }
 		position = 4
 
@@ -348,7 +348,7 @@ cal_las_and_gran = {
 	}
 	
 	cal_gran_cali = {
-		icon = mission_unite_home_region
+		icon = mission_empire
 		required_missions = { cal_las_cali cal_arizona }
 		position = 5
 
@@ -616,7 +616,7 @@ cal_trade_and_navy = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			add_dip_power = 150
 		}
 	}
@@ -770,7 +770,7 @@ cal_trade_and_navy = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 3
 			hawaii_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -916,7 +916,7 @@ cal_dev_and_tech = {
 		effect = {
 			if = {
 				limit = {has_dlc = "Rule Britannia"}
-				change_innovativeness = 1
+				change_innovativeness = 3
 				add_country_modifier = {
 					name = "cal_uni" #advisor cost and advisor amount
 					duration = 7300
@@ -947,14 +947,10 @@ cal_dev_and_tech = {
 			AND = {
 				946 = { #San Francisco
 					has_building = university
-					has_manufactory_trigger = yes
-					num_of_buildings_in_province = 5
 					development = 32
 				}
 				2735 = { #Santa Clara
 					has_building = university
-					has_manufactory_trigger = yes
-					num_of_buildings_in_province = 5
 					development = 32
 				}
 			}

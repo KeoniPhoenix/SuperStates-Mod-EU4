@@ -1,0 +1,470 @@
+myd_conquests = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYD
+	}
+	has_country_shield = yes
+
+	myd_dc = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2616 #DC
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2616 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			2536 = { #Alexandria
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	myd_alexandria = {
+		icon = mission_civil_war_battle
+		required_missions = { myd_dc }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2536 #Alexandria
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2536 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "myd_pentagon"
+				duration = 9125
+			}
+			virginia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	myd_virginia = {
+		icon = mission_conquer_5_states
+		required_missions = { myd_alexandria myd_chesapeake }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = virginia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			virginia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			shenandoah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			monongahela_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	myd_west_virginia = {
+		icon = mission_have_two_subjects
+		required_missions = { myd_virginia }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = monongahela_area
+				area = shenandoah_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			shenandoah_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			monongahela_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "myd_conquered_west_vir" #production and movementspeed?
+				duration = 9125
+			}
+		}
+	}
+}
+
+myd_conquests_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYD
+	}
+	has_country_shield = yes
+
+	myd_accomack = {
+		icon = mission_assemble_an_army
+		required_missions = { myd_delmarva }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2731 #Accomack
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2731 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			chesapeake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	myd_chesapeake = {
+		icon = mission_cannons_firing
+		required_missions = { myd_accomack }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = chesapeake_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chesapeake_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			add_country_modifier = {
+				name = "myd_virginia_defeated"
+				duration = 9125
+			}
+		}
+	}
+
+	myd_navy = {
+		icon = mission_rb_a_mighty_fleet
+		required_missions = { myd_chesapeake }
+		position = 4
+		trigger = {
+			navy_size_percentage = 1
+			num_of_heavy_ship = 5
+		}
+		effect = {
+			add_navy_tradition = 15
+			add_country_modifier = {
+				name = "myd_on_the_high_seas"
+				duration = 9125
+			}
+		}
+	}
+}
+
+myd_conquests_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYD
+	}
+	has_country_shield = yes
+	
+	myd_delmarva = {
+		icon = mission_landsknecht_soldier
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			2731 = { #Accomack
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3029 = { #Huntingdon
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			central_pennsylvania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	myd_mason_dixon = { #Dispute the Mason Dixon Line, previously MYD claimed lands in Penn.
+		icon = mission_alliances
+		required_missions = { myd_delmarva }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = central_pennsylvania_area
+				province_id = 3029
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = central_pennsylvania_area
+					province_id = 3029
+				}
+			}
+		}
+		effect = {
+			delaware_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
+	myd_pennsylvania = { #Cresap's War #eh maybe not, not too relevant 
+		icon = mission_unite_home_region
+		required_missions = { myd_mason_dixon }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_valley_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			delaware_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 20
+			}
+			south_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	myd_new_jersey = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { myd_pennsylvania }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = south_jersey_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			south_jersey_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			north_jersey_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+myd_flavor_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MYD
+	}
+	has_country_shield = yes
+
+	myd_army = { #maryland 400
+		icon = army_reforms
+		required_missions = { }
+		position = 3
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = have_at_least_7point5_more_discipline
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.075
+				}
+			}
+			army_size = 40
+		}
+		effect = {
+			add_country_modifier = {
+				name = "myd_maryland_400" #Shock Damage recieved and dealt
+				duration = -1
+			}
+		}
+	}
+
+	myd_flavor = {
+		icon = mission_european_church
+		required_missions = { }
+		trigger = {
+			NOT = { current_age = age_of_discovery }
+			OR = {
+				humanist_ideas = 7
+				religious_ideas = 7
+			}
+		}
+		effect = {
+			custom_tooltip = myd_is_catholic_effect_tooltip #These are just the tooltips
+			tooltip = {
+				add_country_modifier = {
+					name = myd_is_catholic
+					duration = 9125
+				}
+			}
+			custom_tooltip = myd_religious_lev_effect_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = myd_religious_complete
+					duration = 9125
+				}
+			}
+			custom_tooltip = myd_humanist_lev_effect_tooltip
+			tooltip = {
+				add_country_modifier = {
+					name = myd_humanist_complete
+					duration = 9125
+				}
+			}
+			hidden_effect = { #Here is where the actual effects are
+				if = {
+					limit = {
+						OR = {
+							religion = catholic
+							religion = s_catholic
+						}
+					}
+					add_country_modifier = {
+						name = "myd_is_catholic"
+						duration = 9125
+					}
+				}
+				if = {
+					limit = {
+						humanist_ideas = 7
+						NOT = {
+							religious_ideas = 7
+						}
+					}
+					add_country_modifier = {
+						name = "myd_humanist_complete"
+						duration = 9125
+					}
+				}
+				if = {
+					limit = {
+						religious_ideas = 7
+						NOT = {
+							humanist_ideas = 7
+						}
+					}
+					add_country_modifier = {
+						name = "myd_religious_complete"
+						duration = 9125
+					}
+				}
+				else = {
+					add_adm_power = 200
+				}
+			}
+		}
+	}
+}

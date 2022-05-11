@@ -26634,7 +26634,7 @@ cabot_tower = {
 
 		country_modifiers = {
 			range = 0.20
-			global_colonial_growth = 0.15
+			global_colonial_growth = 15
 		}
 
 		on_upgraded = {
@@ -26659,7 +26659,7 @@ cabot_tower = {
 
 		country_modifiers = {
 			range = 0.25
-			global_colonial_growth = 0.25
+			global_colonial_growth = 25
 		}
 
 		on_upgraded = {
@@ -26684,7 +26684,7 @@ cabot_tower = {
 
 		country_modifiers = {
 			range = 0.30
-			global_colonial_growth = 0.25
+			global_colonial_growth = 25
 			leader_naval_manuever = 1
 		}
 

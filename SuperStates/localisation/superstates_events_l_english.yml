@@ -57,8 +57,8 @@
  superstates_scandal.1t:0 "[Root.Monarch.GetTitle] Faces Scandal!"
  superstates_scandal.1d:0 "News of a scandal that has ties to the Administration has surfaced and the Legislature is convening to empanel a committee to investigate the claims.  Unfortunately, the scandal has direct links to the [Root.Monarch.GetTitle]."
  superstates_scandal.1opta:0 "The [Root.Monarch.GetTitle] resigns to escape serious charges."
- superstates_scandal.1optb:0 "The [Root.Monarch.GetTitle] resigns as the lies have disillusioned [Root.Monarch.GetHimHer]."
- superstates_scandal.1optc:0 "The [Root.Monarch.GetTitle] resigns after conversing with [Root.Monarch.GetHimHer] cabinet."
+ superstates_scandal.1optb:0 "The [Root.Monarch.GetTitle] resigns as the lies have disillusioned [Root.Monarch.GetHerHim]."
+ superstates_scandal.1optc:0 "The [Root.Monarch.GetTitle] resigns after conversing with [Root.Monarch.GetHerHim] cabinet."
  superstates_scandal.1optd:0 "The [Root.Monarch.GetTitle] denies any misdeeds and defends the actions taken."
  superstates_scandal.2t:0 "[Root.Monarch.GetTitle] Impeached"
  superstates_scandal.2d:0 "Articles of Impeachment have been passed by the Lower House and the Senate is trying the Governor, and others in the Administration involved, with the specific abuses of office.  Numerous peices of evidence have been presented in the Senate chambers on the matter bringing considerably political emotion.  A supermajority is required to convict through impeachement and remove [Root.Monarch.GetTitle] from office."
@@ -380,7 +380,7 @@
  #flavorFLO.2optb:0 "The people must have the freedom to choose their religion."
  #"x" rebels regiments rise up, -5% tech cost, -10% stability cost
  flavorFLO.1t:0 "Cuban Diaspora"
- flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
+ flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture.GetName] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
  flavorFLO.1opta:0 "Evict the Cuban Exiles"
  flavorFLO.1optb:0 "Settle all Cubans in Florida"
  flavorFLO.1optc:0 "We have no business in this. Let it be."
@@ -445,10 +445,10 @@
  #-200 ducats, +250 adm points
  flavorILI.3optc:0 "Invest sparingly"
  #-50 ducats, +50 adm points
- flavorILI.1000t:0 "Move Capital to Chicago?"
- flavorILI.1000d:0 "Chicago is the largest city in Illinois and the third most populous city in the United States. Chicago has stood as an important transportation hub, manufacturing and economic center, it is undeniable that the economic and political influence Chicago has over the entire Midwest is immense. Due to Chicago's enormous influence over our state, we have the option to move our state capital."
- flavorILI.1000opta:0 "Chicago should be the new Capital!"
- flavorILI.1000optb:0 "We should keep $CAPITAL_CITY$ as our capital."
+ flavorILI.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorILI.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go.\n\nCitizens in [Root.GetName] and Chicago celebrate our unified culture and decision to prioritize the Great Lakes region of our country."
+ flavorILI.1000opta:0 "[Root.GetName] shall be ruled directly from Chicago."
+ flavorILI.1000optb:0 "We will stick to ruling in $CAPITAL_CITY$."
  
  #####Flavor for Indiana
  flavorINI.1t:0 "EARTHQUAKES IN THE MIDWEST!"
@@ -521,8 +521,9 @@
  flavorMSS.6d:0 "Massachusetts, like the rest of the states, experienced many economic problems in their early years of independence. One of these issues was a lack of reliable roads. Timber, fur, and other goods cost merchantmen much money to transport over long distances to the ports along the Atlantic. Thus, water transit was usually the preferred method, but rivers could not be expected to travel exactly the way businesses wanted them to. Sometimes, canals would be dug to connect two rivers together, or to create a passage to the sea. Such was the case of the Middlesex Canal. Built in 1803, it was the first great civil engineering project in the USA, and would become a subject of study for future canal projects. The canal was designed to connect Boston to the Merrimack river, which was a major trade highway. The contruction of the canal would see the inventions of a crude dump truck, watertight locks. The canal's contruction, while expensive, was very successful, and remained so until replaced by the railroad. Today, parts of the canal still stand as a testimony to the ingenuity of Colonial Massachusites."
  flavorMSS.6opta:0 "Our canals shall be rivers of gold!"
  flavorMSS.1t:0 "The Maine Question"
- flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine: In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
+ flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root.GetName]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine:\n\n In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
  flavorMSS.1opta:0 "Very well. Send an envoy immediately."
+ flavorMSS.1optb:0 "No need, we will revoke our claims."
  flavorMSS.2t:0 "Reunite with $FROMCOUNTRY$?"
  flavorMSS.2d:0 "$FROMCOUNTRY$ has sent us an envoy, offering us their superior economic and military assistance in exchange for 'reunification' with their state. They claim that [Root.GetName] used to be a part of their territory, and that our modern success is owed to them. As ludicrous as this claim is, the proposal is not without merit. How shall we respond?"
  flavorMSS.2opta:0 "We are a natural part of $FROMCOUNTRY$. Let us reunite our states."
@@ -730,6 +731,11 @@
  flavorPNN.3opta:0 "We must remember our origins, and welcome these refugees with open arms."
  flavorPNN.3optb:0 "This is none of our business. Turn them away."
  flavorPNN.4t:0 "Amish Influence Spreads"
+ flavorPNN.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorPNN.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nEmbrace our position on the Mid-Atlantic and join the Mid-Atlantic culture group.\n\nLook towards the mountains and join the Appalachian culture group."
+ flavorPNN.1000a:0 "Join Mid-Atlantic"
+ flavorPNN.1000b:0 "Embrace Appalachian"
+ flavorPNN.1000c:0 "Stick to our current culture"
   
  
  #####Flavor for Puerto Rico
@@ -836,6 +842,12 @@
  flavorVIR.1d:0 "On April 27th, 1870, the court-room on the second story of the Capitol building collapsed onto the floor below, killing 50 people, and gravely injuring 100 more. The building was originally constructed as a simple one story complex. But increasing administration meant a second story would have to be added. As the second floor was being built, the architect rested the floor beams on a narrow ledge just a few inches across. The ledge was never meant to support the weight of a second story, but even still, they would probably have resisted the load. But several years after the upgrade, improvements to the building's appearance were desired, and thus, the central pillars were removed. The floor beams supporting the second story had only the ledges to rest on which were already past their safe limits. Over the course of the next several years, the floor sagged, meaning even more load was being put on the middle part of the floor, snowballing the condition. It was just past 11:00 in the morning on that fateful April day when hundreds of people packed on to the second floor. The clerk entered the courtroom, placing his books on the table. One judge was already seated, with his associates still in the conference room. From the media, to the spectators, to the counsel, all were having a merry time, enjoying each other's company in friendly conversation. Suddenly, without rhyme, without warning, a major floorboard running underneath the courtroom broke away, causing the load to cascade to other supports, breaking them as well. In a heart-beat, the second story collapsed into the second sending its screaming occupents with it. Most people survived the incident, no doubt to the quick response from rescue teams. Greater loss of life could have happened if the Hall of Delegates below the courtroom was in session. The day after the disaster, most of the dead would be buried, and the day would be dedicated to mourning, and prayer."
  flavorVIR.opta:0 "This surely is only an isolated incident... right?"
  flavorVIR.optb:0 "Investigate all public buildings in the state, and reform our building code."
+ flavorVIR.1000t:0 "Direction of Our Culture"
+ flavorVIR.1000d:0 "[Root.GetName] sits on the line between three seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nFight with Dixie and join the Southerner culture group!\n\nEmbrace our position on the Mid-Atlantic and join the Mid-Atlantic culture group.\n\nLook towards the mountains and join the Appalachian culture group."
+ flavorVIR.1000a:0 "Join Southerner"
+ flavorVIR.1000b:0 "Join Mid-Atlantic"
+ flavorVIR.1000c:0 "Join Appalachian"
+ flavorVIR.1000e:0 "Stick to our current culture"
  
  #####Flavor for Washington (state)/Lincoln
  flavorWAS.1t:0 "Beneath the Shadow"
@@ -1109,7 +1121,7 @@
  #Martinique
  MartiniqueFlavor.1t:0 "Martinique Culture Matures"
  MartiniqueFlavor.1d:0 "The people of the island of Martinique have developed a mature culture and identity for themselves."
- MartininqueFlavor.1opta:0 "Hopefully this will not cause problems in the future."
+ MartiniqueFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Montserrat
  MontserratFlavor.1t:0 "Montserratian Culture Makes An Entrance"

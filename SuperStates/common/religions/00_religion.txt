@@ -904,14 +904,14 @@ christian = {
 #				ai_will_do = {
 #					factor = 1
 #				}
-3			}	
-3			local_saint = {
+#			}	
+#			local_saint = {
 #				cost = 100
 #				potential = {
 #					NOT = { tag = PAP }
 #				}
 #				allow = {
-3					NOT = { war_with = PAP }
+#					NOT = { war_with = PAP }
 #					NOT = { stability = 3 }
 #				}
 #				effect = {

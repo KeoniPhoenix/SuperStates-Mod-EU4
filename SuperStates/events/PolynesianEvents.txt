@@ -1693,17 +1693,17 @@ country_event = { #Royal Mound Desecrated
 		}
 		add_prestige = 10
 		add_stability = -1
-		random_list = {
-			10 = {
-				1989 = {
-					spawn_rebels = {
-						type = noble_rebels
-						size = 1
-						unrest = 1
-					}
-				}
-			}
-		}
+		# random_list = {
+		# 	10 = {
+		# 		1989 = {
+		# 			spawn_rebels = {
+		# 				type = noble_rebels
+		# 				size = 1
+		# 				unrest = 1
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 	
 	option = {

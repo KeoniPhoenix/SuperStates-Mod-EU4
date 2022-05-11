@@ -473,7 +473,7 @@ frloc_tags_art_pl_masc_cons_chezles_05a = {
 		# ???
 		tag = SYN
 		# Oceanic tags
-		tag = AWN tag = EOR tag = GMI tag = KAU tag = KUL tag = LAI tag = LAR tag = MIA tag = MLG tag = NOO tag = PLW tag = TIW tag = WRU tag = YNU tag = YOL
+		# tag = AWN tag = EOR tag = GMI tag = KAU tag = KUL tag = LAI tag = LAR tag = MIA tag = MLG tag = NOO tag = PLW tag = TIW tag = WRU tag = YNU tag = YOL
 		# Leviathan Maori tags
 		tag = MAA tag = TAK tag = TAN tag = TEA tag = TNK tag = TTT tag = WAI
 	}
@@ -894,7 +894,7 @@ frloc_tags_noart_sg_fem_cons_de_a_11b = {
 		# Pirate tags
 		tag = LIB tag = PRY
 		# Oceanic tags
-		tag = KAA tag = MAU tag = VIL tag = VNL
+		# tag = KAA tag = MAU tag = VIL tag = VNL
 	}
 }
 

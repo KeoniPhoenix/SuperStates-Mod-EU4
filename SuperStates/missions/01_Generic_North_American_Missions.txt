@@ -119,3 +119,120 @@ gen_mid_atlantic = {
 		}
 	}
 }
+
+#American Midwest Regional
+# gen_midwest = {
+# 	slot = 5
+# 	generic = yes
+# 	ai = yes
+
+# 	potential = {
+# 		capital_scope = {
+# 			region = american_midwest_region
+# 		}
+# 	}
+# 	has_country_shield = no
+
+# 	gen_generic_midwest_1 = { #industry? middle of america? i got no clue what this should be
+# 		icon = all_bases_covered
+# 		required_missions = { }
+# 		position = 1
+# 		trigger = {
+			
+# 		}
+# 		effect = {
+			
+# 		}
+# 	}
+# }
+
+#Great Plains Regional
+gen_greatplains = {
+	slot = 5
+	generic = yes
+	ai = yes
+
+	potential = {
+		capital_scope = {
+			region = great_plains_region
+		}
+	}
+	has_country_shield = no
+
+	gen_cowboys = {
+		icon = mission_cowboy
+        required_missions = { }
+        position = 1
+
+        provinces_to_highlight = {
+            OR = {
+                trade_goods = livestock
+            }
+            NOT = { owned_by = ROOT }
+            has_discovered = ROOT
+        }
+        trigger = {
+            livestock = 10
+        }
+        effect = {
+            add_country_modifier = {
+                name = "gen_cowboy_modifier" #cav combat and slighly cheaper cav - yeehaw
+                duration = 9125
+            }
+        }
+	}
+}
+
+#Great Plains and Midwest shared Regional
+gen_breadbasket_slot = {
+	slot = 5
+	generic = yes
+	ai = yes
+
+	potential = {
+		capital_scope = {
+			OR = {
+				region = american_midwest_region
+				region = great_plains_region
+			}
+		}
+	}
+	has_country_shield = no
+
+	gen_breadbasket = { #have lots of grain
+		icon = mission_mal_subjugate_zaf
+		required_missions = { }
+		position = 2
+		trigger = {
+			OR = {
+				trading_bonus = {
+					trade_goods = grain
+					value = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					trade_goods = grain
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "bread_basket_of_america_modifier"
+				duration = 9125
+			}
+			custom_tooltip = gen_breadbasket_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							trade_goods = grain
+							has_manufactory_trigger = yes
+						}
+						add_base_production = 1
+					}
+				}
+			}
+		}
+	}
+}

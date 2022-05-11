@@ -7,8 +7,8 @@
  # Tooltips
  ## Florida
  flo_defend_against_texas_tooltip:0 "§YTexas§! loses all §Rclaims§! on any provinces in the §YAcadiana§!, §YLouisiana§!, and §YWest Florida§! areas, and loses any §Rcores§! on provinces owned by §Y[Root.GetName]§!."
- flo_evict_cubans_tooltip:0 "All owned §YAmero-Catholic§! and §YMiamian§! provinces will be converted to the §Ytrue faith§! and §Yculture§!. All provinces in the §YEast Cuba§! and §YWest Cuba§! areas will gain §Rdevelopment§! and become §YCuban§! culture. Gain §YCuban§! as an accepted culture.
- flo_settle_cubans_tooltip:0 "All provinces in §YSouth Florida§! region will adopt §YMiamian§! culture and gain §Rdevelopment§!. All owned provinces in the §YEast Cuba§! and §YWest Cuba§! areas will become §Your culture§!.
+ flo_evict_cubans_tooltip:0 "All owned §YAmero-Catholic§! and §YMiamian§! provinces will be converted to the §Ytrue faith§! and §Yculture§!. All provinces in the §YEast Cuba§! and §YWest Cuba§! areas will gain §Rdevelopment§! and become §YCuban§! culture. Gain §YCuban§! as an accepted culture."
+ flo_settle_cubans_tooltip:0 "All provinces in §YSouth Florida§! region will adopt §YMiamian§! culture and gain §Rdevelopment§!. All owned provinces in the §YEast Cuba§! and §YWest Cuba§! areas will become §Your culture§!."
  
  ## Texas
  tex_germans_tooltip:0 "The German refugees might expect more in the future."
@@ -19,10 +19,60 @@
  
  ## New England
  ris_ny_claim_tooltip:0 "At least one province in the Long Island area:\n   One of the following must be true:\n      Is a §Y[Root.GetAdjective]§! core\n      Is a §Y[Root.GetAdjective]§! claim"
- vrm_defeat_new_york_tooltip:0 "§YNew York§! will lose all §YCores§! and §YClaims§! in the Vermont area"
- vrm_defeat_new_hampshire_tooltip:0 "§YNew Hampshire§! will lose all §YCores§! and §YClaims§! in the Vermont area"
+ vrm_defeat_new_york_tooltip:0 "§YNew York§! will lose all §YCores§! and §YClaims§! in the Vermont area."
+ vrm_defeat_new_hampshire_tooltip:0 "§YNew Hampshire§! will lose all §YCores§! and §YClaims§! in the Vermont area."
  vrm_green_boys_tooltip:0 "§Y[Root.GetName]§! has won a war while hiring the §YGreen Mountain Boys§!"
- cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! area that produce §YCloth§! or §YWool§! have a §YManufactory§!"
+ cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! area that produce §YCloth§! or §YWool§! have a §YManufactory§!."
  mss_subject_tooltip:0 "If we complete this mission by making §MMaine§! our subject:"
  new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region that does NOT have separatism:\n   Gain §Y1§! development."
+ vrm_green_boys_ap_tooltip:0 "The mercenary company §YGreen Mountain Boys§! no longer reduces §YArmy Professionalism§! when recruited."
+
+ ## Mid Atlantic
+ mid_atlantic_banking_tooltip:0 "Have §Yless inflation than any neighbor§! or have §Y0§! inflation"
  
+ ## Washington DC
+ wdc_get_special_cb_tooltip:0 "Enables the §YUnify America§! casus belli against bordering countries with land in the §YUnited States of America§!"
+ take_province_successor_desc:0 "War goal is to take a province in America from the target."
+ wdc_level_2_monuments_tooltip:0 "Washington:\n   Have all great projects at least §YTier 2§!"
+
+ ## Maryland
+ myd_is_catholic_effect_tooltip:0 "If we complete this mission while being §YCatholic:§!"
+ myd_religious_lev_effect_tooltip:0 "If we complete this mission with full §YReligious Ideas:§!"
+ myd_humanist_lev_effect_tooltip:0 "If we complete this mission with full §YHumanist Ideas:§!"
+
+ ## Pennsylvania
+ pen_has_steel_manufactories_tooltip:0 "All owned provinces which produce §YIron§! and have a §YManufactory§! gain §Y2§! £icon_production_in_text£ and '§YSteel Industries§!' for §Y25 years§!, giving the following effects:\nLocal Goods Produced: §G+0.75§!"
+ pnn_subject_tooltip:0 "If we complete this mission by making §MDelaware§! our subject:"
+
+ ## New York
+ nys_have_world_alliance_tt:0 "§Y[Root.GetName]§! has an Alliance or non-Tributary Subject on every continent."
+
+ ## Midwest
+ gen_breadbasket_tooltip:0 "All owned provinces which produce §YGrain§! and have a §YManufactory§! gain §Y1§! £icon_production_in_text£"
+
+ # Culture related
+ super_culture_change_modifier:0 "Unified Culture"
+ super_culture_change_modifier_desc:0 "We have unified our culture from regional differences."
+ ohi_has_unified_culture_tooltip:0 "All provinces in the §TOhio Province Group§! are either §YOhioan,§! §YClevelander§! or §YAlleghenian§! culture."
+ flavorOHI.1000a.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YMidwestern Ohioan.§!"
+ flavorOHI.1000b.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YGreat Laker Ohioan.§!"
+ flavorOHI.1000c.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YAppalachian Ohioan.§!"
+
+ vir_has_unified_culture_tooltip:0 "At least 8 provinces in the §TVirginia Province Group§! are either §YVirginian,§! §YNorth Virginian§! or §YMountaineer§! culture."
+ flavorVIR.1000a.tt:0 "All owned provinces of §YVirginian,§! §YNorth Virginian§! and §YMountaineer§! culture in the §TVirginia Province Group§! will adopt §YSoutherner Virginian.§!"
+ flavorVIR.1000b.tt:0 "All owned provinces of §YVirginian,§! §YNorth Virginian§! and §YMountaineer§! culture in the §TVirginia Province Group§! will adopt §YMid-Atlantic Virginian.§!"
+ flavorVIR.1000c.tt:0 "All owned provinces of §YVirginian,§! §YNorth Virginian§! and §YMountaineer§! culture in the §TVirginia Province Group§! will adopt §YAppalachian Virginian.§!"
+
+ pnn_has_unified_culture_tooltip:0 "At least 10 provinces in the §TPennsylvania Province Group§! are either §YPennsylvanian§! or §YYinzer§! culture."
+ flavorPNN.1000a.tt:0 "All owned provinces of §YPennsylvanian§! and §YYinzer§! culture will adopt §YMid-Atlantic Pennsylvanian.§!"
+ flavorPNN.1000b.tt:0 "All owned provinces of §YPennsylvanian§! and §YYinzer§! culture will adopt §YAppalachian Pennsylvanian.§!"
+ 
+ ili_has_unified_culture_tooltip:0 "The culture in §YChicago§! is §YIllinoisan§! and §Y[Root.Religion.GetName]§!."
+ ili_has_unified_culture_tooltip_2:0 "At least §Y4§! owned provinces, including §YChicago§!, have §YChicagoan§! culture."
+ ili_illinoisan_tooltip:0 "If we complete this mission by converting §YChicago§! to §YIllinoisan:§!"
+ ili_chicagoan_tooltip:0 "If we complete this mission by spreading §YChicagoan§! culture:"
+ ili_chicagoan_2_tooltip:0 "§Y[Root.GetName]§! will move closer to the §YGreat Laker§! culture group."
+ ili_dash_tooltip:0 "-----------------------------------------------"
+ flavorILI.1000a.tt:0 "All owned provinces of §YChicagoan§! and §YIllinoisan§! culture will adopt §YGreat Laker Illinoisan.§!"
+ ili_chicagoan_no_dlc_tooltip:0 "If we complete this mission by embracing §YChicagoan§! culture:"
+  

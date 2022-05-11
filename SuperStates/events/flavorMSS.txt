@@ -24,6 +24,18 @@ country_event = { # The Maine Question
 		days = 5
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { #No need
+		name = "flavorMSS.1optb"
+		add_prestige = -10
+
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
