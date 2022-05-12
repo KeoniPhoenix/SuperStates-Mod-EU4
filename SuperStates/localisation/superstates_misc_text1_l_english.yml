@@ -359,6 +359,6 @@
  #Misc Text
  random_new_world_region:0 "REPLACE_ME"
  cb_successor_america:0 "Unify America"
- cb_successor_america_desc:0 "As the rightful successor to America, we can enforce our claims over the historic boundries of the United States."
+ cb_successor_america_desc:0 "We can enforce our claims over the historic boundries of the United States."
  SUCCESSOR_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war for America"
  
