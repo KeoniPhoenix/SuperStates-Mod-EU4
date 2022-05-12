@@ -72,8 +72,6 @@
  desc_hurricane_no_repairs:0 "We had better things to spend money on so we chose not to repair the damage and leave it to the locals."
  
  #Added Mission Modifiers
- mss_expanding_trade:0 "Massachusetts Expanding Trade"
- desc_mss_expanding_trade:0 "Our efforts to secure more sources of trade-goods have not gone unnoticed by the domestic Merchants. Confident that the state are looking after their interests they have been unusually forthcoming with any taxes or fees they are required to pay."
  
  # Florida Event Modifiers
  cubans_returned:0 "Cubans Returned"
@@ -226,6 +224,8 @@
  desc_mss_navy_expansion:0 "Our improvements in our harbors and fleets have brought significant benefits to our navy."
  mss_renaissance_modifier:0 "New Renaissance"
  desc_mss_renaissance_modifier:0 "Innovation and Prosperity fueled by prestigious universities and education create the brightest minds."
+ mss_expanding_trade:0 "Massachusetts Expanding Trade"
+ desc_mss_expanding_trade:0 "Our efforts to secure more sources of trade-goods have not gone unnoticed by the domestic Merchants. Confident that the state are looking after their interests they have been unusually forthcoming with any taxes or fees they are required to pay."
  
  #Rhode Island
  ris_shipyard:0 "Growing Harbourages"
@@ -397,3 +397,5 @@
  #Other
  super_culture_change_modifier:0 "Unified Culture"
  desc_super_culture_change_modifier:0 "We have unified our culture from regional differences."
+ gen_prosperous_indpendence:0 "Prosperous Independence"
+ desc_gen_prosperous_indpendence:0 "Our independence has brought our country prosperity."

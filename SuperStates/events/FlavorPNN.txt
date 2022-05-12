@@ -263,37 +263,8 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { #Stay Pennsylvanian
-		name = flavorPNN.1000a
-		if = {
-			limit = {
-				NOT = {
-					primary_culture = pennsylvanian
-				}
-			}
-			change_primary_culture = pennsylvanian
-		}
-		custom_tooltip = flavorPNN.1000a.tt
-		hidden_effect = {
-			remove_accepted_culture = western_pennsylvanian
-			every_owned_province = {
-				limit = {
-					OR = {
-						culture = pennsylvanian
-						culture = western_pennsylvanian
-						culture = appalachian_pennsylvanian
-					}
-				}
-				change_culture = pennsylvanian
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-
 	option = { #Move to Appalachian Pennsylvanian
-		name = flavorPNN.1000b
+		name = flavorPNN.1000a
 		if = {
 			limit = {
 				NOT = {
@@ -302,7 +273,7 @@ country_event = {
 			}
 			change_primary_culture = appalachian_pennsylvanian
 		}
-		custom_tooltip = flavorPNN.1000b.tt
+		custom_tooltip = flavorPNN.1000a.tt
 		hidden_effect = {
 			remove_accepted_culture = western_pennsylvanian
 			remove_accepted_culture = pennsylvanian
@@ -311,31 +282,13 @@ country_event = {
 					OR = {
 						culture = pennsylvanian
 						culture = western_pennsylvanian
-						culture = appalachian_pennsylvanian
 					}
 				}
 				change_culture = appalachian_pennsylvanian
 			}
 		}
 		ai_chance = {
-			factor = 0
-		}
-	}
-
-	option = { #Incase you finish this mission while not being any pennsylvanian culture and wanna nope out
-		name = flavorPNN.1000c
-		trigger = {
-			NOT = {
-				OR = {
-					primary_culture = pennsylvanian
-					primary_culture = western_pennsylvanian
-				}
-			}
-		}
-		add_prestige = 20
-
-		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 }

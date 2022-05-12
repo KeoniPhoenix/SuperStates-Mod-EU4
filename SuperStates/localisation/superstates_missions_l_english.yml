@@ -13,6 +13,14 @@
  gen_breadbasket_desc:0 "Agriculture plays a huge part in our economy and local produce, as grain, corn and wheat feed the nation. We serve as the nation's breadbasket, and should encourage greater output through investments and development efforts."
  gen_cowboys_title:0 "Cowboys and Ranchers"
  gen_cowboys_desc:0 "We can invest in cattle ranchers and cowboys, expert horse riders that can aid us in battle."
+ 
+ #City State Missions
+ gen_city_state_independence_title:0 "Secure our Independence"
+ gen_city_state_independence_desc:0 "We must fight for our survival as a small city-state and secure our independence."
+ gen_city_state_claim_state_title:0 "Expand our Boundries"
+ gen_city_state_claim_state_desc:0 "With our independence now secured, we must find a way to expand the [Root.GetAdjective] domain."
+ gen_city_state_grow_urban_title:0 "Grow Urban Centers"
+ gen_city_state_grow_urban_desc:0 "Our city will be the heart of our country, for we must prove that our independence is a boon to our prosperity, lest we fall back to a mere subject nation."
 
  ############################
  #USA States and Territories#

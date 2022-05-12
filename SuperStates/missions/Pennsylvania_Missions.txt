@@ -22,16 +22,9 @@ pnn_slot_1 = {
 						}
 					}
 				}
-				AND = {
-					delaware_area = {
-						type = any
-						is_claim = ROOT
-					}
-					DEL = {
-						NOT = {
-							alliance_with = ROOT
-						}
-					}
+				delaware_area = {
+					type = any
+					is_claim = ROOT
 				}
 				hidden_trigger = {
 					DEL = {
@@ -42,19 +35,6 @@ pnn_slot_1 = {
 					delaware_area = {
 						type = any
 						owned_by = ROOT
-					}
-				}
-				hidden_trigger = {
-					AND = {
-						delaware_area = {
-							type = any
-							is_core = ROOT
-						}
-						DEL = {
-							NOT = {
-								alliance_with = ROOT
-							}
-						}
 					}
 				}
 			}
@@ -818,36 +798,107 @@ pnn_slot_5 = {
 		}
 		position = 4
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = pnn_has_unified_culture_tooltip
+			if = {
+				limit = {
+					OR = {
+						primary_culture = appalachian_pennsylvanian
+						primary_culture = western_pennsylvanian
+						primary_culture = pennsylvanian
+					}
+				}
 				OR = {
-					num_of_owned_provinces_with = {
-						value = 10
-						province_group = pennsylvania_provincegroup
-						culture = pennsylvanian
+					calc_true_if = {
+						custom_trigger_tooltip = {
+							tooltip = pnn_has_unified_culture_tooltip
+							all_owned_province = {
+								province_group = pennsylvania_provincegroup
+								culture = pennsylvanian
+							}
+						}
+						amount = 10
 					}
-					num_of_owned_provinces_with = {
-						value = 10
-						province_group = pennsylvania_provincegroup
-						culture = western_pennsylvanian
+					primary_culture = western_pennsylvanian
+					hidden_trigger = {
+						primary_culture = appalachian_pennsylvanian
 					}
-					num_of_owned_provinces_with = {
-						value = 10
-						province_group = pennsylvania_provincegroup
-						culture = appalachian_pennsylvanian
+				}
+			}
+			else = {
+				OR = {
+					accepted_culture = western_pennsylvanian
+					NOT = {
+						num_of_owned_provinces_with = {
+							value = 1
+							culture = western_pennsylvanian
+						}
 					}
 				}
 			}
 		}
 		effect = {
-			country_event = {
-				id = flavorPNN.1000
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = appalachian_pennsylvanian
+						primary_culture = western_pennsylvanian
+						primary_culture = pennsylvanian
+					}
+				}
+				custom_tooltip = pnn_pennsylvanian_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = pnn_yinzer_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorPNN.1000
+					}
+				}
+				custom_tooltip = pnn_yinzer_2_tooltip
+				custom_tooltip = ili_dash_tooltip
 			}
+
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			#Here is where the actual effects are
 			add_country_modifier = {
 				name = "super_culture_change_modifier"
 				duration = 5475
 			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							primary_culture = western_pennsylvanian
+						}
+						num_of_owned_provinces_with = {
+							value = 10
+							province_group = pennsylvania_provincegroup
+							culture = pennsylvanian
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+				}
+				else_if = {
+					limit = {
+						primary_culture = western_pennsylvanian
+					}
+					country_event = {
+						id = flavorPNN.1000
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+				}
+			}
 		}
 	}
-
 }

@@ -443,6 +443,21 @@ vir_slot_3 = {
 			}
 		}
 	}
+}
+
+vir_slot_3_b = {
+	slot = 3
+	generic = no
+	ai = yes
+
+	potential_on_load = {
+		has_dlc = "The Cossacks"
+	}
+	potential = {
+		has_dlc = "The Cossacks"
+		tag = VIR
+	}
+	has_country_shield = yes
 
 	vir_culture = {
 		icon = purely_for_commerce
@@ -452,44 +467,142 @@ vir_slot_3 = {
 			province_group = virginia_provincegroup
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = vir_has_unified_culture_tooltip
+			if = {
+				limit = {
+					OR = {
+						primary_culture = virginian
+						primary_culture = northern_virginian
+						primary_culture = mountaineer
+						primary_culture = appalachian_virginian
+						primary_culture = midatlantic_virginian
+					}
+				}
 				OR = {
-					num_of_owned_provinces_with = {
-						value = 8
-						province_group = virginia_provincegroup
-						culture = virginian
+					custom_trigger_tooltip = {
+						tooltip = vir_has_unified_culture_tooltip_2
+						num_of_owned_provinces_with = {
+							value = 8
+							province_group = virginia_provincegroup
+							culture = virginian
+						}
 					}
-					num_of_owned_provinces_with = {
-						value = 8
-						province_group = virginia_provincegroup
-						culture = northern_virginian
+					custom_trigger_tooltip = {
+						tooltip = vir_has_unified_culture_tooltip
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = northern_virginian
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = mountaineer
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = appalachian_virginian
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = midatlantic_virginian
+							}
+						}
 					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = vir_has_unified_culture_tooltip_3
 					num_of_owned_provinces_with = {
-						value = 8
+						value = 6
 						province_group = virginia_provincegroup
-						culture = mountaineer
-					}
-					num_of_owned_provinces_with = {
-						value = 8
-						province_group = virginia_provincegroup
-						culture = appalachian_virginian
-					}
-					num_of_owned_provinces_with = {
-						value = 8
-						province_group = virginia_provincegroup
-						culture = midatlantic_virginian
+						culture = ROOT
 					}
 				}
 			}
 		}
 		effect = {
-			country_event = {
-				id = flavorVIR.1000
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = virginian
+						primary_culture = northern_virginian
+						primary_culture = mountaineer
+						primary_culture = appalachian_virginian
+						primary_culture = midatlantic_virginian
+					}
+				}
+				custom_tooltip = vir_virginian_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = vir_changing_culture_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorVIR.1000
+					}
+				}
+				custom_tooltip = vir_changing_culture_2_tooltip
+				custom_tooltip = ili_dash_tooltip
 			}
-			add_country_modifier = {
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			add_country_modifier = { #Here is where the actual effects are
 				name = "super_culture_change_modifier"
 				duration = 5475
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 8
+							province_group = virginia_provincegroup
+							culture = virginian
+						}
+					}
+					add_stability_or_adm_power = yes
+				}
+				else_if = {
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = northern_virginian
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = mountaineer
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = appalachian_virginian
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = virginia_provincegroup
+								culture = midatlantic_virginian
+							}
+						}
+					}
+					country_event = {
+						id = flavorVIR.1000
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+				}
 			}
 		}
 	}

@@ -1,0 +1,99 @@
+#Missions for Releasable "city states"
+#Small releasable countries that only exist because of a city
+
+city_state_missions = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		OR = {
+			tag = CCK
+			tag = LSV
+			tag = KYS
+			tag = MIM
+			tag = MMD
+			tag = PHL
+			tag = OTW
+			tag = TTO
+			tag = MTL
+			tag = GAT
+			tag = SAG
+			tag = ESX
+			tag = BOT
+			tag = MSL
+			tag = LLI
+		}
+	}
+	has_country_shield = yes
+
+	gen_city_state_independence = {
+		icon = all_bases_covered
+		required_missions = {  }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_prestige = 25
+			capital_scope = {
+				area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	gen_city_state_claim_state = {
+		icon = mission_unite_home_region
+		required_missions = { gen_city_state_independence }
+		provinces_to_highlight = {
+			OR = {
+				area_for_scope_province = {
+					is_capital_of = ROOT
+				}
+				is_core = ROOT
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			create_general = { tradition = 75 }
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+			}
+		}
+	}
+
+	gen_city_state_grow_urban = {
+		icon = mission_hanseatic_city
+		required_missions = { gen_city_state_claim_state }
+		trigger = {
+			capital_scope = {
+				grown_by_development = 10
+			}
+			is_subject = no	
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = "gen_prosperous_indpendence"
+				duration = 9125
+			}
+		}
+	}
+}

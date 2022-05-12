@@ -732,10 +732,8 @@
  flavorPNN.3optb:0 "This is none of our business. Turn them away."
  flavorPNN.4t:0 "Amish Influence Spreads"
  flavorPNN.1000t:0 "Direction of Our Culture" #Culture related event
- flavorPNN.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nEmbrace our position on the Mid-Atlantic and join the Mid-Atlantic culture group.\n\nLook towards the mountains and join the Appalachian culture group."
- flavorPNN.1000a:0 "Join Mid-Atlantic"
- flavorPNN.1000b:0 "Embrace Appalachian"
- flavorPNN.1000c:0 "Stick to our current culture"
+ flavorPNN.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nOur citizens celebrate our decision to look towards the mountains and join the Appalachian culture group."
+ flavorPNN.1000a:0 "Embrace Appalachian"
   
  
  #####Flavor for Puerto Rico
@@ -843,11 +841,10 @@
  flavorVIR.opta:0 "This surely is only an isolated incident... right?"
  flavorVIR.optb:0 "Investigate all public buildings in the state, and reform our building code."
  flavorVIR.1000t:0 "Direction of Our Culture"
- flavorVIR.1000d:0 "[Root.GetName] sits on the line between three seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nFight with Dixie and join the Southerner culture group!\n\nEmbrace our position on the Mid-Atlantic and join the Mid-Atlantic culture group.\n\nLook towards the mountains and join the Appalachian culture group."
- flavorVIR.1000a:0 "Join Southerner"
- flavorVIR.1000b:0 "Join Mid-Atlantic"
- flavorVIR.1000c:0 "Join Appalachian"
- flavorVIR.1000e:0 "Stick to our current culture"
+ flavorVIR.1000d:0 "[Root.GetName] sits on the line between three seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
+ flavorVIR.1000a:0 "Join Mid-Atlantic"
+ flavorVIR.1000b:0 "Join Appalachian"
+ flavorVIR.1000e:0 "Stay our current culture"
  
  #####Flavor for Washington (state)/Lincoln
  flavorWAS.1t:0 "Beneath the Shadow"

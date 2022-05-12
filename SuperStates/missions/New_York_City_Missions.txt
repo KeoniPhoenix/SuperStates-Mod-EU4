@@ -147,7 +147,7 @@ nyc_slot_2 = {
 	has_country_shield = yes
 
 	nyc_long_island = {
-		icon = mission_unite_home_region
+		icon = mission_long_island
 		required_missions = { nyc_reform_army nyc_independence }
 		position = 2
 		provinces_to_highlight = {

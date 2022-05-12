@@ -707,7 +707,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/easternamerica/mission_staten_island.dds"
 	}
 
+	spriteType = {
+		name = "mission_maryland_flag"
+		texturefile = "gfx/interface/missions/easternamerica/mission_maryland_flag.dds"
+	}
 
+	spriteType = {
+		name = "mission_california_flag"
+		texturefile = "gfx/interface/missions/pacific/mission_california_flag.dds"
+	}
+
+	spriteType = {
+		name = "mission_mount_rushmore"
+		texturefile = "gfx/interface/missions/mission_mount_rushmore.dds"
+	}
+
+	spriteType = {
+		name = "mission_cross_the_delaware"
+		texturefile = "gfx/interface/missions/easternamerica/mission_cross_the_delaware.dds"
+	}
+
+	spriteType = {
+		name = "mission_cal_gold_rush"
+		texturefile = "gfx/interface/missions/pacific/mission_cal_gold_rush.dds"
+	}
+
+	spriteType = {
+		name = "mission_long_island"
+		texturefile = "gfx/interface/missions/easternamerica/mission_long_island.dds"
+	}
+	
 
 
 	##

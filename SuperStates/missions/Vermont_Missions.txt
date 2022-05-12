@@ -666,7 +666,12 @@ vrm_flavor = {
 				name = "vrm_green_boys_merc"
 				duration = -1
 			}
-			custom_tooltip = vrm_green_boys_ap_tooltip
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				custom_tooltip = vrm_green_boys_ap_tooltip
+			}
 			hidden_effect = {
 				set_country_flag = vrm_green_boys_do_not_consume_ap
 			}

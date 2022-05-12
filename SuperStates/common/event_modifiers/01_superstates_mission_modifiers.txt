@@ -643,45 +643,50 @@ bread_basket_of_america_modifier = {
 	manpower_recovery_speed = 0.15
 }
 
+gen_prosperous_indpendence = {
+	global_trade_goods_size_modifier = 0.1
+	development_cost = -0.1
+}
+
 # #Texas/Matagorda
-# gran_tejas = {
-# 	years_of_nationalism = -5
-# 	global_autonomy = -0.05
-# 	picture = "years_of_nationalism"
-# }
+gran_tejas = {
+	years_of_nationalism = -5
+	global_autonomy = -0.05
+	picture = "years_of_nationalism"
+}
 
-# remilitarized_alamo = {
-# 	fort_level = 1
-# 	garrison_growth = 0.1
-# 	defensiveness = 0.25
-# 	picture = "defense_fort"
-# }
+remilitarized_alamo = {
+	fort_level = 1
+	garrison_growth = 0.1
+	defensiveness = 0.25
+	picture = "defense_fort"
+}
 
-# texas_reunited = {
-# 	republican_tradition = 1
-# 	diplomatic_reputation = 1
-# 	picture = "republican_tradition"
-# }
+texas_reunited = {
+	republican_tradition = 1
+	diplomatic_reputation = 1
+	picture = "republican_tradition"
+}
 
-# texas_unity = {
-# 	republican_tradition = 1
-# 	culture_conversion_cost = -0.50
-# 	num_accepted_cultures = -1
-# 	picture = "accepted_culture_threshold"
-# }
+texas_unity = {
+	republican_tradition = 1
+	culture_conversion_cost = -0.50
+	num_accepted_cultures = -1
+	picture = "accepted_culture_threshold"
+}
 
-# american_monopoly = {
-# 	merchants = 1
-# 	global_own_trade_power = 0.25
-# 	picture = "global_trade_power"
-# }
+american_monopoly = {
+	merchants = 1
+	global_own_trade_power = 0.25
+	picture = "global_trade_power"
+}
 
-# development_initiative = {
-# 	global_tax_modifier = -0.10
-# 	development_cost = -0.1
-# 	build_cost = -0.25
-# 	picture = "development_cost"
-# }
+development_initiative = {
+	global_tax_modifier = -0.10
+	development_cost = -0.1
+	build_cost = -0.25
+	picture = "development_cost"
+}
 
 #Misc
 super_culture_change_modifier = {

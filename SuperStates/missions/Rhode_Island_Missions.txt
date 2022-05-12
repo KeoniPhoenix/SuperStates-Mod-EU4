@@ -18,7 +18,7 @@ ris_conquests_1 = {
 	has_country_shield = yes
 
 	ris_claim_long = {
-		icon = mission_unite_home_region
+		icon = mission_long_island
 		required_missions = { }
 		position = 1
 		trigger = {

@@ -167,7 +167,7 @@ myd_conquests_2 = {
 	}
 
 	myd_chesapeake = {
-		icon = mission_cannons_firing
+		icon = mission_maryland_flag
 		required_missions = { myd_accomack }
 		position = 3
 		provinces_to_highlight = {
