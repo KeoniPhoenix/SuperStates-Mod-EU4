@@ -154,7 +154,6 @@ wdc_slot_1 = {
 				}
 			}
 			else = {
-				treasury = 2000
 				2616 = {
 					owned_by = ROOT
 					development = 40
@@ -328,12 +327,20 @@ wdc_slot_2 = {
 		}
 	}
 
-	wdc_taxing = { #war reps/ something interesting
+	wdc_taxing = {
 		icon = mission_noble_council
 		required_missions = { wdc_represention }
 		position = 5
 		trigger = {
-			num_of_war_reparations = 5
+			if = {
+				limit = {
+					has_dlc = "Art of War"
+				}
+				num_of_war_reparations = 5
+			}
+			else = {
+				treasury = 3000
+			}
 		}
 		effect = {
 			add_power_projection = {
