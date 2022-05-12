@@ -168,7 +168,7 @@ dak_sdk = {
     has_country_shield = yes
 
     dak_rushmore = {
-        icon = mission_conquer_50_development
+        icon = mission_mount_rushmore
         required_missions = { }
         position = 1
         provinces_to_highlight = {

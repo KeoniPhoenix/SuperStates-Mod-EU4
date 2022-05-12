@@ -137,7 +137,7 @@ cal_alta = {
 	}
 
 	cal_gold = {
-		icon = mission_high_income
+		icon = mission_cal_gold_rush
 		required_missions = { cal_arizona }
 		position = 5
 		provinces_to_highlight = {
@@ -348,7 +348,7 @@ cal_las_and_gran = {
 	}
 	
 	cal_gran_cali = {
-		icon = mission_empire
+		icon = mission_california_flag
 		required_missions = { cal_las_cali cal_arizona }
 		position = 5
 

@@ -46,7 +46,7 @@ cut_conquests_1 = {
 	}
 
 	cut_hudson_long_island = {
-		icon = mission_assemble_an_army
+		icon = mission_long_island
 		required_missions = { cut_humiliate_ny }
 		position = 3
 		provinces_to_highlight = {

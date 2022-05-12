@@ -695,7 +695,7 @@ wdc_slot_4 = {
 	}
 
 	wdc_jersey = {
-		icon = mission_have_two_subjects
+		icon = mission_cross_the_delaware
 		required_missions = { wdc_delaware }
 		position = 4
 		provinces_to_highlight = {
