@@ -8,39 +8,24 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { #Stay Southern Virginian
-		name = flavorVIR.1000a
-		if = {
-			limit = {
-				NOT = {
-					primary_culture = virginian
-				}
-			}
-			change_primary_culture = virginian
-		}
-		custom_tooltip = flavorVIR.1000a.tt
-		hidden_effect = {
-			virginia_provincegroup = {
-				limit = {
-					owned_by = ROOT
-					OR = {
-						culture = virginian
-						culture = northern_virginian
-						culture = mountaineer
-						culture = midatlantic_virginian
-						culture = appalachian_virginian
-					}
-				}
-				change_culture = virginian
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-
 	option = { #Move to Mid-Atlantic Virginian
-		name = flavorVIR.1000b
+		name = flavorVIR.1000a
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = virginia_provincegroup
+					culture = northern_virginian
+				}
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = virginia_provincegroup
+					culture = midatlantic_virginian
+				}
+				primary_culture = northern_virginian
+				primary_culture = midatlantic_virginian
+			}
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -49,7 +34,6 @@ country_event = {
 			}
 			change_primary_culture = midatlantic_virginian
 		}
-		custom_tooltip = flavorVIR.1000b.tt
 		hidden_effect = {
 			virginia_provincegroup = {
 				limit = {
@@ -65,13 +49,30 @@ country_event = {
 				change_culture = midatlantic_virginian
 			}
 		}
+		custom_tooltip = flavorVIR.1000a.tt
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 
 	option = { #Move to Appalachian Virginian
-		name = flavorVIR.1000c
+		name = flavorVIR.1000b
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = virginia_provincegroup
+					culture = mountaineer
+				}
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = virginia_provincegroup
+					culture = appalachian_virginian
+				}
+				primary_culture = mountaineer
+				primary_culture = appalachian_virginian
+			}
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -80,7 +81,6 @@ country_event = {
 			}
 			change_primary_culture = appalachian_virginian
 		}
-		custom_tooltip = flavorVIR.1000c.tt
 		hidden_effect = {
 			virginia_provincegroup = {
 				limit = {
@@ -96,8 +96,9 @@ country_event = {
 				change_culture = appalachian_virginian
 			}
 		}
+		custom_tooltip = flavorVIR.1000b.tt
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 
@@ -106,16 +107,33 @@ country_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					culture = virginian
-					culture = northern_virginian
-					culture = mountaineer
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = virginia_provincegroup
+						culture = northern_virginian
+					}
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = virginia_provincegroup
+						culture = mountaineer
+					}
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = virginia_provincegroup
+						culture = appalachian_virginian
+					}
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = virginia_provincegroup
+						culture = midatlantic_virginian
+					}
 				}
 			}
 		}
 		add_prestige = 20
 
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 }
