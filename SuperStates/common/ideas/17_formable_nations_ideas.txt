@@ -297,7 +297,7 @@ DES_ideas = {
 	
 	miracle_of_the_gulls2 = {
 		land_attrition = -0.1
-		local_production_efficiency = 0.15
+		production_efficiency = 0.15
 	}
 	mormon_tabernacle_choir = {
 		prestige = 1
