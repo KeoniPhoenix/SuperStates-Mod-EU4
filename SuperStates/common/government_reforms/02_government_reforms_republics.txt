@@ -2167,7 +2167,7 @@ primary_elections_reform = {
 		}
 	}
 	modifiers = {
-		yearly_corruption = -0.01
+		yearly_corruption = -0.05
 		stability_cost_modifier = -0.1
 	}
 }
@@ -2291,7 +2291,6 @@ parishes_reform = {
 	modifiers = {
 		build_cost = -0.10
 		global_missionary_strength = 0.01
-		governing_capacity = 75
 	}
 	ai = {
 		factor = 1
@@ -2430,12 +2429,10 @@ independent_cities_reform = {
 	  OR = {
         tag = VIR
 		tag = MYD
-		tag = NVA
 		tag = MOU
 		primary_culture = virginian
 		primary_culture = northern_virginian
 		primary_culture = marylander
-		primary_culture = nevadan
 		primary_culture = missourian
 		}
     }
@@ -2484,7 +2481,7 @@ presidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
-		embracement_cost = -0.1
+		embracement_cost = -0.2
 	}
 	ai = {
 		factor = 1
@@ -2607,9 +2604,7 @@ semipresidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes
 	modifiers = {
-		embracement_cost = -0.05
-		global_unrest = -0.5
-		global_tax_modifier = 0.05
+		 global_institution_spread = 0.2
 	}
 	ai = {
 		factor = 1.5
@@ -2957,7 +2952,6 @@ bishopric_electors_reform  = {
 	}
 	
 	modifiers = {
-		global_unrest = -1
 		missionaries = 1
 		global_missionary_strength = 0.03	
 	}

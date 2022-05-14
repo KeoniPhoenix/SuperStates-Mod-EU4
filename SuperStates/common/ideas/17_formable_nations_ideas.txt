@@ -296,14 +296,15 @@ DES_ideas = {
 	free = yes		#will be added at load
 	
 	miracle_of_the_gulls2 = {
-		land_attrition = -0.2
-		land_morale = 0.1
+		land_attrition = -0.1
+		production_efficiency = 0.15
 	}
 	mormon_tabernacle_choir = {
 		prestige = 1
 	}
 	a_proclamation_on_family = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.2
+		land_morale = 0.1
 	}
 	legacy_of_the_pioneers = {
 		colonists = 1
@@ -365,7 +366,7 @@ FSA_ideas = {
 
 GLK_ideas = {
 	start = {
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
 		cavalry_power = 0.15
 	}
 
@@ -394,7 +395,7 @@ GLK_ideas = {
 		infantry_power = 0.15
 	}
 	militia_call_ups = {
-		manpower_recovery_speed = 0.25
+		manpower_recovery_speed = 0.2
 	}
 	lakeshore_commerce = {
 		merchants = 1
@@ -767,7 +768,7 @@ NAM_ideas = {
 PCF_ideas = {
 	start = {
 		naval_morale = 0.2
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 
 	bonus = {
