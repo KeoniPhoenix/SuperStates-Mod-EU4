@@ -1,7 +1,17 @@
 government = republic
-add_government_reform = american_state_reform
+add_government_reform = micronesian_republic
 government_rank = 1
 technology_group = oceanian
 primary_culture = kosraean
 religion = austral_catholic
 capital = 1995	#Lelu
+
+
+1441.1.3 = {
+	monarch = {
+		name = "Jacob Nena"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
