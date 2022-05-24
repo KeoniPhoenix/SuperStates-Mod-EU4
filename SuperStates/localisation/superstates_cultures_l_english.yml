@@ -124,6 +124,7 @@
  washingtonian:0 "Washingtonian"
  #Micronesian-Pacific Islander
  micronesian-pacific_islander:0 "Micronesian-Pacific"
+ micronesian:0 "Micronesian"
  chuukese:0 "Chuukese"
  guamanian:0 "Guamanian"
  hawaiian:0 "Hawaiian"
@@ -132,7 +133,7 @@
  northern_marianas_islander:0 "Mariana"
  palauan:0 "Palauan"
  pohnpeian:0 "Pohnpeian"
- samoan_american:0 "American Samoan"
+ samoan_american:0 "East Samoan"
  yapese:0 "Yapese"
  #American Southwestern
  #Great Plainer
