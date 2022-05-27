@@ -1,6 +1,15 @@
 government = republic
-add_government_reform = american_state_reform
+add_government_reform = micronesian_republic
 technology_group = oceanian
 primary_culture = chuukese
 religion = austral_catholic
 capital = 2727	#Weno
+
+1441.1.3 = {
+	monarch = {
+		name = "Erhart Aten"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

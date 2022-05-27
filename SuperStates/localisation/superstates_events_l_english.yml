@@ -1340,3 +1340,15 @@
  EVTOPTG700:0 "Female Military Candidate"
  
  #Samoa (Formable))
+ 
+ ############### SUPERSTATES PIRATE Events
+ PiratesSuperStates.1.name:0 "Pirates of Ocracoke"
+ PiratesSuperStates.1.desc:0 "The infamous pirate Edward 'Blackbeard' Teach has found himself on the shores of Ocracoke Island just off our coast after being chased out of the Caribbean by his foes. With his ship and accompanying fleet damaged, they have no choice but to remain marooned there for the foreseeable future. Already, word has spread through the area, with many locals supporting Blackbeard in his repair efforts and some even joining his crew. Shall we put an end to this man's reign of terror once and for all?"
+ PiratesSuperStates.1.a:0 "A pirate's life for me!"
+ PiratesSuperStates.1.b:0 "We don't have time for this. Let them be."
+ PiratesSuperStates.1.c:0 "Tell this pirate captain to prepare to meet his death!"
+ PiratesSuperStates.2.name:0 "A Prudent Privateer"
+ PiratesSuperStates.2.desc:0 "A former privateer going by the name of Peter Easton has decided that the law is beneath him, and is now actively engaging in piracy in the Atlantic. Recently, he has made a base outside of Harbour Grace from which to conduct his illicit affairs. We are now presented with the option of confronting this criminal or turning a blind eye to his activities."
+ PiratesSuperStates.2.a:0 "A pirate's life for me!"
+ PiratesSuperStates.2.b:0 "We don't have time for this. Let them be... at a price."
+ PiratesSuperStates.2.c:0 "Tell this pirate captain to prepare to meet his death!"
