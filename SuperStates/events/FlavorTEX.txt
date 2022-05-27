@@ -284,3 +284,225 @@ country_event = {
 		}
 	}
 }
+
+# country_event = {
+# 	id = "flavorTEX.1001"
+# 	title = "texas_high_plainer_revolt"
+# 	desc = "texas_high_plainer_revolt_des"
+# 	picture = WOUNDED_SOLDIERS_eventPicture
+	
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = "texas_high_plains_a"
+# 		add_stability = -3
+# 		if = {
+# 			limit = {
+# 				2483 = {
+# 					culture = high_plainer
+# 					owned_by = TEX
+# 				}
+# 			}
+# 			2483 = {
+# 				add_unrest = 10
+# 				spawn_rebels = {
+#    					type = nationalist_rebels
+#     				size = 3
+# 					culture = high_plainer
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				958 = {
+# 					culture = high_plainer
+# 					owned_by = TEX
+# 				}
+# 			}
+# 			958 = {
+# 				add_unrest = 5
+# 				spawn_rebels = {
+#    					type = nationalist_rebels
+#     				size = 1
+# 					culture = high_plainer
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				3289 = {
+# 					culture = high_plainer
+# 					owned_by = TEX
+# 				}
+# 			}
+# 			3289 = {
+# 				add_unrest = 5
+# 				spawn_rebels = {
+#    					type = nationalist_rebels
+#     				size = 1
+# 					culture = high_plainer
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				2481 = {
+# 					culture = high_plainer
+# 					owned_by = TEX
+# 				}
+# 			}
+# 			2481 = {
+# 				add_unrest = 7
+# 				spawn_rebels = {
+#    					type = nationalist_rebels
+#     				size = 2
+# 					culture = high_plainer
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				2482 = {
+# 					culture = high_plainer
+# 					owned_by = TEX
+# 				}
+# 			}
+# 			2482 = {
+# 				add_unrest = 7
+# 				spawn_rebels = {
+#    					type = nationalist_rebels
+#     				size = 3
+# 					culture = high_plainer
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				2482 = {
+# 					NOT = { culture = high_plainer }
+# 					owned_by = TEX
+# 				}
+# 				2481 = {
+# 					OR = {
+# 						NOT = { culture = high_plainer }
+# 						NOT = { owned_by = TEX }
+# 					}
+# 				}
+# 				2489 = {
+# 					OR = {
+# 						NOT = { culture = high_plainer }
+# 						NOT = { owned_by = TEX }
+# 					}
+# 				}
+# 				958 = {
+# 					OR = {
+# 						NOT = { culture = high_plainer }
+# 						NOT = { owned_by = TEX }
+# 					}
+# 				}
+# 				2483 = {
+# 					OR = {
+# 						NOT = { culture = high_plainer }
+# 						NOT = { owned_by = TEX }
+# 					}
+# 				}
+# 			}
+# 			2482 = {
+# 				add_unrest = 7
+# 				spawn_rebels = {
+#    					type = anti_tax_rebels
+#     				size = 2
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = "flavorTEX.1002"
+# 	title = "texas_convert_okl"
+# 	desc = "texas_convert_okl_des"
+# 	picture = CITY_VIEW_eventPicture
+	
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+	
+# 	option = {
+# 		name = "texas_okl_a"
+# 		add_accepted_culture = oklahoman
+# 		3289 = {
+# 				change_culture = oklahoman
+# 				remove_core = CIM
+# 				add_core = OKL
+# 		}
+# 		2481 = {
+# 				change_culture = oklahoman
+# 				remove_core = COM
+# 				add_core = OKL
+# 		}
+# 		2482 = {
+# 				change_culture = oklahoman
+# 				remove_core = COM
+# 				add_core = OKL
+# 		}
+# 		2483 = {
+# 				change_culture = oklahoman
+# 				remove_core = COM
+# 				add_core = OKL
+# 		}
+# 		958 = {
+# 				change_culture = oklahoman
+# 				remove_core = COM
+# 				add_core = OKL
+# 		}
+# 	}
+# 	option = {
+# 		name = "texas_okl_b"
+# 		add_accepted_culture = northern_texan
+# 		3287 = {
+# 			change_culture = northern_texan
+# 			remove_core = OKL
+# 		}
+# 		if = {
+# 			limit = {
+# 				3289 = {
+# 					culture = oklahoman
+# 				}
+# 			}
+# 			3289 = {
+# 				change_culture = northern_texan
+# 			}
+# 		}	
+# 		3289 = {
+# 			remove_core = OKL
+# 		}
+# 		3288 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 		3287 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 		1010 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 		2477 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 		2476 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 		1011 = {
+# 				change_culture = northern_texan
+# 				remove_core = OKL
+# 		}
+# 	}
+# }

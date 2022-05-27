@@ -1,5 +1,4 @@
 # Do not change tags in here without changing every other reference to them.
-# Do not change tags in here without changing every other reference to them.
 # If adding new groups or ideas, make sure they are unique.
 
 ### US States National Ideals
@@ -22,12 +21,12 @@ CJN_ideas = {
 	free = yes
 	
 	hurricane_proof = {
-		global_ship_cost = -0.20
+		global_ship_cost = -0.1
 		leader_naval_manuever = 1
 	}
 	cajun_diversity = {
 		num_accepted_cultures = 1
-		religious_unity = 0.33
+		religious_unity = 0.25
 	}
 	joie_de_vivre = {
 		prestige_decay = -0.01
@@ -42,7 +41,6 @@ CJN_ideas = {
 	mardi_gras_parades2 = {
 		global_unrest = -2
 	}
-
 	save_up_the_home = {
 		years_of_nationalism = -5
 		enemy_core_creation = 0.50
@@ -86,7 +84,6 @@ ALA_ideas = {
 	}
 	remote_territory = {
 		hostile_attrition = 1.0
-		enemy_core_creation = 0.50
 	}
 }
 
@@ -99,7 +96,7 @@ ALM_ideas = {
 	}
 
 	bonus = {
-		stability_cost_modifier = -0.10
+		land_morale = 0.1
 	}
 	
 	trigger = {
@@ -108,10 +105,10 @@ ALM_ideas = {
 	free = yes		#will be added at load.
 
 	heart_of_dixie = {
-		religious_unity = 0.25
+		tolerance_own = 2
 	}
 	commerce_raiders = {
-		heavy_ship_power = 0.10
+		heavy_ship_power = 0.15
 	}
 	centralize_all_government = {
 		yearly_corruption = -0.10
@@ -121,10 +118,10 @@ ALM_ideas = {
 	}
 	yellowhammer = {
 		infantry_power = 0.10
-		artillery_power = 0.10
+		artillery_power = 0.05
 	}
 	mobile_bay = {
-		global_ship_recruit_speed = -0.15
+		naval_forcelimit_modifier = 0.2
 	}
 	alabama_crimson = {
 		discipline = 0.05
@@ -136,11 +133,11 @@ ALM_ideas = {
 ARS_ideas = {
 	start = {
 		global_tax_modifier = 0.10
-		infantry_power = 0.10
+		infantry_power = 0.1
 	}
 
 	bonus = {
-		culture_conversion_cost = -0.20
+		province_warscore_cost = -0.15
 	}
 
 	trigger = {
@@ -155,7 +152,7 @@ ARS_ideas = {
 		infantry_cost = -0.20
 	}
 	razorbacks = {
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	lessons_from_little_rock = {
 		discipline = 0.05
@@ -179,7 +176,7 @@ ARS_ideas = {
 ARZ_ideas = {
 	start = {
 		land_forcelimit_modifier = 0.20
-		improve_relation_modifier = 0.30
+		improve_relation_modifier = 0.3
 	}
 	
 	bonus = {
@@ -195,11 +192,10 @@ ARZ_ideas = {
 	free = yes		#will be added at load.
 
 	phoenix_rising = {
-		prestige_decay = -0.01
 		army_tradition = 0.5
 	}
 	central_arizona_project = {
-		global_trade_goods_size_modifier = 0.05
+		global_trade_goods_size_modifier = 0.1
 	}
 	az_desert_warfare = {
 		land_attrition = -0.15
@@ -209,7 +205,7 @@ ARZ_ideas = {
 		num_accepted_cultures = 2
 	}
 	kofa_mine = {
-		development_cost = -0.10
+		development_cost = -0.20
 	}
 	cochise_stronghold = {
 		defensiveness = 0.15
@@ -223,12 +219,12 @@ ARZ_ideas = {
 
 CAL_ideas = {
 	start = {
-		global_tax_modifier = 0.20
+		global_tax_modifier = 0.10
 		diplomatic_reputation = 1
 	}
 	
 	bonus = {
-		manpower_recovery_speed = 0.20
+		manpower_recovery_speed = 0.15
 	}
 
 	trigger = {
@@ -255,14 +251,14 @@ CAL_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	hollywood = {
-		prestige_decay = -0.02
+		prestige_decay = -0.01
 	}
 	tule_fog = {
 		leader_land_shock = 1
-		leader_land_manuever = 1
 	}
 	the_melting_pot = {
-		no_religion_penalty = yes
+		tolerance_heretic = 2
+		tolerance_heathen = 1
 	}
 }
 
@@ -376,7 +372,7 @@ DEL_ideas = {
 	free = yes		#will be added at load.
 	
 	caesar_rodneys_ride = {
-		leader_land_manuever = 1
+		movement_speed = 0.1
 	}	
 	delaware_blues = {
 		infantry_power = 0.10
@@ -386,7 +382,7 @@ DEL_ideas = {
 		production_efficiency = 0.10
 	}
 	delaware_bay = {
-		global_ship_cost = -0.15
+		global_ship_cost = -0.1
 		global_ship_recruit_speed = -0.15
 	}		
 	rein_in_the_county_governments = {
@@ -410,6 +406,7 @@ WDC_ideas = {
 	
 	bonus = {
 		monarch_diplomatic_power = 1
+		candidate_random_bonus = 1
 	}
 	
 	trigger = {
@@ -418,12 +415,12 @@ WDC_ideas = {
 	free = yes		#will be added at load.
 	
 	soldiers_of_fortune = {
-		mercenary_cost = -0.10
+		mercenary_cost = -0.25
 		mercenary_manpower = 0.25
 	}
 	centralized_government = {
-		global_tax_modifier = 0.10
-		state_maintenance_modifier = -0.10
+		global_tax_modifier = 0.15
+		state_maintenance_modifier = -0.2
 	}
 	ordained_capital = {
 		diplomatic_reputation = 2
@@ -436,7 +433,7 @@ WDC_ideas = {
 		defensiveness = 0.20
 	}
 	potomac_river = {
-		trade_efficiency = 0.10
+		global_trade_power = 0.1
 	}
 	charters_of_freedom = {
 		stability_cost_modifier = -0.20
@@ -472,14 +469,14 @@ FLO_ideas = {
 		land_morale = 0.10
 	}
 	buccaneers = {
-		may_perform_slave_raid = yes
-		heavy_ship_power = 0.10
+		privateer_efficiency = 0.3
+		naval_morale = 0.05
 	}
 	ponce_de_leon = {
 		colonists = 1
 	}
 	reedy_creek_improvement_district = {
-		global_trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier = 0.1
 	}
 	everglades = {
 		defensiveness = 0.10
@@ -487,7 +484,6 @@ FLO_ideas = {
 	}
 	port_canaveral = {
 		navy_tradition = 1
-		global_colonial_growth = 15
 	}
 	biscayne_bay = {
 		global_trade_power = 0.20
@@ -503,7 +499,7 @@ GRG_ideas = {
 	}
 	
 	bonus = {
-		global_foreign_trade_power = 0.10
+		leader_land_shock = 1
 	}
 	
 	trigger = {
@@ -529,17 +525,17 @@ GRG_ideas = {
 		inflation_reduction = 0.05
 	}
 	savannah_river = {
-		global_ship_cost = -0.10
-		naval_morale = 0.15
+		global_ship_cost = -0.1
+		naval_morale = 0.075
 	}
 	hazzard_county_boys = {
 		cavalry_power = 0.15
 	}
 	pharmacy_invention = {
-		global_trade_power = 0.10
+		global_trade_power = 0.1
 	}
 	georgia_bulldogs = {
-		infantry_power = 0.15
+		infantry_power = 0.2
 	}
 }
 
@@ -563,9 +559,11 @@ GUM_ideas = {
 	legacy_of_magellan1 = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.33
 	}
 	island_tourism1 = {
 		global_prov_trade_power_modifier = 0.20
+		prestige = 0.5
 	}
 	chamorro_colonists = {
 		colonists = 1
@@ -591,7 +589,7 @@ GUM_ideas = {
 HWI_ideas = {
 	start = {
 		leader_land_shock = 1
-		ship_durability = 0.05
+		ship_durability = 0.1 	
 	}
 	
 	bonus = {
@@ -605,7 +603,7 @@ HWI_ideas = {
 
 	pearl_harbor = {
 		naval_morale = 0.10
-		naval_attrition = -0.10
+		range = 0.33
 	}
 	kilaueas_expansion = {
 		may_explore = yes
@@ -613,10 +611,10 @@ HWI_ideas = {
 	}
 	streamlined_government = {
 		state_maintenance_modifier = -0.25
+		global_tax_modifier = 0.05
 	}
 	night_marchers = {
-		shock_damage = 0.05
-		shock_damage_received = -0.05
+		infantry_power = 0.15
 	}
 	culture_of_friendship = {
 		stability_cost_modifier = -0.15
@@ -661,7 +659,7 @@ IDA_ideas = {
 	}
 	multicultural_pioneers = {
 		num_accepted_cultures = 1
-		same_culture_advisor_cost = -0.25
+		advisor_cost = -0.15
 	}
 	snake_river_plain = {
 		manpower_recovery_speed = 0.10
@@ -683,7 +681,7 @@ IDA_ideas = {
 ILI_ideas = {
 	start = {
 		global_trade_power = 0.10
-		state_maintenance_modifier = -0.20
+		state_maintenance_modifier = -0.25
 	}
 	
 	bonus = {
@@ -734,7 +732,7 @@ INI_ideas = {
 	}
 	
 	bonus = {
-		core_creation = -0.20
+		core_creation = -0.15
 	}
 	
 	trigger = {
@@ -755,13 +753,13 @@ INI_ideas = {
 		leader_land_fire = 1
 	}
 	mammoth_internal_improvement_act = {
-		trade_efficiency = 0.10
+		trade_efficiency = 0.15
 	}
 	state_bank_of_indiana = {
-		interest = -1
+		interest = -0.5
 	}
 	crossroads_of_america = {
-		trade_range_modifier = 0.20
+		caravan_power = 0.20
 	}
 }
 
@@ -769,8 +767,8 @@ INI_ideas = {
 
 IOW_Ideas = {
 	start = {
-		state_maintenance_modifier = -0.15
-		global_trade_goods_size_modifier = 0.05
+		state_maintenance_modifier = -0.25
+		global_trade_goods_size_modifier = 0.1
 	}
 	
 	bonus = {
@@ -783,17 +781,17 @@ IOW_Ideas = {
 	free = yes
 	
 	corn_production = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 	iowa_caucus = {
-		improve_relation_modifier = 0.33
+		improve_relation_modifier = 0.25
 	}
 	hawkeyes = {
 		cavalry_power = 0.15
 	}
 	council_for_defense = {
 		army_tradition = 0.5
-		discipline = 0.03
+		discipline = 0.025
 	}
 	new_purchase_lands = {
 		tolerance_heretic = 1
@@ -807,7 +805,7 @@ IOW_Ideas = {
 		meritocracy = 1
 	}
 	chief_mahaskas_tactics = {
-		leader_land_manuever = 1
+		movement_speed = 0.15
 	}
 }
 
@@ -820,7 +818,7 @@ JEF_ideas = {
 	}
 
 	bonus = {
-		ae_impact = -0.20
+		ae_impact = -0.15
 	}
 	
 	trigger = {
@@ -832,8 +830,7 @@ JEF_ideas = {
 		prestige = 1
 	}
 	the_double_cross = {
-		trade_steering = 0.25
-		global_own_trade_power = 0.10
+		global_own_trade_power = 0.20
 	}
 	republic_of_the_pacific = {
 		heavy_ship_power = 0.15
@@ -843,10 +840,10 @@ JEF_ideas = {
 	}
 	new_road_investments = {
 		trade_efficiency = 0.10
-		movement_speed = 0.15
+		movement_speed = 0.05
 	}
 	dedicated_people = {
-		global_regiment_cost = -0.15
+		global_regiment_cost = -0.1
 	}
 	state_of_mind = {
 		stability_cost_modifier = -0.20
@@ -857,12 +854,12 @@ JEF_ideas = {
 
 KNS_Ideas = {
 	start = {
-		global_unrest = -1
-		land_attrition = -0.10
+		global_autonomy = -0.05
+		land_attrition = -0.15
 	}
 	
 	bonus = {
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.25
 	}
 	
 	trigger = {
@@ -874,7 +871,7 @@ KNS_Ideas = {
 	free = yes
 	
 	land_of_john_brown = {
-		global_autonomy = -0.05
+		global_unrest = -1
 	}
 	dodge_city = {
 		army_tradition = 0.5
@@ -884,10 +881,10 @@ KNS_Ideas = {
 		fabricate_claims_cost= -0.25
 	}
 	agricultural_heartland = {
-		reinforce_cost_modifier = -0.25
+		global_manpower_modifier = 0.2
 	}
 	were_not_in_kansas_anymore = {
-		core_creation = -0.25
+		core_creation = -0.2
 	}
 	the_brown_case = {
 		idea_cost = -0.05
@@ -930,7 +927,6 @@ KEN_Ideas = {
 	}
 	the_mccoys = {
 		global_manpower_modifier = 0.25
-		infantry_power = 0.10
 	}
 	equus_caballus = {
 		discipline = 0.05
@@ -939,7 +935,7 @@ KEN_Ideas = {
 		inflation_reduction = 0.10
 	}
 	abraham_lincoln = {
-		possible_adm_policy = 1
+		reform_progress_growth = 0.15
 	}
 }
 
@@ -947,12 +943,12 @@ KEN_Ideas = {
 
 LOU_ideas = {
 	start = {
-		religious_unity = 0.50
+		hostile_attrition = 1
 		global_heretic_missionary_strength = 0.02
 	}
 	
 	bonus = {
-		warscore_cost_vs_other_religion = -0.25
+		warscore_cost_vs_other_religion = -0.2
 	}
 	
 	trigger = {
@@ -961,21 +957,22 @@ LOU_ideas = {
 	free = yes
 	
 	lake_pontchartrain = {
-		leader_naval_manuever = 1
-		global_ship_cost = -0.10
+		ship_durability = 0.05
+		global_ship_cost = -0.05
 	}
 	mardi_gras_parades = {
 		global_unrest = -2
 	}
 	cajun_influence = {
-		num_accepted_cultures = 2
+		num_accepted_cultures = 1
+		years_of_nationalism = -5
 	}
 	french_quarter = {
-		prestige_decay = -0.01
+		diplomatic_reputation = 1 
 	}
 	mississippi_estuary = {
 		trade_steering = 0.25
-		trade_range_modifier = 0.10
+		caravan_power = 0.10
 	}
 	river_traffic = {
 		global_tax_modifier = 0.10
@@ -994,7 +991,7 @@ MNE_ideas = {
 	}
 	
 	bonus = {
-		sunk_ship_morale_hit_recieved = -0.20
+		naval_forcelimit_modifier = 0.2
 	}
 	
 	trigger = {
@@ -1004,16 +1001,18 @@ MNE_ideas = {
 	
 	fishing_grounds = {
 		navy_tradition = 1
+		production_efficiency = 0.05
 	}
 	trawler_experience = {
-		naval_morale = 0.20
+		naval_morale = 0.1
+		sunk_ship_morale_hit_recieved = -0.1
 	}
 	pine_tree_state = {
-		build_cost = -0.10
 		global_ship_cost = -0.10
 	}
 	kittery_shipyard = {
-		ship_durability = 0.10
+		ship_durability = 0.05
+		dip_tech_cost_modifier = -0.1
 	}
 	acadian_influence = {
 		diplomats = 1
@@ -1048,15 +1047,15 @@ MYD_ideas = {
 	free = yes
 	
 	lord_calverts_followers = {
-		religious_unity = 0.33
+		tolerance_own = 1
 	}
 	chesapeake_bay1 = {
 		trade_range_modifier = 0.10
-		global_ship_recruit_speed = -0.10
+		global_trade_power = 0.1
 	}
 	annapolis_naval_academy = {
 		leader_naval_manuever = 1
-		naval_morale = 0.15
+		naval_morale = 0.075
 	}
 	port_of_baltimore = {
 		merchants = 1
@@ -1068,7 +1067,7 @@ MYD_ideas = {
 		stability_cost_modifier = -0.15
 	}
 	the_b_and_o = {
-		dip_tech_cost_modifier = -0.10
+		technology_cost = -0.10
 	}
 }
 
@@ -1081,7 +1080,7 @@ MSS_ideas = {
 	}
 	
 	bonus = {
-		artillery_fire = 1
+		artillery_fire = 0.5
 	}
 	
 	trigger = {
@@ -1099,18 +1098,17 @@ MSS_ideas = {
 		merchants = 1
 	}
 	taxation_with_representation1 = {
-		global_tax_modifier = 0.15
+		global_tax_modifier = 0.05
+		global_unrest = -1
 	}
 	prestigious_universities = {
 		technology_cost = -0.10
 	}
 	perfect_storm = {
-		leader_naval_manuever = 1
-		naval_morale = 0.10
+		naval_morale = 0.15
 	}
 	boston_tea_party = {
-		prestige = 0.5
-		prestige_decay = -0.01
+		prestige = 1
 	}
 	naval_design_school = {
 		ship_durability = 0.05
@@ -1154,14 +1152,14 @@ MIC_ideas = {
 		diplomatic_reputation = 1
 	}
 	soo_line = {
-		trade_range_modifier = 0.10
+		caravan_power = 0.3
 	}
 	land_of_resources = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	cereals_of_battle_creek = {
-		recover_army_morale_speed = 0.10
-		land_forcelimit_modifier = 0.10
+		recover_army_morale_speed = 0.05
+		land_forcelimit_modifier = 0.15
 	}
 }
 
@@ -1169,7 +1167,7 @@ MIC_ideas = {
 
 MNN_ideas = {
 	start = {
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.15
 		fort_maintenance_modifier = -0.15
 	}
 	
@@ -1190,10 +1188,10 @@ MNN_ideas = {
 		caravan_power = 0.15
 	}
 	gopher_state = {
-		defensiveness = 0.15
+		defensiveness = 0.25
 	}
 	letoile_du_nord = {
-		leader_land_fire = 1
+		artillery_power = 0.15
 	}
 	twin_cities = {
 		diplomats = 1
@@ -1202,7 +1200,7 @@ MNN_ideas = {
 		infantry_power = 0.10
 	}
 	minnesota_milling = {
-		production_efficiency = 0.15
+		production_efficiency = 0.1
  	}
 }
 
@@ -1211,7 +1209,7 @@ MNN_ideas = {
 MPP_ideas = {
 	start = {
 		infantry_power = 0.10
-		global_trade_goods_size_modifier = 0.10
+		infantry_cost = -0.15
 	}
 	
 	bonus = {
@@ -1224,7 +1222,7 @@ MPP_ideas = {
 	free = yes
 	
 	ole_miss = {
-		institution_spread_from_true_faith = 0.10
+		institution_spread_from_true_faith = 0.25
 	}
 	port_of_gulfport = {
 		merchants = 1
@@ -1243,10 +1241,10 @@ MPP_ideas = {
 		meritocracy = 1
 	}
 	glorious_military_history = {
-		leader_land_fire = 1
+		leader_land_shock = 1
 	}
 	mississippi_delta = {
-		trade_range_modifier = 0.30
+		global_trade_power = 0.15
 	}
 }
 
@@ -1254,8 +1252,8 @@ MPP_ideas = {
 
 MOU_ideas = {
 	start = {
-		harsh_treatment_cost = -0.15
-		trade_steering = 0.10
+		harsh_treatment_cost = -0.2
+		fort_maintenance_modifier = -0.2
 	}
 	
 	bonus = {
@@ -1271,7 +1269,8 @@ MOU_ideas = {
 		prestige_decay = -0.01
 	}
 	opportunistic_warfare = {
-		merc_maintenance_modifier = -0.15
+		mercenary_cost = -0.2
+		merc_maintenance_modifier = -0.1
 	}
 	state_guard = {
 		discipline = 0.05
@@ -1281,7 +1280,7 @@ MOU_ideas = {
 	}
 	university_of_science_and_technology = {
 		technology_cost = -0.05
-		idea_cost = -0.10
+		idea_cost = -0.05
 	}
 	mormon_expulsion = {
 		global_missionary_strength = 0.02
@@ -1326,9 +1325,10 @@ MNT_ideas = {
 	}
 	little_big_horn = {
 		army_tradition_from_battle = 0.50
+		infantry_power = 0.1
 	}
 	rogers_pass = {
-		leader_land_manuever = 1
+		movement_speed = 0.1
 	}
 	copper_mining_kings = {
 		global_trade_goods_size_modifier = 0.10
@@ -1369,13 +1369,13 @@ NEB_ideas = {
 		fire_damage_received = -0.10
 	}
 	actuaries = {
-		interest = -1
+		interest = -0.5
 	}
 	edwin_perkins = {
 		merchants = 1
 	}
 	militia_drills = {
-		recover_army_morale_speed = 0.05
+		land_morale = 0.1
 	}
 		
 }
@@ -1406,6 +1406,7 @@ NVA_ideas = {
 	}
 	battle_born = {
 		army_tradition = 0.5
+		drill_gain_modifier = 0.25
 	}
 	comstock_lode = {
 		technology_cost = -0.05
@@ -1440,7 +1441,11 @@ NWH_ideas = {
 	}
 	
 	bonus = {
-		land_morale = 0.15
+		republican_tradition = 0.30
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 	}
 	
 	trigger = {
@@ -1460,14 +1465,14 @@ NWH_ideas = {
 		envoy_travel_time = -0.25
 	}
 	live_free_or_die = {
-		years_of_nationalism = -5
-		enemy_core_creation = 0.25
+		land_morale = 0.15
 	}
 	prosperous_citizens = {
 		global_unrest = -1
 	}
 	bretton_woods_conference = {
 		free_adm_policy = 1
+		interest = -0.5
 	}
 	volunteer_legislature = {
 		yearly_corruption = -0.10
@@ -1506,17 +1511,17 @@ NJY_ideas = {
 	}
 	edisons_legacy = {
 		embracement_cost = -0.10
-		global_institution_spread = 0.05
+		global_institution_spread = 0.15
 	}
 	crossroads_of_revolution = {
 		mercenary_cost = -0.15
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 	}
 	atlantic_city = {
 		prestige_decay = -0.01	
 	}
 	jersey_produce = {
-		production_efficiency = 0.20
+		production_efficiency = 0.1
 	}
 }
 
@@ -1538,16 +1543,16 @@ NMX_ideas = {
 	free = yes
 	
 	trinity_site = {
-		idea_cost = -0.05
+		idea_cost = -0.1
 	}
 	spanish_influence = {
 		global_missionary_strength = 0.02
 	}
 	adobe_construction = {
-		development_cost = -0.10
+		development_cost = -0.15
 	}
 	kit_carsons_leadership = {
-		fire_damage = 0.10
+		shock_damage = 0.1
 	}
 	observing_the_stars = {
 		technology_cost = -0.10
@@ -1580,7 +1585,7 @@ NYS_ideas = {
 	
 	financial_center = {
 		inflation_reduction = 0.10
-		interest = -1.0
+		interest = -0.5
 	}
 	sons_of_liberty = {
 		global_spy_defence = 0.20
@@ -1590,14 +1595,14 @@ NYS_ideas = {
 		army_tradition = 0.50
 	}
 	marble_decor_capitol = {
-		prestige_decay = -0.01
+		prestige_decay = -0.005
 		diplomatic_reputation = 1
 	}
 	junction_for_information = {
 		technology_cost = -0.05
 	}
 	statue_of_liberty = {
-		ae_impact = -0.15
+		global_manpower_modifier = 0.15
 	}
 	halls_of_diplomacy = {
 		diplomats = 1
@@ -1610,7 +1615,7 @@ NYS_ideas = {
 WNY_ideas = {
 	start = {
 		diplomats = 1
-		discipline = 0.03
+		discipline = 0.05
 	}
 	
 	bonus = {
@@ -1630,7 +1635,7 @@ WNY_ideas = {
 	}
 	terminus_of_the_great_canalway = {
 		build_cost = -0.10
-		global_institution_spread = 0.10
+		caravan_power = 0.2
 	}
 	forged_from_the_blizzard = {
 		leader_land_fire = 1
@@ -1642,7 +1647,7 @@ WNY_ideas = {
 		land_morale = 0.10
 	}
 	links_to_the_sea = {
-		trade_range_modifier = 0.20
+		global_trade_power = 0.1
 	}
 }
 
@@ -1655,7 +1660,7 @@ NCR_ideas = {
 	}
 	
 	bonus = {
-		stability_cost_modifier = -0.25
+		stability_cost_modifier = -0.15
 	}
 	
 	trigger = {
@@ -1674,20 +1679,20 @@ NCR_ideas = {
 		cavalry_power = 0.15
 	}
 	ghosts_of_roanoke = {
-		core_creation = -0.15
+		hostile_attrition = 1
 	}
 	wilmington_port = {
-		global_ship_cost = -0.20
+		global_ship_cost = -0.1
 		global_ship_recruit_speed = -0.1
 	}
 	inspirational_naval_lore = {
-		leader_naval_manuever = 1
+		naval_morale = 0.15
 	}
 	tobacco_trading = {
 		trade_efficiency = 0.10
 	}
 	biltmore_estate = {
-		improve_relation_modifier = 0.30
+		improve_relation_modifier = 0.25
 	}
 	research_triangle = {
 		technology_cost = -0.10
@@ -1698,7 +1703,7 @@ NCR_ideas = {
 
 NDK_ideas = {
 	start = {
-		war_exhaustion_cost = -0.10
+		war_exhaustion_cost = -0.2
 		culture_conversion_cost = -0.20
 	}
 	
@@ -1764,7 +1769,7 @@ legacy_of_magellan2 = {
 		auto_explore_adjacent_to_colony = yes
 	}
 	lao_lao_bay = {
-		global_ship_cost = -0.20
+		global_ship_cost = -0.1
 		global_ship_recruit_speed = -0.15
 	}
 	island_tourism2 = {
@@ -1789,11 +1794,11 @@ legacy_of_magellan2 = {
 OHI_ideas = {
 	start = {
 		diplomatic_reputation = 1
-		idea_cost = -0.05
+		idea_cost = -0.1
 	}
 	
 	bonus = {
-		years_of_nationalism = -5
+		ae_impact = -0.15
 	}
 	
 	trigger = {
@@ -1805,24 +1810,23 @@ OHI_ideas = {
 		governing_capacity_modifier = 0.15
 	}
 	securing_the_toledo_strip = {
-		land_morale = 0.10
+		land_morale = 0.15
 	}
-great_river = {
-		trade_steering = 0.20
-		trade_range_modifier = 0.10
+	great_river = {
+		global_trade_power = 0.15
 	}
 	birthplace_of_generals = {
 		free_leader_pool = 1
+		army_tradition = 0.5
 	}
 	carrage_capital = {
 		caravan_power = 0.25
 	}
 	buckeye_prowess = {
-		infantry_power = 0.10
-		cavalry_power = 0.10
+	 	shock_damage_received = -0.10
 	}
 	mother_of_presidents = {
-		free_adm_policy = 1
+		adm_tech_cost_modifier = -0.1
 	}
 }
 
@@ -1855,19 +1859,20 @@ OKL_ideas = {
 	}
 	red_river_shootout = {
 		spy_offence = 0.20
+		fabricate_claims_cost = -0.25
 	}
 	indigenous_diversity = {
 		tolerance_heretic = 1
-		religious_unity = 0.15
+		tolerance_heathen = 2
 	}
 	oklahoma_thunder = {
 		land_morale = 0.10
 	}
 	wrath_of_the_twirling_wind = {
-		ae_impact = -0.10
+		ae_impact = -0.15
 	}
 	red_river_of_the_south = {
-		trade_steering = 0.20
+		global_trade_power = 0.10	
 	}
 }
 
@@ -1880,7 +1885,7 @@ ORE_ideas = {
 	}
 	
 	bonus = {
-		navy_tradition_decay = -0.01
+		navy_tradition = 1
 	}
 	
 	trigger = {
@@ -1890,13 +1895,13 @@ ORE_ideas = {
 	
 	beaver_design_and_construction= {
 		build_cost = -0.10
-		development_cost = -0.10
+		development_cost = -0.05
 	}
 	ewing_young = {
 		prestige = 1
 	}
 	oregon_trail = {
-		leader_land_manuever = 1
+		land_attrition = -0.25
 	}
 	goddess_nike_favors_us = {
 		movement_speed = 0.15
@@ -1906,7 +1911,8 @@ ORE_ideas = {
 		global_unrest = -2
 	}
 	pioneer_settlement = {
-		colonists = 1  
+		colonists = 1 
+		range = 0.25
 	}
 	initiative_and_referendum = {
 		yearly_corruption = -0.10
@@ -1917,7 +1923,7 @@ ORE_ideas = {
 
 PNN_ideas = {
 	start = {
-		merc_maintenance_modifier = -0.10
+		mercenary_cost = -0.2
 		army_tradition = 0.5
 	}
 	
@@ -1963,12 +1969,12 @@ PNN_ideas = {
 
 PRT_ideas = {
 	start = {
-	   	global_ship_cost = -0.15
-		ship_durability = 0.10
+	   	global_ship_cost = -0.10
+		ship_durability = 0.05
 	}
 	
 	bonus = {
-		dip_tech_cost_modifier = -0.05
+		naval_forcelimit_modifier = 0.25
 	}
 	
 	trigger = {
@@ -1982,6 +1988,7 @@ PRT_ideas = {
 	columbus_legacy = {
 		colonists = 1
 		idea_claim_colonies = yes
+		may_explore = yes
 	}
 	port_of_san_juan = {
 		merchants = 1
@@ -1993,10 +2000,10 @@ PRT_ideas = {
 		technology_cost = -0.05
 	}
 	el_grito_de_lares = {
-		harsh_treatment_cost = -0.15
+		harsh_treatment_cost = -0.2
 	}
 	vieques_naval_range = {
-		naval_morale = 0.20
+		naval_morale = 0.15
 	}
 }
 
@@ -2039,7 +2046,7 @@ RIS_ideas = {
 	}
 	newport_market_tarriffs = {
 		global_tariffs = 0.15
-		embargo_efficiency = 0.10
+		global_tax_modifier = 0.1
 	}
 	commodore_perry = {
 		leader_naval_manuever = 1
@@ -2094,11 +2101,11 @@ ASM_ideas = {
 SCR_ideas = {
 	start = {
 		loot_amount = 0.25
-		light_ship_cost = -0.20
+		global_ship_cost = -0.1
 	}
 	
 	bonus = {
-		advisor_pool = 1
+		cavalry_shock = 0.2
 	}
 	
 	trigger = {
@@ -2113,7 +2120,8 @@ SCR_ideas = {
 	free = yes		#will be added at load.
 	
 	nullification_acts = {
-		global_autonomy = -0.05
+		land_morale = 0.05
+		hostile_attrition = 1
 	}
 	charleston_harbor = {
 		global_sailors_modifier = 0.20
@@ -2127,9 +2135,10 @@ SCR_ideas = {
 	}
 	back_country_patriots = {
 		cavalry_flanking = 0.50
+		movement_speed = 0.15
 	}
 	battle_of_fort_sumter = {
-		prestige_from_land = 0.5
+		prestige_from_land = 1
 		army_tradition_from_battle = 0.50
 	}
 	forward_to_freedom = {
@@ -2176,6 +2185,7 @@ SDK_ideas = {
 	}
 	spirit_of_crazy_horse = {
 		free_mil_policy = 1
+		land_morale = 0.05
 	}
 	black_hills_mining_excise = {
 		global_tax_modifier = 0.10
@@ -2184,8 +2194,8 @@ SDK_ideas = {
 		development_cost = -0.10
 	}
 	culture_of_resistance = {
-		missionaries = 1
-		enemy_core_creation = 0.25
+		defensiveness = 0.1
+		hostile_attrition = 1
 	}
 }
 
@@ -2237,62 +2247,15 @@ TNN_ideas = {
 	}
 }
 
-#Texas
-
-# TEX_ideas = {
-	# start = {
-		# global_missionary_strength = 0.02
-		# army_tradition = 0.5
-	# }
-	
-	# bonus = {
-		# heavy_ship_power = 0.10
-	# }
-	
-	# trigger = {
-	# OR = {
-		# tag = TEX
-		# #tag = COM
-		# tag = LPN
-		# tag = ETX
-		# tag = NTX
-		# }
-	# }
-	# free = yes
-	
-	# the_alamo_the_goliad = {
-		# discipline = 0.05
-		# defensiveness = 0.15
-	# }
-	# galvaston_bay = {
-		# naval_forcelimit_modifier = 0.25
-	# }
-	# six_flags = {
-		# land_morale = 0.15
-	# }
-	# chisholm_trail2 = {
-		# cavalry_power = 0.20
-		# cavalry_cost = -0.05
-	# }
-	# sam_houstons_disciples = {
-		# leader_land_manuever = 1
-	# }
-	# fort_worth_stockyard = {
-		# merchants = 1
-	# }
-	# san_jacinto = {
-		# prestige_from_land = 0.50
-		# army_tradition_decay = -0.01
-	# }
-# }
+# Texas
 
 TEX_ideas = {
 	start = {	
-		fire_damage_received = -0.1
-		global_missionary_strength = 0.02
+		land_morale = 0.15
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
-		land_morale = 0.15
+		infantry_fire = 0.15
 	}
 	trigger = {
 	OR = {
@@ -2306,22 +2269,24 @@ TEX_ideas = {
 	free = yes
 	lone_star_state = {
 		prestige = 1
+	 	num_accepted_cultures = 1
 	}
 	tex_revolution = {
-		fire_damage = 0.1
+		fire_damage_received = -0.1
 	}
 	cotton_plantations = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	vaqueros = {
 		land_attrition = -0.1
-		movement_speed = 0.15
+		cavalry_power = 0.1
 	}
 	tex_native_frontiers = {
-		army_tradition_decay = -0.01
+		defensiveness = 0.25
 	}
 	tejanos = {
-		stability_cost_modifier = -0.15
+		stability_cost_modifier = -0.1
+		idea_cost = -0.05
 	}
 	adelsverin = {
 		development_cost = -0.1
@@ -2332,7 +2297,7 @@ TEX_ideas = {
 
 UTA_ideas = {
 	start = {
-		tolerance_heretic = 1
+		land_attrition = -0.15
 		global_missionary_strength = 0.03
 	}
 
@@ -2376,7 +2341,7 @@ UTA_ideas = {
 		global_tax_modifier = 0.05
 	}
 	beehive_state = {
-		religious_unity = 0.50
+		production_efficiency = 0.1
 	}
 }
 
@@ -2389,7 +2354,7 @@ VRM_ideas = {
 	}
 	
 	bonus = {
-		possible_dip_policy = 1
+		free_dip_policy = 1
 	}
 	
 	trigger = {
@@ -2398,8 +2363,7 @@ VRM_ideas = {
 	free = yes
 	
 	green_mountain_boys = {
-		fire_damage = 0.05
-		shock_damage = 0.05
+		shock_damage = 0.15
 	}
 	correcting_the_gores = {
 		global_tax_modifier = 0.10
@@ -2430,11 +2394,11 @@ VRM_ideas = {
 VIR_ideas = {
 	start = {
 		free_leader_pool = 1
-		recover_army_morale_speed = 0.10
+		leader_land_shock = 1
 	}
 
 	bonus = {
-		embargo_efficiency = 0.20
+		leader_land_fire = 1
 	}
 	
 	trigger = {
@@ -2449,24 +2413,24 @@ VIR_ideas = {
 		improve_relation_modifier = 0.20
 	}
 	sic_semper_tyrannis = {
-		ae_impact = -0.15
-		enemy_core_creation = 0.25
+		land_morale = 0.15
 	}
 	tobacco_plantations = {
 		production_efficiency = 0.10
 }
 	the_father_from_mount_vernon = {
-		siege_ability = 0.10
+		leader_siege = 1
 	}
 	the_pentagon = {
 		free_mil_policy = 1
+		army_tradition = 0.25
 	}
 	norfolk_naval_shipyard = {
-		sunk_ship_morale_hit_recieved = -0.20
+		naval_forcelimit_modifier = 0.2
 	}
 	jeffersonian_tariffs = { 
 		global_tariffs = 0.15
-		global_tax_modifier = 0.05
+		trade_efficiency = 0.1
 	}
 }
 
@@ -2474,7 +2438,7 @@ VIR_ideas = {
 
 UVI_ideas = {
 	start = {
-		global_sailors_modifier = 0.10
+		naval_morale = 0.1
 		capture_ship_chance = 0.20
 	}
 
@@ -2493,10 +2457,10 @@ UVI_ideas = {
 	colonial_history = {				
 		colonists = 1
 		idea_claim_colonies = yes
+		may_explore = yes
 	}
 	blackbeards_castle = {
-		privateer_efficiency = 0.15
-		embargo_efficiency = 0.10
+		privateer_efficiency = 0.33
 	}
 	brandenburg_colony  = {
 		may_perform_slave_raid = yes
@@ -2505,7 +2469,7 @@ UVI_ideas = {
 		army_tradition = 0.5
 	}
 	territorial_rule = {
-		governing_capacity_modifier = 0.10
+		governing_capacity_modifier = 0.15
 	}
 	alexander_hamilton = {
 		free_adm_policy = 1
@@ -2544,13 +2508,14 @@ WAS_ideas = {
 	}
 	george_vancouver = {
 		may_explore = yes
+		range = 0.2
 	}
 	puget_sound = {
-		global_ship_cost = -0.15
+		global_ship_cost = -0.1
 		global_ship_recruit_speed = -0.10
 	}
 	the_founding_father = {
-		fire_damage = 0.10
+		land_morale = 0.2
 	}
 	home_of_visionaries = {
 		idea_cost = -0.10
@@ -2591,8 +2556,7 @@ WVA_ideas = {
 		technology_cost = -0.05
 	}
 	montani_semper_liberi = {
-		years_of_nationalism = -5
-		enemy_core_creation = 0.50
+		hostile_attrition = 1
 	}
 	mining_claim_fees = {
 		global_tax_modifier = 0.10
@@ -2620,14 +2584,14 @@ WIS_ideas = {
 	free = yes       #will be added at load.
 	
 	cheesemakers_paradise = {
-		global_prov_trade_power_modifier = 0.15
+		production_efficiency = 0.15
 	}
 	iron_mines = {            
 		artillery_power = 0.10
 		artillery_cost = -0.10
 	}
 	dairy_capital = {
-		production_efficiency = 0.10
+		trade_efficiency = 0.10
 	}
 	badger_hole_surprises = {
 		shock_damage = 0.10
@@ -2641,7 +2605,6 @@ WIS_ideas = {
 	}
 	milwaukee_beer_gardens = {
 		idea_cost = -0.05
-		global_unrest = -1
 	}
 }
 
@@ -2654,7 +2617,7 @@ WYO_ideas = {
 	}
 	
 	bonus = {
-		yearly_absolutism = 0.50
+		yearly_absolutism = 1
 	}
 	
 	trigger = {
@@ -2682,7 +2645,7 @@ WYO_ideas = {
 	equality_state = {
 		global_unrest = -2
 		may_recruit_female_generals = yes
-		female_advisor_chance = 0.5
+		female_advisor_chance = 0.5	
 	}
 	cheyenne_warrior_spirits = {
 		cavalry_power = 0.25
@@ -2715,11 +2678,10 @@ YZU_ideas = {
 	free = yes
 	
 	heart_of_dixie = {
-		religious_unity = 0.33
+		tolerance_own = 2
 	}
 	yellowhammer = {
 		infantry_power = 0.10
-		artillery_power = 0.10
 	}
 	king_cotton = {
 		production_efficiency = 0.10
@@ -2746,7 +2708,7 @@ YZU_ideas = {
 
 SFL_ideas = {
 	start = {
-		interest = -1
+		interest = -0.5
 		advisor_cost = -0.10
 	}
 	
@@ -2780,10 +2742,10 @@ SFL_ideas = {
 		development_cost = -0.10
 	}
 	reedy_creek_improvement_district = {
-		global_trade_goods_size_modifier = 0.20
+		global_trade_goods_size_modifier = 0.10
 	}
 	biscayne_bay = {
-		global_trade_power = 0.20
+		global_trade_power = 0.15
 	}	
 }
 
@@ -2808,10 +2770,10 @@ MIM_ideas = {
 		land_morale = 0.10
 	}
 	magic_city = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	biscayne_bay = {
-		global_own_trade_power = 0.15
+		global_own_trade_power = 0.1
 	}	
 	fort_dallas = {
 		naval_morale = 0.15
@@ -2824,7 +2786,7 @@ MIM_ideas = {
 		num_accepted_cultures = 2
 	}
 	MIM_port_of_miami = {
-		global_trade_power = 0.20
+		global_trade_power = 0.1
 	}	
 }
 
@@ -2874,7 +2836,7 @@ CCK_ideas = {
 
 NYC_ideas = {
 	start = {
-		global_trade_goods_size_modifier = 0.05
+		global_trade_goods_size_modifier = 0.15
 		center_of_trade_upgrade_cost = -0.20
 	}
 	
@@ -2889,10 +2851,10 @@ NYC_ideas = {
 	
 	financial_center = {
 		inflation_reduction = 0.10
-		interest = -1.0
+		interest = -0.5
 	}
 	NYC_new_amsterdam = {
-		trade_efficiency = 0.10
+		trade_efficiency = 0.15
 	}
 	NYC_hudsons_fleet = {
 		global_ship_trade_power = 0.20
@@ -2915,12 +2877,12 @@ NYC_ideas = {
 
 LLI_ideas = { # Long Island
 	start = {
-		ship_durability = 0.05
+		naval_forcelimit_modifier = 0.25
 		naval_morale = 0.15
 	}
 	
 	bonus = {
-		global_ship_recruit_speed = -0.10
+		global_ship_recruit_speed = -0.25
 	}
 	
 	trigger = {
@@ -2946,7 +2908,8 @@ LLI_ideas = { # Long Island
 		trade_efficiency = 0.10
 	}
 	flushing_remonstrance = {
-		no_religion_penalty = yes
+		tolerance_heretic = 2
+		tolerance_heathen = 2
 	}
 	LLI_wealth_and_luxury = {
 		global_tax_modifier = 0.10
@@ -2958,7 +2921,7 @@ LLI_ideas = { # Long Island
 
 NSH_ideas = { # New Shoreham
 	start = {
-		naval_maintenance_modifier = -0.20
+		naval_maintenance_modifier = -0.15
 		global_unrest = -1
 	}
 	
@@ -2972,7 +2935,7 @@ NSH_ideas = { # New Shoreham
 	free = yes
 	
 	NSH_manitou = {
-		ae_impact = -0.25
+		ae_impact = -0.10
 	}
 	discoveries_of_block = {
 		leader_naval_manuever = 1
@@ -2990,7 +2953,7 @@ NSH_ideas = { # New Shoreham
 		movement_speed = 0.15
 	}
 	point_judith = {
-		naval_forcelimit_modifier = 0.50
+		naval_forcelimit_modifier = 0.25
 	}
 }
 
@@ -3063,7 +3026,7 @@ ALU_ideas = { # Aleutia
 		artillery_power = 0.10
 	}
 	ALU_conscription_campaign = {
-		land_forcelimit_modifier = 0.50
+		land_forcelimit_modifier = 0.25
 	}
 	ALU_political_isolation = {
 		yearly_corruption = -0.10

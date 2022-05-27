@@ -561,16 +561,16 @@ spa_colonial_group_three_rnw_off = {
 		provinces_to_highlight = {
 			OR = {
 				area = michoacan_area
-				owned_by = TAR
+				# owned_by = TAR
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
 		trigger = {
-			NOT = {
-				exists = TAR
-			}
+			# NOT = {
+			# 	exists = TAR
+			# }
 			michoacan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

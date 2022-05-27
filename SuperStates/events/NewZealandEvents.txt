@@ -13,11 +13,11 @@ country_event = {
 	desc = "new_zealand_culture.1d"
 	picture = COLONIZATION_eventPicture
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
 	trigger = {
 		any_owned_province = {
-			provincegroup = south_island_provincegroup
+			province_group = south_island_provincegroup
 			is_capital = no
 			owned_by = ROOT
 		}
@@ -58,7 +58,7 @@ country_event = {
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				provincegroup = south_island_provincegroup 
+				province_group = south_island_provincegroup 
 				development = 20
 			}
 		}
@@ -72,7 +72,7 @@ country_event = {
 		name = "new_zealand_culture.1opta"
 		every_owned_province = {
 			limit = {
-				provincegroup = south_island_provincegroup
+				province_group = south_island_provincegroup
 				is_capital = no
 			}
 			change_culture = south_islander
@@ -87,11 +87,11 @@ country_event = {
 	desc = "new_zealand_culture.2d"
 	picture = COLONIZATION_eventPicture
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
 	trigger = {
 		any_owned_province = {
-			provincegroup = north_island_provincegroup
+			province_group = north_island_provincegroup
 			is_capital = no
 			owned_by = ROOT
 		}
@@ -132,7 +132,7 @@ country_event = {
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				provincegroup = north_island_provincegroup 
+				province_group = north_island_provincegroup 
 				development = 20
 			}
 		}
@@ -146,7 +146,7 @@ country_event = {
 		name = "new_zealand_culture.2opta"
 		every_owned_province = {
 			limit = {
-				provincegroup = north_island_provincegroup
+				province_group = north_island_provincegroup
 				is_capital = no
 			}
 			change_culture = north_islander

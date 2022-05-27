@@ -62,6 +62,9 @@ country_decisions = {
 				}
 		}
 		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650
@@ -95,7 +98,7 @@ country_decisions = {
 				add_permanent_claim = GPL
 			}
 			}
-			swap_non_generic_missions = yes
+			# swap_non_generic_missions = yes #Currently has no missions
 			country_event = { id = ideagroups.1 } #Swap 
 		}
 		ai_will_do = {

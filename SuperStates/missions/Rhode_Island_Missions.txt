@@ -18,7 +18,7 @@ ris_conquests_1 = {
 	has_country_shield = yes
 
 	ris_claim_long = {
-		icon = mission_unite_home_region
+		icon = mission_long_island
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -415,7 +415,7 @@ ris_conquests_3 = {
 	}
 
 	ris_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -635,7 +635,7 @@ ris_flavor_2 = {
 	}
 
 	ris_old_rhodes = {
-		icon = mission_establish_high_seas_navy
+		icon = mission_dominate_the_mediterranean
 		required_missions = { ris_ocean_state }
 		position = 4
 		provinces_to_highlight = {
@@ -657,7 +657,7 @@ ris_flavor_2 = {
 	}
 
 	ris_brown_uni = {
-		icon = wittenberg_university
+		icon = mission_brown_uni
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {

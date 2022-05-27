@@ -252,3 +252,43 @@ country_event = {
 		set_country_flag = amish_refused
 	}
 }
+
+
+#Culture Change
+country_event = {
+	id = flavorPNN.1000
+	title = "flavorPNN.1000t"
+	desc = "flavorPNN.1000d"
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Move to Appalachian Pennsylvanian
+		name = flavorPNN.1000a
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_pennsylvanian
+				}
+			}
+			change_primary_culture = appalachian_pennsylvanian
+		}
+		custom_tooltip = flavorPNN.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = western_pennsylvanian
+			remove_accepted_culture = pennsylvanian
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = pennsylvanian
+						culture = western_pennsylvanian
+					}
+				}
+				change_culture = appalachian_pennsylvanian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

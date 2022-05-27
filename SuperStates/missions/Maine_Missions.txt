@@ -284,11 +284,13 @@ mne_conquests_3 = {
 		position = 1
 		trigger = {
 			OR = {
-				AND = { #Alliance and good opinion
-					alliance_with = MSS
-					has_opinion = {
-						who = MSS
-						value = 150
+				MSS = { #if player, 150 opinion and ally
+					AND = {
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
 					}
 				}
 				AND = { #OR broken alliance and is 1448
@@ -308,10 +310,14 @@ mne_conquests_3 = {
 		effect = {
 			if = { #if allied get modifier
 				limit = {
-					alliance_with = MSS
-					has_opinion = {
-						who = MSS
-						value = 150
+					MSS = {
+						AND = {
+							alliance_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
 					}
 				}
 				add_dip_power = 25
@@ -361,7 +367,7 @@ mne_conquests_3 = {
 	}
 
 	mne_new_hampshire = {
-		icon = mission_conquer_50_development
+		icon = mission_new_hampshire_map
 		required_missions = { mne_buildup }
 		position = 3
 		provinces_to_highlight = {
@@ -409,7 +415,7 @@ mne_conquests_3 = {
 	}
 
 	mne_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {

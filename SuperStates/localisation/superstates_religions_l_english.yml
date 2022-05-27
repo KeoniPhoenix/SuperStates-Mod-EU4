@@ -24,6 +24,13 @@
  s_baptist_religion_desc:0 "Baptists are those who belong to the branch of Protestantism that is distinguished by its practice of believer's baptism"
  anabaptist_religion_desc:0 "Anabaptism is a distinct branch of Christianity with its roots in the Radical Reformation, whose followers subscribe to the Schleitheim Confession"
  
+ S_METHODIST_ASPECTS_POWER_NAME:0 "Church Power"
+ S_LUTHERAN_ASPECTS_POWER_NAME:0 "Church Power"
+ S_PROTESTANT_ASPECTS_POWER_NAME:0 "Church Power"
+ AUSTRAL_PROTESTANT_ASPECTS_POWER_NAME:0 "Church Power"
+ AUSTRAL_PROTESTANT_ASPECTS_LONG:0 "Church Aspect"
+ AUSTRAL_PROTESTANT_ASPECTS_SHORT:0 "Action"
+ 
  #friends:0 "Quaker"
  #SHAKERS:0 "Shakers"
  
@@ -36,6 +43,27 @@
  DESMONDITES:0 "Desmondites"
  GODBEITES:0 "Godbeites"
  FELIZIANS:0 "Felizians"
+ 
+ KENNEDYIANS:0 "Kennedyians"
+ NEOCATHOLIC:0 "Neocatholics"
+ AUSTRALREFORMIST:0 "Austral Reformists"
+ SPENGLERIST:0 "Spenglerists"
+ STANTZIST:0 "Stantzists"
+ VENKMANIST:0 "Venkmanists"
+ ROCKATANSKYIST:0 "Rockatanskyists"
+ HOGANIST:0 "Hoganists"
+ AUSTRALICAN:0 "Australicans"
+ HESTONIST:0 "Hestonists"
+ CAVIEZELIST:0 "Caviezelists"
+ CAMERONIST:0 "Cameronists"
+ RENEWALIAN:0 "Renewalists"
+ LAESTADIAN:0 "Laestadians"
+ EIELSENIAN:0 "Eielsenians"
+ SALVATIONIST:0 "Salvationists"
+ WARRENITE:0 "Warrenites"
+ NEOWESLEYIAN:0 "Neowesleyians"
+ KARAITE:0 "Karaites"
+ SAMARITAN:0 "Samaritans"
  
  # Anabaptist Heresies
  MENNONITE:0 "Mennonites"

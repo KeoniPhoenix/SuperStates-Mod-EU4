@@ -22,6 +22,7 @@ FSM_ideas = { # Federated States of Micronesia
 	FSM_chamorro_contact = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.25
 	}
 	mwehin_kawa = {
 		diplomatic_annexation_cost = -0.15
@@ -30,7 +31,7 @@ FSM_ideas = { # Federated States of Micronesia
 	mwehin_sau_deleur = {
 		reduced_liberty_desire = 10
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 		vassal_forcelimit_bonus = 1
 	}
@@ -47,8 +48,8 @@ FSM_ideas = { # Federated States of Micronesia
 
 CUU_ideas = { # Chuuk / Truk
 	start = {
-		naval_attrition = -0.10
-		range = 0.25
+		naval_attrition = -0.2
+		naval_forcelimit_modifier = 0.2
 	}
 
 	bonus = {
@@ -63,6 +64,7 @@ CUU_ideas = { # Chuuk / Truk
 	FSM_chamorro_contact = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.25
 	}
 	CUU_high_mountains = {
 		leader_naval_manuever = 1
@@ -78,7 +80,7 @@ CUU_ideas = { # Chuuk / Truk
 	}
 	studying_the_wreckage = {
 		idea_cost = -0.05
-		mil_tech_cost_modifier = -0.10
+		mil_tech_cost_modifier = -0.05
 	}
 	forging_our_own_path = {
 		prestige_decay = -0.01
@@ -103,6 +105,7 @@ KSR_ideas = { # Kosrae
 	FSM_chamorro_contact = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.25
 	}
 	KSR_leluh = {
 		technology_cost = -0.10
@@ -110,7 +113,7 @@ KSR_ideas = { # Kosrae
 	isokelekel = {
 		years_of_nationalism = -5
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 		vassal_forcelimit_bonus = 1
 	}
@@ -118,7 +121,7 @@ KSR_ideas = { # Kosrae
 		global_unrest = -1
 	}
 	hayes_treasure = {
-		loot_amount = 0.25
+		loot_amount = 0.5
 	}
 	KSR_conservative_society = {
 		papal_influence = 1
@@ -130,7 +133,7 @@ KSR_ideas = { # Kosrae
 
 PNP_ideas = { # Pohnpei
 	start = {
-		defensiveness = 0.10
+		defensiveness = 0.2
 		capture_ship_chance = 0.20
 	}
 
@@ -146,6 +149,7 @@ PNP_ideas = { # Pohnpei
 	FSM_chamorro_contact = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.25
 	}
 	mwehin_kawa = {
 		diplomatic_annexation_cost = -0.10
@@ -154,15 +158,14 @@ PNP_ideas = { # Pohnpei
 	mwehin_sau_deleur = {
 		reduced_liberty_desire = 10
 	}
-	mehin_nahnmwarki = {
+	mwehin_nahnmwarki = {
 		diplomatic_upkeep = 1
 	}
 	venice_of_the_pacific = {
 		light_ship_power = 0.10
 	}
 	PNP_rout_the_colonizers = {
-		prestige = 0.5
-		enemy_core_creation = 0.25
+		prestige = 1
 	}
 	PNP_spanish_wall = {
 		garrison_size = 0.25
@@ -176,7 +179,7 @@ YAP_ideas = { # Yap
 	}
 
 	bonus = {
-		mercenary_cost = -0.10
+		mercenary_cost = -0.2
 	}
 
 	trigger = {
@@ -187,6 +190,7 @@ YAP_ideas = { # Yap
 	FSM_chamorro_contact = {
 		may_explore = yes
 		auto_explore_adjacent_to_colony = yes
+		range = 0.25
 	}
 	YAP_island_tributaries = {
 		diplomats = 1
@@ -196,8 +200,7 @@ YAP_ideas = { # Yap
 		global_colonial_growth = 15
 	}
 	micronesian_empire = {
-		native_uprising_chance = -0.50
-		native_assimilation = 0.50
+		land_morale = 0.1
 	}
 	payment_in_stone = {
 		global_tax_modifier = 0.10
@@ -228,7 +231,7 @@ MSH_ideas = { # Marshall Islands
 
 	MSH_micronesian_colonists = {
 		may_explore = yes
-		range = 0.20
+		range = 0.25
 	}
 	jolet_jen_anij = {
 		tolerance_own = 2

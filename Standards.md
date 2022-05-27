@@ -43,3 +43,5 @@ The mod's official release will always be from the Steam Workshop and while the 
 ---Mod Name---
 
 The names SuperStates and SuperStates Mod and any variants (i.e. "New SuperStates Mod") is retained by the mod author, KeoniPhoenix.  If the mod is forked or modified into a new project, it must use a new name as to avoid issues with this mod project.  If the issue is particularly egregious, official action may be taken.
+
+Exceptions to this rule are mod repositories used by community members helping in the modding project as it would be cumbersome to require them to change names in order to help push and pull changes to the mod.  This rule is primarily intended to be applied towards mods in the Steam Workshop or mods distributed in channels not authorized or sanctioned by Paradox Interactive.

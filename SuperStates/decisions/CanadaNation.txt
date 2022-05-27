@@ -216,6 +216,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+		hidden_effect = {
+			restore_country_name = yes
+		}
 		set_country_flag = formed_canada_flag
 			add_country_modifier = {
 				name = "centralization_modifier"

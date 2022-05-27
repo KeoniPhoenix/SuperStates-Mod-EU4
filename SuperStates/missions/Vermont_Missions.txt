@@ -324,7 +324,7 @@ vrm_conquests_3 = {
 	}
 
 	vrm_grants = {
-		icon = mission_landsknecht_soldier
+		icon = mission_new_hampshire_map
 		required_missions = { vrm_buildup }
 		position = 2
 		provinces_to_highlight = {
@@ -385,6 +385,10 @@ vrm_conquests_3 = {
 		}
 		effect = {
 			rhode_island_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -416,7 +420,7 @@ vrm_conquests_3 = {
 	}
 
 	vrm_is_eng = {
-		icon = mission_empire
+		icon = mission_new_england_soldier
 		required_missions = { }
 		position = 5
 		provinces_to_highlight = {
@@ -485,7 +489,7 @@ vrm_conquests_4 = {
 	has_country_shield = yes
 
 	vrm_maine = {
-		icon = mission_dominate_home_trade_node
+		icon = mission_landsknecht_soldier
 		required_missions = { vrm_grants }
 		position = 3
 		provinces_to_highlight = {
@@ -648,7 +652,7 @@ vrm_flavor = {
 	}
 
 	vrm_green_boys = {
-		icon = army_reforms
+		icon = mission_green_mountain_boys
 		required_missions = { }
 		position = 5
 		trigger = {
@@ -661,6 +665,15 @@ vrm_flavor = {
 			add_country_modifier = {
 				name = "vrm_green_boys_merc"
 				duration = -1
+			}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				custom_tooltip = vrm_green_boys_ap_tooltip
+			}
+			hidden_effect = {
+				set_country_flag = vrm_green_boys_do_not_consume_ap
 			}
 		}
 	}

@@ -842,7 +842,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/government_reform_icons/washington.dds"
 	}
 	spriteType = {
-		name = "government_reform_laoldcapital"
+		name = "government_reform_laoldcapitol"
 		texturefile = "gfx/interface/government_reform_icons/laoldcapitol.dds"
 	}
 	spriteType = {

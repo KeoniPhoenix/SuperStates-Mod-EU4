@@ -11341,6 +11341,7 @@ country_event = {
 	title = "random_event.EVTNAME7"
 	desc = "random_event.EVTDESC7"
 	picture = SHIP_SAILING_eventPicture
+	goto = flagship_province
 	
 	is_triggered_only = yes
 	
@@ -11360,6 +11361,17 @@ country_event = {
 		days = 1
 	}
 	
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_port = yes
+				is_core = ROOT
+				controlled_by = ROOT
+			}
+			save_event_target_as = flagship_province
+		}
+	}
+
 	option = {
 		name = "random_event.EVTOPTA7"
 		ai_chance = {
@@ -11371,12 +11383,7 @@ country_event = {
 		}
 		add_treasury = -50
 		add_prestige = 5
-		random_owned_province = {
-			limit = {
-				has_port = yes
-				is_core = ROOT
-				controlled_by = ROOT
-			}
+		event_target:flagship_province = {
 			heavy_ship = ROOT
 		}
 	}
@@ -11391,12 +11398,7 @@ country_event = {
 		}
 		add_treasury = -20
 		add_prestige = 2
-		random_owned_province = {
-			limit = {
-				has_port = yes
-				is_core = ROOT
-				controlled_by = ROOT
-			}
+		event_target:flagship_province = {
 			light_ship = ROOT
 		}
 	}
@@ -11407,12 +11409,7 @@ country_event = {
 		}
 		add_treasury = -10
 		add_prestige = 1
-		random_owned_province = {
-			limit = {
-				has_port = yes
-				is_core = ROOT
-				controlled_by = ROOT
-			}
+		event_target:flagship_province = {
 			galley = ROOT
 		}
 	}
@@ -11800,6 +11797,7 @@ country_event = {
 			culture_group = central_indic
 		}
 		NOT = { primary_culture = tibetan }
+		NOT = { primary_culture = tibetan_new }
 		NOT = {
 			stability = 3
 		}

@@ -119,7 +119,7 @@ st_johns_estuary_modifier = {
 
 #New London, Connecticut
 connecticut_estuary_modifier = {
-	province_trade_power_modifier = 5
+	province_trade_power_value = 5
 	picture = "estuary_icon"
 }
 

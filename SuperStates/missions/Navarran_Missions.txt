@@ -248,6 +248,15 @@ nav_missions_2 = {
 			owns_core_province = 173
 		}
 		effect = {
+			174 = {
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 			pyrenees_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -261,12 +270,18 @@ nav_missions_2 = {
 		icon = mission_conquer_50_development
 		required_missions = { nav_conquer_lapurdi }
 		provinces_to_highlight = {
-			area = pyrenees_area
+			OR = {
+				province_id = 174
+				area = pyrenees_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
+			174 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

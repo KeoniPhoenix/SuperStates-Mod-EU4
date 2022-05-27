@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { exists = APL }
 			NOT = { exists = NAM }
 			NOT = { exists = USA }
-			NOT = { exists = MID }
+			# NOT = { exists = MID }
 			NOT = { has_country_flag = formed_appalachia_flag }
 			OR = {
 				culture_group = appalachian
@@ -76,7 +76,7 @@ country_decisions = {
 		}		
 		effect = {
 		change_tag = APL
-		swap_non_generic_missions = yes
+		# swap_non_generic_missions = yes #Currently has no missions
 			APL = {
 				appalachia_region = {
 				limit = {
@@ -103,7 +103,7 @@ country_decisions = {
 			}
 			set_country_flag = formed_appalachia_flag
 			add_prestige = 30
-			country_event = { id = ideagroups.1 } #Swap
+			#country_event = { id = ideagroups.1 } #Swap
 		}
 		ai_will_do = {
 			factor = 1

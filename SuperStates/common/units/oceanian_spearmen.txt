@@ -1,7 +1,7 @@
 # Oceanian Spearmen
 
 type = infantry
-unit_type = chinese
+unit_type = oceanian
 
 maneuver = 1
 offensive_morale = 1

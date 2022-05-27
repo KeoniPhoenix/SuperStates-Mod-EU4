@@ -78,9 +78,9 @@ country_decisions = {
 								}
 			add_prestige = 10
 			override_country_name = CHESAPEAKE
-			ROOT = {
-				set_capital = 2531			# Baltimore
-				}
+			# ROOT = {
+			# 	set_capital = 2531			# Baltimore
+			# }
 			ROOT = {
 				if = {
 					limit = {
