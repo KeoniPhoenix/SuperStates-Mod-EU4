@@ -50,7 +50,7 @@
  puget_sound_modifier:0 "Puget Sound Estuary"
  desc_puget_sound_modifier:0 "The Puget Sound estuary strengthens our hold of the trade in the region."
  guantanamo_bay_modifier:0 "Guantanamo Bay Estuary"
- desc_guantanamo_bay_modifier:0 "Controlling this estuary is of stragetic importance in controlling the trade in this region."
+ desc_guantanamo_bay_modifier:0 "Controlling this estuary is of strategic importance in controlling the trade in this region."
  swan_river_modifier:0 "Swan Estuary"
  desc_swan_river_modifier:0 "Holding the Swan estuary is of vital importance in controlling the trade in the region."
  st_johns_estuary_modifier:0 "Saint Johns Estuary"
@@ -79,6 +79,7 @@
  mesoamerican_desc:0 "With the Mesoamerican technology group, technology levels are 20% more expensive (120%)."
  tribal_american:0 "Tribal American"
  tribal_american_desc:0 "With the Tribal American technology group, technology levels are 100% more expensive (200%)."
+ aboriginal_tech_desc:0 "With the Aboriginal technology group, technology levels are 100% more expensive (200%)."
 
  
  #Great Lakes Tolls
@@ -87,9 +88,9 @@
  welland_canal_toll:0 "Welland Canal Toll"
  desc_welland_canal_toll:0 "Minor toll for the canal and locks that bypass Niagara Falls, allowing trade to flow between Lake Ontario and Lake Erie."
  erie_canal_albany_toll:0 "Erie Canal Eastern Terminus"
- desc_erie_canal_albany_toll:0 "Minor toll for the maintance of the Erie Canal's eastern locks for trade flowing between the Hudson River and Lake Erie."
+ desc_erie_canal_albany_toll:0 "Minor toll for the maintenance of the Erie Canal's eastern locks for trade flowing between the Hudson River and Lake Erie."
  erie_canal_buffalo_toll:0 "Erie Canal Western Terminus"
- desc_erie_canal_buffalo_toll:0 "Minor toll for the maintance of the Erie Canal's western locks for trade flowing between Lake Erie and the Hudson River."
+ desc_erie_canal_buffalo_toll:0 "Minor toll for the maintenance of the Erie Canal's western locks for trade flowing between Lake Erie and the Hudson River."
  
  #Units
  north_american_battle_axe:0 "North American Battle Axe"
@@ -174,7 +175,7 @@
  central_american_massDESCR:0 "REPLACE_ME"
  oceanian_longspear:0 "Oceanian Longspear"
  oceanian_longspearDESCR:0 "REPLACE_ME"
- oceanian_off_footsoldier:0 "Oceanian Offensive Footsolider"
+ oceanian_off_footsoldier:0 "Oceanian Offensive Footsoldier"
  oceanian_off_footsoldierDESCR:0 "REPLACE_ME"
  oceanian_horsemen:0 "Oceanian Horsemen"
  oceanian_horsemenDESCR:0 "REPLACE_ME"
@@ -264,7 +265,7 @@
  australian_heavy_cavalryDESCR:0 "REPLACE_ME"
  australian_new_order:0 "Australian New Order"
  australian_new_orderDESCR:0 "REPLACE_ME"
- australian_reformed_light_cavalry:0 "Australian Revormed Light Cavalry"
+ australian_reformed_light_cavalry:0 "Australian Reformed Light Cavalry"
  australian_reformed_light_cavalryDESCR:0 "REPLACE_ME"
  central_american_adv_light_cavalry:0 "Central American Advanced Light Cavalry"
  central_american_adv_light_cavalryDESCR:0 "REPLACE_ME"
@@ -359,6 +360,6 @@
  #Misc Text
  random_new_world_region:0 "REPLACE_ME"
  cb_successor_america:0 "Unify America"
- cb_successor_america_desc:0 "We can enforce our claims over the historic boundries of the United States."
+ cb_successor_america_desc:0 "We can enforce our claims over the historic boundaries of the United States."
  SUCCESSOR_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war for America"
  
