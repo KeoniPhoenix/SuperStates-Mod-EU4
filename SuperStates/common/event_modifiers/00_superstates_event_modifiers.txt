@@ -435,7 +435,7 @@ german_development = {
 
 #California
 cal_gold_mining  = {
-	trade_goods_size = 0.20
+	trade_goods_size = 0.5
 }
 
 cal_mil_silicon = {
