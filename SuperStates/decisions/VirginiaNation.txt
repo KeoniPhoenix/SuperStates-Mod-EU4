@@ -17,14 +17,18 @@ country_decisions = {
 				tag = WVA
 				primary_culture = virginian
 				primary_culture = northern_virginian
+				primary_culture = appalachian_virginian
+				primary_culture = midatlantic_virginian
 				AND = {
 					OR = {
 						primary_culture = districter
 						primary_culture = west_virginian
-						}
-							OR = {
-								accepted_culture = virginian
-								accepted_culture = northern_virginian
+					}
+					OR = {
+						accepted_culture = virginian
+						accepted_culture = northern_virginian
+						accepted_culture = appalachian_virginian
+						accepted_culture = midatlantic_virginian
 					}
 				}
 
@@ -75,23 +79,33 @@ country_decisions = {
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
-								}
+			}
 			add_prestige = 10
 			change_tag = VIR
 			VIR = {
-			if = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
-			}
-			shenandoah_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
 				}
-				add_permanent_claim = VIR
-			}
+				if = {
+					limit = {
+						was_tag = WVA
+					}
+					hidden_effect = {
+						complete_mission = vir_buildup
+						complete_mission = vir_conquer_wv
+					}
 				}
+				shenandoah_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = VIR
+				}
+				
+			}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap
 		}

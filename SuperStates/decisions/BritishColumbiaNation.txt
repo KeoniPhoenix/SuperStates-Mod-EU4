@@ -10,12 +10,13 @@ country_decisions = {
 		NOT = { exists = NAM }
 		NOT = { exists = WCN }
 		NOT = { exists = CSC }
-				OR = {
+			OR = {
 				tag = VCV
 				primary_culture = british_columbian
 				primary_culture = vancouverite
 				primary_culture = haida
-				}
+				primary_culture = pacific_british_columbian
+			}
 			OR = {
 				ai = no
 				AND = 		{

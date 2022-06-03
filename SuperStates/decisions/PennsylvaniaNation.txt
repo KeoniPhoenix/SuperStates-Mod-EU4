@@ -13,6 +13,7 @@ country_decisions = {
 				tag = PHL
 				primary_culture = pennsylvanian
 				primary_culture = western_pennsylvanian
+				primary_culture = appalachian_pennsylvanian
 			}
 			OR = {
 				ai = no

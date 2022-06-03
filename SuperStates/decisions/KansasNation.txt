@@ -20,6 +20,7 @@ country_decisions = {
 				primary_culture = kansan
 				#primary_culture = jayhawker
 				primary_culture = west_kansan
+				primary_culture = plains_kansan
 			}
 			OR = {
 				ai = no
