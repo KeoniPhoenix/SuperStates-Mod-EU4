@@ -1,0 +1,603 @@
+lpn_alamo = {
+	slot = 1
+    generic = yes
+    ai = yes
+    potential = {
+		OR = {
+			tag = LPN
+			AND = {
+				is_playing_custom_nation = yes
+				primary_culture = tejano
+			}
+		}
+    }
+	has_country_shield = yes
+
+	lpn_alamo = {
+		icon = mission_tex_alamo
+		required_missions = { lpn_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2486
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				2486 = {
+					owned_by = ROOT
+					OR = {
+						has_great_project = {
+							type = san_antonio_missions
+							tier = 2
+						}
+						has_great_project = {
+							type = san_antonio_missions
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				num_of_generals = 2
+			}
+			2486 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				fort_level = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tex_alamo_modifier"
+				duration = 7300
+			}
+			2486 = {
+				# change_province_name = "Alamo City"
+				add_base_manpower = 1
+				add_province_modifier = { 
+    				name = remilitarized_alamo
+   					duration = -1
+				}
+			}
+		}
+	}
+
+	lpn_unity = {
+		icon = mission_european_church
+		required_missions = { lpn_alamo }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2485
+				province_id = 3293
+				province_id = 2483
+				area = trans_pecos_area
+				area = rio_grande_area
+			}
+		}
+		trigger = {
+			2485 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3293 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2483 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			trans_pecos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+			rio_grande_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = { 
+ 		   		name = "texas_unity"
+    			duration = 9125
+			}
+		}
+	}
+}
+
+texan_mexican_conquest = {
+    slot = 2
+    generic = yes
+    ai = yes
+    potential = {
+		OR = {
+			tag = LPN
+			AND = {
+				is_playing_custom_nation = yes
+				primary_culture = tejano
+			}
+		}
+    }
+	has_country_shield = yes
+
+	lpn_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			is_subject = no
+			army_size_percentage = 1
+			trans_pecos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			rio_grande_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+			905 = { #Nuevo Laredo
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+		}
+	}
+
+	lpn_laredo = {
+		icon = mission_arabian_fort
+		required_missions = { lpn_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 905
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 905
+			905 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = {
+			coahuila_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tamaulipas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			nuevo_leon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = RRG
+				}
+				add_historical_rival = RRG
+			}
+		}
+	}
+
+	lpn_rio_grande = {
+		icon = mission_italian_condottiere
+		required_missions = { lpn_laredo }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = tamaulipas_area
+				area = nuevo_leon_area
+				area = coahuila_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tamaulipas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nuevo_leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = coahuila_area
+			}
+		}
+		effect = {
+			chihuahua_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			durango_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = NOM
+				}
+				add_historical_rival = NOM
+			}
+		}
+	}
+
+	lpn_mexico = {
+		icon = mission_found_havana
+		required_missions = { lpn_rio_grande }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = chihuahua_area
+				area = durango_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chihuahua_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			durango_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			sinaloa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sonora_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	gran_matagorda = {
+		icon = mission_empire
+		required_missions = { lpn_mexico }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = sinaloa_area
+				area = sonora_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sonora_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sinaloa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125
+			}
+			add_adm_power = 75
+			add_dip_power = 75
+			add_mil_power = 75
+		}
+	}
+}
+
+lpn_texas_rival = {
+	slot = 5
+    generic = yes
+    ai = no
+    potential = {
+		OR = {
+			tag = LPN
+			AND = {
+				has_custom_ideas = yes
+				primary_culture = tejano
+			}
+		}
+    }
+	has_country_shield = yes
+
+	lpn_rival = {
+		icon = mission_tex_fights
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			OR = {
+				is_rival = TEX
+				NOT = { exists = TEX }
+			}
+		}
+		effect = {
+			texas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			texas_gulf_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2488 = { #Smith
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	lpn_texas_proper = {
+		icon = mission_unite_home_region
+		required_missions = { lpn_rival }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = texas_gulf_area
+				area = texas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				texas_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				texas_gulf_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			if = {
+				limit = { 
+					NOT = { government_rank = 2 } 
+				}
+				set_government_rank = 2
+			}
+			high_plains_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = tejano
+					}
+				}
+				change_primary_culture = tejano
+			}
+			texas_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						culture = tejano
+					}
+				}
+				change_culture = tejano
+			}
+			texas_gulf_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						culture = tejano
+					}
+				}
+				change_culture = tejano
+			}
+			rio_grande_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						culture = tejano
+					}
+				}
+				change_culture = tejano
+			}
+			trans_pecos_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						culture = tejano
+					}
+				}
+				change_culture = tejano
+			}
+		}
+	}
+
+	lpn_high_plains = {
+		icon = mission_tex_colorado
+		required_missions = { lpn_texas_proper }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = high_plains_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			high_plains_area = {
+				limit = {
+					owned_by = ROOT
+					NOT = {
+						culture = tejano
+					}
+				}
+				change_culture = tejano
+			}
+		}
+	}
+
+	lpn_form_texas = {
+		icon = mission_america
+		required_missions = { lpn_high_plains }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = texas_gulf_area
+				area = texas_area
+				area = high_plains_area
+				area = rio_grande_area
+				area = trans_pecos_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			NOT = { exists = TEX }
+			texas_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			texas_gulf_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			rio_grande_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			trans_pecos_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 730
+			}
+			add_prestige = 25
+			change_tag = TEX
+			swap_non_generic_missions = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+		}
+	}
+}

@@ -316,6 +316,14 @@ njy_slot_3 = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		position = 1
+
+		ai_weight = {
+			factor = 3
+		}
+		ai_priority = {
+			factor = 3
+		}
+
 		trigger = {
 			army_size_percentage = 1
 			num_of_generals = 1

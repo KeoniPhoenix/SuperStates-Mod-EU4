@@ -66,7 +66,11 @@ gen_mid_atlantic = {
 
 	potential = {
 		capital_scope = {
-			region = mid_atlantic_region
+			OR = {
+				region = mid_atlantic_region
+				area = allegheny_area
+				area = shenandoah_area
+			}
 		}
 	}
 	has_country_shield = no
@@ -81,7 +85,6 @@ gen_mid_atlantic = {
 				highest_value_trade_node = yes
 				is_strongest_trade_power = ROOT
 			}
-			
 		}
 		
 		effect = {
@@ -154,7 +157,11 @@ gen_greatplains = {
 
 	potential = {
 		capital_scope = {
-			region = great_plains_region
+			OR = {
+				region = great_plains_region
+				area = oklahoma_area
+				area = ozarks_area
+			}
 		}
 	}
 	has_country_shield = no
@@ -194,6 +201,8 @@ gen_breadbasket_slot = {
 			OR = {
 				region = american_midwest_region
 				region = great_plains_region
+				area = oklahoma_area
+				area = ozarks_area
 			}
 		}
 	}
@@ -232,6 +241,71 @@ gen_breadbasket_slot = {
 						add_base_production = 1
 					}
 				}
+			}
+		}
+	}
+}
+
+#Southern Regional
+gen_southern = {
+	slot = 5
+	generic = yes
+	ai = yes
+
+	potential = {
+		capital_scope = {
+			OR = {
+				region = deep_south_region
+				region = old_southwest_region
+				region = appalachia_region
+			}
+		}
+		NOT = {
+			capital_scope = {
+				OR = {
+					area = monongahela_area
+					area = shenandoah_area
+					area = allegheny_area
+					area = oklahoma_area
+					area = ozarks_area
+				}
+			}
+		}
+	}
+	has_country_shield = no
+
+	gen_south_religion = {
+		icon = mission_european_church
+		required_missions = { }
+		position = 1
+		trigger = {
+			temple = 10
+			NOT = { current_age = age_of_discovery }
+			religious_unity = 1
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_country_modifier = {
+				name = "gen_eur_defender"
+				duration = 5475
+			}
+		}
+	}
+
+	gen_south_plantation = {
+		icon = mission_peasants
+		required_missions = { }
+		position = 2
+		trigger = {
+			plantations = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = "gen_south_plantation_economy"
+				duration = 9125
 			}
 		}
 	}

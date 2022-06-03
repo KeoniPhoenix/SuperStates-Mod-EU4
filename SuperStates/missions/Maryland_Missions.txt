@@ -11,6 +11,14 @@ myd_conquests = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2616 #DC
@@ -385,6 +393,7 @@ myd_flavor_missions = {
 			army_size = 40
 		}
 		effect = {
+			add_army_tradition = 20
 			add_country_modifier = {
 				name = "myd_maryland_400" #Shock Damage recieved and dealt
 				duration = -1

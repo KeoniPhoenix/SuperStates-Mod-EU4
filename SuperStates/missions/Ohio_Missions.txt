@@ -1,0 +1,912 @@
+ohi_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+	}
+	has_country_shield = yes
+
+	ohi_indiana = {
+		icon = mission_assemble_an_army
+		required_missions = { ohi_ambitions }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = wabash_area
+				province_id = 2569
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = wabash_area
+					province_id = 2569
+				}
+			}
+		}
+		effect = {
+			chicagoland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			illinois_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sangamon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			little_egypt_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ohi_illinois = {
+		icon = mission_civil_war_battle
+		required_missions = { ohi_indiana }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = sangamon_area
+				area = illinois_area
+				area = little_egypt_area
+				province_id = 2565 #Chicago/Cook
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				OR = {
+					area = illinois_area
+					area = sangamon_area
+					area = little_egypt_area
+					province_id = 2565
+				}
+			}
+		}
+		effect = {
+			wisconsin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "ohi_conquered_ili"
+				duration = 9125
+			}
+		}
+	}
+
+	ohi_wisconsin = {
+		icon = mission_wisconsin_map
+		required_missions = { ohi_illinois }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+				area = wisconsin_area
+				province_id = 2558 #Milwaukee
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				OR = {
+					area = green_bay_area
+					area = wisconsin_area
+					province_id = 2558 #Milwaukee
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			iowa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ohi_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+	}
+	has_country_shield = yes
+
+	ohi_ambitions = { #of NW territory
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				army_size = 14
+			}
+			else = {
+				manpower_percentage = 0.7
+				army_size_percentage = 1
+			}
+		}
+		effect = {
+			maumee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wabash_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ohi_michigan = { #revenge on toledo or something
+		icon = mission_landsknecht_soldier
+		required_missions = { ohi_ambitions }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = michigan_area
+				province_id = 2573 #Detroit
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = michigan_area
+					province_id = 2573 #Detroit
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					2583 = { #Toledo
+						owned_by = ROOT
+						is_core = MIC
+					}
+				}
+				2583 = {
+					remove_core = MIC
+				}
+			}
+			upper_peninsula_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ohi_upper = {
+		icon = mission_ne_great_lakes_conquest
+		required_missions = { ohi_michigan }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = upper_peninsula_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = upper_peninsula_area
+			}
+		}
+		effect = {
+			southwest_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "ohi_defeated_mic"
+				duration = 9125
+			}
+		}
+	}
+
+	ohi_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 4
+		provinces_to_highlight = {
+			province_group = ohio_provincegroup
+		}
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = alleghenite
+						primary_culture = clevelander
+						primary_culture = ohioan
+						primary_culture = appalachian_ohioan
+						primary_culture = great_laker_ohioan
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ohi_has_unified_culture_tooltip
+						ohio_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = ohioan
+						}
+					}
+					primary_culture = alleghenite
+					primary_culture = clevelander
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = alleghenite
+						primary_culture = clevelander
+						primary_culture = ohioan
+						primary_culture = appalachian_ohioan
+						primary_culture = great_laker_ohioan
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ohi_has_unified_culture_tooltip
+						ohio_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = ohioan
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ohi_has_unified_culture_tooltip_2
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = clevelander
+									culture = great_laker_ohioan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = alleghenite
+									culture = appalachian_ohioan
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ai = yes
+				}
+				is_at_war = no
+				NOT = { current_age = age_of_discovery }
+			}
+			else = {
+				2578 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = alleghenite
+						primary_culture = clevelander
+						primary_culture = ohioan
+						primary_culture = appalachian_ohioan
+						primary_culture = great_laker_ohioan
+					}
+				}
+				custom_tooltip = ohi_ohioan_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ohi_shift_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorOHI.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = alleghenite
+						primary_culture = clevelander
+						primary_culture = ohioan
+						primary_culture = appalachian_ohioan
+						primary_culture = great_laker_ohioan
+					}
+				}
+				custom_tooltip = ohi_ohioan_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ohi_shift_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorOHI.1000
+					}
+				}
+				custom_tooltip = ohi_shift_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to Ohioan / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						ohio_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = ohioan
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+					set_country_flag = ohi_had_focus_event
+					set_country_flag = midwest_focus
+					clr_country_flag = appalachian_focus
+					clr_country_flag = great_laker_focus
+					swap_non_generic_missions = yes
+
+				}
+
+				else_if = { #If completed by converting culture - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						OR = {
+							primary_culture = clevelander
+							primary_culture = alleghenite
+						}
+					}
+					country_event = {
+						id = flavorOHI.1000 #Event moves you to Great Laker/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to Ohioan
+						ohio_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = ohioan
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 150
+					set_country_flag = ohi_had_focus_event
+					set_country_flag = midwest_focus
+					clr_country_flag = appalachian_focus
+					clr_country_flag = great_laker_focus
+					swap_non_generic_missions = yes
+
+				}
+				else_if = { #If completed by spreading culture - trigger event 
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = clevelander
+									culture = great_laker_ohioan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = alleghenite
+									culture = appalachian_ohioan
+								}
+							}
+						}
+					}
+					country_event = {
+						id = flavorOHI.1000 #Event moves you to Great Laker/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+					set_country_flag = ohi_had_focus_event
+					set_country_flag = midwest_focus
+					clr_country_flag = appalachian_focus
+					clr_country_flag = great_laker_focus
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}
+
+ohi_question_mark_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+		NOT = { has_country_flag = appalachian_focus }
+		NOT = { has_country_flag = midwest_focus }
+		NOT = { has_country_flag = great_laker_focus }
+	}
+	has_country_shield = yes
+
+	ohi_question_mark = {
+		icon = mission_unknown_mission
+		required_missions = { ohi_wisconsin ohi_culture ohi_ontario }
+		position = 5
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			total_development = 750
+			stability = 3
+		}
+		effect = {
+			tooltip = {
+				add_country_modifier = {
+					name = ohi_question_modifier
+					duration = -1
+				}
+			}
+			custom_tooltip = ohi_mystery_reward_tt
+		}
+	}
+}
+
+ohi_mid_west_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+		has_country_flag = midwest_focus
+	}
+	has_country_shield = yes
+
+	ohi_mid_west = {
+		icon = mission_all_ohio
+		required_missions = { ohi_wisconsin ohi_culture ohi_ontario }
+		position = 5
+		trigger = {
+			total_development = 750
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ohi_mid_west_ambition"
+				duration = -1
+			}
+		}
+	}
+}
+
+ohi_great_laker_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+		has_country_flag = great_laker_focus
+	}
+	has_country_shield = yes
+
+	ohi_great_laker = {
+		icon = mission_all_ohio
+		required_missions = { ohi_wisconsin ohi_culture ohi_ontario }
+		position = 5
+		trigger = {
+			total_development = 750
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = ohi_great_laker_ambition
+				duration = -1
+			}
+		}
+	}
+}
+
+ohi_appalachian_slot = {
+	slot = 2
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+		has_country_flag = appalachian_focus
+	}
+	has_country_shield = yes
+
+	ohi_appalachian = {
+		icon = mission_all_ohio
+		required_missions = { ohi_wisconsin ohi_culture ohi_ontario }
+		position = 5
+		trigger = {
+			total_development = 750
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ohi_appalachian_ambition"
+				duration = -1
+			}
+		}
+	}
+}
+
+ohi_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+	}
+	has_country_shield = yes
+
+	ohi_wv = {
+		icon = mission_allegheny_mountain
+		required_missions = { }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = monongahela_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = monongahela_area
+			}
+		}
+		effect = {
+			kentucky_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			allegheny_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ohi_penn = {
+		icon = mission_unite_home_region
+		required_missions = { ohi_wv }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = allegheny_area
+				province_id = 2588 #Erie
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = allegheny_area
+					province_id = 2588
+				}
+			}
+		}
+		effect = {
+			erie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ohi_ontario = {
+		icon = mission_italian_condottiere
+		required_missions = { ohi_penn ohi_upper }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = southwest_ontario_area
+				province_id = 2598
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = southwest_ontario_area
+					province_id = 2598
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ohi_ontario_modifier"
+				duration = 9125
+			}
+			northern_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+ohi_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = OHI
+			AND = {
+				tag = GLK
+				was_tag = OHI
+			}
+			AND = {
+				tag = APL
+				was_tag = OHI
+			}
+			AND = {
+				tag = MDL
+				was_tag = OHI
+			}
+		}
+	}
+	has_country_shield = yes
+
+	ohi_flavor_1 = {
+		icon = all_bases_covered
+		required_missions = { }
+		position = 3
+		trigger = {
+			legitimacy_equivalent = 95
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			is_in_deficit = no
+		}
+		effect = {
+			if = {
+				limit = {
+					government = republic
+				}
+				custom_tooltip = ohi_better_elections_tt
+				set_country_flag = ohi_better_elections
+			}
+			else_if = {
+				limit = {
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
+					}
+					NOT = { absolutism = 80 }
+					is_revolutionary = no
+				}
+				add_absolutism = 20
+			}
+			else = {
+				add_mil_power = 200
+			}
+		}
+	}
+}
