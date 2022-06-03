@@ -2773,7 +2773,7 @@ MIM_ideas = {
 		development_cost = -0.1
 	}
 	biscayne_bay = {
-		global_own_trade_power = 0.1
+		global_trade_power = 0.20
 	}	
 	fort_dallas = {
 		naval_morale = 0.15
@@ -2786,7 +2786,7 @@ MIM_ideas = {
 		num_accepted_cultures = 2
 	}
 	MIM_port_of_miami = {
-		global_trade_power = 0.1
+		trade_efficiency = 0.1
 	}	
 }
 
@@ -2814,10 +2814,10 @@ CCK_ideas = {
 		monarch_admin_power = 1
 	}
 	the_great_fire = {
-		development_cost = -0.15
+		build_cost = -0.15
 	}
 	windy_city = {
-		build_cost = -0.10
+		development_cost = -0.1
 	}
 	city_of_beauty = {
 		prestige = 1
