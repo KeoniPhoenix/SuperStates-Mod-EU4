@@ -1326,7 +1326,7 @@ hybrid_westminster_legacy = {
 }
 
 micronesian_republic_legacy = {
-	icon = "government_reform_micronesia"		#Palau State House
+	icon = "micronesia"		#Palau State House
 	allow_normal_conversion = yes
 	legacy_government = yes
 	valid_for_new_country = yes
