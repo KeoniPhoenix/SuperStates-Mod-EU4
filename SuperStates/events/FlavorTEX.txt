@@ -64,10 +64,13 @@ country_event = {
 			primary_culture = eastern_texan
 			primary_culture = northern_texan
 			primary_culture = high_plainer
+			primary_culture = southern_texan
+			primary_culture = plains_texan
 		}
 		AND = {
 			tag = TEX
 			NOT = { primary_culture = tejano }
+			NOT = { primary_culture = mexican_texan }
 		}
 	}
 		AND = {
@@ -226,6 +229,7 @@ country_event = {
 		AND = {
 			tag = TEX
 			NOT = { primary_culture = tejano }
+			NOT = { primary_culture = mexican_texan }
 		}
 	}
 		AND = {
@@ -281,6 +285,33 @@ country_event = {
 		add_country_modifier = {
 			name = "adelsverein_refused"
 			duration = 3650
+		}
+	}
+}
+
+#Texan unification with Coahuila
+country_event = {
+	id = flavorTEX.1000
+	title = "flavorTEX.1000t"
+	desc = "flavorTEX.1000d"
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "flavorTEX.1000opta"
+		COA = {
+			if = {
+				limit = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = ROOT
+			}
+			add_historical_friend = ROOT
+			add_liberty_desire = -15
 		}
 	}
 }
@@ -419,90 +450,339 @@ country_event = {
 # 	}
 # }
 
-# country_event = {
-# 	id = "flavorTEX.1002"
-# 	title = "texas_convert_okl"
-# 	desc = "texas_convert_okl_des"
-# 	picture = CITY_VIEW_eventPicture
+country_event = {
+	id = "flavorTEX.1002"
+	title = "flavorTEX.1002t"
+	desc = "flavorTEX.1002d"
+	picture = CITY_VIEW_eventPicture
 	
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
-# 	mean_time_to_happen = {
-# 		days = 1
-# 	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
 	
-# 	option = {
-# 		name = "texas_okl_a"
-# 		add_accepted_culture = oklahoman
-# 		3289 = {
-# 				change_culture = oklahoman
-# 				remove_core = CIM
-# 				add_core = OKL
-# 		}
-# 		2481 = {
-# 				change_culture = oklahoman
-# 				remove_core = COM
-# 				add_core = OKL
-# 		}
-# 		2482 = {
-# 				change_culture = oklahoman
-# 				remove_core = COM
-# 				add_core = OKL
-# 		}
-# 		2483 = {
-# 				change_culture = oklahoman
-# 				remove_core = COM
-# 				add_core = OKL
-# 		}
-# 		958 = {
-# 				change_culture = oklahoman
-# 				remove_core = COM
-# 				add_core = OKL
-# 		}
-# 	}
-# 	option = {
-# 		name = "texas_okl_b"
-# 		add_accepted_culture = northern_texan
-# 		3287 = {
-# 			change_culture = northern_texan
-# 			remove_core = OKL
-# 		}
-# 		if = {
-# 			limit = {
-# 				3289 = {
-# 					culture = oklahoman
-# 				}
-# 			}
-# 			3289 = {
-# 				change_culture = northern_texan
-# 			}
-# 		}	
-# 		3289 = {
-# 			remove_core = OKL
-# 		}
-# 		3288 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 		3287 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 		1010 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 		2477 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 		2476 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 		1011 = {
-# 				change_culture = northern_texan
-# 				remove_core = OKL
-# 		}
-# 	}
-# }
+	option = {
+		name = "flavorTEX.1002opta"
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						primary_culture = oklahoman
+						accepted_culture = oklahoman
+					}
+				}
+			}
+			add_accepted_culture = oklahoman
+		}
+		oklahoma_area = {
+			add_province_modifier = {
+				name = "tex_accepted_oklahoman"
+				duration = 10950
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					2476 = {
+						owned_by = ROOT
+					}
+				}
+				2476 = {
+					add_province_modifier = {
+						name = "tex_accepted_oklahoman"
+						duration = 10950
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "flavorTEX.1002optb"
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						primary_culture = northern_texan
+						accepted_culture = northern_texan
+					}
+				}
+			}
+			add_accepted_culture = northern_texan
+		}
+		if = {
+			limit = {
+				NOT = {
+					3288 = {
+						culture = ROOT
+					}
+				}
+			}
+			3288 = {
+				change_culture = northern_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					3287 = {
+						culture = ROOT
+					}
+				}
+			}
+			3287 = {
+				change_culture = northern_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					1010 = {
+						culture = ROOT
+					}
+				}
+			}
+			1010 = {
+				change_culture = northern_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					2477 = {
+						culture = ROOT
+					}
+				}
+			}
+			2477 = {
+				change_culture = northern_texan
+			}
+		}
+		if = {
+			limit = {
+				2476 = {
+					owned_by = ROOT
+				}
+				NOT = {
+					2476 = {
+						culture = ROOT
+					}
+				}
+			}
+			2476 = {
+				change_culture = northern_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					1011 = {
+						culture = ROOT
+					}
+				}
+			}
+			1011 = {
+				change_culture = northern_texan
+			}
+		}
+		oklahoma_area = {
+			add_province_modifier = {
+				name = "texan_settlers"
+				duration = 9125
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					2476 = {
+						owned_by = ROOT
+					}
+				}
+				2476 = {
+					add_province_modifier = {
+						name = "texan_settlers"
+						duration = 9125
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavorTEX.1003
+	title = flavorTEX.1003t
+	desc = flavorTEX.1003d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Move to Southerner Texan
+		name = flavorTEX.1003opta
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = texas_provincegroup
+					OR = {
+						culture = southern_texan
+						culture = eastern_texan
+					}
+				}
+				primary_culture = eastern_texan
+				primary_culture = southern_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = southern_texan
+				}
+			}
+			change_primary_culture = southern_texan
+		}
+		hidden_effect = {
+			remove_accepted_culture = texan
+			remove_accepted_culture = eastern_texan
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = texan
+						culture = eastern_texan
+					}
+				}
+				change_culture = southern_texan
+			}
+		}
+		custom_tooltip = flavorTEX.1003a.tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Mexican Texan
+		name = flavorTEX.1003optb
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 11
+					province_group = texas_provincegroup
+					OR = {
+						culture = tejano
+						culture = mexican_texan
+					}
+				}
+				primary_culture = tejano
+				primary_culture = mexican_texan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = mexican_texan
+				}
+			}
+			change_primary_culture = mexican_texan
+		}
+		hidden_effect = {
+			remove_accepted_culture = texan
+			remove_accepted_culture = tejano
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = texan
+						culture = tejano
+					}
+				}
+				change_culture = mexican_texan
+			}
+		}
+		custom_tooltip = flavorTEX.1003b.tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Great Plainer Texan
+		name = flavorTEX.1003optc
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				province_group = texas_provincegroup
+				OR = {
+					culture = high_plainer
+					culture = plains_texan
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = plains_texan
+				}
+			}
+			change_primary_culture = plains_texan
+		}
+		hidden_effect = {
+			remove_accepted_culture = texan
+			remove_accepted_culture = high_plainer
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = texan
+						culture = high_plainer
+					}
+				}
+				change_culture = plains_texan
+			}
+		}
+		custom_tooltip = flavorTEX.1003c.tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Incase you finish this mission while not being any texan culture and wanna nope out
+		name = flavorTEX.1003optd
+		trigger = {
+			NOT = {
+				primary_culture = tejano
+				primary_culture = eastern_texan
+				primary_culture = high_plainer
+				OR = {
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = texas_provincegroup
+						OR = {
+							culture = southern_texan
+							culture = eastern_texan
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 11
+						province_group = texas_provincegroup
+						OR = {
+							culture = tejano
+							culture = mexican_texan
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = texas_provincegroup
+						OR = {
+							culture = high_plainer
+							culture = plains_texan
+						}
+					}
+				}
+			}
+		}
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
