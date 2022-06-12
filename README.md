@@ -1,5 +1,5 @@
 # SuperStates Mod for Europa Univeralis IV #
-_Github address KeoniPhoenix\SuperStates-Mod-EU4\_
+_(Github address: KeoniPhoenix\SuperStates-Mod-EU4\)_
 
 **Welcome to the SuperStates Mod for Europa Univeralis IV.**
 
