@@ -20,6 +20,7 @@ country_decisions = {
 				primary_culture = illinoisan 
 				primary_culture = chicagoan
 				primary_culture = little_egyptian
+				primary_culture = great_laker_illinoisan
 			}
 			OR = {
 				ai = no

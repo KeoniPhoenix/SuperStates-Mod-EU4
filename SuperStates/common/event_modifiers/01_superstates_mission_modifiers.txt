@@ -177,7 +177,7 @@ ili_invest_rural = {
 }
 
 ili_great_lakes_secured = {
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.2
 	prestige = 1
 }
 
@@ -295,6 +295,7 @@ mne_remember_maine_modifier = {
 	heavy_ship_power = 0.15
 }
 
+##Generic Mission Modifiers
 #New England
 new_england_trade_ship = {
 	global_ship_trade_power = 0.20
@@ -354,10 +355,68 @@ mid_atlantic_bankers = {
 	state_maintenance_modifier = -0.2
 }
 
+#South
+gen_south_plantation_economy = {
+	global_trade_goods_size_modifier = 0.1
+	state_maintenance_modifier = -0.15
+	picture = "production_efficiency"
+}
+
+#Midwest & Greatplains
+gen_cowboy_modifier = {
+	cavalry_power = 0.15
+	cavalry_cost = -0.1
+}
+
+bread_basket_of_america_modifier = {
+	development_cost = -0.1
+	manpower_recovery_speed = 0.15
+}
+
+gen_prosperous_indpendence = {
+	global_trade_goods_size_modifier = 0.1
+	development_cost = -0.1
+}
+
 #Ohio
-# ohi_great_laker_ambition = {
-# 	administrative_efficiency = 0.05
-# }
+ohi_great_laker_ambition = {
+	administrative_efficiency = 0.05
+	trade_efficiency = 0.1
+}
+
+ohi_appalachian_ambition = {
+	administrative_efficiency = 0.05
+	defensiveness = 0.15
+}
+
+ohi_mid_west_ambition = {
+	administrative_efficiency = 0.05
+	production_efficiency = 0.1
+}
+
+ohi_question_modifier = { #Only used for tooltips
+	administrative_efficiency = 0.05
+}
+
+ohi_pollution_cleanup = {
+	local_monthly_devastation = -0.25
+	local_development_cost = -0.05
+}
+
+ohi_ontario_modifier = {
+	advisor_cost = -0.1
+	build_cost = -0.15
+}
+
+ohi_conquered_ili = {
+	land_morale = 0.1
+	province_warscore_cost = -0.15
+}
+
+ohi_defeated_mic = {
+	trade_range_modifier = 0.33
+	trade_steering = 0.25
+}
 
 #Maryland
 myd_maryland_400 = {
@@ -632,53 +691,59 @@ pnn_army_reform_mod = {
 	manpower_recovery_speed = 0.15
 }
 
-#Midwest & Greatplains
-gen_cowboy_modifier = {
-	cavalry_power = 0.15
-	cavalry_cost = -0.1
-}
-
-bread_basket_of_america_modifier = {
-	development_cost = -0.1
-	manpower_recovery_speed = 0.15
-}
-
-gen_prosperous_indpendence = {
-	global_trade_goods_size_modifier = 0.1
-	development_cost = -0.1
-}
-
 # #Texas/Matagorda
+
+tex_expanded_development = {
+	local_unrest = -2
+	local_tax_modifier = 0.1
+}
+
+tex_galveston_modifier = {
+	local_development_cost = -0.2
+	trade_value_modifier = 0.3
+}
+
+tex_navy_enthusiasm = {
+	naval_morale = 0.1
+	trade_efficiency = 0.15
+}
+
+tex_accepted_cultures = {
+	promote_culture_cost = -0.5
+	num_accepted_cultures = 2
+}
+
+tex_cowboy_modifier = {
+	cavalry_power = 0.20
+	cavalry_cost = -0.15
+}
+
+tex_alamo_modifier = {
+	discipline = 0.05
+	shock_damage_received = -0.05
+}
+
 gran_tejas = {
 	years_of_nationalism = -5
-	global_autonomy = -0.05
+	stability_cost_modifier = -0.2
 	picture = "years_of_nationalism"
 }
 
 remilitarized_alamo = {
-	fort_level = 1
 	garrison_growth = 0.1
 	defensiveness = 0.25
 	picture = "defense_fort"
 }
 
 texas_reunited = {
-	republican_tradition = 1
-	diplomatic_reputation = 1
+	republican_tradition = 0.3
+	land_morale = 0.15
 	picture = "republican_tradition"
 }
 
 texas_unity = {
-	republican_tradition = 1
-	culture_conversion_cost = -0.50
-	num_accepted_cultures = -1
-	picture = "accepted_culture_threshold"
-}
-
-american_monopoly = {
-	merchants = 1
-	global_own_trade_power = 0.25
-	picture = "global_trade_power"
+	same_culture_advisor_cost = -0.15
+	culture_conversion_cost = -0.33
 }
 
 development_initiative = {
@@ -688,7 +753,133 @@ development_initiative = {
 	picture = "development_cost"
 }
 
+tex_accepted_oklahoman = {
+	local_unrest = -2
+	local_tax_modifier = 0.1
+}
+
+texan_settlers = {
+	local_unrest = 3
+	local_tax_modifier = 0.15
+	local_autonomy = -0.025
+}
+
+tex_mexico_modifier = {
+	core_creation = -0.15
+}
+
+#West Virginia
+wva_mountain_defence = {
+	fort_maintenance_modifier = -0.15
+	defensiveness = 0.25
+}
+
+wva_defeated_virginia = {
+	land_morale = 0.1
+	reinforce_cost_modifier = -0.15
+}
+
+wva_high_seas = {
+	global_ship_cost = -0.25
+	naval_morale = 0.15
+}
+
+wva_liberated_west_maryland = {
+	local_culture_conversion_cost = -0.25
+	local_unrest = -2
+}
+
+wva_united_appalachia = {
+	core_creation = -0.33
+	discipline = 0.05
+}
+
+wva_country_roads_modifier = {
+	local_friendly_movement_speed = 0.15
+	local_tax_modifier = 0.2
+	picture = "local_friendly_movement_speed"
+}
+
+wva_almost_heaven_modifier = {
+	missionaries = 1
+	global_missionary_strength = 0.02
+}
+
+#Louisiana
+lou_panama_trade = {
+	global_trade_power = 0.05
+	trade_range_modifier = 0.1
+	trade_steering = 0.25
+	picture = "global_trade_power"
+}
+fort_caroline = {
+	fort_level = 2
+	garrison_growth = 0.1
+	picture = "defense_fort"
+}
+cjn_louisiana_unification = {
+	prestige = 0.1
+	land_morale = 0.22
+	naval_morale = 0.15
+	picture = "accepted_culture_threshold"
+}
+
+#New France
+new_french_unity = {
+	legitimacy = 0.1
+	republican_tradition = 0.1
+	culture_conversion_cost = -0.50
+	picture = "accepted_culture_threshold"
+}
+nfr_trade_company = {
+	global_trade_power = 0.25
+	trade_efficiency = 0.15
+	trade_steering = 0.15
+	picture = "global_trade_power"
+}
+nfr_france = {
+	prestige = 1.0
+	discipline = 0.025
+	land_morale = 0.10
+	naval_forcelimit_modifier = 0.22
+	picture = "years_of_nationalism"
+}
+nfr_american_unification = {
+	prestige = 0.5
+	land_morale = 0.15
+	naval_morale = 0.10
+	picture = "years_of_nationalism"
+}
+nfr_cultural_unification = {
+	prestige = 1
+	land_morale = 0.10
+	naval_morale = 0.10
+	picture = "years_of_nationalism"
+}
+nfr_caribbean_discovered = {
+	colonists = 1
+	picture = "global_colonial_growth"
+}
+nfr_technology = {
+	technology_cost = -0.10
+	global_institution_spread = 0.50
+}
+
+#Quebec
+que_europe_discovered = {
+	diplomatic_reputation = 1
+	global_colonial_growth = 10
+	range = 0.75
+	picture = "admiral_cost"
+}
+
 #Misc
 super_culture_change_modifier = {
 	culture_conversion_cost = -0.33
+}
+
+american_monopoly = {
+	merchants = 1
+	global_own_trade_power = 0.25
+	picture = "global_trade_power"
 }

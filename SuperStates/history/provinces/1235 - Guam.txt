@@ -14,6 +14,7 @@ base_manpower = 2
 is_city = yes #1000
 discovered_by = oceanian
 discovered_by = polynesian_tech
+center_of_trade = 1
 
 1555.1.1 = {
 	owner = PCO

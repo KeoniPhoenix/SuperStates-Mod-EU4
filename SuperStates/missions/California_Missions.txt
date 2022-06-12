@@ -11,6 +11,14 @@ cal_alta = {
 		icon = mission_sw_against_the_desert
 		required_missions = { cal_mil_buildup }
 		position = 2
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = black_rock_area
@@ -203,9 +211,15 @@ cal_las_and_gran = {
 		required_missions = { }
 		position = 1
 
+		ai_weight = {
+			factor = 100
+		}
+		ai_priority = {
+			factor = 100
+		}
+
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = 0.85
 			num_of_generals = 1
 		}
 		effect = {
@@ -366,7 +380,7 @@ cal_las_and_gran = {
 			add_prestige = 30
 			add_country_modifier = {
 				name = "cal_gran"
-				duration = 5475
+				duration = 10950
 			}
 			sonora_area = {
 				limit = {
@@ -460,6 +474,7 @@ cal_pacific = {
 			}
 		}
 		effect = {
+			add_army_tradition = 10
 			add_country_modifier = {
 				name = "cal_fortification"
 				duration = 7300
@@ -616,8 +631,18 @@ cal_trade_and_navy = {
 			}
 		}
 		effect = {
-			add_mercantilism = 5
 			add_dip_power = 150
+			custom_tooltip = cal_has_wine_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							trade_goods = wine
+						}
+						add_base_production = 2
+					}
+				}
+			}
 		}
 	}
 
@@ -644,9 +669,7 @@ cal_trade_and_navy = {
 					has_building = drydock
 				}
 			}
-			num_of_heavy_ship = 15
-			num_of_light_ship = 40
-			navy_size_percentage = 1
+			num_of_heavy_ship = 10
 		}
 		effect = {
 			add_country_modifier = {
@@ -721,6 +744,7 @@ cal_trade_and_navy = {
 			}
 		}
 		effect = {
+			add_mercantilism = 3
 			add_country_modifier = {
 				name = "cal_trade"
 				duration = 7300
@@ -770,7 +794,7 @@ cal_trade_and_navy = {
 			}
 		}
 		effect = {
-			add_mercantilism = 3
+			add_mercantilism = 5
 			hawaii_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -808,13 +832,10 @@ cal_dev_and_tech = {
 			treasury = 1200
 		}
 		effect = {
+			add_adm_power = 50
 			add_country_modifier = {
 				name = "growing_economy"
 				duration = 5475 #25 years
-			}
-			add_country_modifier = {
-				name = "building_spree"
-				duration = 5475
 			}
 		}
 	}
@@ -870,30 +891,30 @@ cal_dev_and_tech = {
 			}
 		}
 		effect = {
-				 san_pablo_area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
+			san_pablo_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
 					name = "cal_develop" 
 					duration = 10950 #30 years
-					}
-				 }
-		 		central_valley_area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
+				}
+			}
+		 	central_valley_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
 					name = "cal_develop" 
 					duration = 10950 #30 years
-					}
-	 			}
-				 central_coast_area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
+				}
+	 		}
+			central_coast_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
 					name = "cal_develop" 
 					duration = 10950 #30 years
-					}
- 				}
-			 	san_diego_area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
+				}
+ 			}
+			san_diego_area = {
+				limit = { owned_by = ROOT }
+				add_province_modifier = {
 					name = "cal_develop" 
 					duration = 10950 #30 years
 				}
@@ -963,6 +984,9 @@ cal_dev_and_tech = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				set_country_flag = has_competent_doctors
+			}
 			country_event = { id = flavorCAL.1002 }
 		}
 	}

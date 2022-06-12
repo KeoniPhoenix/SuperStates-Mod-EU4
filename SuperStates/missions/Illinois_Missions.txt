@@ -133,7 +133,7 @@ ili_slot_2 = {
 	has_country_shield = yes
 
 	ili_wisconsin = {
-		icon = mission_cannons_firing
+		icon = mission_wisconsin_map
 		required_missions = { ili_chicagoland }
 		position = 2
 		provinces_to_highlight = {
@@ -255,6 +255,14 @@ ili_slot_3 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = chicagoland_area

@@ -1,0 +1,275 @@
+##########################
+#
+#  Written by:
+#  goik
+#
+##########################
+
+namespace = flavorOHI
+
+#The Burning River
+country_event = {
+	id = flavorOHI.3
+	title = flavorOHI.3t
+	desc = flavorOHI.3d
+	picture = USA_GREAT_FIRE_eventPicture
+
+	fire_only_once = yes
+
+	goto = 2579
+
+	trigger = {
+		tag = OHI
+		owns = 2579
+	}
+
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.8
+			2579 = {
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			2579 = {
+				OR = {
+					development = 25
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+	}
+
+	option = { #All in the name of progress!
+		name = flavorOHI.3opta
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality_ancestor = { key = industrious }
+				ruler_has_personality = embezzler_personality
+			}
+		}
+		ai_chance = { factor = 40 }
+		add_years_of_income = 1
+		2579 = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+			add_base_production = 4
+		}
+		2579 = {
+			add_devastation = 75
+		}
+	}
+
+	option = { #Organize a relief effort
+		name = flavorOHI.3optb
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality_ancestor = { key = kind_hearted }
+				ruler_has_personality_ancestor = { key = benevolent }
+			}
+		}
+		ai_chance = { factor = 40 }
+		2579 = {
+			add_province_modifier = {
+				name = "ohi_pollution_cleanup"
+				duration = 3650
+			}
+			add_devastation = 15
+		}
+	}
+
+	option = { #We must do something!
+		name = flavorOHI.3optc
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.5
+				is_in_deficit = yes
+			}
+			modifier = {
+				factor = 0
+				is_bankrupt = yes
+			}
+		}
+		add_years_of_income = -1.25
+		2579 = {
+			add_province_modifier = {
+				name = "ohi_pollution_cleanup"
+				duration = 1825
+			}
+			add_devastation = 25
+		}
+	}
+
+	option = { #It's normal for rivers to catch on fire... Right?
+		name = flavorOHI.3optd
+		ai_chance = { factor = 30 }
+		2579 = {
+			add_province_modifier = {
+				name = add_unrest_5_modifier
+				duration = 1825
+			}
+			add_devastation = 50
+		}
+	}
+}
+
+#Culture Swap event
+country_event = {
+	id = flavorOHI.1000
+	title = flavorOHI.1000t
+	desc = flavorOHI.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ohi_had_focus_event
+		}
+	}
+
+	option = { #Move to Great Laker
+		name = flavorOHI.1000opta
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = clevelander
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = great_laker_ohioan
+				}
+				primary_culture = clevelander
+				primary_culture = great_laker_ohioan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = great_laker_ohioan
+				}
+			}
+			change_primary_culture = great_laker_ohioan
+		}
+		custom_tooltip = flavorOHI.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = clevelander
+			remove_accepted_culture = ohioan
+			remove_accepted_culture = alleghenite
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = ohioan
+						culture = clevelander
+						culture = alleghenite
+					}
+				}
+				change_culture = great_laker_ohioan
+			}
+			set_country_flag = great_laker_focus
+			clr_country_flag = appalachian_focus
+			clr_country_flag = midwest_focus
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Appalachian
+		name = flavorOHI.1000optb
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = alleghenite
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = appalachian_ohioan
+				}
+				primary_culture = alleghenite
+				primary_culture = appalachian_ohioan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_ohioan
+				}
+			}
+			change_primary_culture = appalachian_ohioan
+		}
+		custom_tooltip = flavorOHI.1000b.tt
+		hidden_effect = {
+			remove_accepted_culture = clevelander
+			remove_accepted_culture = ohioan
+			remove_accepted_culture = alleghenite
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = ohioan
+						culture = clevelander
+						culture = alleghenite
+					}
+				}
+				change_culture = appalachian_ohioan
+			}
+			set_country_flag = appalachian_focus
+			clr_country_flag = great_laker_focus
+			clr_country_flag = midwest_focus
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Incase you somehow finish this mission while not being any ohioan culture and wanna nope out
+		name = flavorOHI.1000optc
+		trigger = {
+			NOT = {
+				OR = {
+					primary_culture = clevelander
+					primary_culture = alleghenite
+					primary_culture = appalachian_ohioan
+					primary_culture = great_laker_ohioan
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = clevelander
+					}
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = great_laker_ohioan
+					}
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = alleghenite
+					}
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = appalachian_ohioan
+					}
+				}
+			}
+		}
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		swap_non_generic_missions = yes
+	}
+}

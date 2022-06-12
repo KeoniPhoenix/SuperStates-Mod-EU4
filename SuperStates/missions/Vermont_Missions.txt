@@ -308,6 +308,14 @@ vrm_conquests_3 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
 		trigger = {
 			army_size_percentage = 1
 			manpower_percentage = 0.8
@@ -327,6 +335,14 @@ vrm_conquests_3 = {
 		icon = mission_new_hampshire_map
 		required_missions = { vrm_buildup }
 		position = 2
+
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = new_hampshire_area

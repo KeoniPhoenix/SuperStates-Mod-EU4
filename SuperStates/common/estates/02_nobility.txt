@@ -24,6 +24,9 @@ estate_nobles =
 		NOT = { has_reform = slave_state_reform }
 		NOT = { has_reform = pure_westminster_reform }
 		NOT = { has_reform = hybrid_westminster_reform }
+		NOT = { has_reform = texan_republic }
+		NOT = { has_reform = micronesian_republic }
+		NOT = { has_reform = commonwealth_state_reform }
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }

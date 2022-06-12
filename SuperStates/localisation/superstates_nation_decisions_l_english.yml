@@ -117,7 +117,7 @@
  rocky_mountain_nation_desc:0 "The Grand union of all of the mountain domains along the Rocky Mountains."
 # South-Atlantic Confederacy
  southatlantic_nation_title:0 "Proclaim the South-Atlantic Confederacy"
- southatlantic_nation_desc:0 "Our unification of the South-Atlantic region allows us to both expand our influence, and grant ourselves a better position in world affairs."
+ southatlantic_nation_desc:0 "Our unification of the South-Atlantic region allows us to both expand our influence, and grant ourselves a better position in world affairs.\n\nForming the South-Atlantic Confederacy will §Rprevent us from forming the Confederate States.§!"
 # Tennessee
  reform_tennessee_title:0 "Reform into Tennessee"
  reform_tennessee_desc:0 "The lands that once belonged to Tennessee are now ours. We must take their title for ourselves, and proclaim this nation the true and only Tennessee."
@@ -173,7 +173,7 @@
  maritime_union_nation_title:0 "Form the Maritime Union"
  maritime_union_nation_desc:0 "The Maritime States have been properly unified, but now they need to be properly organized.  Forming the Maritime Union allows the new nation much influence in the world."
 # Newfoundland and Labrador
- newfoundland_and_labrador_nation_title:0 "Form Newfondland and Labrador Nation"
+ newfoundland_and_labrador_nation_title:0 "Form Newfoundland and Labrador Nation"
  newfoundland_and_labrador_nation_desc:0 "Reuniting the separated Newfoundland and Labrador has finally come!"
 # Newfoundland
  newfoundland_nation_title:0 "Form Newfoundland"
@@ -267,7 +267,7 @@
 
 #Pacific Islands Region
 # Pacific Oceania
- pacific_oceania_nation_title:0 "Form Pacific Oceana Nation"
+ pacific_oceania_nation_title:0 "Form Pacific Oceania Nation"
  pacific_oceania_nation_desc:0 "Unification of the islands and consolidating of their governments into one brings just a vast ocean territory at which we can benefit through trade with the world."
 # Samoa
  samoa_nation_title:0 "Unify Government the Samoan Islands"

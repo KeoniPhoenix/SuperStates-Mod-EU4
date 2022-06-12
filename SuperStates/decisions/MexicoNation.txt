@@ -24,6 +24,7 @@ country_decisions = {
 				primary_culture = southern_californian
 				primary_culture = tejano
 				primary_culture = baja_arizonan
+				primary_culture = mexican_texan
 			}
 			OR = {
 				ai = no
