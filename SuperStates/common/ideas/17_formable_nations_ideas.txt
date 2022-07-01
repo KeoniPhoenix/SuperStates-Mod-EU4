@@ -23,15 +23,15 @@ ACU_ideas = {
 
 	
 	implementing_new_tech_for_arctic_development = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 	no_vacation_for_the_enemy = {
 		defensiveness = 0.25
 		hostile_attrition = 2
 	}
 	arctic_pride = {
-		land_morale = 0.15
-		naval_morale = 0.15
+		land_morale = 0.1
+		naval_morale = 0.1
 	}
 	hudson_strait1 = {
 		global_trade_power = 0.15
@@ -53,7 +53,7 @@ ACU_ideas = {
 MTU_ideas = {
 	start = {
 		naval_morale = 0.2
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
 	}
 
 	bonus = {
@@ -199,7 +199,7 @@ CSC_ideas = {
 
 	reforming_revenue_collection = {
 		global_tax_modifier = 0.10
-		trade_efficiency = 0.10
+		trade_efficiency = 0.05
 	}
 	economic_sanctions = {
 		embargo_efficiency = 1
@@ -233,7 +233,7 @@ CSA_ideas = {
 	}
 
 	bonus = {
-		land_morale = 0.2
+		infantry_power = 0.1
 	}
 
 	trigger = {
@@ -254,9 +254,8 @@ CSA_ideas = {
 	state_military_colleges = {
 	 	army_tradition = 1
 	}
-	commerce_raiders1 = {
-		light_ship_power = 0.2
-	 	privateer_efficiency = 0.33
+	texas_brigade = {
+		land_morale = 0.2
 	}
 	legends_in_command = {
 		leader_land_fire = 1
@@ -269,7 +268,6 @@ CSA_ideas = {
 	}
 	reform_drill_training = {
 		discipline = 0.05
-		infantry_power = 0.1
 		drill_gain_modifier = 0.5
 	}
 }
@@ -358,7 +356,7 @@ FSA_ideas = {
 		cavalry_power = 0.2
 	}
 	the_right_cause = {
-		discipline = 0.075
+		discipline = 0.05
 	}
 }
 
