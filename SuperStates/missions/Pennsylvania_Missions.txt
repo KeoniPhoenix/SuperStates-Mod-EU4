@@ -361,7 +361,7 @@ pnn_slot_3 = {
 		position = 1
 		trigger = {
 			manpower_percentage = 0.7
-			army_size_percentage = 1
+			army_size_percentage = 0.85
 		}
 		effect = {
 			2668 = { #Tompkins
@@ -618,7 +618,6 @@ pnn_slot_4 = {
 			}
 		}
 		trigger = {
-
 			num_of_owned_provinces_with = {
 				OR = {
 					has_manpower_building_trigger = yes
@@ -753,7 +752,6 @@ pnn_slot_4 = {
 			}
 		}
 	}
-
 }
 
 pnn_slot_5 = {

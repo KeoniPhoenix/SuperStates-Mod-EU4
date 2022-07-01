@@ -1,12 +1,11 @@
+# SuperStates Mod for Europa Univeralis IV #
+_(Github address: KeoniPhoenix\SuperStates-Mod-EU4\)_
 
-SuperStates-Mod-EU4
+**Welcome to the SuperStates Mod for Europa Univeralis IV.**
 
-SuperStates Mod for Europa Univeralis IV
+This is the GitHub project repository for the SuperStates Mod for EU4.
 
-Welcome to the SuperStates Europa Univeralis IV.
+Permission is not required to fork the mod and to contribute, however it is best that contributions be coordinated with the Mod Team through the [SuperStates Mod Discord](https://discord.gg/VEGVPqb). Please Read Standards.md for important details on the Mod if you wish to contribute or fork the mod in another project.
 
-This project is currently being imported from the mod development team's shared dropbox.
-
-###################################### Version 1.33.X ######################################
-
-Please Read Standards.md for important details on the Mod.
+## Currently the Mod works on EU4 Version: ##
+### 1.33.x ###

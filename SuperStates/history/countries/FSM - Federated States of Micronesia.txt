@@ -1,7 +1,8 @@
-government = monarchy
-add_government_reform = federal_republic
+government = republic
+add_government_reform = micronesian_republic
+government_rank = 2
 technology_group = oceanian
-primary_culture = pohnpeian
+primary_culture = micronesian
 religion = s_catholic
 capital = 2728	#Pohnpei
 

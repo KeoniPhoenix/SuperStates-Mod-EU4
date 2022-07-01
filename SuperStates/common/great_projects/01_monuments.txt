@@ -24632,6 +24632,13 @@ goliad = {
 			culture = tejano
 			culture = high_plainer
 			culture = eastern_texan
+			hidden_trigger = {
+				OR = {
+					culture = southern_texan
+					culture = plains_texan
+					culture = mexican_texan
+				}
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -24652,6 +24659,13 @@ goliad = {
 			culture = tejano
 			culture = high_plainer
 			culture = eastern_texan
+			hidden_trigger = {
+				OR = {
+					culture = southern_texan
+					culture = plains_texan
+					culture = mexican_texan
+				}
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -24667,6 +24681,13 @@ goliad = {
 			culture = tejano
 			culture = high_plainer
 			culture = eastern_texan
+			hidden_trigger = {
+				OR = {
+					culture = southern_texan
+					culture = plains_texan
+					culture = mexican_texan
+				}
+			}
 		}
 		province_is_or_accepts_culture = yes
 	}

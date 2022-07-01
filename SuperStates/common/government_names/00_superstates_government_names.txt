@@ -260,6 +260,39 @@ gov_hybrid_westminster_reform = {
 	}
 }
 
+gov_micronesian_republic = {
+	rank = {
+		1 = MICRO_TERRITORY
+		2 = MICRO_STATE
+		3 = MICRO_FED_REPUBLIC
+	}
+
+	ruler_male = {
+		1 = MICRONESIA_GOVERNOR
+		2 = MICRONESIA_PRESIDENT
+		3 = MICRONESIA_PRIME_MINISTER
+	}
+
+	ruler_female = {
+		1 = MICRONESIA_GOVERNOR_FEM
+		2 = MICRONESIA_PRESIDENT_FEM
+		3 = MICRONESIA_PRIME_MINISTER_FEM
+	}
+
+	trigger = {
+		has_reform = micronesian_republic
+		OR = {
+			primary_culture = yapese
+			primary_culture = palauan
+			primary_culture = chuukese
+			primary_culture = pohnpeian
+			primary_culture = marshallese
+			primary_culture = micronesian
+			primary_culture = kosraean
+		}
+	}
+}
+
 ########################################################
 #### United States Government Specific ####
 ## American Confederal Republic - articles_of_confederation_republic##

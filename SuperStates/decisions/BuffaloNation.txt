@@ -101,8 +101,8 @@ country_decisions = {
 				add_permanent_claim = BFF
 			}
 			}
-			swap_non_generic_missions = yes
-			country_event = { id = ideagroups.1 } #Swap
+			# swap_non_generic_missions = yes
+			# country_event = { id = ideagroups.1 } #Swap
 		}
 		ai_will_do = {
 			factor = 1

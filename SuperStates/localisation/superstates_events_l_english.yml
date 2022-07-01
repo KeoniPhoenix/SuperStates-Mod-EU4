@@ -236,7 +236,7 @@
  
  #####Flavor for Arizona/Baja Arizona
  #Mormon Arizona Event Chain
- flavorARZ.1t:0 "Mormom Upheaval!"
+ flavorARZ.1t:0 "Mormon Upheaval!"
  flavorARZ.1d:0 "Mormon settlers centuries ago established a number of important cities in Arizona, but over time migrants of other faiths into these cities outnumbered the Mormon pioneers.  They've never forgotten their important contributions to Arizona, but have seen their acceptance wane in the wake of demographic change.  Large portions of the Mormons population have been provoked over the tension between the faiths in society and in the administration causing widespread turmoil across the state with significant consequences."
  flavorARZ.1opta:0 "Governor, our people have been silently Mormon all along!"
  flavorARZ.1optb:0 "This heresy shall be resisted."
@@ -245,7 +245,7 @@
  flavorARZ.2opta:0 "Never!  This disorder is most unbecoming of supposed peaceful people!"
  flavorARZ.2optb:0 "We must accept the inevitable reality."
  flavorARZ.3t:0 "Catholic Unrest!"
- flavorARZ.3d:0 "With Mormonism officially declared the State reigion, Catholics fearing the loss of their status have threaten revolt."
+ flavorARZ.3d:0 "With Mormonism officially declared the State religion, Catholics fearing the loss of their status have threaten revolt."
  flavorARZ.3opta:0 "Continued turmoil..."
  flavorARZ.3optb:0 "Placate them with monetary and political reassurances."
  flavorARZ.4t:0 "State Returns to Peace"
@@ -380,7 +380,7 @@
  #flavorFLO.2optb:0 "The people must have the freedom to choose their religion."
  #"x" rebels regiments rise up, -5% tech cost, -10% stability cost
  flavorFLO.1t:0 "Cuban Diaspora"
- flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture.GetName] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland. The answer, of course, is up to us. What should we do with the Cuban exiles?"
+ flavorFLO.1d:0 "Long ago, the locals of the island of Cuba fled great difficulty in their homeland, finding a new home in southern Florida. Since then, they have integrated into our culture and have become a [Root.Culture.GetName] mainstay. With the reunification of our state and the Cuban isles, however, the question arises on what to do with these people. Many yearn to go back home, eager to see their distant family, while some are hesitant, grateful for the life they have on the mainland.\n\nThe answer, of course, is up to us. What should we do with the Cuban exiles?"
  flavorFLO.1opta:0 "Evict the Cuban Exiles"
  flavorFLO.1optb:0 "Settle all Cubans in Florida"
  flavorFLO.1optc:0 "We have no business in this. Let it be."
@@ -433,7 +433,7 @@
  flavorILI.1d:0 "Disaster! The shining jewel of Illinois has been destroyed in night and a day. The social and economic unrest will impact our country for years to come. ""
  flavorILI.1opta:0 "Grant tax relief"
  #-500 ducats, trade reduced 20% for next 5 years.
- flavorILI.1optb:0 "Permenantly relocate military members to Chicago to rebuild"
+ flavorILI.1optb:0 "Permanently relocate military members to Chicago to rebuild"
  #-40,000 manpower, trade reduced 20% for next 5 years.
  flavorILI.1optc:0 "Restructure government to compensate for loss"
  #-1 stab, -20 republican tradition, trade reduced 20% for next 5 years
@@ -446,7 +446,7 @@
  flavorILI.3optc:0 "Invest sparingly"
  #-50 ducats, +50 adm points
  flavorILI.1000t:0 "Direction of Our Culture" #Culture related event
- flavorILI.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go.\n\nCitizens in [Root.GetName] and Chicago celebrate our unified culture and decision to prioritize the Great Lakes region of our country."
+ flavorILI.1000d:0 "[Root.GetName] sits on the line between two separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go.\n\nCitizens in [Root.GetName] and Chicago celebrate our unified culture and decision to prioritize the Great Lakes region of our country."
  flavorILI.1000opta:0 "[Root.GetName] shall be ruled directly from Chicago."
  flavorILI.1000optb:0 "We will stick to ruling in $CAPITAL_CITY$."
  
@@ -473,7 +473,7 @@
  flavorKNS.1d:0 "An argument over local politics turned two lawmen, William Bailey and Michael McCluskie, against each other and what was a fist fight esclated into to a shooting.  Fearing arrest McCluskie fled town, however returned several days later after getting word the shooting was likely to be deemed self-defense.  However unbeknownst to McCluskie, Bailey had three of his Texan cowboy friends in town who sought to avenge his death.  McCluskie went into to the Hide Park district of Newtown, Kansas and gambled in the Tuttles Dance Hall.  During McCluskie time gambling the three cowboys, William Garrett, Henry Kearnes, and James Wilkerson entered the saloon along with Hugh Anderson.  Anderson approached McCluskie and exchanged words resulting in McCluskie's friend James Martin to intervene.  In the ensuing scuffle, Anderson shot McCluskie in the neck who fell to the floor.  Attempting to respond in kind with fire McCluskie tired to fire back but his weapon misfired and in the following seconds was gunned down by Anderson.  All while the three cowboys (Garrett, Kearnes, and Wilkerson) intervened to also shoot at McCluskie on the floor and keep the crowd back.\n\nIntervening in all of it was a young man suffering of Tuberculosis named James Riley who fired upon the assailing men in the cloud of smoke, in the end he ended up hitting seven people including all four assailants, killing them all.  After the shooting stopped Riley walked away, mysteriously disappeared leading to much speculation as to who he really was and where he went."
  flavorKNS.1opta:0 "The townsfolk and reporters want to know about James Riley."
  flavorKNS.1000t:0 "Kansas Crisis"
- flavorKNS.1000d:0 "Kansas City is rightful Kansan territory, an ultimatum should be sent demanding the return of Kansas City. It is ulikely that Missouri will accept our demands, we should prepare for war!"
+ flavorKNS.1000d:0 "Kansas City is rightful Kansan territory, an ultimatum should be sent demanding the return of Kansas City. It is unlikely that Missouri will accept our demands, we should prepare for war!"
  flavorKNS.1000opta:0 "Demand Kansas City"
  flavorKNS.1000optb:0 "It would be unwise to escalate this conflict."
  flavorKNS.1000optc:0 "Our failure to act has weakened our claims to Kansas City."
@@ -486,7 +486,7 @@
  flavorKNS.1002d:0 "As expected, Missouri has refused our demands. The only logical course of action is to mobilize our troops and prepare to fight!"
  flavorKNS.1002opta:0 "Mobilize the Troops!"
  flavorKNS.1003t:0 "Missouri Cedes Kansas City!"
- flavorKNS.1003d:0 "To our suprise, Missouri has ceded Kansas City to us. With Kansas City under our control we can continue our expansion over the Great Plains."
+ flavorKNS.1003d:0 "To our surprise, Missouri has ceded Kansas City to us. With Kansas City under our control we can continue our expansion over the Great Plains."
  flavorKNS.1003opta:0 "Glory to Kansas!"
  
  #####Flavor for Kentucky
@@ -613,7 +613,7 @@
  flavorNJY.1opta: "Dispute the results"
  flavorNJY.1optb: "Accept the results"
  flavorNJY.2t:0 "New Jersey Disputes Captain Billopp's Race"
- flavorNJY.2d:0 "In a distant past, it is said the 'Duke of York' decreed that any islands in the New York Harbor that could be circumnavigated in a day's time would be part of New York, but if this was not accomplished, they would be part of New Jersey. Christopher Bollopp was chosen for this challenge, and on board his humble vessel the 'Bentley,' Billopp embarked on his quest. In order to finish this task, the Captain equipped his ship with empty barrels to achieve a boost in speed due to the wind drafts. This clever tactic worked, and he circumnavigated Staten Island in just under a day's time, and thus the island was awarded to us. This outraged the residents of New Jersey, and to this day, they are demanding this choice be reversed. To this effect, they have sent an envoy requesting that we cede the island to them. How do we respond?"
+ flavorNJY.2d:0 "In a distant past, it is said the 'Duke of York' decreed that any islands in the New York Harbor that could be circumnavigated in a day's time would be part of New York, but if this was not accomplished, they would be part of New Jersey. Christopher Billopp was chosen for this challenge, and on board his humble vessel the 'Bentley,' Billopp embarked on his quest. In order to finish this task, the Captain equipped his ship with empty barrels to achieve a boost in speed due to the wind drafts. This clever tactic worked, and he circumnavigated Staten Island in just under a day's time, and thus the island was awarded to us. This outraged the residents of New Jersey, and to this day, they are demanding this choice be reversed. To this effect, they have sent an envoy requesting that we cede the island to them. How do we respond?"
  flavorNJY.2opta:0 "Relinquish Staten Island"
  flavorNJY.2optb:0 "We have rightfully won the rights to Staten Island. It is ours to keep."
  flavorNJY.3t:0 "New York refuses to cede Staten Island!"
@@ -691,7 +691,19 @@
  flavorOHI.2d:0 "It seems that planting Johnny's appleseeds has caused a giant apple tree to grow. It's branches seem to extend far beyond the clouds, far out of sight. Shall we send some fool to see what's up there?"
  flavorOHI.2opta:0 "Fee-Fi-Fo-Fum. Send a whole regiment up there, and capture the Apple tree that grows the Golden Watch."
  flavorOHI.2optb:0 "Nah, just chop it down and make a few wardrobes out of it. I've had enough fairy tales for one day."
- 
+ flavorOHI.3t:0 "The Burning River"
+ flavorOHI.3d:0 "The Cuyahoga river is currently ablaze! Large amounts of industrial waste pumped directly from Cleveland's growing manufacturing industries have left the river completely polluted and even flammable.\nGrowing environmental groups are calling for us to cleanup and protect the Cuyahoga River by reducing industrial pollution."
+ flavorOHI.3opta:0 "Pollution? Where?"
+ flavorOHI.3optb:0 "Organize a relief effort."
+ flavorOHI.3optc:0 "Something must be done!"
+ flavorOHI.3optd:0 "It's normal for rivers to catch on fire... Right?"
+
+ flavorOHI.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorOHI.1000d:0 "[Root.GetName] sits on the line between three separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go."
+ flavorOHI.1000opta:0 "We will adopt Great Laker culture."
+ flavorOHI.1000optb:0 "We will adopt Appalachian culture."
+ flavorOHI.1000optc:0 "We will stick to our current culture."
+
  #####Flavor for Oklahoma
  flavorOKL.1t:0 "Dustbowl"
  flavorOKL.1d:0 "For years, the Great Plains were protected by deep grass which locked loose soil into the ground, allowing for even the strongest winds to blow without damaging the ecology. But due to mistreatment of the land by farmers from abroad, the grasses were uprooted, and the soil was free to blow, and gather into large dust clouds. These dust storms, coupled with an ongoing drought, caused crops to fail which left many farmer families with a doom of starvation."
@@ -732,7 +744,7 @@
  flavorPNN.3optb:0 "This is none of our business. Turn them away."
  flavorPNN.4t:0 "Amish Influence Spreads"
  flavorPNN.1000t:0 "Direction of Our Culture" #Culture related event
- flavorPNN.1000d:0 "[Root.GetName] sits on the line between two seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nOur citizens celebrate our decision to look towards the mountains and join the Appalachian culture group."
+ flavorPNN.1000d:0 "[Root.GetName] sits on the line between two separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nOur citizens celebrate our decision to look towards the mountains and join the Appalachian culture group."
  flavorPNN.1000a:0 "Embrace Appalachian"
   
  
@@ -790,7 +802,7 @@
  
  #####Flavor for Texas/East Texas/North Texas/Commanche/Lipan
  flavorTEX.1t:0 "In El Paso, Four Dead in Five Seconds"
- flavorTEX.1d:0 "A disturbance after an inquiry in the death of two Mexicans caused by a dispute on the translation of the proceedings into Spanish between the Constable and two disgruntled attendees of the inqury lead to the Constable being shot.  The shooting of the Constable alerted Marshal Stoudenmire who in a hasty exit from his dinner at the Globe Restaurant, at first shot wildly accidently killing an innocent bystander, engaged the two heated men. Within 5 seconds of the first shot Mashal Stoudenmire had killed them both.  The Constable, innocent bystander, and both assailants of the Constable were dead."
+ flavorTEX.1d:0 "A disturbance after an inquiry in the death of two Mexicans caused by a dispute on the translation of the proceedings into Spanish between the Constable and two disgruntled attendees of the inquiry lead to the Constable being shot.  The shooting of the Constable alerted Marshal Stoudenmire who in a hasty exit from his dinner at the Globe Restaurant, at first shot wildly accidentally killing an innocent bystander, engaged the two heated men. Within 5 seconds of the first shot Mashal Stoudenmire had killed them both.  The Constable, innocent bystander, and both assailants of the Constable were dead."
  flavorTEX.1opta:0 "Well, let's hope this doesn't become a media circus."
  flavorTEX.2t:0 "Arrival of the Germans"
  flavorTEX.2d:0 "With the increasing global prominence of German nations in Europe and around the world, many parts of the New World have observed German immigrants arriving within their lands. There has been a recent influx of German immigrants migrating to [Root.GetName], however, and it has not gone unnoticed. Some in our government are clamoring at the idea, suggesting we offer incentives for them to come to our country. Others suggest that this is folly, and we should reject them outright. What shall we do?"
@@ -800,6 +812,20 @@
  flavorTEX.3d:0 "As the German communities in [Root.GetName] continue to grow, they have established a group known as the Adelsverein. This group sees [Root.GetName] as a natural next step in forming a new Germany, and as such, they are petitioning our government for the right to land grants across broader parts of our territory."
  flavorTEX.3opta:0 "Accept their request"
  flavorTEX.3optb:0 "[Root.GetName] is for the [Root.GetAdjective]!"
+ #Texas Mission events
+ flavorTEX.1000t:0 "A Union Restored"
+ flavorTEX.1000d:0 "Under the rule of [Root.Monarch.GetName], we have successfully restored the long lost union between Coahuila and Texas. Once the same state, Coahuila y Tejas, under Mexico in 1824, the two sister states broke apart when Texas fought for their independence in 1835.\n\nTexans and Coahuilans now celebrate in the streets for the reunification of our two states."
+ flavorTEX.1000opta:0 "Excellent."
+ flavorTEX.1002t:0 "Influx of Texan Settlers"
+ flavorTEX.1002d:0 "Recently, Texan settlers have been moving north into Oklahoma creating tension with the local population. Government subsidies for expanded infrastructure and agriculture in the area have had many Texans settling north seeking a new life.\n\n The tough question we face is whether to protect the locals in Oklahoma or support the settlers and potentially anger the local populous."
+ flavorTEX.1002opta:0 "Guarantee the protected rights of the Oklahomans."
+ flavorTEX.1002optb:0 "Let the settlers occupy the lands."
+ flavorTEX.1003t:0 "Direction of Our Culture"
+ flavorTEX.1003d:0 "[Root.GetName] sits on the line between four separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
+ flavorTEX.1003opta:0 "Join Southerner"
+ flavorTEX.1003optb:0 "Join Norteño"
+ flavorTEX.1003optc:0 "Join Great Plainer"
+ flavorTEX.1003optd:0 "Stay our current culture"
 
  waco_events.1.title:0 "The Branch Davidians"
  waco_events.1.desc:0 "The South has always been a rife with religious fundamentalism, and Texas is no exception. Indeed, there is perhaps no better example than the town of Waco. Situated between Austin and Dallas, the area seems to attract those that find themselves disillusioned with society and city life. Chief among these people is a man by the name of David Koresh, who has cultivated a small but devout flock that call themselves the Branch Dividians. Claiming Divine inspiration, Koresh preaches the nearing of the end times, and inspires in his followers a distrust in longstanding institutions like the Church and Crown. Local governors fear that Koresh may incite revolt if we allow this to continue."
@@ -1081,12 +1107,12 @@
  CaymanIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Cuba
- CubaFlavor.1t:0 "Cuban Culuture Created"
+ CubaFlavor.1t:0 "Cuban Culture Created"
  CubaFlavor.1d:0 "The people of the island of Cuba have created for themselves their own culture and are now calling themselves Cubans."
  CubaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Curacao
- CuracaoanFlavor.1t:0 "Curaçaoan Culuture Created"
+ CuracaoanFlavor.1t:0 "Curaçaoan Culture Created"
  CuracaoanFlavor.1d:0 "The people of the island of Curaçao have created for themselves their own culture and are now calling themselves Curaçaoan."
  CuracaoanFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
@@ -1127,17 +1153,17 @@
  
  #Saba
  SabaFlavor.1t:0 "Saban Culture Solidifies"
- SabaFlavor.1d:0 "The people of the island of Saba have developed their own culture and indenty, calling themselves Sabans."
+ SabaFlavor.1d:0 "The people of the island of Saba have developed their own culture and identity, calling themselves Sabans."
  SabaFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Sint Eustasius
  SintEustasiusFlavor.1t:0 "Statian Culture Sprouts"
- SintEustasiusFlavor.1d:0 "The people of the island of Sint Eustasius have developed their own culture and indenty, calling themselves Statians."
+ SintEustasiusFlavor.1d:0 "The people of the island of Sint Eustasius have developed their own culture and identity, calling themselves Statians."
  SintEustasiusFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Santo Domingo (Dominican Republic)
  SantoDomingoFlavor.1t:0 "Santo Domingo Culture Springs"
- SantoDomingoFlavor.1d:0 "The people of the eastern portion of the island of Hispanola have developed their own culture and indenty in the name of Santo Domingo"
+ SantoDomingoFlavor.1d:0 "The people of the eastern portion of the island of Hispanola have developed their own culture and identity in the name of Santo Domingo"
  SantoDomingoFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #St. Barts
@@ -1177,7 +1203,7 @@
  
  #Turk and Caicos Islands
  TurkCaicosFlavor.1t:0 "Turk & Caicos Islander Cultures Appears"
- TurkCaicosFlavor.1d:0 "Our island depedency of Turk & Caicos Islands has developed its own societial identity and culture."
+ TurkCaicosFlavor.1d:0 "Our island depedency of Turk & Caicos Islands has developed its own societal identity and culture."
  TurkCaicosFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Trinidad
@@ -1251,7 +1277,7 @@
  
  #Cook Islands
  CookIslandsFlavor.1t:0 "Cook Islands Cultural Change"
- CookIslandsFlavor.1d:0 "The people on the Cook Islands have changed their understand of their island culture and now view themselves as being a distinct culture and soceity from ours."
+ CookIslandsFlavor.1d:0 "The people on the Cook Islands have changed their understand of their island culture and now view themselves as being a distinct culture and society from ours."
  CookIslandsFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Fiji
@@ -1274,7 +1300,7 @@
  
  #Nauru
  NauruFlavor.1t:0 "Nauru Culture Identity"
- NauruFlavor.1d:0 "The people of Nauru have collectively identifying as a unique local identity and culture with even some coming to believe they're a seperate society from ours."
+ NauruFlavor.1d:0 "The people of Nauru have collectively identifying as a unique local identity and culture with even some coming to believe they're a separate society from ours."
  NauruFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #New Caledonia
@@ -1304,12 +1330,12 @@
  
  #Tonga
  TonganFlavor.1t:0 "Tonga Island Identity"
- TonganFlavor.1d:0 "The island people of Tonga have initiated their own cultural identity and view themselves as a distince society from us."
+ TonganFlavor.1d:0 "The island people of Tonga have initiated their own cultural identity and view themselves as a distinct society from us."
  TonganFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Tuvalu
- TuvaluFlavor.1t:0 "Tuvalu Culuture Organized"
- TuvaluFlavor.1d:0 "Our island of Tuvalu has recently been described to us that they are a distince culture and society."
+ TuvaluFlavor.1t:0 "Tuvalu Culture Organized"
+ TuvaluFlavor.1d:0 "Our island of Tuvalu has recently been described to us that they are a distinct culture and society."
  TuvaluFlavor.1opta:0 "Hopefully this will not cause problems in the future."
  
  #Vanuatu
@@ -1340,3 +1366,15 @@
  EVTOPTG700:0 "Female Military Candidate"
  
  #Samoa (Formable))
+ 
+ ############### SUPERSTATES PIRATE Events
+ PiratesSuperStates.1.name:0 "Pirates of Ocracoke"
+ PiratesSuperStates.1.desc:0 "The infamous pirate Edward 'Blackbeard' Teach has found himself on the shores of Ocracoke Island just off our coast after being chased out of the Caribbean by his foes. With his ship and accompanying fleet damaged, they have no choice but to remain marooned there for the foreseeable future. Already, word has spread through the area, with many locals supporting Blackbeard in his repair efforts and some even joining his crew. Shall we put an end to this man's reign of terror once and for all?"
+ PiratesSuperStates.1.a:0 "A pirate's life for me!"
+ PiratesSuperStates.1.b:0 "We don't have time for this. Let them be."
+ PiratesSuperStates.1.c:0 "Tell this pirate captain to prepare to meet his death!"
+ PiratesSuperStates.2.name:0 "A Prudent Privateer"
+ PiratesSuperStates.2.desc:0 "A former privateer going by the name of Peter Easton has decided that the law is beneath him, and is now actively engaging in piracy in the Atlantic. Recently, he has made a base outside of Harbour Grace from which to conduct his illicit affairs. We are now presented with the option of confronting this criminal or turning a blind eye to his activities."
+ PiratesSuperStates.2.a:0 "A pirate's life for me!"
+ PiratesSuperStates.2.b:0 "We don't have time for this. Let them be... at a price."
+ PiratesSuperStates.2.c:0 "Tell this pirate captain to prepare to meet his death!"

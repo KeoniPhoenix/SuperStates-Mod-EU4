@@ -12,6 +12,14 @@ nys_slot_1 = {
 		icon = mission_civil_war_battle
 		required_missions = { }
 		position = 1
+
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2588
@@ -57,6 +65,7 @@ nys_slot_1 = {
 		required_missions = { nys_pennsylvania_erie }
 		completed_by = 1500.1.1
 		position = 3
+
 		provinces_to_highlight = {
 			OR = {
 				area = delaware_valley_area
@@ -215,13 +224,13 @@ nys_slot_2_nys = {
 		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 4
-						area = north_jersey_area
-				}
+				value = 4
+				area = north_jersey_area
+			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 2
-						area = south_jersey_area
-				}
+				value = 2
+				area = south_jersey_area
+			}
 		}
 		effect = {
 			delaware_area = {
@@ -304,7 +313,6 @@ nys_slot_2_nys = {
 			}
 		}
 	}
-
 }
 
 nys_slot_3 = {
@@ -322,17 +330,32 @@ nys_slot_3 = {
 		required_missions = { }
 		completed_by = 1550.1.1
 		position = 1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
 		
 		trigger = {
-			OR = {
-				if = {
-					limit = { has_dlc = "Cradle of Civilization" }
-					army_professionalism = 0.05
+			if = {
+				limit = {
+					ai = yes
 				}
-				else = {
-					army_tradition = 20
+				army_size = 28
+			}
+			else = {
+				OR = {
+					if = {
+						limit = { has_dlc = "Cradle of Civilization" }
+						army_professionalism = 0.05
+					}
+					else = {
+						army_tradition = 20
+					}
+					army_size = 35
 				}
-				army_size = 40
 			}
 		}
 		effect = {
@@ -368,6 +391,14 @@ nys_slot_3 = {
 		required_missions = { yankee_pride }
 		completed_by = 1470.1.1
 		position = 2
+
+		ai_weight = {
+			factor = 100
+		}
+		ai_priority = {
+			factor = 100
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = vermont_area
@@ -405,6 +436,14 @@ nys_slot_3 = {
 		required_missions = { nys_new_hampshire_grants }
 		completed_by = 1550.1.1
 		position = 3
+
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = massachusetts_area
@@ -448,6 +487,14 @@ nys_slot_3 = {
 		icon = mission_have_two_subjects
 		required_missions = { battle_for_boston }
 		position = 4
+
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 2
+		}
+
 		provinces_to_highlight = {
 			OR = {
 				area = connecticut_area
@@ -752,6 +799,12 @@ nys_slot_4 = {
 					name = "nys_big_apple"
 					duration = -1
 				}
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_burghers
+				desc = est_the_big_apple
+				loyalty = 10
+				duration = 10950
 			}
 		}
 	}

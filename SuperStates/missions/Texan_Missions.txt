@@ -1,0 +1,1427 @@
+texan_slot_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+    	tag = TEX
+    }
+    has_country_shield = yes
+
+	tex_new_mexico = {
+		icon = mission_tex_fights
+		required_missions = { tex_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = new_mexico_area
+				province_id = 958
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = new_mexico_area
+					province_id = 958
+				}
+			}
+		}
+		effect = {
+			colorado_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			991 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	tex_colorado = {
+		icon = mission_texas_republic
+		required_missions = { tex_new_mexico }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = colorado_area
+				province_id = 991
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = colorado_area
+			}
+			owns_or_non_sovereign_subject_of = 991
+		}
+		effect = {
+			set_country_flag = texan_republic_flag #Unique government
+			if = {
+				limit = {
+					government = republic
+				}
+				add_government_reform = texan_republic
+			}
+			baja_arizona_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			arizona_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "texas_reunited"
+				duration = 5475 #15 years
+			}
+		}
+	}
+
+	tex_alamo = {
+		icon = mission_tex_alamo
+		required_missions = { tex_colorado }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2486
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				2486 = {
+					owned_by = ROOT
+					OR = {
+						has_great_project = {
+							type = san_antonio_missions
+							tier = 2
+						}
+						has_great_project = {
+							type = san_antonio_missions
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				army_size_percentage = 1
+				num_of_generals = 2
+			}
+			2486 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				fort_level = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tex_alamo_modifier"
+				duration = 7300
+			}
+			2486 = {
+				# change_province_name = "Alamo City"
+				add_base_manpower = 1
+				add_province_modifier = { 
+    				name = remilitarized_alamo
+   					duration = -1
+				}
+			}
+		}
+	}
+}
+
+texan_slot_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+		tag = TEX
+    }
+	has_country_shield = yes
+
+	tex_mil_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		completed_by = 1492.1.1
+
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+
+		trigger = {
+			army_size_percentage = 0.85
+			num_of_generals = 1
+		}
+		effect = {
+			3287 = { #Comanche (Greer County Dispute)
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			high_plains_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			oklahoma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_mexico_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			905 = { #Nuevo Laredo
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	tex_laredo = {
+		icon = mission_arabian_fort
+		required_missions = { tex_mil_buildup }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 905
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			905 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					COA = {
+						is_subject = no
+						exists = yes
+						NOT = {
+							num_of_owned_provinces_with = { #coa must be smaller than 14 provinces
+								value = 14
+							}
+						}
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = COA
+				}
+			}
+			else = { #otherwise you get claims
+				coahuila_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			tamaulipas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			nuevo_leon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = RRG
+				}
+				add_historical_rival = RRG
+			}
+		}
+	}
+
+	tex_rio_grande = {
+		icon = mission_italian_condottiere
+		required_missions = { tex_laredo }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = tamaulipas_area
+				area = nuevo_leon_area
+				area = coahuila_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			tamaulipas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nuevo_leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = coahuila_area
+			}
+		}
+		effect = {
+			chihuahua_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			durango_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					exists = NOM
+				}
+				add_historical_rival = NOM
+			}
+			
+			custom_tooltip = tex_subject_tooltip
+			tooltip = {
+				country_event = {
+					id = flavorTEX.1000
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						COA = { is_subject_of = ROOT }
+					}
+					country_event = {
+						id = flavorTEX.1000
+					}
+				}
+			}
+		}
+	}
+
+	tex_mexico = {
+		icon = mission_found_havana
+		required_missions = { tex_rio_grande }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = chihuahua_area
+				area = durango_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chihuahua_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			durango_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "tex_mexico_modifier"
+				duration = 9125
+			}
+			sonora_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sinaloa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	greater_texas = {
+		icon = mission_texas_flag
+		required_missions = { tex_colorado tex_mexico tex_kansas }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = arizona_area
+				area = baja_arizona_area
+				area = sinaloa_area
+				area = sonora_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baja_arizona_area = {
+				type = all
+				owned_by = ROOT
+			}
+			arizona_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sinaloa_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sonora_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			else = {
+				add_prestige = 30
+			}
+			add_country_modifier = { 
+ 		   		name = gran_tejas
+				duration = 10950
+			}
+		}
+	}
+}
+
+texan_slot_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+        tag = TEX
+    }
+	has_country_shield = yes
+
+	tex_oklahoma = {
+		icon = mission_landsknecht_soldier
+		required_missions = { tex_mil_buildup }
+		position = 2
+		completed_by = 1492.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3289
+				area = oklahoma_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = oklahoma_area
+					province_id = 3289
+				}
+			}
+		}
+		effect = {
+			ozarks_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tex_ozarks = {
+		icon = mission_settlers_north_america
+		required_missions = { tex_oklahoma }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = ozarks_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ozarks_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			west_kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			texarkana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
+	tex_kansas = {
+		icon = mission_tex_colorado
+		required_missions = { tex_ozarks }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = west_kansas_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_kansas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			nebraska_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125
+			}
+		}
+	}
+
+	tex_cowboys = {
+		icon = mission_cowboy
+		required_missions = { tex_kansas }
+		position = 6
+		provinces_to_highlight = {
+			trade_goods = livestock
+			continent = north_america
+		}
+		trigger = {
+			livestock = 12
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				army_professionalism = 0.15
+			}
+			else = {
+				army_tradition = 35
+			}
+		}
+		effect = {
+			add_mil_power = 75
+			add_country_modifier = {
+				name = "tex_cowboy_modifier"
+				duration = 7300
+			}
+		}
+	}
+}
+
+texan_slot_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    potential = {
+		tag = TEX
+    }
+	has_country_shield = yes
+
+	tex_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			share_of_starting_income = 2
+			workshop = 10
+		}
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+		}
+	}
+
+	tex_south = {
+		icon = mission_mexico
+		required_missions = { tex_economy }
+		position = 2
+		trigger = {
+			development_in_provinces = {
+				value = 50
+				area = rio_grande_area
+			}
+			development_in_provinces = {
+				value = 40
+				area = trans_pecos_area
+			}
+			hidden_trigger = {
+				rio_grande_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				trans_pecos_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 1.5
+			2486 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			2484 = {
+				add_base_tax = 1
+				add_base_manpower = 1
+				add_base_production = 1
+			}
+			
+		}
+	}
+
+	tex_oklahoma_dev = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = { tex_south tex_oklahoma }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1011
+				province_id = 3287
+				province_id = 2477
+				province_id = 1010
+				province_id = 3288
+				province_id = 3289
+				province_id = 2476
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			oklahoma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			development_in_provinces = {
+				value = 50
+				area = oklahoma_area
+			}
+			development_in_provinces = {
+				value = 60
+				area = high_plains_area
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						oklahoma_area = {
+							type = all
+							culture = ROOT
+						}
+					}
+					OR = {
+						primary_culture = texan
+						primary_culture = northern_texan
+						primary_culture = eastern_texan
+						primary_culture = tejano
+						primary_culture = southern_texan
+						primary_culture = mexican_texan
+					}
+				}
+				1010 = {
+					add_base_tax = 1
+					add_base_manpower = 1
+					add_base_production = 1
+				}
+				country_event = {
+					id = flavorTEX.1002
+				}
+			}
+			else = {
+				1010 = {
+					add_base_tax = 2
+					add_base_manpower = 2
+					add_base_production = 2
+				}
+			}
+		}
+	}
+}
+
+texan_slot_4_b = {
+	slot = 4
+    generic = no
+    ai = yes
+    potential = {
+		tag = TEX
+		NOT = {
+			was_tag = LPN
+		}
+    }
+	has_country_shield = yes
+
+	tex_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 4
+		provinces_to_highlight = {
+			province_group = texas_provincegroup
+		}
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						primary_culture = texan
+						primary_culture = mexican_texan
+						primary_culture = plains_texan
+						primary_culture = southern_texan
+						primary_culture = high_plainer
+						primary_culture = northern_texan
+						primary_culture = tejano
+						primary_culture = eastern_texan
+					}
+				}
+				OR = {
+					primary_culture = eastern_texan
+					primary_culture = tejano
+					primary_culture = high_plainer
+					hidden_trigger = {
+						primary_culture = mexican_texan
+						primary_culture = southern_texan
+						primary_culture = plains_texan
+					}
+					custom_trigger_tooltip = {
+						tooltip = tex_has_unified_culture_tooltip
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 8
+								province_group = texas_provincegroup
+								OR = {
+									culture = texan
+									culture = northern_texan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = texas_provincegroup
+								OR = {
+									culture = southern_texan
+									culture = eastern_texan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 11
+								province_group = texas_provincegroup
+								OR = {
+									culture = tejano
+									culture = mexican_texan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = texas_provincegroup
+								OR = {
+									culture = high_plainer
+									culture = plains_texan
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = tex_has_unified_culture_tooltip_2
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = texas_provincegroup
+						culture = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = texan
+						primary_culture = mexican_texan
+						primary_culture = plains_texan
+						primary_culture = southern_texan
+						primary_culture = high_plainer
+						primary_culture = northern_texan
+						primary_culture = tejano
+						primary_culture = eastern_texan
+					}
+				}
+				custom_tooltip = tex_texan_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = tex_shift_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorTEX.1003
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = texan
+						primary_culture = mexican_texan
+						primary_culture = plains_texan
+						primary_culture = southern_texan
+						primary_culture = high_plainer
+						primary_culture = northern_texan
+						primary_culture = tejano
+						primary_culture = eastern_texan
+					}
+				}
+				custom_tooltip = tex_texan_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+					add_dip_power = 150
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = tex_shift_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorTEX.1003
+					}
+				}
+				custom_tooltip = tex_shift_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by spreading texan / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						num_of_owned_provinces_with = {
+							value = 8
+							province_group = texas_provincegroup
+							OR = {
+								culture = texan
+								culture = northern_texan
+							}
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+					add_dip_power = 150
+				}
+
+				else_if = { #If embracing other cultures / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						OR = {
+							primary_culture = eastern_texan
+							primary_culture = southern_texan
+							primary_culture = mexican_texan
+							primary_culture = tejano
+							primary_culture = high_plainer
+							primary_culture = plains_texan
+						}
+					}
+					country_event = {
+						id = flavorTEX.1003 #Event moves you to other culture group
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to texan - buffs to your capital 
+						num_of_owned_provinces_with = {
+							value = 8
+							province_group = texas_provincegroup
+							OR = {
+								culture = texan
+								culture = northern_texan
+							}
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+					add_dip_power = 150
+				}
+				else_if = { #If completed by spreading/embracing other cultures - trigger event 
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = texas_provincegroup
+								OR = {
+									culture = southern_texan
+									culture = eastern_texan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 11
+								province_group = texas_provincegroup
+								OR = {
+									culture = tejano
+									culture = mexican_texan
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = texas_provincegroup
+								OR = {
+									culture = high_plainer
+									culture = plains_texan
+								}
+							}
+							OR = {
+								primary_culture = eastern_texan
+								primary_culture = southern_texan
+								primary_culture = mexican_texan
+								primary_culture = tejano
+								primary_culture = high_plainer
+								primary_culture = plains_texan
+							}
+						}
+					}
+					country_event = {
+						id = flavorTEX.1003 #Event moves you to other culture group
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+				}
+			}
+		}
+	}
+
+	tex_unity = {
+		icon = promote_urbanization
+		required_missions = { tex_culture }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				province_group = texas_provincegroup
+				area = high_plains_area
+			}
+		}
+		trigger = {
+			texas_area = {
+				type = all
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+			}
+			trans_pecos_area = {
+				type = all
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+			}
+			texas_gulf_area = {
+				type = all
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+			}
+			rio_grande_area = {
+				type = all
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+			}
+			2488 = {
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+			}
+			high_plains_area = {
+				type = all
+				owned_by = ROOT
+				has_owner_religion = yes
+				or = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			custom_tooltip = tex_unify_culture_tt
+			tooltip = {
+				add_country_modifier = {
+					name = "tex_accepted_cultures"
+					duration = -1
+				}
+			}
+			custom_tooltip = tex_unify_culture_2_tt
+			tooltip = {
+				add_country_modifier = { 
+ 		   			name = "texas_unity"
+    				duration = -1  
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						high_plains_area = {
+							type = all
+							culture = ROOT
+						}
+						2488 = {
+							culture = ROOT
+						}
+						rio_grande_area = {
+							type = all
+							culture = ROOT
+						}
+						trans_pecos_area = {
+							type = all
+							culture = ROOT
+						}
+						texas_gulf_area = {
+							type = all
+							culture = ROOT
+						}
+						texas_area = {
+							type = all
+							culture = ROOT
+						}
+					}
+					add_country_modifier = {
+						name = "texas_unity"
+						duration = -1
+					}
+				}
+				else = {
+					add_country_modifier = {
+						name = "tex_accepted_cultures"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+texan_slot_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    potential = {
+		tag = TEX
+    }
+	has_country_shield = yes
+
+	tex_north = {
+		icon = mission_america
+		required_missions = { tex_economy }
+		position = 2
+		trigger = {
+			development_in_provinces = {
+				value = 90
+				OR = {
+					area = texas_area
+					province_id = 2488
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					2480 = {
+						owned_by = ROOT
+					}
+				}
+				2480 = {
+					add_base_tax = 1
+					add_base_manpower = 1
+					add_base_production = 1
+				}
+			}
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 10950 #30 years
+			}
+		}
+	}
+	
+	tex_build_manufactories = {
+		icon = mission_industria_sedera
+		required_missions = { tex_north }
+		position = 3
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+			workshop = 20
+		}
+		effect = {
+			add_adm_power = 150
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 2
+		}
+	}
+
+	tex_east = {
+		icon = secure_the_republic
+		required_missions = { }
+		position = 4
+		trigger = {
+			2487 = {
+				has_trade_building_trigger = yes
+			}
+			1507 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			2487 = {
+				add_province_modifier = {
+					name = "tex_galveston_modifier"
+					duration = -1
+				}
+			}
+			mississippi_delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			acadiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tex_louisiana = {
+		icon = mission_advance_to_the_dnieper
+		required_missions = { tex_east }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = acadiana_area
+				area = mississippi_delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			acadiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mississippi_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				num_of_galley = 30
+				num_of_heavy_ship = 10
+			}
+		}
+		effect = {
+			add_dip_power = 75
+			add_country_modifier = {
+				name = "tex_navy_enthusiasm" #Navy morale and trade eff
+				duration = 9125 #25 years
+			}
+			louisiana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tex_dominate_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { tex_louisiana }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 2480
+						province_id = 1507
+					}
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 75
+						}
+					}
+				}
+				AND = {
+					province_id = 862
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			2480 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			1507 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			862 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+}

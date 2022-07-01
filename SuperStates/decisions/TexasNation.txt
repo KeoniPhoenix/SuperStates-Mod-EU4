@@ -2,6 +2,7 @@ country_decisions = {
 	texas_nation = {
 		major = yes
 		potential = {
+			NOT = { has_country_flag = formed_texas_flag } #Only once
 			NOT = { exists = TEX }
 			NOT = { tag = CSA }
 			NOT = { exists = NAM }
@@ -11,6 +12,7 @@ country_decisions = {
 			NOT = { exists = GCL }
 			NOT = { exists = AZL }
 			NOT = { exists = NSP }
+			NOT = { tag = SWW }
 			OR = {
 				primary_culture = eastern_texan
 				primary_culture = northern_texan
@@ -19,6 +21,9 @@ country_decisions = {
 				primary_culture = high_plainer
 				primary_culture = oklahoman
 				primary_culture = texasdeutsch
+				primary_culture = mexican_texan
+				primary_culture = southern_texan
+				primary_culture = plains_texan
 			}
 			#technology_group = north_american
 			OR = {
@@ -97,6 +102,7 @@ country_decisions = {
 			}
 			add_prestige = 15
 			change_tag = TEX
+			set_country_flag = formed_texas_flag
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

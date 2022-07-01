@@ -4,6 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_oklahoma_flag } #Only once
+			NOT = { has_country_flag = formed_texas_flag } #If formed Texas can't for Oklahoma
 			NOT = { has_country_flag = formed_midwest_flag }
 			NOT = { has_country_flag = formed_great_plains_flag }
 			NOT = { exists = OKL }

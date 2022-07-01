@@ -10,19 +10,22 @@ country_decisions = {
 			NOT = { exists = NAU }
 			NOT = { tag = USA }
 			NOT = { tag = NSP }
+			NOT = { tag = SWW }
 			OR = {
 				tag = LSV
 				primary_culture = nevadan
 				#primary_culture = las_vegan
-				}
+				primary_culture = southwestern_nevadan
+				primary_culture = pacific_nevadan
+			}
 			OR = {
 				ai = no
-				AND = 		{
+				AND = {
 					ai = yes
 					num_of_cities = 3
-							}
 				}
 			}
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 3279

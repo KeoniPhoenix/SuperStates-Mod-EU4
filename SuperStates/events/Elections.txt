@@ -130,6 +130,30 @@ country_event = {
 		name = "EVTOPTB700"	# An administrator type
 		ai_chance = { factor = 20 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				mil = 1
+				adm = 5
+				dip = 1
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				mil = 1
+				adm = 5
+				dip = 1					
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				mil = 1
@@ -160,6 +184,30 @@ country_event = {
 		name = "EVTOPTC700"	# A diplomat
 		ai_chance = { factor = 20 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				dip = 5
+				adm = 1
+				mil = 1	
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				dip = 5
+				adm = 1
+				mil = 1					
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				dip = 4
@@ -190,6 +238,30 @@ country_event = {
 		name = "EVTOPTD700"	# A military man
 		ai_chance = { factor = 20 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				mil = 5
+				adm = 1
+				dip = 1	
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				mil = 5
+				adm = 1
+				dip = 1					
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				mil = 4
@@ -321,6 +393,30 @@ country_event = {
 		name = "EVTOPTB700"	# An administrator type
 		ai_chance = { factor = 40 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				mil = 1
+				adm = 5
+				dip = 1
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				mil = 1
+				adm = 5
+				dip = 1					
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				mil = 1
@@ -350,6 +446,30 @@ country_event = {
 		name = "EVTOPTC700"	# A diplomat
 		ai_chance = { factor = 30 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				dip = 5
+				adm = 1
+				mil = 1		
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				dip = 5
+				adm = 1
+				mil = 1						
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				dip = 4
@@ -379,6 +499,30 @@ country_event = {
 		name = "EVTOPTD700"	# A military man
 		ai_chance = { factor = 30 }
 		if = {
+			limit = {
+				AND = {
+					republic_with_female_rulers_trigger = yes
+					has_country_flag = ohi_better_elections
+				}
+			}
+			define_ruler = {
+				mil = 5
+				adm = 1
+				dip = 1					
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ohi_better_elections
+			}
+			define_ruler = {
+				mil = 5
+				adm = 1
+				dip = 1									
+			}
+		}
+		else_if = {
 			limit = { republic_with_female_rulers_trigger = yes }
 			define_ruler = {
 				mil = 4

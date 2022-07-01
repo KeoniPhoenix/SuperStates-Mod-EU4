@@ -157,6 +157,8 @@ wdc_slot_1 = {
 				2616 = {
 					owned_by = ROOT
 					development = 40
+				}
+				2616 = {
 					num_of_buildings_in_province = 6
 				}
 			}
@@ -177,28 +179,9 @@ wdc_slot_1 = {
 					name = "wdc_no_lev_monument_builders"
 					duration = 10950 #30 years
 				}
-				2616 = {
-					add_province_modifier = {
-						name = "wdc_white_house_modifier" #gives bonus similiar to monument for non leviathan ppl
-						duration = -1
-					}
-				}
 			}
 		}
 	}
-}
-
-wdc_slot_1_b = {
-	slot = 1
-	generic = no
-	potential_on_load = {
-		has_dlc = "Leviathan"
-	}
-	potential = {
-		has_dlc = "Leviathan"
-		tag = WDC
-	}
-	has_country_shield = yes
 
 	wdc_monument_2 = {
 		icon = mission_capitol_hill
@@ -211,10 +194,15 @@ wdc_slot_1_b = {
 			NOT = { development = 50 }
 		}
 		trigger = {
-			2616 = {
-				has_great_project = {
-					type = any
-					tier = 3
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				2616 = {
+					has_great_project = {
+						type = any
+						tier = 3
+					}
 				}
 			}
 			2616 = {
@@ -223,9 +211,22 @@ wdc_slot_1_b = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "wdc_lots_of_monuments"
-				duration = -1
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				add_country_modifier = {
+					name = "wdc_lots_of_monuments"
+					duration = -1
+				}
+			}
+			else = {
+				2616 = {
+					add_province_modifier = {
+						name = "wdc_white_house_modifier" #gives bonus similiar to monument for non leviathan ppl
+						duration = -1
+					}
+				}
 			}
 		}
 	}

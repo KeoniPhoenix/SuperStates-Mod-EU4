@@ -1,0 +1,488 @@
+wva_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = WVA
+	}
+	has_country_shield = yes
+
+	wva_defend_against_vir = { #Mountain Momma
+		icon = prosper_in_piedmont
+		required_missions = { }
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					exists = VIR
+					is_neighbor_of = VIR
+				}
+				army_size = VIR
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				has_fort_building_trigger = yes
+				has_terrain = hills
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wva_mountain_defence"
+				duration = 9125
+			}
+			virginia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_take_virginia = { #Take me Home
+		icon = mission_italian_condottiere
+		required_missions = { wva_defend_against_vir }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = virginia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = virginia_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "wva_defeated_virginia"
+				duration = 9125
+			}
+			chesapeake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_blue_waters = {
+		icon = mission_look_west
+		required_missions = { wva_take_virginia }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = chesapeake_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chesapeake_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			navy_size = 10
+		}
+		effect = {
+			add_navy_tradition = 20
+			add_country_modifier = {
+				name = "wva_high_seas"
+				duration = 9125
+			}
+		}
+	}
+}
+
+wva_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = WVA
+	}
+	has_country_shield = yes
+
+	wva_kentucky = {
+		icon = mission_cannons_firing
+		required_missions = { wva_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = kentucky_area
+				area = pennyroyal_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = kentucky_area
+					area = pennyroyal_area
+				}
+			}
+		}
+		effect = {
+			tennessee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			nickajack_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_tennessee = {
+		icon = mission_conquer_5_states
+		required_missions = { wva_kentucky }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = nickajack_area
+				area = tennessee_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = nickajack_area
+					area = tennessee_area
+				}
+			}
+		}
+		effect = {
+			blue_ridge_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_blue_ridge = {
+		icon = mission_assemble_an_army
+		required_missions = { wva_tennessee wva_take_virginia }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = blue_ridge_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			blue_ridge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			south_carolina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_carolina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+wva_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = WVA
+	}
+	has_country_shield = yes
+
+	wva_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.9
+		}
+		effect = {
+			4641 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			2532 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			kentucky_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pennyroyal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_maryland = {
+		icon = mission_civil_war_battle
+		required_missions = { wva_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4641
+				province_id = 2532
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			4641 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2532 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			allegheny_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4641 = {
+				add_province_modifier = {
+					name = "wva_liberated_west_maryland"
+					duration = 9125
+				}
+			}
+			2532 = {
+				add_province_modifier = {
+					name = "wva_liberated_west_maryland"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	wva_allegheny = {
+		icon = mission_allegheny_mountain
+		required_missions = { wva_maryland }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = allegheny_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = allegheny_area
+			}
+		}
+		effect = {
+			ohio_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_pennsylvania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	wva_appalachia = {
+		icon = mission_unite_home_region
+		required_missions = { wva_blue_ridge wva_allegheny }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				region = appalachia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			appalachia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 200
+			add_country_modifier = {
+				name = "wva_united_appalachia"
+				duration = 9125
+			}
+		}
+	}
+}
+
+wva_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = WVA
+	}
+	has_country_shield = yes
+
+	wva_coal_production = {
+		icon = industrialized_rhineland
+		required_missions = { }
+		position = 2
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				furnace = 4
+			}
+			else = {
+				3155 = {
+					owned_by = ROOT
+					has_manufactory_trigger = yes
+					development = 25
+				}
+				3154 = {
+					owned_by = ROOT
+					has_manufactory_trigger = yes
+					development = 25
+				}
+				2541 = {
+					owned_by = ROOT
+					has_manufactory_trigger = yes
+					development = 25
+				}
+				3156 = {
+					owned_by = ROOT
+					has_manufactory_trigger = yes
+					development = 25
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "vir_has_coal"
+				duration = 9125
+			}
+			capital_scope = {
+				add_base_tax = 3
+				add_base_production = 3
+			}
+		}
+	}
+
+	wva_almost_heaven = {
+		icon = mission_european_church
+		required_missions = { }
+		position = 3
+		trigger = {
+			temple = 10
+			religious_unity = 1
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "wva_almost_heaven_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	wva_country_roads = { #Country Roads
+		icon = dalmatian_conquest
+		required_missions = { }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				owned_by = ROOT
+			}
+			NOT = {
+				development = 12
+			}
+		}
+		trigger = {
+			all_owned_province = {
+				development = 12
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns_core_province = 2539
+				}
+				2539 = {
+					add_center_of_trade_level = 1
+				}
+			}
+			else = {
+				add_dip_power = 75
+			}
+			monongahela_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "wva_country_roads_modifier"
+					duration = -1
+				}
+			}
+			shenandoah_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "wva_country_roads_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+}

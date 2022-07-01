@@ -273,6 +273,7 @@ republic = {
 		pure_westminster_legacy
 		hybrid_westminster_legacy
 		new_england_state_legacy
+		micronesian_republic_legacy
 	}
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
@@ -315,6 +316,7 @@ republic = {
 				hybrid_westminster_reform
 				commonwealth_state_reform
 				texan_republic
+				micronesian_republic
 			}
 		}
 		republican_virtues = {

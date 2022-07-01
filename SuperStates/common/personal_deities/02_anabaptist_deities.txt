@@ -73,6 +73,7 @@ doctrine_the_sword =
 			OR = {
 			ruler_has_personality = babbling_buffoon_personality
 			ruler_has_personality = naive_personality
+			}
 		}
 	}	
 }

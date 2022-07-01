@@ -861,4 +861,8 @@ spriteTypes = {
 		name = "government_reform_alamo"
 		texturefile = "gfx/interface/government_reform_icons/alamo.dds"
 	}
+	spriteType = {
+		name = "government_reform_micronesia"
+		texturefile = "gfx/interface/government_reform_icons/micronesia.dds"
+	}
 }

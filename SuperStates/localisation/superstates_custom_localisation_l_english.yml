@@ -12,6 +12,9 @@
  
  ## Texas
  tex_germans_tooltip:0 "The German refugees might expect more in the future."
+ tex_subject_tooltip:0 "If we complete this mission by making §MCoahuila§! our subject:"
+ tex_unify_culture_tt:0 "If we complete this mission by accepting other cultures:"
+ tex_unify_culture_2_tt:0 "If we complete this mission by converting other cultures to §Y[Root.Culture.GetName]:§!"
  
  ## Kansas
  kansas_demand_city_tooltip:0 "We will send an ultimatum to §YMissouri§! demanding Kansas City."
@@ -50,13 +53,28 @@
  ## Midwest
  gen_breadbasket_tooltip:0 "All owned provinces which produce §YGrain§! and have a §YManufactory§! gain §Y1§! £icon_production_in_text£"
 
+ ## California
+ cal_has_wine_tooltip:0 "All owned §YWine§! producing provinces gain §Y2§! £icon_production_in_text£"
+
+ ## Ohio
+ ohi_stay_midwest_tt:0 "If §Y[Root.GetName]§! chooses the §YMidwestern§! path, the following triggers will be needed to complete this mission:"
+ ohi_convert_greatlaker_tt:0 "If §Y[Root.GetName]§! chooses the §YGreat Laker§! path, the following triggers will be needed to complete this mission:"
+ ohi_convert_appalachian_tt:0 "If §Y[Root.GetName]§! chooses the §YAppalachian§! path, the following triggers will be needed to complete this mission:"
+ ohi_mystery_reward_tt:0 "§Y[Root.GetName]§! will receive a bonus depending on what direction we took our culture."
+ ohi_better_elections_tt:0 "Election candidates will be improved by §G1§! skill point in their respective type until the end of the game"
+
  # Culture related
  super_culture_change_modifier:0 "Unified Culture"
  super_culture_change_modifier_desc:0 "We have unified our culture from regional differences."
- ohi_has_unified_culture_tooltip:0 "All provinces in the §TOhio Province Group§! are either §YOhioan,§! §YClevelander§! or §YAlleghenian§! culture."
  flavorOHI.1000a.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YMidwestern Ohioan.§!"
  flavorOHI.1000b.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YGreat Laker Ohioan.§!"
  flavorOHI.1000c.tt:0 "All owned provinces of §YOhioan,§! §YAlleghenian§! and §YClevelander§! culture will adopt §YAppalachian Ohioan.§!"
+ ohi_has_unified_culture_tooltip:0 "All provinces in the §TOhio Province Group§! are §YOhioan§! culture."
+ ohi_has_unified_culture_tooltip_2:0 "At least §Y4§! owned provinces have §YClevelander§! or §YAlleghenian§! culture."
+ ohi_ohioan_tooltip:0 "If we complete this mission by spreading §YOhioan§! culture:"
+ ohi_shift_no_dlc_tooltip:0 "If we complete this mission by embracing §YClevelander§! or §YAlleghenian§! culture:"
+ ohi_shift_tooltip:0 "If we complete this mission by spreading §YClevelander§! or §YAlleghenian§! culture:"
+ ohi_shift_2_tooltip:0 "Depending on the culture we spread, §Y[Root.GetName]§! will move closer to the §YGreat Laker§! or §YAppalachian§! culture group."
 
  vir_has_unified_culture_tooltip:0 "At least 6 provinces in the §TVirginia Province Group§! are either §YNorth Virginian§! or §YMountaineer§! culture."
  flavorVIR.1000a.tt:0 "All owned provinces of §YVirginian,§! §YNorth Virginian§! and §YMountaineer§! culture in the §TVirginia Province Group§! will adopt §YMid-Atlantic Virginian.§!"
@@ -81,4 +99,13 @@
  ili_dash_tooltip:0 "-----------------------------------------------"
  flavorILI.1000a.tt:0 "All owned provinces of §YChicagoan§! and §YIllinoisan§! culture will adopt §YGreat Laker Illinoisan.§!"
  ili_chicagoan_no_dlc_tooltip:0 "If we complete this mission by embracing §YChicagoan§! culture:"
-  
+
+ tex_texan_tooltip:0 "If we complete this mission by spreading §YTexan§! culture:"
+ tex_shift_no_dlc_tooltip:0 "If we complete this mission by embracing §YEastern Texan§!, §YTejano§! or §YHigh Plainer§! culture:"
+ tex_shift_tooltip:0 "If we complete this mission by embracing or spreading §YEastern Texan,§! §YTejano§! or §YHigh Plainer§! culture:"
+ tex_shift_2_tooltip:0 "Depending on the culture we spread, §Y[Root.GetName]§! will move closer to another culture group."
+ tex_has_unified_culture_tooltip:0 "We have converted at least 3 provinces to §YTexan§!, §YEastern Texan,§! §YTejano§! or §YHigh Plainer§! in the §TTexas Province Group§!"
+ tex_has_unified_culture_tooltip_2:0 "At least 6 provinces in the §TTexas Province Group§! are §Y[Root.Culture.GetName]§! culture."
+ flavorTEX.1003a.tt:0 "All owned provinces of §YTexan§! and §YEastern Texan§! culture will adopt §YSoutherner Texan.§!"
+ flavorTEX.1003b.tt:0 "All owned provinces of §YTexan§! and §YTejano§! culture will adopt §YNorteño Texan.§!"
+ flavorTEX.1003c.tt:0 "All owned provinces of §YTexan§! and §YHigh Plainer§! culture will adopt §YGreat Plainer Texan.§!"

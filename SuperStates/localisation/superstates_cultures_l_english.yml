@@ -144,18 +144,6 @@
  san_franciscan:0 "San Franciscan"
  southern_californian:0 "South Californian"
  washingtonian:0 "Washingtonian"
- #Micronesian-Pacific Islander
- micronesian-pacific_islander:0 "Pacific"
- chuukese:0 "Chuukese"
- guamanian:0 "Guamanian"
- hawaiian:0 "Hawaiian"
- kosraean:0 "Kosraean"
- marshallese:0 "Marshallese"
- northern_marianas_islander:0 "Mariana"
- palauan:0 "Palauan"
- pohnpeian:0 "Pohnpeian"
- samoan_american:0 "American Samoan"
- yapese:0 "Yapese"
  #American Southwestern
  #Great Plainer
  great_plainer_group:0 "Great Plainer"
@@ -316,6 +304,19 @@
  nicaraguan:0 "Nicaraguan"
  panamanian:0 "Panamanian"
  salvadorian:0 "Salvadorian"
+ #Micronesian-Pacific Islander
+ micronesian-pacific_islander:0 "Micronesian-Pacific"
+ micronesian:0 "Micronesian"
+ chuukese:0 "Chuukese"
+ guamanian:0 "Guamanian"
+ hawaiian:0 "Hawaiian"
+ kosraean:0 "Kosraean"
+ marshallese:0 "Marshallese"
+ northern_marianas_islander:0 "Mariana"
+ palauan:0 "Palauan"
+ pohnpeian:0 "Pohnpeian"
+ samoan_american:0 "East Samoan"
+ yapese:0 "Yapese"
  #Oceania
  micronesian_pacific_islander:0 "Pacific"
  maori:0 "Maori"

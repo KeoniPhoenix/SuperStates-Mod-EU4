@@ -599,7 +599,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "mission_all_ohio"
-		texturefile = "gfx/interface/missions/easternamerica/mission_all_ohio.dds"
+		texturefile = "gfx/interface/missions/greatlakes/mission_all_ohio.dds"
 	}
 
 	spriteType = {
@@ -699,7 +699,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "mission_cowboy"
-		texturefile = "gfx//interface//missions//mission_cowboy.dds"
+		texturefile = "gfx/interface/missions/midwest/mission_cowboy.dds"
 	}
 
 	spriteType = {
@@ -719,7 +719,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "mission_mount_rushmore"
-		texturefile = "gfx/interface/missions/mission_mount_rushmore.dds"
+		texturefile = "gfx/interface/missions/midwest/mission_mount_rushmore.dds"
 	}
 
 	spriteType = {
@@ -737,7 +737,40 @@ spriteTypes = {
 		texturefile = "gfx/interface/missions/easternamerica/mission_long_island.dds"
 	}
 	
+	spriteType = {
+		name = "mission_texas_flag"
+		texturefile = "gfx//interface//missions//southwest//mission_texas_flag.dds"
+	}
 
+	spriteType = {
+		name = "mission_cuba_map"
+		texturefile = "gfx//interface//missions//deepsouth//mission_cuba_map.dds"
+	}
+
+	spriteType = {
+		name = "mission_sunshine"
+		texturefile = "gfx//interface//missions//deepsouth//mission_sunshine.dds"
+	}
+
+	spriteType = {
+		name = "mission_castillo_de_san_marcos"
+		texturefile = "gfx//interface//missions//deepsouth//mission_castillo_de_san_marcos.dds"
+	}
+
+	spriteType = {
+		name = "mission_wisconsin_map"
+		texturefile = "gfx/interface/missions/midwest/mission_wisconsin_map.dds"
+	}
+
+	spriteType = {
+		name = "mission_texas_republic"
+		texturefile = "gfx//interface//missions//southwest//mission_texas_republic.dds"
+	}
+
+	spriteType = {
+		name = "mission_peasants"
+		texturefile = "gfx//interface//missions//deepsouth//mission_peasants.dds"
+	}
 
 	##
 	spriteType = {

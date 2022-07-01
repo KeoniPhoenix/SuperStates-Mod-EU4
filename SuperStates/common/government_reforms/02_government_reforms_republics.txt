@@ -1304,6 +1304,19 @@ american_state_reform = {
 			}
 			tag = HWI
 			tag = ALA
+			tag = ALU
+			tag = PRT
+			tag = UVI
+			tag = ASM
+			tag = GUM
+			tag = NMI
+			primary_culture = hawaiian
+			primary_culture = alaskan
+			primary_culture = puerto_rican
+			primary_culture = virgin_islander
+			primary_culture = guamanian
+			primary_culture = samoan_american
+			primary_culture = northern_marianas_islander
 		}
 	}
 	legacy_equivalent = american_state_legacy
@@ -1312,7 +1325,7 @@ american_state_reform = {
 	nation_designer_cost = 10
 	modifiers = {
 		global_unrest = -1
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	
 	#factions = {
@@ -1331,6 +1344,10 @@ american_state_reform = {
 		has_parliament = yes
 	}
 	duration = 4
+
+	ai = {
+		factor = 10
+	}
 }
 
 # Only for states that call themselves Commonwealths - Kentucky, Massachusetts, Pennsylvania, Virginia, NMI, Puerto Rico
@@ -1355,6 +1372,14 @@ commonwealth_state_reform = {
 			tag = MSS
 			tag = PNN
 			tag = KEN
+			hidden_trigger = {
+				OR = {
+					primary_culture = southern_kentuckian
+					primary_culture = appalachian_pennsylvanian
+					primary_culture = midatlantic_virginian
+					primary_culture = appalachian_virginian
+				}
+			}
 
 			AND = {
 				is_playing_custom_nation = yes
@@ -1364,9 +1389,9 @@ commonwealth_state_reform = {
 		}
 	}
 	trigger = {
-	OR = {
-		has_reform = commonwealth_state_reform
-		have_had_reform = commonwealth_state_reform
+		OR = {
+			has_reform = commonwealth_state_reform
+			have_had_reform = commonwealth_state_reform
 			primary_culture = kentuckian
 			primary_culture = us_transylvanian
 			primary_culture = bay_stater
@@ -1377,7 +1402,15 @@ commonwealth_state_reform = {
 			primary_culture = northern_virginian
 			primary_culture = puerto_rican
 			primary_culture = northern_marianas_islander
+			hidden_trigger = {
+				OR = {
+					primary_culture = southern_kentuckian
+					primary_culture = appalachian_pennsylvanian
+					primary_culture = midatlantic_virginian
+					primary_culture = appalachian_virginian
+				}
 			}
+		}
 	}
 	legacy_equivalent = american_state_legacy
 	valid_for_nation_designer = yes
@@ -1385,7 +1418,7 @@ commonwealth_state_reform = {
 	nation_designer_cost = 10
 	modifiers = {
 		republican_tradition = 0.15
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	
 	#factions = {
@@ -1404,11 +1437,15 @@ commonwealth_state_reform = {
 		has_parliament = yes
 	}
 	duration = 4
+
+	ai = {
+		factor = 5
+	}
 }
 
 #Starting Form for Vermont and New Hampshire Only
 new_england_state_reform = {
-	icon = "mastatehouse"	#Massachusetts State House
+	icon = "united_cantons_reform"
 	allow_normal_conversion = no
 	potential = {
 		OR = {
@@ -1425,7 +1462,7 @@ new_england_state_reform = {
 	modifiers = {
 		reform_progress_growth = 0.05
 		global_unrest = -1
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	
 	#factions = {
@@ -1464,11 +1501,14 @@ slave_state_reform = {
 					AND = {
 						culture_group = southerner
 						NOT = { primary_culture = south_floridian }
-						}
+					}
 					AND = {
 						culture_group = appalachian
 						NOT = { primary_culture = west_virginian }
 						NOT = { primary_culture = western_pennsylvanian }
+						NOT = { primary_culture = appalachian_pennsylvanian }
+						NOT = { primary_culture = appalachian_ohioan }
+						NOT = { primary_culture = alleghenite }
 					}
 					primary_culture = missourian
 					primary_culture = texan
@@ -1483,15 +1523,19 @@ slave_state_reform = {
 					AND = {
 						culture_group = southerner
 						NOT = { primary_culture = south_floridian }
-						}
+					}
 					AND = {
 						culture_group = appalachian
 						NOT = { primary_culture = west_virginian }
 						NOT = { primary_culture = western_pennsylvanian }
+						NOT = { primary_culture = appalachian_pennsylvanian }
+						NOT = { primary_culture = appalachian_ohioan }
+						NOT = { primary_culture = alleghenite }
 					}
 					primary_culture = missourian
 					primary_culture = texan
 					primary_culture = northern_texan
+					primary_culture = plains_texan
 				}
 			}
 		}
@@ -1504,7 +1548,7 @@ slave_state_reform = {
 		embracement_cost = 0.20
 		global_unrest = -1
 		production_efficiency = 0.1
-		max_absolutism = -45
+		max_absolutism = 30
 	}
 	
 	#factions = {
@@ -1524,6 +1568,14 @@ slave_state_reform = {
 		has_parliament = yes
 	}
 	duration = 4
+
+	ai = {
+		factor = 10
+		modifier = {
+			factor = 2
+			culture_group = southerner
+		}
+	}
 }
 
 #Starting Form for Canadian States and Territories
@@ -1553,7 +1605,7 @@ pure_westminster_reform = {
 	modifiers = {
 		global_autonomy = -0.025
 		republican_tradition = 0.15
-		max_absolutism = -25
+		max_absolutism = 15
 	}
 	
 	#factions = {
@@ -1572,6 +1624,10 @@ pure_westminster_reform = {
 		has_parliament = yes
 	}
 	duration = 5
+
+	ai = {
+		factor = 10
+	}
 }
 
 #Start Form for Australian States and Territories
@@ -1582,7 +1638,7 @@ hybrid_westminster_reform = {
 	potential = {
 		OR = {
 			capital_scope = {
-					superregion = australia_superregion
+				superregion = australia_superregion
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -1600,7 +1656,7 @@ hybrid_westminster_reform = {
 	#}
 	modifiers = {
 		trade_efficiency = 0.1
-		max_absolutism = -25
+		max_absolutism = 15
 	}
 	
 	#factions = {
@@ -1619,6 +1675,10 @@ hybrid_westminster_reform = {
 		has_parliament = yes
 	}
 	duration = 4
+
+	ai = {
+		factor = 10
+	}
 }
 
 #Starting Form for Mexican States and Territories
@@ -1648,7 +1708,7 @@ mexican_state_reform = {
 	modifiers = {
 		global_autonomy = -0.025
 		global_tax_modifier = 0.1
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	
 	#factions = {
@@ -1667,6 +1727,10 @@ mexican_state_reform = {
 		has_parliament = yes
 	}
 	duration = 6
+
+	ai = {
+		factor = 10
+	}
 }
 
 ##Unique tier-1 reforms
@@ -1700,7 +1764,7 @@ confederate_republic = {
 	modifiers = {
 		infantry_power = 0.1
 		global_spy_defence = 0.2
-		max_absolutism = -30
+		max_absolutism = 30
 	}
 	
 	#factions = {
@@ -1739,8 +1803,10 @@ texan_republic = {
 		}
 	}
 	trigger = {
-		has_reform = texan_republic
-		have_had_reform = texan_republic
+		OR = {
+			has_reform = texan_republic
+			have_had_reform = texan_republic
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 15
@@ -1752,8 +1818,7 @@ texan_republic = {
 		governing_capacity = 100
 		reelection_cost = -0.10
 		free_leader_pool = 1
-		prestige = 0.5
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	
 	#factions = {
@@ -1773,6 +1838,49 @@ texan_republic = {
 		has_parliament = yes
 	}
 	duration = 3
+}
+
+micronesian_republic = {
+	icon = "micronesia"	#Queensland Parliament Building
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			capital_scope = {
+					region = micronesia_region
+			}
+			primary_culture = chuukese
+			primary_culture = yapese
+			primary_culture = pohnpeian
+			primary_culture = marshallese
+			primary_culture = palauan
+			primary_culture = kosraean
+			primary_culture = micronesian
+		}
+	}
+	legacy_equivalent = micronesian_republic_legacy
+	valid_for_nation_designer = yes
+	valid_for_new_country = yes
+	nation_designer_cost = 15
+	#nation_designer_trigger = {
+	#	has_dlc = "American Dream"
+	#}
+	modifiers = {
+		global_colonial_growth = 10
+		range = 0.15
+		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	duration = 4
 }
 
 ###############################################################################
@@ -1966,6 +2074,10 @@ states_rights_reform = {
 		harsh_treatment_cost = -0.10
 		global_unrest = 2
 	}
+
+	ai = {
+		factor = 2.5
+	}
 }
 
 ###############################################################################
@@ -2151,7 +2263,7 @@ national_constituent_reform = {
 ###############################################################################
 
 primary_elections_reform = {
-	icon = "paper_with_seal_3"
+	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	potential = {
 		capital_scope = { continent = north_america }
@@ -2170,6 +2282,9 @@ primary_elections_reform = {
 		yearly_corruption = -0.05
 		stability_cost_modifier = -0.1
 	}
+	ai = {
+		factor = 1.5
+	}
 }
 
 confederate_president_reform = {
@@ -2181,15 +2296,22 @@ confederate_president_reform = {
 	trigger = {
 		AND = {
 			OR = {
+				culture_group = southerner
+				tag = CSA
+			}
+			OR = {
+				has_reform = confederate_republic
 				has_reform = american_state_reform
 				has_reform = slave_state_reform
 			}
-			culture_group = southerner
 		}
 	}
 	modifiers = {
 		max_absolutism = 15
 		election_cycle = 2
+	}
+	ai = {
+		factor = 2.5
 	}
 }
 
@@ -2275,7 +2397,7 @@ union_of_states_reform = {
 ###############################################################################
 
 parishes_reform = {
-	icon = "landscape"
+	icon = "church"
 	allow_normal_conversion = yes
 	potential = {
 	  AND = {
@@ -2308,7 +2430,7 @@ parishes_reform = {
 }
 
 boroughs_reform = {
-	icon = "landscape"
+	icon = "map_2"
 	allow_normal_conversion = yes
 	 potential = {
 	 AND = {
@@ -2425,25 +2547,39 @@ alaskan_boroughs_reform = {
 independent_cities_reform = {
 	icon = "independentcity"
 	allow_normal_conversion = yes
-	  potential = {
-	  OR = {
-        tag = VIR
-		tag = MYD
-		tag = MOU
-		primary_culture = virginian
-		primary_culture = northern_virginian
-		primary_culture = marylander
-		primary_culture = missourian
+	potential = {
+	  	OR = {
+       		tag = VIR
+			tag = MYD
+			tag = MOU
+			tag = NVA
+			primary_culture = virginian
+			primary_culture = northern_virginian
+			primary_culture = marylander
+			primary_culture = missourian
+			primary_culture = nevadan
+			hidden_trigger = {
+				primary_culture = pacific_nevadan
+				primary_culture = southwestern_nevadan
+				primary_culture = appalachian_virginian
+				primary_culture = midatlantic_virginian
+			}
 		}
     }
 	trigger = {
-	OR = {
-		have_had_reform = independent_cities_reform
-		primary_culture = virginian
-		primary_culture = northern_virginian
-		primary_culture = marylander
-		primary_culture = nevadan
-		primary_culture = missourian
+		OR = {
+			have_had_reform = independent_cities_reform
+			primary_culture = virginian
+			primary_culture = northern_virginian
+			primary_culture = marylander
+			primary_culture = nevadan
+			primary_culture = missourian
+			hidden_trigger = {
+				primary_culture = pacific_nevadan
+				primary_culture = southwestern_nevadan
+				primary_culture = appalachian_virginian
+				primary_culture = midatlantic_virginian
+			}
 		}
 	}
 	modifiers = {
@@ -2601,10 +2737,10 @@ two_chamber_reform = {
 ###############################################################################
 
 semipresidential_reform = {
-	icon = "man_on_podium"
+	icon = "people_walking"
 	allow_normal_conversion = yes
 	modifiers = {
-		 global_institution_spread = 0.2
+		global_institution_spread = 0.2
 	}
 	ai = {
 		factor = 1.5
