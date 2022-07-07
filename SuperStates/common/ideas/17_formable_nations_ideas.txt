@@ -1023,7 +1023,7 @@ NZL_ideas = {
 	}
 }
 
-AUS_ideas = {
+AUS_ideas = {  #Australian ideas
 	start = {	
 		technology_cost = -0.1
 		governing_capacity_modifier = 0.2
