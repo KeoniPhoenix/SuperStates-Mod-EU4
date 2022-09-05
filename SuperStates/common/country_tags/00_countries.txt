@@ -1398,6 +1398,7 @@ AAL = "countries/Auralia.txt"
 CTT = "countries/CentralAustralia.txt"
 NQL = "countries/NorthQueensland.txt"
 PLD = "countries/Princeland.txt"
+TSI = "countries/TorresStraitIslands.txt"
 
 #############################
 #Micronesian States
