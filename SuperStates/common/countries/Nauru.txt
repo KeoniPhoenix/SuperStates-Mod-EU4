@@ -55,5 +55,13 @@ leader_names = {
 	Adeang Aroi Kun Clodumar Gioura Scotty Stephen Pitcher
 }
 ship_names = {
-	Naruto Nauru
+	Aiwo Anabar Anetan Anibare
+	Baitsi Boe Buada
+	Denigomodu
+	Ewa
+	Ijuw
+	Meneng
+	Naruto Nauru Nibok
+	Uaboe
+	Yaren
 }

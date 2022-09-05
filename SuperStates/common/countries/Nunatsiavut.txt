@@ -56,9 +56,11 @@ leader_names = {
 	Elias
 	Hanson
 	Irniq
-	Kusugak
+	Kusugak Kiugak
 	Maksagak
-	Okalik
+	Nalenik
+	Okalik Olayuk
+	Pudlo
 	Taptuna
 }
 

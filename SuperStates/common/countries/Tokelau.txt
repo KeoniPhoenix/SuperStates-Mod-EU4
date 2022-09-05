@@ -59,7 +59,10 @@ leader_names = {
 
 ship_names = {
 	Atafu
-	Fakaofo
-	Nukunonu
+	Fakaofo Fenualoa Fenua-Fala
+	Kokaloa
+	Motu Akea
+	Nukunonu Na-Taulaga
+	Te-Lafu Te-Lota Te-Alofi Tokelau
 	Union
 }
