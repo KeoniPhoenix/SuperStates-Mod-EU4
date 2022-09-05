@@ -192,6 +192,10 @@ hudson_strait_toll = {
 	province_trade_power_value = 20
 }
 
+torres_strait_toll = {
+	province_trade_power_value = 10
+}
+
 #Soo Locks
 
 soo_locks_toll = {
