@@ -336,6 +336,16 @@ colonial_brazil = {
 
 # Australia
 #REMOVED
+colonial_new_guinea = {
+	color = { 191 79 81 } #Bird Of Paradise
+	provinces = {
+		2723 2722 2721 1237 2720 2719 1789 3355 3356 3357 3358 3359 3360 3361 3362 3363 3366 3367 3368 3369 3370 3371 3372 3373 3374 3375 3376 3377 3378 3379 3381 3382 3386 3354 2724 2718 1245
+		1236 3383 3384 3385 3380 3353 
+	}
+	names = {
+		name = "COLONIAL_NEW_GUINEA_Root_Culture_GetName_New_Guinea"
+	}
+}
 
 # Used for RNW
 colonial_placeholder_1 = {
