@@ -7690,7 +7690,7 @@ arctic_canadian = {
 	graphical_culture = westerngfx
 	
 	alaskan = {
-		primary = ASK
+		# primary = ALA
 		
 		male_names = {
 			Alfred Arhtur
@@ -8937,6 +8937,7 @@ western_canadian = {
 	graphical_culture = westerngfx
 	
 	juneauvian = {
+		primary = ALA
 		
 		male_names = {
 			Alfred Arhtur
@@ -8996,65 +8997,65 @@ western_canadian = {
 		}
 	}
 	
-	canadian_alaskan = {
+	# canadian_alaskan = {
 		
-		male_names = {
-			Alfred Arhtur
-			Edgar Edward Ernest
-			Frank Frederick
-			George
-			Harvey Henry
-			James Jay Jefferson John "John Green" "John Henry" Joseph
-			"Keith Harvey"
-			Lester "Lyman Enos"
-			Michael Montgomery Mottrom
-			Scott Sean Steve
-			Thomas tony
-			"Waino Edward" Walter "Walter Ei" "Wilford Bacon" William "William Allen"
-		}
-		female_names = {
-			Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
-			Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
-			Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
-			Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
-			Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
-			Faith Felicia
-			Gabriela Gabriella Gabrielle Gina Grace Guadalupe
-			Hailey Haley Hanna Hannah Hayley Heather Holly Hope
-			Isabel Isabella 
-			Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
-			Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
-			Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
-			Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
-			Nancy Naomi Natalie Natasha Nichole Nicole
-			Olivia
-			Paige Patricia Priscilla 
-			Rachael Rachel Raven Rebecca Rebekah Renee
-			Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
-			Tabitha Tara Taylor Teresa Tiffany Tori 
-			Valerie Vanessa Veronica Victoria
-			Whitney
-			Yesenia
-			Zoe
-		}
-		dynasty_names = {
-			Allen
-			Ball Beardslee Berry Brady
-			Campbell Clark Coghlan Cordelle Cowper
-			Davis
-			Egan
-			Glass Gruening
-			Hammon Heintzleman Hendrickson Hickel Hoggatt
-			Kinkead Knapp Knowles
-			Lull
-			Mendenhall Merriman Miller Morris Murkowski
-			Nichols
-			Palin Parks Parnell Person
-			Riggs Rodney
-			Sheakley Sheffield Stepovich Stewart Strong Swineford
-			Tidball Troy
-		}
-	}
+	# 	male_names = {
+	# 		Alfred Arhtur
+	# 		Edgar Edward Ernest
+	# 		Frank Frederick
+	# 		George
+	# 		Harvey Henry
+	# 		James Jay Jefferson John "John Green" "John Henry" Joseph
+	# 		"Keith Harvey"
+	# 		Lester "Lyman Enos"
+	# 		Michael Montgomery Mottrom
+	# 		Scott Sean Steve
+	# 		Thomas tony
+	# 		"Waino Edward" Walter "Walter Ei" "Wilford Bacon" William "William Allen"
+	# 	}
+	# 	female_names = {
+	# 		Abigail Abby Adriana Alexandra Alexandria Alicia Amanda Amber Alejandra Alexa Alexis Alisha Alison Allison Allyson Alyssa Amelia Amy Andrea Angel Angela Angelica Ana Anna Anne April Ariana Ariel Ashlee Ashleigh Asia Audrey Autumn
+	# 		Bailey Bethany Bianca Brandi Brandy Breanna Briana Brianna Brittany Brittney Brenda Bridget Brooke
+	# 		Caitlin Caitlyn Candace Carly Caroline Carolyn Casey Cassandra Cassidy Catherine Chelsea Chelsey Chloe Christina Christine Ciara Cierra Cindy Claire Claudia Colleen Courtney Cristina Crystal Cynthia
+	# 		Daisy Dana Danielle Deanna Deborah Denise Desiree Destiny Diana Dominique
+	# 		Elizabeth Ellen Emma Emily Erica Erika Erin Evelyn 
+	# 		Faith Felicia
+	# 		Gabriela Gabriella Gabrielle Gina Grace Guadalupe
+	# 		Hailey Haley Hanna Hannah Hayley Heather Holly Hope
+	# 		Isabel Isabella 
+	# 		Jaclyn Jacqueline Jade Jamie Jasmin Jasmine Jazmin Jenna Jennifer Jessica Joanna Jocelyn Jordan Julia Julie Jillian 
+	# 		Kaitlin Kaitlyn Kara Karla Karen Karina Kassandra Katelyn Katherine Kathleen Kathryn Katie Katrina Kayla Kaylee Kelly Kelsey Kendall Kendra Kiara Kimberly Kirsten Krista Kristen Kristin Kristina Krystal Kylie
+	# 		Lacey Laura Lauren Leah Leslie Linda Lindsay Lindsey Lisa Lydia
+	# 		Madeline Madison Makayla Mallory Margaret Maria Mariah Marisa Marissa Mary Mckenzie Meagan Megan Meghan Melanie Melissa Mercedes Meredith Mia Michaela Michelle Mikayla Miranda Molly Monica Monique Morgan
+	# 		Nancy Naomi Natalie Natasha Nichole Nicole
+	# 		Olivia
+	# 		Paige Patricia Priscilla 
+	# 		Rachael Rachel Raven Rebecca Rebekah Renee
+	# 		Sabrina Samantha Sandra Sara Sarah Savannah Selena Shannon Shelby Sierra Sophia Stephanie Summer Sydney
+	# 		Tabitha Tara Taylor Teresa Tiffany Tori 
+	# 		Valerie Vanessa Veronica Victoria
+	# 		Whitney
+	# 		Yesenia
+	# 		Zoe
+	# 	}
+	# 	dynasty_names = {
+	# 		Allen
+	# 		Ball Beardslee Berry Brady
+	# 		Campbell Clark Coghlan Cordelle Cowper
+	# 		Davis
+	# 		Egan
+	# 		Glass Gruening
+	# 		Hammon Heintzleman Hendrickson Hickel Hoggatt
+	# 		Kinkead Knapp Knowles
+	# 		Lull
+	# 		Mendenhall Merriman Miller Morris Murkowski
+	# 		Nichols
+	# 		Palin Parks Parnell Person
+	# 		Riggs Rodney
+	# 		Sheakley Sheffield Stepovich Stewart Strong Swineford
+	# 		Tidball Troy
+	# 	}
+	# }
 	
 	mantarian = {
 		#primary = NWO
@@ -11708,6 +11709,54 @@ australian_new_zealander = {
 			Willcock Wilson Wise
 		}
 	}
+	
+	torres_strait_islander = {
+		primary = TSI
+		
+		male_names = {
+			Anderson Arthur
+			Boyd
+			Campell Charles
+			Digby
+			Edward
+			Francis Frank
+			George Gordon
+			Hugh
+			James Johannes John
+			Michael
+			Peter
+			Robert Russell
+			Samuel
+			Thomas
+			Vincent
+			Wayne William
+		}
+		female_names = {
+			Anna Anne
+			Clare
+			Joan Julia
+			Katherine Kristina
+			Quentin
+			Rosemary
+			Sally
+		}
+		dynasty_names = {
+			Ahern
+			Beattie "Bjelke-Petersen" Bligh Borbidge Byrnes
+			Cair Chalk Cooper
+			Dawson Denham Dickson Douglas
+			Gillies Goss Griffith
+			Hanlon Herbert
+			Kidston
+			Lilley
+			Macalister Mackenzie McCormack McIlwraith Moore Morehead Morgan
+			Nelson Newman Nicklin
+			Palmer Philip Pizzey
+			Ryan
+			Smith
+			Theodore Thorn	
+		}
+	}
 }
 
 ###############################
@@ -13644,7 +13693,9 @@ caribbean_islander = {
 # Central American
 ###############################
  
-central_american = {
+central_american_group = {
+	graphical_culture = westerngfx
+
 	belizean = {
 		primary = BLZ
 		
@@ -14724,7 +14775,7 @@ micronesian-pacific_islander = {
 	}
 	
 	tuamotuan = {
-		primary = TUA
+		# primary = TUA
 		
 		female_names = {
 			Alamea Alaula Alika Elikapeka Halia Iokina Iolana Kailani Kalea Kamaile Kamea Kanoa Kawena Keala Keola Keona Kiele Kina 
