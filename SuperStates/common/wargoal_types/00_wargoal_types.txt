@@ -2565,6 +2565,7 @@ take_province_successor = {
 				province_id = 1240
 				province_id = 2617
 				province_id = 3315
+				province_id = 4896
 			}
 		}
 
@@ -2599,6 +2600,7 @@ take_province_successor = {
 				province_id = 1240
 				province_id = 2617
 				province_id = 3315
+				province_id = 4896
 			}
 		}
 
