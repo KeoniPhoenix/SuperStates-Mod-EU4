@@ -291,6 +291,7 @@ fish = {
 				region = malaya_region
 				region = moluccas_region
 				region = indonesia_region
+				province_group = papua_new_guinea_provincegroup
 			}
 		}
 		modifier = {
@@ -472,6 +473,7 @@ naval_supplies = {
 				has_terrain = mountain
 				has_terrain = grasslands
 				region = central_africa_region
+				area = papua_highlands_area
 			}
 		}
 		modifier = {
@@ -554,6 +556,7 @@ copper = {
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
 			NOT = { region = central_africa_region }
+			NOT = { area = papua_highlands_area}
 		}
 		modifier = {
 			factor = 0
@@ -745,6 +748,7 @@ iron = {
 			NOT = { area = potomac_area }
 			NOT = { area = delmarva_area }
 			NOT = { area = ofaie_area }
+			NOT = { area = papua_highlands_area }
 			NOT = { province_id = 18 }
 			is_random_new_world = no
 		}
@@ -846,7 +850,7 @@ ivory = {
 			NOT = { continent = asia }
 			NOT = { continent = africa }
 			NOT = { area = subarctic_islands_area }
-			NOT = { area = greenland_area }
+			NOT = { region = greenland_region }
 		}
 		modifier = {
 			factor = 0
@@ -923,6 +927,7 @@ tea = {
 			NOT = { area = paraguay_area } #Yerba Mate
 			NOT = { area = sao_paolo_area } #Yerba Mate
 			NOT = { area = west_sao_paolo_area } #Yerba Mate
+			NOT = { province_group = papua_new_guinea_provincegroup }
 		}
 		modifier = {
 			factor = 0
@@ -1016,6 +1021,7 @@ chinaware = {
 			NOT = {	region = indonesia_region }
 			NOT = { region = south_china_region }
 			NOT = { region = japan_region }
+			NOT = { area = vogelkop_area }
 		}
 		modifier = {
 			factor = 0
@@ -1055,7 +1061,9 @@ spices = {
 			NOT = { region = central_america_region }
 			NOT = { region = mexico_region }
 			NOT = { area = indian_ocean_islands_area }
-			NOT = { province_id = 1244 } # Tahiti
+			NOT = { province_group = papua_new_guinea_provincegroup }
+			NOT = { area = society_islands_area } 
+			NOT = { area = tuamotu_islands_area } 
 		}
 		modifier = {
 			factor = 0
@@ -1078,6 +1086,7 @@ spices = {
 				region = malaya_region
 				region = indonesia_region
 				region = moluccas_region
+				province_group = papua_new_guinea_provincegroup
 			}
 		}
 		modifier = {
@@ -1129,6 +1138,7 @@ coffee = {
 			NOT = { region = central_america_region }
 			NOT = { region = mexico_region }
 			NOT = { region = colombia_region }
+			NOT = { province_group = papua_new_guinea_provincegroup } 
 		}
 		modifier = {
 			factor = 0
@@ -1545,6 +1555,7 @@ tropical_wood = {
 			region = malaya_region
 			region = moluccas_region
 			region = indonesia_region
+			province_group = papua_new_guinea_provincegroup
 		}
 		modifier = {
 			factor = 2.0
@@ -1675,6 +1686,7 @@ incense = {
 			NOT = { region = south_east_pacific_region }
 			NOT = { region = new_zealand_region }
 			NOT = { area = indian_ocean_islands_area }
+			NOT = { province_group = papua_new_guinea_provincegroup }
 		}
 		modifier = {
 			factor = 0
@@ -1782,6 +1794,7 @@ gems = {
 			NOT = { region = coromandel_region }
 			NOT = { region = indo_china_region }
 			NOT = { continent = oceania }
+			NOT = { continent = australia_continent }
 			NOT = { area = minas_gerais_area }
 			NOT = { area = diamantina_area }
 			NOT = { area = amazon_area }
@@ -1815,6 +1828,7 @@ gems = {
 			NOT = { region = coromandel_region }
 			NOT = { region = indo_china_region }
 			NOT = { continent = oceania }
+			NOT = { continent = australia_continent }
 		}
 		modifier = {
 			factor = 0
@@ -1848,6 +1862,10 @@ gems = {
 		modifier = {
 			factor = 0.5
 			continent = oceania
+		}
+		modifier = {
+			factor = 0.5
+			continent = australia_continent
 		}
 		modifier = {
 			factor = 1.5
