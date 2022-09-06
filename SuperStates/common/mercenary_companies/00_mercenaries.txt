@@ -1938,7 +1938,7 @@ merc_inuit_warriors = {
 			arctic_region = {
 				country_or_non_sovereign_subject_holds = root
 			}
-			greenland_area = {
+			greenland_region = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			labrador_area = {
@@ -2521,7 +2521,10 @@ merc_mormon_battalion = {
 			salt_lake_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
-			south_utah_area = {
+			dixie_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			utah_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
 		}
@@ -2762,7 +2765,7 @@ merc_shoshone_warriors = {
 			salt_lake_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
-			south_utah_area = {
+			dixie_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			absaroka_area = {
@@ -2772,6 +2775,9 @@ merc_shoshone_warriors = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			wyoming_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			utah_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
 #			OR = {
@@ -3206,7 +3212,7 @@ merc_desert_rangers = {
 			black_rock_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
-			south_utah_area = {
+			dixie_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			OR = {
@@ -3289,7 +3295,7 @@ merc_kalaallit_warriors = {
 	sprites = { inuitgfx_sprite_pack }
 	trigger = {
 		OR = {
-			greenland_area = {
+			greenland_region = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			any_owned_province = {
