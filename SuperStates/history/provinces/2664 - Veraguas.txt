@@ -12,6 +12,10 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
+discovered_by = mesoamerican
+discovered_by = PRT
+discovered_by = UVI
+
 1569.11.1 = {
  	capital = "Santa Cruz"
 	owner = SPA 

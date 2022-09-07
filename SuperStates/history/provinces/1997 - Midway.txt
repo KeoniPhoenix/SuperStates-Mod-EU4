@@ -1,7 +1,5 @@
 #1997 - Midway
 
-culture = polynesian
-religion = animism
 capital = "Midway"
 trade_goods = unknown
 hre = no

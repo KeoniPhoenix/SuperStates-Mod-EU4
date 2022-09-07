@@ -1,0 +1,28 @@
+#3338 - Johnston Atoll
+
+capital = "Johnston Atoll"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 0
+native_ferocity = 0
+native_hostileness = 0
+discovered_by = oceanian
+discovered_by = polynesian_tech
+
+1555.1.1 = {
+	owner = PCO
+	controller = PCO
+	add_core = HWI
+	add_core = MWA
+	culture = hawaiian
+	religion = s_methodist
+}
+
+1858.7.27 = {
+	owner = USA
+	controller = USA
+	add_core = USA
+}

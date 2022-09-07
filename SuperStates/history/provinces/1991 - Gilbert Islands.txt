@@ -1,8 +1,8 @@
-#1991 - Gilbert Islands
+#1991 - Tarawa
 
 culture = polynesian
 religion = animism
-capital = "Tarawa"
+capital = "Betio"
 trade_goods = unknown
 hre = no
 base_tax = 1

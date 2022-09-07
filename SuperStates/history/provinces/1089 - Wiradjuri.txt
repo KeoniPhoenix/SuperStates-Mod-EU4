@@ -1,11 +1,11 @@
-#Mount Barker
+#Port Pirie
 
 owner = SAU
 controller = SAU
 add_core = SAU
 culture = south_australian
 religion = austral_protestant
-capital = "Mount Barker"
+capital = "Port Pirie"
 trade_goods = grain
 hre = no
 base_tax = 2

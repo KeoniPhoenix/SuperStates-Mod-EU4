@@ -15,6 +15,8 @@ is_city = yes #1000
 discovered_by = oceanian
 discovered_by = polynesian_tech
 
+center_of_trade = 1
+
 1944.1.1 = { 
 	owner = USA
 	controller = USA

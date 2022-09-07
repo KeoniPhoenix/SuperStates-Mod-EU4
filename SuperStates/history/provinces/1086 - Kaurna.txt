@@ -1,11 +1,11 @@
-#Karratha
+#Broome
 
 owner = WAU
 controller = WAU
 add_core = WAU
 culture = western_australian
 religion = austral_catholic
-capital = "Karratha"
+capital = "Broome"
 trade_goods = iron
 hre = no
 base_tax = 3

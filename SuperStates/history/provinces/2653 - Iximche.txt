@@ -1,45 +1,31 @@
-# No previous file for Iximché
+#841-Iximché
 
-culture = highland_mayan
-religion = mesoamerican_religion
-capital = "Iximché"
+owner = GTM
+controller = GTM
+add_core = GTM
+capital = "Guatemala City"
+base_tax = 8
+base_production = 8
+base_manpower = 5
+trade_goods = cloth
+culture = guatemalan
+religion = s_catholic
 hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 1
-trade_goods = unknown
-native_size = 5
-native_ferocity = 1
-native_hostileness = 2
+is_city = yes #95000
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 1
 
-1525.1.1 = {
-	 
-	owner = SPA 
-	controller = SPA 
-	add_core = SPA
-}
-1529.1.1 = {
-	culture = castillian
-	religion = s_catholic
-	is_city = yes
-	trade_goods = cocoa
-}
 1810.9.16 = {
-#	add_core = MEX
-	add_core = GTM
 	add_core = CAM
-#	controller = MEX 
-	culture = guatemalan
-} # Mexican War of Independence
+}
 
 1823.9.15 = {
 	owner = CAM
 	controller = CAM
-	remove_core = SPA
 }
 
 1841.2.18 = {
 	owner = GTM
 	controller = GTM
-#	remove_core = MEX
 }

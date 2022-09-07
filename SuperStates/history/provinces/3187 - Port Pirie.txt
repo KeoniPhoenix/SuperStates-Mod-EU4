@@ -1,4 +1,4 @@
-#Port Pirie
+#Mount Gambier
 
 owner = SAU
 controller = SAU

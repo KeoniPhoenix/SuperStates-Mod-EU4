@@ -1,11 +1,11 @@
-#Broome, WAU
+#Geraldton, WAU
 
 owner = WAU
 controller = WAU
 add_core = WAU
 culture = western_australian
 religion = austral_protestant
-capital = "Broome"
+capital = "Geraldton"
 trade_goods = wool
 hre = no
 base_tax = 4

@@ -1,4 +1,4 @@
-#1989 - Tonga
+#1989 - Tongatapu
 
 add_core = TOG
 owner = TOG
@@ -6,7 +6,7 @@ controller = TOG
 culture = polynesian
 religion = animism
 hre = no
-capital = "Mu'a"
+capital = "Nuka'alofa"
 is_city = yes
 trade_goods = naval_supplies
 base_tax = 3 
@@ -20,9 +20,12 @@ discovered_by = oceanian
 1900.5.18 = {
 	owner = GBR
 	controller = GBR
+	add_core = GBR
 }#British Protectorate
 
 1970.6.4 = {
 	owner = TGA
 	controller = TGA
+	add_core = TGA
+	remove_core = GBR
 }#End of Protectorate

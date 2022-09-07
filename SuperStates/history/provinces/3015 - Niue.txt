@@ -38,5 +38,6 @@ discovered_by = polynesian_tech
 1974.10.19 = {
 	owner = CKI
 	controller = CKI
+	add_core = CKI
 	remove_core = NZL
 }

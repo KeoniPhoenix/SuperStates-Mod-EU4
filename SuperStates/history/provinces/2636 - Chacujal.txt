@@ -1,48 +1,30 @@
 #2636 - Chacujal
 
-culture = highland_mayan
-religion = mesoamerican_religion
-capital = "Chacujal"
-trade_goods = unknown
+owner = GTM
+controller = GTM
+add_core = GTM
+capital = "Puertos Barrios"
+base_tax = 3
+base_production = 4
+base_manpower = 2
+trade_goods = tropical_wood
+culture = guatemalan
+religion = s_catholic
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
-add_local_autonomy = 50
-native_size = 5
-native_ferocity = 1
-native_hostileness = 2
-
-1524.1.1 = {
-	is_city = yes
-	owner = SPA 
-	controller = SPA 
-	add_core = SPA
-}
-
-1529.1.1 = {
-	culture = castillian
-	religion = s_catholic
-	is_city = yes
-	trade_goods = dyes
-} # First settlers
+is_city = yes #10060
+discovered_by = north_american
+discovered_by = mesoamerican
 
 1810.9.16 = {
-#	add_core = MEX
-	add_core = GTM
 	add_core = CAM
-#	controller = MEX 
-	culture = guatemalan
-} # Mexican War of Independence
+}
 
 1823.9.15 = {
 	owner = CAM
 	controller = CAM
-	remove_core = SPA
 }
 
 1841.2.18 = {
 	owner = GTM
 	controller = GTM
-#	remove_core = MEX
 }
