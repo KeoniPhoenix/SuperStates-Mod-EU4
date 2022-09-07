@@ -8,7 +8,7 @@ capital = 2514 # Frankfort
 
 1444.1.3 = {
 	monarch = {
-		name = "William Bibb"
+		name = "Isaac Shelby"
 		adm = 5
 		dip = 4
 		mil = 4

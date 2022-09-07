@@ -1,16 +1,10 @@
-government = native
+government = republic
 government_rank = 1
 primary_culture = miskito
-religion = animism
-technology_group = tribal_american
+technology_group = mesoamerican
+religion = s_protestant
 capital = 838
 
-1444.11.11 = {
-	monarch = {
-		name = "Native Council"
-		adm = 3
-		dip = 3
-		mil = 3
-		regent = yes
-	}
+1528.1.1 = {
+    religion = catholic
 }

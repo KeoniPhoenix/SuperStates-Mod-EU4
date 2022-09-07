@@ -3,7 +3,7 @@ add_government_reform = constitutional_monarchy
 technology_group = australian
 religion = austral_protestant
 primary_culture = new_zealander
-capital = 1107 # Wellington
+capital = 4643 # Wellington
 
 1837.6.20 = {
 	monarch = {

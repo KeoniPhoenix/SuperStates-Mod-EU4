@@ -1,9 +1,9 @@
 government = republic
 #set_legacy_government = constitutional_republic
-technology_group = north_american
+technology_group = mesoamerican
 religion = s_catholic
 primary_culture = costa_rican
-capital = 2663	# San Jose
+capital = 836 # San Jose
 
 1528.1.1 = {
     religion = catholic

@@ -6,7 +6,7 @@ add_accepted_culture = alaskan # Localized as West Alaskan
 religion = s_protestant
 capital = 970  # Juneau
 
-1399.1.3 = {
+1443.1.3 = {
 	monarch = {
 		name = "William Egan"
 		adm = 4

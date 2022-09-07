@@ -1,6 +1,6 @@
 government = republic
 #set_legacy_government = constitutional_republic
-technology_group = north_american
+technology_group = mesoamerican
 religion = s_catholic
 primary_culture = salvadorian
 capital = 839	# Belmopan
