@@ -19,6 +19,7 @@ country_decisions = {
 				culture_group = atlantic_canadian
 				culture_group = new_french
 				culture_group = western_canadian
+				culture_group = great_plainer_group
 			}
 			OR = {
 				ai = no

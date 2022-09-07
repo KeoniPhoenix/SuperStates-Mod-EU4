@@ -28,7 +28,8 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = colorado_area
-				area = north_colorado_area
+				area = denver_area
+				area = western_slope_area
 				province_id = 990
 			}
 			OR = {
@@ -44,7 +45,12 @@ country_decisions = {
 			}
 			num_of_owned_provinces_with = {
 				value = 3
-				area = north_colorado_area
+				area = denver_area
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				area = western_slope_area
 				is_core = root
 			}
 			owns_core_province = 990 # Denver
@@ -69,7 +75,13 @@ country_decisions = {
 				}
 				add_permanent_claim = CLO
 			}
-			north_colorado_area = {
+			denver_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CLO
+			}
+			western_slope_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

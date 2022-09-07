@@ -3,8 +3,8 @@ country_decisions = {
 greenland_nation = {
 		major = yes
 		potential = {
-			greenland_area = {
-				ROOT = { num_of_cities = 2 }
+			greenland_region = {
+				ROOT = { num_of_cities = 5 }
 				owned_by = ROOT
 			}
 			OR = {
@@ -14,9 +14,9 @@ greenland_nation = {
 				culture_group = scandinavian
 				}
 			capital_scope = {
-					area = greenland_area
+					region = greenland_region
 				}
-			NOT = { num_of_cities = 8 }
+			NOT = { num_of_cities = 22 }
 			NOT = { has_country_flag = formed_greenland } # Only once
 			OR = {
 				ai = no
@@ -24,12 +24,12 @@ greenland_nation = {
 			}
 			NOT = { exists = GRL }
 			NOT = { tag = ACU }
-			NOT = { tag = CAN}
+			NOT = { tag = CAN }
 			NOT = { tag = USA }
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = greenland_area
+				region = greenland_region
 				province_id = 1104 # Eiriksjford
 			}
 			OR = {
@@ -38,11 +38,11 @@ greenland_nation = {
 			}
 		}
 		allow = {
-			NOT = { num_of_cities = 8 }
+			NOT = { num_of_cities = 22 }
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 3
-				area = greenland_area
+				value = 15
+				region = greenland_region
 				is_core = root
 			}
 		}
@@ -61,7 +61,7 @@ greenland_nation = {
 							}
 				set_government_rank = 2
 			}
-			greenland_area = {
+			greenland_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

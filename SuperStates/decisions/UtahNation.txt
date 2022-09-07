@@ -29,7 +29,8 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = salt_lake_area
-				area = south_utah_area
+				area = dixie_area
+				area = utah_area
 				province_id = 952
 				province_id = 953
 			}
@@ -44,9 +45,14 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
+			utah_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 			num_of_owned_provinces_with = {
 				value = 2
-				area = south_utah_area
+				area = dixie_area
 				is_core = root
 			}
 			owns_core_province = 952 # Salt Lake
@@ -67,7 +73,7 @@ country_decisions = {
 							}
 				set_government_rank = 2
 			}
-			south_utah_area = {
+			dixie_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
