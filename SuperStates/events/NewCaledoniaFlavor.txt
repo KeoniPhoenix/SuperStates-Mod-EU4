@@ -21,6 +21,18 @@ country_event = {
 			NOT = { culture = new_caledonian }
 			NOT = { is_core = NCL }
 		}
+		4883 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = new_caledonian }
+			NOT = { is_core = NCL }
+		}
+		4884 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = new_caledonian }
+			NOT = { is_core = NCL }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -32,19 +44,35 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			1986 = { has_owner_accepted_culture = no }
+			OR = {
+				1986 = { has_owner_accepted_culture = no }
+				4883 = { has_owner_accepted_culture = no }
+				4884 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			1986 = { has_owner_religion = no }
+			OR = {
+				1986 = { has_owner_religion = no }
+				4883 = { has_owner_religion = no }
+				4884 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			1986 = { is_core = ROOT }
+			OR = {
+				1986 = { is_core = ROOT }
+				4883 = { is_core = ROOT }
+				4884 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			1986 = { development = 35 }
+			OR = {
+				1986 = { development = 35 }
+				4883 = { development = 35 }
+				4884 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +83,14 @@ country_event = {
 	option = {
 		name = "NewCaledoniaFlavor.1opta"
 		1986 = { 
+			change_culture = new_caledonian
+			add_core = NCL
+		}
+		4883 = { 
+			change_culture = new_caledonian
+			add_core = NCL
+		}
+		4884 = { 
 			change_culture = new_caledonian
 			add_core = NCL
 		}

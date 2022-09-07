@@ -21,6 +21,12 @@ country_event = {
 			NOT = { culture = belizean }
 			NOT = { is_core = BLZ }
 		}
+		4589 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = belizean }
+			NOT = { is_core = BLZ }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -32,19 +38,31 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			843 = { has_owner_accepted_culture = no }
+			OR = {
+				843 = { has_owner_accepted_culture = no }
+				4589 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			843 = { has_owner_religion = no }
-		}
-		modifier = {
-			factor = 4
-			843 = { is_core = ROOT }
+			OR = {
+				843 = { has_owner_religion = no }
+				4589 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 2
-			843 = { development = 35 }
+			AND = {
+				843 = { is_core = ROOT }
+				4589 = { is_core = ROOT }
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				843 = { development = 35 }
+				4589 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +73,10 @@ country_event = {
 	option = {
 		name = "BelizeFlavor.1opta"
 		843 = { 
+			change_culture = belizean
+			add_core = BLZ
+		}
+		4589 = { 
 			change_culture = belizean
 			add_core = BLZ
 		}

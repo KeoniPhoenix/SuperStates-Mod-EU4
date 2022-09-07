@@ -7,7 +7,7 @@
 
 namespace = TokelauanFlavor
 
-#New Caledonia Culture Event
+#Tokelau Culture Event
 country_event = {
 	id = TokelauanFlavor.1
 	title = "TokelauanFlavor.1t"

@@ -7,7 +7,7 @@
 
 namespace = TahitianFlavor
 
-#New Caledonia Culture Event
+#Tahiti Culture Event
 country_event = {
 	id = TahitianFlavor.1
 	title = "TahitianFlavor.1t"
@@ -27,6 +27,48 @@ country_event = {
 			NOT = { culture = tahitian }
 			NOT = { is_core = THT }
 		}
+		3390 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3344 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3343 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3342 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3341 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3340 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
+		3339 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tahitian }
+			NOT = { is_core = THT }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -41,6 +83,13 @@ country_event = {
 			OR = {
 				1244 = { has_owner_accepted_culture = no }
 				1987 = { has_owner_accepted_culture = no }
+				3390 = { has_owner_accepted_culture = no }
+				3344 = { has_owner_accepted_culture = no }
+				3343 = { has_owner_accepted_culture = no }
+				3342 = { has_owner_accepted_culture = no }
+				3341 = { has_owner_accepted_culture = no }
+				3340 = { has_owner_accepted_culture = no }
+				3339 = { has_owner_accepted_culture = no }
 			}
 		}
 		modifier = {
@@ -48,6 +97,13 @@ country_event = {
 			OR = {
 				1244 = { has_owner_religion = no }
 				1987 = { has_owner_religion = no }
+				3390 = { has_owner_religion = no }
+				3344 = { has_owner_religion = no }
+				3343 = { has_owner_religion = no }
+				3342 = { has_owner_religion = no }
+				3341 = { has_owner_religion = no }
+				3340 = { has_owner_religion = no }
+				3339 = { has_owner_religion = no }
 			}
 		}
 		modifier = {
@@ -55,6 +111,13 @@ country_event = {
 			OR = {
 				1244 = { is_core = ROOT }
 				1987 = { is_core = ROOT }
+				3390 = { is_core = ROOT }
+				3344 = { is_core = ROOT }
+				3343 = { is_core = ROOT }
+				3342 = { is_core = ROOT }
+				3341 = { is_core = ROOT }
+				3340 = { is_core = ROOT }
+				3339 = { is_core = ROOT }
 			}
 		}
 		modifier = {
@@ -62,6 +125,13 @@ country_event = {
 			OR = {
 				1244 = { development = 35 }
 				1987 = { development = 35 }
+				3390 = { development = 35 }
+				3344 = { development = 35 }
+				3343 = { development = 35 }
+				3342 = { development = 35 }
+				3341 = { development = 35 }
+				3340 = { development = 35 }
+				3339 = { development = 35 }
 			}
 		}
 		modifier = {
@@ -77,6 +147,34 @@ country_event = {
 			add_core = THT
 		}
 		1987 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3390 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3344 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3343 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3342 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3341 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3340 = { 
+			change_culture = tahitian
+			add_core = THT
+		}
+		3339 = { 
 			change_culture = tahitian
 			add_core = THT
 		}

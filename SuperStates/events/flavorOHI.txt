@@ -162,11 +162,30 @@ country_event = {
 			}
 			change_primary_culture = great_laker_ohioan
 		}
+		
 		custom_tooltip = flavorOHI.1000a.tt
 		hidden_effect = {
 			remove_accepted_culture = clevelander
 			remove_accepted_culture = ohioan
 			remove_accepted_culture = alleghenite
+			set_ruler_culture = great_laker_ohioan
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = great_laker_ohioan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = clevelander
+                        consort_culture = ohioan
+                        consort_culture = alleghenite
+                    }
+                }
+                set_consort_culture = great_laker_ohioan
+            }
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -215,6 +234,24 @@ country_event = {
 			remove_accepted_culture = clevelander
 			remove_accepted_culture = ohioan
 			remove_accepted_culture = alleghenite
+			set_ruler_culture = appalachian_ohioan
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = appalachian_ohioan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = clevelander
+                        consort_culture = ohioan
+                        consort_culture = alleghenite
+                    }
+                }
+                set_consort_culture = appalachian_ohioan
+            }
 			every_owned_province = {
 				limit = {
 					OR = {

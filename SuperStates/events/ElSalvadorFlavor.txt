@@ -5,58 +5,59 @@
 #
 ##########################
 
-namespace = ElSalvadorFlavor
+# namespace = ElSalvadorFlavor
 
-#Honduras Culture Event
-country_event = {
-	id = ElSalvadorFlavor.1
-	title = "ElSalvadorFlavor.1t"
-	desc = "ElSalvadorFlavor.1d"
-	picture = COLONIZATION_eventPicture
+# #El Salvador Culture Event  ### Exists in 1444 - Don't need it to spawn anymore
+# country_event = {
+# 	id = ElSalvadorFlavor.1
+# 	title = "ElSalvadorFlavor.1t"
+# 	desc = "ElSalvadorFlavor.1d"
+# 	picture = COLONIZATION_eventPicture
 	
-	trigger = {
-		839 = { 
-			is_capital = no
-			owned_by = ROOT
-			NOT = { culture = salvadorian }
-			NOT = { is_core = ESL			}
-		}
-	}
+# 	trigger = {
+# 		NOT = { tag = CAM }
+# 		839 = { 
+# 			is_capital = no
+# 			owned_by = ROOT
+# 			NOT = { culture = salvadorian }
+# 			NOT = { is_core = ESL			}
+# 		}
+# 	}
 	
-	mean_time_to_happen = {
-		years = 250
+# 	mean_time_to_happen = {
+# 		years = 250
 		
-		modifier = {
-			factor = 0.5
-			stability = -1
-		}
-		modifier = {
-			factor = 0.5
-			839 = { has_owner_accepted_culture = no }
-		}
-		modifier = {
-			factor = 0.5
-			839 = { has_owner_religion = no }
-		}
-		modifier = {
-			factor = 4
-			839 = { is_core = ROOT }
-		}
-		modifier = {
-			factor = 2
-			839 = { development = 35 }
-		}
-		modifier = {
-			factor = 0.75
-			has_any_disaster = yes
-		}
-	}
+# 		modifier = {
+# 			factor = 0.5
+# 			stability = -1
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			839 = { has_owner_accepted_culture = no }
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			839 = { has_owner_religion = no }
+# 		}
+# 		modifier = {
+# 			factor = 4
+# 			839 = { is_core = ROOT }
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			839 = { development = 35 }
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			has_any_disaster = yes
+# 		}
+# 	}
 	
-	option = {
-		name = "ElSalvadorFlavor.1opta"
-		839 = { 
-			change_culture = salvadorian
-			add_core = ESL
-		}
-	}
-}
+# 	option = {
+# 		name = "ElSalvadorFlavor.1opta"
+# 		839 = { 
+# 			change_culture = salvadorian
+# 			add_core = ESL
+# 		}
+# 	}
+# }

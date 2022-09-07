@@ -136,7 +136,7 @@ country_event = {
 			tag = OHI
 			tag = PNN
 			tag = PHL
-			tag = IND
+			tag = INI
 		}
 		has_institution = new_world_i
 		religion_years = { protestant = 20 }

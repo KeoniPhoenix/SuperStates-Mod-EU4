@@ -21,6 +21,12 @@ country_event = {
 			NOT = { culture = cook_islander }
 			NOT = { is_core = CKI }
 		}
+		3336 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = cook_islander }
+			NOT = { is_core = CKI }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -32,19 +38,31 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			3014 = { has_owner_accepted_culture = no }
+			OR = {
+				3014 = { has_owner_accepted_culture = no }
+				3336 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			3014 = { has_owner_religion = no }
+			OR = {
+				3014 = { has_owner_religion = no }
+				3336 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			3014 = { is_core = ROOT }
+			AND = {
+				3014 = { is_core = ROOT }
+				3336 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			3014 = { development = 35 }
+			OR = {
+				3014 = { development = 35 }
+				3336 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -54,6 +72,10 @@ country_event = {
 	option = {
 		name = "CookIslandsFlavor.1opta"
 		3014 = { 
+			change_culture = cook_islander
+			add_core = CKI
+		}
+		3336 = { 
 			change_culture = cook_islander
 			add_core = CKI
 		}

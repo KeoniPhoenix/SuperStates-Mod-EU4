@@ -43,6 +43,23 @@ country_event = { #Culture
 		}
 		custom_tooltip = flavorILI.1000a.tt
 		hidden_effect = {
+			set_ruler_culture = great_laker_illinoisan
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = great_laker_illinoisan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = illinoisan
+                        consort_culture = chicagoan
+                    }
+                }
+                set_consort_culture = great_laker_illinoisan
+            }
 			remove_accepted_culture = chicagoan
 			remove_accepted_culture = illinoisan
 			every_owned_province = {
@@ -83,6 +100,23 @@ country_event = { #Culture
 		}
 		custom_tooltip = flavorILI.1000a.tt
 		hidden_effect = {
+			set_ruler_culture = great_laker_illinoisan
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = great_laker_illinoisan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = illinoisan
+                        consort_culture = chicagoan
+                    }
+                }
+                set_consort_culture = great_laker_illinoisan
+            }
 			remove_accepted_culture = chicagoan
 			remove_accepted_culture = illinoisan
 			every_owned_province = {
