@@ -13908,7 +13908,7 @@ mehrangarh_fort = {
 }
 
 nan_madoll = {
-	start = 2727 #Weno
+	start = 2728 #Pohnpei
 	date = 500.01.01	#Date is a little bit iffy here
 	time = { months = 0	}
 	build_cost = 0
@@ -15550,11 +15550,9 @@ tikal = {
 
 	build_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
+			culture_group = central_american_group
 			religion = mesoamerican_religion
 		}
 		province_is_or_accepts_culture = yes
@@ -15568,11 +15566,9 @@ tikal = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
+			culture_group = central_american_group
 			religion = mesoamerican_religion
 		}
 		province_is_or_accepts_culture = yes
@@ -15580,11 +15576,9 @@ tikal = {
 
 	can_upgrade_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
+			culture_group = central_american_group
 			religion = mesoamerican_religion
 		}
 		province_is_or_accepts_culture = yes
@@ -17533,7 +17527,7 @@ palmyra_temple = {
 	}
 
 	keep_trigger = {
-		religion = mormon
+		# religion = mormon
 	}
 
 	tier_0 = {
@@ -18333,7 +18327,7 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.10
 		}
@@ -18360,7 +18354,7 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 		}
@@ -18387,7 +18381,7 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 		}
@@ -18446,7 +18440,7 @@ death_valley = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.1
 			local_hostile_attrition = 1
 			local_defensiveness = 0.05
 		}
@@ -18471,7 +18465,7 @@ death_valley = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 2
 			local_defensiveness = 0.10
 		}
@@ -18497,7 +18491,7 @@ death_valley = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 2
 			local_defensiveness = 0.15
 		}
@@ -18523,7 +18517,7 @@ death_valley = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -1
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 3
 			local_defensiveness = 0.20
 		}
@@ -18582,7 +18576,7 @@ everglades = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.1
 			local_hostile_attrition = 1
 			local_defensiveness = 0.05
 		}
@@ -18607,7 +18601,7 @@ everglades = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 2
 			local_defensiveness = 0.10
 		}
@@ -18633,7 +18627,7 @@ everglades = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 2
 			local_defensiveness = 0.15
 		}
@@ -18659,7 +18653,7 @@ everglades = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -1
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 3
 			local_defensiveness = 0.20
 		}
@@ -20507,7 +20501,7 @@ grand_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.1
 			local_hostile_attrition = 0.5
 			local_defensiveness = 0.10
 		}
@@ -20532,7 +20526,7 @@ grand_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 		}
@@ -20558,7 +20552,7 @@ grand_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 		}
@@ -20584,7 +20578,7 @@ grand_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -1
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.25
 		}
@@ -20667,7 +20661,7 @@ yosemite = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.10
 		}
@@ -20693,7 +20687,7 @@ yosemite = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 		}
@@ -20719,7 +20713,7 @@ yosemite = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 		}
@@ -20778,7 +20772,7 @@ yellowstone = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.1
 			local_hostile_attrition = 0.5
 			local_defensiveness = 0.10
 		}
@@ -20803,7 +20797,7 @@ yellowstone = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 		}
@@ -20829,7 +20823,7 @@ yellowstone = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 		}
@@ -20855,7 +20849,7 @@ yellowstone = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -1
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.25
 		}
@@ -21602,7 +21596,7 @@ aoraki = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.10
 		}
@@ -21629,7 +21623,7 @@ aoraki = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 		}
@@ -21656,7 +21650,7 @@ aoraki = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 		}
@@ -25448,7 +25442,7 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.25
+			local_hostile_movement_speed = -0.20
 			local_hostile_attrition = 1
 			local_defensiveness = 0.10
 			trade_goods_size = 1
@@ -25476,7 +25470,7 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
+			local_hostile_movement_speed = -0.35
 			local_hostile_attrition = 1
 			local_defensiveness = 0.15
 			trade_goods_size = 2
@@ -25504,7 +25498,7 @@ copper_canyon = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.75
+			local_hostile_movement_speed = -0.50
 			local_hostile_attrition = 1
 			local_defensiveness = 0.20
 			trade_goods_size = 3
@@ -25567,10 +25561,10 @@ grand_pre = {
 	}
 
 	keep_trigger = {
-		AND = {
-			culture_group = new_french
-		}
-		has_owner_culture = yes
+		# AND = {
+		# 	culture_group = new_french
+		# }
+		# has_owner_culture = yes
 	}
 
 	tier_0 = {
