@@ -1,0 +1,112 @@
+##########################
+#
+#  Written by:
+#  KeoniPhoenix
+#
+##########################
+
+namespace = KiribatiFlavor
+
+#Kiribati Culture Event
+country_event = {
+	id = KiribatiFlavor.1
+	title = "KiribatiFlavor.1t"
+	desc = "KiribatiFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		1241 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = i-kiribati }
+			NOT = { is_core = KRB }
+		}
+		1991 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = i-kiribati }
+			NOT = { is_core = KRB }
+		}
+		4899 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = i-kiribati }
+			NOT = { is_core = KRB }
+		}
+		3389 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = i-kiribati }
+			NOT = { is_core = KRB }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				1241 = { has_owner_accepted_culture = no }
+				1991 = { has_owner_accepted_culture = no }
+				3389 = { has_owner_accepted_culture = no }
+				4899 = { has_owner_accepted_culture = no }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				1241 = { has_owner_religion = no }
+				1991 = { has_owner_religion = no }
+				3389 = { has_owner_religion = no }
+				4899 = { has_owner_religion = no }
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				1241 = { is_core = ROOT }
+				1991 = { is_core = ROOT }
+				3389 = { is_core = ROOT }
+				4899 = { is_core = ROOT }
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				1241 = { development = 35 }
+				1991 = { development = 35 }
+				3389 = { development = 35 }
+				4899 = { development = 35 }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "KiribatiFlavor.1opta"
+		1241 = { 
+			change_culture = i-kiribati
+			add_core = KRB
+		}
+		1991 = { 
+			change_culture = i-kiribati
+			add_core = KRB
+		}
+		3389 = { 
+			change_culture = i-kiribati
+			add_core = KRB
+		}
+		4899 = { 
+			change_culture = i-kiribati
+			add_core = KRB
+		}
+	}
+}
