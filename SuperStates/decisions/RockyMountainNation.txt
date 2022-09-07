@@ -85,7 +85,7 @@ country_decisions = {
 				}
 				add_permanent_claim = RKY
 			}
-			south_utah_area = {
+			dixie_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
