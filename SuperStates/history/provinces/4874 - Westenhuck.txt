@@ -3,6 +3,7 @@
 owner = UTA
 controller = UTA
 add_core = UTA
+culture = utahn
 religion = mormon
 trade_goods = livestock
 capital = "Logan"
