@@ -1,1 +1,33 @@
-# No previous file for Tatteroa
+#4888 - Sanma
+
+culture = melanesian
+religion = animism
+capital = "Luganville"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 20
+native_ferocity = 2
+native_hostileness = 9
+discovered_by = oceanian
+discovered_by = polynesian_tech
+#discovered_by = australian
+
+1887.10.16 = {
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	add_core = FRA
+	culture = ni-vanuatu
+}
+
+1980.7.30 = {
+	owner = VAN
+	controller = VAN
+	add_core = VAN
+	remove_core = FRA
+	remove_core = GBR
+}

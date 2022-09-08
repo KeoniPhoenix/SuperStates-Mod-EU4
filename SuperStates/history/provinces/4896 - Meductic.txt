@@ -1,1 +1,29 @@
-# No previous file for Meductic
+# 4896 - Rota
+
+owner = NMI
+controller = NMI
+add_core = NMI
+culture = northern_marianas_islander
+religion = austral_catholic
+capital = "Sinapalo" 
+is_city = yes #4830
+trade_goods = fish
+hre = no 
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = oceanian
+discovered_by = polynesian_tech
+
+1555.1.1 = {
+	owner = PCO
+	controller = PCO
+	add_core = PCO
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
+

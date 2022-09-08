@@ -1,3 +1,29 @@
-# No previous file for Houma
+#4884 - Loyalty Islands
 
+culture = melanesian
+religion = animism
+capital = "Lifou"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 1
+discovered_by = oceanian
+discovered_by = polynesian_tech
+#discovered_by = australian
 
+1853.9.24 = {
+	is_city = yes
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = new_caledonian
+}
+1946.1.1 = { add_core = NCL }
+1998.5.5 = {
+	owner = NCL
+	controller = NCL
+}

@@ -3,7 +3,6 @@
 owner = UTA
 controller = UTA
 add_core = UTA
-add_core = NAH
 culture = south_utahn 
 religion = mormon
 trade_goods = iron
