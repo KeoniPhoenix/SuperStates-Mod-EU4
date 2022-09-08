@@ -25,9 +25,17 @@ neb_conquests = {
 		}
 		effect = {
 			east_river_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			sioux_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -56,12 +64,24 @@ neb_conquests = {
 		}
 		effect = {
 			absaroka_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			wyoming_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			iowa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -90,12 +110,24 @@ neb_conquests = {
 		}
 		effect = {
 			montana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			east_montana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -124,9 +156,19 @@ neb_conquests = {
 		}
 		effect = {
 			west_montana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			sakakawea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			add_power_projection = {
@@ -164,9 +206,19 @@ neb_more = {
 		}
 		effect = {
 			missouri_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			the_lakes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 		}
@@ -190,9 +242,17 @@ neb_more = {
 		}
 		effect = {
 			west_kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			north_colorado_area = {
+			denver_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -205,7 +265,7 @@ neb_more = {
 		provinces_to_highlight = {
 			OR = {
 				area = west_kansas_area
-				area = north_colorado_area
+				area = denver_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -214,13 +274,18 @@ neb_more = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				area = north_colorado_area
+			denver_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			colorado_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_claim = ROOT
 			}
 			add_country_modifier = {

@@ -884,6 +884,7 @@ wdc_slot_5 = {
 				discover_province = 1726
 				discover_province = 1673
 				discover_province = 1674
+				discover_province = 4896
 			}
 		}
 	}

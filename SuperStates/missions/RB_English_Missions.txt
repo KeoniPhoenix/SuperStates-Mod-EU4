@@ -1465,7 +1465,7 @@ gbr_rb_northern_colonial = {
 				name = "eng_rb_faro_coast"
 				duration = 5475
 			}
-			greenland_area = {
+			nuuk_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -1480,7 +1480,7 @@ gbr_rb_northern_colonial = {
 		required_missions = { eng_rb_take_shetland_and_faro_isles }
 		
 		provinces_to_highlight = {
-			area = greenland_area
+			area = nuuk_area
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
@@ -1492,13 +1492,13 @@ gbr_rb_northern_colonial = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_greenland
-				greenland_area = {
+				nuuk_area = {
 					has_discovered = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_greenland
-				greenland_area = { 
+				nuuk_area = { 
 					type = all
 					owned_by = ROOT
 					is_city = yes

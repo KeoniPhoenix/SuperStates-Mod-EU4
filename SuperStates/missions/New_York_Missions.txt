@@ -354,7 +354,7 @@ nys_slot_3 = {
 					else = {
 						army_tradition = 20
 					}
-					army_size = 35
+					army_size = 30
 				}
 			}
 		}
@@ -616,13 +616,11 @@ nys_slot_4 = {
 	potential = {
 		AND = {
 			tag = NYS
-			OR = {
-				NOT = {
-					was_tag = NYC #Have their own economic branch
-				}
-				NOT = {
-					was_tag = LLI
-				}
+			NOT = {
+				was_tag = NYC #Have their own economic branch
+			}
+			NOT = {
+				was_tag = LLI
 			}
 		}
 	}
@@ -973,18 +971,15 @@ nys_slot_5 = {
 	potential = {
 		AND = {
 			tag = NYS
-			OR = {
-				NOT = {
-					was_tag = NYC
-				}
-				NOT = {
-					was_tag = LLI
-				}
+			NOT = {
+				was_tag = NYC
+			}
+			NOT = {
+				was_tag = LLI
 			}
 		}
 	}
 	has_country_shield = yes
-
 
 	nys_columbia_and_cornell_university = {
 		icon = mission_early_modern_university
