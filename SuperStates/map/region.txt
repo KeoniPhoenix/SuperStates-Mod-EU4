@@ -1070,7 +1070,7 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		central_java_area
 		west_java_area
 		lesser_sunda_islands_area
-		indonesian_islands_area
+		#indonesian_islands_area
 		surabaya_area
 		banten_area
 	}
@@ -1271,6 +1271,15 @@ east_australia_region = { #11
 		murray_area
 		bass_strait_area
 		tasmania_area
+		torres_straits_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
 	}
 }
 
@@ -1284,16 +1293,43 @@ west_australia_region = { #8
 		centralia_area
 		north_australia_area
 		aus_indian_ocean_islands_area
+		tiwi_islands_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
 	}
 }
 
 #MELANESIA
-melanesia_region = { #4
+melanesia_region = {
 	areas = {
-		vogelkop_area
-		papua_area
 		melanesia_area
 		southeastern_melanesia_area
+		vogelkop_area
+		papua_area
+		fly_river_area
+		tabi_saireri_area
+		momase_area
+		papua_selatan_area
+		papua_highlands_area
+		bismarck_islands_area
+		louisiade_area
+		west_solomon_area
+		east_solomon_area
+		vanuatu_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
 	}
 }
 
@@ -1303,6 +1339,10 @@ micronesia_region = { #3
 		micronesia_area
 		eastern_micronesia_area
 		marianas_area
+	}
+	monsoon = {
+		00.07.01
+		00.10.30
 	}
 }
 
@@ -1314,6 +1354,11 @@ pacific_islands_region = { #6
 		central_polynesia_area
 		eastern_polynesia_area
 		fiji_area
+		lau_area
+		society_islands_area
+		tuamotu_islands_area
+		tonga_area
+		samoa_area
 	}
 }
 
@@ -1336,6 +1381,7 @@ pacific_islands_region = { #6
 #western_canada_region
 #central_canada_region
 #maritimes_region
+#greenland_region
 
 # alaskan_frontier_region = {
 	# areas = {
@@ -1365,7 +1411,7 @@ intermountain_west_region = { #10
 	areas = {
 		black_rock_area
 		salt_lake_area
-		north_colorado_area
+		denver_area
 		colorado_area
 		idaho_area
 		high_desert_area
@@ -1373,6 +1419,7 @@ intermountain_west_region = { #10
 		west_montana_area
 		wyoming_area
 		absaroka_area
+		western_slope_area
 	}
 }
 
@@ -1383,11 +1430,13 @@ american_southwest_region = { #8
 		rio_grande_area
 		arizona_area
 		baja_arizona_area
-		south_utah_area
+		dixie_area
 		mojave_area
 		new_mexico_area
 		high_plains_area
 		trans_pecos_area
+		gila_area
+		utah_area
 	}
 }
 
@@ -1558,7 +1607,6 @@ arctic_region = { #6
 		alaska_area
 		inside_passage_area
 		aleutia_area
-		greenland_area
 	}
 }
 
@@ -1598,6 +1646,16 @@ maritimes_region = { #7
 		iles_saint_laurent_area
 		baie_des_chaleurs_area
 		labrador_area
+	}
+}
+
+greenland_region = { #5
+	areas = {
+		sermersooq_area
+		qeqqata_area
+		nuuk_area
+		kujalleq_area
+		tunu_area
 	}
 }
 
