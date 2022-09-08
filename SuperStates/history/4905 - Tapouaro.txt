@@ -1,0 +1,29 @@
+#4905 - Vava'u
+
+add_core = TOG
+owner = TOG
+controller = TOG
+culture = polynesian
+religion = animism
+hre = no
+capital = "Neiafu"
+is_city = yes
+trade_goods = fish
+base_tax = 1
+base_production = 1
+base_manpower = 1
+discovered_by = polynesian_tech
+discovered_by = oceanian
+
+1900.5.18 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+}#British Protectorate
+
+1970.6.4 = {
+	owner = TGA
+	controller = TGA
+	add_core = TGA
+	remove_core = GBR
+}#End of Protectorate

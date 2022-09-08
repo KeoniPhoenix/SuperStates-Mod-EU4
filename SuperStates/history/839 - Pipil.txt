@@ -1,0 +1,31 @@
+#839 - Pipil
+
+owner = ESL
+controller = ESL
+add_core = ESL
+capital = "San Salvador"
+base_tax = 8
+base_production = 8
+base_manpower = 6
+is_city = yes #57050
+trade_goods = cloth
+culture = salvadorian
+religion = s_catholic
+hre = no
+discovered_by = north_american
+discovered_by = mesoamerican
+center_of_trade = 2
+
+1810.9.16 = {
+	add_core = CAM
+}
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+}
+
+1841.2.18 = {
+	owner = ESL
+	controller = ESL
+}

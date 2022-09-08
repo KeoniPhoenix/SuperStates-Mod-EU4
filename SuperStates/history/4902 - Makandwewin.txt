@@ -1,0 +1,27 @@
+#4902 - Woleai
+
+owner = YAP
+controller = YAP
+add_core = YAP
+culture = yapese
+religion = austral_catholic
+capital = "Woleai"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = oceanian
+discovered_by = polynesian_tech
+
+1944.1.1 = { 
+	owner = USA
+	controller = USA
+}
+
+1976.11.3 = {
+	owner = FSM
+	controller = FSM
+	add_core = FSM
+}

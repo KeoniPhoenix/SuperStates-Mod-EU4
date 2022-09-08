@@ -1,0 +1,33 @@
+#Utah
+
+owner = UTA
+controller = UTA
+add_core = UTA
+add_core = SUT
+culture = utahn 
+religion = mormon
+capital = "Provo" 
+is_city = yes #11250
+trade_goods = wool
+hre = no 
+base_tax = 3
+base_production = 3
+base_manpower = 4
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1444.10.1 = {
+	add_core = SUT
+}
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

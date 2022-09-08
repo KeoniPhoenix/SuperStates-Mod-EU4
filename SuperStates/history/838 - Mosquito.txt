@@ -1,0 +1,31 @@
+#838 - Mosquito
+
+owner = NCG
+controller = NCG
+add_core = NCG
+add_core = MSQ
+capital = "Puerto Cabezas"
+religion = s_protestant
+culture = miskito
+hre = no
+is_city = yes #12360
+base_tax = 4
+base_production = 4
+base_manpower = 2
+trade_goods = sugar
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1810.9.16 = {
+	add_core = CAM
+}
+
+1823.9.15 = {
+	owner = CAM
+	controller = CAM
+}
+
+1838.11.5 = {
+	owner = NCG
+	controller = NCG
+}
