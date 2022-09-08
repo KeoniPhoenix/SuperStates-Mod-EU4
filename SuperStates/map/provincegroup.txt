@@ -162,15 +162,15 @@ st_pierre_miquelon_provincegroup = {
 
 ## Pacific Province Groups
 micronesia_states_provincegroup = {
-	2726 2727 2728 1995
+	2726 2727 2728 1995 4902 4897
 }
 
 associated_states_provincegroup = {
-	2726 2727 2728 1995 1996 1993
+	2726 2727 2728 1995 1996 1993 4902 4898 4897
 }
 
 us_pacific_territories_provincegroup = {
-	1240 1235 2617 3315
+	1240 1235 2617 3315 4896
 }
 
 # northern_mariana_islands_provincegroup = [
@@ -186,7 +186,7 @@ us_pacific_territories_provincegroup = {
 # }
 
 nmi_guam_provincegroup = {
-	1240 1235
+	1240 1235 4896
 }
 
 american_samoa_provincegroup = {
@@ -194,7 +194,7 @@ american_samoa_provincegroup = {
 }
 
 samoa_islands_provincegroup = {
-	2617 3315 1243
+	2617 3315 1243 3335
 }
 
 # Greenland - to be expanded
@@ -220,7 +220,7 @@ aleutia_provincegroup = {
 
 # Arizona
 arizona_provincegroup = {
-	936 3237 3238 939 940 937 938 3239
+	936 3237 3238 939 940 937 938 3239 3236 4847
 }
 
 # Arkansas
@@ -247,7 +247,7 @@ san_francisco_bay_provincegroup = {
 
 # Colorado
 colorado_provincegroup = {
-	992 3260 993 3259 3258 3256 3257 991 990
+	992 3260 993 3259 3258 3256 3257 991 990 4859 3387 4858
 }
 
 # Connecticut
@@ -405,7 +405,7 @@ nebraska_provincegroup = {
 
 # Nevada
 nevada_provincegroup = {
-	948 951 950 3279 949
+	948 951 950 3279 949 4867 4866
 }
 
 # New Jersey
@@ -415,12 +415,12 @@ new_jersey_provincegroup = {
 
 # New Mexico
 new_mexico_provincegroup = {
-	959 957 4570 4572 956 4571 958
+	959 957 4570 4572 956 4571 958 4864 4863 4865
 }
 
 # New York
 new_york_provincegroup = {
-	3127 2595 2594 2596 2598 2597 2668 2593 2600 3284 2601 3283 3282 3281 3026 3128 3285 2599
+	3127 2595 2594 2596 2598 2597 2668 2593 2600 3284 2601 3283 3282 3281 3026 3128 3285 2599 4848 3388
 }
 
 long_island_provincegroup = {
@@ -436,7 +436,7 @@ downstate_new_york_provincegroup = {
 }
 
 upstate_new_york_provincegroup = {
-	2593 2600 3284 2598 2597 2668 3127 2595 2594 2596 2599
+	2593 2600 3284 2598 2597 2668 3127 2595 2594 2596 2599 4848 3388
 }
 
 # North Carolina
@@ -540,7 +540,7 @@ east_texas_provincegroup = {
 
 # Utah
 utah_provincegroup = {
-	953 954 955 952 3299 3300
+	953 954 955 952 3299 3300 4871 4872 4875 4874 4873
 }
 
 # New Hampshire
@@ -855,11 +855,11 @@ princeland_provincegroup = {
 
 # Queensland
 queensland_provincegroup = {
-	3183 3184 3185 1791 3182 3181 3179 2010 3177 3180 3176 1790 3175 3178
+	3183 3184 3185 1791 3182 3181 3179 2010 3177 3180 3176 1790 3175 3178 3348 2009 3349 3350 3351
 }
 
 north_queensland_provincegroup = {
-	1791 3182 3181 3183 3184 3185 2009
+	1791 3182 3181 3183 3184 3185 2009 3348 3349 3350 3351
 }
 
 # torres_strait_provincegroup = {
@@ -868,7 +868,7 @@ north_queensland_provincegroup = {
 
 # South Australia
 south_australia_provincegroup = {
-	1088 1089 3188 3189 3187 3186 1091 3191 3190 1090
+	1088 1089 3188 3189 3187 3186 1091 3191 3190 1090 3352
 }
 
 # Western Australia
@@ -908,7 +908,7 @@ aus_indian_ocean_islands_provincegroup = {
 
 # Northern Territory
 northern_territory_provincegroup = {
-	3173 1092 1093 3172 3174 1094
+	3173 1092 1093 3172 3174 1094 3347 3346 3345
 }
 
 central_australia_provincegroup = {
@@ -930,4 +930,9 @@ nz_islands_provincegroup = {
 
 norfolk_island_provincegroup = {
 	4637
+}
+
+#Papua New Guinea
+papua_new_guinea_provincegroup = {
+	3362 3363 3361 1245 2718 2724 3358 3359 3360 3357 3382 3381 2719 3379 2720 3375 3374 3376 3377 3378 1237 3373 3372 3370 3371 2722 2721 3386 1236 3383 3384 3385 3380 3369 3368 3366 3367 2723 3354 3356 3355
 }

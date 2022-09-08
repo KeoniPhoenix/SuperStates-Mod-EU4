@@ -89,14 +89,13 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4745;47;sea;1257;3013;1607;3012;1606;R�gen-Stralsund
 2994;48;sea;1257;-1;-1;-1;-1;Wolgast-Kolberg
 4938;4937;sea;1431;-1;-1;-1;-1;Vanua Levu-Lau
-4937;1242;sea;1431;-1;-1;-1;-1;Lau-Viti Levu
 1242;4938;sea;1431;-1;-1;-1;-1;Vitu Levu-Vanua Levu
 2634;964;sea;3311;-1;-1;-1;-1;Victoria-Thurston
 1808;1809;sea;3307;-1;-1;-1;-1;Queens-Colchester
 3060;1812;sea;3307;-1;-1;-1;-1;Prince-Westmorland
 1806;1805;sea;1490;1923;1768;1922;1775;Humber-Labrador
 3226;969;sea;1697;-1;-1;-1;-1;Maui-Hawaii
-1235;1240;sea;1435;-1;-1;-1;-1;Hagata-Saipan
+1235;4896;sea;1435;-1;-1;-1;-1;Hagata-Rota
 2576;2574;sea;1662;-1;-1;-1;-1;Chippewa-Grand Traverse
 2617;3315;sea;1726;-1;-1;-1;-1;Tutuila-Manu'a
 2648;2671;sea;1561;-1;-1;-1;-1;Bristol Bay-Kodiak Island
@@ -171,4 +170,48 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 3030;2004;sea;1490;-1;-1;-1;-1;Anticosti-Sept-Rivieres
 1246;4639;sea;1428;-1;-1;-1;-1;Murihiku-Rakiura
 631;627;sea;1354;-1;-1;-1;-1;Bali-Blambangan
+4915;4632;sea;1924;-1;-1;-1;-1;Kitsissut-Kujalleq
+4908;4909;sea;1481;-1;-1;-1;-1;Zackenberg-Clavering
+3352;1088;sea;1415;-1;-1;-1;-1;Kangaroo-Adelaide
+3348;2009;sea;1410;-1;-1;-1;-1;Mornington-Mount Isa
+3345;3172;sea;1415;-1;-1;-1;-1;Ayangkidarrba-Roper Gulf
+3347;1092;sea;1408;-1;-1;-1;-1;Tiwi-Darwin
+3346;1093;sea;1408;-1;-1;-1;-1;Barrah-Arnhem
+4896;1240;sea;1435;-1;-1;-1;-1;Rota-Saipan
+4898;1993;sea;1698;-1;-1;-1;-1;Ralik-Ratak
+4897;2727;sea;1673;-1;-1;-1;-1;Keinouche-Weno
+3385;3384;sea;1405;-1;-1;-1;-1;New Hanover-New Ireland
+3384;3383;sea;1405;-1;-1;-1;-1;New Ireland-East New Britain
+3359;3358;sea;1404;-1;-1;-1;-1;Yapen-Nabire
+3359;3360;sea;1404;-1;-1;-1;-1;Yapen-Biak
+3363;3362;sea;1400;-1;-1;-1;-1;Raja Ampat-Sorong
+3374;3376;sea;1406;-1;-1;-1;-1;Milne Bay-Esa'Ala
+3351;2722;sea;1407;5020;500;5020;503;Saibai-Daru
+3351;3350;sea;1407;-1;-1;-1;-1;Saibai-Badhu
+3349;3350;sea;1407;-1;-1;-1;-1;Thursday-Badhu
+3349;3185;sea;1407;5016;480;5016;477;Thursday-Cook Shire
+4895;4893;sea;1432;-1;-1;-1;-1;Bougainville-Choiseul
+4893;4892;sea;1432;-1;-1;-1;-1;Choiseul-Western Solomon
+1238;4891;sea;1432;-1;-1;-1;-1;Isabel-Malaita
+4890;4891;sea;1432;-1;-1;-1;-1;Guadalcanal-Malaita
+4890;4889;sea;1432;-1;-1;-1;-1;Guadalcanal-Makira
+1991;4899;sea;1734;-1;-1;-1;-1;Tarawa-Tabiteuea
+4884;4883;sea;1429;-1;-1;-1;-1;Loyalty Islands-South Caledonia
+4885;4886;sea;1430;-1;-1;-1;-1;Tafea-Shefa
+4886;4887;sea;1430;-1;-1;-1;-1;Shefa-Malampa
+4887;4888;sea;1430;-1;-1;-1;-1;Malampa-Sanma
+4887;1239;sea;1430;-1;-1;-1;-1;Malampa-Penama
+4900;4901;sea;1431;-1;-1;-1;-1;Suva-Ovalau
+4900;4903;sea;1431;-1;-1;-1;-1;Suva-Kadavu
+1989;4904;sea;1726;-1;-1;-1;-1;Tongatapu-Eua
+1989;4905;sea;1726;-1;-1;-1;-1;Tongatapu-Vava'u
+1243;3335;sea;1726;-1;-1;-1;-1;Upolu-Salafai
+3014;3336;sea;1726;-1;-1;-1;-1;Mangaia-Rarotonga
+1987;3339;sea;1728;-1;-1;-1;-1;Raiatea-Bora-Bora
+1987;3340;sea;1728;-1;-1;-1;-1;Raiatea-Tahiti
+3342;3341;sea;1725;-1;-1;-1;-1;Fakarava-Rangiroa
+3342;3343;sea;1725;-1;-1;-1;-1;Fakarava-Makemo
+3343;1244;sea;1725;-1;-1;-1;-1;Makemo-Hao
+1244;3344;sea;1725;-1;-1;-1;-1;Hao-Gambier
+3379;1236;sea;1405;-1;-1;-1;-1;Rai-West New Britain
 -1;-1;;-1;-1;-1;-1;-1;-1;
