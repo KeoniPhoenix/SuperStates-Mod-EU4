@@ -21,8 +21,8 @@
  carolina_nation_title:0 "Reconstitute the State of Carolina"
  carolina_nation_desc:0 "Rectify the division between North and South Carolina to create the State of Carolina."
 # Cascadia
- cascadia_nation_title:0 "Form Cascadia Nation"
- cascadia_nation_desc:0 "Our regional union can be completed by forming Cascadia."
+ cascadian_nation_title:0 "Form Cascadia"
+ cascadian_nation_desc:0 "Our regional union can be completed by forming Cascadia.\n\nForming §YCascadia§! will §Rprevent us from forming Western Canada and Pacifica.§!"
 # Chesapeake
  form_chesapeake_title:0 "Revive the nation of Chesapeake"
  form_chesapeake_desc:0 "Our lands along the Chesapeake are once again united under one banner. Let us celebrate by declaring ourselves a new nation!"
@@ -39,10 +39,10 @@
  dakota_nation_desc:0 "The territory of Dakota was destined to be a proper state but instead was divided into two.  Correct this misdeed and bring glory to the state!"
 # Delmarva
  form_delmarva_nation_title:0 "Form Delmarva Nation"
- form_delmarva_nation_desc:0 "The Delmarva peninsula has long been tenously divided between Delaware, Maryland, and Virginia.  Having united these lands with $ROOT$ we can declare a new nation."
+ form_delmarva_nation_desc:0 "The Delmarva peninsula has long been tenuously divided between Delaware, Maryland, and Virginia.  Having united these lands with $ROOT$ we can declare a new nation."
 # Deseret
  deseret_nation_title:0 "Form Deseret Nation"
- deseret_nation_desc:0 "Deseret is the Mormon homeland after the exodus from the Eastern States.  By declaring the State of Deseret, we can fulfill Brigham Young's vision for the Mormom people."
+ deseret_nation_desc:0 "Deseret is the Mormon homeland after the exodus from the Eastern States.  By declaring the State of Deseret, we can fulfill Brigham Young's vision for the Mormon people."
 # Florida
  reform_florida_title:0 "Reform into Florida"
  reform_florida_desc:0 "The lands that once belonged to Florida are now ours. We must take their title for ourselves, and proclaim this nation the true and only Florida."
@@ -92,7 +92,7 @@
  navajo_nation_title:0 "Form the nation of Navajo"
  navajo_nation_desc:0 "There has been a mysterious power in possessing the four cornered provinces that meet together between Arizona, Utah, Colorado, and New Mexico and it calls upon us to proclaim a new nation around this important human geographical feature."
 # New England
- new_england_nation_title:0 "Form the nation of New England"
+ new_england_nation_title:0 "Form New England"
  new_england_nation_desc:0 "Consolidating the various state governments into New England gives the region a better standing in the world."
 # New Jersey
  reform_new_jersey_title:0 "Reform into New Jersey"
@@ -117,7 +117,7 @@
  rocky_mountain_nation_desc:0 "The Grand union of all of the mountain domains along the Rocky Mountains."
 # South-Atlantic Confederacy
  southatlantic_nation_title:0 "Proclaim the South-Atlantic Confederacy"
- southatlantic_nation_desc:0 "Our unification of the South-Atlantic region allows us to both expand our influence, and grant ourselves a better position in world affairs.\n\nForming the South-Atlantic Confederacy will §Rprevent us from forming the Confederate States.§!"
+ southatlantic_nation_desc:0 "Our unification of the South-Atlantic region allows us to both expand our influence, and grant ourselves a better position in world affairs.\n\nForming the §YSouth-Atlantic Confederacy§! will §Rprevent us from forming the Confederate States.§!"
 # Tennessee
  reform_tennessee_title:0 "Reform into Tennessee"
  reform_tennessee_desc:0 "The lands that once belonged to Tennessee are now ours. We must take their title for ourselves, and proclaim this nation the true and only Tennessee."
@@ -183,7 +183,7 @@
  new_brunswick_nation_desc:0 "The lands that once belonged to New Brunswick are now ours. We must take their title for ourselves, and proclaim this nation the true and only New Brunswick."
 # New France
  new_france_nation_title:0 "Form New France Nation"
- new_france_nation_desc:0 "We have rescued our culture, our language, and our historical homeland, and now we can return in glory to what was... no, what is NOW our destiny!"
+ new_france_nation_desc:0 "We have rescued our culture, our language, and our historical homeland, and now we can return in glory to what was... no, what is NOW our destiny!\n\nForming the §New France§! will §Rprevent us from forming Canada and the Confederate States.§!"
 # Nova Scotia
  reform_nova_scotia_title:0 "Reform into Nova Scotia"
  reform_nova_scotia_desc:0 "The lands that once belonged to Nova Scotia are now ours. We must take their title for ourselves, and proclaim this nation the true and only Nova Scotia."
@@ -200,8 +200,8 @@
  ruperts_land_nation_title:0 "Declare Rupert's Land"
  ruperts_land_nation_desc:0 "Rupert's Land, or Prince Rupert's Land, was a territory in British North America. It consisted of the Hudson Bay drainage basin, which was de facto owned by the Hudson's Bay Company for 200 years from 1670 to 1870."
 # Western Canada 
- western_canada_nation_title:0 "Form the nation of Western Canada"
- western_canada_nation_desc:0 "A greater future has dawned for Western Canadians in their place amongst the nations of the world."
+ western_canada_nation_title:0 "Form Western Canada"
+ western_canada_nation_desc:0 "A greater future has dawned for Western Canadians in their place amongst the nations of the world.\n\nForming §YWestern Canada§! will §Rprevent us from forming Cascadia.§!"
 
 # Mexico Region
 # Aztlan

@@ -25,9 +25,9 @@
  vrm_defeat_new_york_tooltip:0 "§YNew York§! will lose all §YCores§! and §YClaims§! in the Vermont area."
  vrm_defeat_new_hampshire_tooltip:0 "§YNew Hampshire§! will lose all §YCores§! and §YClaims§! in the Vermont area."
  vrm_green_boys_tooltip:0 "§Y[Root.GetName]§! has won a war while hiring the §YGreen Mountain Boys§!"
- cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! area that produce §YCloth§! or §YWool§! have a §YManufactory§!."
+ cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! Area that produce §YCloth§! or §YWool§! have a §YManufactory§!."
  mss_subject_tooltip:0 "If we complete this mission by making §MMaine§! our subject:"
- new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region that does NOT have separatism:\n   Gain §Y1§! development."
+ new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region:\n   Gain §Y1§! development."
  vrm_green_boys_ap_tooltip:0 "The mercenary company §YGreen Mountain Boys§! no longer reduces §YArmy Professionalism§! when recruited."
 
  ## Mid Atlantic
@@ -54,7 +54,7 @@
  gen_breadbasket_tooltip:0 "All owned provinces which produce §YGrain§! and have a §YManufactory§! gain §Y1§! £icon_production_in_text£"
 
  ## California
- cal_has_wine_tooltip:0 "All owned §YWine§! producing provinces gain §Y2§! £icon_production_in_text£"
+ cal_has_wine_tooltip:0 "All owned §YWine§! producing provinces gain §Y2§! £icon_production_in_text£ and '§YProductive Vineyards§!' for §Y25 years§!, giving the following effects:\nLocal Production Efficiency: §G+20.0%§!"
 
  ## Ohio
  ohi_stay_midwest_tt:0 "If §Y[Root.GetName]§! chooses the §YMidwestern§! path, the following triggers will be needed to complete this mission:"
@@ -109,3 +109,23 @@
  flavorTEX.1003a.tt:0 "All owned provinces of §YTexan§! and §YEastern Texan§! culture will adopt §YSoutherner Texan.§!"
  flavorTEX.1003b.tt:0 "All owned provinces of §YTexan§! and §YTejano§! culture will adopt §YNorteño Texan.§!"
  flavorTEX.1003c.tt:0 "All owned provinces of §YTexan§! and §YHigh Plainer§! culture will adopt §YGreat Plainer Texan.§!"
+
+# Form America
+ westernUSACheck:0 "Capital is in the §YWestern America§! region"
+ centralUSACheck:0 "Capital is in the §YMiddle America§! region"
+ easternUSACheck:0 "Capital is in the §YEastern America§! region"
+ westernUSAChoices:0 "§Y[Root.GetName]§! owns §R15§! provinces in the §YGreat Plains§! §ROR§! §YOld Southwest§! regions"
+ westernUSARequirements:0 "§Y[Root.GetName]§! owns §R20§! provinces in the §YIntermountain West§! §RAND§! §YAmerican Southwest§! regions"
+ westernUSAPacificCoast:0 "§Y[Root.GetName]§! owns §R25§! provinces in the §YPacific Coast§! region"
+ centralUSARequirements:0 "§Y[Root.GetName]§! owns §R20§! provinces in the §YGreat Lakes§!, §YAmerican Midwest§!, §RAND§! §YAppalachia§! regions"
+ centralUSAChoices:0 "§Y[Root.GetName]§! owns §R15§! provinces in the §YGreat Plains§! §ROR§! §YOld Southwest§! regions"
+ centralUSAMidAtlantic:0 "§Y[Root.GetName]§! owns §R20§! provinces in the §YMid-Atlantic§! region"
+ easternUSAMidAtlantic:0 "§Y[Root.GetName]§! owns §R25§! provinces in the §YMid-Atlantic§! region"
+ easternUSARequirements:0 "§Y[Root.GetName]§! owns §R20§! provinces in the §YAppalachia§! §RAND§! §YDeep South§! regions"
+ easternUSANewEngland:0 "§Y[Root.GetName]§! owns §R25§! provinces in the §YNew England§! region"
+ OwnsDCandPhilly:0 "§Y[Root.GetName]§! owns Washington §RAND§! Philadelphia"
+ NYLA:0 "§Y[Root.GetName]§! owns §YNew York§! §ROR§! §YLos Angeles§!"
+ ChicagoDallasMiami:0 "§Y[Root.GetName]§! owns §YChicago§!, §YDallas§!, §ROR§! §YMiami§!"
+ SFDetroitDenver:0 "§Y[Root.GetName]§! owns §YSan Francisco§!, §YDetroit§!, §ROR§! §YDenver§!"
+ AtlantaPhoenixMinneapolis:0 "§Y[Root.GetName]§! owns §YAtlanta§!, §YPhoenix§!, §ROR§! §YMinneapolis§!"
+ SeattleHoustonBoston:0 "§Y[Root.GetName]§! owns §YSeattle§!, §YHouston§!, §ROR§! §YBoston§!"

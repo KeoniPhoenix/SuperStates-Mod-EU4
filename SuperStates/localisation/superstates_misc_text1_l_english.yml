@@ -63,6 +63,8 @@
  desc_murray_river_estuary_modifier:0 "Holding the Murray estuary is of vital importance in controlling the trade in the region."
  lake_michigan_port_modifier:0 "Chicago Bay"
  desc_lake_michigan_port_modifier:0 "Holding the Chicago Bay is of vital importance in controlling the trade in the region."
+ torres_strait_toll:0 "Sound Toll"
+ desc_torres_strait_toll:0 "Let us impose a toll upon those who transit the Torres Strait and leverage our regional position."
  
  #Death Valley
  death_valley_modifier:0 "Death Valley"

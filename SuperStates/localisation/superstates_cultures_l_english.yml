@@ -263,6 +263,7 @@
  tasmanian:0 "Tasmanian"
  victorian:0 "Victorian"
  western_australian:0 "West Australian"
+ torres_strait_islander:0 "Torres Strait Islander"
  #Caribbean
  caribbean_group:0 "Caribbean"
  antiguan:0 "Antiguan"
@@ -297,6 +298,7 @@
  tobagonian:0 "Tobagonian"
  vincentian:0 "Vincentian"
  #Central American
+ central_american_group:0 "Central American"
  belizean:0 "Belizean"
  costa_rican:0 "Coasta Rican"
  guatemalan:0 "Guatemalan"

@@ -12,16 +12,16 @@
  #The discovery of Europe is revealed to all North American.
  
  #Discovery of Rome for American Catholics
- superstates_europe.2t:0 "Mission from the Holy See"
- superstates_europe.2d:0 "We have recently learned of the great seat of the European Catholic Church in ancient European city of Rome and have recieved a number of cardinals on a diplomatic mission to learn of our ways.  They were ecstatic at learning much of our faith is of the same Chrisitan traditon but lacks a central authority that was lost in the distant past.  Within hours they presented much of their religious writings, informed us of their structure, and suggested that much of it could be made compatible with our traditions just by aligning ourselves to the Papal Authority."
- superstates_europe.2opta:0 "We belong with all Catholics and the one true church."
+ superstates_papal.1t:0 "Mission from the Holy See"
+ superstates_papal.1d:0 "We have recently learned of the great seat of the European Catholic Church in ancient European city of Rome and have received a number of cardinals on a diplomatic mission to learn of our ways.  They were ecstatic at learning much of our faith is of the same Christian tradition but lacks a central authority that was lost in the distant past.  Within hours they presented much of their religious writings, informed us of their structure, and suggested that much of it could be made compatible with our traditions just by aligning ourselves to the Papal Authority."
+ superstates_papal.1opta:0 "We belong with all Catholics and the one true church."
  #Only for American Catholics: Convert national religion and all owned American Catholic provinces to Catholic; receive 30 papal authority
- superstates_europe.2optb:0 "It would be unwise to become beholdened to this foreign religious figure so far away."
+ superstates_papal.1optb:0 "It would be unwise to become beholden to this foreign religious figure so far away."
  #Only for American Catholics: Set Permanent Opinion Modifier to -50 with the Papal State, European Catholic states get American Heresy CB if they have the Religious Ideas.
  
  #For owning American Catholic provinces as Roman Catholic state that were not converted instantly with the previous event, this event may fire at random 9 months after coring the province.
  superstates_europe.3t:0 "Integration of New Territorial Acquisitions Into Full Communion"
- superstates_europe.3d:0 "The recently acquired territory of [Root.GetName] has become an important part of our nation, however its local demonination is not in full communion with the greater church since the unification with the Bishop of Rome.  If it is to be permitted, the local parishes are to be incorporated into the church administration; however it may upset members of the clergy who are unaccustomed to such a high authority figure in the Church."
+ superstates_europe.3d:0 "The recently acquired territory of [Root.GetName] has become an important part of our nation, however its local denomination is not in full communion with the greater church since the unification with the Bishop of Rome.  If it is to be permitted, the local parishes are to be incorporated into the church administration; however it may upset members of the clergy who are unaccustomed to such a high authority figure in the Church."
  superstates_europe.3opta:0 "Of course, the Roman Bishop is brining needed guidance such as a shepherd guides his flock."
  #Allows for instant conversion without requiring a missionary to convert, but costs 50 ADM points and 50 DIP points and 5% yearly income. Gain token amount of Papal Influence; set provincial modifier for 5 years +1 unrest.
  superstates_europe.3optb:0 "No, leave them be, nobody can force the issue of unification upon them."
@@ -867,7 +867,7 @@
  flavorVIR.opta:0 "This surely is only an isolated incident... right?"
  flavorVIR.optb:0 "Investigate all public buildings in the state, and reform our building code."
  flavorVIR.1000t:0 "Direction of Our Culture"
- flavorVIR.1000d:0 "[Root.GetName] sits on the line between three seperate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
+ flavorVIR.1000d:0 "[Root.GetName] sits on the line between three separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
  flavorVIR.1000a:0 "Join Mid-Atlantic"
  flavorVIR.1000b:0 "Join Appalachian"
  flavorVIR.1000e:0 "Stay our current culture"
@@ -1361,9 +1361,9 @@
  MociteFlavor.1opta:0 "Great!"
  
  #Female Election Candidates
- EVTOPTE700:0 "Female Bureaucrat Candidate"
- EVTOPTF700:0 "Female Diplomat Candidate"
- EVTOPTG700:0 "Female Military Candidate"
+ #  EVTOPTE700:0 "Female Bureaucrat Candidate"
+ #  EVTOPTF700:0 "Female Diplomat Candidate"
+ #  EVTOPTG700:0 "Female Military Candidate"
  
  #Samoa (Formable))
  

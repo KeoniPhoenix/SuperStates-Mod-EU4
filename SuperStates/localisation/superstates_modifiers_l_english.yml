@@ -106,6 +106,8 @@
  desc_cal_inno_silicon:0 "We have focused on Innovation."
  cal_puget_trade:0 "Puget Trade"
  desc_cal_puget_trade:0 "Our expansion on the pacific coast has benefited our trade investments in the Puget Sound."
+ cal_wine_industry:0 "Productive Vineyards"
+ desc_cal_wine_industry:0 ""
  
  # Pennsylvania Event Modifiers
  amish_accepted:0 "Anabaptists Accepted"
@@ -264,6 +266,8 @@
  desc_mne_remember_maine_modifier:0 "We will avenge the USS Maine by ruling the waves."
  
  #New England
+ new_england_prosperity:0 "Prosperous Investments"
+ desc_new_england_prosperity:0 "Our funding and investments all across the New England region has brought great prosperity and wealth to our state."
  new_england_trade_ship:0 "New England Naval Expertise"
  desc_new_england_trade_ship:0 "New England traders are highly trained and trading vessels are well made, allowing us to dominate the sea lanes."
  new_england_connecticut_taxes:0 "New York Bankers"
@@ -429,7 +433,7 @@
  tex_accepted_cultures:0 "Cultural Tolerance"
  desc_tex_accepted_cultures:0 "We are accepting of all regional variations of Texan culture."
  development_initiative:0 "Development Initiative"
- desc_development_initiative:0 "We are funding a large development program all across the state."
+ desc_development_initiative:0 "We are funding a large development program all across the country."
  tex_galveston_modifier:0 "Galveston Harbor"
  desc_tex_galveston_modifier:0 ""
  tex_navy_enthusiasm:0 "Mississippi Patrols"
@@ -462,6 +466,15 @@
  desc_wva_country_roads_modifier:0 "Roads and infrastructure throughout the countryside connect small towns and settlements."
  wva_almost_heaven_modifier:0 "Almost Heaven"
  desc_wva_almost_heaven_modifier:0 ""
+
+ #Arctic
+ native_american_army:0 "Reformed Native American Army"
+ desc_native_american_army:0 "We have adopted more advanced tactics for our army to use in combat."
+ rise_of_high_american:0 "High American Dominance"
+ desc_rise_of_high_american:0 ""
+ nun_end_of_the_second_saga:0 "End of the Second Saga"
+ desc_nun_end_of_the_second_saga:0 ""
+ 
 
  #Other
  super_culture_change_modifier:0 "Unified Culture"

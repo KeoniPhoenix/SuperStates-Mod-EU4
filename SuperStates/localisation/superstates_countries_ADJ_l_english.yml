@@ -48,6 +48,8 @@
  MTU_ADJ:0 "Maritimer"
  NFR_ADJ:0 "New French"
  WCN_ADJ:0 "Western Canadian"
+ ATLANTIC_UNION_ADJ:0 "Atlantic Unioner"
+ HELLULAND_ADJ:0 "Hellulander"
  
  #American States and Territories
  ALM_ADJ:0 "Alabaman"
@@ -340,6 +342,7 @@
  VCT_ADJ:0 "Victorian"
  NFI_ADJ:0 "Norfolk Islander"
  JBT_ADJ:0 "Jervisian"
+ TSI_ADJ:0 "Torres Strait Islander"
  
  #Australian releasables
  AAL_ADJ:0 "Auralian"

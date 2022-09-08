@@ -74,9 +74,13 @@
  colorado_area_name:1 "Colorado"
  colorado_area_adj:1 "Coloradan"
  
- north_colorado_area:1 "North Colorado"
- north_colorado_area_name:1 "North Colorado"
- north_colorado_area_adj:1 "North Coloradan"
+ denver_area:1 "Denver"
+ denver_area_name:1 "Denver"
+ denver_area_adj:1 "Denverite"
+
+ western_slope_area:1 "Western Slope"
+ western_slope_area_name:1 "Western Slope"
+ western_slope_area_adj:1 "Western Slope"
  
  #Connecticut
  connecticut_area:1 "Connecticut"
@@ -293,7 +297,11 @@
  new_mexico_area:1 "New Mexico"
  new_mexico_area_name:1 "New Mexico"
  new_mexico_area_adj:1 "New Mexican"
- 
+
+ gila_area:1 "Gila"
+ gila_area_name:1 "Gila" 
+ gila_area_adj:1 "Gilan"
+
  #New York
  hudson_valley_area:1 "Hudson Valley"
  hudson_valley_area_name:1 "Hudson Valley"
@@ -424,9 +432,13 @@
  salt_lake_area_name:1 "Salt Lake"
  salt_lake_area_adj:1 "Salt Laker"
  
- south_utah_area:1 "South Utah"
- south_utah_area_name:1 "South Utah"
- south_utah_area_adj:1 "South Utahn"
+ dixie_area:1 "Dixie"
+ dixie_area:1 "Dixie"
+ dixie_area:1 "Dixie"
+
+ utah_area:0 "Utah"
+ utah_area_name:1 "Utah"
+ utah_area_adj:1 "Utah"
  
  #Virginia
  virginia_area:1 "Virginia"
@@ -612,6 +624,27 @@
  yukon_area:1 "Yukon"
  yukon_area_name:1 "Yukon"
  yukon_area_adj:1 "Yukoner"
+
+ #Greenland
+ tunu_area:1 "Tunu"
+ tunu_area_name:1 "Tunu"
+ tunu_area_adj:1 "Tunuan"
+
+ nuuk_area:1 "Nuuk"
+ nuuk_area_name:1 "Nuuk"
+ nuuk_area_adj:1 "Nuuker"
+ 
+ sermersooq_area:1 "Sermersooq"
+ sermersooq_area_name:1 "Sermersooq"
+ sermersooq_area_adj:1 "Sermersooqer"
+
+ kujalleq_area:1 "Kujalleq"
+ kujalleq_area_name:1 "Kujalleq"
+ kujalleq_area_adj:1 "Kujalleq"
+
+ qeqqata_area:1 "Qeqqata"
+ qeqqata_area_name:1 "Qeqqata"
+ qeqqata_area_adj:1 "Qeqqata"
  
 #MEXICO
  baja_california_area:1 "Baja California"
@@ -737,6 +770,10 @@
  north_australia_area:1 "North Australia"
  north_australia_area_name:1 "North Australia"
  north_australia_area_adj:1 "North Australian"
+
+ tiwi_islands_area:1 "Tiwi Islands"
+ tiwi_islands_area_name:1 "Tiwi Islands"
+ tiwi_islands_area_adj:1 "Tiwi Islands"
  
  centralia_area:1 "Centralia"
  centralia_area_name:1 "Centralia"
@@ -762,6 +799,10 @@
  cooksland_area:1 "Cooksland"
  cooksland_area_name:1 "Cooksland"
  cooksland_area_adj:1 "Cookslander"
+
+ torres_straits_area:1 "Torres Straits"
+ torres_straits_area_name:1 "Torres Straits"
+ torres_straits_area_adj:1 "Torres Straiter"
  
  #South Australia 
  south_australia_area:1 "South Australia"
@@ -800,9 +841,9 @@
  perth_area_name:1 "Perth"
  perth_area_adj:1 "Perthite"
  
- aus_indian_ocean_islands_area:1 "Indian Ocean Islands"
- aus_indian_ocean_islands_area_name:1 "Indian Ocean Islands"
- aus_indian_ocean_islands_area_adj:1 "Indian Ocean Islander"
+ aus_indian_ocean_islands_area:1 "Australian Indian Ocean"
+ aus_indian_ocean_islands_area_name:1 "Australian Indian Ocean"
+ aus_indian_ocean_islands_area_adj:1 "Australian Indian Oceaner"
  
  #New Zealand
  auckland_area:1 "Auckland"
@@ -843,7 +884,35 @@
  vogelkop_area:1 "Vogelkop"
  vogelkop_area_name:1 "Vogelkop"
  vogelkop_area_adj:1 "Vogelkopian"
- 
+
+ papua_selatan_area:1 "Selatan"
+ papua_selatan_area_name:1 "Selatan"
+ papua_selatan_area_adj:1 "Selatanian" 
+
+ tabi_saireri_area:1 "Tabi Saireri"
+ tabi_saireri_area_name:1 "Tabi Saireri"
+ tabi_saireri_area_adj:1 "Tabi Sairerian"
+
+ fly_river_area:1 "Fly River"
+ fly_river_area_name:1 "Fly River"
+ fly_river_area_adj:1 "Fly Riverer"
+
+ papua_highlands_area:1 "Papua Highlands"
+ papua_highlands_area_name:1 "Papua Highlands"
+ papua_highlands_area_adj:1 "Papua Highlander"
+
+ momase_area:1 "Momase"
+ momase_area_name:1 "Momase"
+ momase_area_adj:1 "Momase"
+
+ bismarck_islands_area:1 "Bismarck Islands"
+ bismarck_islands_area_name:1 "Bismarck Islands"
+ bismarck_islands_area_adj:1 "Bismarck Islander"
+
+ louisiade_area:1 "Louisiade Islands"
+ louisiade_area_name:1 "Louisiade Islands"
+ louisiade_area_adj:1 "Louisiade Islander"
+
  #Melanesia
  melanesia_area:1 "Melanesia"
  melanesia_area_name:1 "Melanesian"
@@ -852,6 +921,38 @@
  southeastern_melanesia_area:1 "Southeastern Melanesia"
  southeastern_melanesia_area_name:1 "Southeastern Melanesia"
  southeastern_melanesia_area_adj:1 "Southeastern Melanesian"
+
+ west_solomon_area:1 "West Solomons"
+ west_solomon_area_name:1 "West Solomons"
+ west_solomon_area_adj:1 "West Solomons"
+
+ east_solomon_area:1 "East Solomons"
+ east_solomon_area_name:1 "East Solomons"
+ east_solomon_area_adj:1 "East Solomons"
+
+ vanuatu_area:1 "Vanuatu"
+ vanuatu_area_name:1 "Vanuatu"
+ vanuatu_area_adj:1 "Vanuatu"
+
+ lau_area:1 "Lau"
+ lau_area_name:1 "Lau"
+ lau_area_adj:1 "Lau"
+
+ samoa_area:1 "Samoa"
+ samoa_area_name:1 "Samoa"
+ samoa_area_adj:1 "Samoan"
+
+ tonga_area:1 "Tonga"
+ tonga_area_name:1 "Tonga"
+ tonga_area_adj:1 "Tonga"
+
+ tuamotu_islands_area:1 "Tuamotu Islands"
+ tuamotu_islands_area_name:1 "Tuamotu Islands"
+ tuamotu_islands_area_adj:1 "Tuamotu Islander"
+
+ society_islands_area:1 "Society Islands"
+ society_islands_area_name:1 "Society Islands"
+ society_islands_area_adj:1 "Society Islander"
  
  #Micronesia
  micronesia_area:2 "Micronesia"
@@ -1321,3 +1422,5 @@
  north_island_provincegroup:1 "North Island"
  nz_islands_provincegroup:1 "New Zealand Islands"
  norfolk_island_provincegroup:1 "Norfolk Island"
+ 
+ papua_new_guinea_provincegroup:1 "Papua New Guinea"
