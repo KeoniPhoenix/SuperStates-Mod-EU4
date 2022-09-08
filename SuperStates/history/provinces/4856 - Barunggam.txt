@@ -1,1 +1,4 @@
-#4656 - Barunggam
+#4856 - Southern Cascades
+
+discovered_by = north_american
+discovered_by = mesoamerican

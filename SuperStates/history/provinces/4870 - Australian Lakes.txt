@@ -1,1 +1,4 @@
-#4870 - Australian Lakes
+#4870 - Sangre de Cristo Mountains
+
+discovered_by = north_american
+discovered_by = mesoamerican

@@ -1,1 +1,27 @@
-# No previous file for Westenhuck
+#4874 - Cache
+
+owner = UTA
+controller = UTA
+add_core = UTA
+religion = mormon
+trade_goods = livestock
+capital = "Logan"
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 1
+is_city = yes #5150
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

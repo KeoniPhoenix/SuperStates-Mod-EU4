@@ -1,1 +1,4 @@
-#4850 - Biri
+#4850 - Black Canyon
+
+discovered_by = north_american
+discovered_by = mesoamerican

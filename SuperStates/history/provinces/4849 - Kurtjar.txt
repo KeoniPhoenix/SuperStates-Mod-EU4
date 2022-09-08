@@ -1,1 +1,4 @@
-#4849 - Kurtjar
+#4849 - Grand Canyon
+
+discovered_by = north_american
+discovered_by = mesoamerican
