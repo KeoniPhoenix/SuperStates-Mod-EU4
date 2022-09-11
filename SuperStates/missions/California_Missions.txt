@@ -22,7 +22,7 @@ cal_alta = {
 		provinces_to_highlight = {
 			OR = {
 				area = black_rock_area
-				province_id = 3279
+				province_id = 4867
 				province_id = 949
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -32,7 +32,7 @@ cal_alta = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3279 = { #Nye
+			4867 = { #Pahrump
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			949 = { #Clark
@@ -47,7 +47,14 @@ cal_alta = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_utah_area = {
+			utah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dixie_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -64,7 +71,8 @@ cal_alta = {
 		provinces_to_highlight = {
 			OR = {
 				area = salt_lake_area
-				area = south_utah_area
+				area = dixie_area
+				area = utah_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -73,7 +81,11 @@ cal_alta = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			south_utah_area = {
+			utah_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dixie_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -640,6 +652,10 @@ cal_trade_and_navy = {
 							trade_goods = wine
 						}
 						add_base_production = 2
+						add_province_modifier = {
+							name = "cal_wine_industry"
+							duration = 9125
+						}
 					}
 				}
 			}

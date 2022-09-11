@@ -1,0 +1,22 @@
+#3348 - Ayangkidarrba
+
+owner = QLD
+controller = QLD
+add_core = QLD
+add_core = NQL
+culture = queenslander
+religion = austral_catholic
+capital = "Gununa"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes #2280
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

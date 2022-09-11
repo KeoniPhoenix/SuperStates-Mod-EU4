@@ -717,12 +717,15 @@ vrm_flavor = {
 			}
 		}
 		effect = {
+			add_country_modifier = {
+				name = "new_england_prosperity"
+				duration = 18250
+			}
 			custom_tooltip = new_developed_new_england_tooltip
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						region = new_england_region
-						NOT = { nationalism = 1 }
 					}
 					random_list = {
 						1 = { add_base_tax = 1 }

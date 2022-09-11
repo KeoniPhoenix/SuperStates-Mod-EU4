@@ -15,6 +15,10 @@ base_manpower = 1
 is_city = yes #1000
 discovered_by = australian
 
+1399.1.1 = {
+	fort_15th = yes #Military Base
+}
+
 1901.1.1 = {
 	owner = AUS
 	controller = AUS

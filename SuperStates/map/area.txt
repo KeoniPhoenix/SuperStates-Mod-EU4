@@ -656,8 +656,28 @@ subarctic_islands_area = { #4
 	1978 1979 370 371
 }
 
-greenland_area = { #5
-	1104 1105 4632 4633 4634
+# greenland_area = { #4
+# 	4922 4917 4918 4919
+# }
+
+qeqqata_area = {
+	4634 4633 4922
+}
+
+nuuk_area = {
+	1105 4916 1104 4917 4921
+}
+
+kujalleq_area = {
+	4914 4632 4915
+}
+
+tunu_area = {
+	4910 4908 4907 4909 4920
+}
+
+sermersooq_area = {
+	4913 4912 4911 4919 4918
 }
 
 ########################################
@@ -1679,12 +1699,12 @@ indian_ocean_islands_area = { #5
 	574 1101 1248 1998 1999
 }
 
-papua_area = { #5 (Papuan Peninsula)
-	1237 2719 2720 2721 2722
+papua_area = { #4 (East Papua)
+	3374 1237 3375 3373
 }
 
 vogelkop_area = { #4
-	1245 2718 2723 2724
+	3363 3362 3361 1245 2718
 }
 
 # melanesia_area = { #4
@@ -1692,7 +1712,7 @@ vogelkop_area = { #4
 # }
 
 fiji_area = { #3
-	1242 4937 4938
+	1242 4938 4900
 }
 
 # micronesia_area = { #4
@@ -2443,8 +2463,8 @@ banjar_area = { # 5
 	639 2707 4800 4801 2708
 }
 
-molluca_area = { #4
-	645 2717 646 647
+molluca_area = { #5
+	645 2717 646 647 3364
 }
 
 spice_islands_area = { #3
@@ -3174,7 +3194,7 @@ central_valley_area = {
 }
 
 mojave_area = {
-    3236 949 3248 3279 3254
+    3236 949 3248 3254 4867
 }
 
 san_pablo_area = {
@@ -3195,11 +3215,15 @@ central_coast_area = {
 
 #Colorado
 colorado_area = {
-    992 3260 993 3259 3258
+	993 3259 3258 4859
 }
 
-north_colorado_area = {
-	3256 3257 991 990
+denver_area = {
+	3256 3257 990
+}
+
+western_slope_area = {
+	4858 991 3260 992 3387
 }
 
 #Connecticut
@@ -3398,7 +3422,7 @@ nebraska_area = {
 
 #Nevada
 black_rock_area = {
-	948 951 950
+	948 951 950 3279 4866
 }
 
 #mojave
@@ -3418,7 +3442,11 @@ north_jersey_area = {
 # }
 
 new_mexico_area = {
-	959 957 4570 4572 956
+	957 4570 956 4864 4863
+}
+
+gila_area = {
+	4571 959 4572 4865
 }
 
 #New York
@@ -3431,11 +3459,11 @@ erie_area = {
 }
 
 hudson_valley_area = {
-	2593 2600 3284 4942 2599
+	2593 3284 4848 2599 3388
 }
 
 new_york_area = {
-	2601 3283 3282 3281
+	2601 3283 3282 3281 2600
 }
 
 long_island_area = {
@@ -3554,12 +3582,15 @@ texas_gulf_area = {
 }
 
 #Utah
-south_utah_area = {
-	953 954 955
+utah_area = {
+	3300 953 4875
+}
+dixie_area = {
+	954 955 4871 4847 4872
 }
 
 salt_lake_area = {
-	952 3299 3300
+	952 3299 4874 4873
 }
 
 #New Hampshire
@@ -3986,12 +4017,16 @@ centralia_area = {
 }
 
 north_australia_area = {
-	3173 1092 1093 3172 2009
+	3173 1092 1093 3172
+}
+
+tiwi_islands_area = {
+	3347 3346 3345
 }
 
 # Queensland
 carpentaria_area = {
-	3183 3184 3185 #### ####
+	3183 3184 3185 2009 3348
 }
 
 north_queensland_area = {
@@ -4014,10 +4049,13 @@ central_queensland_area = {
 	3179 2010 3177
 }
 
+torres_straits_area = {
+	3349 3350 3351
+}
 
 # South Australia
 south_coast_area = {
-	1088 1089 3188 3189 3187
+	1088 1089 3188 3189 3352
 }
 
 south_australia_area = {
@@ -4025,7 +4063,7 @@ south_australia_area = {
 }
 # Victoria
 bass_strait_area = {
-	2020 2018 2019 3193
+	2020 2018 2019 3193 3187
 }
 
 murray_area = {
@@ -4070,20 +4108,20 @@ leeward_hawaiian_islands_area = { #4
 	968 1994 1997 3228
 }
 
-marianas_area = { #3
-	1235 1240 2023
+marianas_area = { #4
+	1235 1240 2023 4896
 }
 
 western_polynesia_area = { #4
-	1243 1990 1241 3016
+	1241 3016 3389 3338
 }
 
 central_polynesia_area = { #5
-	1989 2617 3014 3015 3315
+	3014 3336 3015 3333 3334
 }
 
 eastern_polynesia_area = { #3
-	1987 1244 1988
+	1988 3365 3390
 }
 
 #New Zealand
@@ -4105,24 +4143,84 @@ auckland_area = {
 
 #OCEANIA (MODDED)
 
+vanuatu_area = { #5
+	4888 1239 4887 4886 4885
+}
+
 melanesia_area = { #3
-	1236 1238 1992
+	1992 1991 4899 1990
 }
 
 transvaal_area = { #4
 	4781 4782 4783 4784
 }
 
-micronesia_area = { #4
-	2726 2727 2728 1996
+micronesia_area = { #5
+	2726 2727 1996 4902 4897
 }
 
-eastern_micronesia_area = { #3	
-	1995 1993 1991
+eastern_micronesia_area = { #4
+	1995 1993 4898 2728
 }
 
 southeastern_melanesia_area = { #3
-	1239 1986 4637
+	1986 4883 4884 4637
+}
+
+bismarck_islands_area = { #5
+	1236 3383 3384 3385 3380
+}
+
+papua_highlands_area = { #5
+	3386 3368 3369 3370 3371
+}
+
+papua_selatan_area = { #5
+	2724 3355 3356 2723 3354
+}
+
+momase_area = { #4
+	2720 3379 2719 3381
+}
+
+fly_river_area = { #5
+	2722 2721 3367 3366 3372
+}
+
+tabi_saireri_area = { #5
+	3358 3359 3360 3357 3382
+}
+
+louisiade_area = { #3
+	3376 3377 3378
+}
+
+west_solomon_area = { #4
+	4895 4893 4892 1238
+}
+
+east_solomon_area = { #4
+	4890 4891 4889 4894
+}
+
+lau_area = {
+	4937 4901 4903
+}
+
+tonga_area = {
+	1989 4904 4905 4906
+}
+
+samoa_area = {
+	3315 2617 1243 3335
+}
+
+tuamotu_islands_area = {
+	3344 1244 3343 3342 3341
+}
+
+society_islands_area = {
+	3340 1987 3339
 }
 
 #VANILLA OCEANIA (UNMODDED)

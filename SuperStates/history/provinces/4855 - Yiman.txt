@@ -1,2 +1,4 @@
-#4855 - Yiman
+#4855 - San Rafael Mountains
 
+discovered_by = north_american
+discovered_by = mesoamerican

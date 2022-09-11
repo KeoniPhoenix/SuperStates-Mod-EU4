@@ -16,11 +16,11 @@ country_event = {
 	
 	trigger = {
 		any_owned_province = {
-			area = greenland_area
+			region = greenland_region
 			is_capital = no
 			owned_by = ROOT
 		}
-		greenland_area = {
+		greenland_region = {
 			type = all
 			NOT = { culture = greenlandic }
 		}
@@ -35,21 +35,21 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			greenland_area = {
+			greenland_region = {
 				type = all
 				has_owner_accepted_culture = no
 			}
 		}
 		modifier = {
 			factor = 0.5
-			greenland_area = {
+			greenland_region = {
 				type = all
 				has_owner_religion = no
 			}
 		}
 		modifier = {
 			factor = 4
-			greenland_area = {
+			greenland_region = {
 				type = all
 				is_core = ROOT
 			}
@@ -57,7 +57,7 @@ country_event = {
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				area = greenland_area 
+				region = greenland_region 
 				development = 35
 			}
 		}
@@ -69,7 +69,7 @@ country_event = {
 	
 	option = {
 		name = "GreenlandFlavor.1opta"
-		greenland_area = {
+		greenland_region = {
 			change_culture = greenlandic
 			add_core = GRL
 		}

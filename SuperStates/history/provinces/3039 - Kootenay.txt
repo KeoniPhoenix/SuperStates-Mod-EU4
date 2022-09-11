@@ -1,11 +1,11 @@
-#Kootenay
+#Central Okanagan
 
 owner = BCO
 controller = BCO
 add_core = BCO
 culture = british_columbian
 religion = s_protestant
-capital = "Nelson" 
+capital = "Kelowna" 
 is_city = yes #2210
 trade_goods = grain
 hre = no 

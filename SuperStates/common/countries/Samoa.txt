@@ -58,5 +58,10 @@ leader_names = {
 }
 
 ship_names = {
-	Samao
+	Apolima Aleipata
+	Fanuatapu
+	Manono
+	Nu'ulopa Nu'usafe'e Nu'utele Nu'ulua Namua
+	Samao Savai'i
+	Upolu
 }

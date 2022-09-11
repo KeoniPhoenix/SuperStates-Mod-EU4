@@ -529,9 +529,8 @@ renaissance = {
 			potential = {
 				continent = north_america
 				NOT = {
-					region = central_america_region
 					region = greater_antilles_region
-					area = greenland_area
+					region = greenland_region
 					area = east_virgin_islands_area
 					area = anguilla_channel_area
 					area = basseterre_bay_area
@@ -555,9 +554,8 @@ renaissance = {
 			potential = {
 				continent = north_america
 				NOT = {
-					region = central_america_region
 					region = greater_antilles_region
-					area = greenland_area
+					region = greenland_region
 					area = east_virgin_islands_area
 					area = anguilla_channel_area
 					area = basseterre_bay_area
@@ -581,9 +579,8 @@ renaissance = {
 			potential = {
 				continent = north_america
 				NOT = {
-					region = central_america_region
 					region = greater_antilles_region
-					area = greenland_area
+					region = greenland_region
 					area = east_virgin_islands_area
 					area = anguilla_channel_area
 					area = basseterre_bay_area
@@ -1081,12 +1078,12 @@ new_world_i = {
 							}
 							greater_antilles_region = { owned_by = ROOT }
 							lesser_antilles_region = { owned_by = ROOT }
-							greenland_area = { owned_by = ROOT }
+							greenland_region = { owned_by = ROOT }
 							south_america_superregion = { owned_by = ROOT }
-							central_america_region = { owned_by = ROOT }
+							# central_america_region = { owned_by = ROOT }
 							new_zealand_region = { owned_by = ROOT }
 							oceania_superregion = { owned_by = ROOT }
-							papua_area = { owned_by = ROOT }
+							panama_area = { owned_by = ROOT }
 						}
 						OR = {
 							technology_group = north_american
@@ -1488,9 +1485,8 @@ printing_press = {
 			potential = {
 				continent = north_america
 				NOT = {
-					region = central_america_region
 					region = greater_antilles_region
-					area = greenland_area
+					region = greenland_region
 					area = east_virgin_islands_area
 					area = anguilla_channel_area
 					area = basseterre_bay_area

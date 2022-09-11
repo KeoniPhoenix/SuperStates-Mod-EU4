@@ -1,44 +1,30 @@
 #837 - Nicaragua
 
-culture = miskito
-religion = animism
-capital = "Nicaragua"
-trade_goods = unknown
+owner = NCG
+controller = NCG
+add_core = NCG
+capital = "León"
+religion = s_catholic
+culture = nicaraguan
 hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
-native_size = 20
-native_ferocity = 2
-native_hostileness = 5
-
-1523.1.1 = {
-	owner = SPA
-	controller = SPA
-	add_core = SPA
-	capital = "Leon"
-	culture = castillian
-	religion = catholic
-	is_city = yes
-	trade_goods = coffee
-} # First permanent Spanish settlement 
+is_city = yes #211278
+base_tax = 4
+base_production = 5
+base_manpower = 2
+trade_goods = livestock
+discovered_by = north_american
+discovered_by = mesoamerican
 
 1810.9.16 = {
-#	add_core = MEX
-	add_core = NCG
 	add_core = CAM
-#	controller = MEX 
-	culture = nicaraguan
-} # Mexican War of Independence
+}
 
 1823.9.15 = {
 	owner = CAM
 	controller = CAM
-	remove_core = SPA
 }
 
 1838.11.5 = {
 	owner = NCG
 	controller = NCG
-#	remove_core = MEX
 }

@@ -1462,7 +1462,7 @@ new_england_state_reform = {
 	modifiers = {
 		reform_progress_growth = 0.05
 		global_unrest = -1
-		max_absolutism = 10
+		max_absolutism = -10
 	}
 	
 	#factions = {
@@ -1559,7 +1559,7 @@ slave_state_reform = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = no
 		enables_aristocratic_idea_group = yes
-		locked_government_type = yes
+		# locked_government_type = yes
 	}
 	conditional = {
 		allow = {
@@ -2102,6 +2102,9 @@ frequent_elections_reform = {
 				has_government_attribute = has_term_election
 			}
 			has_reform = lottery_reform
+		}
+		NOT = {
+			has_reform = new_england_state_reform
 		}
 	}
 	modifiers = {

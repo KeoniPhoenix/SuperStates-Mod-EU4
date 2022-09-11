@@ -84,8 +84,13 @@ leader_names = {
 }
 
 ship_names = {
-	"Fort-de-France"
-	"Le Marin"
-	"Saint-Pierre"
-	"Le Trinite"
+	"Basse-Pointe" Bellefontaine
+	"Case-Pilote"
+	Ducos
+	"Fort-de-France" "Fonds-Saint-Denis"
+	"Grand'Riviere" "Gros-Morne"
+	"Le Marin" "La Trinite" "Le Carbet" "Le Diamont" "Le Francois" "Le Lamentin" "Le Marigot" "Le Morne-Rouge" "Le Precheur" "Le Robert" "Les Anses-d'Arlet"
+	Macouba
+	"Riviere-Pilote" "Riviere-Salee"
+	"Saint-Pierre" "Saint-Esprit" "Saint-Joseph" "Saine-Anne" "Sainte-Luce" "Sainte-Marie" Schoelcher
 }

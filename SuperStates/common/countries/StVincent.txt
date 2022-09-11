@@ -76,8 +76,13 @@ leader_names = {
 }
 
 ship_names = {
+	Argyle
+	Belmont
 	Charlotte
-	Grenadines
+	Derrick Dovers Diamond
+	Fancy
+	Grenadines Georgetown
+	Kingstown
 	"Saint Andrew"
 	"Saint David"
 	"Saint George"

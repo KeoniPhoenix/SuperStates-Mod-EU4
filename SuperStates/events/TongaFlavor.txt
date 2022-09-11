@@ -15,7 +15,28 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			tag = TOG #Native Tonga
+		}
 		1989 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tongan }
+			NOT = { is_core = TGA }
+		}
+		4904 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tongan }
+			NOT = { is_core = TGA }
+		}
+		4905 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = tongan }
+			NOT = { is_core = TGA }
+		}
+		4906 = { 
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = tongan }
@@ -32,19 +53,39 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			1989 = { has_owner_accepted_culture = no }
+			OR = {
+				1989 = { has_owner_accepted_culture = no }
+				4904 = { has_owner_accepted_culture = no }
+				4905 = { has_owner_accepted_culture = no }
+				4906 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			1989 = { has_owner_religion = no }
+			OR = {
+				1989 = { has_owner_religion = no }
+				4904 = { has_owner_religion = no }
+				4905 = { has_owner_religion = no }
+				4906 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			1989 = { is_core = ROOT }
+			OR = {
+				1989 = { is_core = ROOT }
+				4904 = { is_core = ROOT }
+				4905 = { is_core = ROOT }
+				4906 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			1989 = { development = 35 }
+			OR = {
+				1989 = { development = 35 }
+				4904 = { development = 35 }
+				4905 = { development = 35 }
+				4906 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +96,18 @@ country_event = {
 	option = {
 		name = "TonganFlavor.1opta"
 		1989 = { 
+			change_culture = tongan
+			add_core = TGA
+		}
+		4904 = { 
+			change_culture = tongan
+			add_core = TGA
+		}
+		4905 = { 
+			change_culture = tongan
+			add_core = TGA
+		}
+		4906 = { 
 			change_culture = tongan
 			add_core = TGA
 		}

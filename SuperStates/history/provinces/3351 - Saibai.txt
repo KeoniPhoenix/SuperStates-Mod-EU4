@@ -1,0 +1,22 @@
+#3351 - Saibai
+
+owner = QLD
+controller = QLD
+add_core = QLD
+add_core = TSI
+culture = torres_strait_islander
+religion = austral_protestant
+capital = "Saibai"
+trade_goods = fish
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes #1000
+discovered_by = australian
+
+1901.1.1 = {
+	owner = AUS
+	controller = AUS
+	add_core = AUS
+}

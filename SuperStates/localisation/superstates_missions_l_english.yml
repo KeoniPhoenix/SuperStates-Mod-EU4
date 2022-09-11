@@ -154,7 +154,7 @@
  del_jersey_title:0 "Defeat New Jersey"
  del_jersey_desc:0 "To secure our position in the Mid-Atlantic, New Jersey must be subdued under [Root.GetName] rule."
  del_nyc_title:0 "Dominate New York City"
- del_nyc_desc:0 "The city of New York is a strong economic and political force along the Atlantic. If we wish to secure the east coast, we need to conquer New York.""
+ del_nyc_desc:0 "The city of New York is a strong economic and political force along the Atlantic. If we wish to secure the east coast, we need to conquer New York."
  del_navy_title:0 "Create a Grand Fleet"
  del_navy_desc:0 "With our nation secured, and our nation bordering the Chesapeake Bay and the Atlantic Ocean, we should attempt to create a proper navy!"
 
@@ -272,7 +272,7 @@
  ili_iowa_title:0 "Midwest Expansion"
  ili_iowa_desc:0 "To expand our influence in the Midwest, we should cross the Mississippi and claim lands in Iowa."
  ili_missouri_title:0 "Conquest of Missouri"
- ili_missouri_desc:0 "Missouri stands as a threat to our dominance of the Midwest. Efforts should be made to invade and conquer Missouri."
+ ili_missouri_desc:0 "Missouri stands as a threat to our dominance of the Midwest. Efforts should be made to invade and conquer the state to further our claims west."
  ili_chicagoland_title:0 "Secure Chicagoland"
  ili_chicagoland_desc:0 "Chicago is by far the most important city of our state. By securing the area neighboring Chicago, we can protect and expand our position on Lake Michigan."
  ili_indiana_title:0 "Conquer Indiana"
@@ -712,7 +712,7 @@
  nyc_independence_title:0 "Secure our Independence"
  nyc_independence_desc:0 "We need strong allies if we seek independence."
  nyc_long_island_title:0 "Secure Long Island"
- nyc_long_island_desc:0 "Long Island is a natural extension of New York City, securing it will protect our city."
+ nyc_long_island_desc:0 "Long Island is a natural extension of New York, securing it will protect our city."
  nyc_north_jersey_title:0 "Conquer North Jersey"
  nyc_north_jersey_desc:0 "North Jersey leeches off the wealth of the City. Securing it will allow us to consolidate our influence."
  nyc_south_jersey_title:0 "Secure South Jersey"
@@ -1071,6 +1071,28 @@
  ##################################
  #Canada Provinces and Territories#
  ##################################
+
+ #Arctic Shared Missions
+ NUN_embrace_renaissance_title:0 "Embrace the Renaissance"
+ NUN_embrace_renaissance_desc:0 "To catch up with our neighbors on tech, we need to embrace the Renaissance."
+ NUN_military_tech_title:0 "Military Advancements"
+ NUN_military_tech_desc:0 "A new Era of military innovation is upon us, we need to catch up if we seek to survive in the cold north."
+ NUN_high_american_title:0 "High American Dominance"
+ NUN_high_american_desc:0 "We have defeated our foes and will proclaim a new age under High American dominance."
+ arctic_prestige_title:0 "Arctic Prestige"
+ arctic_prestige_desc:0 "We reside in the far north, a harsh region many consider nothing more than a barren wasteland. We must prove to our neighbors that we are worthy."
+ NUN_eastern_canada_title:0 "Protect our Kin"
+ NUN_eastern_canada_desc:0 "We must strive to protect the local Inuit population residing in Northern Quebec and Labrador who have long been under oppression."
+ ALU_pacific_islands_title:0 "The Pacific Islands"
+ ALU_pacific_islands_desc:0 "We must control the islands along the Pacific Coast."
+ ALU_arctic_prestige_title:0 "Arctic Prestige"
+ ALU_arctic_prestige_desc:0 "We must prove we are worthy of controlling the north!"
+ ALU_alaska_area_title:0 "Push For Alaska"
+ ALU_alaska_area_desc:0 "Alaska is cold, sparsely populated and big. A perfect state to conquer!"
+ ALU_cascadia_title:0 "Conquer Cascadia"
+ ALU_cascadia_desc:0 "We must conquer Cascadia, a forested and mountainous region along the Pacific."
+ ALU_arctic_region_title:0 "Dominate the Arctic"
+ ALU_arctic_region_desc:0 "We must dominate the Northern Arctic, and proclaim the birth of the Arctic Union!"
  
  #Alberta Missions
  
@@ -1095,6 +1117,41 @@
  #NW Territories Missions
  
  #Nunavut Missions
+ NUN_arctic_region_title:0 "Dominate the Arctic"
+ NUN_arctic_region_desc:0 "We must dominate the Northern Arctic, and proclaim the birth of a new Arctic Union!"
+ NUN_alaska_area_title:0 "Push for Alaska"
+ NUN_alaska_area_desc:0 "Alaska is cold, sparsely populated and big. A perfect state to conquer!"
+ NUN_cascadia_title:0 "Conquer Cascadia"
+ NUN_cascadia_desc:0 "We must conquer Cascadia, a forested and mountainous region along the Pacific."
+ nun_explore_title:0 "Reinstate the Icelandic Sagas"
+ nun_explore_desc:0 "The Norse were the first europeans to discover the lands of Helluland. In honor of this, we must reinvigorate the old Icelandic Sagas of the past and venture beyond back into the European heartland itself!"
+ icelandic_saga_greenland_title:0 "Greenlandic Saga"
+ icelandic_saga_greenland_desc:0 "If our claim to a second Icelandic Saga is going to be recognized, not only by the nations of the world but our own population, then we need to accomplish something noteworthy enough to prove it. Thus, the uninhabited island of Greenland is the perfect candidate. Not only because of its direct link to the original Icelandic Sagas, but also due to its ease of conquest by any [Root.GetAdjective] forces."
+ icelandic_saga_vinland_title:0 "Vinlandic Saga"
+ icelandic_saga_vinland_desc:0 "Upon the recognition of our claim to a Second Icelandic Saga with the acquisition of Greenland, we can now push further claims into Vinland."
+ the_saga_to_iceland_title:0 "End of the Second Saga"
+ the_saga_to_iceland_desc:0 "With the discovery and acquisition of all territories within the original Icelandic Saga, we can officially now declare the end of the Second Icelandic Saga."
+ NUN_helluland_title:0 "Declaration of Helluland"
+ NUN_helluland_desc:0 "We are true Nordic men within the American Continent, thus due to our location we can claim the title of Helluland."
+ nun_establish_high_seas_navy_title:0 "Create a Grand Fleet"
+ nun_establish_high_seas_navy_desc:0 "In order to be able to project power overseas a high seas navy is a must. Warships may be expensive but it is an investment that is well worth if if we can find new markets to dominate and people to conquer."
+ nun_dominate_home_trade_node_title:0 "Dominate Trade"
+ nun_dominate_home_trade_node_desc:0 "Our merchant communities have been growing stronger and stronger for a long time now .It is time we give them the help they require to truly dominate our domestic trade. No foreign power must be allowed to influence the well of being of our subjects"
+ nun_coast_of_hudson_bay_title:0 "Secure the Hudson"
+ nun_coast_of_hudson_bay_desc:0 "To further our control over the region, we must conquer the Hudson Bay."
+ nun_dominate_two_trade_nodes_title:0 "Expand Trade Networks"
+ nun_dominate_two_trade_nodes_desc:0 "We must expand trade to areas across Canada, to establish a coast to coast trade network."
+ nun_centralize_state_title:0 "Centralize the State"
+ nun_centralize_state_desc:0 "We need to centralize the state for greater control over our trade and economic policies."
+ nun_economy_title:0 "Economic Investments"
+ nun_economy_desc:0 "Let us never sit idle, even in peaceful times. Instead we must use our resources with industry, in order to make sure that we have funds available in time if misfortune should strike upon us."
+ nun_build_manufactories_title:0 "Build Manufactories"
+ nun_build_manufactories_desc:0 "Great advances are being made in the field of production, both technological and organizational. Let us invest greatly in new manufactories, a great industrious revolution might soon be upon us."
+ nun_development_title:0 "Encourage Development"
+ nun_development_desc:0 "Our territories are sparsely populated and remote, and lack any large urban centers. Efforts should be made to encourage growth across our lands."
+ nun_keewatin_title:0 "Develop the North"
+ nun_keewatin_desc:0 "While we might look small (due to the map projection), we actually possess a huge amount land and untapped mineral wealth to our north."
+ 
  
  #Yukon Missions
  
@@ -1151,4 +1208,43 @@
  lpn_alamo_desc:0 "We must never forget the brave Texans who fought for our Independence during the Texan Revolution. Preserving the Alamo in San Antonio must be a top priority."
  lpn_unity_title:0 "Cultural Unity"
  lpn_unity_desc:0 "Efforts must be made to unify our culture and religion to create stability in the realm."
+ 
+ #Ottawa-Gatineau
+ otg_buildup_title:0 "Rally our Troops"
+ otg_buildup_desc:0 "Any growing country must maintain a reasonably sized army. By expanding our forces we can both further our political interests abroad and stimulate our domestic economy."
+ otg_ontario_title:0 "Seize Toronto"
+ otg_ontario_desc:0 "Toronto, the largest city in Canada and capital of Ontario, stands as a powerful hub along the Lakes; a strategically important target we must seize by any means necessary."
+ otg_ontario_2_title:0 "Defeat Ontario"
+ otg_ontario_2_desc:0 "While we have taken Toronto, Ontario still stands as a formidable threat to our dominance of the region and prevents safe expansion west."
+ otg_dev_capital_title:0 "Expand the Capital"
+ otg_dev_capital_desc:0 "As a small city-state, urban centers along the Ottawa River must be expanded if we wish to maintain independent!"
+ otg_unite_title:0 "Unite Ottawa & Gatineau"
+ otg_unite_desc:0 "Ottawa and Gatineau have long shared a history together under the National Capital Region and have prospered through combined economic partnerships. While the twin cities are separated by the Ottawa River, we share a strong bond with our sister city that must be unified under our banner!"
+ otg_culturally_unify_title:0 "Cultural Unity"
+ otg_culturally_unify_desc:0 "Cultural tensions between the French speaking populous in Gatineau and the English speaking populous in Ottawa are hurting our potential of a greater Ottawa-Gatineau. We must embrace a policy of cultural acceptance or expulsion to restore order to the sister cities."
+ otg_develop_more_title:0 "A United Metropolitan"
+ otg_develop_more_desc:0 "We must share the wealth with our sister city, to mutually benefit from our growth. Careful management will allow the new Ottawa-Gatineau Metropolitan area to become a dominant economic and political force in Canada and the Northeast."
+ otg_independence_title:0 "Secure our Independence"
+ otg_independence_desc:0 "We must fight for our survival as a small city-state and secure our independence."
+ otg_quebec_1_title:0 "Annex Montreal"
+ otg_quebec_1_desc:0 "Montreal is a large and strategically important city in Quebec that allows easy access to the Atlantic by traveling through the St Lawrence River. Such an important city and the area around it should be annexed immediately."
+ otg_quebec_2_title:0 "Conquer Quebec"
+ otg_quebec_2_desc:0 "A final push should be made to defeat Quebec and conquer the city of Québec, to finally achieve free access to the Atlantic."
+
+ #Vancouver (Island)
+ vcv_independence_title:0 "Secure our Independence"
+ vcv_independence_desc:0 "We must fight for our survival as a small state and secure our independence and Vancouver Island."
+ vcv_gulf_islands_title:0 "Conquer the Gulf Islands"
+ vcv_gulf_islands_desc:0 "Securing the Gulf Islands will strengthen our position along the Puget Sound and provide security to Vancouver Island."
+ vcv_puget_title:0 "Defeat Washington"
+ vcv_puget_desc:0 "The American state of Washington and the important city of Seattle must be conquered to ensure dominance over the Salish Sea."
+ vcv_pacific_columbian_title:0 "Vancouverite Dominance"
+ vcv_pacific_columbian_desc:0 "*"
+ vcv_vancouver_city_title:0 "Vancouver City"
+ vcv_vancouver_city_desc:0 "We must cross the Strait of Georgia and strike at Vancouver, a city that shares the same name as our [Root.GovernmentName]."
+ vcv_pacific_coast_title:0 "Columbian Coast"
+ vcv_pacific_coast_desc:0 "We need to conquer the land of British Columbia that are along the coast including the island of Haida to better secure our island."
+ vcv_interior_bco_title:0 "Defeat British Columbia"
+ vcv_interior_bco_desc:0 "British Columbia is weak without Vancouver and their coast. A final strike must be put forward to eliminate our old oppressors!"
+
  

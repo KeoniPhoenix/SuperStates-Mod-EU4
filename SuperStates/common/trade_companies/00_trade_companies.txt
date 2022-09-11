@@ -292,10 +292,10 @@ trade_company_moluccas = {
 	color = { 196 191 61 }
 	
 	provinces = {
-		646 2687 2688 2689 2690 2718 2724 1357 1245 647 645 2717 648 649 650 2725 2696 2695 635 633 634 643 2713 2714 642 2715 641 2716 632 627 2691 631 2693 629 2692 628 626 625 630 624 644 2723
-		2722 2721 1237 2720 2719 # eastern papua
-		1789 # papua wasteland
-		4790 4791 4792 4793 4794 4795 4796 4797 4798 4845
+		646 2687 2688 2689 2690 1357 647 645 2717 648 649 650 2725 2696 2695 635 633 634 643 2713 2714 642 2715 641 2716 632 627 2691 631 2693 629 2692 628 626 625 630 624 644
+		# eastern papua
+		# papua wasteland
+		4790 4791 4792 4793 4794 4795 4796 4797 4798 4845 3364
 	}
 
 	# Generic
@@ -1362,14 +1362,15 @@ trade_company_polynesia = {
 	color = { 220 138 57 }
 	
 	provinces = {
-		1238 1242 1244 1989 1243
-		1990 1992 1240 1997
+		1244 1989 1243
+		1990 1992 1240 1997 4896
 		1235 1995 1996 1241 1991
-		1993 1994 1988 1986 1236
-		1987 1239 2726 2727 2728
+		1993 1994 1988 4897 4898
+		1987 2726 2727 2728 4902
 		968 969 3226 3227 3228		#Hawaii
 		2023 2617 3014 3015 3016 3315	#Other Pacific Islands
-		4937 4938
+		3333 3334 3335 3336 3338 4904 4905 4906
+		3339 3340 3341 3342 3343 3344 3365 3390 3389 4899
 	}
 	
 	# Specific
@@ -1393,7 +1394,8 @@ trade_company_western_australia = {
 		3206 1086 3207 1087 3205 #western_australia
 		3174 1094 3178 #centralia
 		1091 3191 3190 1090 #south_australia
-		3173 1092 1093 3172 2009 #north_australia
+		3173 1092 1093 3172 #north_australia
+		3347 3346 3345 #Tiwi
 	}
 	
 	# Specific
@@ -1410,7 +1412,7 @@ trade_company_eastern_australia = {
 	color = { 189 183 163 } #Koala
 	
 	provinces = {
-		1088 1089 3188 3189 3187 #south_coast
+		1088 1089 3188 3189 3187 3352 #south_coast
 		3194 3195 3196 3197 3168 #murray
 		2020 2018 2019 3193 #bass_strait
 		2021 2022 3192 3317 3316 #tasmania
@@ -1418,7 +1420,7 @@ trade_company_eastern_australia = {
 		2016 3171 3169 3170 3186 #murray_darling
 		3180 3176 1790 3175 #cooksland
 		1791 3182 3181 #north_queensland
-		3183 3184 3185 #carpentaria
+		3183 3184 3185 2009 3348 #carpentaria
 		2011 2014 3164 #sydney
 		3165 3166 2015 #hunter
 		2017 2012 2013 3167 4648 #canberra
@@ -1440,7 +1442,7 @@ trade_company_new_zealand = {
 	color = { 142 229 63 } #Kiwi
 	
 	provinces = {
- 		1106 1107 1108 1109 1246 2737 2738 2739 4637 4638 4639 4640 4642 4643 4644 4647 4649 4650 4939 #New Zealand
+ 		1106 1107 1108 1109 1246 2737 2738 2739 4638 4639 4640 4642 4643 4644 4647 4649 4650 4939 #New Zealand
 	}
 	
 	# Specific
@@ -1505,7 +1507,7 @@ trade_company_san_francisco_bay = {
 		947 2733 3027 2666 3137 #jefferson
 		3136 962 963 #east_cascade
 		3244 2734 3247 945 3249 #central_valley
-		948 951 950 #black_rock
+		948 951 950 3279 4866 #black_rock
 	}
 	
 	# Specific
@@ -1613,9 +1615,9 @@ trade_company_sonoran_desert = {
 	provinces = {
 		937 938 3239 4571 928 #baja_arizona
 		936 3237 3238 939 940 #arizona
-		3236 949 3248 3279 3254 #mojave
+		3236 949 3248 3254 4867 #mojave
 		922 923 924 925 926 #chihuahua
-		959 957 4570 4572 956 #new_mexico
+		959 957 4570 4572 956 4865 4864 4863 #new_mexico
 		2484 3298 4573 #trans_pecos
 	}
 	
@@ -1632,13 +1634,15 @@ trade_company_sonoran_desert = {
 trade_company_rocky_mountains = {
 	color = { 111 38 61 } #Avalanche Burgundy
 	provinces = {
-		953 954 955 #south_utah
-		952 3299 3300 #salt_lake
+		954 955 4871 4847 4872 #south_utah
+		3300 953 4875 #utah
+		952 3299 4874 4873 #salt_lake
 		976 3083 3084 977 3085 #idaho
 		3121 980 983 3117 3118 #west_montana
 		987 986 3159 3160 #wyoming
-		992 3260 993 3259 3258 #colorado
-		3256 3257 991 990 #north_colorado
+		3258 4859 3259 993 #colorado
+		990 3256 3257 #north_colorado
+		4858 991 3260 992 3387
 	}
 	
 	# Specific
@@ -1776,7 +1780,7 @@ trade_company_ruperts_land = {
 		2625 2624 2632 #athabasca
 		3010 3210 3209 3211 #peace_river
 		2620 3036 3035 3034 #hudson_islands
-		1104 1105 4632 4633 4634 #greenland
+		#1104 1105 4632 4633 4634 #greenland
 	}
 	
 	# Specific
@@ -1898,7 +1902,7 @@ trade_company_lesser_antilles = {
 		496 4583 497 #south_leeward
 		498 499 500 501 4575 #barlovento
 		3328 4574 3327 502 #south_windward
-		4591 4598 3333 491 3331 3332 #leeward_antilles
+		4591 4598 491 3331 3332 #leeward_antilles
 		#2805 2809 2939 4615 #Eastern Llanos
 		#830 2807 4609 4610 4611 #Maracaibo
 		#741 831 2808 4612 4616 #Venezuela
@@ -2013,11 +2017,11 @@ trade_company_new_york = {
 	
 	provinces = {
 		2615 3264 3312 #delaware
-		2601 3283 3282 3281 4942 #new_york
+		2601 3283 3282 3281 4848 #new_york
 		3026 3128 3285 #long_island
 		2585 3139 2586 4935 #delaware_valley
 		2584 3138 4936 #central_pennsylvania
-		2599 2593 2600 3284 #hudson_valley
+		2599 2593 2600 3284 3388 #hudson_valley
 		2592 3126 3321 3280 #south_jersey
 		2591 2590 3320 3319 3318 #north_jersey
 	}
@@ -2032,3 +2036,34 @@ trade_company_new_york = {
 	}
 }
 
+trade_company_greenland = {
+	color = { 200 200 200 } #Greenlander White
+	
+	provinces = {
+		1104 4632 4915 4914 4913 4912 4918 4919 4911 4910 4920 4908 4909 4907 4917 4916 1105 4633 4922 4634 1804 4921
+	}
+
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_GREENLAND_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_GREENLAND_CANADA_Trade_Company"
+	}
+}
+
+trade_company_melanesia = {
+	color = { 54 120 77 }
+
+	provinces = {
+		4895 4893 4892 1238 4890 4891 4889 4894 4888 1239 4887 4886 4885 4884 4883 1986 4637 4903 4900 1242 4901 4937 4938 3353
+		3349 3350 3351 #Torres Islands
+	}
+	names = {
+		name = "TRADE_COMPANY_MELANESIA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_MELANESIA_AUSTRALIA_Trade_Company"
+	}
+}

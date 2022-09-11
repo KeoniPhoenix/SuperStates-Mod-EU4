@@ -88,5 +88,16 @@ leader_names = {
 }
 
 ship_names = {
+	Atoll
+	Ford
+	"Gardner Pinnacles" Grass
+	Hawai'i Hilo Holoikauaua Honolulu
+	Kaho'olawe Kaohikaipu Ka'ula Kalawao Kauai Kauo Kure
+	Lana'i Laysan Lehua
+	Manana Maro Maui Midway "Mokolea Rock" Mokoli'i Mokumana Mokumanamana "Moku Manu" Mokupapapa "Moku o Lo'e" "Moku Ola" "Moku 'ume'ume" Moloka'i Molokini
+	"Na Mokulua" Nalukakala Nihoa Necker
+	O'ahu
+	Papa'apoho "Pearl and Hermes" Pihemanu Puhahonu
+	Sand
 	"Wake Island"
 }

@@ -1,11 +1,11 @@
-#Greenough
+#Karratha
 
 owner = WAU
 controller = WAU
 add_core = WAU
 culture = western_australian
 religion = austral_catholic
-capital = "Geraldton"
+capital = "Karratha"
 trade_goods = iron
 hre = no
 base_tax = 4

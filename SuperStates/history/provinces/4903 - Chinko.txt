@@ -1,1 +1,34 @@
-# No previous file for Chinko
+#4903 - Kadavu
+
+add_core = LAI
+owner = LAI
+controller = LAI
+culture = melanesian
+religion = animism
+hre = no
+capital = "Vunisea"
+is_city = yes
+trade_goods = fish
+base_tax = 1
+base_production = 1
+base_manpower = 1
+discovered_by = polynesian_tech
+discovered_by = oceanian
+
+
+1643.1.1 = { discovered_by = NED } # Abel Tasman
+
+1874.10.10 = {
+	is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	add_core = FIJ
+	culture = fijian
+	trade_goods = sugar
+}
+
+1970.10.10 = {
+	owner = FIJ
+	controller = FIJ
+}

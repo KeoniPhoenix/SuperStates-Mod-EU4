@@ -1,1 +1,28 @@
-#4847 - Yunawa
+#4847 - Strip
+
+owner = ARZ
+controller = ARZ
+add_core = ARZ
+culture = arizonan 
+religion = mormon
+capital = "Fredonia"
+is_city = yes #1000
+trade_goods = livestock
+hre = no 
+base_tax = 1
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

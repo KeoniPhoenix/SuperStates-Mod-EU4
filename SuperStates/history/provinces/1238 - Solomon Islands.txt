@@ -1,8 +1,8 @@
-#1238 - Solomon Islands
+#1238 - Isabel
 
 culture = melanesian
 religion = animism
-capital = "Honiara"
+capital = "Buala"
 trade_goods = unknown
 hre = no
 base_tax = 1

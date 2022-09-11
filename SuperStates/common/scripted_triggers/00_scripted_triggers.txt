@@ -1503,7 +1503,7 @@ is_volcanic_area = { #polynesia and indonesia
 		# area = northern_polynesia_area #hawaii
 		# area = polynesia_area
 		area = melanesia_area
-		area = papua_area
+		# area = papua_area
 	}
 }
 

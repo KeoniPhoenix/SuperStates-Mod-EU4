@@ -1,4 +1,4 @@
-#3015 - Cook Islands
+#3014 - Cook Islands
 
 #owner = CKI
 #controller = CKI
@@ -6,7 +6,7 @@
 #is_city = yes
 culture = cook_islander
 religion = animism
-capital = "Cook Islands"
+capital = "Oneroa"
 trade_goods = unknown
 hre = no
 base_tax = 2
@@ -41,5 +41,6 @@ discovered_by = polynesian_tech
 1965.8.4 = {
 	owner = CKI
 	controller = CKI
+	add_core = CKI
 	remove_core = NZL
 }

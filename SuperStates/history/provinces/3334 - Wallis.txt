@@ -1,0 +1,21 @@
+#3334 - Wallis
+
+culture = polynesian
+religion = animism
+hre = no
+capital = "Mata'Uta"
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 20
+native_ferocity = 2
+native_hostileness = 8
+discovered_by = polynesian_tech
+discovered_by = oceanian
+
+1887.4.5 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+}#French Protectorate

@@ -35,6 +35,24 @@ country_event = {
 			change_primary_culture = midatlantic_virginian
 		}
 		hidden_effect = {
+			set_ruler_culture = midatlantic_virginian
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = midatlantic_virginian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = virginian
+                        consort_culture = northern_virginian
+                        consort_culture = mountaineer
+                    }
+                }
+                set_consort_culture = midatlantic_virginian
+            }
 			virginia_provincegroup = {
 				limit = {
 					owned_by = ROOT
@@ -82,6 +100,24 @@ country_event = {
 			change_primary_culture = appalachian_virginian
 		}
 		hidden_effect = {
+			set_ruler_culture = appalachian_virginian
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = appalachian_virginian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = virginian
+                        consort_culture = northern_virginian
+                        consort_culture = mountaineer
+                    }
+                }
+                set_consort_culture = appalachian_virginian
+            }
 			virginia_provincegroup = {
 				limit = {
 					owned_by = ROOT

@@ -20,6 +20,7 @@ country_decisions = {
 				province_id = 1235
 				province_id = 1240
 				province_id = 968
+				province_id = 4896
 				superregion = oceania_superregion
 			}
 			OR = {
@@ -53,6 +54,7 @@ country_decisions = {
 			}
 			owns_core_province = 1235 # Guam
 			owns_core_province = 1240 # NMI
+			owns_core_province = 4896 # Rota
 			owns_core_province = 968 # Honolulu
 		}
 		effect = {

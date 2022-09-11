@@ -21,6 +21,48 @@ country_event = {
 			NOT = { culture = solomon_islander }
 			NOT = { is_core = SLM }
 		}
+		4889 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4890 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4891 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4892 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4893 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4894 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
+		4895 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = solomon_islander }
+			NOT = { is_core = SLM }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -32,19 +74,55 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			1238 = { has_owner_accepted_culture = no }
+			OR = {
+				1238 = { has_owner_accepted_culture = no }
+				4889 = { has_owner_accepted_culture = no }
+				4890 = { has_owner_accepted_culture = no }
+				4891 = { has_owner_accepted_culture = no }
+				4892 = { has_owner_accepted_culture = no }
+				4893 = { has_owner_accepted_culture = no }
+				4894 = { has_owner_accepted_culture = no }
+				4895 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			1238 = { has_owner_religion = no }
+			OR = {
+				1238 = { has_owner_religion = no }
+				4889 = { has_owner_religion = no }
+				4890 = { has_owner_religion = no }
+				4891 = { has_owner_religion = no }
+				4892 = { has_owner_religion = no }
+				4893 = { has_owner_religion = no }
+				4894 = { has_owner_religion = no }
+				4895 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			1238 = { is_core = ROOT }
+			OR = {
+				1238 = { is_core = ROOT }
+				4889 = { is_core = ROOT }
+				4890 = { is_core = ROOT }
+				4891 = { is_core = ROOT }
+				4892 = { is_core = ROOT }
+				4893 = { is_core = ROOT }
+				4894 = { is_core = ROOT }
+				4895 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			1238 = { development = 35 }
+			OR = {
+				1238 = { development = 35 }
+				4889 = { development = 35 }
+				4890 = { development = 35 }
+				4891 = { development = 35 }
+				4892 = { development = 35 }
+				4893 = { development = 35 }
+				4894 = { development = 35 }
+				4895 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +133,34 @@ country_event = {
 	option = {
 		name = "SolomonIslandsFlavor.1opta"
 		1238 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4889 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4890 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4891 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4892 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4893 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4894 = { 
+			change_culture = solomon_islander
+			add_core = SLM
+		}
+		4895 = { 
 			change_culture = solomon_islander
 			add_core = SLM
 		}

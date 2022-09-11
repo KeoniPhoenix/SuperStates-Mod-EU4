@@ -50,6 +50,7 @@
  OTG:0 "Ottawa-Gatineau"
  #RUP:0 "Rupert's Land"
  WCN:0 "Western Canada"
+ HELLULAND:0 "Helluland"
 
 #American States and Territories
  ABS:0 "Absaroka"
@@ -345,6 +346,8 @@
  TSM:0 "Tasmania"
  JBT:0 "Jervis Bay Territory"
  NFI:0 "Norfolk Island"
+ THT:0 "Tahiti"
+ TSI:0 "Torres Strait Islands"
  
  #Australian Formables
  AUS:0 "Australia"

@@ -91,5 +91,14 @@ leader_names = {
 }
 
 ship_names = {
+	Acajutla Apopa "Antiguo Cuscatlan"
+	"Cuidad Delgado" Cuscatancingo
 	"El Salvador"
+	Ilopango
+	Jiquilisco
+	"La Union"
+	Metapan
+	Pipil
+	"San Miguel" "San Salvador" "Santa Tecla" "Santa Ana" Sonsonate Soyapango "San Vincent"
+	Tacuba
 }

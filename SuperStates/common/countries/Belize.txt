@@ -91,5 +91,13 @@ leader_names = {
 }
 
 ship_names = {
-	Belize
+	Belize "Bascalar Chico" Belmopan
+	Corozal
+	Dangriga
+	Hopkins Hopeville
+	Ladyville
+	Moran
+	"Orange Walk"
+	"Punta Gorda"
+	Sarteneja "San Pedro" "San Ignacio" Shipyard "San Jose" "Santa Marta"
 }

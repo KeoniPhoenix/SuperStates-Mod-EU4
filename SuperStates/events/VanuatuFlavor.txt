@@ -7,7 +7,7 @@
 
 namespace = VanuatuFlavor
 
-#New Caledonia Culture Event
+#Vanuatu Culture Event
 country_event = {
 	id = VanuatuFlavor.1
 	title = "VanuatuFlavor.1t"
@@ -16,6 +16,30 @@ country_event = {
 	
 	trigger = {
 		1239 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = ni-vanuatu }
+			NOT = { is_core = VAN }
+		}
+		4885 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = ni-vanuatu }
+			NOT = { is_core = VAN }
+		}
+		4886 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = ni-vanuatu }
+			NOT = { is_core = VAN }
+		}
+		4887 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = ni-vanuatu }
+			NOT = { is_core = VAN }
+		}
+		4888 = { 
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = ni-vanuatu }
@@ -32,19 +56,43 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			1239 = { has_owner_accepted_culture = no }
+			OR = {
+				1239 = { has_owner_accepted_culture = no }
+				4885 = { has_owner_accepted_culture = no }
+				4886 = { has_owner_accepted_culture = no }
+				4887 = { has_owner_accepted_culture = no }
+				4888 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			1239 = { has_owner_religion = no }
+			OR = {
+				1239 = { has_owner_religion = no }
+				4885 = { has_owner_religion = no }
+				4886 = { has_owner_religion = no }
+				4887 = { has_owner_religion = no }
+				4888 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			1239 = { is_core = ROOT }
+			OR = {
+				1239 = { is_core = ROOT }
+				4885 = { is_core = ROOT }
+				4886 = { is_core = ROOT }
+				4887 = { is_core = ROOT }
+				4888 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			1239 = { development = 35 }
+			OR = {
+				1239 = { development = 35 }
+				4885 = { development = 35 }
+				4886 = { development = 35 }
+				4887 = { development = 35 }
+				4888 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +103,22 @@ country_event = {
 	option = {
 		name = "VanuatuFlavor.1opta"
 		1239 = { 
+			change_culture = ni-vanuatu
+			add_core = VAN
+		}
+		4885 = { 
+			change_culture = ni-vanuatu
+			add_core = VAN
+		}
+		4886 = { 
+			change_culture = ni-vanuatu
+			add_core = VAN
+		}
+		4887 = { 
+			change_culture = ni-vanuatu
+			add_core = VAN
+		}
+		4888 = { 
 			change_culture = ni-vanuatu
 			add_core = VAN
 		}

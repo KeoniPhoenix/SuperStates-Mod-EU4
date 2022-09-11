@@ -1,2 +1,4 @@
-# No previous file for Sawokli
+#4881 - Great Salt Lake Desert
 
+discovered_by = north_american
+discovered_by = mesoamerican

@@ -1,9 +1,9 @@
 government = republic
 #set_legacy_government = constitutional_republic
-technology_group = north_american
+technology_group = mesoamerican
 religion = s_catholic
 primary_culture = guatemalan
-capital = 841	# Guatemala city
+capital = 2653	# Guatemala city
 
 1528.1.1 = {
     religion = catholic

@@ -1,1 +1,4 @@
-#4868 - Pyemmairrener
+#4868 - Area 51
+
+discovered_by = north_american
+discovered_by = mesoamerican

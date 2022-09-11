@@ -92,6 +92,12 @@ leader_names = {
 }
 
 ship_names = {
-	Darien
-	Panama "Panama City" "Panama Canal"
+	Antón Aguadulce Almirante
+	Bugaba
+	Colón Changuinola Chepo Chitré Capira Chame Coclé
+	Darien David
+	"La Chorrera" "Las Tablas" "La Pintada"
+	Panama "Panamá City" "Panama Canal" Penonomé "Puerto Armuelles"
+	Santiago Soná
+	Veraguas
 }

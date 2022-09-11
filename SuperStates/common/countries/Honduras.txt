@@ -91,5 +91,21 @@ leader_names = {
 }
 
 ship_names = {
+	Catacamas Choloma Chuteca Cofradia Comayagua "Coxen Hole" Cortés
+	Danlí
+	"El Progreso" "El Paraíso"
+	Gracias
+	Guaimaca
 	Honduras
+	Intibucá
+	Juticalpa
+	"La Ceiba" "La Entrada" "La Esperanza" "La Paz" "La Lima" Lenca
+	Morazán
+	Nacaome "Nueva Ocotepeque"
+	Olanchito
+	Potrerillos "Puerto Lempira"
+	"San Lorenzo" "San Pedro Sula" "Santa Bárbara" "Santa Rita" "Santa Rosa de Copán" Siquatepeque
+	Talanga Teguicigalpa Tela Trujillo
+	Villanueva
+	Yoro Yuscarán
 }

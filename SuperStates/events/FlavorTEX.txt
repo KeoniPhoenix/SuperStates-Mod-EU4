@@ -646,6 +646,24 @@ country_event = {
 		hidden_effect = {
 			remove_accepted_culture = texan
 			remove_accepted_culture = eastern_texan
+			set_ruler_culture = southern_texan
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = southern_texan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = texan
+                        consort_culture = eastern_texan
+                        consort_culture = tejano
+                    }
+                }
+                set_consort_culture = southern_texan
+            }
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -689,6 +707,24 @@ country_event = {
 		hidden_effect = {
 			remove_accepted_culture = texan
 			remove_accepted_culture = tejano
+			set_ruler_culture = mexican_texan
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = mexican_texan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = texan
+                        consort_culture = eastern_texan
+                        consort_culture = tejano
+                    }
+                }
+                set_consort_culture = mexican_texan
+            }
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -728,6 +764,25 @@ country_event = {
 		hidden_effect = {
 			remove_accepted_culture = texan
 			remove_accepted_culture = high_plainer
+			set_ruler_culture = plains_texan
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = plains_texan
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = texan
+                        consort_culture = eastern_texan
+                        consort_culture = tejano
+						consort_culture = high_plainer
+                    }
+                }
+                set_consort_culture = plains_texan
+            }
 			every_owned_province = {
 				limit = {
 					OR = {

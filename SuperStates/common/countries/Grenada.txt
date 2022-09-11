@@ -75,13 +75,13 @@ leader_names = {
 	Hearne Miller Dawes Ross Johnson Marriott Sinclair
 }
 ship_names = {
-	Carriacou
+	Brizan
+	Carriacou Chantimelle
+	Ford
 	Grenada
-	"Petite Martinique"
-	"Saint Andrew"
-	"Saint David"
-	"Saint George"
-	"Saint John"
-	"Saint Mark"
-	"Saint Patrick"
+	"Petite Martinique" Providence
+	"Saint Andrew" "Saint David" "Saint George" "Saint John" "Saint Mark" "Saint Patrick" Sauteurs
+	"The Blue" "The Lime" "The Bocas"
+	Victoria
+	Willis
 }

@@ -134,6 +134,7 @@ canada_superregion = {
 	western_canada_region
 	central_canada_region
 	maritimes_region
+	greenland_region
 }
 
 caribbean_superregion = {

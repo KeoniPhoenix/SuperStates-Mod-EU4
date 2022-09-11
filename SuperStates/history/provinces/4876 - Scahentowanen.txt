@@ -1,1 +1,4 @@
-# No previous file for Scahentowanen
+#4876 - Bitterroot Mountains
+
+discovered_by = north_american
+discovered_by = mesoamerican

@@ -1,1 +1,4 @@
-#4862 - Ngadjuri
+#4862 - Sawatch Range
+
+discovered_by = north_american
+discovered_by = mesoamerican

@@ -13,6 +13,9 @@ native_ferocity = 1
 native_hostileness = 2
 center_of_trade = 1
 
+discovered_by = mesoamerican
+add_permanent_claim = GTM
+
 1638.1.1  = {
 	owner = ENG
 	controller = ENG

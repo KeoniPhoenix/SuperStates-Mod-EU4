@@ -16,15 +16,17 @@ texan_slot_1 = {
 			OR = {
 				area = new_mexico_area
 				province_id = 958
+				province_id = 4572
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 6
 				OR = {
 					area = new_mexico_area
 					province_id = 958
+					province_id = 4572
 				}
 			}
 		}
@@ -36,7 +38,7 @@ texan_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			991 = {
+			3387 = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -56,7 +58,7 @@ texan_slot_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = colorado_area
-				province_id = 991
+				province_id = 3387
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -65,7 +67,7 @@ texan_slot_1 = {
 				value = 4
 				area = colorado_area
 			}
-			owns_or_non_sovereign_subject_of = 991
+			owns_or_non_sovereign_subject_of = 3387
 		}
 		effect = {
 			set_country_flag = texan_republic_flag #Unique government
@@ -620,7 +622,7 @@ texan_slot_4 = {
 		position = 1
 
 		trigger = {
-			share_of_starting_income = 2
+			share_of_starting_income = 1.5
 			workshop = 10
 		}
 		effect = {

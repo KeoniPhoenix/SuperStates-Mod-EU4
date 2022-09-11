@@ -5,80 +5,94 @@
 #
 ##########################
 
-namespace = CostaRicaFlavor
+# namespace = CostaRicaFlavor
 
-#Costa Rica Culture Event
-country_event = {
-	id = CostaRicaFlavor.1
-	title = "CostaRicaFlavor.1t"
-	desc = "CostaRicaFlavor.1d"
-	picture = COLONIZATION_eventPicture
+# #Costa Rica Culture Event  ### Exists in 1444 - Don't need it to spawn anymore
+# country_event = {
+# 	id = CostaRicaFlavor.1
+# 	title = "CostaRicaFlavor.1t"
+# 	desc = "CostaRicaFlavor.1d"
+# 	picture = COLONIZATION_eventPicture
 	
-	trigger = {
-		836 = { 
-			is_capital = no
-			owned_by = ROOT
-			NOT = { culture = costa_rican }
-			NOT = { is_core = CRC }
-		}
-		2663 = {
-			is_capital = no
-			owned_by = ROOT
-			NOT = { culture = costa_rican }
-			NOT = { is_core = CRC }
-		}
-	}
+# 	trigger = {
+# 		NOT = { tag = CAM }
+# 		836 = { 
+# 			is_capital = no
+# 			owned_by = ROOT
+# 			NOT = { culture = costa_rican }
+# 			NOT = { is_core = CRC }
+# 		}
+# 		2663 = {
+# 			is_capital = no
+# 			owned_by = ROOT
+# 			NOT = { culture = costa_rican }
+# 			NOT = { is_core = CRC }
+# 		}
+# 		4597 = {
+# 			is_capital = no
+# 			owned_by = ROOT
+# 			NOT = { culture = costa_rican }
+# 			NOT = { is_core = CRC }
+# 		}
+# 	}
 	
-	mean_time_to_happen = {
-		years = 250
+# 	mean_time_to_happen = {
+# 		years = 250
 		
-		modifier = {
-			factor = 0.5
-			stability = -1
-		}
-		modifier = {
-			factor = 0.5
-			costa_rica_area = {
-				type = all
-				has_owner_accepted_culture = no
-			}
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				836 = { has_owner_religion = no }
-				2663 = { has_owner_religion = no }
-			}
-		}
-		modifier = {
-			factor = 4
-			OR = {
-				836 = { is_core = ROOT }
-				2663 = { is_core = ROOT }
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				836 = { development = 35 }
-				2663 = { development = 35 }
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_any_disaster = yes
-		}
-	}
+# 		modifier = {
+# 			factor = 0.5
+# 			stability = -1
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			costa_rica_area = {
+# 				type = all
+# 				has_owner_accepted_culture = no
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			OR = {
+# 				836 = { has_owner_religion = no }
+# 				2663 = { has_owner_religion = no }
+# 				4597 = { has_owner_religion = no }
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 4
+# 			AND = {
+# 				836 = { is_core = ROOT }
+# 				2663 = { is_core = ROOT }
+# 				4597 = { is_core = ROOT }
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				836 = { development = 35 }
+# 				2663 = { development = 35 }
+# 				4597 = { development = 35 }
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			has_any_disaster = yes
+# 		}
+# 	}
 	
-	option = {
-		name = "CostaRicaFlavor.1opta"
-		836 = { 
-			change_culture = costa_rican
-			add_core = CRC
-		}
-		2663 = {
-			change_culture = costa_rican
-			add_core = CRC
-		}
-	}
-}
+# 	option = {
+# 		name = "CostaRicaFlavor.1opta"
+# 		836 = { 
+# 			change_culture = costa_rican
+# 			add_core = CRC
+# 		}
+# 		2663 = {
+# 			change_culture = costa_rican
+# 			add_core = CRC
+# 		}
+# 		4597 = {
+# 			change_culture = costa_rican
+# 			add_core = CRC
+# 		}
+# 	}
+# }

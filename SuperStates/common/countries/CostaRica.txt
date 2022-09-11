@@ -91,5 +91,12 @@ leader_names = {
 }
 
 ship_names = {
-	"Costa Rica"
+	Alajuela
+	Barranca
+	"Costa Rica" "Cinco Esquinas" Curridabat "Chorotega"
+	Desamparados
+	Limón Liberia
+	Nicoya
+	"San José" "San Francisco" "San Vincent" "San Pedro" "San Miguel"
+	Talamanca
 }

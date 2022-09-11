@@ -19,20 +19,21 @@ country_decisions = {
 				primary_culture = ontarian
 				primary_culture = northern_ontarian
 				primary_culture = torontoan
-				OR = {
-					primary_culture = minnesotan
-					primary_culture = yooper
-					primary_culture = mainer
-					primary_culture = vermonter
-					primary_culture = cajun
-					primary_culture = saint_pierrais
-						AND = {
-							canada_superregion = {
-							type = any
-							owned_by = ROOT
-							}
-							#NOT = { provincegroup = alaska_provincegroup }
-						}
+				primary_culture = vancouverite
+				primary_culture = pacific_british_columbian
+				AND = {
+					canada_superregion = {
+						type = any
+						owned_by = ROOT
+					}
+					OR = {
+						primary_culture = minnesotan
+						primary_culture = yooper
+						primary_culture = mainer
+						primary_culture = vermonter
+						primary_culture = cajun
+						primary_culture = saint_pierrais
+					}
 				}
 				tag = TTO
 				tag = OTW

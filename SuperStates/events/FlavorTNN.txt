@@ -26,7 +26,7 @@ country_event = {
 			development = 20
 			culture = mountaineer
 			}
-		variable_arithmetic_trigger = {
+		variable_arithmetic_trigger = { #This arithmetic trigger doesn't work as intended #TODO FIX THIS
 			export_to_variable = { #the purpose of this is to check whether knoxville has higher dev than nashville
 				which = nashville_dev
 				value = development
@@ -135,7 +135,7 @@ country_event = {
 			development = 20
 			culture = west_tennessean
 			}
-		variable_arithmetic_trigger = {
+		variable_arithmetic_trigger = { #This arithmetic trigger doesn't work as intended #TODO FIX THIS
 			export_to_variable = { #the purpose of this is to check whether memphis has higher dev than nashville
 				which = nashville_dev
 				value = development
@@ -170,7 +170,7 @@ country_event = {
 			change_culture = west_tennessean
 			}
 		2519 = {
-			change_primary_culture
+			change_culture = west_tennessean
 			move_capital_effect = yes
 			}
 		3145 = {

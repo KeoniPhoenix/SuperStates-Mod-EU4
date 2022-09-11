@@ -6,7 +6,7 @@ religion = s_catholic
 primary_culture = quebecois
 capital = 2007	# Gatineau
 historical_rival = TTO
-historical_rival = OTW
+historical_friend = OTW
 historical_rival = MTL
 
 1528.1.1 = {

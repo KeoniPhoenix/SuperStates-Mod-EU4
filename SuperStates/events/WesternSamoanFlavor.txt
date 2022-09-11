@@ -15,7 +15,14 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = { primary_culture = polynesian }
 		1243 = { 
+			is_capital = no
+			owned_by = ROOT
+			NOT = { culture = samoan_western }
+			NOT = { is_core = WSM }
+		}
+		3335 = { 
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = samoan_western }
@@ -32,19 +39,31 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			1243 = { has_owner_accepted_culture = no }
+			OR = {
+				1243 = { has_owner_accepted_culture = no }
+				3335 = { has_owner_accepted_culture = no }
+			}
 		}
 		modifier = {
 			factor = 0.5
-			1243 = { has_owner_religion = no }
+			OR = {
+				1243 = { has_owner_religion = no }
+				3335 = { has_owner_religion = no }
+			}
 		}
 		modifier = {
 			factor = 4
-			1243 = { is_core = ROOT }
+			AND = {
+				1243 = { is_core = ROOT }
+				3335 = { is_core = ROOT }
+			}
 		}
 		modifier = {
 			factor = 2
-			1243 = { development = 35 }
+			OR = {
+				1243 = { development = 35 }
+				3335 = { development = 35 }
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -55,6 +74,10 @@ country_event = {
 	option = {
 		name = "WesternSamoanFlavor.1opta"
 		1243 = { 
+			change_culture = samoan_western
+			add_core = WSM
+		}
+		3335 = { 
 			change_culture = samoan_western
 			add_core = WSM
 		}

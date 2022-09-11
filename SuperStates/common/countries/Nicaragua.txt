@@ -91,5 +91,17 @@ leader_names = {
 }
 
 ship_names = {
+	Acoyapa
+	Boaco
+	"Ciudad Sandino" Chinandega Corinto
+	Esteli "El Ayote"
+	Granada
+	Juigalpa Jinotega
+	León
+	Managua Masaya Matagalpa Matiguás
 	Nicaragua
+	"Puerto Cabezas"
+	Rivas "Rio Blanco" Rama Rosita
+	"San Juan" "San Carlos" "Santo Tomas" Sébaco Somoto Siuna Sahsa
+	Xolotlan
 }

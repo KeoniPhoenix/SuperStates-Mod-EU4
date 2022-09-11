@@ -155,6 +155,10 @@ cal_uni = {
 	advisor_pool = 1
 }
 
+cal_wine_industry = {
+	local_production_efficiency = 0.2
+}
+
 #Dakota
 dak_rushmore = {
 	local_great_project_upgrade_cost = -0.25
@@ -297,6 +301,11 @@ mne_remember_maine_modifier = {
 
 ##Generic Mission Modifiers
 #New England
+new_england_prosperity = {
+	global_prosperity_growth = 0.15
+	development_cost = -0.05
+}
+
 new_england_trade_ship = {
 	global_ship_trade_power = 0.20
 	light_ship_cost = -0.20
@@ -731,7 +740,7 @@ gran_tejas = {
 
 remilitarized_alamo = {
 	garrison_growth = 0.1
-	defensiveness = 0.25
+	local_defensiveness = 0.25
 	picture = "defense_fort"
 }
 
@@ -802,7 +811,7 @@ wva_country_roads_modifier = {
 
 wva_almost_heaven_modifier = {
 	missionaries = 1
-	global_missionary_strength = 0.02
+	global_heretic_missionary_strength = 0.02
 }
 
 #Louisiana

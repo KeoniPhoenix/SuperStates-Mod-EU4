@@ -44,7 +44,12 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			south_utah_area = {
+			dixie_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			utah_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -70,6 +75,7 @@ country_decisions = {
 					owns_core_province = 992
 					owns_core_province = 3260
 					owns_core_province = 991
+					owns_core_province = 4858
 					}
 				AND = {
 					# SoCal

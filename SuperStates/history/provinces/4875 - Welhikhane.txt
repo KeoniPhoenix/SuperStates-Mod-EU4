@@ -1,2 +1,29 @@
-# No previous file for Welhikhane
+#4874 - Sevier
+
+owner = UTA
+controller = UTA
+add_core = UTA
+culture = utahn 
+religion = mormon
+trade_goods = fur
+capital = "Richfield"
+hre = no
+base_tax = 3
+base_production = 1
+base_manpower = 1
+is_city = yes #5050
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1555.1.1 = {
+	owner = DES
+	controller = DES
+	add_core = DES
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}
 

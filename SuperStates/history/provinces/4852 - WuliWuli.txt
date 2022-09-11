@@ -1,3 +1,4 @@
-#4852 - Wuli Wuli
+#4852 - Mogollon Rim
 
-
+discovered_by = north_american
+discovered_by = mesoamerican

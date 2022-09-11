@@ -1,48 +1,30 @@
 #2637 - Chortli
 
-culture = highland_mayan
-religion = mesoamerican_religion
-capital = "Chortli"
-trade_goods = unknown
+owner = HND
+controller = HND
+add_core = HND
+capital = "San Pedro Sula"
+religion = s_catholic
+culture = honduran
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
-native_size = 5
-native_ferocity = 1
-native_hostileness = 2
-
-1524.1.1 = {
-	capital = "Triunfo de la Cruz"
-	owner = SPA 
-	controller = SPA
-	add_core = SPA
-	culture = castillian
-	religion = s_catholic
-	trade_goods = naval_supplies
-	is_city = yes
-} # Founded by de Olid
-
-1525.1.1 = { capital = "La Navidad" } #New settlement by Cortez
-
-1536.1.1 = { capital = "Puerto de Caballos" } #New name again
+is_city = yes #801259
+base_tax = 8
+base_production = 8
+base_manpower = 6
+trade_goods = grain
+discovered_by = north_american
+discovered_by = mesoamerican
 
 1810.9.16 = {
-#	add_core = MEX
-	add_core = HND
 	add_core = CAM
-#	controller = MEX
-	culture = honduran
-} # Mexican War of Independence
+}
 
 1823.9.15 = {
 	owner = CAM
 	controller = CAM
-	remove_core = SPA
 }
 
 1838.11.5 = {
 	owner = HND
 	controller = HND
-#	remove_core = MEX
 }

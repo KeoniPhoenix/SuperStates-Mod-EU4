@@ -56,9 +56,15 @@ leader_names = {
 }
 
 ship_names = {
+	'Ata
 	'Eua
-	Ha'apai
+	Foa Fatumanongi
+	Ha'apai Ha'ano Hunga
+	Koloa
+	Niuafo'ou
 	"Ongo Niua"
+	Pangaimotu
 	Tongatapu
 	Vava'u
+	'Uiha 'Utungake
 }

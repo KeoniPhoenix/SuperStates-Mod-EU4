@@ -2,7 +2,7 @@
 
 culture = melanesian
 religion = animism
-capital = "Nouméa"
+capital = "Koné"
 trade_goods = unknown
 hre = no
 base_tax = 2

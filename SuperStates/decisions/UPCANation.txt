@@ -15,7 +15,7 @@ country_decisions = {
 				tag = HND
 				tag = NCG
 				tag = PNM
-				culture_group = central_american
+				culture_group = central_american_group
 			}
 			OR = {
 				ai = no
@@ -74,10 +74,10 @@ country_decisions = {
 					owns_core_province = 850
 					owns_core_province = 851
 				}
-				panama_area = {
-					ROOT = { num_of_cities = 3 }
-					owned_by = ROOT
-					is_core = ROOT
+				num_of_owned_provinces_with = {
+					value = 3
+					area = panama_area
+					is_core = root
 				}
 			}
 		}

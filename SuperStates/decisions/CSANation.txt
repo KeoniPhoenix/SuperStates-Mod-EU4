@@ -11,6 +11,7 @@ country_decisions = {
 			NOT = { exists = NAM }
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
+			NOT = { tag = NFR }
 			#technology_group = north_american
 			OR = {
 				culture_group = southerner

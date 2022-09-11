@@ -1,0 +1,31 @@
+#3387 - Alamosa
+
+owner = CLO
+controller = CLO
+add_core = CLO
+culture = coloradan
+religion = s_protestant
+capital = "Alamosa"
+trade_goods = livestock
+hre = no
+is_city = yes #1000
+base_tax = 2
+base_production = 1
+base_manpower = 1
+discovered_by = north_american
+discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = s_methodist
+}
+1555.1.1 = {
+	owner = RKY
+	controller = RKY
+	add_core = RKY
+}
+
+1776.7.4 = { 
+	owner = USA	
+	controller = USA
+	add_core = USA 
+}

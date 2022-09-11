@@ -14,8 +14,12 @@ tehuantepec_trade_bonus = {
 	}
 	trigger = {
 		num_of_ports = 2
-		NOT = { 
-			835 = { has_great_project = panama_canal }
+		835 = {
+			NOT = {
+				has_great_project = {
+					type = panama_canal
+				}
+			}
 		}
 		owns = 854 		#Salina Cruz
 		owns = 860		#Coatzacoalcos
@@ -38,8 +42,12 @@ panama_trade_bonus = {
 	}
 	trigger = {
 		num_of_ports = 2
-		NOT = {
-			835 = { has_great_project = panama_canal }
+		835 = {
+			NOT = {
+				has_great_project = {
+					type = panama_canal
+				}
+			}
 		}
 		owns = 835 		#Panama
 	}
@@ -58,6 +66,9 @@ panama_trade_bonus = {
 mormon_control_of_slc = {
 	potential = {
 		religion = mormon
+		NOT = {
+			has_dlc = "Leviathan"
+		}
 	}
 	trigger = {
 		owns = 952
@@ -77,13 +88,16 @@ golden_plates = {
 			tag = DES
 		}
 		religion = mormon
+		NOT = {
+			has_dlc = "Leviathan"
+		}
 	}
 	trigger = {
 		owns = 2597
 		2597 = { religion = mormon }
 	}
 	
-	global_missionary_strength = 0.04
+	global_missionary_strength = 0.02
 	prestige = 1
 }
 
@@ -196,6 +210,6 @@ northwest_territory_reunified = {
 		owns_core_province = 2579
 	}
 
-	prestige_decay = -0.05
+	prestige_decay = -0.02
 	global_tax_modifier = 0.05
 }

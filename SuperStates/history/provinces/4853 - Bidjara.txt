@@ -1,1 +1,4 @@
-#4853 - Bidjara
+#4853 - Sierra Nevada
+
+discovered_by = north_american
+discovered_by = mesoamerican

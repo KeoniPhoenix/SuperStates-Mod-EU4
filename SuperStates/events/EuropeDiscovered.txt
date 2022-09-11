@@ -34,9 +34,11 @@ country_event = {
 		days = 1
 	}
 	immediate = {
-		ROOT = { 
-			every_owned_province = {
-				discover_country = PAP
+		hidden_effect = {
+			ROOT = { 
+				every_owned_province = {
+					discover_country = PAP
+				}
 			}
 		}
 		set_country_flag = superstates_europe_discovered

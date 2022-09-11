@@ -91,5 +91,20 @@ leader_names = {
 }
 
 ship_names = {
-	Guatemala
+	Amatitlan Antigua
+	Barberena
+	Cobán Chichicastenango Chimaltenango Chinautla Chiquimula Coatepeque
+	Escuintla
+	Flores
+	Guatemala "Guatemala City"
+	Huehuetenango
+	Jalapa
+	Mixco Mazatenango
+	"Puerto Barrios"
+	Quetzaltenango
+	Retalhuleu
+	Salama Salcaja "San Juan" "San Lucas" "San Marcos" "San Pablo" "San Sebastian" "Santa Catarina" Socola
+	Totonicapán
+	"Villa Nueva" "Villa Canales"
+	Zacapa
 }

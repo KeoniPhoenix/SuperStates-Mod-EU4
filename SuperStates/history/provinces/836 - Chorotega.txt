@@ -1,44 +1,30 @@
 #836 - Chorotega
 
-culture = muisca
-religion = animism
-capital = "Chorotega"
-trade_goods = unknown
+owner = CRC
+controller = CRC
+add_core = CRC
+capital = "San José"
+base_tax = 7
+base_production = 7
+base_manpower = 4
+is_city = yes #34220
+trade_goods = coffee
+culture = costa_rican
+religion = s_catholic
 hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
-native_size = 20
-native_ferocity = 1
-native_hostileness = 5
-
-1563.1.1 = { 
-	capital = "Cartago"
-	owner = SPA 
-	controller = SPA
-	add_core = SPA
-	culture = castillian
-	religion = catholic
-	trade_goods = naval_supplies
-	is_city = yes
-} # Founded by Juan Vásquez de Coronado
+discovered_by = north_american
+discovered_by = mesoamerican
 
 1810.9.16 = {
-#	add_core = MEX
-	add_core = CRC
 	add_core = CAM
-#	controller = MEX
-	culture = costa_rican
-} # Mexican War of Independence
+}
 
 1823.9.15 = {
 	owner = CAM
 	controller = CAM
-	remove_core = SPA
 }
 
 1838.11.5 = {
 	owner = CRC
 	controller = CRC
-#	remove_core = MEX
 }

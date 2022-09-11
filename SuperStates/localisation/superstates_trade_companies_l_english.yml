@@ -54,6 +54,7 @@
  trade_company_quebec:0 "North West Company"
  trade_company_prairies:0 "Calgary Company"
  trade_company_cascadia:0 "Cascadian Charter"
+ trade_company_greenland:0 "Greenland Company"
  TRADE_COMPANY_PRAIRIES_Root_Culture_GetName:0 "[Root.Culture.GetName] Calgary Company"
  TRADE_COMPANY_PRAIRIES_Canada_Trade_Company:0 "Calgary Trade Company"
  TRADE_COMPANY_RUPERTS_LAND_Root_Culture_GetName:0 "[Root.Culture.GetName] Hudson's Bay Company"
@@ -64,6 +65,8 @@
  TRADE_COMPANY_MARITIMES_Canada_Trade_Company:0 "Maritime Trade Company"
  TRADE_COMPANY_CASCADIA_Root_Culture_GetName:0 "[Root.Culture.GetName] Cascadian Company"
  TRADE_COMPANY_CASCADIA_America_Trade_Company:0 "Cascadian Trade Company"
+ TRADE_COMPANY_GREENLAND_Root_Culture_GetName:0 "[Root.Culture.GetName] Greenland Company"
+ TRADE_COMPANY_GREENLAND_CANADA_Trade_Company:0 "Greenland Trade Company"
 
  # Caribbean
  trade_company_greater_antilles:0 "West Indies Company"
@@ -94,6 +97,17 @@
  TRADE_COMPANY_EASTERN_AUSTRALIA_Australia_Trade_Company:0 "Sydney Trade Company"
  TRADE_COMPANY_NEW_ZEALAND_Root_Culture_GetName:0 "[Root.Culture.GetName] Kiwi Company"
  TRADE_COMPANY_NEW_ZEALAND_Australia_Trade_Company:0 "Kiwi Trade Company"
+
+ #Melanesia
+ trade_company_melanesia:0 "Melanesian Company"
+ TRADE_COMPANY_MELANESIA_Root_Culture_GetName:0 "[Root.Culture.GetName] Melanesian Company"
+ TRADE_COMPANY_MELANESIA_AUSTRALIA_Trade_Company:0 "Melanesian Trade Company"
+
+ colonial_new_guinea:0 "Colonial New Guinea"
+ short_colonial_new_guinea:0 "New Guinea"
+ COLONIAL_NEW_GUINEA_Root_Culture_GetName_New_Guinea:0 "[Root.GetAdjective] New Guinea"
+ COLONIAL_NEW_GUINEA_Root_Culture_GetName_New_Guinea_ADJ:0 "[Root.GetAdjective] New Guinean"
+ 
 
  # Unused
  # trade_company_greenland:0 "Greenland Company"

@@ -91,6 +91,17 @@ leader_names = {
 }
 
 ship_names = {
-	Bluefields
-	Moskito
+	Alamikamba Ariswatla
+	Bluefields Bonanza "Bismina Tara"
+	Coperna
+	"El Ayote"
+	Kukrahill
+	"La Cruz"
+	Moskito Mulukuku
+	"Nueva Guinea"
+	"Pearl Lagoon"
+	Rama Rosita "Río Blanco"
+	Suina "Sandy Bay" Sirpi Sahsa
+	Toruguero
+	Yulu
 }
