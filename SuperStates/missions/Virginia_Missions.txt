@@ -45,6 +45,9 @@ vir_slot_1 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vir_south_carolina = {
@@ -79,6 +82,9 @@ vir_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 			add_adm_power = 50
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 	
@@ -142,13 +148,6 @@ vir_slot_2 = {
 		required_missions = { }
 		position = 1
 
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-
 		trigger = {
 			army_size_percentage = 0.85
 			num_of_generals = 1
@@ -183,20 +182,15 @@ vir_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	vir_conquer_wv = {
 		icon = mission_civil_war_battle
 		required_missions = { vir_buildup }
 		position = 2
-
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-
 
 		provinces_to_highlight = {
 			OR = {
@@ -254,6 +248,9 @@ vir_slot_2 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	vir_conquer_kentucky = {
@@ -305,6 +302,9 @@ vir_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vir_tennessee = {
@@ -337,6 +337,9 @@ vir_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -386,6 +389,9 @@ vir_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vir_chesapeake_conquest = {
@@ -428,6 +434,9 @@ vir_slot_3 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vir_delaware = {
@@ -456,6 +465,9 @@ vir_slot_3 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

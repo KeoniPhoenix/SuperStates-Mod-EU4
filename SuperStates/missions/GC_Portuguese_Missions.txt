@@ -147,16 +147,31 @@ gc_por_1 = {
 		required_missions = { gc_por_bandeirantes }
 		
 		provinces_to_highlight = {
-			region = brazil_region
+			colonial_region = colonial_brazil
 		}
 		
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = port_jesuits_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					holy_order = jesuit_order
-					region = brazil_region
-					value = 7
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_trigger_tooltip = {
+					tooltip = port_jesuits_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						holy_order = jesuit_order
+						colonial_region = colonial_brazil
+						value = 7
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = port_jesuits_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						colonial_region = colonial_brazil
+						value = 35
+					}
 				}
 			}
 		}
@@ -727,7 +742,12 @@ gc_por_3_b = {
 			hidden_effect = {
 				every_subject_country = {
 					limit = {
-						is_subject_of_type = colony
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
 						capital_scope = {
 							superregion = caribbean_superregion
 						}

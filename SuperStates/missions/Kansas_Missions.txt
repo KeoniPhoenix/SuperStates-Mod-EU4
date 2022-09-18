@@ -45,6 +45,9 @@ kns_conquests = {
 				id = flavorKNS.1000
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	kns_kansas_city = {
@@ -86,6 +89,9 @@ kns_conquests = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 

@@ -36,6 +36,9 @@ nyc_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nyc_north_jersey = {
@@ -62,6 +65,9 @@ nyc_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -97,6 +103,9 @@ nyc_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nyc_chesapeake = {
@@ -126,6 +135,9 @@ nyc_slot_1 = {
 		effect = {
 			add_mercantilism = 3
 			add_dip_power = 150
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -185,6 +197,9 @@ nyc_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	nyc_hudson = {
@@ -230,6 +245,9 @@ nyc_slot_2 = {
 					remove_core = NYS
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -293,6 +311,9 @@ nyc_slot_3 = {
 				duration = 9125 #25 years
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nyc_connecticut = {
@@ -319,6 +340,9 @@ nyc_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -354,6 +378,9 @@ nyc_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nyc_new_england = {
@@ -386,6 +413,9 @@ nyc_slot_3 = {
 				name = "nys_defeated_massa"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

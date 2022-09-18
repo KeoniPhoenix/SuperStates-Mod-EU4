@@ -41,6 +41,9 @@ mss_conquests_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	mss_hudson_valley = {
@@ -67,6 +70,9 @@ mss_conquests_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -107,6 +113,9 @@ mss_conquests_1 = {
 				name = "new_nyc_income"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -170,6 +179,9 @@ mss_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	mss_connecticut = {
@@ -201,6 +213,9 @@ mss_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	mss_mid_atlantic_1 = {
@@ -228,6 +243,9 @@ mss_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mss_mid_atlantic_2 = {
@@ -248,6 +266,9 @@ mss_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -345,6 +366,9 @@ mss_conquests_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	mss_maine_gained = {
@@ -411,6 +435,9 @@ mss_conquests_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	mss_new_hampshire = {
@@ -438,6 +465,9 @@ mss_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	mss_vermont = {
@@ -458,6 +488,9 @@ mss_conquests_3 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -483,6 +516,9 @@ mss_conquests_3 = {
 				name = "new_formed_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -511,6 +547,9 @@ mss_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -556,6 +595,9 @@ mss_flavor_1 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mss_trade = {
@@ -579,6 +621,9 @@ mss_flavor_1 = {
 		effect = {
 			add_mercantilism = 2
 			add_dip_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -607,6 +652,9 @@ mss_flavor_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mss_canada_1 = {
@@ -634,6 +682,9 @@ mss_flavor_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mss_canada_2 = {
@@ -654,6 +705,9 @@ mss_flavor_1 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

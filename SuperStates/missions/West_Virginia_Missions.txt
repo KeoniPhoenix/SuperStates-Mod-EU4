@@ -38,6 +38,9 @@ wva_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	wva_take_virginia = { #Take me Home
@@ -69,6 +72,9 @@ wva_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wva_blue_waters = {
@@ -94,6 +100,9 @@ wva_slot_1 = {
 				name = "wva_high_seas"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 }
@@ -143,6 +152,9 @@ wva_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wva_tennessee = {
@@ -173,6 +185,9 @@ wva_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -207,6 +222,9 @@ wva_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -260,6 +278,9 @@ wva_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	wva_maryland = {
@@ -302,6 +323,9 @@ wva_slot_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	wva_allegheny = {
@@ -336,6 +360,9 @@ wva_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wva_appalachia = {
@@ -360,6 +387,9 @@ wva_slot_3 = {
 				name = "wva_united_appalachia"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

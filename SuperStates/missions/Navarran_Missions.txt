@@ -174,7 +174,7 @@ nav_missions_1_b = {
 			has_discovered = ROOT
 		}
 		trigger = {
-			1490 = {
+			3307 = {
 				is_strongest_trade_power = ROOT
 			}
 			newfoundland_area = {

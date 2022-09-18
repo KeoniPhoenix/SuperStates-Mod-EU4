@@ -64,6 +64,9 @@ vrm_conquests  = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_into_ny = {
@@ -97,6 +100,9 @@ vrm_conquests  = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -137,6 +143,9 @@ vrm_conquests  = {
 				name = "new_nyc_income"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -207,6 +216,9 @@ vrm_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_connecticut = {
@@ -238,6 +250,9 @@ vrm_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_mid_atlantic_1 = {
@@ -265,6 +280,9 @@ vrm_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_mid_atlantic_2 = {
@@ -285,6 +303,9 @@ vrm_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -309,13 +330,6 @@ vrm_conquests_3 = {
 		required_missions = { }
 		position = 1
 
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-
 		trigger = {
 			army_size_percentage = 1
 			manpower_percentage = 0.8
@@ -329,19 +343,15 @@ vrm_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vrm_grants = {
 		icon = mission_new_hampshire_map
 		required_missions = { vrm_buildup }
 		position = 2
-
-		ai_weight = {
-			factor = 2
-		}
-		ai_priority = {
-			factor = 2
-		}
 
 		provinces_to_highlight = {
 			OR = {
@@ -389,6 +399,9 @@ vrm_conquests_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vrm_navy = {
@@ -407,6 +420,9 @@ vrm_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 50
 		}
 	}
 
@@ -433,6 +449,9 @@ vrm_conquests_3 = {
 				duration = 9125 #25 years
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_is_eng = {
@@ -457,6 +476,9 @@ vrm_conquests_3 = {
 				name = "new_formed_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -485,6 +507,9 @@ vrm_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -530,6 +555,9 @@ vrm_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_brunswick = {
@@ -558,6 +586,9 @@ vrm_conquests_4 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_canada_1 = {
@@ -585,6 +616,9 @@ vrm_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	vrm_canada_2 = {
@@ -605,6 +639,9 @@ vrm_conquests_4 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -645,6 +682,9 @@ vrm_flavor = {
 				duration = 9125 #25 years
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	vrm_forest_lodging = {
@@ -664,6 +704,9 @@ vrm_flavor = {
 				name = "new_england_forest_lodges"
 				duration = 9125 #25 years
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 

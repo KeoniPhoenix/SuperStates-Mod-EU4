@@ -13,10 +13,7 @@ cal_alta = {
 		position = 2
 
 		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
+			factor = 500
 		}
 
 		provinces_to_highlight = {
@@ -117,6 +114,9 @@ cal_alta = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	cal_arizona = {
@@ -153,6 +153,9 @@ cal_alta = {
 			}
 			add_prestige = 10
 			add_adm_power = 75
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -206,6 +209,9 @@ cal_alta = {
 			}
 			country_event = { id = flavorCAL.1000 } # <-- Any gold changes should also change the event
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -224,10 +230,7 @@ cal_las_and_gran = {
 		position = 1
 
 		ai_weight = {
-			factor = 100
-		}
-		ai_priority = {
-			factor = 100
+			factor = 500
 		}
 
 		trigger = {
@@ -285,6 +288,9 @@ cal_las_and_gran = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	cal_baja_sur = {
@@ -329,6 +335,9 @@ cal_las_and_gran = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	cal_las_cali = {
@@ -371,6 +380,9 @@ cal_las_and_gran = {
 		effect = {
 			country_event = { id = flavorCAL.1001 }
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 	
 	cal_gran_cali = {
@@ -409,6 +421,9 @@ cal_las_and_gran = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cal_sonora = {
@@ -439,6 +454,9 @@ cal_las_and_gran = {
 				type = mission_rewards_power_projection
 				amount = 20
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -492,6 +510,9 @@ cal_pacific = {
 				duration = 7300
 			}
 		}
+		ai_weight = {
+			factor = 50
+		}
 	}
 
 	cal_coastal_defence = {
@@ -516,7 +537,9 @@ cal_pacific = {
 				duration = -1
 			}
 		}
-
+		ai_weight = {
+			factor = 50
+		}
 	}
 
 	cal_oregon = {
@@ -547,6 +570,9 @@ cal_pacific = {
 			puget_sound_area = {
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -596,6 +622,9 @@ cal_pacific = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 }
@@ -660,6 +689,9 @@ cal_trade_and_navy = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cal_navy = {
@@ -692,6 +724,9 @@ cal_trade_and_navy = {
 				name = "naval_enthusiasm_mission"
 				duration = 9125 #25 years
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -766,6 +801,9 @@ cal_trade_and_navy = {
 				duration = 7300
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cal_pacific_trade = {
@@ -826,6 +864,9 @@ cal_trade_and_navy = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -854,6 +895,9 @@ cal_dev_and_tech = {
 				duration = 5475 #25 years
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cal_manufactories = { #similar to generic economic
@@ -876,6 +920,9 @@ cal_dev_and_tech = {
 				name = "proto_industrialization"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -936,6 +983,9 @@ cal_dev_and_tech = {
 				}
 			}	
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cal_universities = {
@@ -966,6 +1016,9 @@ cal_dev_and_tech = {
 					duration = 7300
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -1004,6 +1057,9 @@ cal_dev_and_tech = {
 				set_country_flag = has_competent_doctors
 			}
 			country_event = { id = flavorCAL.1002 }
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

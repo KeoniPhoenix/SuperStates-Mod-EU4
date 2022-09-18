@@ -43,6 +43,9 @@ ili_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ili_minnesota = {
@@ -87,6 +90,9 @@ ili_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ili_missouri = {
@@ -119,6 +125,9 @@ ili_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 }
@@ -177,6 +186,9 @@ ili_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ili_upper = {
@@ -207,6 +219,9 @@ ili_slot_2 = {
 				name = "ili_lake_superior_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -239,6 +254,9 @@ ili_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 }
 
@@ -255,13 +273,6 @@ ili_slot_3 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
-
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
 
 		provinces_to_highlight = {
 			OR = {
@@ -297,6 +308,9 @@ ili_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -341,6 +355,9 @@ ili_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ili_ohio = {
@@ -374,6 +391,9 @@ ili_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ili_great_lakes = {
@@ -406,6 +426,9 @@ ili_slot_3 = {
 				duration = 18250
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -432,6 +455,9 @@ ili_slot_4 = {
 				name = "building_spree"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 	
@@ -470,6 +496,9 @@ ili_slot_4 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ili_economy_3 = {
@@ -500,6 +529,9 @@ ili_slot_4 = {
 				duration = 9125
 			}
 			add_years_of_income = 1.5
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -550,6 +582,9 @@ ili_slot_4 = {
 				name = "ili_trade"
 				duration = 7300
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -622,6 +657,9 @@ ili_slot_5 = {
 				loyalty = 10
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -849,6 +887,9 @@ ili_slot_5 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ili_chicago_2 = {
@@ -873,6 +914,9 @@ ili_slot_5 = {
 					duration = -1
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

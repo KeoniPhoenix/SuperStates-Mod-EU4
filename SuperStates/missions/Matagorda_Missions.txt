@@ -190,6 +190,9 @@ texan_mexican_conquest = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	lpn_laredo = {
@@ -242,6 +245,9 @@ texan_mexican_conquest = {
 				add_historical_rival = RRG
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	lpn_rio_grande = {
@@ -293,6 +299,9 @@ texan_mexican_conquest = {
 				add_historical_rival = NOM
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	lpn_mexico = {
@@ -333,6 +342,9 @@ texan_mexican_conquest = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	gran_matagorda = {
@@ -365,6 +377,9 @@ texan_mexican_conquest = {
 			add_adm_power = 75
 			add_dip_power = 75
 			add_mil_power = 75
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -419,6 +434,9 @@ lpn_texas_rival = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -508,6 +526,9 @@ lpn_texas_rival = {
 				change_culture = tejano
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	lpn_high_plains = {
@@ -539,6 +560,9 @@ lpn_texas_rival = {
 				}
 				change_culture = tejano
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -598,6 +622,9 @@ lpn_texas_rival = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 }
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

@@ -43,6 +43,9 @@ cut_conquests_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_hudson_long_island = {
@@ -76,6 +79,9 @@ cut_conquests_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -117,6 +123,9 @@ cut_conquests_1 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_nys_trade = {
@@ -135,6 +144,9 @@ cut_conquests_1 = {
 				name = new_mid_atlantic_trade
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -186,6 +198,9 @@ cut_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_vermont_hamp = {
@@ -218,6 +233,9 @@ cut_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_mid_atlantic_1 = {
@@ -245,6 +263,9 @@ cut_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_mid_atlantic_2 = {
@@ -265,6 +286,9 @@ cut_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -320,6 +344,9 @@ cut_conquests_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	cut_disputes = {
@@ -359,6 +386,9 @@ cut_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_rhodes = {
@@ -386,6 +416,9 @@ cut_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_cape = {
@@ -411,6 +444,9 @@ cut_conquests_3 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_is_eng = {
@@ -435,6 +471,9 @@ cut_conquests_3 = {
 				name = "new_formed_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -463,6 +502,9 @@ cut_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -551,6 +593,9 @@ cut_conquests_4 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -659,6 +704,9 @@ cut_conquests_4 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_canada_1 = {
@@ -686,6 +734,9 @@ cut_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_canada_2 = {
@@ -706,6 +757,9 @@ cut_conquests_4 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -783,6 +837,9 @@ cut_flavor = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_investments = {
@@ -800,6 +857,9 @@ cut_flavor = {
 				name = "cut_investments"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -845,6 +905,9 @@ cut_flavor = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	cut_develop_eng = {
@@ -887,6 +950,9 @@ cut_flavor = {
 					}
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

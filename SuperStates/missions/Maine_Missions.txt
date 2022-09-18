@@ -45,6 +45,9 @@ mne_conquests_1 = {
 				add_claim =  ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_hudson_valley = {
@@ -78,6 +81,9 @@ mne_conquests_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -119,6 +125,9 @@ mne_conquests_1 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_nys_trade = {
@@ -137,6 +146,9 @@ mne_conquests_1 = {
 				name = new_mid_atlantic_trade
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -181,6 +193,9 @@ mne_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_connecticut = {
@@ -212,6 +227,9 @@ mne_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_mid_atlantic_1 = {
@@ -239,6 +257,9 @@ mne_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_mid_atlantic_2 = {
@@ -259,6 +280,9 @@ mne_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -330,6 +354,9 @@ mne_conquests_3 = {
 				add_mil_power = 50
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	mne_buildup = {
@@ -364,6 +391,9 @@ mne_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_new_hampshire = {
@@ -390,6 +420,9 @@ mne_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -437,6 +470,9 @@ mne_conquests_3 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_maritimes_1 = {
@@ -464,6 +500,9 @@ mne_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -508,6 +547,9 @@ mne_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_nova = {
@@ -536,6 +578,9 @@ mne_conquests_4 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_canada_1 = {
@@ -563,6 +608,9 @@ mne_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_canada_2 = {
@@ -583,6 +631,9 @@ mne_conquests_4 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -615,6 +666,9 @@ mne_flavor = {
 				name = mne_fishing_modifier
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -654,6 +708,9 @@ mne_flavor = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	mne_forest_lodging = {
@@ -672,6 +729,9 @@ mne_flavor = {
 				name = "new_england_forest_lodges" #army attrition down and production effieceny
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -715,6 +775,9 @@ mne_flavor = {
 					}
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
