@@ -323,7 +323,7 @@ christian = {
 		}
 		country = {
 			development_cost = -0.1
-			innovativeness_gain = 0.5
+			technology_cost = -0.05
 		}
 		
 		country_as_secondary = {
@@ -338,6 +338,10 @@ christian = {
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			innovativeness_aspect
+			expel_heretics_aspect
+			diplomats_of_the_reformation_aspect
+			icons_of_the_church_aspect
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		
@@ -416,6 +420,9 @@ christian = {
 			individual_creeds_aspect
 			allow_usury_aspect
 			translated_bibles_aspect
+			justified_religious_war_aspect
+			war_preaches_aspect
+			head_of_the_church_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -669,6 +676,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+
 				ai_will_do = {
 					factor = 0.05
 					modifier = {
@@ -689,6 +701,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0.02
 					modifier = {
@@ -721,6 +738,11 @@ christian = {
 				allow = {
 					always = yes
 				}
+
+				visible = {
+					always = yes
+				}
+				
 				ai_will_do = {
 					factor = 0
 				}
@@ -729,6 +751,11 @@ christian = {
 			icon_nicholas = {
 				improve_relation_modifier = 0.25
 				ae_impact = -0.1
+				
+				visible = {
+					always = yes
+				}
+				
 				allow = {
 					always = yes
 				}
@@ -740,6 +767,11 @@ christian = {
 			icon_climacus = {
 				global_institution_spread = 0.25
 				embracement_cost = -0.2
+
+				visible = {
+					always = yes
+				}
+
 				allow = {
 					always = yes
 				}
@@ -841,178 +873,8 @@ christian = {
 		heretic = { AUSTRALREFORMIST NEOCATHOLIC KENNEDYIANS }
 
 		misguided_heretic = yes		# Other christians hate them less
-		}
-#		papacy = {
-#			papal_tag = PAP
-#			election_cost = 5
-#			seat_of_papacy = 118 # rome
-#			
-#			levy_church_tax = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_sanction_for_church_taxes"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}				
-#			}			
-#			bless_monarch = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { prestige = 100 }
-#					NOT = { has_country_modifier = papal_blessing }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_blessing"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}
-#			indulgence_for_sins = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { has_country_modifier = papal_indulgence }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_indulgence"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}	
-#			local_saint = {
-#				cost = 100
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { stability = 3 }
-#				}
-#				effect = {
-#					add_stability = 1
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 2
-#						NOT = { stability = 0 }
-#					}
-#				}
-#			}
-#			forgiveness_for_usury = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { has_country_modifier = usury_forgiven }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "usury_forgiven"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						NOT = { num_of_loans = 1 }
-#					}
-#				}
-#			}			
-#			proclaim_holy_war = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					is_at_war = yes
-#					NOT = { war_with = PAP }
-#					NOT = { has_country_modifier = papal_sanction_for_holy_war }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_sanction_for_holy_war"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						manpower_percentage = 0.5
-#					}
-#				}
-#			}
-#			send_papal_legate = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { has_country_modifier = papal_legate }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_legate"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}	
-#			sanction_commercial_monopoly = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = PAP }
-#				}
-#				allow = {
-#					NOT = { war_with = PAP }
-#					NOT = { mercantilism = 100 }
-#				}
-#				effect = {
-#					add_mercantilism = 1
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						NOT = { has_idea_group = trade_ideas }
-#					}
-#				}
-#			}			
-#		}
-#	}
+	}
+
 	
 	s_catholic = {
 		color = { 179 179 102 }
@@ -1054,179 +916,7 @@ christian = {
 		}
 		
 		heretic = { VENKMANIST STANTZIST SPENGLERIST }
-		}
-		
-#		papacy = {
-#			papal_tag = DPO
-#			election_cost = 5
-#			seat_of_papacy = 871 # Mexico
-#			
-#			levy_church_tax = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_sanction_for_church_taxes"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}				
-#			}			
-#			bless_monarch = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { prestige = 100 }
-#					NOT = { has_country_modifier = papal_blessing }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_blessing"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}
-#			indulgence_for_sins = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { has_country_modifier = papal_indulgence }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_indulgence"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}	
-#			local_saint = {
-#				cost = 100
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { stability = 3 }
-#				}
-#				effect = {
-#					add_stability = 1
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 2
-#						NOT = { stability = 0 }
-#					}
-#				}
-#			}
-#			forgiveness_for_usury = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { has_country_modifier = usury_forgiven }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "usury_forgiven"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						NOT = { num_of_loans = 1 }
-#					}
-#				}
-#			}			
-#			proclaim_holy_war = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					is_at_war = yes
-#					NOT = { war_with = DPO }
-#					NOT = { has_country_modifier = papal_sanction_for_holy_war }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_sanction_for_holy_war"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						manpower_percentage = 0.5
-#					}
-#				}
-#			}
-#			send_papal_legate = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { has_country_modifier = papal_legate }
-#				}
-#				effect = {
-#					add_country_modifier = {
-#						name = "papal_legate"
-#						duration = 7300
-#					}
-#				}
-#				ai_will_do = {
-#					factor = 1
-#				}
-#			}	
-#			sanction_commercial_monopoly = {
-#				cost = 50
-#				potential = {
-#					NOT = { tag = DPO }
-#				}
-#				allow = {
-#					NOT = { war_with = DPO }
-#					NOT = { mercantilism = 100 }
-#				}
-#				effect = {
-#					add_mercantilism = 1
-#				}
-#				ai_will_do = {
-#					factor = 1
-#					modifier = {
-#						factor = 0
-#						NOT = { has_idea_group = trade_ideas }
-#					}
-#				}
-#			}			
-#		}
-#	}
+	}
 	
 	austral_protestant = {
 		color = { 0 179 255 }
@@ -1253,6 +943,10 @@ christian = {
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			# innovativeness_aspect #Description talks about anglican
+			# expel_heretics_aspect #Converts colonies to reformed, catholic and protestant - can be weird if europe is not even discovered yet
+			# diplomats_of_the_reformation_aspect #Doesn't make sense to increase opinions of religions not seen + description talks about anglican
+			icons_of_the_church_aspect
 		}
 		aspects_name = AUSTRAL_PROTESTANT_ASPECTS
 		
@@ -1286,6 +980,10 @@ christian = {
 			dissolve_monasteries_aspect
 			monopoly_aspect
 			stability_aspect
+			# innovativeness_aspect #Already has innovativness in religion + description talks about anglican
+			# expel_heretics_aspect #Converts provinces to reformed, catholic and protestant - can be weird if europe is not even discovered yet
+			# diplomats_of_the_reformation_aspect #Doesn't make sense to increase opinions of religions not seen + description talks about anglican
+			icons_of_the_church_aspect
 		}
 		aspects_name = S_PROTESTANT_ASPECTS
 		
@@ -3230,7 +2928,7 @@ jewish_group = {
 					limit = {
 						has_church_aspect = judaism_simchat_torah_aspect
 					}
-					change_government_reform_progress = 20
+					change_government_reform_progress = 25
 					add_legitimacy_equivalent = {
 						amount = 5
 						republican_tradition = 5
@@ -3248,6 +2946,21 @@ jewish_group = {
 					}
 					add_years_of_income = 0.3
 					add_inflation = -1
+				}
+				if = {
+					limit = {
+						has_government_attribute = loyalty_from_celebration
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { NOT = { has_country_flag = has_celebrated_festival } }
+						set_country_flag = has_celebrated_festival
+					}
 				}
 			}
 			ai_will_do = {
