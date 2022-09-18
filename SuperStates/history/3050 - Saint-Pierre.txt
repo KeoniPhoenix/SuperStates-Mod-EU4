@@ -1,0 +1,34 @@
+#Saint-Pierre
+
+culture = saint_pierrais
+# religion = catholic
+religion = s_catholic
+capital = "Saint-Pierre"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 2 
+base_manpower = 1
+native_size = 1
+native_ferocity = 1
+native_hostileness = 0
+# discovered_by = north_american
+# discovered_by = mesoamerican
+discovered_by = NFL
+discovered_by = QUE
+discovered_by = NVS
+discovered_by = PEI
+discovered_by = NBR
+
+
+1520.10.21 = { discovered_by = POR } # Possibly later, Juan de Bermudez
+1535.1.23 = { discovered_by = FRA }
+
+1670.1.1 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	culture = cosmopolitan_french
+	religion = s_catholic
+} # French colonists
+1816.1.1 = { is_city = yes trade_goods = fish }
