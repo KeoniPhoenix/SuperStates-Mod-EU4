@@ -23,7 +23,7 @@ ACU_ideas = {
 
 	
 	implementing_new_tech_for_arctic_development = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.2
 	}
 	no_vacation_for_the_enemy = {
 		defensiveness = 0.25
@@ -57,7 +57,7 @@ MTU_ideas = {
 	}
 
 	bonus = {
-		naval_forcelimit_modifier = 0.3
+		naval_forcelimit_modifier = 0.25
 	}
 
 	trigger = {
@@ -74,7 +74,7 @@ MTU_ideas = {
 		heavy_ship_cost = -0.1
 	}
 	enticements_and_effective_recruiting = {
-		global_sailors_modifier = 0.33
+		global_sailors_modifier = 0.25
 	}
 	reduce_upper_house_legislative_powers = {
 		stability_cost_modifier = -0.20
@@ -441,7 +441,7 @@ GPL_ideas = {
 	}
 	generals_of_the_plains = {
 		leader_land_fire = 1
-		infantry_fire = 0.05
+		infantry_fire = 0.1
 	}
 	wagon_train_trails = {
 		trade_efficiency = 0.1
@@ -522,7 +522,7 @@ MEX_ideas = {
 	}
     peace_by_purchase = {
 		accept_vassalization_reasons = 10
-	 	diplomatic_annexation_cost = -0.2
+	 	diplomatic_annexation_cost = -0.25
 	}
 	casa_de_las_campanas = {
 		idea_cost = -0.10
@@ -719,7 +719,7 @@ NAM_ideas = {
 	}
 
 	bonus = {
-		diplomatic_reputation = 3
+		diplomatic_reputation = 2
 	}
 
 	trigger = {
@@ -789,7 +789,6 @@ PCF_ideas = {
 	}
 	skilled_diplomacy = {
 		diplomatic_reputation = 2
-		diplomatic_upkeep = 1
 	}
 	appeal_to_the_masses_with_referendums = {
 		reform_progress_growth = 0.1
