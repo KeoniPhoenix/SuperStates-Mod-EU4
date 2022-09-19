@@ -1288,7 +1288,7 @@ VRZ_ideas = {
 	}
 	port_of_veracruz = {
 		navy_tradition = 0.5
-		naval_forcelimit = 0.15
+		naval_forcelimit_modifier = 0.15
 	}
 	remember_the_siege = {
 		fire_damage_received = -0.15
@@ -1469,7 +1469,6 @@ mexican_ideas = {
 	}
 	secularizing_government = {
 		idea_cost = -0.10
-	}
 	}
 	esos_caballos_no_son_pinatas = {
 		cavalry_power = 0.10
