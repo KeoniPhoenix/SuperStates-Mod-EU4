@@ -13,13 +13,6 @@ nys_slot_1 = {
 		required_missions = { }
 		position = 1
 
-		ai_weight = {
-			factor = 2
-		}
-		ai_priority = {
-			factor = 2
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2588
@@ -57,6 +50,9 @@ nys_slot_1 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -111,6 +107,9 @@ nys_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	nys_lake_ontario = {
@@ -158,6 +157,9 @@ nys_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	invasion_of_quebec = {
@@ -194,6 +196,9 @@ nys_slot_1 = {
 				name = "nys_invaded_canada"
 				duration = 5475
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -242,6 +247,15 @@ nys_slot_2_nys = {
 			}
 			add_mercantilism = 5
 		}
+		ai_weight = {
+			factor = 75
+			modifier = {
+				factor = 100
+				NOT = {
+					alliance_with = NJY
+				}
+			}
+		}
 	}
 
 	down_the_delaware = {
@@ -278,6 +292,9 @@ nys_slot_2_nys = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	nys_potomac = {
@@ -312,6 +329,9 @@ nys_slot_2_nys = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -331,13 +351,6 @@ nys_slot_3 = {
 		completed_by = 1550.1.1
 		position = 1
 
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
 		trigger = {
 			if = {
 				limit = {
@@ -384,6 +397,9 @@ nys_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	nys_new_hampshire_grants = {
@@ -391,13 +407,6 @@ nys_slot_3 = {
 		required_missions = { yankee_pride }
 		completed_by = 1470.1.1
 		position = 2
-
-		ai_weight = {
-			factor = 100
-		}
-		ai_priority = {
-			factor = 100
-		}
 
 		provinces_to_highlight = {
 			OR = {
@@ -429,6 +438,9 @@ nys_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	battle_for_boston = {
@@ -436,13 +448,6 @@ nys_slot_3 = {
 		required_missions = { nys_new_hampshire_grants }
 		completed_by = 1550.1.1
 		position = 3
-
-		ai_weight = {
-			factor = 2
-		}
-		ai_priority = {
-			factor = 2
-		}
 
 		provinces_to_highlight = {
 			OR = {
@@ -481,19 +486,15 @@ nys_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	nys_connecticut = {
 		icon = mission_have_two_subjects
 		required_missions = { battle_for_boston }
 		position = 4
-
-		ai_weight = {
-			factor = 2
-		}
-		ai_priority = {
-			factor = 2
-		}
 
 		provinces_to_highlight = {
 			OR = {
@@ -522,6 +523,9 @@ nys_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -574,6 +578,9 @@ nys_slot_3 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 

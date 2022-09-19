@@ -58,6 +58,9 @@ new_england_dominate_new_york = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	new_england_nys_trade = {
@@ -76,6 +79,9 @@ new_england_dominate_new_york = {
 				name = new_mid_atlantic_trade
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -127,6 +133,9 @@ new_conquests_west = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	new_england_mid_atlantic_2 = {
@@ -147,6 +156,9 @@ new_conquests_west = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -196,6 +208,9 @@ new_england_proclaim_and_maritimes = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	new_england_maritimes_1 = {
@@ -223,6 +238,9 @@ new_england_proclaim_and_maritimes = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -274,6 +292,9 @@ new_england_conquer_canada = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	new_england_canada_2 = {
@@ -294,6 +315,9 @@ new_england_conquer_canada = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

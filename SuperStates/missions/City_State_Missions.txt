@@ -7,16 +7,13 @@ city_state_missions = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = CCK
 			tag = LSV
 			tag = KYS
 			tag = MIM
 			tag = MMD
 			tag = PHL
-			tag = OTW
 			tag = TTO
 			tag = MTL
-			tag = GAT
 			tag = SAG
 			tag = ESX
 			tag = BOT
@@ -46,6 +43,9 @@ city_state_missions = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -77,6 +77,9 @@ city_state_missions = {
 				add_base_production = 2
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	gen_city_state_grow_urban = {
@@ -94,6 +97,9 @@ city_state_missions = {
 				name = "gen_prosperous_indpendence"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

@@ -4,3 +4,7 @@ technology_group = mesoamerican
 religion = s_catholic
 primary_culture = honduran
 capital = 2640	# Tegucialpa
+
+1528.1.1 = {
+    religion = catholic
+}

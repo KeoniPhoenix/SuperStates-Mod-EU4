@@ -20,6 +20,9 @@ wdc_slot_1 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_development = {
@@ -62,6 +65,9 @@ wdc_slot_1 = {
 					}
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -181,6 +187,9 @@ wdc_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_monument_2 = {
@@ -229,6 +238,9 @@ wdc_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -266,6 +278,9 @@ wdc_slot_2 = {
 				duration = 9125 #25 years
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_statehood = {
@@ -292,6 +307,9 @@ wdc_slot_2 = {
 				name = "wdc_become_a_state"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -326,6 +344,9 @@ wdc_slot_2 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_taxing = {
@@ -352,6 +373,9 @@ wdc_slot_2 = {
 				name = "wdc_taxed_neighbors" #morale and wartax
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -395,6 +419,9 @@ wdc_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -444,6 +471,9 @@ wdc_slot_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_virginia = {
@@ -489,6 +519,9 @@ wdc_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_south = {
@@ -532,6 +565,9 @@ wdc_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -580,6 +616,9 @@ wdc_slot_3 = {
 			}
 			custom_tooltip = "wdc_get_special_cb_tooltip" #Get a Special CB, will be kept even if nation changed
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -623,6 +662,9 @@ wdc_slot_4 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_army_2 = {
@@ -654,6 +696,9 @@ wdc_slot_4 = {
 				name = "wdc_good_army" #discipline
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -700,6 +745,9 @@ wdc_slot_4 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_jersey = {
@@ -736,6 +784,9 @@ wdc_slot_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_nyc = {
@@ -770,6 +821,9 @@ wdc_slot_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -812,6 +866,9 @@ wdc_slot_5 = {
 			hidden_effect = {
 				discover_province = 1524
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -887,6 +944,9 @@ wdc_slot_5 = {
 				discover_province = 4896
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	wdc_territories = {
@@ -936,6 +996,9 @@ wdc_slot_5 = {
 				name = "wdc_navy_boost"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

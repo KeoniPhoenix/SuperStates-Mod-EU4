@@ -89,6 +89,12 @@ spriteTypes = {
 	}
 	spriteType =
 	{
+		name = "GFX_alert_pick_church_aspect_jewish"
+		texturefile = "gfx\\interface\\alert_pick_church_aspect_jewish.dds"
+		alwaystransparent = yes
+	}
+	spriteType =
+	{
 		name = "GFX_alert_pick_church_aspect_s_protestant"
 		texturefile = "gfx\\interface\\alert_pick_church_aspect_s_protestant.dds"
 		alwaystransparent = yes

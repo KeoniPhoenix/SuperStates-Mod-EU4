@@ -82,15 +82,15 @@ country_event = { # New Jersey Disputes Captain Billopp's Race
 				}
 			}
 		FROM = {
-		country_event = {
-		id = flavorNJY.4
-		days = 3
+			country_event = {
+				id = flavorNJY.4
+				days = 3
 			}
 		}
 		3281 = {
-		cede_province = FROM
-		add_core = FROM
-		remove_core = ROOT
+			cede_province = FROM
+			add_core = FROM
+			remove_core = ROOT
 		}
 	}
 	option = {	# We have rightfully won the rights to Staten Island. It is ours to keep.
@@ -122,7 +122,11 @@ country_event = { # New York Refuses to Cede Staten Island
 		add_opinion = {
 			who = NYS
 			modifier = opinion_displeased
-			}
+		}
+		add_trust = {
+			who = NYS
+			value = -10
+		}
 	}
 }
 

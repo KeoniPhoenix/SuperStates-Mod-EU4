@@ -234,7 +234,7 @@ appalachian = {
 			Nancy
 			Othniel
 			Return Reuben Richard Robert Rutherford
-			Salmn Samuel Seabury
+			Salmon Samuel Seabury
 			Theodore Thomas
 			Victor
 			William Wilson
@@ -2787,7 +2787,7 @@ great_laker = {
 			Nancy
 			Othniel
 			Return Reuben Richard Robert Rutherford
-			Salmn Samuel Seabury
+			Salmon Samuel Seabury
 			Theodore Thomas
 			Victor
 			William Wilson
@@ -5210,7 +5210,7 @@ midwestern_group = {
 			Nancy
 			Othniel
 			Return Reuben Richard Robert Rutherford
-			Salmn Samuel Seabury
+			Salmon Samuel Seabury
 			Theodore Thomas
 			Victor
 			William Wilson

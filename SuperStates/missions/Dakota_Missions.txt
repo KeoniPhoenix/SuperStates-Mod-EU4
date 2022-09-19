@@ -50,6 +50,9 @@ dak_conquests = {
                  }
              }
         }
+        ai_weight = {
+			factor = 500
+		}
     }
     dak_successful_conquest = {
         icon = mission_conquer_5_states
@@ -73,13 +76,13 @@ dak_conquests = {
                 limit = {
                     primary_culture = south_dakotan
                 }
-                add_accepted_culture = north_dakotan
+                add_accepted_culture_or_dip_power = { culture = north_dakotan }
             }
             if = {
                 limit = {
                     primary_culture = north_dakotan
                 }
-                add_accepted_culture = south_dakotan
+                add_accepted_culture_or_dip_power = { culture = south_dakotan }
             }
             nebraska_area = {
                 add_permanent_claim = ROOT

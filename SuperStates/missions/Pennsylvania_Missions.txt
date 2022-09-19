@@ -65,6 +65,9 @@ pnn_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pnn_deal_with_delaware = {
@@ -116,6 +119,9 @@ pnn_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pnn_new_jersey = {
@@ -161,6 +167,9 @@ pnn_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 	
 	pnn_chesapeake = { #Cresap's War
@@ -195,6 +204,9 @@ pnn_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -243,6 +255,9 @@ pnn_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	pnn_into_ny = {
@@ -285,6 +300,9 @@ pnn_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	pnn_revenge_against_cut = {
@@ -309,6 +327,9 @@ pnn_slot_2 = {
 				name = "pnn_defeated_cut"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -342,6 +363,9 @@ pnn_slot_2 = {
 				name = "pnn_took_ny"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -410,6 +434,9 @@ pnn_slot_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	pnn_ohio = { #Pennsylvanian Settlers
@@ -457,6 +484,9 @@ pnn_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	pnn_west_virginia = {
@@ -492,6 +522,9 @@ pnn_slot_3 = {
 				name = "pnn_appalachians"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 

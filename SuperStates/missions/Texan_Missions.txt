@@ -48,6 +48,9 @@ texan_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	tex_colorado = {
@@ -95,6 +98,9 @@ texan_slot_1 = {
 				name = "texas_reunited"
 				duration = 5475 #15 years
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -170,13 +176,6 @@ texan_slot_2 = {
 		position = 1
 		completed_by = 1492.1.1
 
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-
 		trigger = {
 			army_size_percentage = 0.85
 			num_of_generals = 1
@@ -220,6 +219,9 @@ texan_slot_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -287,6 +289,9 @@ texan_slot_2 = {
 				}
 				add_historical_rival = RRG
 			}
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -356,6 +361,9 @@ texan_slot_2 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	tex_mexico = {
@@ -399,6 +407,9 @@ texan_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -454,6 +465,9 @@ texan_slot_2 = {
 				duration = 10950
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -497,6 +511,9 @@ texan_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	tex_ozarks = {
@@ -533,6 +550,9 @@ texan_slot_3 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -574,6 +594,9 @@ texan_slot_3 = {
 				name = "hegemonic_ambition"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 

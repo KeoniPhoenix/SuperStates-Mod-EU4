@@ -14,3 +14,7 @@ capital = 888	# Guadalajara
 		mil = 3
 	}
 }
+
+1528.1.1 = {
+    religion = catholic
+}

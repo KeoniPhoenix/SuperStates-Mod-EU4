@@ -49,6 +49,9 @@ njy_slot_1 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	njy_conquer_staten = {
@@ -76,6 +79,9 @@ njy_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -106,6 +112,9 @@ njy_slot_1 = {
 			}
 			add_prestige = 20
 			country_event = { id = flavorNJY.1002 }
+		}
+		ai_weight = {
+			factor = 100
 		}
 	}
 
@@ -192,6 +201,9 @@ njy_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	njy_pennsylvania = {
@@ -230,6 +242,9 @@ njy_slot_2 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	njy_maryland = {
@@ -257,6 +272,9 @@ njy_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -296,6 +314,9 @@ njy_slot_2 = {
 		effect = {
 			country_event = { id = flavorNJY.1000 }
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -316,13 +337,6 @@ njy_slot_3 = {
 		icon = mission_unite_home_region
 		required_missions = { }
 		position = 1
-
-		ai_weight = {
-			factor = 3
-		}
-		ai_priority = {
-			factor = 3
-		}
 
 		trigger = {
 			army_size_percentage = 1
@@ -349,6 +363,9 @@ njy_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -381,6 +398,9 @@ njy_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	njy_delmarva = {
@@ -401,6 +421,9 @@ njy_slot_3 = {
 		}
 		effect = {
 			add_dip_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -432,10 +455,9 @@ njy_slot_3 = {
 			}
 			if = {
 				limit = {
-					NOT = { accepted_culture = south_jerseyan }
 					NOT = { primary_culture = south_jerseyan }
 				}
-				add_accepted_culture = south_jerseyan
+				add_accepted_culture_or_dip_power = { culture = south_jerseyan }
 			}
 		}
 	}

@@ -71,6 +71,9 @@ ohi_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ohi_illinois = {
@@ -117,6 +120,9 @@ ohi_slot_1 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ohi_wisconsin = {
@@ -158,6 +164,9 @@ ohi_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 }
 
@@ -188,13 +197,6 @@ ohi_slot_2 = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { }
 		position = 1
-
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
 
 		trigger = {
 			if = {
@@ -230,6 +232,9 @@ ohi_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -273,6 +278,9 @@ ohi_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ohi_upper = {
@@ -303,6 +311,9 @@ ohi_slot_2 = {
 				name = "ohi_defeated_mic"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -782,6 +793,9 @@ ohi_slot_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ohi_penn = {
@@ -812,6 +826,9 @@ ohi_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -847,6 +864,9 @@ ohi_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

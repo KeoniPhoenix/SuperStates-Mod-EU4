@@ -12,13 +12,6 @@ myd_conquests = {
 		required_missions = { }
 		position = 1
 
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2616 #DC
@@ -41,6 +34,9 @@ myd_conquests = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -71,6 +67,9 @@ myd_conquests = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -106,6 +105,9 @@ myd_conquests = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_west_virginia = {
@@ -135,6 +137,9 @@ myd_conquests = {
 				name = "myd_conquered_west_vir" #production and movementspeed?
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -172,6 +177,9 @@ myd_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_chesapeake = {
@@ -197,6 +205,9 @@ myd_conquests_2 = {
 				duration = 9125
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_navy = {
@@ -213,6 +224,9 @@ myd_conquests_2 = {
 				name = "myd_on_the_high_seas"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -269,6 +283,9 @@ myd_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_mason_dixon = { #Dispute the Mason Dixon Line, previously MYD claimed lands in Penn.
@@ -307,6 +324,9 @@ myd_conquests_3 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_pennsylvania = { #Cresap's War #eh maybe not, not too relevant 
@@ -338,6 +358,9 @@ myd_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	myd_new_jersey = {
@@ -365,6 +388,9 @@ myd_conquests_3 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

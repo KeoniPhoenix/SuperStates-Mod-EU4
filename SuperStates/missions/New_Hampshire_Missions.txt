@@ -45,6 +45,9 @@ nwh_conquests_1 = {
 				add_claim =  ROOT
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 	nwh_hudson_valley = {
@@ -78,6 +81,9 @@ nwh_conquests_1 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -113,6 +119,9 @@ nwh_conquests_1 = {
 				name = "new_nyc_income"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -183,6 +192,9 @@ nwh_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_connecticut = {
@@ -214,6 +226,9 @@ nwh_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_mid_atlantic_1 = {
@@ -241,6 +256,9 @@ nwh_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_mid_atlantic_2 = {
@@ -261,6 +279,9 @@ nwh_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -296,6 +317,9 @@ nwh_conquests_3 = {
 				}
 				add_core = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -339,6 +363,9 @@ nwh_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_maine = {
@@ -365,6 +392,9 @@ nwh_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -394,6 +424,9 @@ nwh_conquests_3 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_is_eng = {
@@ -418,6 +451,9 @@ nwh_conquests_3 = {
 				name = "new_formed_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -446,6 +482,9 @@ nwh_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -489,6 +528,9 @@ nwh_conquests_4 = {
 				}
 				add_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -546,6 +588,9 @@ nwh_conquests_4 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	nwh_canada_2 = {
@@ -566,6 +611,9 @@ nwh_conquests_4 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

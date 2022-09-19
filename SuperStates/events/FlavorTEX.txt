@@ -467,13 +467,10 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					AND = {
-						primary_culture = oklahoman
-						accepted_culture = oklahoman
-					}
+					primary_culture = oklahoman
 				}
 			}
-			add_accepted_culture = oklahoman
+			add_accepted_culture_or_dip_power = { culture = oklahoman }
 		}
 		oklahoma_area = {
 			add_province_modifier = {
@@ -503,13 +500,10 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					AND = {
-						primary_culture = northern_texan
-						accepted_culture = northern_texan
-					}
+					primary_culture = northern_texan
 				}
 			}
-			add_accepted_culture = northern_texan
+			add_accepted_culture_or_dip_power = { culture = northern_texan }
 		}
 		if = {
 			limit = {

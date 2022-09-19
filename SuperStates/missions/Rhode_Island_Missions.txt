@@ -42,6 +42,9 @@ ris_conquests_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_long_island = {
@@ -61,7 +64,7 @@ ris_conquests_1 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = long_islander
+			add_accepted_culture_or_dip_power = { culture = long_islander }
 			new_york_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -69,6 +72,9 @@ ris_conquests_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -104,6 +110,9 @@ ris_conquests_1 = {
 				name = "new_nyc_income"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -173,6 +182,9 @@ ris_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
 	ris_connecticut = {
@@ -204,6 +216,9 @@ ris_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_mid_atlantic_1 = {
@@ -231,6 +246,9 @@ ris_conquests_2 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_mid_atlantic_2 = {
@@ -251,6 +269,9 @@ ris_conquests_2 = {
 		}
 		effect = {
 			add_adm_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -300,6 +321,9 @@ ris_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_nantuck = {
@@ -345,6 +369,9 @@ ris_conquests_3 = {
 				}
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_massa = {
@@ -386,6 +413,9 @@ ris_conquests_3 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_vermont_hamp = {
@@ -412,6 +442,9 @@ ris_conquests_3 = {
 		effect = {
 			add_mil_power = 100
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_is_eng = {
@@ -436,6 +469,9 @@ ris_conquests_3 = {
 				name = "new_formed_modifier"
 				duration = 9125
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
@@ -464,6 +500,9 @@ ris_conquests_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -541,6 +580,9 @@ ris_flavor_1 = {
 				add_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_canada_1 = {
@@ -568,6 +610,9 @@ ris_flavor_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 
 	ris_canada_2 = {
@@ -588,6 +633,9 @@ ris_flavor_1 = {
 		}
 		effect = {
 			add_mil_power = 100
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -653,6 +701,9 @@ ris_flavor_2 = {
 				name = "ris_roads_to_rhodes"
 				duration = -1
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
