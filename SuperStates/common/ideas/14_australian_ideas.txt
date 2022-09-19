@@ -11,7 +11,7 @@ ACT_ideas = { # Australian Capital Territory/ACT/Canberra
 	}
 
 	bonus = {
-		administrative_efficiency = 0.025
+		administrative_efficiency = 0.05
 	}
 
 	trigger = {
@@ -93,7 +93,7 @@ NSW_ideas = { # New South Wales
 QLD_ideas = { # Queensland
 	start = {
 		idea_cost = -0.10
-		merchants = 1
+	 	trade_efficiency = 0.1
 	}
 
 	bonus = {
@@ -165,7 +165,7 @@ SAU_ideas = { # South Australia
 		prestige = 1
 	}
 	torrens_title = {
-		development_cost = -0.05
+		development_cost = -0.1
 		yearly_corruption = -0.05
 	}
 	vanguard_of_change = {
@@ -223,7 +223,7 @@ TSM_ideas = { # Tasmania
 
 VCT_ideas = { # Victoria
 	start = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.2
 		global_missionary_strength = 0.02
 	}
 
@@ -307,7 +307,7 @@ WAU_ideas = { # Western Australia
 
 NTT_ideas = { # Northern Territory
 	start = {
-		land_forcelimit_modifier = 0.25
+		land_forcelimit_modifier = 0.2
 		manpower_recovery_speed = 0.15
 	}
 
@@ -374,7 +374,7 @@ JBT_ideas = { # Jervis Bay Territory
 		ship_durability = 0.075
 	}
 	JBT_naval_bases = {
-		global_sailors = 1000
+		global_sailors = 5000
 		allowed_marine_fraction = 0.2
 	}
 	integration_of_the_locals = {

@@ -466,11 +466,11 @@ FLO_ideas = {
 	free = yes		#will be added at load.
 	
 	seminole_spirit = {
-		land_morale = 0.10
+		land_morale = 0.15
 	}
 	buccaneers = {
-		privateer_efficiency = 0.3
-		naval_morale = 0.05
+		privateer_efficiency = 0.2
+		naval_morale = 0.1
 	}
 	ponce_de_leon = {
 		colonists = 1
@@ -484,6 +484,7 @@ FLO_ideas = {
 	}
 	port_canaveral = {
 		navy_tradition = 1
+		global_sailors_modifier = 0.10
 	}
 	biscayne_bay = {
 		global_trade_power = 0.20
@@ -958,7 +959,7 @@ LOU_ideas = {
 	
 	lake_pontchartrain = {
 		ship_durability = 0.05
-		global_ship_cost = -0.05
+		global_ship_cost = -0.1
 	}
 	mardi_gras_parades = {
 		global_unrest = -2
@@ -1252,7 +1253,7 @@ MPP_ideas = {
 
 MOU_ideas = {
 	start = {
-		harsh_treatment_cost = -0.2
+		mercenary_discipline = 0.05
 		fort_maintenance_modifier = -0.2
 	}
 	
@@ -1410,7 +1411,7 @@ NVA_ideas = {
 	}
 	comstock_lode = {
 		technology_cost = -0.05
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	luck_of_the_draw = {
 		yearly_corruption = -0.10
@@ -1708,7 +1709,7 @@ NDK_ideas = {
 	}
 	
 	bonus = {
-		core_creation = -0.20
+		core_creation = -0.15
 	}
 	
 	trigger = {
@@ -1726,7 +1727,7 @@ NDK_ideas = {
 		global_institution_spread = 0.15
 	}
 	red_river_north_valley = {
-		global_trade_goods_size_modifier = 0.05
+		global_trade_goods_size_modifier = 0.1
 	}
 	fertile_land = {
 		manpower_recovery_speed = 0.15
@@ -2159,7 +2160,7 @@ SDK_ideas = {
 	}
 	
 	bonus = {
-		core_creation = -0.10
+		core_creation = -0.15
 	}
 	
 	trigger = {
@@ -2174,6 +2175,7 @@ SDK_ideas = {
 	free = yes
 	
 	mount_rushmore = {
+	 	global_unrest = -1
 		reduced_liberty_desire = 10
 	}
 	the_badlands = {
@@ -2185,7 +2187,7 @@ SDK_ideas = {
 	}
 	spirit_of_crazy_horse = {
 		free_mil_policy = 1
-		land_morale = 0.05
+		land_morale = 0.1
 	}
 	black_hills_mining_excise = {
 		global_tax_modifier = 0.10
@@ -2255,7 +2257,7 @@ TEX_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	bonus = {
-		infantry_fire = 0.15
+		infantry_fire = 0.2
 	}
 	trigger = {
 	OR = {
@@ -2633,7 +2635,7 @@ WYO_ideas = {
 	}
 	homestead_act = {
 		state_maintenance_modifier = -0.15
-		governing_capacity_modifier = 0.05
+		governing_capacity_modifier = 0.1
 	}
 	grand_tetons = {	
 		hostile_attrition = 1
