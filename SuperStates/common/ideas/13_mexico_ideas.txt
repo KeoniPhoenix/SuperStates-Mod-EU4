@@ -1050,7 +1050,7 @@ SLA_ideas = {
 SLP_ideas = {
 	start = {
 		development_cost = -0.15
-		inflation_reduction = 0.10
+		global_manpower_modifier = 0.2
 	}
 
 	bonus = {
