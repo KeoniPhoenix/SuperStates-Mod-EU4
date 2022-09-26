@@ -20,12 +20,12 @@ alliance = {
 
 ###Arizona-Utah
 #(Historical ties to settlers)
-guarantee = {
-	first = ARZ
-	second = UTA
-	start_date = 1400.1.1
-	end_date = 1821.1.1
-}
+#guarantee = {
+#	first = ARZ
+#	second = UTA
+#	start_date = 1400.1.1
+#	end_date = 1821.1.1
+#}
 
 ###Guam-Northern Marianas Islands
 #(Historically these two were culturally the same but WWII lead to a deep division between the two that hasn't healed completely yet.)
