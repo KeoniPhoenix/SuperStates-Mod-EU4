@@ -1238,7 +1238,7 @@ christian = {
 			protestant
 		}
 		country = {
-			manpower_in_true_faith_provinces = 0.15
+			tolerance_own = 1
 		 	global_missionary_strength = 0.02
 		}
 		
