@@ -43,7 +43,6 @@ CJN_ideas = {
 	}
 	save_up_the_home = {
 		years_of_nationalism = -5
-		enemy_core_creation = 0.50
 	}
 }
 
