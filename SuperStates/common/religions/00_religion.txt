@@ -965,6 +965,7 @@ christian = {
 		
 		heretic = { AUSTRALICAN HOGANIST ROCKATANSKYIST }
 	}
+}
 	
 	s_protestant = {
 		color = { 0 255 203 }
@@ -1015,7 +1016,7 @@ christian = {
 		
 		heretic = { CAMERONIST CAVIEZELIST HESTONIST }
 	}
-	
+}
 	mormon = {
 		color = { 153 51 153 }
 		icon = 30
@@ -1066,6 +1067,7 @@ christian = {
 			}
 		}
 	}
+}
 	
 	s_lutheran = {
 		color = { 50 101 153 }
