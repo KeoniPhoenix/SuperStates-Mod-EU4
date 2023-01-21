@@ -245,7 +245,7 @@ nys_slot_2_nys = {
 				}
 				add_permanent_claim = ROOT
 			}
-			add_mercantilism = 5
+			add_mercantilism = 3
 		}
 		ai_weight = {
 			factor = 75
@@ -1077,7 +1077,9 @@ nys_slot_5 = {
 			else = {
 				stock_exchange = 5
 			}
-			num_of_loans = 0
+			NOT = {
+				num_of_loans = 1
+			}
 			treasury = 2000
 			custom_trigger_tooltip = {
 				tooltip = mid_atlantic_banking_tooltip

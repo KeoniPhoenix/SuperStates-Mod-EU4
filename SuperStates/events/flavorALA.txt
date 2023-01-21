@@ -60,7 +60,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "flavorALA.1opta"
+		name = "flavorALA.1optb"
 		add_stability = -2
 		add_prestige = -20
 	}

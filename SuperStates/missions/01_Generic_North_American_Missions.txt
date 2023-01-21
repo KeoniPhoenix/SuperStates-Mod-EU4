@@ -102,7 +102,9 @@ gen_mid_atlantic = {
 		position = 2
 
 		trigger = {
-			num_of_loans = 0
+			NOT = {
+				num_of_loans = 1
+			}
 			treasury = 2000
 			custom_trigger_tooltip = {
 				tooltip = mid_atlantic_banking_tooltip
@@ -209,7 +211,7 @@ gen_breadbasket_slot = {
 	has_country_shield = no
 
 	gen_breadbasket = { #have lots of grain
-		icon = mission_mal_subjugate_zaf
+		icon = mission_pol_breadbasket_europe
 		required_missions = { }
 		position = 2
 		trigger = {
@@ -305,6 +307,76 @@ gen_southern = {
 		effect = {
 			add_country_modifier = {
 				name = "gen_south_plantation_economy"
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Canadian Regional
+gen_canadian = {
+	slot = 5
+	generic = yes
+	ai = yes
+
+	potential = {
+		capital_scope = {
+			superregion = canada_superregion
+		}
+		NOT = {
+			capital_scope = {
+				OR = {
+					area = alaska_area
+					area = aleutia_area
+					area = inside_passage_area
+					region = greenland_region
+				}
+			}
+		}
+	}
+
+	gen_canada_1 = {
+		icon = mission_rb_colonise_canada
+		required_missions = { }
+		position = 1
+		trigger = {
+			num_of_owned_provinces_with = {
+				OR = {
+					has_terrain = forest
+					has_terrain = woods
+				}
+				has_building = workshop
+				value = 5
+			}
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_forest_expansion
+			}
+		}
+	}
+
+	gen_canada_2 = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { }
+		position = 2
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					trade_goods = fur
+					has_building = tradecompany
+					value = 8
+				}
+				trading_bonus = {
+					trade_goods = fur
+					value = yes
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "gen_renewed_fur_trade"
 				duration = 9125
 			}
 		}

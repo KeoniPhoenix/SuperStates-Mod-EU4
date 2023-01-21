@@ -1,0 +1,637 @@
+
+native_american_arctic = {
+	slot = 1
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+			AND = {
+				tag = ACU
+				was_tag	= NUN
+			}
+			tag = NUV
+			tag = NUN
+			tag = NTS
+		}
+    }
+    has_country_shield = yes
+
+	arctic_prestige = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			prestige = 50
+		}
+		effect = {
+			2005 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3003 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	NUN_eastern_canada = {
+		icon = mission_canada
+		required_missions = { arctic_prestige }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2005
+				province_id = 3033
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 2005
+			owns_or_non_sovereign_subject_of = 3033
+		}
+		effect = {
+			northwest_territories_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yukon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hudson_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NUN_arctic_region = {
+		icon = arctic_fox
+		required_missions = { NUN_eastern_canada }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = northwest_territories_area
+				area = yukon_area
+				area = hudson_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			yukon_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			northwest_territories_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			alaska_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aleutia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NUN_alaska_area = {
+		icon = alaskan_flag
+		required_missions = { NUN_arctic_region }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = alaska_area
+				area = aleutia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			alaska_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = aleutia_area
+			}
+		}
+		effect = {
+			inside_passage_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			columbia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vancouver_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kootenay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			strait_of_georgia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	NUN_cascadia = {
+		icon = cascadian_flag
+		required_missions = { NUN_alaska_area }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = strait_of_georgia_area
+				area = inside_passage_area
+				area = columbia_area
+				area = vancouver_area
+				area = kootenay_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			inside_passage_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			columbia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			vancouver_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kootenay_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			strait_of_georgia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_army_tradition = 15
+		}
+	}
+}
+native_american_pacific = {
+	slot = 1
+    generic = no
+    ai = yes
+
+    potential = {
+		OR = {
+			tag = ALU
+			# tag = HDA
+			# tag = YUP
+		}
+    }
+    has_country_shield = yes
+
+	ALU_arctic_prestige = {
+		icon = mission_noble_council
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			prestige = 20
+		}
+		effect = {
+			vancouver_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3042 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3242 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			974 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3235 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	ALU_pacific_islands = {
+		icon = mission_galleys_in_port
+		required_missions = { arctic_prestige }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = vancouver_area
+				province_id = 3042
+				province_id = 3234
+				province_id = 974
+				province_id = 3235
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			vancouver_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3042 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3234 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			974 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			3235 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			alaska_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			aleutia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ALU_alaska_area = {
+		icon = alaskan_flag
+		required_missions = { ALU_pacific_islands }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = alaska_area
+				area = aleutia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			alaska_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = aleutia_area
+			}
+		}
+		effect = {
+			inside_passage_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			columbia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vancouver_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kootenay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			strait_of_georgia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ALU_cascadia = {
+		icon = cascadian_flag
+		required_missions = { ALU_alaska_area }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = strait_of_georgia_area
+				area = inside_passage_area
+				area = columbia_area
+				area = vancouver_area
+				area = kootenay_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			inside_passage_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			columbia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			vancouver_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			kootenay_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			strait_of_georgia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			northwest_territories_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yukon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hudson_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	ALU_arctic_region = {
+		icon = arctic_fox
+		required_missions = { ALU_cascadia }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = northwest_territories_area
+				area = yukon_area
+				area = hudson_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_islands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			yukon_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			northwest_territories_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_army_tradition = 15
+		}
+	}
+}
+
+native_american_tech_group = {
+	slot = 5
+    generic = yes
+    ai = yes
+    potential = {
+		OR = {
+			# culture_group = mesoamerican
+			# culture_group = native_american
+			# tag = YUP
+			tag = NUV
+			tag = NUN
+			tag = NTS
+			tag = ALU
+			# tag = HDA
+			tag = SEQ
+			# tag = CCP
+			tag = NAH
+			tag = YUK
+			tag = NWT
+			tag = ACU
+			# tag = BLA
+			# tag = SIO
+			# tag = WCR
+			# tag = AZT
+			# tag = MAY
+		}
+    }
+    has_country_shield = no
+
+	NUN_embrace_renaissance = {
+		icon = mission_establish_the_prikazy
+		required_missions = {  }
+		position = 3
+		completed_by = 1492.1.1
+		trigger = {
+			has_institution = renaissance
+		}
+		effect = {
+			add_stability = 1
+			change_government_reform_progress = 100
+		}
+	}
+	
+	NUN_military_tech = {
+		icon = mission_nun_american_conquest
+		required_missions = { NUN_embrace_renaissance }
+		position = 4
+		completed_by = 1675.1.1
+		trigger = {
+			army_size_percentage = 1
+			NOT = {
+				any_neighbor_country = {
+					tech_difference = 1
+				}
+			}
+			if = {
+				limit = { start_date = 1444.11.11 }
+				mil_tech = 6
+			}
+			else = {
+				mil_tech = 15
+			}
+		}
+		effect = {
+			add_army_tradition = 15
+			add_country_modifier = {
+				name = "native_american_army"
+				duration = -1
+			}
+		}
+	}
+	NUN_high_american = {
+		icon = mission_nun_high_american
+		required_missions = { NUN_military_tech }
+		position = 5
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank = 3
+			}
+			else = {
+				total_development = 1000
+			}
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Rights of Man"
+						has_dlc = "Emperor"
+					}
+				}
+				NOT = { great_power_rank = 8 }
+			}
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "rise_of_high_american"
+				duration = -1
+			}	
+			change_technology_group = high_american
+		}
+	}
+}

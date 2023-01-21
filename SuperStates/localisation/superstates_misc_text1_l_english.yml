@@ -358,10 +358,13 @@
  merc_mexican_company:0 "Mexican Company"
  merc_texan_rangers:0 "Texan Rangers"
  merc_metis_company:0 "Métis Company"
+ merc_french_volunteer_company:0 "French Volunteers"
+ unlock_merc_french_volunteer_company_tt:0 "Unlock the mercenary company §YFrench Volunteers§! to recruit."
   
  #Misc Text
  random_new_world_region:0 "REPLACE_ME"
  cb_successor_america:0 "Unify America"
  cb_successor_america_desc:0 "We can enforce our claims over the historic boundaries of the United States."
  SUCCESSOR_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war for America"
+ unlock_maitres_chez_nous_reform_tt:0 "Unlock the '§YMaîtres Chez Nous§!' Tier 9 government reform for Republics."
  

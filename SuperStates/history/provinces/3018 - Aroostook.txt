@@ -8,7 +8,7 @@ add_core = NBR
 add_core = ACD
 #add_core = ARO
 culture = acadian
-religion = s_protestant
+religion = s_catholic
 capital = "Houlton"
 trade_goods = fur
 hre = no
@@ -18,10 +18,6 @@ base_manpower = 1
 is_city = yes #1000
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = NEW

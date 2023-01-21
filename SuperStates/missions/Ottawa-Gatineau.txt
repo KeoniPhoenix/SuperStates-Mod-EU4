@@ -1,0 +1,328 @@
+otg_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = OTW
+			tag = GAT
+			tag = OTG
+		}
+	}
+	has_country_shield = yes
+
+	otg_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			manpower_percentage = 0.85
+			army_size = 8
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = "otg_built_up"
+				duration = 9125
+			}
+		}
+	}
+
+	otg_ontario = {
+		icon = mission_assemble_an_army
+		required_missions = { otg_unite }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = ontario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			southwest_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	otg_ontario_2 = {
+		icon = the_hundred_years_war
+		required_missions = { otg_ontario }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = southwest_ontario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			southwest_ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			northern_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+otg_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = OTW
+			tag = GAT
+			tag = OTG
+		}
+	}
+	has_country_shield = yes
+
+	otg_dev_capital = {
+		icon = mission_hanseatic_city
+		required_missions = { }
+		position = 1
+		trigger = {
+			capital_scope = {
+				grown_by_development = 3
+			}
+			capital_scope = {
+				has_tax_building_trigger = yes
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 9125 #25 years
+					}
+				}
+			}
+		}
+	}
+
+	otg_unite = {
+		icon = mission_unite_home_region
+		required_missions = { otg_buildup otg_dev_capital otg_independence }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2643
+				province_id = 2007
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_core_province = 2007
+			owns_core_province = 2643
+		}
+		effect = {
+			ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bois_francs_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "otg_united_modifier"
+				duration = 9125
+			}
+		}
+	}
+
+	otg_culturally_unify = {
+		icon = purely_for_commerce
+		required_missions = { otg_unite }
+		position = 3
+		trigger = {
+			2007 = {
+				owned_by = ROOT
+				province_is_or_accepts_culture = yes
+			}
+			2643 = {
+				owned_by = ROOT
+				province_is_or_accepts_culture = yes
+			}
+		}
+		effect = {
+			2007 = {
+				add_base_tax = 2
+			}
+			2643 = {
+				add_base_tax = 2
+			}
+			add_country_modifier = {
+				name = "otg_cultural_unity"
+				duration = -1
+			}
+		}
+	}
+
+	otg_develop_more = {
+		icon = mission_early_game_buildings
+		required_missions = { otg_culturally_unify }
+		position = 4
+		trigger = {
+			2007 = {
+				owned_by = ROOT
+				development = 30
+				province_has_center_of_trade_of_level = 2
+			}
+			2643 = {
+				owned_by = ROOT
+				development = 30
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			2007 = {
+				add_province_modifier = {
+					name = "otg_unified_cities"
+					duration = -1
+				}
+			}
+			2643 = {
+				add_province_modifier = {
+					name = "otg_unified_cities"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+otg_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = OTW
+			tag = GAT
+			tag = OTG
+		}
+	}
+	has_country_shield = yes
+
+	otg_independence = {
+		icon = mission_alliances
+		required_missions = { }
+		position = 1
+		trigger = {
+			is_vassal = no
+			num_of_allies = 2
+		}
+		effect = {
+			add_dip_power = 50
+			2643 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2007 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	otg_quebec_1 = {
+		icon = mission_colonial_new_france
+		required_missions = { otg_unite }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = bois_francs_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			bois_francs_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			quebec_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	otg_quebec_2 = {
+		icon = mission_landsknecht_soldier
+		required_missions = { otg_quebec_1 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = quebec_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			quebec_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			nord_du_quebec_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

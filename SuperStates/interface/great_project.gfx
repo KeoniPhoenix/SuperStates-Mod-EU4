@@ -284,6 +284,10 @@ spriteTypes = {
 		name = "GFX_great_project_kiel_canal"	
 		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
 	}
+	spriteType = {
+		name = "GFX_great_project_lees_ferry"	
+		texturefile = "gfx//interface//great_projects//great_project_lees_ferry.dds"
+	}
 
 	### 1.32 MONUMENTS ###
 

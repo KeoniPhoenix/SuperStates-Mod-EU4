@@ -5,7 +5,7 @@ controller = ARZ
 add_core = ARZ
 #add_core = APA
 culture = arizonan
-religion = s_protestant
+religion = s_catholic
 capital = "Florence" 
 is_city = yes #2550
 trade_goods = cotton
@@ -15,10 +15,6 @@ base_production = 2
 base_manpower = 3
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1531.1.1 = {
-	religion = s_baptist
-}
 
 1555.1.1 = {
 	owner = DES

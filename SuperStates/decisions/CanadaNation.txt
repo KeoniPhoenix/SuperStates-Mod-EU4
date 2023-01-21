@@ -7,6 +7,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_canada_flag }
 			NOT = { exists = CAN }
 			NOT = { exists = NAM }
+			NOT = { tag = NFR }
 			#technology_group = north_american
 			OR = {
 				culture_group = arctic_canadian
@@ -47,7 +48,7 @@ country_decisions = {
 				}
 			}
 		}
-			provinces_to_highlight = {
+		provinces_to_highlight = {
 			OR = {
 				AND = {
                     province_id = 2635
@@ -173,13 +174,13 @@ country_decisions = {
 					owns_core_province = 1808 # Charlottetown
 					owns_core_province = 1811 # Halifax
 					owns_core_province = 1813 # St. John
-					}
+				}
 			}
 			OR = {
 				AND = {
 					owns_core_province = 2652 # Quebec
 					owns_core_province = 2657 # Montreal
-					}
+				}
 				AND = {
 					owns_core_province = 2631 # Calgary
 					owns_core_province = 2630 # Edmonton
@@ -189,7 +190,7 @@ country_decisions = {
 				AND = {
 					owns_core_province = 2642 # Toronto
 					owns_core_province = 2643 # Ottawa
-					}
+				}
 				AND = {
 					owns_core_province = 2622 # Regina
 					owns_core_province = 2623 # Saskatoon
@@ -199,7 +200,7 @@ country_decisions = {
 				AND = {
 					owns_core_province = 1807 # Saint John's
 					owns_core_province = 1805 # Goose Bay
-					}
+				}
 				AND = {
 					owns_core_province = 2626 # Winnipeg
 					owns_core_province = 2649 # Thunder Bay
@@ -209,7 +210,7 @@ country_decisions = {
 				AND = {
 					owns_core_province = 2619 # Yellowknife
 					owns_core_province = 2618 # Whitehorse
-					}
+				}
 				AND = {
 					owns_core_province = 2620 # Baffin
 					owns_core_province = 2621 # Keewatin
@@ -227,21 +228,21 @@ country_decisions = {
 			}
 			add_prestige = 50
 			change_tag = CAN
-				CAN = {
-			if = {
+			CAN = {
+				if = {
 					limit = {
-					NOT = { government_rank = 3 }
-							}
-				set_government_rank = 3
-			}
-			canada_superregion = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
 				}
-				add_permanent_claim = CAN
+				canada_superregion = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CAN
+				}
 			}
-			}
-			swap_non_generic_missions = yes
+			# swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap 
 		}
 		ai_will_do = {

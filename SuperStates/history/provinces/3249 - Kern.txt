@@ -6,7 +6,7 @@ add_core = CAL
 add_core = SJV
 #add_core = YKT
 culture = southern_californian
-religion = s_protestant
+religion = s_catholic
 capital = "Bakersfield"
 is_city = yes #34750
 trade_goods = grain
@@ -16,10 +16,6 @@ base_production = 3
 base_manpower = 4
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = PCF

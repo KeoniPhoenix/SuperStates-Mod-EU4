@@ -166,10 +166,16 @@ dak_rushmore = {
 	prestige = 1
 }
 
+dak_united_modifier = {
+	stability_cost_modifier = -0.20
+	land_morale = 0.15
+}
+
 #Illinois
 ili_trade = {
 	trade_efficiency = 0.15
 }
+
 ili_chicago_permanent = {
 	province_trade_power_modifier = 0.25
 	local_tax_modifier = 0.3
@@ -387,6 +393,12 @@ gen_prosperous_indpendence = {
 	development_cost = -0.1
 }
 
+#Canada
+gen_renewed_fur_trade = {
+	trade_efficiency = 0.15
+	land_attrition = -0.1
+}
+
 #Ohio
 ohi_great_laker_ambition = {
 	administrative_efficiency = 0.05
@@ -454,6 +466,7 @@ myd_virginia_defeated = { #Chesapeake Secured
 myd_is_catholic = {
 	global_missionary_strength = 0.02
 	missionary_maintenance_cost = -0.33
+	religion = yes
 }
 
 myd_humanist_complete = {
@@ -814,6 +827,78 @@ wva_almost_heaven_modifier = {
 	global_heretic_missionary_strength = 0.02
 }
 
+#Ontario
+
+ont_religion_mod = {
+	local_missionary_strength = 0.02
+	local_missionary_maintenance_cost = -0.25
+	religion = yes
+}
+
+ont_trade_boost = {
+	caravan_power = 0.33
+	state_maintenance_modifier = -0.25
+}
+
+ont_maritimes_modifier = {
+	navy_tradition = 1
+	global_ship_cost = -0.15
+}
+
+ont_defeated_quebec = {
+	discipline = 0.05
+	army_tradition_decay = -0.01
+}
+
+ont_centralized_state = {
+	max_absolutism = 15
+	all_estate_loyalty_equilibrium = 0.05
+}
+
+ont_family_compact_modifier = {
+	stability_cost_modifier = -0.15
+	monthly_reform_progress_modifier = 0.25
+}
+
+ont_canada_ambition_modifier = {
+	land_morale = 0.1
+	reduced_liberty_desire_on_same_continent = 15
+}
+
+ont_religious_unity_modifier = {
+	global_unrest = -1
+	tolerance_own = 1
+}
+
+ont_toronto_stock_exchange_modifier = {
+	interest = -0.5
+	#Also gets the +25 ducats bonus
+}
+
+ont_toronto_improved = {
+	local_development_cost = -0.1
+	local_production_efficiency = 0.1
+	local_prosperity_growth = 0.1
+	local_monthly_devastation = -0.1
+}
+
+ont_militia_act_modifier = {
+	reinforce_cost_modifier = -0.15
+	drill_decay_modifier = -0.20
+}
+
+ont_prosperity_modifier = {
+	local_tax_modifier = 0.15
+	local_manpower_modifier = 0.1
+	local_institution_spread = 0.25
+}
+
+ont_family_compact_bad = {
+	yearly_corruption = 0.1
+	reform_progress_growth = -0.15
+	global_autonomy = 0.05
+}
+
 #Louisiana
 lou_panama_trade = {
 	global_trade_power = 0.05
@@ -859,27 +944,138 @@ nfr_american_unification = {
 	naval_morale = 0.10
 	picture = "years_of_nationalism"
 }
-nfr_cultural_unification = {
-	prestige = 1
-	land_morale = 0.10
-	naval_morale = 0.10
-	picture = "years_of_nationalism"
-}
-nfr_caribbean_discovered = {
-	colonists = 1
-	picture = "global_colonial_growth"
-}
 nfr_technology = {
 	technology_cost = -0.10
 	global_institution_spread = 0.50
 }
 
 #Quebec
-que_europe_discovered = {
+que_ontario_united = {
+	local_development_cost = -0.10
+	local_state_maintenance_modifier = -0.25
+}
+
+que_defeated_ont = {
+	manpower_recovery_speed = 0.15
+	harsh_treatment_cost = -0.25
+}
+
+que_political_clergy = {
+	papal_influence = 1
+	curia_powers_cost = -0.1
+	religion = yes
+}
+
+que_catholicism_restored = {
+	tolerance_own = 1
+	global_heretic_missionary_strength = 0.02
+	religion = yes
+}
+
+que_abandoned_catholic_modifier = {
+	global_heretic_missionary_strength = 0.02
+}
+
+que_early_colonist = {
+	colonists = 1
+	global_colonial_growth = 15
+}
+
+que_trade_bonus = {
+	global_ship_trade_power = 0.15
+	embargo_efficiency = 0.25
+}
+
+que_ship_building_frenzy = {
+	global_ship_cost = -0.1
+	sailors_recovery_speed = 0.20
+}
+
+que_liberated_acadians = {
+	global_autonomy = -0.05
+	shock_damage_received = -0.05
+}
+
+que_peace_with_france = {
+	land_morale = 0.1
 	diplomatic_reputation = 1
-	global_colonial_growth = 10
-	range = 0.75
-	picture = "admiral_cost"
+	diplomatic_upkeep = 1
+}
+
+que_comin_to_france = {
+	land_morale = 0.15
+	naval_attrition = -0.15
+	range = 0.33
+}
+
+que_build_churches = {
+	global_unrest = -1
+	missionary_maintenance_cost = -0.25
+}
+
+que_protestant_chrurch = {
+	church_power_modifier = 0.15
+	institution_spread_from_true_faith = 0.20
+	religion = yes
+}
+
+que_code_du_travail = {
+	global_unrest = -1
+	global_trade_goods_size_modifier = 0.1
+}
+
+que_new_french_accepted_province = {
+	local_unrest = -2
+	local_tax_modifier = 0.33
+	local_missionary_strength = 0.02
+	local_manpower_modifier = 0.33
+	local_sailors_modifier = 0.2
+}
+
+que_new_french_accepted_province_republic = {
+	local_unrest = -1.5
+	local_tax_modifier = 0.23
+	local_missionary_strength = 0.02
+	local_manpower_modifier = 0.23
+	local_sailors_modifier = 0.15
+}
+
+que_cosmo_rulers_of_france = {
+	prestige = 0.5
+}
+
+que_rulers_of_france = {
+	fire_damage = 0.15
+	administrative_efficiency = 0.025
+}
+
+que_cultural_exchange = {
+	prestige = 0.5
+}
+
+que_treaty_and_peace = {
+	envoy_travel_time = -0.25
+	fire_damage = 0.1
+	diplomats = 1
+}
+
+nfr_caribbean_discovered = {
+	global_colonial_growth = 15
+	trade_steering = 0.15
+}
+
+nfr_cultural_unification = {
+	culture_conversion_cost = -0.25
+	same_culture_advisor_cost = -0.15
+}
+
+nfr_renewed_colonialism = {
+	global_tariffs = 0.20
+	expel_minorities_cost = -0.25
+}
+
+nfr_territorial_ambitions = {
+	movement_speed = 0.15
 }
 
 #Misc
@@ -891,4 +1087,366 @@ american_monopoly = {
 	merchants = 1
 	global_own_trade_power = 0.25
 	picture = "global_trade_power"
+}
+
+#maritime States
+maritime_prosperity = {
+	development_cost = -0.15
+	stability_cost_modifier = -0.25
+	picture = "development_cost"
+}
+maritime_europe_discovered = {
+	diplomatic_reputation = 1
+	naval_morale = 0.15
+	naval_attrition = -0.80
+	picture = "admiral_cost"
+}
+maritime_fog_of_sailors = {
+	leader_naval_manuever = 1
+	naval_morale = 0.10
+	picture = "admiral_cost"
+}
+nvs_highplainer_acceptance = {
+	num_accepted_cultures = 1
+	land_morale = 0.05
+	picture = "accepted_culture_threshold"
+}
+maritime_carribean = {
+	global_trade_power = 0.15
+	own_coast_naval_combat_bonus = 1.0
+	picture = "admiral_cost"
+}
+maritime_anglican = {
+	prestige = 1.0
+	church_power_modifier = 0.15
+	warscore_cost_vs_other_religion = -0.10
+	tolerance_heathen = -2
+}
+maritime_technology = {
+	technology_cost = -0.10
+	global_institution_spread = 0.25
+}
+maritime_invent_modifier = {
+	innovativeness_gain = 1
+	development_cost = -0.1
+	free_policy = 1
+}
+maritime_coal_manufacturies = {
+	local_build_cost = -0.25
+	allowed_num_of_buildings = 1
+	trade_value = 1
+	picture = "production_efficiency"
+}
+nfl_scandinavia_discovered = {
+	diplomatic_reputation = 1
+	naval_attrition = -0.20
+	picture = "admiral_cost"
+}
+nfl_scandinavian_acceptance = {
+	num_accepted_cultures = 3
+	land_morale = 0.05
+	picture = "accepted_culture_threshold"
+}
+nfl_nordic_unity = {
+	land_morale = 0.10
+	naval_morale = 0.15
+	naval_attrition = -0.25
+	picture = "heavy_ship_power"
+}
+nfl_legacy_of_vinland = {
+	own_coast_naval_combat_bonus = 1.0
+	may_perform_slave_raid_on_same_religion = yes
+	leader_naval_shock = 2
+	picture = "heavy_ship_power"
+}
+
+#High American
+native_american_army = {
+	discipline = 0.05
+	mil_tech_cost_modifier = -0.15
+	picture = "infantry_fire"
+}
+
+rise_of_high_american = {
+	land_morale = 0.15
+	leader_land_shock = 2
+	picture = "land_morale"
+}
+
+#modifiers for ACD missions
+united_acadia = {
+	same_culture_advisor_cost = -0.5
+	prestige = 1
+	republican_tradition = 0.2
+}
+families_reunited = {
+	local_unrest = -2
+}
+francophone_north_america = {
+	culture_conversion_cost = 0.25
+}
+ave_maria = {
+	tolerance_own = 1
+}
+catholic_cooperation = {
+	diplomatic_reputation = 2
+}
+foire_brayonne = {
+	local_build_cost = -0.20
+	local_development_cost = -0.20
+	local_production_efficiency = 0.20
+}
+french_shore_sailors = {
+	global_sailors_modifier = 0.15
+	sailors_recovery_speed = 0.2
+}
+hudson_bay_trade = {
+	merchants = 1
+}
+best_canada_in_the_land = {
+	prestige = 1
+}
+fur_trade = {
+    production_efficiency = 0.25
+}
+religious_college = {
+    papal_influence = 1
+    local_institution_spread = 0.10
+    missionary_maintenance_cost = -0.1
+}
+archdiocese = {
+    papal_influence = 2
+    missionaries = 1
+}
+
+sea_to_sea = {
+	movement_speed = 0.20
+}
+atlantic_control = {
+	global_trade_power = 0.2
+	diplomatic_reputation = 2
+}
+dominate_export_commerce = {
+	merchants = 2
+}
+masters_of_the_oceans = {
+	trade_steering = 0.1
+	global_ship_trade_power = 0.2
+	heavy_ship_power = 0.1
+	prestige = 1
+}
+true_north = {
+	republican_tradition = 0.5
+	legitimacy = 1
+	global_unrest = -1
+	administrative_efficiency = 0.05
+}
+house_of_brunswick = {
+	improve_relation_modifier = 0.20
+	diplomatic_upkeep = 1
+}
+
+#arctic_canada
+nun_end_of_the_second_saga = {
+	own_coast_naval_combat_bonus = 1.0
+	leader_naval_shock = 2
+	leader_naval_manuever = 1
+	picture = "heavy_ship_power"
+}
+nun_gold_accepted = {
+	local_gold_depletion_chance_modifier = -0.50
+	local_development_cost = -0.35
+	picture = "development_cost"
+}
+nun_gold_decline = {
+	local_build_cost = -0.50
+	allowed_num_of_buildings = 2
+	local_development_cost = -0.25
+	picture = "development_cost"
+}
+local_development_initiative = {
+	local_tax_modifier = -0.15
+	local_development_cost = -0.25
+	local_build_cost = -0.15
+	picture = "development_cost"
+}
+nun_hudson_trade = {
+	global_trade_power = 0.05
+	trade_steering = 0.25
+	picture = "global_trade_power"
+}
+nwt_northwest_territories_restored = {
+	prestige = 0.1
+	republican_tradition = 1
+	picture = "republican_tradition"
+}
+nwt_canada_unification = {
+	land_morale = 0.15
+	republican_tradition = 1
+	diplomatic_reputation = 1
+	picture = "republican_tradition"
+}
+nwt_gold_rush = {
+	local_production_efficiency = 0.15
+	local_gold_depletion_chance_modifier = -0.25
+	local_development_cost = -0.85
+	picture = "development_cost"
+}
+yuk_gold_rush = {
+	interest = -0.30
+	development_cost = -0.10
+	picture = "development_cost"
+}
+
+#cascadia
+ore_unrest = {
+	local_unrest = -5
+	local_culture_conversion_cost = -0.50
+	picture = "global_unrest"
+}
+ore_unity = {
+	republican_tradition = 1
+	diplomatic_reputation = 1
+	picture = "republican_tradition"
+}
+ore_pacific_coastal = {
+	republican_tradition = 1
+	years_of_nationalism = -5
+	global_autonomy = -0.05
+	picture = "years_of_nationalism"
+}
+elimated_idaho = {
+	discipline = 0.05
+	picture = "discipline"
+}
+rise_of_lincoln = {
+	land_morale = 0.10
+	discipline = 0.05
+	picture = "years_of_nationalism"
+}
+lnc_cultural_unification = {
+	legitimacy = 0.1
+	republican_tradition = 0.1
+	culture_conversion_cost = -0.50
+	picture = "accepted_culture_threshold"
+}
+ida_esteemed_wineries = {
+	province_trade_power_value = 5
+	local_production_efficiency = 0.15
+}
+ida_legacy_of_rothschild = {
+	interest = -0.50
+	mercantilism_cost = -0.25
+	picture = "trade_efficiency"
+}
+ida_idaho_national_laboratory = {
+	technology_cost = -0.075
+	institution_growth = 1
+	picture = "technology_cost"
+}
+ida_new_gold = {
+	local_gold_depletion_chance_modifier = 0.10
+	local_development_cost = 0.50
+	picture = "development_cost"
+}
+ida_agricultural_initiative = {
+	development_cost = -0.10
+	build_cost = -0.25
+	picture = "development_cost"
+}
+ida_potato_initiative = {
+	production_efficiency = 0.10
+	build_cost = -0.10
+	picture = "development_cost"
+}
+ida_potato_exports = {
+	production_efficiency = 0.10	
+	development_cost = -0.10
+	picture = "development_cost"
+}
+ida_greater_idaho_acceptance = {
+	num_accepted_cultures = 2
+	picture = "accepted_culture_threshold"
+}
+bco_asia_landfall = {
+	navy_tradition = 1
+	leader_naval_manuever = 1
+	picture = "heavy_ship_power"
+}
+csc_conqueror_of_japan = {
+	army_tradition = 1
+	discipline = 0.05
+	picture = "temples_influence"
+}
+csc_trade_domination_china = {
+	prestige = 1.0
+	global_trade_power = 0.05
+	picture = "meritocracy"
+}
+csc_dominate_china = {
+	prestige = 1.0
+	army_tradition = 1
+	global_trade_power = 0.10
+	picture = "meritocracy"
+}
+#Alaska
+ala_alaskan_unity = {
+	republican_tradition = 1
+	culture_conversion_cost = -0.50
+	picture = "accepted_culture_threshold"
+}
+alaskan_prosperity = {
+	development_cost = -0.15
+	stability_cost_modifier = -0.25
+	picture = "development_cost"
+}
+ala_into_siberia = {
+	colonists = 1
+	native_uprising_chance = -1.00
+	picture = "idea_may_siberian_frontier"
+}
+ala_siberia_frontier = {
+	global_colonial_growth = 100
+	range = -10.00
+	native_assimilation = 1.00
+	picture = "idea_may_siberian_frontier"
+}
+ala_west_siberia = {
+	colonists = 1
+	development_cost = -0.10
+	picture = "colonists"
+}
+
+
+#Ottawa-Gatineau
+otg_built_up = {
+	land_morale = 0.10
+	manpower_recovery_speed = 0.15
+}
+
+otg_united_modifier = {
+	stability_cost_modifier = -0.2
+	prestige = 1
+}
+
+otg_unified_cities = {
+	local_development_cost = -0.2
+	local_tax_modifier = 0.25
+}
+
+otg_cultural_unity = {
+	num_accepted_cultures = 1
+	global_unrest = -1
+}
+
+#Mormon
+united_the_mormons = {
+	land_morale = 0.15
+	discipline = 0.05
+	picture = "land_morale"
+}
+force_convert_mormon = {
+	prestige = 0.25
+	warscore_cost_vs_other_religion = -0.15
+	tolerance_heathen = -2
 }

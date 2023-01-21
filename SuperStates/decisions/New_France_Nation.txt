@@ -1,62 +1,82 @@
-# country_decisions = {
+country_decisions = {
 
-# ## NEW FRANCE
-	# new_france_nation = {
-		# major = yes
-		# potential = {
-			# NOT = { exists = CAN }
-			# NOT = { exists = NAM }
-			# NOT = { exists = NFR }
-			# NOT = { exists = RCA }
+## NEW FRANCE
+	new_france_nation = { #new french decision only for quebec
+		major = yes
+		potential = {
+			NOT = { exists = CAN }
+			NOT = { exists = NAM }
+			NOT = { exists = NFR }
+			NOT = { has_country_flag = formed_new_france_flag }
 			# technology_group = north_american
 			# culture_group = new_french
-			# OR = {
-				# ai = no
-				# AND = {
-					# ai = yes
-					# num_of_cities = 10
-				# }
-			# }
-		# }
-		# allow = {
-			# is_subject = no
-			# is_at_war = no
-			# northern_ontario_area = {
-				# type = all 
-				# owned_by = ROOT
-				# is_core = ROOT
-			# }
-			# southern_ontario_area = {
-				# type = all 
-				# owned_by = ROOT
-				# is_core = ROOT
-			# }
-			# northern_quebec_area = {
-				# type = all 
-				# owned_by = ROOT
-				# is_core = ROOT
-			# }
-			# southern_quebec_area = {
-				# type = all 
-				# owned_by = ROOT
-				# is_core = ROOT
-			# }
-		# }
-		# effect = {
-			# add_country_modifier = {
-				# name = "centralization_modifier"
-				# duration = 7300
-			# }
-			# add_prestige = 15
-			# change_tag = NFR
-			# change_government = despotic_monarchy
+			has_country_flag = que_can_form_nfr_flag
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			northern_ontario_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			ontario_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			southwest_ontario_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			bois_francs_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			quebec_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			nord_du_quebec_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			new_brunswick_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			nova_scotia_area = {
+				type = all 
+				owned_by = ROOT
+			}
+			saint_george_area = {
+				type = all 
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = NFR
 			# NFR = {
-				# set_capital = 2652			# Quebec City
+			# 	set_capital = 2652			# Quebec City
 			# }
-			# country_event = { id = ideagroups.1 } #Swap 
-		# }
-		# ai_will_do = {
-			# factor = 1
-		# }
-	# }
-# }
+			country_event = { id = ideagroups.1 } #Swap 
+			swap_non_generic_missions = yes
+			hidden_effect = {
+				set_country_flag = formed_new_france_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

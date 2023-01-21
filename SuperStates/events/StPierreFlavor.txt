@@ -16,6 +16,7 @@ country_event = {
 	
 	trigger = {
 		4576 = {
+			is_city = yes
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = saint_pierrais }
@@ -23,6 +24,7 @@ country_event = {
 		}
 		
 		3050 = {
+			is_city = yes
 			is_capital = no
 			owned_by = ROOT
 			NOT = { culture = saint_pierrais }

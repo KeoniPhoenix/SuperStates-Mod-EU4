@@ -5,7 +5,7 @@ controller = ARZ
 add_core = ARZ
 add_core = BAZ
 culture = baja_arizonan
-religion = s_protestant
+religion = s_catholic
 capital = "Bisbee" 
 is_city = yes #1000
 trade_goods = copper
@@ -15,10 +15,6 @@ base_production = 1
 base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1531.1.1 = {
-	religion = s_baptist
-}
 
 1555.1.1 = {
 	owner = DES

@@ -9,7 +9,7 @@ controller = PNN
 add_core = PNN
 add_core = WST
 culture = western_pennsylvanian
-religion = s_protestant
+religion = s_catholic
 capital = "Pittsburgh"
 trade_goods = dyes
 hre = no
@@ -23,10 +23,6 @@ center_of_trade = 2
 
 1399.1.1 = {
 	fort_15th = yes 
-}
-
-1528.1.1 = {
-	religion = s_methodist
 }
 
 1555.1.1 = {

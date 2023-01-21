@@ -1,0 +1,68 @@
+##########################
+#
+#  Written by:
+#  goik
+#
+##########################
+
+namespace = flavorONT
+
+country_event = { #Rise of the Family Compact
+	id = flavorONT.1
+	title = flavorONT.1t
+	desc = flavorONT.1d
+	picture = LIBERUM_VETO_eventPicture	
+
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1095 }
+
+	trigger = {
+		tag = ONT
+		is_year = 1475 #tight deadline but still doable; harder if you hand out mana privilages
+		NOT = { has_country_flag = ont_family_compact_demands }
+		NOT = { has_country_flag = ont_family_compact_resolved }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ont_family_compact_demands
+		}
+	}
+
+	option = {
+		name = flavorONT.1opta
+		add_stability = -1
+		change_government_reform_progress = -25
+		add_country_modifier = {
+			name = ont_family_compact_bad
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = {
+		name = flavorONT.1optb
+		add_stability = -2
+		add_country_modifier = {
+			name = ont_family_compact_bad
+			duration = 3650
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					stability = 0
+				}
+			}
+		}
+	}
+}

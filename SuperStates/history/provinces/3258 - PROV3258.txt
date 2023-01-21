@@ -4,7 +4,7 @@ owner = CLO
 controller = CLO
 add_core = CLO
 culture = coloradan 
-religion = s_protestant
+religion = s_catholic
 trade_goods = grain
 capital = "Trinidad"
 hre = no
@@ -14,10 +14,6 @@ base_manpower = 1
 is_city = yes #1000
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = RKY

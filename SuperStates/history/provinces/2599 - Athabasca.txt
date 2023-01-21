@@ -4,7 +4,7 @@ owner = NYS
 controller = NYS
 add_core = NYS
 culture = new_yorker
-religion = s_protestant
+religion = s_catholic
 capital = "Binghamton"
 trade_goods = grain
 hre = no
@@ -14,10 +14,6 @@ base_manpower = 2
 is_city = yes #4740
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = MID

@@ -5,7 +5,7 @@ controller = CAL
 add_core = CAL
 add_core = SFB
 culture = san_franciscan
-religion = s_protestant
+religion = s_catholic
 capital = "Santa Rosa"
 is_city = yes #16710
 trade_goods = wine
@@ -15,10 +15,6 @@ base_production = 5
 base_manpower = 4
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = PCF

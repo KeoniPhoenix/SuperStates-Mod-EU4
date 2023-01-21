@@ -947,7 +947,7 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
-		
+		}
 		uses_anglican_power = yes				# Uses church power/aspect mechanics
 		
 		aspects = {
@@ -965,7 +965,6 @@ christian = {
 		
 		heretic = { AUSTRALICAN HOGANIST ROCKATANSKYIST }
 	}
-}
 	
 	s_protestant = {
 		color = { 0 255 203 }
@@ -979,7 +978,7 @@ christian = {
 		}
 		country = {
 			global_tax_modifier = 0.1
-			innovativeness_gain = 0.3
+			innovativeness_gain = 0.25
 		}
 		
 		country_as_secondary = {
@@ -998,7 +997,7 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
-		
+		}
 		uses_anglican_power = yes				# Uses church power/aspect mechanics
 		
 		aspects = {
@@ -1016,7 +1015,6 @@ christian = {
 		
 		heretic = { CAMERONIST CAVIEZELIST HESTONIST }
 	}
-}
 	mormon = {
 		color = { 153 51 153 }
 		icon = 30
@@ -1042,7 +1040,7 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
-			
+		}	
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -1067,7 +1065,6 @@ christian = {
 			}
 		}
 	}
-}
 	
 	s_lutheran = {
 		color = { 50 101 153 }

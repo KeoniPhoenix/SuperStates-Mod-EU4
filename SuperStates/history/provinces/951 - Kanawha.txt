@@ -6,7 +6,7 @@ add_core = NVA
 add_core = NTQ
 #add_permanent_claim = UTA
 culture = nevadan
-religion = s_protestant
+religion = s_catholic
 trade_goods = gold
 capital= "Reno"
 hre = no
@@ -17,10 +17,6 @@ is_city = yes #22750
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1
-
-1531.1.1 = {
-	religion = s_baptist
-}
 
 1555.1.1 = {
 	owner = DES

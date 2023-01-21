@@ -5,7 +5,7 @@ controller = ONT
 add_core = ONT
 add_core = TTO
 culture = torontoan
-religion = s_protestant
+religion = s_catholic
 capital = "Toronto" 
 is_city = yes #261510
 trade_goods = iron
@@ -16,10 +16,6 @@ base_manpower = 8
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 2
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = NFR

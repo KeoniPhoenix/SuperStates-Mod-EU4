@@ -197,5 +197,6 @@ is_religious_center_province = {
 		province_id = 409
 		province_id = 2221
 		province_id = 2095
+		province_id = 952
 	}
 }

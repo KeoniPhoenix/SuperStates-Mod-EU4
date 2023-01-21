@@ -75,7 +75,7 @@ parliamentary_reform = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
 		custom_attributes = {
-			disables_nobility = yes
+			disables_estate_nobles = yes
 			blocked_call_diet = yes
 		}
 	}
@@ -226,7 +226,6 @@ penal_colonies_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Golden Century"
-		has_idea_group = exploration_ideas
 		capital_scope = {
 			NOT = {
 				OR = {
@@ -400,7 +399,10 @@ focus_of_the_patriarchy_reform = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
-		religion = coptic
+		OR = {
+			religion = coptic
+			religion = mormon
+		}
 	}
 	modifiers = {
 		institution_spread_from_true_faith = 0.25
@@ -513,6 +515,7 @@ head_of_the_reformed_church_reform = {
 		NOT = { religion = catholic }
 		NOT = { religion = coptic }
 		NOT = { religion = orthodox }
+		NOT = { religion = mormon }
 		religion_group = christian
 	}
 	modifiers = {
@@ -597,8 +600,9 @@ empower_buddhist_temples_reform = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		custom_attributes = {
-			clergy_estate_agendas_gives_karma = yes	#Adds Karma by 10
-			seizing_land_takes_karma = yes	#Reduces Karma by 10
+			#clergy_estate_agendas_gives_karma = yes	#Adds Karma by 10
+			#seizing_land_takes_karma = yes	#Reduces Karma by 10
+			buffed_monastic_temples = yes
 			enable_karma_decision = yes	#Allows decision every 20 years to add or remove 10 Karma
 		}
 	}
@@ -831,16 +835,7 @@ strengthen_clergy_reform = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
-		NOT = { religion = jewish }
-		NOT = { religion = zoroastrian }
-		NOT = { religion = hinduism }
-		NOT = { religion = sikhism }
-		NOT = { religion_group = muslim }
-		NOT = { religion_group = christian }
-		NOT = { religion_group = eastern }
-		NOT = { religion = tengri_pagan_reformed }
-		NOT = { religion = shamanism }
-		NOT = { religion = norse_pagan_reformed }
+		has_no_religion_specific_government_available = yes	#This way modders don't have to change this reform explicitly
 	}
 	modifiers = {
 		church_influence_modifier = 0.1
@@ -950,18 +945,14 @@ separate_clergy_from_state_affairs_reform = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
-		OR = {
-			has_idea_group = innovativeness_ideas
-			has_idea_group = humanist_ideas
-		}
-		NOT = { has_idea_group = religious_ideas }
-		NOT = { has_idea_group = theocracy_ideas }
 	}
 	trigger = {
 		OR = {
 			full_idea_group = innovativeness_ideas
 			full_idea_group = humanist_ideas
 		}
+		NOT = { has_idea_group = religious_ideas }
+		NOT = { has_idea_group = theocracy_ideas }
 	}
 	modifiers = {
 		tolerance_of_heathens_capacity = 1
@@ -969,7 +960,7 @@ separate_clergy_from_state_affairs_reform = {
 		innovativeness_gain = 0.25
 	}
 	custom_attributes = {
-		disables_clergy = yes
+		disables_estate_church = yes
 	}
 	
 	ai = {
@@ -987,6 +978,14 @@ cult_of_reason_reform = {
 	}
 	trigger = {
 		has_country_modifier = cult_of_reason
+		if = {
+			limit = {
+				has_government_attribute = enables_estate_church
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_church
+			}
+		}
 	}
 	modifiers = {
 		rr_jacobins_influence = 0.1
@@ -1032,6 +1031,16 @@ secularization_of_the_state_reform = {
 	potential = {
 		is_revolutionary = yes
 		has_dlc = "Emperor"
+	}
+	trigger = {
+		if = {
+			limit = {
+				has_government_attribute = enables_estate_church
+			}
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_church
+			}
+		}
 	}
 	modifiers = {
 		rr_girondists_influence = 0.1
@@ -1105,7 +1114,7 @@ reestablish_the_burgeoisie_reform = {
 		max_revolutionary_zeal = -10
 	}
 	custom_attributes = {
-		enables_burghers = yes
+		enables_estate_burghers = yes
 	}
 	ai = {
 		factor = 1
@@ -1121,11 +1130,7 @@ new_world_exploitation_reform = {
 			NOT = { continent = north_america }
 			NOT = { continent = south_america }
 			NOT = { continent = new_world }
-			NOT = { colonial_region = colonial_australia }
-		}
-		OR = {
-			has_idea_group = expansion_ideas
-			has_idea_group = exploration_ideas
+			NOT = { superregion = australia_superregion }
 		}
 	}
 	trigger = {
@@ -1137,8 +1142,11 @@ new_world_exploitation_reform = {
 			limit = {
 				is_revolutionary = yes
 				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
 			}
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
 		}
 	}
 	modifiers = {
@@ -1164,8 +1172,11 @@ mercantilistic_approach_reform = {
 			limit = {
 				is_revolutionary = yes
 				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
 			}
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
 		}
 	}
 	modifiers = {
@@ -1192,8 +1203,11 @@ free_trade_reform = {
 			limit = {
 				is_revolutionary = yes
 				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
 			}
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
 		}
 	}
 	modifiers = {
@@ -1219,7 +1233,6 @@ lockean_proviso_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
-		has_idea_group = economic_ideas
 	}
 	trigger = {
 		full_idea_group = economic_ideas
@@ -1227,8 +1240,11 @@ lockean_proviso_reform = {
 			limit = {
 				is_revolutionary = yes
 				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
 			}
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
 		}
 	}
 	modifiers = {
@@ -1251,8 +1267,11 @@ embrace_the_economic_theory_reform = {
 			limit = {
 				is_revolutionary = yes
 				has_dlc = "Emperor"
+				has_government_attribute = enables_estate_burghers
 			}
-			NOT = { has_estate_privilege = estate_burghers_indebted_to_burghers }
+			can_swap_out_of_estate_granting_reform = {
+				estate = estate_burghers
+			}
 		}
 	}
 	modifiers = {

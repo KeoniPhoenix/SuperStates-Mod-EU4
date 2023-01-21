@@ -4,7 +4,7 @@ owner = ONT
 controller = ONT
 add_core = ONT
 culture = ontarian
-religion = s_protestant
+religion = s_catholic
 capital = "Windsor" 
 is_city = yes #21720
 trade_goods = naval_supplies
@@ -14,10 +14,6 @@ base_production = 4
 base_manpower = 3
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = NFR

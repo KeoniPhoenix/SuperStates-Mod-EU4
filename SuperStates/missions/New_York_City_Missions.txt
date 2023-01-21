@@ -865,7 +865,9 @@ nyc_slot_5 = {
 			else = {
 				stock_exchange = 5
 			}
-			num_of_loans = 0
+			NOT = {
+				num_of_loans = 1
+			}
 			treasury = 2000
 			custom_trigger_tooltip = {
 				tooltip = mid_atlantic_banking_tooltip

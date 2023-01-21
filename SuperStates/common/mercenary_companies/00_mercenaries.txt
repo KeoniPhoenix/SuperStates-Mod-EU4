@@ -83,6 +83,7 @@ merc_tuscan_free_company = {
 # Black Army (Hungary)
 merc_black_army = {
 	regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	cavalry_weight = 0.2
     artillery_weight = 0.4
 	cavalry_cap = 4
@@ -104,6 +105,7 @@ merc_black_army = {
 # Black Army Reserves (Hungary)
 merc_black_army_2 = {
 	regiments_per_development = 0.04
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	cavalry_weight = 0.2
     artillery_weight = 0.4
 	cavalry_cap = 4
@@ -3679,4 +3681,24 @@ merc_metis_company = {
 		}
 	}
 	modifier = { }
+}
+
+merc_french_volunteer_company = {
+	regiments_per_development = 0.02
+	# mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+	cavalry_cap = 2
+    home_province = 2652
+	sprites = { dlc001_amg_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_unlocked_merc_company = {
+			merc_company = merc_french_volunteer_company
+		}
+	}
+	modifier = {
+		infantry_power = 0.1
+        discipline = 0.025
+	}
 }

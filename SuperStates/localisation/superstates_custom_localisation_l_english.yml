@@ -28,7 +28,7 @@
  cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! Area that produce §YCloth§! or §YWool§! have a §YManufactory§!."
  mss_subject_tooltip:0 "If we complete this mission by making §MMaine§! our subject:"
  new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region:\n   Gain §Y1§! development."
- vrm_green_boys_ap_tooltip:0 "The mercenary company §YGreen Mountain Boys§! no longer reduces §YArmy Professionalism§! when recruited."
+ vrm_green_boys_ap_tooltip:0 "§JThe mercenary company§! §YGreen Mountain Boys§! §Jno longer reduces§! §YArmy Professionalism§! §Jwhen recruited.§!"
 
  ## Mid Atlantic
  mid_atlantic_banking_tooltip:0 "Have §Yless inflation than any neighbor§! or have §Y0§! inflation"
@@ -56,12 +56,42 @@
  ## California
  cal_has_wine_tooltip:0 "All owned §YWine§! producing provinces gain §Y2§! £icon_production_in_text£ and '§YProductive Vineyards§!' for §Y25 years§!, giving the following effects:\nLocal Production Efficiency: §G+20.0%§!"
 
+ ## Canada
+ flavorQUE_nfr_tt:0 "Enables a decision to form §YNew France§!."
+ que_nfl_fish_tt:0 "from the provinces in §YNewfoundland§!, which produce §YFish§!."
+ que_peace_with_fra_tooltip:0 "If we complete this mission by allying §YFrance§!:"
+ que_war_with_fra_tooltip:0 "If we complete this mission by rivaling §YFrance§! or conquering a province in the §YFrance Region§!:"
+ que_peace_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YFriendship§! path, the following triggers will be needed to complete this mission:"
+ que_war_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YRivalry§! path, the following triggers will be needed to complete this mission:"
+ que_merc_free_tooltip:0 "§JThe mercenary company§! §YFrench Volunteers§! §Jno longer reduces§! §YArmy Professionalism§! §Jwhen recruited.§!"
+ que_peace_effects_tt:0 "If §Y[Root.GetName]§! chooses the §YFriendship§! path, the following effects will occur:"
+ que_war_effects_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YRivalry§! path, the following effects will occur:"
+ que_revive_acadians_tooltip:0 "\nIf §Y[Root.GetName]§! chooses to accept §YAcadian§! culture:"
+ que_revive_acadians_2_tooltip:0 "All provinces in the §YNew Brunswick§! area which are not in the §YNew French§! culture group, will become §YAcadian§!."
+ que_revive_cajun_tooltip:0 "All provinces in §YLouisiana§! which are not in the §YNew French§! culture group, will become §YCajun§!."
+ que_new_french_accepted_tt:0 "Provinces of the §YNew French§! culture group do not suffer from the penalties of unaccepted culture as long as this modifier is active.\n\n§YFrench Dominance§! gets §Rremoved§! should [Root.GetName] switch its culture group.\n"
+ que_new_french_accepted_2_tt:0 "Provinces of the §YNew French§! culture group do not suffer from the penalties of unaccepted culture as long as this modifier is active.\n\n§YCultural Exchange§! gets §Rremoved§! should [Root.GetName] switch its culture group.\n"
+ flavorQUE.103a.tt:0 "We will move into the French culture group and all owned §YQuébécois§! provinces will adopt §YFrench Québécois§!."
+
  ## Ohio
  ohi_stay_midwest_tt:0 "If §Y[Root.GetName]§! chooses the §YMidwestern§! path, the following triggers will be needed to complete this mission:"
  ohi_convert_greatlaker_tt:0 "If §Y[Root.GetName]§! chooses the §YGreat Laker§! path, the following triggers will be needed to complete this mission:"
  ohi_convert_appalachian_tt:0 "If §Y[Root.GetName]§! chooses the §YAppalachian§! path, the following triggers will be needed to complete this mission:"
  ohi_mystery_reward_tt:0 "§Y[Root.GetName]§! will receive a bonus depending on what direction we took our culture."
  ohi_better_elections_tt:0 "Election candidates will be improved by §G1§! skill point in their respective type until the end of the game"
+
+ #Ontario
+ ont_money_for_free_tt:0 "Gain §G25§!¤ upon construction of §YMarketplace§!, §YTrade Depot§!, or §YStock Exchange§!."
+ ont_have_good_tolerance_heretics_tt:0 "Have at least §G+2.00§! Tolerance of Heretics"
+ ont_have_good_tolerance_heathen_tt:0 "Have at least §G+2.00§! Tolerance of Heathens"
+ ont_family_compact_tt:0 "Completing this mission early prevents the event §YRise of the Family Compact§! from firing."
+
+ #Mormon
+ EST_952_HOLY_SITE:0 "From the §YSalt Lake§! Holy Site: "
+ EST_2579_HOLY_SITE:0 "From the §YCuyahoga§! Holy Site: "
+ EST_2586_HOLY_SITE:0 "From the §YLackawanna§! Holy Site: "
+ EST_2597_HOLY_SITE:0 "From the §YMonroe§! Holy Site: "
+ EST_2669_HOLY_SITE:0 "From the §YBuchanan§! Holy Site: "
 
  # Culture related
  super_culture_change_modifier:0 "Unified Culture"

@@ -3,8 +3,8 @@ estate_church = {
 
 	# If true, country will get estate
 	trigger = {
-		NOT = { has_government_attribute = disables_clergy }
-		NOT = { has_country_flag = disables_clergy_flag }
+		NOT = { has_government_attribute = disables_estate_church }
+		NOT = { has_country_flag = disables_estate_church_flag }
 		if = {
 			limit = {
 				religion_group = dharmic
@@ -12,8 +12,8 @@ estate_church = {
 			NOT = { has_estate = estate_brahmins }
 		}
 		OR = {
-			has_government_attribute = enables_clergy
-			has_country_flag = enables_clergy_flag
+			has_government_attribute = enables_estate_church
+			has_country_flag = enables_estate_church_flag
 			AND = {
 				NOT = { has_government_attribute = is_pirate_republic_reform }
 				NOT = { has_reform = cossacks_reform }
@@ -161,6 +161,7 @@ estate_church = {
 		desc = EST_358_HOLY_SITE
 		loyalty = 5
 		trigger = {
+			religion = coptic
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			358 = { religion = coptic has_owner_religion = yes }
 		}
@@ -169,6 +170,7 @@ estate_church = {
 		desc = EST_1227_HOLY_SITE
 		loyalty = 5
 		trigger = {
+			religion = coptic
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			1227 = { religion = coptic has_owner_religion = yes }
 		}
@@ -177,6 +179,7 @@ estate_church = {
 		desc = EST_2313_HOLY_SITE
 		loyalty = 5
 		trigger = {
+			religion = coptic
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			2313 = { religion = coptic has_owner_religion = yes }
 		}
@@ -185,6 +188,7 @@ estate_church = {
 		desc = EST_1234_HOLY_SITE
 		loyalty = 5
 		trigger = {
+			religion = coptic
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			1234 = { religion = coptic has_owner_religion = yes }
 		}
@@ -193,8 +197,56 @@ estate_church = {
 		desc = EST_419_HOLY_SITE
 		loyalty = 5
 		trigger = {
+			religion = coptic
 			has_government_attribute = active_holy_sites_improve_clergy_loyalty
 			419 = { religion = coptic has_owner_religion = yes }
+		}
+	}
+
+	#SuperStates
+	loyalty_modifier = {
+		desc = EST_952_HOLY_SITE
+		loyalty = 5
+		trigger = {
+			religion = mormon
+			has_government_attribute = active_holy_sites_improve_clergy_loyalty
+			952 = { religion = mormon has_owner_religion = yes }
+		}
+	}
+	loyalty_modifier = {
+		desc = EST_2579_HOLY_SITE
+		loyalty = 5
+		trigger = {
+			religion = mormon
+			has_government_attribute = active_holy_sites_improve_clergy_loyalty
+			2579 = { religion = mormon has_owner_religion = yes }
+		}
+	}
+	loyalty_modifier = {
+		desc = EST_2586_HOLY_SITE
+		loyalty = 5
+		trigger = {
+			religion = mormon
+			has_government_attribute = active_holy_sites_improve_clergy_loyalty
+			2586 = { religion = mormon has_owner_religion = yes }
+		}
+	}
+	loyalty_modifier = {
+		desc = EST_2597_HOLY_SITE
+		loyalty = 5
+		trigger = {
+			religion = mormon
+			has_government_attribute = active_holy_sites_improve_clergy_loyalty
+			2597 = { religion = mormon has_owner_religion = yes }
+		}
+	}
+	loyalty_modifier = {
+		desc = EST_2669_HOLY_SITE
+		loyalty = 5
+		trigger = {
+			religion = mormon
+			has_government_attribute = active_holy_sites_improve_clergy_loyalty
+			2669 = { religion = mormon has_owner_religion = yes }
 		}
 	}
 	

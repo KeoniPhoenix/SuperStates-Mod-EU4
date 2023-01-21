@@ -478,7 +478,7 @@ vrm_conquests_3 = {
 			}
 		}
 		ai_weight = {
-			factor = 75
+			factor = 0
 		}
 	}
 

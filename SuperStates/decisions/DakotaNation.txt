@@ -29,8 +29,8 @@ country_decisions = {
 			OR = {
 				province_id = 994
 				province_id = 998
-				area = sakakawea_area
-				area = east_river_area
+				province_group = north_dakota_provincegroup
+				province_group = south_dakota_provincegroup
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -39,30 +39,15 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			sakakawea_area = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 6
 				is_core = ROOT
+				province_group = north_dakota_provincegroup
 			}
 			num_of_owned_provinces_with = {
-				value = 2
-				area = red_river_area
-				is_core = root
-			}
-			num_of_owned_provinces_with = {
-				value = 3
-				area = sioux_area
-				is_core = root
-			}
-			east_river_area = {
-				type = all
-				owned_by = ROOT
+				value = 6
 				is_core = ROOT
-			}
-			num_of_owned_provinces_with = {
-				value = 2
-				area = absaroka_area
-				is_core = root
+				province_group = south_dakota_provincegroup
 			}
 			owns_core_province = 994 # Bismarck
 			owns_core_province = 998 # Pierre
@@ -76,45 +61,45 @@ country_decisions = {
 			add_prestige = 10
 			change_tag = DAK
 			DAK = {
-			if = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
-			}
-			absaroka_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
 				}
-				add_permanent_claim = DAK
-			}
-			east_river_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				absaroka_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DAK
 				}
-				add_permanent_claim = DAK
-			}
-			sioux_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				east_river_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DAK
 				}
-				add_permanent_claim = DAK
-			}
-			sakakawea_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				sioux_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DAK
 				}
-				add_permanent_claim = DAK
-			}
-			red_river_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				sakakawea_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DAK
 				}
-				add_permanent_claim = DAK
-			}
+				red_river_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DAK
+				}
 			}
 			swap_non_generic_missions = yes
-			country_event = { id = ideagroups.1 } #Swap
+			# country_event = { id = ideagroups.1 } #Swap
 		}
 		ai_will_do = {
 			factor = 1
