@@ -716,7 +716,7 @@ IDA_tech = {
 	IDA_universities = {
 		icon = mission_early_modern_university
 		required_missions = { }
-		position = 3
+		position = 4
 
 		trigger = {
 			university = 12
