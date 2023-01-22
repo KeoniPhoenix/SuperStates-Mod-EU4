@@ -6,7 +6,7 @@ add_core = VRM
 # add_core = NYS
 # add_core = NWH
 culture = vermonter
-religion = s_protestant
+religion = s_catholic
 capital = "Burlington" 
 is_city = yes #4250
 trade_goods = wool
@@ -16,10 +16,6 @@ base_production = 4
 base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = NEW

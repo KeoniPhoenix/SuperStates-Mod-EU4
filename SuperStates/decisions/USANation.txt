@@ -108,10 +108,16 @@ country_decisions = {
 			NOT = { tag = ENG }
 			#technology_group = north_american
 			OR = {
+				AND = {
+					culture_group = great_laker
+					NOT = {
+						culture = ontarian
+						culture = northern_ontarian
+					}
+				}
 				culture_group = appalachian
 				#culture_group = alaskan_group
 				culture_group = southerner
-				culture_group = great_laker
 				culture_group = great_plainer_group
 				culture_group = intermountain_western
 				culture_group = midatlantic_group
@@ -146,6 +152,7 @@ country_decisions = {
 				primary_culture = nicaraguan
 				primary_culture = grenadian
 				# Central American, Mexican, inc. former territories/occupied areas
+				primary_culture = mexican_texan
 				primary_culture = tejano
 				primary_culture = panamanian
 				primary_culture = baja_californian
@@ -166,7 +173,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 35
+					num_of_cities = 75
 				}
 			}
 		}

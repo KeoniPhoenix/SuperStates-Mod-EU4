@@ -5,7 +5,7 @@ controller = CAL
 add_core = CAL
 add_core = SFB
 culture = san_franciscan
-religion = s_protestant
+religion = s_catholic
 capital = "Oakland"
 is_city = yes #39070
 trade_goods = naval_supplies
@@ -16,10 +16,6 @@ base_manpower = 5
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = PCF

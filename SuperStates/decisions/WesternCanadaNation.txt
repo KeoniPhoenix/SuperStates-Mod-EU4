@@ -9,6 +9,7 @@ country_decisions = {
 			#technology_group = north_american
 			OR = {
 				culture_group = western_canadian
+				primary_culture = pacific_british_columbian
 				primary_culture = vancouverite
 				primary_culture = mantarian
 				primary_culture = northern_ontarian

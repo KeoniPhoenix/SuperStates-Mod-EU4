@@ -1,0 +1,1024 @@
+ont_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = ONT
+	}
+	has_country_shield = yes
+
+	ont_manitoba = {
+		icon = mission_civil_war_battle
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = manitoba_area
+				province_id = 2627
+				province_id = 2628
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = manitoba_area
+					province_id = 2627
+					province_id = 2628
+				}
+			}
+		}
+		effect = {
+			hudson_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2621 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_nunavut = { #Dominate the Hudson
+		icon = mission_retake_ceuta
+		required_missions = { ont_manitoba }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_islands_area
+				province_id = 2621
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = hudson_islands_area
+					province_id = 2621
+				}
+			}
+		}
+		effect = {
+			athabasca_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saskatchewan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			1487 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 25
+					key = que_hudson_islands
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+	
+	ont_canada_ambition_1 = {
+		icon = mission_unite_home_region
+		required_missions = { ont_nunavut ont_quebec }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = athabasca_area
+				area = saskatchewan_area
+				area = nord_du_quebec_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = saskatchewan_area
+					area = athabasca_area
+				}
+			}
+			nord_du_quebec_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			western_canada_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			labrador_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			newfoundland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iles_saint_laurent_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_canada_ambition_2 = {
+		icon = canadian_flag
+		required_missions = { ont_canada_ambition_1 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				region = western_canada_region
+				area = labrador_area
+				area = newfoundland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			newfoundland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			labrador_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = western_canada_region
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ont_canada_ambition_modifier"
+				duration = -1
+			}
+			arctic_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+ont_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = ONT
+	}
+	has_country_shield = yes
+
+	ont_montreal = {
+		icon = mission_cannons_firing
+		required_missions = { ont_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = bois_francs_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2657 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = bois_francs_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ont_defeated_quebec
+				duration = 7300
+			}
+			quebec_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baie_des_chaleurs_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 150
+		}
+	}
+
+	ont_quebec = {
+		icon = mission_assemble_an_army
+		required_missions = { ont_montreal }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = quebec_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			quebec_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			nord_du_quebec_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_brunswick_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			nova_scotia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saint_george_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					nord_du_quebec_area = {
+						type = any
+						owned_by = ROOT
+					}
+				}
+				nord_du_quebec_area = {
+					limit = {
+						NOT = { religion = ROOT }
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = ont_religion_mod
+						duration = 9125
+					}
+				}
+			}
+			if = {
+				limit = {
+					quebec_area = {
+						type = any
+						owned_by = ROOT
+					}
+				}
+				quebec_area = {
+					limit = {
+						NOT = { religion = ROOT }
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = ont_religion_mod
+						duration = 9125
+					}
+				}
+			}
+			if = {
+				limit = {
+					bois_francs_area = {
+						type = any
+						owned_by = ROOT
+					}
+				}
+				bois_francs_area = {
+					limit = {
+						NOT = { religion = ROOT }
+						owned_by = ROOT
+					}
+					add_province_modifier = {
+						name = ont_religion_mod
+						duration = 9125
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 150
+		}
+	}
+
+	ont_maritimes = {
+		icon = mission_nova_scotia
+		required_missions = { ont_quebec }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				area = nova_scotia_area
+				area = saint_george_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			saint_george_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nova_scotia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			new_brunswick_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 75
+			add_country_modifier = {
+				name = ont_maritimes_modifier
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_the_militia_act = {
+		icon = mission_hessian_jaeger_corps
+		required_missions = { ont_the_family_compact }
+		position = 5
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				NOT = { base_manpower = 5 }
+				has_manpower_building_trigger = no
+			}
+		}
+		trigger = {
+			OR = {
+				monthly_mil = 12
+				national_focus = MIL
+			}
+			num_of_owned_provinces_with = {
+				has_manpower_building_trigger = yes
+				base_manpower = 5
+				value = 12
+			}
+		}
+		effect = {
+			add_yearly_manpower = 2
+			add_country_modifier = {
+				name = ont_militia_act_modifier
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 50
+		}
+	}
+}
+
+ont_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = ONT
+	}
+	has_country_shield = yes
+
+	ont_buildup = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { }
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 2
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = QUE
+				}
+				add_spy_network_in = {
+					who = QUE
+					value = 75
+				}
+			}
+			maumee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_peninsula_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bois_francs_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 150
+		}
+	}
+
+	ont_great_lakes = {
+		icon = mission_dominate_the_great_lakes
+		required_missions = { ont_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = upper_peninsula_area
+				area = michigan_area
+				province_id = 2573 #Detroit
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = michigan_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = upper_peninsula_area
+			}
+			2573 = { #Detroit
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			erie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			adirondack_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			chicagoland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_lake_ontario = {
+		icon = mission_lake_ontario
+		required_missions = { ont_great_lakes }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = adirondack_area
+				area = erie_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = erie_area
+			}
+			adirondack_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			add_country_modifier = {
+				name = ont_trade_boost
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 50
+		}
+	}
+
+	ont_the_family_compact = {
+		icon = mission_family_compact
+		required_missions = { }
+		position = 4
+		trigger = {
+			NOT = {
+				has_country_modifier = ont_family_compact_bad
+			}
+			crown_land_share = 50
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+		effect = {
+			change_government_reform_progress = 50
+			add_country_modifier = {
+				name = ont_family_compact_modifier
+				duration = 9125
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = ont_family_compact_demands }
+					NOT = { has_country_flag = ont_family_compact_resolved }
+				}
+				custom_tooltip = ont_family_compact_tt
+				hidden_effect = {
+					set_country_flag = ont_family_compact_resolved
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_centralize_the_state = {
+		icon = negotiate_for_avignon
+		required_missions = { ont_the_family_compact }
+		position = 5
+		trigger = {
+			absolutism = 50
+			NOT = {
+				average_home_autonomy = 15
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = ont_centralized_state
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 50
+		}
+	}
+}
+
+ont_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = ONT
+	}
+	has_country_shield = yes
+
+	ont_toronto_stock_exchange = {
+		icon = reform_the_state
+		required_missions = { }
+		position = 2
+		trigger = {
+			NOT = {
+				num_of_loans = 1
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				2642 = {
+					owned_by = ROOT
+					has_trade_building_trigger = yes
+				}
+				2642 = {
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+			else = {
+				2642 = {
+					owned_by = ROOT
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ont_toronto_stock_exchange_modifier"
+				duration = -1
+			}
+			custom_tooltip = ont_money_for_free_tt
+			2642 = {
+				if = {
+					limit = {
+						NOT = {
+							has_building = stock_exchange
+						}
+					}
+					add_building = stock_exchange
+				}
+				else = {
+					owner = {
+						add_dip_power = 50
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 50
+		}
+	}
+
+	ont_chicago = {
+		icon = mission_control_venice
+		required_missions = { ont_great_lakes }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = chicagoland_area
+				area = green_bay_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			chicagoland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			green_bay_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_army_tradition = 15
+			wisconsin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	
+	ont_toronto = {
+		icon = mission_trade_with_cathay
+		required_missions = { ont_economy_1 }
+		position = 4
+		trigger = {
+			2642 = {
+				province_is_or_accepts_culture = ROOT
+			}
+			OR = {
+				2642 = {
+					religion = ROOT
+				}
+				if = {
+					limit = {
+						2642 = {
+							religion_group = ROOT
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ont_have_good_tolerance_heretics_tt
+						has_global_modifier_value = {
+							which = tolerance_heretic
+							value = 0.002
+						}
+					}
+				}
+				else = {
+					custom_trigger_tooltip = {
+						tooltip = ont_have_good_tolerance_heathen_tt
+						has_global_modifier_value = {
+							which = tolerance_heathen
+							value = 0.002
+						}
+					}
+				}
+			}
+			2642 = {
+				num_of_buildings_in_province = 4
+			}
+			2642 = {
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			2642 = {
+				add_base_production = 2
+			}
+			2642 = {
+				add_province_modifier = {
+					name = ont_toronto_improved
+					duration = -1
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_achieve_religious_unity = {
+		icon = mission_hands_praying
+		required_missions = { ont_the_family_compact }
+		position = 5
+		trigger = {
+			NOT = {
+				current_age = age_of_discovery
+			}
+			religious_unity = 0.9
+			stability = 2
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ont_religious_unity_modifier"
+				duration = 18250
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				add_estate_loyalty_modifier = {
+					estate = estate_church
+					desc = est_ont_religious_unity
+					loyalty = 10
+					duration = 10950
+				}
+			}
+		}
+		ai_weight = {
+			factor = 50
+		}
+	}
+}
+
+ont_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = ONT
+	}
+	has_country_shield = yes
+
+	ont_economy_1 = {
+		icon = mission_pol_develop_countryside
+		required_missions = { }
+		position = 3
+		trigger = {
+			share_of_starting_income = 1.5
+			temple = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_economy_2 = {
+		icon = mission_hanseatic_city
+		required_missions = { ont_economy_1 }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = southwest_ontario_area
+				area = northern_ontario_area
+				area = ontario_area
+			}
+			NOT = {
+				num_of_times_improved = 2
+			}
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				num_of_times_improved = 2
+			}
+			northern_ontario_area = {
+				type = all
+				num_of_times_improved = 2
+			}
+			southwest_ontario_area = {
+				type = all
+				num_of_times_improved = 2
+			}
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				ontario_area = {
+					type = all
+					prosperity = 80
+				}
+			}
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				northern_ontario_area = {
+					type = all
+					prosperity = 80
+				}
+			}
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				southwest_ontario_area = {
+					type = all
+					prosperity = 80
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 75
+			southwest_ontario_area = {
+				add_province_modifier = {
+					name = "ont_prosperity_modifier"
+					duration = 9125
+				}
+			}
+			northern_ontario_area = {
+				add_province_modifier = {
+					name = "ont_prosperity_modifier"
+					duration = 9125
+				}
+			}
+			ontario_area = {
+				add_province_modifier = {
+					name = "ont_prosperity_modifier"
+					duration = 9125
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	ont_economy_3 = {
+		icon = mission_have_manufactories
+		required_missions = { ont_economy_2 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				owned_by = ROOT
+			}
+			NOT = {
+				has_manufactory_trigger = yes
+			}
+		}
+		trigger = {
+			2642 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 15
+			}
+		} 
+		effect = {
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 18250
+			}
+			add_mercantilism = 5
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}

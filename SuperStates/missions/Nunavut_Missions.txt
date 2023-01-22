@@ -1,0 +1,583 @@
+icelandic_sagas = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+			tag = NUN
+			AND = {
+				tag = ACU
+				was_tag	= NUN
+			}
+		}
+    }
+	has_country_shield = yes
+
+	nun_explore = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		completed_by = 1492.1.1
+		position = 1
+		trigger = {
+			OR = {
+				has_idea_group = exploration_ideas
+				primary_culture = icelandic
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			define_explorer = {
+				name = "Snorri Sturluson"
+   				shock = 2
+   				fire = 2
+    			manuever = 3
+    			siege = 0
+			}
+		}
+	}
+
+	icelandic_saga_greenland = {
+		icon = mission_polar_bears
+		required_missions = { nun_explore }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				region = greenland_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			greenland_region = {
+				type = any
+				is_city = yes
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			greenland_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			labrador_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			newfoundland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	icelandic_saga_vinland = {
+		icon = mission_longships
+		required_missions = { icelandic_saga_greenland }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = labrador_area
+				area = newfoundland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			labrador_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			newfoundland_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 9125 #25 years
+			}
+			370 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			371 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	the_saga_to_iceland = {
+		icon = mission_norse_faith
+		required_missions = { icelandic_saga_vinland }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 371
+				province_id = 370
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			370 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			371 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nun_end_of_the_second_saga"
+				duration = -1
+			}
+		}
+	}
+	NUN_helluland = {
+		icon = mission_north_sea_empire
+		required_missions = { the_saga_to_iceland }
+		position = 5
+
+		trigger = { 
+			OR = {
+				primary_culture = icelandic
+				accepted_culture = icelandic
+			}
+		}
+		effect = {
+			country_event = { id = flavorplusNUN.4 }
+			override_country_name = "HELLULAND"
+		}
+	}
+}
+nun_naval = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+		tag = NUN
+    }
+    has_country_shield = yes
+
+	nun_establish_high_seas_navy = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { }
+		position = 1
+
+		trigger = { 
+			OR = {
+				num_of_heavy_ship = 10 
+				num_of_galley = 30
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	nun_dominate_home_trade_node = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { nun_establish_high_seas_navy }
+		position = 2
+
+		trigger = {
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+			2006 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2647 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2650 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2628 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	nun_coast_of_hudson_bay = {
+		icon = mission_invade_island
+		required_missions = { nun_dominate_home_trade_node }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2628
+				province_id = 2650
+				province_id = 2006
+				province_id = 2647
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = { 
+			2628 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2650 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2647 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			2006 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nun_hudson_trade"
+				duration = 9125
+			}
+		}
+	}
+	nun_dominate_two_trade_nodes = {
+		icon = mission_war_chest
+		required_missions = { nun_coast_of_hudson_bay }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2631 #Rocky View
+				province_id = 2652 #Quebec
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		trigger = {
+			2631 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			2652 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			add_dip_power = 50
+		}
+	}
+	nun_centralize_state = {
+		icon = mission_asian_trader
+		required_missions = { nun_dominate_two_trade_nodes }
+		position = 5
+		
+		trigger = {
+			crown_land_share = 50
+			NOT = { corruption = 1 }
+		}
+		effect = {
+			add_mercantilism = 10
+			add_country_modifier = {
+				name = "american_monopoly"
+				duration = -1
+			}
+		}
+	}
+}
+nunavut_economic = {
+    slot = 4
+    generic = yes
+    ai = yes
+    potential = {
+		OR = {
+			tag = NUN
+		}
+    }
+    has_country_shield = yes
+	
+	nun_economy = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			share_of_starting_income = 2
+			OR = {
+				workshop = 10
+				temple = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 5475 #25 years
+			}
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+	nun_development = {
+		icon = mission_america
+		required_missions = { nun_economy }
+		position = 2
+
+		trigger = {
+			hudson_islands_area = {
+				type = any
+				owned_by = ROOT
+				grown_by_development = 2
+			}
+			northwest_territories_area = {
+				type = any
+				owned_by = ROOT
+				grown_by_development = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "development_initiative"
+				duration = 9125
+			}
+		}
+	}
+	nun_keewatin = {
+		icon = american_gold_rush
+		required_missions = { nun_development }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2621
+			}
+		}
+		trigger = {
+			2621 = {
+				owned_by = ROOT
+				development = 15
+			}
+		}
+		effect = {
+			2621 = {
+				province_event = { id = flavorplusNUN.1010 }
+			}
+		}
+	}
+	nun_keewatin_buildings = {
+		icon = mission_colonial
+		required_missions = { nun_keewatin }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2621
+			}
+		}
+		trigger = {
+			2621 = {
+				owned_by = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						2621 = {
+							trade_goods = gold
+						}
+					}
+				}
+				2621 = {
+					has_manufactory_trigger = yes
+				}
+				2621 = {
+					base_production = 5
+				}
+			}
+			else = {
+				2621 = {
+					base_production = 10
+				}
+			}
+			calc_true_if = {
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 3
+			}
+		}
+		effect = {
+			2621 = {
+				add_province_modifier = {
+					name = "local_development_initiative"
+					duration = -1
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	nun_build_manufactories = {
+		icon = mission_state_manufactories
+		required_missions = { nun_keewatin_buildings }
+		position = 3
+
+		trigger = {
+			calc_true_if = {
+				desc = build_manufactories_mission_tooltip
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+			add_years_of_income = 3
+		}
+	}
+}

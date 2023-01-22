@@ -4,7 +4,7 @@ owner = NMX
 controller = NMX
 add_core = NMX
 culture = new_mexican
-religion = s_catholic
+religion = s_protestant
 capital = "Alamogordo"
 is_city = yes #3040
 trade_goods = salt
@@ -14,6 +14,10 @@ base_production = 2
 base_manpower = 1
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1531.1.1 = {
+	religion = s_baptist
+}
 
 1555.1.1 = {
 	owner = TEX

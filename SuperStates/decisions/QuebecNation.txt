@@ -3,7 +3,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = QUE }
-			#NOT = { exists = NFR }
+			NOT = { exists = NFR }
 			NOT = { exists = CAN }
 			#NOT = { exists = RUP }
 			OR = {

@@ -913,8 +913,8 @@ judaism_yom_kippur_aspect_war_modifier = {
 	trigger = {
 		is_at_war = yes
 	}
-	manpower_recovery_speed = 0.1
-	church_power_modifier = 0.05
+	manpower_recovery_speed = 0.20
+	church_power_modifier = 0.25
 }
 
 judaism_yom_kippur_aspect_defensive_war_modifier = {
@@ -928,6 +928,6 @@ judaism_yom_kippur_aspect_defensive_war_modifier = {
 			defenders = ROOT
 		}
 	}
-	manpower_recovery_speed = 0.1
-	church_power_modifier = 0.05
+	manpower_recovery_speed = 0.20
+	church_power_modifier = 0.25
 }

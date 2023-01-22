@@ -1,0 +1,514 @@
+
+namespace = flavorQUE
+
+# country_event = {
+# 	id = "flavorQUE.12"
+# 	title = "QUE_French_Reaction"
+# 	desc = "QUE_French_Reaction_des"
+# 	picture = DIPLOMACY_SIGNING_eventPicture
+	
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+	
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = "que_france_a"
+# 		add_prestige = -10
+# 		# add_opinion = {
+#     	# 		who = QUE
+# 		# 	years = 50
+# 		# 	modifier = Accepted_new_france
+# 		# }
+# 		QUE = {
+# 			country_event = { 
+#     				id = flavorplusQUE.13
+# 			}
+# 		}
+# 		ai_chance = { 
+# 			factor = 50
+# 			modifier = {
+# 				factor = 0
+# 				is_rival = FRA
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "que_france_b"
+# 		# add_opinion = {
+#     	# 		who = QUE
+# 		# 	years = 50
+# 		# 	modifier = Denounced_new_france
+			
+# 		# }
+# 		QUE = {
+# 			country_event = { 
+#     				id = flavorplusQUE.14
+# 			}
+# 		}
+# 		ai_chance = { 
+# 			factor = 50
+# 			modifier = {
+# 				factor = 0
+# 				alliance_with = FRA
+# 			}
+# 		}
+# 	}
+# }
+# country_event = {
+# 	id = "flavorQUE.13"
+# 	title = "QUE_France_Accepts"
+# 	desc = "QUE_France_Accepts_des"
+# 	picture = DIPLOMACY_SIGNING_eventPicture
+	
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = "que_france_c"
+# 		add_prestige = 45
+# 	}
+# 	option = {
+# 		name = "que_france_d"
+# 		if = {
+# 			limit = { primary_culture = quebecois }
+# 			add_accepted_culture = quebecois
+# 		}
+# 		change_primary_culture = cosmopolitan_french
+# 		capital_scope = {
+# 			change_culture = cosmopolitan_french
+# 			if = {
+# 				limit = {
+# 					NOT = { province_has_center_of_trade_of_level = 2 }
+# 				}
+# 				add_center_of_trade_level = 1
+# 				center_of_trade = 1
+# 			}
+# 		}
+# 	}
+# }
+# country_event = {
+# 	id = "flavorQUE.14"
+# 	title = "QUE_France_Declines"
+# 	desc = "QUE_France_Declines_des"
+# 	picture = DIPLOMACY_SIGNING_eventPicture
+	
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 		name = "que_france_declines_a"
+# 		add_prestige = -25
+# 		add_stability = -1
+# 	}
+# }
+
+country_event = { #Change to New France
+	id = "flavorQUE.100"
+	title = "flavorQUE.100t"
+	desc = "flavorQUE.100d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Swap to New France
+		trigger = {
+			NOT = {
+				exists = NFR
+			}
+		}
+		name = "flavorQUE.100a"
+		change_tag = NFR
+		add_prestige = 25
+		set_country_flag = formed_new_france_flag
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = NFR_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 3
+				}
+			}
+			set_government_rank = 3
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { #Not now, unlocks decision for later
+		name = "flavorQUE.100b"
+		custom_tooltip = flavorQUE_nfr_tt
+		hidden_effect = {
+			set_country_flag = que_can_form_nfr_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 3
+				}
+			}
+			set_government_rank = 3
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #Fate of Ottawa
+	id = "flavorQUE.101"
+	title = "flavorQUE.101t"
+	desc = "flavorQUE.101d"
+	picture = STREET_SPEECH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Enfore our will on Ottawa
+		name = "flavorQUE.101a"
+		2643 = {
+			change_culture = quebecois
+		}
+		if = {
+			limit = {
+				2643 = {
+					NOT = {
+						is_core = GAT
+					}
+				}
+			}
+			2643 = {
+				add_core = GAT
+			}
+		}
+		2643 = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		2007 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+	}
+
+	option = { #Let them be
+		name = "flavorQUE.101b"
+		add_dip_power = 25
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = ontarian
+					culture = northern_ontarian
+					culture = torontoan
+				}
+			}
+			add_nationalism = -5
+		}
+	}
+}
+
+country_event = {
+	id = "flavorQUE.102"
+	title = "flavorQUE.102t"
+	desc = "flavorQUE.102d"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Spread Cajun
+		name = "flavorQUE.102a"
+		custom_tooltip = que_revive_cajun_tooltip
+		hidden_effect = {
+			louisiana_area = {
+				limit = {
+					NOT = {
+						culture_group = new_french
+					}
+				}
+				change_culture = cajun
+			}
+			acadiana_area = {
+				limit = {
+					NOT = {
+						culture_group = new_french
+					}
+				}
+				change_culture = cajun
+			}
+			mississippi_delta_area = {
+				limit = {
+					NOT = {
+						culture_group = new_french
+					}
+				}
+				change_culture = cajun
+			}
+		}
+	}
+
+	option = { #Let them be
+		name = "flavorQUE.102b"
+		add_dip_power = 25
+		every_owned_province = {
+			limit = {
+				culture = louisianan
+			}
+			add_nationalism = -5
+		}
+	}
+}
+
+country_event = { #Cultural Exchange
+	id = "flavorQUE.103"
+	title = "flavorQUE.103t"
+	desc = "flavorQUE.103d"
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Swap to French Quebecois
+		name = "flavorQUE.103a"
+		if = {
+			limit = {
+				NOT = {
+					culture = fra_quebecois
+				}
+			}
+			change_primary_culture = fra_quebecois
+			hidden_effect = {
+				set_ruler_culture = fra_quebecois
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					set_heir_culture = fra_quebecois
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = quebecois
+					}
+					set_consort_culture = fra_quebecois
+				}
+			}
+		}
+		custom_tooltip = flavorQUE.103a.tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = quebecois
+				}
+				change_culture = fra_quebecois
+			}
+		}
+		add_country_modifier = {
+			name = "que_cultural_exchange"
+			duration = -1
+		}
+		custom_tooltip = que_new_french_accepted_2_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					government = republic
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = new_french
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = que_new_french_accepted_province_republic
+						duration = -1
+					}
+				}
+			}
+			else = {
+				every_owned_province = {
+					limit = {
+						culture_group = new_french
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = que_new_french_accepted_province
+						duration = -1
+					}
+				}
+			}
+		}
+		add_country_modifier = {
+			name = "que_treaty_and_peace"
+			duration = -1
+		}
+	}
+
+	option = { #Stay
+		name = "flavorQUE.103b"
+		add_country_modifier = {
+			name = "que_treaty_and_peace"
+			duration = -1
+		}
+	}
+}
+
+country_event = { #Rulers of France
+	id = "flavorQUE.104"
+	title = "flavorQUE.104t"
+	desc = "flavorQUE.104d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Embrace Cosmo + Monarchy
+		name = "flavorQUE.104a"
+		trigger = {
+			NOT = {
+				government = monarchy
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					culture = cosmopolitan_french
+				}
+			}
+			change_primary_culture = cosmopolitan_french
+			set_ruler_culture = cosmopolitan_french
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = cosmopolitan_french
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    consort_culture = quebecois
+                }
+                set_consort_culture = cosmopolitan_french
+            }
+		}
+		add_country_modifier = {
+			name = "que_cosmo_rulers_of_france"
+			duration = -1
+		}
+		custom_tooltip = que_new_french_accepted_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = new_french
+					has_owner_accepted_culture = no
+				}
+				add_province_modifier = {
+					name = que_new_french_accepted_province
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = states_general_mechanic }
+			set_country_flag = had_states_general_mechanic
+		}
+		change_government = monarchy
+		if = {
+			limit = { has_country_flag = had_states_general_mechanic }
+			country_event = { id = dutch_republic.33 }
+			clr_country_flag = had_states_general_mechanic
+		}
+
+		add_country_modifier = {
+			name = "que_rulers_of_france"
+			duration = -1
+		}
+	}
+
+	option = { #Just Cosmo
+		name = "flavorQUE.104b"
+		if = {
+			limit = {
+				NOT = {
+					culture = cosmopolitan_french
+				}
+			}
+			change_primary_culture = cosmopolitan_french
+			set_ruler_culture = cosmopolitan_french
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				set_heir_culture = cosmopolitan_french
+			}
+			if = {
+				limit = {
+					has_consort = yes
+					consort_culture = quebecois
+				}
+				set_consort_culture = cosmopolitan_french
+			}
+		}
+		add_country_modifier = {
+			name = "que_cosmo_rulers_of_france"
+			duration = -1
+		}
+		custom_tooltip = que_new_french_accepted_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					government = republic
+				}
+				every_owned_province = {
+					limit = {
+						culture_group = new_french
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = "que_new_french_accepted_province_republic"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				every_owned_province = {
+					limit = {
+						culture_group = new_french
+						has_owner_accepted_culture = no
+					}
+					add_province_modifier = {
+						name = "que_new_french_accepted_province"
+						duration = -1
+					}
+				}
+			}
+		}
+		add_country_modifier = {
+			name = "que_rulers_of_france"
+			duration = -1
+		}
+	}
+
+	option = { #No
+		name = "flavorQUE.104c"
+		add_country_modifier = {
+			name = "que_rulers_of_france"
+			duration = -1
+		}
+	}
+}

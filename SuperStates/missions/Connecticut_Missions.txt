@@ -473,7 +473,7 @@ cut_conquests_3 = {
 			}
 		}
 		ai_weight = {
-			factor = 75
+			factor = 0
 		}
 	}
 
@@ -848,7 +848,9 @@ cut_flavor = {
 		position = 4
 		trigger = {
 			treasury = 2000
-			num_of_loans = 0
+			NOT = {
+				num_of_loans = 1
+			}
 			temple = 5
 		}
 		effect = {

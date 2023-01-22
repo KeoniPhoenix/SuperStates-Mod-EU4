@@ -1,11 +1,11 @@
-#Lancaster
+#Dauphin
 
 owner = PNN
 controller = PNN
 add_core = PNN
 culture = pennsylvanian
-religion = s_catholic
-capital = "Lancaster"
+religion = s_protestant
+capital = "Harrisburg"
 trade_goods = grain
 hre = no
 base_tax = 4

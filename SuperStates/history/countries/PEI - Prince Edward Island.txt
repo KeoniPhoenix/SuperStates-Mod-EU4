@@ -1,7 +1,7 @@
 government = republic
 add_government_reform = pure_westminster_reform
 technology_group = north_american
-religion = s_catholic
+religion = s_protestant
 primary_culture = prince_edward_islander
 capital = 1808	# Charlottetown
 
@@ -15,5 +15,5 @@ capital = 1808	# Charlottetown
 }
 
 1528.1.1 = {
-	religion = catholic
+	religion = s_methodist
 }

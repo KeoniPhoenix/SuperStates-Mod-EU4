@@ -471,7 +471,7 @@ mne_conquests_3 = {
 			}
 		}
 		ai_weight = {
-			factor = 75
+			factor = 0
 		}
 	}
 
@@ -553,7 +553,7 @@ mne_conquests_4 = {
 	}
 
 	mne_nova = {
-		icon = mission_unite_home_region
+		icon = mission_nova_scotia
 		required_missions = { mne_brunswick }
 		position = 4
 		provinces_to_highlight = {

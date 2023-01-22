@@ -5,7 +5,7 @@ controller = MSS
 add_core = MSS
 add_core = MSL
 culture = nantucketer
-religion = s_protestant
+religion = s_catholic
 capital = "Nantucket"
 trade_goods = naval_supplies
 hre = no
@@ -15,10 +15,6 @@ base_manpower = 1
 is_city = yes #4520
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1518.1.1 = {
-	religion = s_lutheran
-}
 
 1444.11.1 = {
 	add_core = MSL

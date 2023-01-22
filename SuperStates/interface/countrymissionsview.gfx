@@ -772,6 +772,21 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//deepsouth//mission_peasants.dds"
 	}
 
+	spriteType = {
+		name = "mission_tranquille"
+		texturefile = "gfx/interface/missions/easternamerica/mission_tranquille.dds"
+	}
+	
+	spriteType = {
+		name = "mission_nova_scotia"
+		texturefile = "gfx//interface//missions//centralcanada//mission_nova_scotia.dds"
+	}
+
+	spriteType = {
+		name = "mission_family_compact"
+		texturefile = "gfx//interface//missions//centralcanada//mission_family_compact.dds"
+	}
+
 	##
 	spriteType = {
 		name = "mission_tex_alamo"
@@ -852,5 +867,9 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_yellowstone"
 		texturefile = "gfx//interface//missions//easternamerica//mission_yellowstone.dds"
+	}
+	spriteType = {
+		name = "mission_northeast_america"
+		texturefile = "gfx//interface//missions//easternamerica//mission_northeast_america.dds"
 	}
 }

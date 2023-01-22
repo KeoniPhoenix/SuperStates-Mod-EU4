@@ -770,11 +770,9 @@ country_event = {
 			limit = {
 				is_subject = yes
 			}
-			overlord = {
-				add_opinion = {
-					who = ROOT
-					modifier = hanseatic_kalmar_conflict
-				}
+			add_opinion = {
+				who = overlord
+				modifier = hanseatic_kalmar_conflict
 			}
 		}
 	}

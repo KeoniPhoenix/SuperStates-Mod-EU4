@@ -4,7 +4,7 @@ owner = NWH
 controller = NWH
 add_core = NWH
 culture = new_hampshirite
-religion = s_protestant
+religion = s_catholic
 capital = "Manchester" 
 is_city = yes #10960
 trade_goods = cloth
@@ -14,10 +14,6 @@ base_production = 4
 base_manpower = 4
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = NEW

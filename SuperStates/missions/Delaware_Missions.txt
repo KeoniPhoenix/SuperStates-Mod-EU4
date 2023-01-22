@@ -819,23 +819,32 @@ del_slot_5 = {
 		required_missions = { }
 		position = 3
 		trigger = {
-			estate_influence = {
-				estate = estate_burghers
-				influence = 50
-			}
-			NOT = {
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
 				estate_influence = {
 					estate = estate_burghers
-					influence = 100
+					influence = 50
+				}
+				NOT = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 80
+					}
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+				num_of_estate_privileges = {
+					estate = estate_burghers
+					value = 3
 				}
 			}
-			estate_loyalty = {
-				estate = estate_burghers
-				loyalty = 60
-			}
-			num_of_estate_privileges = {
-				estate = estate_burghers
-				value = 3
+			else = {
+				stability = 2
+				trade_income_percentage = 0.25
 			}
 		}
 		effect = {

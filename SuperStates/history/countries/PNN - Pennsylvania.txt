@@ -4,7 +4,7 @@ technology_group = north_american
 primary_culture = pennsylvanian
 add_accepted_culture = western_pennsylvanian
 religion = s_protestant
-capital = 2584 # Harrisburg
+capital = 3138 # Harrisburg
 
 1443.1.3 = {
 	monarch = {
@@ -13,6 +13,8 @@ capital = 2584 # Harrisburg
 		dip = 5
 		mil = 3
 	}
-}1528.1.1 = {
+}
+
+1528.1.1 = {
 	religion = s_methodist
 }

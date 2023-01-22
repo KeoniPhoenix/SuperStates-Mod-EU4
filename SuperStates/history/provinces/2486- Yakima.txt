@@ -5,7 +5,7 @@ controller = TEX
 add_core = TEX
 add_core = LPN
 culture = tejano
-religion = s_protestant
+religion = s_catholic
 capital = "San Antonio"
 trade_goods = livestock
 hre = no
@@ -16,10 +16,6 @@ is_city = yes #132740
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 2
-
-1531.1.1 = {
-	religion = s_baptist
-}
 
 1675.2.4 = {
 	owner = CSA

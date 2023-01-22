@@ -6,7 +6,7 @@ add_core = NVA
 add_core = LSV
 #add_core = ARZ
 culture = las_vegan
-religion = s_protestant
+religion = s_catholic
 capital = "Las Vegas" 
 is_city = yes #58930
 trade_goods = gems
@@ -20,10 +20,6 @@ center_of_trade = 2
 
 1399.1.1 = {
 	fort_15th = yes
-}
-
-1531.1.1 = {
-	religion = s_baptist
 }
 
 1555.1.1 = {

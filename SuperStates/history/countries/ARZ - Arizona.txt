@@ -3,7 +3,7 @@ add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = arizonan
 add_accepted_culture = baja_arizonan
-religion = s_protestant
+religion = s_catholic
 capital = 936  # Phoenix
 historical_friend = SNA
 

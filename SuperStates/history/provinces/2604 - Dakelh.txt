@@ -4,7 +4,7 @@ owner = NWH
 controller = NWH
 add_core = NWH
 culture = new_hampshirite
-religion = s_protestant
+religion = s_catholic
 capital = "Concord"
 trade_goods = naval_supplies
 hre = no
@@ -17,10 +17,6 @@ discovered_by = mesoamerican
 
 1399.1.1 = {
 	fort_15th = yes
-}
-
-1528.1.1 = {
-	religion = s_methodist
 }
 
 1555.1.1 = {

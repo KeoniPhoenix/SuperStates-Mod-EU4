@@ -5,7 +5,7 @@ controller = MSS
 add_core = MSS
 add_core = MSL
 culture = nantucketer
-religion = s_catholic
+religion = s_protestant
 capital = "Edgartown"
 trade_goods = wine
 hre = no
@@ -15,6 +15,10 @@ base_manpower = 1
 is_city = yes #1000
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_baptist
+}
 
 1555.1.1 = {
 	owner = NEW

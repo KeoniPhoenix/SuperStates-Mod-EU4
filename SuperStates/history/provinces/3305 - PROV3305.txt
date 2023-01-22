@@ -4,7 +4,7 @@ owner = WIS
 controller = WIS
 add_core = WIS
 culture = wisconsinite
-religion = s_catholic
+religion = s_protestant
 capital = "Baraboo"
 is_city = yes #1200
 trade_goods = livestock
@@ -14,6 +14,10 @@ base_production = 1
 base_manpower = 1
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_lutheran
+}
 
 1555.1.1 = {
 	owner = GLK

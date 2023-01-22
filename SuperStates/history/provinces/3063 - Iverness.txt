@@ -10,7 +10,7 @@ add_core = NVS
 add_core = ACD
 add_core = CBI
 culture = cape_bretoner
-religion = s_protestant
+religion = s_catholic
 capital = "Port Hawkesbury" 
 is_city = yes #1000
 trade_goods = paper #coal
@@ -21,9 +21,6 @@ base_manpower = 1
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = MTU

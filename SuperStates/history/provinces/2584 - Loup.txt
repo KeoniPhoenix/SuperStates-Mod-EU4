@@ -1,11 +1,11 @@
-#Dauphin
+#York
 
 owner = PNN
 controller = PNN
 add_core = PNN
 culture = pennsylvanian
 religion = s_protestant
-capital = "Harrisburg"
+capital = "York"
 is_city = yes #4960
 trade_goods = livestock
 hre = no

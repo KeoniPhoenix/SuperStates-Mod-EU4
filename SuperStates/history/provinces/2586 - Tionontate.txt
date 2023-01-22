@@ -6,7 +6,7 @@ add_core = PNN
 add_core = WMO
 # add_core = CUT
 culture = pennsylvanian
-religion = s_protestant
+religion = s_catholic
 capital = "Scranton"
 is_city = yes #7610
 trade_goods = iron
@@ -16,10 +16,6 @@ base_production = 1
 base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
-
-1528.1.1 = {
-	religion = s_methodist
-}
 
 1555.1.1 = {
 	owner = MID

@@ -5,7 +5,7 @@ controller = ONT
 add_core = ONT
 add_core = NRO
 culture = northern_ontarian
-religion = s_protestant
+religion = s_catholic
 capital = "Sault Saint Marie" 
 is_city = yes #7310
 trade_goods = copper
@@ -18,10 +18,6 @@ discovered_by = mesoamerican
 
 1444.10.1 = {
 	add_core = NRO
-}
-
-1528.1.1 = {
-	religion = s_methodist
 }
 
 1555.1.1 = {

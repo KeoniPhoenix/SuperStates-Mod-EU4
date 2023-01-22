@@ -20,12 +20,16 @@ country_decisions = {
 				culture_group = new_french
 				culture_group = western_canadian
 				culture_group = great_plainer_group
+				AND = {
+					culture_group = french
+					tag = NFR
+				}
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 50
+					num_of_cities = 150
 				}
 			}
 		}

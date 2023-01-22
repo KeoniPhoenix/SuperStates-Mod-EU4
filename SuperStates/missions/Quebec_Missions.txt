@@ -1,0 +1,2026 @@
+que_slot_1 = {
+	slot = 1
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_buildup = {
+		icon = mission_colonial_new_france
+		required_missions = { }
+		position = 1
+		completed_by = 1555.1.1
+		trigger = {
+			army_size = 20
+			manpower_percentage = 0.75
+		}
+		effect = {
+			baie_des_chaleurs_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_brunswick_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2643 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			create_general = {
+				tradition = 50
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	que_expand_gatineau = {
+		icon = the_hundred_years_war
+		required_missions = { que_buildup }
+		position = 2
+		completed_by = 1555.1.1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2643
+				province_id = 2007
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2643 = {
+				owned_by = ROOT
+			}
+			2007 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = { #An event to either convert Ottawa to Quebecois - losing 3 dev points and giving Gatineu the dev points OR reducing unrest in all owned Ontarian cultured provinces
+				id = flavorQUE.101
+			}
+			ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	que_ontario = {
+		icon = mission_assemble_an_army
+		required_missions = { que_expand_gatineau }
+		position = 3
+		completed_by = 1555.1.1
+		provinces_to_highlight = {
+			OR = {
+				area = ontario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			northern_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southwest_ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "que_defeated_ont"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_ontario_dev = { #instead of dev - cultural and religious unity in ontario area
+		icon = mission_hanseatic_city
+		required_missions = { que_ontario }
+		position = 4
+		trigger = {
+			ontario_area = { #have ontario area either all accepted(which is purposefully annoying) so might wanna convert it to french
+				type = all
+				province_is_or_accepts_culture = yes
+			}
+			ontario_area = { #AND all your religion
+				type = all
+				religion = ROOT
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			ontario_area = {
+				add_prosperity = 50
+			}
+			ontario_area = {
+				add_province_modifier = {
+					name = "que_ontario_united"
+					duration = 18250
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_1_b = {
+	slot = 1
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_territorial_1 = {
+		icon = mission_civil_war_battle
+		required_missions = { que_new_france }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = manitoba_area
+				area = superior_area
+				area = upper_peninsula_area
+				area = michigan_area
+				area = maumee_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			manitoba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			superior_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_peninsula_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = michigan_area
+					area = maumee_area
+				}
+			}
+		}
+		effect = {
+			add_prestige = 15
+			adirondack_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			erie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			chicagoland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wisconsin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_territorial_2 = {
+		icon = mission_ne_great_lakes_conquest
+		required_missions = { que_territorial_1 }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+				area = wisconsin_area
+				area = chicagoland_area
+				area = erie_area
+				area = adirondack_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			adirondack_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			chicagoland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = erie_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = wisconsin_area
+					area = green_bay_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nfr_territorial_ambitions"
+				duration = 7300
+			}
+			american_midwest_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+}
+
+que_slot_2 = {
+	slot = 2
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_maritimes_1 = {
+		icon = mission_civil_war_battle
+		required_missions = { que_buildup }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = new_brunswick_area
+				area = baie_des_chaleurs_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			baie_des_chaleurs_area = {
+				type = all
+				owned_by = ROOT
+			}
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "que_liberated_acadians"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_maritimes_2 = { #Instead of conquering - build churches? develop? to get an event to revive acadian
+		icon = purely_for_commerce
+		required_missions = { que_maritimes_1 }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = new_brunswick_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					area = new_brunswick_area
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		trigger = {
+			new_brunswick_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			OR = {
+				accepted_culture = acadian
+				num_of_owned_provinces_with = {
+					value = 2
+					area = new_brunswick_area
+					culture = ROOT
+				}
+			}
+		}
+		effect = {
+			nova_scotia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saint_george_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3018 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = que_revive_acadians_tooltip
+			custom_tooltip = que_revive_acadians_2_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							accepted_culture = acadian
+							primary_culture = acadian
+						}
+					}
+					new_brunswick_area = {
+						limit = {
+							NOT = {
+								culture_group = new_french
+							}
+						}
+						change_culture = acadian
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_new_france = {
+		icon = mission_the_french_menace
+		required_missions = { que_ontario que_maritimes_2 que_st_pierre }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = northern_ontario_area
+				area = southwest_ontario_area
+				area = nova_scotia_area
+				area = saint_george_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			is_at_war = no
+			stability = 1
+			northern_ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southwest_ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nova_scotia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			saint_george_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						tag = NFR
+					}
+				}
+				country_event = { #use ethiopia as an example - event popup to change but with option to pass and unlocking a decision if you want to do it later
+					id = flavorQUE.100
+				}
+			}
+			manitoba_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mantario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			superior_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_peninsula_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			maumee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	que_unite_culture = {
+		icon = establish_the_musketeers
+		required_missions = { que_new_france }
+		position = 5
+		provinces_to_highlight = {
+			culture_group = new_french
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				culture_group = new_french
+			}
+		}
+		effect = {
+			add_dip_power = 200
+			add_country_modifier = {
+				name = "nfr_cultural_unification"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_2_b = {
+	slot = 2
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_louisiana = {
+		icon = mission_louisiana_heron
+		required_missions = { }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = louisiana_area
+				area = acadiana_area
+				area = mississippi_delta_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			louisiana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			acadiana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			mississippi_delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = { #An event to revive Cajun
+				id = flavorQUE.102
+			}
+			pearl_river_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			black_prairie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			white_river_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ozarks_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			texarkana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_dominance = {
+		icon = mission_empire
+		required_missions = { que_caribbean_2 que_louisiana que_territorial_2 }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				region = american_midwest_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					2490 = {
+						NOT = {
+							is_capital_of = ROOT
+						}
+					}
+				}
+				2490 = {
+					owned_by = root
+					is_in_capital_area = yes
+				}
+			}
+			if = {
+				limit = {
+					2498 = {
+						NOT = {
+							is_capital_of = ROOT
+						}
+					}
+				}
+				2498 = {
+					owned_by = root
+					is_in_capital_area = yes
+				}
+			}
+			if = {
+				limit = {
+					2652 = {
+						NOT = {
+							is_capital_of = ROOT
+						}
+					}
+				}
+				2652 = {
+					owned_by = root
+					is_in_capital_area = yes
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				region = american_midwest_region
+			}
+		}
+		effect = {
+			if = { 
+				limit = { has_had_golden_age = yes }
+				reset_golden_age = yes 
+			}
+			else_if = { 	
+				limit = { in_golden_age = yes } 
+				extend_golden_age = 240 
+			}
+			else = { 
+				add_adm_power = 100 
+				add_dip_power = 100 
+				add_mil_power = 100  
+			} 
+			if = { 
+				limit = { 
+					has_dlc = "Mandate of Heaven"
+					has_had_golden_age = no 
+					in_golden_age = no 
+				}
+				custom_tooltip = fin_gain_golden_era_bonuses_tt
+			}
+			great_plains_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tennessee_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pennyroyal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kentucky_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+}
+
+que_slot_3 = {
+	slot = 3
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_labrador = {
+		icon = mission_cannons_firing
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = labrador_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			labrador_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			newfoundland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_newfoundland = {
+		icon = mission_landsknecht_soldier
+		required_missions = { que_labrador }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = newfoundland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			newfoundland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 4
+				trigger = {
+					OR = {
+						province_id = 1807
+						province_id = 3066
+						province_id = 3068
+						province_id = 1806
+					}
+				}
+				custom_tooltip = que_nfl_fish_tt
+			}
+			add_country_modifier = {
+				name = "que_ship_building_frenzy"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	que_st_pierre = {
+		icon = mission_colonial
+		required_missions = { que_navy_buildup que_newfoundland }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3050
+				province_id = 4576
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			4576 = {
+				owned_by = ROOT
+				is_city = yes
+			}
+			3050 = {
+				owned_by = ROOT
+				is_city = yes
+			}
+		}
+		effect = {
+			add_dip_power = 50
+			3050 = {
+				add_base_production = 2
+				center_of_trade = 1
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { que_st_pierre }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3307 #Northumberland Strait
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		trigger = {
+			num_of_light_ship = 15
+			3307 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			add_country_modifier = {
+				name = "que_trade_bonus" #light ship cost and embargo efficeny
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+}
+
+que_slot_3_b = {
+	slot = 3
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_caribbean_1 = {
+		icon = mission_caribbean_cn
+		required_missions = { que_new_france }
+		position = 5
+		trigger = {
+			greater_antilles_region = {
+				type = any
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			north_haiti_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_haiti_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			496 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4583 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			498 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = "nfr_caribbean_discovered"
+				duration = 18250
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_caribbean_2 = {
+		icon = mission_war_chest
+		required_missions = { que_caribbean_1 }
+		position = 6
+		provinces_to_highlight = {
+			has_discovered = ROOT
+			OR = {
+				area = north_haiti_area
+				area = south_haiti_area
+				province_id = 496
+				province_id = 498
+				province_id = 4583
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_haiti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_haiti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			496 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			498 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4583 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "nfr_renewed_colonialism"
+				duration = 9125
+			}
+			1881 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4578 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			746 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_4 = {
+	slot = 4
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_nunavut = {
+		icon = brest_dockyards
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = hudson_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			hudson_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+			1487 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7300
+					power = 25
+					key = que_hudson_islands
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_navy_buildup = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { que_labrador }
+		position = 2
+		trigger = {
+			navy_size_percentage = 0.9
+			OR = {
+				num_of_heavy_ship = 2
+				num_of_galley = 12
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					3050 = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				3050 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					4576 = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				4576 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			create_explorer = {
+				tradition = 30
+			}
+			add_country_modifier = {
+				name = "que_early_colonist" #1 colonist and growth
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_discover_europe = {
+		icon = mission_look_west
+		required_missions = { que_navy_buildup }
+		position = 3
+		trigger = {
+			OR = {
+				british_isles_region = {
+					has_discovered = ROOT
+				}
+				france_region = {
+					has_discovered = ROOT
+				}
+				iberia_region = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			define_advisor = {
+				type = navigator
+				skill = 2
+				cost_multiplier = 0.25
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_stance_of_france = {
+		icon = support_american_independence
+		required_missions = { que_discover_europe }
+		position = 5
+		
+		trigger = {
+			if = {
+				limit = {
+					exists = FRA
+					FRA = { is_free_or_tributary_trigger = yes }
+				}
+				OR = {
+					alliance_with = FRA
+					is_rival = FRA
+					france_region = {
+						type = any
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				OR = {
+					any_country = {
+						capital_scope = {
+							region = france_region
+						}
+						is_free_or_tributary_trigger = yes
+						total_development = 75
+						alliance_with = ROOT
+					}
+					france_region = {
+						type = any
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = que_peace_with_fra_tooltip #These are just the tooltips
+			tooltip = {
+				unlock_merc_company = {
+					merc_company = merc_french_volunteer_company
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = "que_peace_with_france"
+					duration = 7300
+				}
+			}
+			custom_tooltip = que_war_with_fra_tooltip
+			tooltip = {
+				ile_de_france_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				add_country_modifier = {
+					name = "que_comin_to_france"
+					duration = 7300
+				}
+			}
+			hidden_effect = { #Here is where the actual effects are
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								exists = FRA
+								FRA = { is_free_or_tributary_trigger = yes }
+								alliance_with = FRA
+							}
+							if = {
+								limit = {
+									OR = {
+										NOT = {
+											exists = FRA
+										}
+										FRA = { is_free_or_tributary_trigger = no }
+									}
+								}
+								any_country = {
+									capital_scope = {
+										region = france_region
+									}
+									is_free_or_tributary_trigger = yes
+									total_development = 75
+									alliance_with = ROOT
+								}
+							}
+						}
+					}
+					unlock_merc_company = {
+						merc_company = merc_french_volunteer_company
+					}
+					#And Diplomacy Modifier + military buff
+					set_country_flag = que_peace_with_france_flag
+					add_country_modifier = {
+						name = "que_peace_with_france" #peace in our time - for now
+						duration = 7300
+					}
+				}
+				else = {
+					ile_de_france_area = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+					set_country_flag = que_war_with_france_flag
+					add_country_modifier = {
+						name = "que_comin_to_france" #french on french violence incoming
+						duration = 7300
+					}
+					#claims on paris + Navy and military buff
+				}
+				hidden_effect = {
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_4_b = {
+	slot = 4
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+		NOT = { has_country_flag = que_peace_with_france_flag }
+		NOT = { has_country_flag = que_war_with_france_flag }
+    }
+    has_country_shield = yes
+
+	que_question_slot = {
+		icon = mission_unknown_mission
+		required_missions = { que_stance_of_france }
+		position = 6
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = {
+				AND = {
+					if = {
+						limit = {
+							exists = FRA
+							FRA = { is_free_or_tributary_trigger = yes }
+						}
+						custom_trigger_tooltip = {
+							tooltip = que_peace_triggers_tt
+							always = no
+						}
+						reverse_has_opinion = {
+							who = FRA
+							value = 150
+						}
+						FRA = {
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							any_country = {
+								capital_scope = {
+									region = france_region
+								}
+								is_free_or_tributary_trigger = yes
+								total_development = 75
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = que_peace_triggers_tt
+							always = no
+						}
+						any_country = {
+							capital_scope = {
+								region = france_region
+							}
+							is_free_or_tributary_trigger = yes
+							total_development = 75
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = que_war_triggers_tt
+						always = no
+					}
+					ile_de_france_area = { 
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 25
+						region = france_region
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = que_peace_effects_tt
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				custom_tooltip = que_merc_free_tooltip
+			}
+			country_event = { #Option to Swap to french group (stay quebecois)
+				id = flavorQUE.103
+			}
+			custom_tooltip = que_war_effects_tt
+			france_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = { #Option to Swap to Monarchy
+				id = flavorQUE.104
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_4_c = {
+	slot = 4
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+		has_country_flag = que_peace_with_france_flag
+		NOT = { has_country_flag = que_war_with_france_flag }
+    }
+    has_country_shield = yes
+
+	que_peace_slot = {
+		icon = mission_diplomatic_relation
+		required_missions = { que_stance_of_france }
+		trigger = {
+			if = {
+				limit = {
+					exists = FRA
+					FRA = { is_free_or_tributary_trigger = yes }
+				}
+				reverse_has_opinion = {
+					who = FRA
+					value = 150
+				}
+				FRA = {
+					trust = {
+						who = ROOT
+						value = 75
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						capital_scope = {
+							region = france_region
+						}
+						is_free_or_tributary_trigger = yes
+						total_development = 75
+					}
+				}
+				any_country = {
+					capital_scope = {
+						region = france_region
+					}
+					is_free_or_tributary_trigger = yes
+					total_development = 75
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					trust = {
+						who = ROOT
+						value = 75
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				custom_tooltip = que_merc_free_tooltip
+			}
+			hidden_effect = {
+				set_country_flag = que_volunteers_do_not_consume_ap
+			}
+			country_event = { #Option to Swap to Monarchy
+				id = flavorQUE.103
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_4_d = {
+	slot = 4
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+		has_country_flag = que_war_with_france_flag
+		NOT = { has_country_flag = que_peace_with_france_flag }
+    }
+    has_country_shield = yes
+
+	que_war_slot = {
+		icon = french_empire
+		required_missions = { que_stance_of_france }
+		trigger = {
+			ile_de_france_area = { 
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = france_region
+			}
+		}
+		effect = {
+			france_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = { #Option to Swap to french group (Swap Cosmopolitan)
+				id = flavorQUE.104
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_4_e = {
+	slot = 4
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_secularization = {
+		icon = mission_early_modern_university
+		required_missions = { que_tranquille }
+		position = 7
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				has_building = university
+			}
+		}
+		effect = {
+			add_innovativeness_big_effect = yes
+			add_country_modifier = {
+				name = pol_reformed_education_system_modifier
+				duration = 7300
+			}
+			custom_tooltip = pol_5_ref_prog_per_university
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_building = university } 
+					owner = { change_government_reform_progress = 5 } 
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_5 = {
+	slot = 5
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_reconnect_pope = {
+		icon = sway_the_pope
+		required_missions = { }
+		position = 3
+		completed_by = 1528.1.1
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						religion = s_catholic
+						religion = catholic
+						religion = austral_catholic
+					}
+				}
+				religion = catholic
+			}
+			else = {
+				religious_unity = 0.75
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						religion = catholic
+						religion = s_catholic
+						religion = austral_catholic
+					}
+				}
+				discover_province = 118
+				add_country_modifier = {
+					name = "que_catholicism_restored" #Tolerence true, missionary strength
+					duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "que_abandoned_catholic_modifier"
+					duration = 9125
+				}
+				hidden_effect = {
+					set_country_flag = que_abandoned_catholic
+					swap_non_generic_missions = yes
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_5_b = {
+	slot = 5
+    generic = no
+    ai = yes
+	potential = {
+		NOT = {
+			has_country_flag = que_abandoned_catholic
+		}
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_archdioces = {
+		icon = mission_european_church
+		required_missions = { que_reconnect_pope }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2652
+				province_id = 2657
+			}
+			NOT = {
+				has_building = temple
+			}
+		}
+		trigger = {
+			2652 = {
+				owned_by = ROOT
+				has_building = temple
+			}
+			2657 = {
+				owned_by = ROOT
+				has_building = temple
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				treasury = 1500
+			}
+			else = {
+				temple = 8
+			}
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				if = {
+					limit = {
+						2657 = {
+							NOT = {
+								has_great_project = {
+									type = montreal_notre_dame
+									tier = 3
+								}
+							}
+						}
+					}
+					2657 = {
+						add_great_project_tier = {
+							type = montreal_notre_dame
+							tier = 1
+						}
+					}
+					add_treasury = -1500
+				}
+				else =  {
+					2657 = {
+						add_building = cathedral
+					}
+				}
+			}
+			else = {
+				2657 = {
+					add_building = cathedral
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_ultramontanisme = {
+		icon = spread_piety
+		required_missions = { que_archdioces }
+		position = 5
+		trigger = {
+			religious_unity = 1
+			estate_influence = {
+				estate = estate_church
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_papal_influence = 75
+			add_country_modifier = {
+				name = "que_political_clergy"
+				duration = 18250
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_church
+				desc = est_que_political_clergy
+				loyalty = 10
+				duration = 18250
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_5_c = {
+	slot = 5
+    generic = no
+    ai = yes
+	potential = {
+		has_country_flag = que_abandoned_catholic
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_protestant_1 = { #Similar to catholic branch but weaker in some regards
+		icon = mission_european_church
+		required_missions = { que_reconnect_pope }
+		position = 4
+		trigger = {
+			2652 = {
+				owned_by = ROOT
+				has_building = temple
+			}
+			2657 = {
+				owned_by = ROOT
+				has_building = temple
+			}
+			temple = 12
+		}
+		effect = {
+			add_country_modifier = {
+				name = "que_build_churches"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_protestant_2 = {
+		icon = spread_piety
+		required_missions = { que_protestant_1 }
+		position = 5
+		trigger = {
+			religious_unity = 1
+			estate_influence = {
+				estate = estate_church
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "que_protestant_chrurch"
+				duration = 18250
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_church
+				desc = est_que_gallicanisme
+				loyalty = 10
+				duration = 18250
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+que_slot_5_d = {
+	slot = 5
+    generic = no
+    ai = yes
+	potential = {
+		OR = {
+			tag = QUE
+			AND = {
+				tag = NFR
+				was_tag = QUE
+			}
+			AND = {
+				tag = NFR
+				started_in = 1555.1.1
+			}
+		}
+    }
+    has_country_shield = yes
+
+	que_tranquille = {
+		icon = mission_tranquille
+		required_missions = { }
+		position = 6
+		trigger = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			absolutism = 50
+			crown_land_share = 50
+		}
+		effect = {
+			add_reform_progress_big_effect = yes
+			if = {
+				limit = {
+					government = republic
+				}
+				unlock_government_reform = {
+					government_reform = maitres_chez_nous_reform
+				}
+			}
+			else = {
+				add_absolutism = 15
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	que_labor_standards = {
+		icon = industrialized_rhineland
+		required_missions = { que_tranquille }
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = nord_du_quebec_area
+				area = quebec_area
+				area = bois_francs_area
+				area = baie_des_chaleurs_area
+			}
+			NOT = { has_manufactory_trigger = yes }
+		}
+		trigger = {
+			has_institution = manufactories
+			num_of_owned_provinces_with = {
+				value = 15
+				has_manufactory_trigger = yes
+				OR = {
+					area = nord_du_quebec_area
+					area = quebec_area
+					area = bois_francs_area
+					area = baie_des_chaleurs_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "que_code_du_travail"
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}

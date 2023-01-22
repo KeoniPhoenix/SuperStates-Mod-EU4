@@ -180,10 +180,10 @@
  ##########American States Flavor
  #####Flavor for Alabama
  flavorALM.1t:0 "The Jubilee" #Beneficial Event
- flavorALM.1d:0 "The Jubilee is a mysterious event where large amount of fish and crustacean gather in large numbers along the shallow waters of Mobile Bay esutary.  This Jubilee is one of the best and numerous fish and crab have been caught."
+ flavorALM.1d:0 "The Jubilee is a mysterious event where large amount of fish and crustacean gather in large numbers along the shallow waters of Mobile Bay estuary.  This Jubilee is one of the best and numerous fish and crab have been caught."
  flavorALM.1opta:0 "Good this will have a positive effect."
  flavorALM.2t:0 "The Jubilee" #Detrimental Event
- flavorALM.2d:0 "The Jubilee is a mysterious event that normally results in large number of fish and crustacean gathering in the shallow waters of Mobile Bay esutary.  Unfortunately, the Jubilee has been absent with very few fish and crustacean seen and even fewer caught.  Nobody knows what's going on as its been long overdue."
+ flavorALM.2d:0 "The Jubilee is a mysterious event that normally results in large number of fish and crustacean gathering in the shallow waters of Mobile Bay estuary.  Unfortunately, the Jubilee has been absent with very few fish and crustacean seen and even fewer caught.  Nobody knows what's going on as its been long overdue."
  flavorALM.2opta:0 "This is not going to be easy for us to take."
  jubilee_good:0 "Good Jubilee"
  desc_jubilee_good:0 "The Jubilee was very good."
@@ -195,7 +195,7 @@
  #####Flavor for Alaska
  #Emergency Transport to Nome
  flavorALA.1t:0 "Epidemic Breaks Out in Isolated Town"
- flavorALA.1d:0 "An epidemic of diphtheria has broken out in an islated town.  They request we send them necessary medicines as they're running dangerously low, but with the condition of the trails to and from the town, its a very hazardous task.  Should we mount an expedition to deliver the requested medicines?"
+ flavorALA.1d:0 "An epidemic of diphtheria has broken out in an isolated town.  They request we send them necessary medicines as they're running dangerously low, but with the condition of the trails to and from the town, its a very hazardous task.  Should we mount an expedition to deliver the requested medicines?"
  flavorALA.1opta:0 "It may be dangerous, but there will be glory!"
  flavorALA.1optb:0 "No, the town is too far away and isolated for us to attempt such."
  #Valuable Resource
@@ -301,16 +301,16 @@
  #Earthquake
  #NOTE THAT THE EVENT NUMBER 02 IS SPLIT BETWEEN TWO POSSIBLE EVENTS, ONE FOR LOS ANGELES (21) OR ONE FOR SAN FRANCISCO (22)! THEY BOTH SHARE THE SAME OPTIONS.
  flavorCAL.21t:0 "Earthquake The Shakening!"
- flavorCAL.21d:0 "A powerful earthquake has struck Los Angeles, causing destruction and mayhem through the region affected.  Scores of people are homeless, have been injuried, or killed.  It may take some time to rebuild from this natural disaster, however it may be prudent to send help immediately."
+ flavorCAL.21d:0 "A powerful earthquake has struck Los Angeles, causing destruction and mayhem through the region affected.  Scores of people are homeless, have been injured, or killed.  It may take some time to rebuild from this natural disaster, however it may be prudent to send help immediately."
  flavorCAL.22t:0 "The Great Earthquake of [GetYear]!"
- flavorCAL.22d:0 "Our most important city by the bay has been struck by an earthquake.  Numerous buildings have been destroyed along with many injuried or killed.  This is major set back for our people and their culture, however we can rebuild sooner if the city receives immediate help."
- flavorCAL.2opta:0 "Send our administors to help."
+ flavorCAL.22d:0 "Our most important city by the bay has been struck by an earthquake.  Numerous buildings have been destroyed along with many injured or killed.  This is major set back for our people and their culture, however we can rebuild sooner if the city receives immediate help."
+ flavorCAL.2opta:0 "Send our administers to help."
  flavorCAL.2optb:0 "Send our troops to help."
  flavorCAL.2optc:0 "Request help from abroad."
  opinion_earthquake:0 "Earthquake Disaster Assistance"
  #Others
  flavorCAL.3t:0 "Criminal Choas requires Choatic Police Response"
- flavorCAL.3d:0 "Los Angeles has decended into a den of criminal anarchy and the only man who has been able to apprehend the worst of the worst has been Officer John Spartan.  Unfortunately he's also the reason why our courts are overrun with insurance claims, he's a nightmare to insurers over property damage claims."
+ flavorCAL.3d:0 "Los Angeles has descended into a den of criminal anarchy and the only man who has been able to apprehend the worst of the worst has been Officer John Spartan.  Unfortunately he's also the reason why our courts are overrun with insurance claims, he's a nightmare to insurers over property damage claims."
  flavorCAL.3opta:0 "He's just doing his job... and things get demolished."
  flavorCAL.4t:0 "Bad Guy Dropped From Nakatomi Plaza"
  flavorCAL.4d:0 "In an attempt to rob the vault of Nakatomi Plaza, Hans Gruber lead his band of mercenaries through the building holding hostages but an unknown officer was in the building and in an exciting display of cunning and daring, the plot to steal the contents of the building's vault was foiled; though, at the cost of some collateral damage to the building.  However, Gruber was subdued when he was dropped from a broken window holding the officier's wife, Holly, as hostage."
@@ -333,13 +333,13 @@
  
  #####Flavor for Colorado
  flavorCLO.01t:0 "Avalanche"
- flavorCLO.01d:0 "An avalanche in an important mountain pass has distrupted our trade from one side of the Rocky Mountains to the other and its diverted trade through neighboring states to our detriment."
+ flavorCLO.01d:0 "An avalanche in an important mountain pass has disrupted our trade from one side of the Rocky Mountains to the other and its diverted trade through neighboring states to our detriment."
  flavorCLO.01opta:0 "This is not good."
  
  #####Flavor for Connecticut
  #flavorCUT.1t:0 "Pequot War"
  #flavorCUT.1d:0 "One of our most prestigious merchants, John Oldham, has been murdered, his crew slaughtered mercilessly, and his two children kidnapped. Sailors tell us that Narragansett Indians were sited looting his boat, and they drove the savages off. They now hide like dogs among the Pequots. 
- #flavorCUT.1opta:0 "The merchent just met with some bad luck. Let the situation slide."
+ #flavorCUT.1opta:0 "The merchant just met with some bad luck. Let the situation slide."
  #flavorCUT.1optb:0 "An outrage! We must teach them a lesson." 
  #flavorCUT.2t:0 "Lux et veritas"
  #flavorCUT.2d:0 "Prepare the caps and gowns, the University of Yale has officially opened! Our children and grandchildren shall make Connecticut the enlightened apple of the Americas. What shall the theme of the college be?
@@ -353,7 +353,7 @@
  
  #####Flavor for Delaware
  #flavorDEL.1t:0 "Student funding"
- #flavorDEL.1d:0 "The idea of government funding students to attend college is not new. In 1957, the state of Deleware started to provide for the poor, so they could go to school. For years, the magistrates, and governors have bickered over what should be done about education welfare. But now a decision must be made. 
+ #flavorDEL.1d:0 "The idea of government funding students to attend college is not new. In 1957, the state of Delaware started to provide for the poor, so they could go to school. For years, the magistrates, and governors have bickered over what should be done about education welfare. But now a decision must be made. 
  #flavorDEL.1opta:0 "Invest in the students"
  #lose 200 ducats, -5% requirement on each Monarch power, gain 100 each Monarch power."
  #flavorDEL.1optb:0 "Invest in the schools"
@@ -374,7 +374,7 @@
  
  #####Flavor for Florida/West Florida
  #flavorFLO.1t:0 "Religious shift!"
- #flavorFLO.1t:0 "Catholocism has historically been deeply engrained in Florida. Several prominent leaders have been strongly advocating that Catholocism become the state religion, with heavy persecutions for anyone who does not comply. Accepting these demands could destabilize Florida, but refusing them could trigger an uprising.
+ #flavorFLO.1t:0 "Catholicism has historically been deeply engrained in Florida. Several prominent leaders have been strongly advocating that Catholicism become the state religion, with heavy persecutions for anyone who does not comply. Accepting these demands could destabilize Florida, but refusing them could trigger an uprising.
  #flavorFLO.1opta:0 "Nobody expects the Spanish Inquisition"
  #stab - 2, state religion becomes catholic, +2 extra missionaries, +4% missionary strength 
  #flavorFLO.2optb:0 "The people must have the freedom to choose their religion."
@@ -387,15 +387,15 @@
  flavorFLO.2t:0 "The Big Peach"
  flavorFLO.2d:0 "If the city of Miami is the jewel of the Caribbean, Atlanta is the jewel of the South. While [Root.GetName] commands considerable economic power in the region, the prime position of Atlanta makes it a strong competitor to our own cities. Now that we have captured the city, what should we do with it?"
  flavorFLO.2opta:0 "Atlanta will be the jewel of the South!"
- flavorFLO.2optb:0 "Claim its wealth for [Root.GetCapitalName]!"
+ flavorFLO.2optb:0 "Claim its wealth for [Root.Capital.GetCapitalName]!"
  flavorFLO.2optd:0 "Burn it to the ground!"
- flavorFLO.2optc:0 "Well, I didn't like [Root.GetCapitalName] anyways..."
+ flavorFLO.2optc:0 "Well, I didn't like [Root.Capital.GetCapitalName] anyways..."
  
  #flo_cuba_opt1_tooltip:0 "Own §YTenerife§! as a core province or own any province on the §YNorth America§!, §YSouth America§!, or §YNew World§! continents."
  
  #####Flavor for Georgia (state)
  #flavorGRG.01t:0 "GOLD RUSH!"
- #flavorGRG.01d:0 "The first major U.S. gold rush did not take place in California. It began in the hills of Dahlonega. The unexploited treasure waits to be mined out, but first we must decide how the treasurey can benefit from this discovery.
+ #flavorGRG.01d:0 "The first major U.S. gold rush did not take place in California. It began in the hills of Dahlonega. The unexploited treasure waits to be mined out, but first we must decide how the treasury can benefit from this discovery.
  #flavorGRG.1opta:0 "Seize the mines, and all their assets!"
  #For next 30 years... national unrest increases by 3, 20% raw income increase
  #flavorGRG.1optb:0 "Regulate the market, and impose a one time fee for opening a mine.
@@ -405,7 +405,7 @@
  
  #####Flavor for Hawaii
  #flavorHWI.1t:0 "Fire and Water"
- #flavorHWI.1d:0 "Disaster governor! A massive volcanic eruption on the Big Island has shaken, and damaged our infrastructure. To make things worse, several tidal waves have devistated our coasts. What will we do to aid in the recovery?"
+ #flavorHWI.1d:0 "Disaster governor! A massive volcanic eruption on the Big Island has shaken, and damaged our infrastructure. To make things worse, several tidal waves have devastated our coasts. What will we do to aid in the recovery?"
  #flavorHWI.1opta:0 "Open the coffers, and keep the economy afloat until we rebuild."
  #lose 500 ducats, +5 interest per annum. 10 years.
  #flavorHWI.1optb:0 "Invest the money in certain markets which will pay into our private fund."
@@ -497,8 +497,8 @@
  
  #####Flavor for Louisiana
  flavorLOU.1t:0 "YELLOW FEVER!"
- flavorLOU.1d:0 "In 1853, an outbreak of Yellow Fever killed over 7,500 people. The reason the disaster was so deadly was due to shady business owners not wanting the mouth of the Mississippi to be quarentined."
- flavorLOU.opta:0 "Quarentine the Port! Leave the dead to contend with their Maker."
+ flavorLOU.1d:0 "In 1853, an outbreak of Yellow Fever killed over 7,500 people. The reason the disaster was so deadly was due to shady business owners not wanting the mouth of the Mississippi to be quarantined."
+ flavorLOU.opta:0 "Quarantine the Port! Leave the dead to contend with their Maker."
  flavorLOU.optb:0 "Silence the fear mongerers. No one need know about this."
  #(50/50 chance of lowered relations with other nations
  
@@ -518,7 +518,7 @@
  flavorMSS.5d:0 "The first lighthouse in America was constructed in Boston Harbor. Destroyed by the British in 1776, it was rebuilt in 1783, and is the only light to be manned by the US Coast Guard."
  flavorMSS.5opta:0 "A light to the outer darkness which lies beyond our coasts. May it forever shine as a beacon of freedom."
  flavorMSS.6t:0 "Middlesex Canal"
- flavorMSS.6d:0 "Massachusetts, like the rest of the states, experienced many economic problems in their early years of independence. One of these issues was a lack of reliable roads. Timber, fur, and other goods cost merchantmen much money to transport over long distances to the ports along the Atlantic. Thus, water transit was usually the preferred method, but rivers could not be expected to travel exactly the way businesses wanted them to. Sometimes, canals would be dug to connect two rivers together, or to create a passage to the sea. Such was the case of the Middlesex Canal. Built in 1803, it was the first great civil engineering project in the USA, and would become a subject of study for future canal projects. The canal was designed to connect Boston to the Merrimack river, which was a major trade highway. The contruction of the canal would see the inventions of a crude dump truck, watertight locks. The canal's contruction, while expensive, was very successful, and remained so until replaced by the railroad. Today, parts of the canal still stand as a testimony to the ingenuity of Colonial Massachusites."
+ flavorMSS.6d:0 "Massachusetts, like the rest of the states, experienced many economic problems in their early years of independence. One of these issues was a lack of reliable roads. Timber, fur, and other goods cost merchantmen much money to transport over long distances to the ports along the Atlantic. Thus, water transit was usually the preferred method, but rivers could not be expected to travel exactly the way businesses wanted them to. Sometimes, canals would be dug to connect two rivers together, or to create a passage to the sea. Such was the case of the Middlesex Canal. Built in 1803, it was the first great civil engineering project in the USA, and would become a subject of study for future canal projects. The canal was designed to connect Boston to the Merrimack river, which was a major trade highway. The construction of the canal would see the inventions of a crude dump truck, watertight locks. The canal's construction, while expensive, was very successful, and remained so until replaced by the railroad. Today, parts of the canal still stand as a testimony to the ingenuity of Colonial Massachusites."
  flavorMSS.6opta:0 "Our canals shall be rivers of gold!"
  flavorMSS.1t:0 "The Maine Question"
  flavorMSS.1d:0 "According to our records, the state of Maine used to be an integral part of [Root.GetName]. After several centuries, this part of our territory chose to separate from us and create their own state rather than be a district under our banner. While this was clearly a mistake, our advisors have been suggesting using this knowledge to our advantage by extending an offer to the state of Maine:\n\n In exchange for economic and military support, Maine would reunite with our country, effectively becoming a vassal state under us."
@@ -539,7 +539,7 @@
  #####Flavor for Michigan/Superior
  #Detroit Goes Bankrupt
  flavorMIC.01t:0 "City of Detroit is Broke!"
- flavorMIC.01d:0 "For years the largest and most economically important city in the state, Detroit, has been mismanaged by unsound political and economic theory.  Spending they say can revitalize the economy.  Enacting policies that sound good on paper but are really just political sleaze hurting the people and business we need the most.  All of this combined has lead to a changing demographic and a population that wishes to flee to better places. As a result the city has spent all of its money and as a result now has more debts than it can ever concievably repay through local taxes.  What should we do?"
+ flavorMIC.01d:0 "For years the largest and most economically important city in the state, Detroit, has been mismanaged by unsound political and economic theory.  Spending they say can revitalize the economy.  Enacting policies that sound good on paper but are really just political sleaze hurting the people and business we need the most.  All of this combined has lead to a changing demographic and a population that wishes to flee to better places. As a result the city has spent all of its money and as a result now has more debts than it can ever conceivably repay through local taxes.  What should we do?"
  flavorMIC.01opta:0 "Leave them to their own devices." #Trade good changes to Grain, -3 base tax.
  flavorMIC.01optb:0 "Bail out the city government." 
  #Lose 1/2 year income, -1 base tax.
@@ -567,8 +567,8 @@
  
  #####Flavor for Mississippi
  flavorMIS.1t:0 "Mississippi River Delta"
- flavorMIS.1d:0 "Before the Mississippi River Delta was usable, 310 miles of levees had to be contructed to keep the Mississippi River contained."
- flavorMIS.opta:0 "Allocate neccessary funds"
+ flavorMIS.1d:0 "Before the Mississippi River Delta was usable, 310 miles of levees had to be constructed to keep the Mississippi River contained."
+ flavorMIS.opta:0 "Allocate necessary funds"
  flavorMIS.optb:0 "Preposterous! The basin will never be able to grow any more than moss!"
  
  #####Flavor for Missouri
@@ -578,9 +578,9 @@
  
  #####Flavor for Montana
  flavorMNT.1t:0 "Great Mystery of Alder Gulch"
- flavorMNT.1d:0 "Henry Plummer was a sheriff, and gold mine owner who had a very dark history connected to him. Although not proven by any documented source, the story goes that Plummer's wealth and power began in the California Gold Rush, which led him to become town sheriff. But in 1857, a duel ensued. The fight was over an enraged husband who accused Plummer of cheating on his wife, but Plummer won the duel. Convicted of murder, sentenced to prison, he was released 6 months later due to public support. Soon after, Plummer killed a man after a brawl broke out. Arrested, and thrown in jail, he bribed the guard, and fled to Oregon. On his way, he joined forces with Jim Mayfield, a bandit, believed to have murdered a sheriff in a nearby town. Plummer dispatched a message to California that he, and Mayfield were hung in Washington. The media published the story, and law stopped looking for the men. Meanwhile, Plummer's forces grew to a gang. Plummer and his gang robbed families, and caravans carrying gold. But after a string of bad luck, Plummer gave up, and began heading home. But about halfway there, Gold Fever bit him and drove him to prospect for more wealth in the town of Bannack, Montana. Full of Civil War deserters, river pirates, and sorts of vile people of the nation, it was easy for Plummer to form a new gang, this one called 'The Innocents.' Plummer's gang grew, an grew, increasing lawlessness and terror among the citizens of the town. They held an election for sheriff, which a local butcher and Plummer both participated in. The butcher won by a landslide, and in a hasty act of revenge, Plummer attempted to kill the new sheriff with a shotgun, but was shot himself in the arm by the sheriff. Retreating back to safe lines, he began to practice shooting with his other hand. The sheriff resigned, and fled town. In a new election for the town's sheriff, Plummer won, and appointed his top two thugs as his henchmen. Over the course of the next few months, 100 citizens were slain. Because his gang operated so perfectly, he was able to kill and/or silence anyone who could speak against him. Soon, his lust for power would drive him to become Deputy US Marshall for the entire region east of the mountains in Idaho Territory. Angered, and furious, the townspeople of Virginia City, Nevada City, and Bannack formed a milita to put down 'The Innocents.' One by one, the gang was weeded out, until one man about to be hung claimed Plummer was the ringleader. Based on this one accusation alone, the milita brutally executed Plummer without trial or jury. No written evidence is recorded of Plummer doing evil."
- flavorMNT.1opta:0 "The arrows of justice has rightfully piereced the dark soul of Plummer. May all our enemies hear, and fear."
- flavorMNT.1optb:0 "We have failed to uphold due process in the best of times. We all stand dooomed to reap God's curses."
+ flavorMNT.1d:0 "Henry Plummer was a sheriff, and gold mine owner who had a very dark history connected to him. Although not proven by any documented source, the story goes that Plummer's wealth and power began in the California Gold Rush, which led him to become town sheriff. But in 1857, a duel ensued. The fight was over an enraged husband who accused Plummer of cheating on his wife, but Plummer won the duel. Convicted of murder, sentenced to prison, he was released 6 months later due to public support. Soon after, Plummer killed a man after a brawl broke out. Arrested, and thrown in jail, he bribed the guard, and fled to Oregon. On his way, he joined forces with Jim Mayfield, a bandit, believed to have murdered a sheriff in a nearby town. Plummer dispatched a message to California that he, and Mayfield were hung in Washington. The media published the story, and law stopped looking for the men. Meanwhile, Plummer's forces grew to a gang. Plummer and his gang robbed families, and caravans carrying gold. But after a string of bad luck, Plummer gave up, and began heading home. But about halfway there, Gold Fever bit him and drove him to prospect for more wealth in the town of Bannack, Montana. Full of Civil War deserters, river pirates, and sorts of vile people of the nation, it was easy for Plummer to form a new gang, this one called 'The Innocents.' Plummer's gang grew, an grew, increasing lawlessness and terror among the citizens of the town. They held an election for sheriff, which a local butcher and Plummer both participated in. The butcher won by a landslide, and in a hasty act of revenge, Plummer attempted to kill the new sheriff with a shotgun, but was shot himself in the arm by the sheriff. Retreating back to safe lines, he began to practice shooting with his other hand. The sheriff resigned, and fled town. In a new election for the town's sheriff, Plummer won, and appointed his top two thugs as his henchmen. Over the course of the next few months, 100 citizens were slain. Because his gang operated so perfectly, he was able to kill and/or silence anyone who could speak against him. Soon, his lust for power would drive him to become Deputy US Marshall for the entire region east of the mountains in Idaho Territory. Angered, and furious, the townspeople of Virginia City, Nevada City, and Bannack formed a militia to put down 'The Innocents.' One by one, the gang was weeded out, until one man about to be hung claimed Plummer was the ringleader. Based on this one accusation alone, the militia brutally executed Plummer without trial or jury. No written evidence is recorded of Plummer doing evil."
+ flavorMNT.1opta:0 "The arrows of justice has rightfully pierced the dark soul of Plummer. May all our enemies hear, and fear."
+ flavorMNT.1optb:0 "We have failed to uphold due process in the best of times. We all stand doomed to reap God's curses."
  
  #####Flavor for Nebraska
  flavorNEB.1t:0 "Gratten Massacre"
@@ -600,7 +600,7 @@
  
  #####Flavor for New Hampshire
  flavorNWH.1t:0 "The Old Man of the Mountain"
- flavorNWH.1d:0 "A pretigious icon to New Hampshire was its 'Old Man of the Mountain' which was a giant rock face sitting over 1,000 feet above the valley floor. It is believed the rock was carved out by glaciers, being first discovered in 1805. It was largely popularized by statesman Daniel Webster who once wrote 'Men hang out their signs indicative of their respective trades; shoe makers hang out a gigantic shoe; jewelers a monster watch, and the dentist hangs out a gold tooth; but up in the Mountains of New Hampshire, God Almighty has hung out a sign to show that there He makes men.' The Old Man of the Mountain would become New Hampshire's state emblem, licence plate, state route signs, and even made it on US Currency as a Statehood Quarter. Alas, New Hampshire's icon came to a bitter end on a cold, snowy night, when it broke away from the cliff face smashing to dust at the bottom. Citizens of New Hampshire strove to build a replica of the head, but the governor blocked the idea. Nevertheless, 7 years later, the citizens would try again, and to this day, an organization is working to build a memorial, and possibly a replica."
+ flavorNWH.1d:0 "A prestigious icon to New Hampshire was its 'Old Man of the Mountain' which was a giant rock face sitting over 1,000 feet above the valley floor. It is believed the rock was carved out by glaciers, being first discovered in 1805. It was largely popularized by statesman Daniel Webster who once wrote 'Men hang out their signs indicative of their respective trades; shoe makers hang out a gigantic shoe; jewelers a monster watch, and the dentist hangs out a gold tooth; but up in the Mountains of New Hampshire, God Almighty has hung out a sign to show that there He makes men.' The Old Man of the Mountain would become New Hampshire's state emblem, license plate, state route signs, and even made it on US Currency as a Statehood Quarter. Alas, New Hampshire's icon came to a bitter end on a cold, snowy night, when it broke away from the cliff face smashing to dust at the bottom. Citizens of New Hampshire strove to build a replica of the head, but the governor blocked the idea. Nevertheless, 7 years later, the citizens would try again, and to this day, an organization is working to build a memorial, and possibly a replica."
  flavorNWH.1opta:0 "Allocate funds for recontruction, and designate the site a national landmark."
  flavorNWH.1optb:0 "We cannot afford reconstruction. It's just a rock!"
  
@@ -736,7 +736,7 @@
  flavorPNN.1opta:0 "Keep the boy here, it was just one little fight." 	#Does nothing
  flavorPNN.1optb:0 "Who knows, he might just become royalty."			#Sets Flag for future event.
  flavorPNN.2t:0 "California Ambassador Returns to Hometown."
- flavorPNN.2d:0 "Years ago, a young mischevious teenager of West Philadelphia was given a rare opportunity to escape the troubles of that neighborhood to a place far to the west known only as 'Bel-Air'.  His experiences in the services of his uncle enriched his spirit and life to where he has become educated and respectful to our society's institutions."
+ flavorPNN.2d:0 "Years ago, a young mischievous teenager of West Philadelphia was given a rare opportunity to escape the troubles of that neighborhood to a place far to the west known only as 'Bel-Air'.  His experiences in the services of his uncle enriched his spirit and life to where he has become educated and respectful to our society's institutions."
  flavorPNN.2opta:0 "He's the Prince of Bel-Air."
  flavorPNN.3t:0 "Arrival of the Amish"
  flavorPNN.3d:0 "With most of Germany embroiled in religious turmoil, many Germans find themselves caught in the middle of the strife. A significant number of them have fled the continent, seeking a peaceful life in the New World. To this extent, they have arrived in [Root.GetName] and are requesting asylum, declaring that they are fellow followers of Christ and reminding us of the virtues of Jesus Christ. This particular group claims to be a mixture of Alsatian and Swiss Germans, following a doctrine of Christianity they call Anabaptism. Shall we allow these refugees into our country?"
@@ -769,7 +769,7 @@
 
  #####Flavor for South Dakota
  flavorSDK.1t:0 "Wounded Knee"
- flavorSDK.1d:0 "On a cold December morning of 1890, a detachment of the 7th Cavalry marched in to a Lakotan encampment. Their orders were to disarm the populace, due to several near-uprisings which were making the settlers and military uncomfortable. 38 rifles were initially confiscated, with more being taken from searches conducted on the Indians themselves. All went well until they came to a man named Yellow Bird. Yellow Bird became agitated, and refused to give up his rifle. Several other Indians shouted that Yellow Bird was deaf, which did not help tensions. Two soldiers siezed Yellow Bird from behind, and in an instant, his rifle discharged. Immediately, Yellow Bird threw dust into the air, and 5 young Indian men fired into the 7th. Now there was no turning the clock back. In a few moments, half the camp of Indians would be dead, or dying. Some Indians fled, others grabbed weapons and engaged the American Army. It soon become clear the Indians would be defeated. Officers lost control of the men, who began firing at women and children who had taken refuge in a small ditch outside the camp. Over 300 Indians would be dead by day's end. Major Forsythe, who was in charge of the outfit, was dismissed by his superior officer, but reinstated by Washington, and went on to become a major general. To this day, Wounded Knee is still a hotly debated issue. Was it a massacre? Was it a battle? This is merely just one of history's tough issues that will probably never be settled."
+ flavorSDK.1d:0 "On a cold December morning of 1890, a detachment of the 7th Cavalry marched in to a Lakotan encampment. Their orders were to disarm the populace, due to several near-uprisings which were making the settlers and military uncomfortable. 38 rifles were initially confiscated, with more being taken from searches conducted on the Indians themselves. All went well until they came to a man named Yellow Bird. Yellow Bird became agitated, and refused to give up his rifle. Several other Indians shouted that Yellow Bird was deaf, which did not help tensions. Two soldiers seized Yellow Bird from behind, and in an instant, his rifle discharged. Immediately, Yellow Bird threw dust into the air, and 5 young Indian men fired into the 7th. Now there was no turning the clock back. In a few moments, half the camp of Indians would be dead, or dying. Some Indians fled, others grabbed weapons and engaged the American Army. It soon become clear the Indians would be defeated. Officers lost control of the men, who began firing at women and children who had taken refuge in a small ditch outside the camp. Over 300 Indians would be dead by day's end. Major Forsythe, who was in charge of the outfit, was dismissed by his superior officer, but reinstated by Washington, and went on to become a major general. To this day, Wounded Knee is still a hotly debated issue. Was it a massacre? Was it a battle? This is merely just one of history's tough issues that will probably never be settled."
  flavorSDK.1opta:0 "Only the sweet waters of baptism, shall wipe away the debt from Wounded Knee."
  flavorSDK.1optb:0 "Build a Hall of Heroes that will remind the generations of our soldiers' honor and duty to the defense of this nation."
  
@@ -787,14 +787,14 @@
  flavorTNN.1opta:0 "Nashville wouldn't be Nashville without you!" 
  # Rise of East Tennessee
  TNflavor.1tit:0 "Rise of East Tennessee..."
- TNflavor.1desc:0 "It would be hard to ignore the economic progress of East Tennessee, particularly the great city of Knoxville which has become the subject of recent debate. Representatives from East Tennessee argue that they carry an unfair economic burden relative to their political repreesntation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyranical', and 'having very poor manners'. While obviously none of this is true, the East Tennesseeans have reached a breaking point and are threatening secesion if things aren't changed. How shall we respond?"
+ TNflavor.1desc:0 "It would be hard to ignore the economic progress of East Tennessee, particularly the great city of Knoxville which has become the subject of recent debate. Representatives from East Tennessee argue that they carry an unfair economic burden relative to their political representation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyrannical', and 'having very poor manners'. While obviously none of this is true, the East Tennesseeans have reached a breaking point and are threatening secession if things aren't changed. How shall we respond?"
  TNflavor.1a:0 "We will concede to their demands."
  TNflavor.1b:0 "We need to subdue these people before they become a bigger problem."
  TNflavor.1c:0 "We will grant increased autonomy but Tennessee must remain united."
  TNflavor.1d:0 "Perhaps we can work out a deal to benefit us both..."
  # Rise of West Tennessee
  TNflavor.2tit:0 "Rise of West Tennessee..."
- TNflavor.2desc:0 "It would be hard to ignore the economic progress of West Tennessee, particularly the great city of Memphis which has become the subject of recent debate. Representatives from West Tennessee argue that they carry an unfair economic burden relative to their political repreesntation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyranical', and 'having very poor manners'. While obviously none of this is true, the West Tennesseeans have reached a breaking point and are threatening secesion if things aren't changed. How shall we respond?"
+ TNflavor.2desc:0 "It would be hard to ignore the economic progress of West Tennessee, particularly the great city of Memphis which has become the subject of recent debate. Representatives from West Tennessee argue that they carry an unfair economic burden relative to their political representation. Middle Tennessee, where the capital still resides in the less impressive Nashville, is being criticized as 'dictatorial', 'tyrannical', and 'having very poor manners'. While obviously none of this is true, the West Tennesseeans have reached a breaking point and are threatening secession if things aren't changed. How shall we respond?"
  TNflavor.2a:0 "We will concede to their demands."
  TNflavor.2b:0 "We need to subdue these people before they become a bigger problem."
  TNflavor.2c:0 "We will grant increased autonomy but Tennessee must remain united."
@@ -802,7 +802,7 @@
  
  #####Flavor for Texas/East Texas/North Texas/Commanche/Lipan
  flavorTEX.1t:0 "In El Paso, Four Dead in Five Seconds"
- flavorTEX.1d:0 "A disturbance after an inquiry in the death of two Mexicans caused by a dispute on the translation of the proceedings into Spanish between the Constable and two disgruntled attendees of the inquiry lead to the Constable being shot.  The shooting of the Constable alerted Marshal Stoudenmire who in a hasty exit from his dinner at the Globe Restaurant, at first shot wildly accidentally killing an innocent bystander, engaged the two heated men. Within 5 seconds of the first shot Mashal Stoudenmire had killed them both.  The Constable, innocent bystander, and both assailants of the Constable were dead."
+ flavorTEX.1d:0 "A disturbance after an inquiry in the death of two Mexicans caused by a dispute on the translation of the proceedings into Spanish between the Constable and two disgruntled attendees of the inquiry lead to the Constable being shot.  The shooting of the Constable alerted Marshal Stoudenmire who in a hasty exit from his dinner at the Globe Restaurant, at first shot wildly accidentally killing an innocent bystander, engaged the two heated men. Within 5 seconds of the first shot Marshal Stoudenmire had killed them both.  The Constable, innocent bystander, and both assailants of the Constable were dead."
  flavorTEX.1opta:0 "Well, let's hope this doesn't become a media circus."
  flavorTEX.2t:0 "Arrival of the Germans"
  flavorTEX.2d:0 "With the increasing global prominence of German nations in Europe and around the world, many parts of the New World have observed German immigrants arriving within their lands. There has been a recent influx of German immigrants migrating to [Root.GetName], however, and it has not gone unnoticed. Some in our government are clamoring at the idea, suggesting we offer incentives for them to come to our country. Others suggest that this is folly, and we should reject them outright. What shall we do?"
@@ -863,7 +863,7 @@
  
  #####Flavor for Virginia/Northern Virginia
  flavorVIR.1t:0 "The Richmond Calamity"
- flavorVIR.1d:0 "On April 27th, 1870, the court-room on the second story of the Capitol building collapsed onto the floor below, killing 50 people, and gravely injuring 100 more. The building was originally constructed as a simple one story complex. But increasing administration meant a second story would have to be added. As the second floor was being built, the architect rested the floor beams on a narrow ledge just a few inches across. The ledge was never meant to support the weight of a second story, but even still, they would probably have resisted the load. But several years after the upgrade, improvements to the building's appearance were desired, and thus, the central pillars were removed. The floor beams supporting the second story had only the ledges to rest on which were already past their safe limits. Over the course of the next several years, the floor sagged, meaning even more load was being put on the middle part of the floor, snowballing the condition. It was just past 11:00 in the morning on that fateful April day when hundreds of people packed on to the second floor. The clerk entered the courtroom, placing his books on the table. One judge was already seated, with his associates still in the conference room. From the media, to the spectators, to the counsel, all were having a merry time, enjoying each other's company in friendly conversation. Suddenly, without rhyme, without warning, a major floorboard running underneath the courtroom broke away, causing the load to cascade to other supports, breaking them as well. In a heart-beat, the second story collapsed into the second sending its screaming occupents with it. Most people survived the incident, no doubt to the quick response from rescue teams. Greater loss of life could have happened if the Hall of Delegates below the courtroom was in session. The day after the disaster, most of the dead would be buried, and the day would be dedicated to mourning, and prayer."
+ flavorVIR.1d:0 "On April 27th, 1870, the court-room on the second story of the Capitol building collapsed onto the floor below, killing 50 people, and gravely injuring 100 more. The building was originally constructed as a simple one story complex. But increasing administration meant a second story would have to be added. As the second floor was being built, the architect rested the floor beams on a narrow ledge just a few inches across. The ledge was never meant to support the weight of a second story, but even still, they would probably have resisted the load. But several years after the upgrade, improvements to the building's appearance were desired, and thus, the central pillars were removed. The floor beams supporting the second story had only the ledges to rest on which were already past their safe limits. Over the course of the next several years, the floor sagged, meaning even more load was being put on the middle part of the floor, snowballing the condition. It was just past 11:00 in the morning on that fateful April day when hundreds of people packed on to the second floor. The clerk entered the courtroom, placing his books on the table. One judge was already seated, with his associates still in the conference room. From the media, to the spectators, to the counsel, all were having a merry time, enjoying each other's company in friendly conversation. Suddenly, without rhyme, without warning, a major floorboard running underneath the courtroom broke away, causing the load to cascade to other supports, breaking them as well. In a heart-beat, the second story collapsed into the second sending its screaming occupants with it. Most people survived the incident, no doubt to the quick response from rescue teams. Greater loss of life could have happened if the Hall of Delegates below the courtroom was in session. The day after the disaster, most of the dead would be buried, and the day would be dedicated to mourning, and prayer."
  flavorVIR.opta:0 "This surely is only an isolated incident... right?"
  flavorVIR.optb:0 "Investigate all public buildings in the state, and reform our building code."
  flavorVIR.1000t:0 "Direction of Our Culture"
@@ -891,7 +891,7 @@
  #Coal Mine Fire
  
  flavorWVA.1t:0 "West Virginia Coal Wars"
- flavorWVA.1d:0 "Between 1912 and 1921, work conditions in coal mines dropped to such a low level, that large groups of workers threatened to strike if their demands for safety, and better pay were not met. Instead, they were met with the barrel of a gun, and strikebreakers. Miners were forced out of the homes they were renting from the coal companies, and put into camps supported by the newly formed United Mine Workers Union. The situation escalated when strikebreaker agents provoked the miners, which in turn, caused the union to retaliate by supplying miners with high powered weapons, and ammunition. On September 1st, 1912, 6,000 miners set out with intent to kill the strikebreakers, and destroy company equipment. The Governor proclaimed martial law, and siezed many of the miners' weapons. However, this did nothing to solve the problem. Resentment festered within the mining community. On May 19th, 1920, a massive insurrection rose up, not seen since the beginning of the Civil War. One decisive battle was fought in Logan County, which consisted of 10,000 miners against 3,000 strikebreakers and lawmen. The president of the United States sent in the army, and several bombers to destroy the miners. After a bloody, and grueling exchange, the miners were routed by the US Army. A victory for the US military, and a defeat for an already alienated mining guild. Mining companies celebrated, as union membership fell to all time lows. It was however, a pyrrhic victory for the mining companies. Company owners had succeeded in keeping miners in 'their place,' but public support would gradually increase against the mining companies. Just like the Alamo, the spirit of the miners was not destroyed, but only gave them a louder voice to be heard by the general public. Franklin D Roosevelt would later sign the New Deal, fully recognizing the United Mine Workers Union, which allowed workers of the time, to mine safer, and receive better pay."
+ flavorWVA.1d:0 "Between 1912 and 1921, work conditions in coal mines dropped to such a low level, that large groups of workers threatened to strike if their demands for safety, and better pay were not met. Instead, they were met with the barrel of a gun, and strikebreakers. Miners were forced out of the homes they were renting from the coal companies, and put into camps supported by the newly formed United Mine Workers Union. The situation escalated when strikebreaker agents provoked the miners, which in turn, caused the union to retaliate by supplying miners with high powered weapons, and ammunition. On September 1st, 1912, 6,000 miners set out with intent to kill the strikebreakers, and destroy company equipment. The Governor proclaimed martial law, and seized many of the miners' weapons. However, this did nothing to solve the problem. Resentment festered within the mining community. On May 19th, 1920, a massive insurrection rose up, not seen since the beginning of the Civil War. One decisive battle was fought in Logan County, which consisted of 10,000 miners against 3,000 strikebreakers and lawmen. The president of the United States sent in the army, and several bombers to destroy the miners. After a bloody, and grueling exchange, the miners were routed by the US Army. A victory for the US military, and a defeat for an already alienated mining guild. Mining companies celebrated, as union membership fell to all time lows. It was however, a pyrrhic victory for the mining companies. Company owners had succeeded in keeping miners in 'their place,' but public support would gradually increase against the mining companies. Just like the Alamo, the spirit of the miners was not destroyed, but only gave them a louder voice to be heard by the general public. Franklin D Roosevelt would later sign the New Deal, fully recognizing the United Mine Workers Union, which allowed workers of the time, to mine safer, and receive better pay."
  flavorWVA.1opta:0 "Striking miners? We should strike them back!" 
  #(Recommend unrest increase, but boost to monthly ducats)
  flavorWVA.1optb:0 "No citizen of West Virginia should feel they need a union to protect their rights" 
@@ -937,15 +937,48 @@
  
  #####Flavor for Nunavut
  # nunavut can't have flavor if it's all sheets of nice!
- 
+ # -2, what a bad joke; you even misspelled ice
+ flavorplusNUN.4t:0 "Norse Revival"
+ flavorplusNUN.4d:0 "With the revival of the Norse faith, the population of [Root.GetName] has started to practice traditions and ceremonies which were thought to be long lost. This resurgence of the old Norse culture might be a chance for our country to break the shackles which were bound to our culture by Christianity."
+ flavorplusNUN.4opta:0 "We welcome this new faith!"
+ flavorplusNUN.4optb:0 "Stop with this nonsense."
+ flavorplusNUN.1010t:0 "Gold Discovered in $PROVINCENAME$"
+ flavorplusNUN.1010d:0 "Prospectors and surveyors sent north in search of precious goods have struck gold!\n\nGovernment aid will have to be sent out to expand the newly discovered rare metals mining industry. These goods will surely bring prosperity to [Root.GetName]."
+ flavorplusNUN.1010opta:0 "We're gonna be rich!"
+ flavorplusNUN.1010optb:0 "Focus on our current produce instead."
  
  #####Flavor for Ontario/Toronto
- 
+ flavorONT.1t:0 "Rise of the Family Compact"
+ flavorONT.1d:0 "Through crude maneuvering and political favors, a small group of powerful elites have effectively seized control of the government. Called the Family Compact, they seek only to profit and further themselves by controlling high level government positions. Until we can wrangle control of the nation back, the laws and direction of [Root.GetName] are now at the whim of these pesky elites."
+ flavorONT.1opta:0 "Unfortunate."
+ flavorONT.1optb:0 "Attempt to seize back control."
  
  #####Flavor for Prince Edward Island
  
  
  #####Flavor for Quebec/Montreal
+ flavorQUE.100t:0 "Revive New France"
+ flavorQUE.100d:0 "New France, the nearly continent spanning colony of France stretching from Louisiana to Québec was divided between Britain and Spain some 250 years ago. Now we have been given the chance to reforge that great colonial empire under our vision, a New France under new leadership."
+ flavorQUE.100a:0 "A new era awaits us as New France."
+ flavorQUE.100b:0 "We will forge our own destiny."
+ flavorQUE.101t:0 "Fate of Ottawa"
+ flavorQUE.101d:0 "Ottawa, the capital city of Canada has fallen into our hands. Besides controlling Parliament Hill, Ottawa stands as a crossroads between French and English, a line we have crossed today.\n\nGatineau, a predominantly French speaking city across the river from Ottawa, has long been overshadowed by Ottawa's status as the capital and often played second fiddle in the affairs of the region. As the new rulers of Ottawa we can direct some of the wealth of Ottawa across to Gatineau, and even enforce our culture on the city."
+ flavorQUE.101a:0 "We shall enforce our rule over Ottawa."
+ flavorQUE.101b:0 "Let them be."
+ flavorQUE.102t:0 "Cajun Revival"
+ flavorQUE.102d:0 "The Cajuns are a Francophone minority in Louisiana, many of which can trace their origins to the colony of Acadia in Canada. Now that we are in control of Louisiana proper, we have the opportunity to support the Cajuns."
+ flavorQUE.102a:0 "The Cajuns shall thrive."
+ flavorQUE.102b:0 "Let them be."
+ flavorQUE.103t:0 "Cultural Exchange"
+ flavorQUE.103d:0 "Our expanded relationship with our allies in France have started a new age of cultural exchange between our countries. We have learned a lot from our French allies such as methods of warfare, culture and arts. Some in our council wish to mend the cultural division between French and New French, fully uniting our people in harmony."
+ flavorQUE.103a:0 "We shall mend the cultural divide."
+ flavorQUE.103b:0 "Stick to our current culture."
+ flavorQUE.104t:0 "New Rulers of France"
+ flavorQUE.104d:0 "We have sailed across the seas, to what some may call our homeland. A new era of French Hegemony is about to begin, the only question now is how we will tolerate the French people. Although we have a lot in common, centuries of separation have divided our cultural groups. Some advisors suggest we embrace Francien and mend the schism between New French and continental French.\n\nWhatever our decision may be, the French people will recognize that New France has become the new France."
+ flavorQUE.104a:0 "We must emulate the French Monarchs and customs."
+ flavorQUE.104b:0 "We shall mend the cultural divide."
+ flavorQUE.104c:0 "Stick to our current culture."
+ 
  
  
  #####Flavor for Saskatchewan

@@ -6,7 +6,7 @@ add_core = VRM
 # add_core = NYS
 # add_core = NWH
 culture = vermonter
-religion = s_protestant
+religion = s_catholic
 capital = "Montpelier"
 trade_goods = wool
 hre = no
@@ -19,10 +19,6 @@ discovered_by = mesoamerican
 
 1399.1.1 = {
 	fort_15th = yes
-}
-
-1528.1.1 = {
-	religion = s_methodist
 }
 
 1555.1.1 = {

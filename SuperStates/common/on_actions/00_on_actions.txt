@@ -1748,6 +1748,50 @@ on_government_change = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			NOT = { government = republic }
+			OR = {
+				has_country_modifier = que_cosmo_rulers_of_france
+				has_country_modifier = que_cultural_exchange
+			}
+			# any_owned_province = {
+			# 	has_province_modifier = que_new_french_accepted_province_republic
+			# }
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = que_new_french_accepted_province
+			}
+			remove_province_modifier = que_new_french_accepted_province
+			add_province_modifier = {
+				name = que_new_french_accepted_province_republic
+				duration = -1
+			}
+		}
+	}
+	if = {
+		limit = {
+			government = republic
+			OR = {
+				has_country_modifier = que_cosmo_rulers_of_france
+				has_country_modifier = que_cultural_exchange
+			}
+			# any_owned_province = {
+			# 	has_province_modifier = que_new_french_accepted_province
+			# }
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = que_new_french_accepted_province_republic
+			}
+			remove_province_modifier = que_new_french_accepted_province_republic
+			add_province_modifier = {
+				name = que_new_french_accepted_province
+				duration = -1
+			}
+		}
+	}
 }
 
 # When a native changes government after filling all their advancement groups.
@@ -4624,6 +4668,10 @@ on_mercenary_recruited = {
 				FROM = { NOT = { has_country_flag = vrm_green_boys_do_not_consume_ap } }
 				ROOT = { NOT = { mercenary_company = merc_green_mountain_boys } }
 			}
+			OR = {
+				FROM = { NOT = { has_country_flag = que_volunteers_do_not_consume_ap } }
+				ROOT = { NOT = { mercenary_company = merc_french_volunteer_company } }
+			}
 		}
 		if = {
 			limit = {
@@ -5328,6 +5376,15 @@ on_centralized_state = {
 		owner = {
 			add_adm_power = 50
 			change_government_reform_progress = 50
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_government_attribute = centralize_state_half_refund }
+		}
+		owner = {
+			add_adm_power = 25
+			change_government_reform_progress = 25
 		}
 	}
 	if = {

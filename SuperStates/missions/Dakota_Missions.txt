@@ -1,321 +1,414 @@
 dak_conquests = {
-    slot = 1
-    generic = no
-    ai = yes
-    potential = {
-        OR = {
-            tag = SDK
-            tag = NDK
-            tag = DAK
-        }
-    }
-    has_country_shield = yes
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SDK
+			tag = NDK
+			tag = DAK
+		}
+	}
+	has_country_shield = yes
 
-    dak_unite = {
-        icon = mission_landsknecht_soldier
-        required_missions = { }
-        position = 1
+	dak_unite = {
+		icon = mission_landsknecht_soldier
+		required_missions = { }
+		position = 1
 
-        trigger = {
-            army_size_percentage = 1
-            manpower_percentage = 0.6
-        }
-        effect = {
-             if = {
-                 limit = {
-                    tag = NDK
-                 }
-                 east_river_area = {
-                     add_permanent_claim = ROOT
-                 }
-                 998 = {
-                     add_permanent_claim = ROOT
-                 }
-                 3142 = {
-                    add_permanent_claim = ROOT
-                }
-                3143 = {
-                    add_permanent_claim = ROOT
-                }
-                1001 = {
-                    add_permanent_claim = ROOT
-                }
-             }
-             else = {
-                 red_river_area = {
-                     add_permanent_claim = ROOT
-                 }
-                 sakakawea_area = {
-                     add_permanent_claim = ROOT
-                 }
-             }
-        }
-        ai_weight = {
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.6
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = NDK
+				}
+				east_river_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				998 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				3142 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				3143 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				1001 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			else = {
+				red_river_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sakakawea_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
 			factor = 500
 		}
-    }
-    dak_successful_conquest = {
-        icon = mission_conquer_5_states
-        required_missions = { dak_unite }
-        position = 2
+	}
+	dak_successful_conquest = {
+		icon = mission_conquer_5_states
+		required_missions = { dak_unite }
+		position = 2
 
-        provinces_to_highlight = {
-            OR = {
-                province_group = dakota_provincegroup
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            dakota_provincegroup = {
-                type = all
-                owned_by = ROOT
-            }
-        }
-        effect = {
-            if = {
-                limit = {
-                    primary_culture = south_dakotan
-                }
-                add_accepted_culture_or_dip_power = { culture = north_dakotan }
-            }
-            if = {
-                limit = {
-                    primary_culture = north_dakotan
-                }
-                add_accepted_culture_or_dip_power = { culture = south_dakotan }
-            }
-            nebraska_area = {
-                add_permanent_claim = ROOT
-                }
-            loess_area = {
-                add_permanent_claim = ROOT
-                }
-            east_montana_area = {
-                add_permanent_claim = ROOT
-            }
-        }
-    }
+		provinces_to_highlight = {
+			OR = {
+				province_group = dakota_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			dakota_provincegroup = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "dak_united_modifier"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					primary_culture = south_dakotan
+				}
+				add_accepted_culture_or_dip_power = { culture = north_dakotan }
+			}
+			if = {
+				limit = {
+					primary_culture = north_dakotan
+				}
+				add_accepted_culture_or_dip_power = { culture = south_dakotan }
+			}
+			nebraska_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loess_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_montana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
 
-    dak_nebraska = {
-        icon = mission_cannons_firing
-        required_missions = { dak_successful_conquest }
-        position = 3
+	dak_nebraska = {
+		icon = mission_cannons_firing
+		required_missions = { dak_successful_conquest }
+		position = 3
  
-        provinces_to_highlight = {
-            OR = {
-                 province_group = nebraska_provincegroup
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            nebraska_provincegroup = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-                }
-        }
-        effect = {
-            kansas_area = {
-                add_permanent_claim = ROOT
-            }
-            west_kansas_area = {
-                add_permanent_claim = ROOT
-            }
-            the_lakes_area = {
-                add_permanent_claim = ROOT
-            }
-            loess_area = {
-                add_permanent_claim = ROOT
-            }
-        }
-    }
+		provinces_to_highlight = {
+			OR = {
+				province_group = nebraska_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			nebraska_provincegroup = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_kansas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			the_lakes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
  
-    dak_kansas = {
-        icon = mission_assemble_an_army
-        required_missions = { dak_nebraska }
-        position = 5
+	dak_kansas = {
+		icon = mission_assemble_an_army
+		required_missions = { dak_nebraska }
+		position = 5
  
-        provinces_to_highlight = {
-            OR = {
-                province_group = kansas_provincegroup
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            kansas_provincegroup = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-        }
-        effect = {
-            add_prestige = 15
-            oklahoma_area = {
-                add_claim = ROOT
-            }
-            ozarks_area = {
-                add_claim = ROOT
-            }
-        }
-    }    
+		provinces_to_highlight = {
+			OR = {
+				province_group = kansas_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			kansas_provincegroup = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			oklahoma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			ozarks_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}    
 }
 
 dak_sdk = {
-    slot = 2
-    generic = no
-    ai = yes
-    potential = {
-        OR = {
-            tag = SDK
-            tag = DAK
-        }
-    }
-    has_country_shield = yes
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SDK
+			tag = DAK
+		}
+	}
+	has_country_shield = yes
 
-    dak_rushmore = {
-        icon = mission_mount_rushmore
-        required_missions = { }
-        position = 1
-        provinces_to_highlight = {
-            province_id = 1001
-        }
-        trigger = {
-            if = {
-                limit = {
-                    has_dlc = Leviathan
-                }
-                1001 = {
-                    has_great_project = {
-						type = rushmore
-						tier = 2
+	dak_rushmore = {
+		icon = mission_mount_rushmore
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			province_id = 1001
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = Leviathan
+				}
+				1001 = {
+					OR = {
+						has_great_project = {
+							type = rushmore
+							tier = 2
+						}
+						has_great_project = {
+							type = rushmore
+							tier = 3
+						}
 					}
-                }
-            }
-            1001 = {
-                development = 12
-                num_of_buildings_in_province = 3
-            }
-        }
-        effect = {
-            1001 = {
-                add_province_modifier = {
-                    name = "dak_rushmore"
-                    duration = 9125
-                }
-            }
-            if = {
-                limit = {
-                    has_dlc = "Dharma"
-                }
-                1001 = {
-                    add_center_of_trade_level = 1
-                }
-            }
-            else = {
-                add_dip_power = 50
-            }
-        }
-    }
+				}
+			}
+			1001 = {
+				development = 12
+				num_of_buildings_in_province = 3
+			}
+		}
+		effect = {
+			1001 = {
+				add_province_modifier = {
+					name = "dak_rushmore"
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				1001 = {
+					center_of_trade = 1
+				}
+			}
+			else = {
+				add_dip_power = 50
+			}
+		}
+	}
 }
 
 dak_more_conquest = {
-    slot = 2
-    generic = no
-    ai = yes
-    potential = {
-        OR = {
-            tag = SDK
-            tag = NDK
-            tag = DAK
-        }
-    }
-    has_country_shield = yes
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SDK
+			tag = NDK
+			tag = DAK
+		}
+	}
+	has_country_shield = yes
 
-    dak_montana = {
-        icon = mission_build_up_to_force_limit
-        position = 3
-        required_missions = { dak_successful_conquest }
+	dak_montana = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { dak_successful_conquest }
 
-        provinces_to_highlight = {
-            OR = {
-                area = east_montana_area 
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            east_montana_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-        }
-        effect = {
-            wyoming_area = {
-                add_claim = ROOT
-            }
-            montana_area = {
-                add_claim = ROOT
-            }
-        }
-    }
-    dak_east = {
-        icon = mission_have_two_subjects
-        required_missions = { dak_nebraska }
-        position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = east_montana_area 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			east_montana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wyoming_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			montana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	dak_east = {
+		icon = mission_have_two_subjects
+		required_missions = { dak_nebraska }
+		position = 4
 
-        provinces_to_highlight = {
-            OR = {
-                area = loess_area
-                area = the_lakes_area
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            loess_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-            the_lakes_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-        }
-        effect = {
-            iowa_area = {
-                add_permanent_claim = ROOT
-            }
-            twin_cities_area = {
-                add_permanent_claim = ROOT
-            }
-        }
-    }
+		provinces_to_highlight = {
+			OR = {
+				area = loess_area
+				area = the_lakes_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			loess_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			the_lakes_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			iowa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
 
-    dak_iowa = {
-        icon = mission_cannons_firing
-        required_missions = { dak_east }
-        position = 5
+	dak_iowa = {
+		icon = mission_cannons_firing
+		required_missions = { dak_east }
+		position = 5
 
-        provinces_to_highlight = {
-            OR = {
-                area = iowa_area
-                area = twin_cities_area
-            }
-            NOT = { country_or_non_sovereign_subject_holds = ROOT }
-        }
-        trigger = {
-            twin_cities_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-            iowa_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-        }
-        effect = {
-            add_country_modifier = {
+		provinces_to_highlight = {
+			OR = {
+				area = iowa_area
+				area = twin_cities_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			twin_cities_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iowa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
 				name = "hegemonic_ambition"
 				duration = 9125 #25 years
 			}
-            add_adm_power = 50
-            add_dip_power = 50
-        }
-    }
+			add_adm_power = 50
+			add_dip_power = 50
+		}
+	}
 }

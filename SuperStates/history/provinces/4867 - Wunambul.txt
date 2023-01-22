@@ -5,7 +5,7 @@ controller = NVA
 add_core = NVA
 # add_permanent_claim = UTA
 culture = nevadan 
-religion = mormon
+religion = s_protestant
 trade_goods = salt
 capital = "Pahrump"
 hre = no
@@ -15,6 +15,10 @@ base_manpower = 2
 is_city = yes #4500
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1518.1.1 = {
+	religion = s_baptist
+}
 
 1555.1.1 = {
 	owner = DES
