@@ -30,6 +30,6 @@ discovered_by = NBR
 	controller = FRA
 	add_core = FRA
 	culture = cosmopolitan_french
-	religion = s_catholic
+	religion = catholic
 } # French colonists
 1816.1.1 = { is_city = yes trade_goods = fish }

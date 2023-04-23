@@ -7,9 +7,8 @@ country_decisions = {
 			NOT = { exists = UTA }
 			NOT = { exists = DES }
 			NOT = { exists = RKY }
-			NOT = { exists = FSA }
-			NOT = { exists = NAU }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			#NOT = { exists = ACA }
 			NOT = { exists = AZL }
 			NOT = { exists = NSP }

@@ -532,65 +532,61 @@ cut_conquests_4 = {
 			OR = {
 				province_id = 2586
 			}
-			NOT = {
-				OR = {
-					is_core = ROOT
-					is_claim = ROOT
-				}
-			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			2586 = {
-				OR = {
-					is_claim = ROOT
-					is_core = ROOT
-				}
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		effect = {
-			2586 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+			if = {
+				limit = {
+					NOT = {
+						exists = WMO
 					}
-					add_permanent_claim = ROOT
+				}
+				country_event = {
+					id = flavorCUT.10
 				}
 			}
-			4935 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+			else = {
+				4935 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			2587 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2587 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			3028 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				3028 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			2588 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2588 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -627,80 +623,238 @@ cut_conquests_4 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "cut_victory_pennamite"
-				duration = 9125
-			}
-			2579 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			tooltip = { #All this is just for looks
+				add_country_modifier = {
+					name = "cut_victory_pennamite"
+					duration = 9125
 				}
-			}
-			2583 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				custom_tooltip = cut_westmoreland_tooltip
+				WMO = {
+					add_country_modifier = {
+						name = "cut_victory_pennamite"
+						duration = 9125
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			2569 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2579 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			2570 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2583 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			3091 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2569 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			2565 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				2570 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
 					}
-					add_permanent_claim = ROOT
 				}
-			}
-			3126 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+				3091 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
 					}
-					add_permanent_claim = ROOT
 				}
+				2565 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
+					}
+				}
+				3126 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
+					}
+				}
+				2592 = {
+					if = {
+						limit = {
+							NOT = { is_core = WMO }
+						}
+						add_core = WMO
+					}
+				}
+				custom_tooltip = cut_westmoreland_tooltip_2
+				custom_tooltip = cut_westmoreland_tooltip_3
 			}
-			2592 = {
+			hidden_effect = { #Heres where the effects actually are
+				add_country_modifier = {
+					name = "cut_victory_pennamite"
+					duration = 9125
+				}
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						overlord_of = WMO
 					}
-					add_permanent_claim = ROOT
+					WMO = {
+						add_country_modifier = {
+							name = "cut_victory_pennamite"
+							duration = 9125
+						}
+					}
+					2579 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					2583 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					2569 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					2570 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					3091 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					2565 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					3126 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+					2592 = {
+						if = {
+							limit = {
+								NOT = { is_core = WMO }
+							}
+							add_core = WMO
+						}
+					}
+				}
+				else = {
+					2579 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					2583 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					2569 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					2570 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					3091 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					2565 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					3126 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+					2592 = {
+						if = {
+							limit = {
+								NOT = { is_core = ROOT }
+								NOT = { is_permanent_claim = ROOT }
+							}
+							add_permanent_claim = ROOT
+						}
+					}
 				}
 			}
 		}
@@ -875,6 +1029,7 @@ cut_flavor = {
 			OR = {
 				trade_goods = cloth
 				trade_goods = wool
+				trade_goods = silk
 			}
 			has_manufactory_trigger = no
 		}
@@ -892,6 +1047,10 @@ cut_flavor = {
 							}
 							AND = {
 								trade_goods = wool
+								has_manufactory_trigger = no
+							}
+							AND = {
+								trade_goods = silk
 								has_manufactory_trigger = no
 							}
 						}

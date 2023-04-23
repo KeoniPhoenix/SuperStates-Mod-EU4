@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { exists = FSA }
 			NOT = { exists = MID }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			#technology_group = north_american
 			OR = {
 				culture_group = midatlantic_group
@@ -18,7 +18,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 30
 				}
 			}
 		}
@@ -27,17 +27,124 @@ country_decisions = {
 				province_id = 2601
 				province_id = 2585
 				province_id = 2616
-				province_id = 2530
-				province_id = 2531
-				province_id = 3025
-				province_id = 2591
-				province_id = 3319
-				province_id = 2590
-				province_id = 2536
-				province_id = 2534
-				province_id = 3138
-				province_id = 3264
-				province_id = 2600
+				AND = {
+					province_id = 2530
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2531
+								owns_core_province = 3025
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2531
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2530
+								owns_core_province = 3025
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 3025
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2531
+								owns_core_province = 2530
+							}
+						}
+					}
+				}
+
+				AND = {
+					province_id = 2591
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 3319
+								owns_core_province = 2590
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 3319
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2591
+								owns_core_province = 2590
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2590
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 3319
+								owns_core_province = 2591
+							}
+						}
+					}
+				}
+
+				AND = {
+					province_id = 2536
+					ROOT = {
+						NOT = {
+							owns_core_province = 2534
+						}
+					}
+				}
+				AND = {
+					province_id = 2534
+					ROOT = {
+						NOT = {
+							owns_core_province = 2536
+						}
+					}
+				}
+
+				AND = {
+					province_id = 3138
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 3264
+								owns_core_province = 2600
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 3264
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 3138
+								owns_core_province = 2600
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2600
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 3264
+								owns_core_province = 3138
+							}
+						}
+					}
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }

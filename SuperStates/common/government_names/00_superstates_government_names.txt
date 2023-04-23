@@ -78,11 +78,14 @@ gov_confederacy_republic = {
 
 	trigger = {
 		has_reform = confederate_republic
-		tag = CSA
+		OR = {
+			tag = CSA
+			tag = ASE
+		}
 	}
 }
 
-gov_confederacy_republic = {
+gov_texan_republic = {
 	rank = {
 		1 = TEX_REPUBLIC
 		2 = TEX_REPUBLIC
@@ -127,8 +130,11 @@ gov_hawaiian_monarchy = {
 	}
 
 	trigger = {
-		government = monarchy
-		tag = HWI
+		has_reform = hawaiian_monarchy_reform
+		OR = {
+			tag = HWI
+			tag = PCF
+		}
 	}
 }
 
@@ -195,6 +201,61 @@ gov_mexican_republic = {
 	}
 }
 #########################################
+
+gov_central_american_governor = {
+	rank = {
+		1 = MEX_TERRITORY
+		2 = MEX_STATE
+		3 = MEX_SOV_STATE
+	}
+
+	ruler_male = {
+		1 = MEX_HEAD_OF_GOVERNMENT
+		2 = MEX_GOBERNADOR
+		3 = MEX_GOBERNADOR_GEN
+	}
+
+	ruler_female = {
+		1 = MEX_HEAD_OF_GOVERNMENT_fem
+		2 = MEX_GOBERNADOR_fem
+		3 = MEX_GOBERNADOR_GEN_fem
+	}
+
+	trigger = {
+		has_reform = central_american_state_reform
+		OR = {
+			culture_group = central_american_group
+			culture = chiapan
+		}
+	}
+}
+
+gov_central_american_republic = {
+	rank = {
+		1 = AMER_FED_REPUBLIC
+		2 = AMER_FED_REPUBLIC
+		3 = AMER_FED_REPUBLIC
+	}
+
+	ruler_male = {
+		1 = AMER_FED_PRESIDENT
+		2 = AMER_FED_PRESIDENT
+		3 = AMER_FED_PRESIDENT
+	}
+
+	ruler_female = {
+		1 = AMER_FED_PRESIDENT_fem
+		2 = AMER_FED_PRESIDENT_fem
+		3 = AMER_FED_PRESIDENT_fem
+	}
+	trigger = {
+		has_reform = central_american_republic_reform
+		OR = {
+			culture_group = central_american_group
+			culture = chiapan
+		}
+	}
+}
 
 ## Canadian Parliamentary Government - Monarchy ##
 gov_pure_westminster_reform = {

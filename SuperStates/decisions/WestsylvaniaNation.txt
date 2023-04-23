@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { exists = WST }
 			NOT = { exists = MID }
 			NOT = { exists = FSA }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			NOT = { exists = APL }
 			#technology_group = north_american

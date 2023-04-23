@@ -51,87 +51,107 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-                    province_id = 2635
-					province_id = 2634
+					OR = {
+						province_id = 2635
+						province_id = 2634
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 1813 } }
 						ROOT = { NOT = { owns_core_province = 1808 } }
 						ROOT = { NOT = { owns_core_province = 1811 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 1813
-					province_id = 1808
-					province_id = 1811
+					OR = {
+						province_id = 1813
+						province_id = 1808
+						province_id = 1811
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2635 } }
 						ROOT = { NOT = { owns_core_province = 2634 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2652
-					province_id = 2657
+					OR = {
+						province_id = 2652
+						province_id = 2657
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2631 } }
 						ROOT = { NOT = { owns_core_province = 2630 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2631
-					province_id = 2630
+					OR = {
+						province_id = 2631
+						province_id = 2630
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2652 } }
 						ROOT = { NOT = { owns_core_province = 2657 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2642
-					province_id = 2643
+					OR = {
+						province_id = 2642
+						province_id = 2643
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2622 } }
 						ROOT = { NOT = { owns_core_province = 2623 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2622
-					province_id = 2623
+					OR = {
+						province_id = 2622
+						province_id = 2623
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2642 } }
 						ROOT = { NOT = { owns_core_province = 2643 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 1807
-					province_id = 1805
+					OR = {
+						province_id = 1807
+						province_id = 1805
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2626 } }
 						ROOT = { NOT = { owns_core_province = 2649 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2626
-					province_id = 2649
+					OR = {
+						province_id = 2626
+						province_id = 2649
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 1807 } }
 						ROOT = { NOT = { owns_core_province = 1805 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2619
-					province_id = 2618
+					OR = {
+						province_id = 2619
+						province_id = 2618
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2621 } }
 						ROOT = { NOT = { owns_core_province = 2620 } }
 					}
-                }
+				}
 				AND = {
-                    province_id = 2621
-					province_id = 2620
+					OR = {
+						province_id = 2621
+						province_id = 2620
+					}
 					AND = {
 						ROOT = { NOT = { owns_core_province = 2619 } }
 						ROOT = { NOT = { owns_core_province = 2618 } }
 					}
-                }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }

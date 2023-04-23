@@ -638,6 +638,9 @@ njy_slot_5 = {
 				location = 2590
 				cost_multiplier = 0.25
 			}
+			country_event = {
+				id = flavorNJY.10
+			}
 		}
 	}
 }

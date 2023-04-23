@@ -137,14 +137,28 @@ texan_slot_1 = {
 				army_size_percentage = 1
 				num_of_generals = 2
 			}
-			2486 = {
-				hidden_trigger = {
-					owned_by = ROOT
+			if = {
+				limit = {
+					ai = yes
 				}
-				fort_level = 3
+				treasury = 200
+			}
+			else = {
+				2486 = {
+					hidden_trigger = {
+						owned_by = ROOT
+					}
+					fort_level = 3
+				}
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_treasury = -150
+			}
 			add_country_modifier = {
 				name = "tex_alamo_modifier"
 				duration = 7300

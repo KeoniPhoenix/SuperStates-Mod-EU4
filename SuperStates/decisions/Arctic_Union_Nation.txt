@@ -19,17 +19,23 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 5
 				}
 			}
 		}
-			provinces_to_highlight = {
+		provinces_to_highlight = {
 			OR = {
 				province_id = 2619
 				province_id = 2621
-				province_id = 2620
 				province_id = 2618
-				province_id = 970
+				AND = {
+					province_id = 2620
+					ROOT = { NOT = { owns_core_province = 970 } }
+				}
+				AND = {
+					province_id = 970
+					ROOT = { NOT = { owns_core_province = 2620 } }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -57,41 +63,41 @@ country_decisions = {
 			change_tag = ACU
 			ACU = {
 				arctic_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ACU
 				}
-				add_permanent_claim = ACU
-			}
-			peace_river_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				peace_river_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ACU
 				}
-				add_permanent_claim = ACU
-			}
-			athabasca_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				athabasca_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ACU
 				}
-				add_permanent_claim = ACU
-			}
-			nord_du_quebec_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				nord_du_quebec_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ACU
 				}
-				add_permanent_claim = ACU
-			}
-			labrador_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				labrador_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ACU
 				}
-				add_permanent_claim = ACU
-			}
 				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
-			}
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
+				}
 			}
 			country_event = { id = ideagroups.1 } #Swap 
 		}

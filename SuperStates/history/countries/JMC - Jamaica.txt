@@ -1,8 +1,7 @@
 government = monarchy
-add_government_reform = constitutional_monarchy
 technology_group = north_american
 primary_culture = jamaican
-religion = s_protestant
+religion = protestant
 capital = 487
 
 1962.4.29 = {

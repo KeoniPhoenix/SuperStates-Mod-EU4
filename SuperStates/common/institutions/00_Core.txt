@@ -64,6 +64,7 @@ feudalism = {
 					culture_group = dravidian
 					culture_group = east_asian
 					culture_group = east_slavic
+					culture_group = slavic
 					culture_group = eastern_aryan
 					culture_group = japanese_g
 					culture_group = korean_g
@@ -104,6 +105,7 @@ feudalism = {
 					technology_group = tribal_american		#Tribes of North America still remaining
 					technology_group = south_american
 					technology_group = sub_saharan
+					technology_group = aboriginal_tech
 				}
 			}
 			AND = {
@@ -346,7 +348,13 @@ renaissance = {
 	can_start = {
 		is_year = 1450
 		is_institution_enabled = feudalism
-		region = italy_region
+		OR = {
+			region = italy_region
+			AND = {
+				is_year = 1470
+				region = new_england_region
+			}
+		}
 		is_state = yes
 		NOT = { province_id = 126 }
 		is_island = no
@@ -530,18 +538,7 @@ renaissance = {
 			scale = yes
 			potential = {
 				continent = north_america
-				NOT = {
-					region = greater_antilles_region
-					region = greenland_region
-					area = east_virgin_islands_area
-					area = anguilla_channel_area
-					area = basseterre_bay_area
-					area = central_leeward_area
-					area = south_leeward_area
-					area = barlovento_area
-					area = south_windward_area
-					area = leeward_antilles_area
-				}
+				is_empty = no
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_superstates_development_10
@@ -555,18 +552,7 @@ renaissance = {
 			scale = yes
 			potential = {
 				continent = north_america
-				NOT = {
-					region = greater_antilles_region
-					region = greenland_region
-					area = east_virgin_islands_area
-					area = anguilla_channel_area
-					area = basseterre_bay_area
-					area = central_leeward_area
-					area = south_leeward_area
-					area = barlovento_area
-					area = south_windward_area
-					area = leeward_antilles_area
-				}
+				is_empty = no
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_superstates_development_20
@@ -580,18 +566,7 @@ renaissance = {
 			scale = yes
 			potential = {
 				continent = north_america
-				NOT = {
-					region = greater_antilles_region
-					region = greenland_region
-					area = east_virgin_islands_area
-					area = anguilla_channel_area
-					area = basseterre_bay_area
-					area = central_leeward_area
-					area = south_leeward_area
-					area = barlovento_area
-					area = south_windward_area
-					area = leeward_antilles_area
-				}
+				is_empty = no
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_superstates_development_5_post_1500

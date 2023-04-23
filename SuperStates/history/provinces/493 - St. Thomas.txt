@@ -16,6 +16,12 @@ discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
+
+1528.1.1 = {
+	religion = catholic
+}
+
 1776.7.4 = { 
 	owner = USA	
 	controller = USA

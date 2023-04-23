@@ -14,12 +14,14 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1632.1.1 = {
 	owner = ENG
 	controller = ENG
 	add_core = ENG
 	is_city = yes
 	trade_goods = sugar
+	religion = protestant
 }
 1707.5.12 = {
 	owner = GBR
@@ -31,8 +33,8 @@ native_hostileness = 3
 	owner = WSI
 	controller = WSI
 	add_core = WSI
-	add_core = STN
-	culture = kittitian
+	add_core = MSR
+	culture = montserratian
 }
 1962.5.31 = {
 	owner = GBR

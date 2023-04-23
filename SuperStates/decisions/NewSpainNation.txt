@@ -34,8 +34,293 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 20
+					num_of_cities = 45
 				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 484
+				province_id = 490
+				province_id = 862
+				province_id = 871
+				province_id = 888
+				province_id = 925
+				province_id = 934
+				province_id = 841
+				province_id = 839
+				province_id = 2640
+				province_id = 2660
+				province_id = 2663
+				AND = {
+					province_id = 835
+					ROOT = {
+						NOT = {
+							owns_or_non_sovereign_subject_of = 835
+						}
+					}
+				}
+				AND = {
+					province_id = 831
+					ROOT = {
+						NOT = {
+							owns_or_non_sovereign_subject_of = 831
+						}
+					}
+				}
+				AND = {
+					province_id = 825
+					ROOT = {
+						NOT = {
+							owns_or_non_sovereign_subject_of = 825
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 936
+						province_id = 944
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2486
+								owns_core_province = 2487
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 937
+								owns_core_province = 957
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2490
+								owns_core_province = 2508
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 2486
+						province_id = 2487
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 936
+								owns_core_province = 944
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 937
+								owns_core_province = 957
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2490
+								owns_core_province = 2508
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 937
+						province_id = 957
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2486
+								owns_core_province = 2487
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 936
+								owns_core_province = 944
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2490
+								owns_core_province = 2508
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 2490
+						province_id = 2508
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 2486
+								owns_core_province = 2487
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 936
+								owns_core_province = 944
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 957
+								owns_core_province = 937
+							}
+						}
+					}
+				}
+
+				AND = {
+					OR = {
+						province_id = 943
+						province_id = 2543
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 492	# San Juan
+								owns_core_province = 2484	# El Paso
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 941	# Sacramento
+								owns_core_province = 2546	# Jacksonville\St. Augstine
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 946	# San Francisco
+								owns_core_province = 2545	# Miami
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 492
+						province_id = 2484
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 943
+								owns_core_province = 2543
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 941	# Sacramento
+								owns_core_province = 2546	# Jacksonville\St. Augstine
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 946	# San Francisco
+								owns_core_province = 2545	# Miami
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 941
+						province_id = 2546
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 492	# San Juan
+								owns_core_province = 2484	# El Paso
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 943
+								owns_core_province = 2543
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 946	# San Francisco
+								owns_core_province = 2545	# Miami
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 946
+						province_id = 2545
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 492	# San Juan
+								owns_core_province = 2484	# El Paso
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 941	# Sacramento
+								owns_core_province = 2546	# Jacksonville\St. Augstine
+							}
+						}
+					}
+					ROOT = {
+						NOT = {
+							AND = {
+								owns_core_province = 943
+								owns_core_province = 2543
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
@@ -43,10 +328,13 @@ country_decisions = {
 			stability = 2
 			is_subject = no
 			is_at_war = no
+			871 = {
+				is_state = yes
+			}
+			owns_core_province = 871	# Mexico City
 			owns_core_province = 484 	# Havana
 			owns_core_province = 490	# Santo Domingo
 			owns_core_province = 862 	# Veracruz
-			owns_core_province = 871	# Mexico City
 			owns_core_province = 888	# Guadalajara
 			owns_core_province = 925	# Juarez
 			owns_core_province = 934	# Tiajuana
@@ -55,9 +343,10 @@ country_decisions = {
 			owns_core_province = 2640	# Tegucialpa
 			owns_core_province = 2660	# Managua
 			owns_core_province = 2663	# San Jose
-			owns_core_province = 835	# Panama
-			owns_core_province = 831	# Caracas
-			owns_core_province = 825	# Bogota
+			#South American cities become a colonial nation, so allowed these provinces to also be an overlord of
+			owns_or_non_sovereign_subject_of = 835 # Panama
+			owns_or_non_sovereign_subject_of = 831 # Caracas 
+			owns_or_non_sovereign_subject_of = 825 # Bogota
 			#Must own at least one of these pairs
 			OR = {
 				AND = {

@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = APL }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			# NOT = { exists = MID }
 			NOT = { has_country_flag = formed_appalachia_flag }
 			OR = {
@@ -28,11 +28,11 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 5
+					num_of_cities = 15
 				}
 			}
 		}
-			provinces_to_highlight = {
+		provinces_to_highlight = {
 			OR = {
 				province_id = 2520	# Knoxville
 				province_id = 2523	# Asheville
@@ -75,27 +75,27 @@ country_decisions = {
 			}
 		}		
 		effect = {
-		change_tag = APL
-		# swap_non_generic_missions = yes #Currently has no missions
+			change_tag = APL
+			# swap_non_generic_missions = yes #Currently has no missions
 			APL = {
 				appalachia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = APL
 				}
-				add_permanent_claim = APL
-			}
-			ohio_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				ohio_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = APL
 				}
-				add_permanent_claim = APL
-			}
 				if = {
 					limit = {
-					NOT = { government_rank = 3 }
-							}
-				set_government_rank = 3
-			}
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
+				}
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

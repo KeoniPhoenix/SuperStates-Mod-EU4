@@ -4,7 +4,7 @@ country_decisions = {
 	great_plains_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = GPL }
 			NOT = { exists = NAM }
 			NOT = { has_country_flag = formed_great_lakes_flag }
@@ -34,9 +34,14 @@ country_decisions = {
 				province_id = 1002
 				province_id = 994
 				province_id = 998
-				province_id = 986
-				province_id = 982
-				region = great_plains_region
+				AND = {
+                    province_id = 986
+                    ROOT = { NOT = { owns_core_province = 982 } }
+                }
+				AND = {
+                    province_id = 982
+                    ROOT = { NOT = { owns_core_province = 986 } }
+                }
 			}
 			OR = {
 				NOT = { owned_by = ROOT }

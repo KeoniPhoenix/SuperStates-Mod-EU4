@@ -350,6 +350,14 @@
  #+20 tax; +3 max promoted cultures; -10% adm tech cost.
  #flavorCUT.2optc:0 "Military academy. May the drums of war play from dawn to dusk."
  #+10% discipline, +1 yearly army tradition, -10% mil tech cost. 
+ flavorCUT.10t:0 "Creation of Westmoreland"
+ flavorCUT.10d:0 "Overlapping claims over land in the Wyoming Valley has sent settlers from both Connecticut and Pennsylvania to stake land in the area. This has expectedly led to conflict with Pennsylvania, who has ordered the expulsion of all Connecticut settlers in the Wyoming Valley. Connecticuter settlers are requesting protection and for the formation of Westmoreland."
+ flavorCUT.10opta:0 "Create Westmoreland."
+ flavorCUT.10optb:0 "No need, we will manage the territory ourselves."
+ flavorCUT.11t:0 "Cheney Brothers Silk"
+ flavorCUT.11d:0 "In the small peaceful town of Manchester, Connecticut, revolutionary advances in the development of silk are being made by the Cheney Brothers Manufacturing Company. At first the company started by cultivating mulberry trees imported from China, but after widespread crop failure, the Cheney Brothers turned to processing silk. New technologies developed for spinning and weaving silk at an industrial rate has made the Cheney Brothers dominate the early silk industry in America.\n\n We are given the unique opportunity to sponsor Cheney Brothers' silk business and grow the silk trade in Connecticut."
+ flavorCUT.11opta:0 "Sponsor the Silk Industry."
+ flavorCUT.11optb:0 "What about that Cheney guy?"
  
  #####Flavor for Delaware
  #flavorDEL.1t:0 "Student funding"
@@ -410,7 +418,7 @@
  #lose 500 ducats, +5 interest per annum. 10 years.
  #flavorHWI.1optb:0 "Invest the money in certain markets which will pay into our private fund."
  #lose 200 ducats, corruption +2. 10 years.
- #flavorHWI.1optc:0 "All governing members get a free vaccation to California. Let the little people do the work."
+ #flavorHWI.1optc:0 "All governing members get a free vacation to California. Let the little people do the work."
  #unrest +5. 10 years.
  #flavorHWI.2t:0 "Pineapple Party!"
  #flavorHWI.2d:0 "This year's harvest in pineapple, and other luxurious tropical fruits has been like no other. We can either benefit from this now, or reap a bigger reward later.
@@ -418,7 +426,38 @@
  #gain 300 gold immediately
  #flavorHWI.2b:0 "Invest in canning"
  #30% increase in trade range
- 
+ polynesian.24.b:0 "Fortunately, we are well prepared."
+ flavorHWI.10t:0 "Restoration of the Hawaiian Monarchy?"
+ flavorHWI.10d:0 "The Kingdom of Hawai'i was formed by Kamehameha in 1795 after he unified the feuding islands into one kingdom. In 1893, the monarchy was overthrown and in 1898, Hawaii was annexed into the United States as a territory.\nAlthough a long time has passed since the monarchy was around, some of our people still hold on to these memories of an independent Hawaii led by a blessed monarch. Should we restore the Hawaiian Monarchy?"
+ flavorHWI.10opta:0 "Restore the monarchy, and decide who will be king."
+ flavorHWI.10optb:0 "We will stay loyal to the republic."
+ flavorHWI.10optc:0 "No need."
+ flavorHWI.11t:0 "The Dynasty of Hawaii"
+ flavorHWI.11d:0 "With the restoration of the monarchy in Hawaii, the question of who should rule still remains unanswered. Supporters from three different dynasties, all of which lay strong claims to the throne of [Root.GetName] have petitioned for the crown. We can choose to support either House Kamehameha, House Kalakaua or House Kawananakoa. Alternatively, [Root.Monarch.GetName] can seize the opportunity and proclaim himself king and forge a new dynasty..."
+ flavorHWI.11opta:0 "Kamehameha, the first dynasty, who unified Hawai'i."
+ flavorHWI.11optb:0 "Kalakaua, the second and last dynasty of Hawai'i."
+ flavorHWI.11optc:0 "Kawananakoa, modern descendants of the throne."
+ flavorHWI.11optd:0 "[Root.Monarch.GetName] shall form a new dynasty!"
+ flavorHWI.12t:0 "The Great Mahele"
+ flavorHWI.12d:0 "Policies proposed by [Root.Monarch.GetName], and with the support of the Ali-i, attempt to radically change land distribution in Hawaii, and are called the Great Mahele - to divide or portion. Although the [Root.Monarch.GetTitle]'s intentions are likely pure, the amendments would massively empower the Ali-i, who would gain a significant amount of land from the commoners and merchant class. Unfortunately, we will have to bide our time until we can undo the land reform."
+ flavorHWI.12opta:0 "The Ali-i grow stronger."
+ flavorHWI.13t:0 "Expedition to America"
+ flavorHWI.13d:0 "Our nation eagerly wishes to reconnect with America, having lost contact with the States long ago. Our navy is prepared to launch and should return within a year or so."
+ flavorHWI.13opta:0 "We await their return."
+ flavorHWI.14t:0 "Expedition Returns"
+ flavorHWI.14d:0 "The expedition we sent out east in search of America has returned with fabulous news! Our explorers have brought back maps detailing western America and have even established diplomatic contacts with states along the Pacific. Our expedition has been an arousing success!"
+ flavorHWI.14opta:0 "Great News."
+ flavorHWI.14optb:0 "Hire that explorer, he deserves it."
+ flavorHWI.15t:0 "Hawaii Requests the Renaissance"
+ flavorHWI.15d:0 "Our good friends from the Hawaiian islands have sent an envoy and a small fortune seeking to purchase the secrets of the Renaissance. We are under no obligation to sell the Renaissance, but it would certainly help fill our coffers..."
+ flavorHWI.15opta:0 "It's a deal!"
+ flavorHWI.15optb:0 "No can do, pal."
+ flavorHWI.16t:0 "[hwi_institution_seller.GetName] Agrees!"
+ flavorHWI.16d:0 "After a long voyage to [hwi_institution_seller.GetName] and back, our envoys are pleased to announce the success of the voyage. We are now in possession of the Renaissance and all the secrets it holds. Truly, we live in enlightened times."
+ flavorHWI.16opta:0 "Excellent."
+ flavorHWI.17t:0 "[hwi_institution_seller.GetName] Declines!"
+ flavorHWI.17d:0 "After a long voyage to [hwi_institution_seller.GetName] and back, our envoys are sad to announce the failure of the voyage. Whether our offer was too small or our diplomats too brash, it is clear [hwi_institution_seller.GetName] won't be helping us."
+ flavorHWI.17opta:0 "Unfortunate."
  
  #####Flavor for Idaho
  flavorIDA.1t:0 "Mining Dispute"
@@ -622,20 +661,25 @@
  flavorNJY.4t:0 "New York Cedes Staten Island"
  flavorNJY.4d:0 "New York has agreed to our proposal, and relinquished control of Staten Island to us."
  flavorNJY.4opta:0 "Excellent."
- flavorNJY.1000t: "A New Capital?"
- flavorNJY.1000d: "We have solidified our position in the area and can choose a new capital from America's greatest cities."
- flavorNJY.1000opta: "Keep our current capital"
- flavorNJY.1000optb: "New York City"
- flavorNJY.1000optc: "Philadelphia"
- flavorNJY.1000optd: "Columbia"
- flavorNJY.1000opte: "Baltimore"
- flavorNJY.1001t: "Captain Billopp's Race Debunked"
- flavorNJY.1001d: "Captain Billopp is said to have famously sailed around Staten Island in an impossible 23 hours, granting it to New York. Recently our historians have debunked this outrageous fairy tale."
- flavorNJY.1001opta: "Our admirals will sail around Staten Island in a mere 22 hours..."
- flavorNJY.1002t: "The Empire City"
- flavorNJY.1002d: "New York, a grand and important city, has fallen into our hands. Its influence over the region is massive and will benefit us greatly."
- flavorNJY.1002opta: "The Empire City prospers."
- flavorNJY.1002optb: "Redirect the wealth to [Root.Capital.GetName]."
+ flavorNJY.1000t:0 "A New Capital?"
+ flavorNJY.1000d:0 "We have solidified our position in the area and can choose a new capital from America's greatest cities."
+ flavorNJY.1000opta:0 "Keep our current capital"
+ flavorNJY.1000optb:0 "New York City"
+ flavorNJY.1000optc:0 "Philadelphia"
+ flavorNJY.1000optd:0 "Columbia"
+ flavorNJY.1000opte:0 "Baltimore"
+ flavorNJY.1001t:0 "Captain Billopp's Race Debunked"
+ flavorNJY.1001d:0 "Captain Billopp is said to have famously sailed around Staten Island in an impossible 23 hours, granting it to New York. Recently our historians have debunked this outrageous fairy tale."
+ flavorNJY.1001opta:0 "Our admirals will sail around Staten Island in a mere 22 hours..."
+ flavorNJY.1002t:0 "The Empire City"
+ flavorNJY.1002d:0 "New York, a grand and important city, has fallen into our hands. Its influence over the region is massive and will benefit us greatly."
+ flavorNJY.1002opta:0 "The Empire City prospers."
+ flavorNJY.1002optb:0 "Redirect the wealth to [Root.Capital.GetName]."
+ flavorNJY.10t:0 "Edison's Inventions"
+ flavorNJY.10d:0 "Thomas Edison, a great inventor has taken residence in Menlo Park, New Jersey, and has already patented hundreds of inventions. We could help fund Edison's projects and spread these inventions across our state. The only question is which inventions to fund? \n\nPerhaps Edison's most famous invention, a highly efficient incandescent light bulb, would surely aid productivity in factories.\n\nThe phonograph, a device capable of recording and playing back audio, would allow [Root.GetName] to share it's greatest works to the world.\n\nThe automatic telegraph, a device allowing faster transmission of messaging via Morse Code, would give us an edge on the battlefield."
+ flavorNJY.10opta:0 "The Lightbulb."
+ flavorNJY.10optb:0 "The Phonograph."
+ flavorNJY.10optc:0 "The Automatic Telegraph."
  
  #####Flavor for New Mexico
  #Lincoln County War

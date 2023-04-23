@@ -17,7 +17,7 @@ discovered_by = north_american
 discovered_by = mesoamerican
 
 1531.1.1 = {
-	religion = s_catholic
+	religion = s_baptist
 }
 
 1675.2.4 = {

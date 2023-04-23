@@ -16,8 +16,8 @@ is_city = yes #4520
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1444.11.1 = {
-	add_core = MSL
+1528.1.1 = {
+	religion = catholic
 }
 
 1555.1.1 = {

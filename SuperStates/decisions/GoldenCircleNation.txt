@@ -8,7 +8,7 @@
 			# NOT = { exists = EUM }
 			# NOT = { exists = MEX }
 			# NOT = { exists = NAM }
-			# NOT = { exists = USA }
+			# NOT = { tag = USA }
 			# NOT = { exists = IUS }
 			# NOT = { exists = NSP }
 			# NOT = { has_country_modifier = the_abolish_slavery_act }

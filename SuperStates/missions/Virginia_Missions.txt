@@ -156,16 +156,24 @@ vir_slot_2 = {
 			monongahela_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_core = ROOT
 			}
-			shenandoah_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			2541 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			3011 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
 			}
 			north_carolina_area = {
 				limit = {
@@ -215,6 +223,13 @@ vir_slot_2 = {
 			}
 		}
 		effect = {
+			shenandoah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			kentucky_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -694,10 +709,12 @@ vir_slot_4 = {
 		required_missions = { vir_shipyards }
 		position = 2
 		trigger = {
-			num_of_heavy_ship = 10
+			treasury = 75
+			num_of_heavy_ship = 3
 			num_of_admirals = 1
 		}
 		effect = {
+			add_treasury = -75
 			create_colony_mission_reward = { #Gives an error but works fine
 				province = 481 #Bermuda
 			}

@@ -4,7 +4,7 @@ country_decisions = {
 	southwest_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			#NOT = { exists = GPL }
 			NOT = { exists = SWW }
 			NOT = { exists = DES }
@@ -17,7 +17,7 @@ country_decisions = {
 				culture_group = southwestern
 				primary_culture = nevadan
 				primary_culture = southern_californian
-				}
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -35,13 +35,21 @@ country_decisions = {
 				province_id = 957
 				province_id = 2484
 				AND = {
-                    province_id = 2486 # San Antonio
-                    ROOT = { NOT = { owns_core_province = 942 } } # San Bernardino
-                }
+					province_id = 2486 # San Antonio
+					ROOT = { NOT = { owns_core_province = 942 } } # San Bernardino
+				}
 				AND = {
-                    province_id = 951 # Reno
-                    ROOT = { NOT = { owns_core_province = 953 } } # Provo
-                }
+					province_id = 942 # San Bernardino
+					ROOT = { NOT = { owns_core_province = 2486 } } # San Antonio
+				}
+				AND = {
+					province_id = 951 # Reno
+					ROOT = { NOT = { owns_core_province = 953 } } # Provo
+				}
+				AND = {
+					province_id = 953 # Provo
+					ROOT = { NOT = { owns_core_province = 951 } } # Reno
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -65,11 +73,11 @@ country_decisions = {
 			OR = {
 				owns_core_province = 2486	# San Antonio
 				owns_core_province = 942	# San Bernardino
-				}
+			}
 			OR = {
 				owns_core_province = 951	# Reno
 				owns_core_province = 953	# Provo
-				}
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -79,53 +87,52 @@ country_decisions = {
 			set_country_flag = formed_southwest_flag
 			add_prestige = 10
 			change_tag = SWW
-			ROOT = {
-			if = {
+			SWW = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
-			}
-			american_southwest_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
 				}
-				add_permanent_claim = ROOT
-			}
-
-			colorado_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				american_southwest_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = SWW
 				}
-				add_permanent_claim = ROOT
-			}
-			western_slope_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				colorado_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = SWW
 				}
-				add_permanent_claim = ROOT
-			}
-			black_rock_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				western_slope_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = SWW
 				}
-				add_permanent_claim = ROOT
-			}
-			salt_lake_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				black_rock_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = SWW
 				}
-				add_permanent_claim = ROOT
-			}
-			942 = {
-				add_permanent_claim = ROOT
-			}
-			3293 = {
-				add_permanent_claim = ROOT
-			}
-			2485 = {
-				add_permanent_claim = ROOT
-			}
+				salt_lake_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = SWW
+				}
+				942 = {
+					add_permanent_claim = SWW
+				}
+				3293 = {
+					add_permanent_claim = SWW
+				}
+				2485 = {
+					add_permanent_claim = SWW
+				}
 			}
 			# swap_non_generic_missions = yes #Currently has no missions
 			#country_event = { id = ideagroups.1 } #Swap 

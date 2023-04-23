@@ -374,7 +374,7 @@ nys_slot_3 = {
 		effect = {
 			add_country_modifier = {
 				name = "nys_yankee_pride_mod"
-				duration = 9125
+				duration = 7300
 			}
 			vermont_area = {
 				limit = {

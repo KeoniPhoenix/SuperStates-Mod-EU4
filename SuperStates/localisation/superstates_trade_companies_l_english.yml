@@ -80,12 +80,15 @@
  trade_company_gulf_mexico:0 "Veracruz Company"
  trade_company_pacific_mexico:0 "Manzanillo Company"
  trade_company_altiplano:0 "Mexican Charter"
+ trade_company_central_america:0 "Central American Charter"
  TRADE_COMPANY_PACIFIC_MEXICO_Root_Culture_GetName:0 "[Root.Culture.GetName] Manzanillo Company"
  TRADE_COMPANY_PACIFIC_MEXICO_Mexico_Trade_Company:0 "Manzanillo Trade Company"
  TRADE_COMPANY_ALTIPLANO_Root_Culture_GetName:0 "[Root.Culture.GetName] Mexican Company"
  TRADE_COMPANY_ALTIPLANO_Mexico_Trade_Company:0 "Mexican Trade Company"
  TRADE_COMPANY_GULF_MEXICO_Root_Culture_GetName:0 "[Root.Culture.GetName] Veracruz Company"
  TRADE_COMPANY_GULF_MEXICO_Mexico_Trade_Company:0 "Veracruz Trade Company"
+ TRADE_COMPANY_CENTRAL_AMERICA_Root_Culture_GetName:0 "[Root.Culture.GetName] Central American Company"
+ TRADE_COMPANY_CENTRAL_AMERICA_Mexico_Trade_Company:0 "Central American Trade Company"
 
  # Australia
  trade_company_western_australia:0 "Perth Company"

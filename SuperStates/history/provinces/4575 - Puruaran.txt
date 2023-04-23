@@ -14,6 +14,7 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1719.1.1 = {
 	add_core = FRA
 	owner = FRA
@@ -40,7 +41,7 @@ native_hostileness = 3
 	controller = GBR
 	add_core = GBR
 	culture = english
-	religion = anglican
+	religion = protestant
 	remove_core = FRA
 } # Treaty of Versailles seals the deal
 1958.1.3 = {

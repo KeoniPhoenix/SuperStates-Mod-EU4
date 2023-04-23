@@ -6,8 +6,8 @@ country_decisions = {
 		potential = { 
 			NOT = { exists = AZL }
 			NOT = { exists = CSA }
-			NOT = { exists = USA }
-			NOT = { exists = ASE }
+			NOT = { tag = USA }
+			NOT = { tag = ASE }
 			NOT = { exists = NAM }
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
@@ -41,7 +41,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 25
+					num_of_cities = 30
 				}
 			}
 		}
@@ -53,13 +53,32 @@ country_decisions = {
 				province_id = 2527
 				province_id = 2522
 				province_id = 2533
-				province_id = 2520
-				province_id = 2478
-				province_id = 2493
-				province_id = 2518
-				province_id = 2490
-				province_id = 2542
-				region = deep_south_region
+				AND = {
+					province_id = 2520
+					ROOT = { NOT = { owns_core_province = 2478 } }
+				}
+				AND = {
+					province_id = 2478
+					ROOT = { NOT = { owns_core_province = 2520 } }
+				}
+
+				AND = {
+					province_id = 2493
+					ROOT = { NOT = { owns_core_province = 2518 } }
+				}
+				AND = {
+					province_id = 2518
+					ROOT = { NOT = { owns_core_province = 2493 } }
+				}
+
+				AND = {
+					province_id = 2490
+					ROOT = { NOT = { owns_core_province = 2542 } }
+				}
+				AND = {
+					province_id = 2542
+					ROOT = { NOT = { owns_core_province = 2490 } }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -107,81 +126,86 @@ country_decisions = {
 			hidden_effect = {
 				restore_country_name = yes
 			}
-		change_tag = CSA
-		CSA = {
-			if = {
+			change_tag = CSA
+			CSA = {
+				if = {
 					limit = {
-					NOT = { government_rank = 3 }
-							}
-				set_government_rank = 3
-			}
-			deep_south_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
 				}
-				add_permanent_claim = CSA
-			}
-			old_southwest_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				deep_south_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			tennessee_area = {
-			limit = {
-					NOT = { owned_by = ROOT }
+				old_southwest_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			blue_ridge_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				tennessee_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			nickajack_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				blue_ridge_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			high_plains_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				nickajack_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			trans_pecos_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				high_plains_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			rio_grande_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				trans_pecos_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			chesapeake_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				rio_grande_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
-			virginia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				chesapeake_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
-				add_permanent_claim = CSA
-			}
+				virginia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CSA
 				}
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 5475
 			}
 			add_prestige = 30
-			add_government_reform = confederate_republic
+			if = {
+				limit = {
+					government = republic
+				}
+				add_government_reform = confederate_republic
+			}
 			# swap_non_generic_missions = yes #Currently has no missions
 			country_event = { id = ideagroups.1 } #Swap 
 		}

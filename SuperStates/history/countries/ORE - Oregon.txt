@@ -15,5 +15,5 @@ capital = 960 # Salem
 }
 
 1528.1.1 = {
-	religion = protestant
+	religion = s_methodist
 }

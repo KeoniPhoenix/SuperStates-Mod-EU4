@@ -1,14 +1,13 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new dieties, make sure they are uniquely named.
 
-doctrine_the_ban =
-{
+doctrine_the_ban = {
 	# (Diplomatic - Stability)
 	global_unrest = -2
 	tolerance_heretic = 2
 	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -16,16 +15,16 @@ doctrine_the_ban =
 		modifier = {
 			factor = 0
 			OR = {
-			personality = ai_militarist
-			ruler_has_personality = conqueror_personality
+				personality = ai_militarist
+				ruler_has_personality = conqueror_personality
 			}
 		}
 		modifier = {
 		factor = 2
 			OR = {
-			ruler_has_personality = lawgiver_personality
-			ruler_has_personality = benevolent_personality
-			ruler_has_personality = righteous_personality
+				ruler_has_personality = lawgiver_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = righteous_personality
 			}
 		}
 		modifier = {
@@ -35,21 +34,20 @@ doctrine_the_ban =
 		modifier = {
 			factor = 0.25
 			OR = {
-			ruler_has_personality = cruel_personality
-			ruler_has_personality = malevolent_personality
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = malevolent_personality
 			}
 		}	
 	}
 }
 
-doctrine_the_sword = 
-{
+doctrine_the_sword = {
 	#(Diplomatic)
 	diplomatic_reputation = 2
 	improve_relation_modifier = 0.30
 	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -57,34 +55,33 @@ doctrine_the_sword =
 		modifier = {
 			factor = 3
 			OR = {
-			ruler_has_personality = silver_tongue_personality
-			ruler_has_personality = charismatic_negotiator_personality
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = charismatic_negotiator_personality
 			}
 		}
 		modifier = {
 			factor = 0
 			OR = {
-			personality = ai_militarist
-			ruler_has_personality = conqueror_personality
+				personality = ai_militarist
+				ruler_has_personality = conqueror_personality
 			}
 		}	
 		modifier = {
 			factor = 0.25
 			OR = {
-			ruler_has_personality = babbling_buffoon_personality
-			ruler_has_personality = naive_personality
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = naive_personality
 			}
 		}
 	}	
 }
 
-doctrine_breaking_of_bread =
-{
+doctrine_breaking_of_bread = {
 	#(Economic - Growth)
 	development_cost = -0.10
 	build_cost = -0.15
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -92,20 +89,19 @@ doctrine_breaking_of_bread =
 		modifier = {
 			factor = 3
 			OR = {
-			ruler_has_personality = industrious_personality
-			ruler_has_personality = architectural_visionary_personality
+				ruler_has_personality = industrious_personality
+				ruler_has_personality = architectural_visionary_personality
 			}
 		}				
 	}	
 }
 
-doctrine_separation_from_evil = 
-{
+doctrine_separation_from_evil = {
 	#(Economic - Savings)
 	yearly_corruption = -0.10
 	stability_cost_modifier = -0.10
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -122,13 +118,12 @@ doctrine_separation_from_evil =
 	}	
 }
 
-doctrine_pastors_in_the_church = 
-{ 
+doctrine_pastors_in_the_church = { 
 	#(Religious - Conversion) 
 	missionaries = 1
 	global_missionary_strength = 0.02
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -136,8 +131,8 @@ doctrine_pastors_in_the_church =
 		modifier = {
 			factor = 2
 			OR = {
-			ruler_has_personality = zealot_personality
-			ruler_has_personality = pious_personality
+				ruler_has_personality = zealot_personality
+				ruler_has_personality = pious_personality
 			}
 		}	
 		modifier = {
@@ -148,13 +143,12 @@ doctrine_pastors_in_the_church =
 	}	
 }
 
-doctrine_baptism =
-{
+doctrine_baptism = {
 	# (Military - Defensive)
 	defensiveness = 0.20
 	global_manpower_modifier = 0.20
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {
@@ -170,15 +164,14 @@ doctrine_baptism =
 	}	
 }
 
-doctrine_the_oath =
-{
+doctrine_the_oath = {
 	# Administrative
 	idea_cost = -0.05
 	legitimacy = 1
 	republican_tradition = 0.33
 	devotion = 1
 	
-	allow = { religion = anabaptist }
+	potential = { religion = anabaptist }
 	sprite = 15
 	
 	ai_will_do = {

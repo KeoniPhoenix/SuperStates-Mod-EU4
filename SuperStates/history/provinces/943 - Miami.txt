@@ -21,6 +21,10 @@ center_of_trade = 1
 	fort_15th = yes
 }
 
+1528.1.1 = {
+	religion = catholic
+}
+
 1555.1.1 = {
 	owner = PCF
 	controller = PCF

@@ -16,13 +16,14 @@ native_hostileness = 3
 
 center_of_trade = 1
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1661.1.1 = {
 	owner = ENG
 	controller = ENG
 	add_core = ENG
 	is_city = yes
 	culture = english
-	religion = s_protestant
+	religion = protestant
 	trade_goods = sugar
 	#capital = "George Town" 
 }
@@ -45,6 +46,7 @@ center_of_trade = 1
 	add_core = WSI
 }
 1959.11.6 = {
+	remove_core = JMC
 	add_core = CYM
 	culture = caymanian
 }

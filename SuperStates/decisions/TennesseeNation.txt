@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = TNN }
 			NOT = { tag = CSA }
-			NOT = { exists = NAU }
+			NOT = { exists = NAM }
 			NOT = { tag = USA }
 			NOT = { tag = APL }
 			OR = {

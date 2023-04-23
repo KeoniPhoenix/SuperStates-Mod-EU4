@@ -16,6 +16,10 @@ is_city = yes #15310
 discovered_by = north_american
 discovered_by = mesoamerican
 
+1528.1.1 = {
+	religion = catholic
+}
+
 1555.1.1 = {
 	owner = NEW
 	controller = NEW

@@ -21,6 +21,10 @@ discovered_by = mesoamerican
 	add_core = GLK
 }
 
+1528.1.1 = {
+	religion = catholic
+}
+
 1675.2.4 = {
 	owner = FSA
 	controller = FSA

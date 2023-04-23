@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = DES }
 			#NOT = { exists = AZL }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			NOT = { has_country_flag = formed_deseret_flag }
 			NOT = { has_country_flag = formed_southwest_flag }

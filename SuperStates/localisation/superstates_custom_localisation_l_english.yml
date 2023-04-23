@@ -25,10 +25,13 @@
  vrm_defeat_new_york_tooltip:0 "§YNew York§! will lose all §YCores§! and §YClaims§! in the Vermont area."
  vrm_defeat_new_hampshire_tooltip:0 "§YNew Hampshire§! will lose all §YCores§! and §YClaims§! in the Vermont area."
  vrm_green_boys_tooltip:0 "§Y[Root.GetName]§! has won a war while hiring the §YGreen Mountain Boys§!"
- cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! Area that produce §YCloth§! or §YWool§! have a §YManufactory§!."
+ cut_manufactory_tooltip:0 "All owned provinces in the §YConnecticut§! Area that produce §YCloth§!, §YSilk§! or §YWool§! have a §YManufactory§!."
  mss_subject_tooltip:0 "If we complete this mission by making §MMaine§! our subject:"
  new_developed_new_england_tooltip:0 "Every owned province in the §YNew England§! region:\n   Gain §Y1§! development."
  vrm_green_boys_ap_tooltip:0 "§JThe mercenary company§! §YGreen Mountain Boys§! §Jno longer reduces§! §YArmy Professionalism§! §Jwhen recruited.§!"
+ cut_westmoreland_tooltip:0 "If we complete this mission while §MWestmoreland§! is our subject:"
+ cut_westmoreland_tooltip_2:0 "\nOtherwise:"
+ cut_westmoreland_tooltip_3:0 "§Y[Root.GetName]§! will get permanent claims on these provinces."
 
  ## Mid Atlantic
  mid_atlantic_banking_tooltip:0 "Have §Yless inflation than any neighbor§! or have §Y0§! inflation"
@@ -86,6 +89,16 @@
  ont_have_good_tolerance_heathen_tt:0 "Have at least §G+2.00§! Tolerance of Heathens"
  ont_family_compact_tt:0 "Completing this mission early prevents the event §YRise of the Family Compact§! from firing."
 
+ #Hawaii
+ hwi_discover_japan_tt:0 "§Y[Root.GetName]§! will discover all coastal provinces in the §YJapan§! region."
+ hwi_upgrade_pearl_harbor_tt:0 "This modifier will replace the existing §YPearl Harbor§! modifier in §YHonolulu§!."
+ hwi_philippines_tt:0 "§Y[Root.GetName]§! gains a permanent claim on the §YPhilippines§!."
+ hwi_volcano_preparations_tt:0 "§Y[Root.GetName]§! will be prepared against future volcanic eruptions."
+ hwi_can_change_techgroups_tt:0 "Unlocks a decision to change to the §YNorth American§! technology group."
+ hwi_can_buy_institutions_tt:0 "If §Y[Root.GetName]§! hasn't embraced the §YRenaissance§!, we will attempt to purchase the institution for §R-75.00§! Ducats."
+ hwi_have_good_ruler:0 "[Root.Monarch.GetName]'s £adm£ £dip£ & £mil£ add up to at least §Y14§!"
+ hwi_expedition_tt:0 "An expedition will be sent out to discover America..."
+
  #Mormon
  EST_952_HOLY_SITE:0 "From the §YSalt Lake§! Holy Site: "
  EST_2579_HOLY_SITE:0 "From the §YCuyahoga§! Holy Site: "
@@ -141,9 +154,10 @@
  flavorTEX.1003c.tt:0 "All owned provinces of §YTexan§! and §YHigh Plainer§! culture will adopt §YGreat Plainer Texan.§!"
 
 # Form America
- westernUSACheck:0 "Capital is in the §YWestern America§! region"
- centralUSACheck:0 "Capital is in the §YMiddle America§! region"
- easternUSACheck:0 "Capital is in the §YEastern America§! region"
+ CapitalUSACheck:0 "Our capital needs to be in §YNorth America§! or a historical U.S. region to see the requirements to form the §YUnited States§!"
+ westernUSACheck:0 "Because our capital is in the §YWestern America§! region, the following regions are required:"
+ centralUSACheck:0 "Because our capital is in the §YMiddle America§! region, the following regions are required:"
+ easternUSACheck:0 "Because our capital is in the §YEastern America§! region, the following regions are required:"
  westernUSAChoices:0 "§Y[Root.GetName]§! owns §R15§! provinces in the §YGreat Plains§! §ROR§! §YOld Southwest§! regions"
  westernUSARequirements:0 "§Y[Root.GetName]§! owns §R20§! provinces in the §YIntermountain West§! §RAND§! §YAmerican Southwest§! regions"
  westernUSAPacificCoast:0 "§Y[Root.GetName]§! owns §R25§! provinces in the §YPacific Coast§! region"
@@ -159,3 +173,16 @@
  SFDetroitDenver:0 "§Y[Root.GetName]§! owns §YSan Francisco§!, §YDetroit§!, §ROR§! §YDenver§!"
  AtlantaPhoenixMinneapolis:0 "§Y[Root.GetName]§! owns §YAtlanta§!, §YPhoenix§!, §ROR§! §YMinneapolis§!"
  SeattleHoustonBoston:0 "§Y[Root.GetName]§! owns §YSeattle§!, §YHouston§!, §ROR§! §YBoston§!"
+
+ #Great Lakes
+ gen_borders_superior_tt:0 "Owns a province bordering §YLake Superior.§!"
+ gen_borders_huron_tt:0 "Owns a province bordering §YLake Huron.§!"
+ gen_borders_michigan_tt:0 "Owns a province bordering §YLake Michigan.§!"
+ gen_borders_erie_tt:0 "Owns a province bordering §YLake Erie.§!"
+ gen_borders_ontario_tt:0 "Owns a province bordering §YLake Ontario.§!"
+ 
+ mic_defeated_wisconsin_tooltip:0 "§YWisconsin§! will lose all §YCores§! and §YClaims§! in the Upper Peninsula area."
+
+ ##DLC TOOLTIPS
+ # dlc005_reason_superstates:0 "We're recommending you this content pack as you selected §YHawaii§!, §YAlaska§!, or a country in the §YAmerica§! Subcontinent."
+ dlcsuperstates_reason:0 "We're recommending you this expansion pack as you selected a §YSuperStates§! nation that uses assets of this DLC that are required to gain access to all of missions in this country."

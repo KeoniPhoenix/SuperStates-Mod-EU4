@@ -14,6 +14,7 @@ native_hostileness = 4
 #discovered_by = north_american
 #discovered_by = mesoamerican
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1631.1.1 = {
 	owner = NED
 	controller = NED
@@ -29,7 +30,7 @@ native_hostileness = 4
 	add_core = SPA
 	remove_core = NED
 	culture = castillian
-	religion = s_catholic
+	religion = catholic
 } # Recaptured by Spain, expelled all Dutch
 1648.3.23 = {
 	owner = FRA
@@ -38,7 +39,7 @@ native_hostileness = 4
 	remove_core = SPA
 	remove_core = NED
 	culture = cosmopolitan_french 
-	religion = s_catholic
+	religion = catholic
 } # Several attempts were made by the Dutch to reclaim the city, finally Spain gave up 
 #1810.7.10 = {
 #	owner = GBR

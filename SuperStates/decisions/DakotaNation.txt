@@ -9,7 +9,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_dakota_flag }
 			NOT = { exists = DAK }
 			NOT = { exists = GPL }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			#NOT = { exists = LAK }
 			#technology_group = north_american

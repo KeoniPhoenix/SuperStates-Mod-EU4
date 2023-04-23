@@ -14,12 +14,14 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1648.11.8 = {
 	owner = FRA
 	controller = FRA
 	add_core = FRA
 	is_city = yes
 	trade_goods = sugar
+	religion = catholic
 }
 1946.10.14 = {
 	culture = guadeloupean

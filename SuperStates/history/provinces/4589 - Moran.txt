@@ -2,7 +2,7 @@
 
 culture = mayan
 religion = mesoamerican_religion
-capital = "Moran"
+capital = "Belmopan"
 trade_goods = unknown
 hre = no
 base_tax = 2 

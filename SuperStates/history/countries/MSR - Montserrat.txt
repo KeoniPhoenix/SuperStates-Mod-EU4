@@ -1,6 +1,9 @@
 government = monarchy
-add_government_reform = constitutional_monarchy
 technology_group = north_american
 primary_culture = montserratian
 religion = s_protestant
 capital = 4636
+
+1528.1.1 = {
+    religion = protestant
+}

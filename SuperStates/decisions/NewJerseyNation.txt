@@ -7,8 +7,8 @@ country_decisions = {
 			NOT = { exists = NJY }
 			NOT = { exists = MID }
 			NOT = { exists = FSA }
-			NOT = { exists = NAU }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			OR = {
 				tag = SNJ
 				primary_culture = new_jerseyan

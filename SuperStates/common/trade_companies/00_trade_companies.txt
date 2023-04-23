@@ -2067,3 +2067,22 @@ trade_company_melanesia = {
 		name = "TRADE_COMPANY_MELANESIA_AUSTRALIA_Trade_Company"
 	}
 }
+
+trade_company_central_america = {
+	color = { 137 197 227 } #Central American Blue
+
+	provinces = {
+		843 4589 #Belize
+		842 4594 2636 4587 841 2653 #Guatemala
+		839 #El Salvador
+		2637 4593 840 2662 2640 #Honduras
+		837 2661 838 4592 2660 #Nicaragua
+		2663 4597 836 #Costa Rica
+	}
+	names = {
+		name = "TRADE_COMPANY_CENTRAL_AMERICA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CENTRAL_AMERICA_Mexico_Trade_Company"
+	}
+}

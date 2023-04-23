@@ -292,6 +292,50 @@ country_event = { #Empire City
 	}
 }
 
+country_event = {
+	id = flavorNJY.10 #Edison's Inventions
+	title = "flavorNJY.10t"
+	desc = "flavorNJY.10d"
+	picture = INVENTION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Lightbulb
+		name = "flavorNJY.10opta"
+		add_adm_power = 50
+		add_country_modifier = {
+			name = "njy_lightbulb_modifier"
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+	option = { #Phonograph
+		name = "flavorNJY.10optb"
+		add_dip_power = 50
+		add_country_modifier = {
+			name = "njy_phonograph_modifier"
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+	option = { # Automatic Telegraph
+		name = "flavorNJY.10optc"
+		add_mil_power = 50
+		add_country_modifier = {
+			name = "njy_auto_telegraph_modifier"
+			duration = 7300
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+}
+
 
 #country_event = { #Princeton Symposium
 #	id = flavorNJY.1003

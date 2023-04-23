@@ -16,6 +16,10 @@ trade_goods = fish
 discovered_by = north_american
 discovered_by = mesoamerican
 
+1531.1.1 = {
+	religion = s_lutheran
+}
+
 1810.9.16 = {
 	add_core = CAM
 }

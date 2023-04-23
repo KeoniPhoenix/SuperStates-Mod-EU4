@@ -12,6 +12,7 @@ native_size = 25
 native_ferocity = 2
 native_hostileness = 9
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1654.1.1 = {
 	owner = NED
 	controller = NED
@@ -39,7 +40,7 @@ native_hostileness = 9
 	add_core = GBR
 	remove_core = NED
 	culture = english
-	religion = anglican
+	religion = protestant
 }
 1958.1.3 = {
 	owner = WSI

@@ -1,13 +1,8 @@
 government = monarchy
-add_government_reform = constitutional_monarchy
 technology_group = north_american
 primary_culture = st_lucian
-religion = s_protestant
+religion = catholic
 capital = 499
-
-1528.1.1 = {
-    religion = protestant
-}
 
 1979.2.22 = {
 	monarch = {

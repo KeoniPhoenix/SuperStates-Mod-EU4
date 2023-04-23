@@ -110,6 +110,7 @@ country_event = { #The Disappeared Fly Whisk
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 	}
 	
@@ -154,6 +155,7 @@ country_event = { #Kava Culture
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 		NOT = { has_country_modifier = good_kava_mod }
 	}
@@ -182,6 +184,7 @@ country_event = { #High Quality Tapa Cloth
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 		NOT = { has_country_modifier = quality_tapa_mod }
 	}
@@ -371,6 +374,7 @@ country_event = { #Memories of Hawaiki
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 	}
 	
@@ -395,6 +399,7 @@ country_event = { #A Sweet Menace
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 		NOT = { has_country_modifier = sugarcane_lost_mod }
 	}
@@ -523,6 +528,7 @@ country_event = { #No Husked Candlenut to Be Found
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 		NOT = { has_country_modifier = no_tattoo_mod }
 	}
@@ -571,6 +577,7 @@ country_event = { #A Floating Gift
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 	}
 	
@@ -614,6 +621,7 @@ country_event = { #The Young Army
 			primary_culture = maori
 			primary_culture = melanesian
 			primary_culture = polynesian
+			primary_culture = hawaiian
 		}
 	}
 	
@@ -856,47 +864,47 @@ country_event = { #Living Target
 
 # Hawaiian Events 21-25
 
-# country_event = { #Menehune People
-# 	id = polynesian.21
-# 	title = "polynesian.21.t"
-# 	desc = "polynesian.21.d"
-# 	picture = EP_ISLAND_eventPicture
+country_event = { #Menehune People
+	id = polynesian.21
+	title = "polynesian.21.t"
+	desc = "polynesian.21.d"
+	picture = EP_ISLAND_eventPicture
 	
-# 	trigger = {
-# 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
-# 		NOT = { has_country_modifier = menehune_blessing_mod }
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+		NOT = { has_country_modifier = menehune_blessing_mod }
+	}
 	
-# 	mean_time_to_happen = {
-# 		months = 600
-# 	}
+	mean_time_to_happen = {
+		months = 600
+	}
 	
-# 	option = {
-# 		name = "polynesian.21.a"
-# 		ai_chance = { factor = 50 }
-# 		random_list = {
-# 			5 = {
-# 				country_event = {
-# 					id = polynesian.42
-# 				}
-# 			}
-# 			95 = {
-# 			}
-# 		}
-# 	}
+	option = {
+		name = "polynesian.21.a"
+		ai_chance = { factor = 50 }
+		random_list = {
+			5 = {
+				country_event = {
+					id = polynesian.42
+				}
+			}
+			95 = {
+			}
+		}
+	}
 	
-# 	option = {
-# 		name = "polynesian.21.b"
-# 		ai_chance = { factor = 50 }
-# 		add_adm_power = 5
-# 	}
-# }
+	option = {
+		name = "polynesian.21.b"
+		ai_chance = { factor = 50 }
+		add_adm_power = 5
+	}
+}
 
 # country_event = { #Ku Demands a Sacrifice
 # 	id = polynesian.22
@@ -906,12 +914,12 @@ country_event = { #Living Target
 	
 # 	trigger = {
 # 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
+#			tag = HWI
+#			AND = {
+#				tag = PCO
+#				was_tag = HWI
+#			}
+#		}
 # 		religion = animism
 # 		OR = {
 # 			NOT = { 
@@ -965,12 +973,12 @@ country_event = { #Living Target
 	
 # 	trigger = {
 # 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
+#			tag = HWI
+#			AND = {
+#				tag = PCO
+#				was_tag = HWI
+#			}
+#		}
 # 		religion = animism
 # 		stability = 2
 # 		has_country_modifier = makahiki_mod 
@@ -1013,36 +1021,48 @@ country_event = { #Living Target
 # 	}
 # }
 
-# country_event = { #Volcano Erupting
-# 	id = polynesian.24
-# 	title = "polynesian.24.t"
-# 	desc = "polynesian.24.d"
-# 	picture = EP_ISLAND_eventPicture
+country_event = { #Volcano Erupting
+	id = polynesian.24
+	title = "polynesian.24.t"
+	desc = "polynesian.24.d"
+	picture = EP_ISLAND_eventPicture
 	
-# 	trigger = {
-# 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+	}
 	
-# 	mean_time_to_happen = {
-# 		months = 600
-# 	}
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = "polynesian.24.b"
+		highlight = yes
+		trigger = {
+			mission_completed = hwi_develop_2
+		}
+		add_prestige = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
 	
-# 	option = {
-# 		name = "polynesian.24.a"
-# 		random_owned_province = {
-# 			limit = {
-# 				area = northern_polynesia_area
-# 			}
-# 			add_devastation = 5
-# 		}
-# 	}
-# }
+	option = {
+		name = "polynesian.24.a"
+		random_owned_province = {
+			limit = {
+				area = hawaii_area
+			}
+			add_devastation = 5
+		}
+	}
+}
 
 # country_event = { #Makahiki is Here
 # 	id = polynesian.25
@@ -1052,12 +1072,12 @@ country_event = { #Living Target
 	
 # 	trigger = {
 # 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
+#			tag = HWI
+#			AND = {
+#				tag = PCO
+#				was_tag = HWI
+#			}
+#		}
 # 		NOT = { has_country_modifier = makahiki_mod } 
 # 		is_month = 10
 # 		religion = animism
@@ -1108,49 +1128,50 @@ country_event = { #Royal Tangihanga
 	}
 }
 
-# country_event = { #Kaitiakitanga
-# 	id = polynesian.27
-# 	title = "polynesian.27.t"
-# 	desc = "polynesian.27.d"
-# 	picture = EP_POLYNESIAN_MARAE_eventPicture
+country_event = { #Kaitiakitanga
+	id = polynesian.27
+	title = "polynesian.27.t"
+	desc = "polynesian.27.d"
+	picture = EP_POLYNESIAN_MARAE_eventPicture
 	
-# 	trigger = {
-# 		primary_culture = maori
-# 		religion = animism
-# 		NOT = { has_country_modifier = kaitiakitanga_mod }
-# 	}
+	trigger = {
+		primary_culture = maori
+		religion = animism
+		NOT = { has_country_modifier = kaitiakitanga_mod }
+	}
 	
-# 	mean_time_to_happen = {
-# 		months = 600
-# 	}
+	mean_time_to_happen = {
+		months = 600
+	}
 	
-# 	option = {
-# 		name = "polynesian.27.a"
-# 		ai_chance = { 
-# 			factor = 50 
-# 		}
-# 		random_owned_province = {
-# 			limit = {
-# 				OR = {
-# 					area = te_ika_a_maui_hauauru_area
-# 					area = te_ika_a_maui_waho_area
-# 					area = te_waipounamu_area
-# 				}
-# 			}
-# 			add_devastation = 5
-# 		}
-# 	}
-# 	option = {
-# 		name = "polynesian.27.b"
-# 		ai_chance = { 
-# 			factor = 50 
-# 		}
-# 		add_country_modifier = {
-# 			name = "kaitiakitanga_mod"
-# 			duration = 3650
-# 		}
-# 	}
-# }
+	option = {
+		name = "polynesian.27.a"
+		ai_chance = { 
+			factor = 50 
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = auckland_area
+					area = new_ulster_area
+					area = nelson_area
+					area = south_island_area
+				}
+			}
+			add_devastation = 5
+		}
+	}
+	option = {
+		name = "polynesian.27.b"
+		ai_chance = { 
+			factor = 50 
+		}
+		add_country_modifier = {
+			name = "kaitiakitanga_mod"
+			duration = 3650
+		}
+	}
+}
 
 country_event = { #Whakapapa
 	id = polynesian.28
@@ -1780,34 +1801,33 @@ country_event = { #Fijian War Canoes
 
 # Easter Eggs Events 41-43
 
-# country_event = { #A Strange Creature
-# 	id = polynesian.41
-# 	title = "polynesian.41.t"
-# 	desc = "polynesian.41.d"
-# 	picture = EP_MOAIS_eventPicture
+country_event = { #A Strange Creature
+	id = polynesian.41
+	title = "polynesian.41.t"
+	desc = "polynesian.41.d"
+	picture = EP_MOAIS_eventPicture
 	
-# 	is_triggered_only = yes
-# 	fire_only_once = yes
+	fire_only_once = yes
 	
-# 	trigger = {
-# 		OR = {
-# 			tag = HAW
-# 			tag = KAA
-# 			tag = MAU
-# 			tag = OAH
-# 			tag = UHW
-# 		}
-# 		has_ruler = "Lilo"
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+		has_ruler = "Lilo"
+	}
 	
-# 	mean_time_to_happen = {
-# 		days = 1
-# 	}
+	mean_time_to_happen = {
+		days = 1
+	}
 	
-# 	option = {
-# 		name = "polynesian.41.a"
-# 	}
-# }
+	option = {
+		name = "polynesian.41.a"
+	}
+}
 
 country_event = { #Menehune Blessing
 	id = polynesian.42

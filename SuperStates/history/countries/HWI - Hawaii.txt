@@ -15,5 +15,5 @@ capital = 968  # Honolulu
 }
 
 1528.1.1 = {
-    religion = protestant
+    religion = s_methodist
 }

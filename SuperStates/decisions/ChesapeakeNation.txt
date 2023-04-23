@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			#NOT = { exists = CHS }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = CSA }
 			NOT = { exists = ASE }
 			NOT = { exists = FSA }

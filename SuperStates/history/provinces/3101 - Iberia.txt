@@ -16,16 +16,8 @@ base_manpower = 1
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1444.11.11 = {
-	owner = LOU
-	controller = LOU
-	add_core = LOU
-}
-
-1444.11.12 = {
-	owner = LOU
-	controller = LOU
-	add_core = LOU
+1528.1.1 = {
+	religion = catholic
 }
 
 1675.2.4 = {

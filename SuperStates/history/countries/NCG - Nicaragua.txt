@@ -1,9 +1,18 @@
 government = republic
-#add_government_reform = revolutionary_republic
+add_government_reform = central_american_state_reform
 technology_group = mesoamerican
 religion = s_catholic
 primary_culture = nicaraguan
 capital = 2660	# Managua
+
+1444.1.3 = {
+	monarch = {
+		name = "Manuel Antonio de la Cerda"
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
 
 1528.1.1 = {
     religion = catholic

@@ -37,20 +37,13 @@ country_decisions = {
 			}
 			num_of_owned_provinces_with = {
 				value = 3
-				area = micronesia_area
+				area = west_micronesia_area
 				is_core = root
 			}
-			OR = {
-				num_of_owned_provinces_with = {
-					value = 8
-					region = pacific_islands_region
-					is_core = root
-				}
-				num_of_owned_provinces_with = {
-					value = 3
-					region = melanesia_region
-					is_core = root
-				}
+			num_of_owned_provinces_with = {
+				value = 8
+				region = pacific_islands_region
+				is_core = root
 			}
 			owns_core_province = 1235 # Guam
 			owns_core_province = 1240 # NMI
@@ -65,37 +58,43 @@ country_decisions = {
 			add_prestige = 10
 			change_tag = PCO
 			PCO = {
-			if = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
-			}
-			melanesia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
 				}
-				add_permanent_claim = PCO
-			}
-			southeastern_melanesia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				melanesia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
 				}
-				add_permanent_claim = PCO
-			}
-			micronesia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				vanuatu_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
 				}
-				add_permanent_claim = PCO
-			}
-			pacific_islands_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				southeastern_melanesia_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
 				}
-				add_permanent_claim = PCO
-			}
+				micronesia_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
 				}
+				pacific_islands_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

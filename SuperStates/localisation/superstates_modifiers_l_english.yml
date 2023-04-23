@@ -192,6 +192,12 @@
  desc_njy_empire_city:0 "A grand city, worthy of praise!"
  njy_trade_hudson:0 "Hudson Trade"
  desc_njy_trade_hudson:0 "Our control over the Hudson River has greatly increased trade opportunities."
+ njy_lightbulb_modifier:0 "Edison's Lightbulb"
+ desc_njy_lightbulb_modifier:0 "Edison's light bulbs are brightening up [Root.GetName]!"
+ njy_phonograph_modifier:0 "Edison's Phonograph"
+ desc_njy_phonograph_modifier:0 "Edison's phonograph is bringing the greatest works from [Root.GetName] to the world's ears!"
+ njy_auto_telegraph_modifier:0 "Edison's Automatic Telegraph"
+ desc_njy_auto_telegraph_modifier:0 "Edison's automatic telegraph is allowing our troops to communicate at an accelerated rate!"
  
  # Virginia Mission Modifiers
  vir_chesapeake_trade:0 "Chesapeake Trade"
@@ -248,6 +254,8 @@
  desc_cut_investments:0 "We are able to make profitable business transactions due to the close proximity to New York."
  cut_manufactoring_modifier:0 "Textile Manufacturing"
  desc_cut_manufactoring_modifier:0 "Cloth and Fabric manufacturing feed the new Industrial Revolution."
+ cut_cheney_silk:0 "Cheney Brothers Silk"
+ desc_cut_cheney_silk:0 "Revolutionary developments for the spinning and weaving of silk by the Cheney Brothers has created an early silk market in New England."
  
  #Vermont
  vrm_defeated_ny:0 "Defeated New York"
@@ -421,7 +429,7 @@
 
  #Texas
  tex_alamo_modifier:0 "Remember the Alamo!"
- desc_tex_alamo_modifier:0 "We will always remember the sacrifice that brave Texans took during the Alamo."
+ desc_tex_alamo_modifier:0 "We will always remember the sacrifice the brave Texans took during the Battle of the Alamo."
  remilitarized_alamo:0 "Remilitarized Alamo"
  desc_remilitarized_alamo:0 "The Alamo "fortress" has been remilitarized and can be used for proper defense. Never again will the Alamo fall."
  tex_cowboy_modifier:0 "Cowboys"
@@ -456,6 +464,10 @@
  #Canada Regional
  gen_renewed_fur_trade:0 "Renewed Fur Trade"
  desc_gen_renewed_fur_trade:0 "We have dominated the Fur market."
+
+ #Great Lake Regional
+ gen_lake_traders:0 "Great Lake Traders"
+ desc_gen_lake_traders:0 "Our presence on the Great Lakes improves our ability to manage long distance trade."
 
  #Idaho
  ida_idaho_national_laboratory:0 "Idaho National Laboratory"
@@ -598,14 +610,60 @@
  ont_religion_mod:0 "Weakened Church"
  desc_ont_religion_mod:0 "With the defeat of Quebec, many locals are questioning their faith."
  ont_family_compact_bad:0 "Family Compact in Power"
- desc_ont_family_compact_bad:0 "A group of powerful elites dictate our nation's policies."
+ desc_ont_family_compact_bad:0 "A group of powerful elites are dictating our nation's policies."
  ont_toronto_improved:0 "Flourishing Metropolis"
  desc_ont_toronto_improved:0 ""
  ont_prosperity_modifier:0 "Ontarian Prosperity"
  desc_ont_prosperity_modifier:0 "Our policies have brought great prosperity to this land."
 
-
+ #Hawaii
+ hwi_colonist_modifier:0 "Island Hopping"
+ desc_hwi_colonist_modifier:0 "Expeditions to the many islands in the Pacific will solidify our position on the vast ocean."
+ pearl_harbor_upgraded_modifier:0 "Pearl Harbor"
+ desc_pearl_harbor_upgraded_modifier:0 "This natural harbor, and its expanded military base, is crucial for operating in the Pacific Ocean."
+ hwi_navy_built_up:0 "Navy Buildup"
+ desc_hwi_navy_built_up:0 "Our fleet is ready to sail the open seas."
+ hwi_navy_tradition_modifier:0 "Legacy of Naval Expertise"
+ desc_hwi_navy_tradition_modifier:0 "Long have we sailed these currents, we are truly experienced sailors."
+ hwi_marine_1_modifier:0 "Marine Corps"
+ desc_hwi_marine_1_modifier:0 ""
+ hwi_marine_2_modifier:0 "Elite Marine Force"
+ desc_hwi_marine_2_modifier:0 "Discipline and persistent training had created an elite force of Marines."
+ hwi_pacific_islands_modifier:0 "Masters of the Pacific"
+ desc_hwi_pacific_islands_modifier:0 ""
+ hwi_wave_of_innovation:0 "Technological Advancements"
+ desc_hwi_wave_of_innovation:0 "Wonderful advancements in science, mathematics and various other fields invented overseas, have made their way to our islands."
+ hwi_education_modifier:0 "Hawaiian Universities"
+ desc_hwi_education_modifier:0 "Schools and renowned universities dot the island landscape, bringing wisdom to our nation."
+ hwi_education_modifier_no_dlc:0 "Hawaiian Universities"
+ desc_hwi_education_modifier_no_dlc:0 "Schools and renowned universities dot the island landscape, bringing wisdom to our nation."
+ hwi_construction_efforts:0 "Island Infrastructure"
+ desc_hwi_construction_efforts:0 ""
+ hwi_trade_modifier:0 "Monopolized Pacific Commerce"
+ desc_hwi_trade_modifier:0 "We have monopolized the lucrative pacific trade."
+ hwi_iolani_palace_modifier:0 "Palace Restoration"
+ desc_hwi_iolani_palace_modifier:0 ""
+ hwi_culture_modifier:0 "Native Hawaiian Culture"
+ desc_hwi_culture_modifier:0 "We honor the legacy of the native Hawaiians."
  
+ 
+
+ #Michigan
+ mic_ohio_defeated:0 "Ohio Crushed"
+ desc_mic_ohio_defeated:0 "Our victory over Ohio has brought our state great pride!"
+ mic_toledo_restored:0 "Toledo Restored"
+ desc_mic_toledo_restored:0 "We have restored order to the city of Toledo."
+ mic_chicago_modifier:0 "Control over Chicago"
+ desc_mic_chicago_modifier:0 "With Chicago in our hands, dominance over the midwest is soon upon us."
+ mic_michigan_territory_modifier:0 "Michigan Territorial Legacy"
+ desc_mic_michigan_territory_modifier:0 "As heirs to the Michigan Territory, we will hold great swaths of land."
+ mic_yoopers_united:0 "Yoopers United"
+ desc_mic_yoopers_united:0 "The Yooper's ideas of independence from [Root.GetName] have been subdued, and we are united."
+ mic_revived_detroit_modifier:0 "Detroit Revived"
+ desc_mic_revived_detroit_modifier:0 "Detroit has once again become a powerful manufacturing city."
+ mic_economical_upswing:0 "Economical Upswing"
+ desc_mic_economical_upswing:0 ""
+
  #Other
  united_the_mormons:0 "United the Mormons"
  desc_united_the_mormons:0 "We have united all of the Holy Sites of the Mormon faith, let us celebrate the Mormon faith and rally all the Mormons for our cause!"

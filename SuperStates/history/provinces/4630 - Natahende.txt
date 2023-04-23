@@ -14,6 +14,7 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1494.1.1 = {
 	
 	owner = CAS
@@ -52,6 +53,9 @@ native_hostileness = 3
 1761.1.1 = { unrest = 0 }
 1795.1.1 = { unrest = 4 } # Slave rebellion
 1796.1.1 = { unrest = 0 }
+1860.1.1 = {
+	culture = jamaican
+}
 1865.12.1 = {
 	owner = JMC
 	controller = JMC

@@ -6,7 +6,9 @@ bookmark =
 	
 	center = 2616
 	
-	country = CSA
 	country = USA
+	country = CSA
 	country = MEX
+
+	easy_country = USA
 }

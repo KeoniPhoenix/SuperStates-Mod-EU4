@@ -193,7 +193,7 @@
  oceanian_mass_infantryDESCR:0 "REPLACE_ME"
  oceanian_musketeer:0 "Oceanian Musketeer"
  oceanian_musketeerDESCR:0 "REPLACE_ME"
- oceanian_swarm:0 "Oceanian Swarm Infantry"
+ oceanian_swarm:0 "Oceanian Swarm Cavalry"
  oceanian_swarmDESCR:0 "REPLACE_ME"
  oceanian_dragoon:0 "Oceanian Dragoon"
  oceanian_dragoonDESCR:0 "REPLACE_ME"
@@ -360,11 +360,16 @@
  merc_metis_company:0 "Métis Company"
  merc_french_volunteer_company:0 "French Volunteers"
  unlock_merc_french_volunteer_company_tt:0 "Unlock the mercenary company §YFrench Volunteers§! to recruit."
+ merc_central_american_company:0 "Central American Company"
   
  #Misc Text
  random_new_world_region:0 "REPLACE_ME"
  cb_successor_america:0 "Unify America"
  cb_successor_america_desc:0 "We can enforce our claims over the historic boundaries of the United States."
  SUCCESSOR_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ war for America"
- unlock_maitres_chez_nous_reform_tt:0 "Unlock the '§YMaîtres Chez Nous§!' Tier 9 government reform for Republics."
+ unlock_maitres_chez_nous_reform_tt:0 "Unlock the '§YMaîtres Chez Nous§!' Tier 10 government reform for Republics."
+ estate_nobles_mahele:0 "Mahele"
+ estate_nobles_mahele_desc:0 "Mahele or "to divide or portion" are laws restricting property rights, giving the Ali-i a significant portion of land."
+ hwi_turn_north_american_title:0 "Embrace North American"
+ hwi_turn_north_american_desc:0 "Embrace the North American Technology group and their associated military tactics."
  

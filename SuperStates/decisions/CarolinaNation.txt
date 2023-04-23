@@ -6,10 +6,9 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ASE }
 			NOT = { exists = CRL }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = CSA }
 			NOT = { exists = NAM }
-			NOT = { exists = ASE }
 			#technology_group = north_american
 			OR = {
 				primary_culture = north_carolinian
@@ -61,30 +60,30 @@ country_decisions = {
 			add_prestige = 10
 			change_tag = CRL
 			CRL = {
-			if = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
+						NOT = { government_rank = 2 }
+					}
 				set_government_rank = 2
-			}
-			north_carolina_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = CRL
-			}
-			south_carolina_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				north_carolina_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CRL
 				}
-				add_permanent_claim = CRL
-			}
-			blue_ridge_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				south_carolina_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CRL
 				}
-				add_permanent_claim = CRL
-			}
+				blue_ridge_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = CRL
+				}
 			}
 		}
 		ai_will_do = {

@@ -20,7 +20,8 @@ discovered_by = ARW
 	owner = SPA
 	controller = SPA
 	add_core = SPA
-	remove_core = CAS
+	culture = castillian
+	religion = catholic
 	is_city = yes
 	trade_goods = tobacco
 } #Local settlements
