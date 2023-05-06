@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { exists = FLO }
 			NOT = { exists = CSA }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
 			NOT = { exists = ASE }

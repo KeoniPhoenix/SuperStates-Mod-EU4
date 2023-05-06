@@ -21,7 +21,7 @@ discovered_by = NVS
 discovered_by = PEI
 discovered_by = NBR
 
-
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1520.10.21 = { discovered_by = POR } # Possibly later, Juan de Bermudez
 1535.1.23 = { discovered_by = FRA }
 
@@ -30,6 +30,6 @@ discovered_by = NBR
 	controller = FRA
 	add_core = FRA
 	culture = cosmopolitan_french
-	religion = s_catholic
+	religion = catholic
 } # French colonists
 1816.1.1 = { is_city = yes trade_goods = fish }

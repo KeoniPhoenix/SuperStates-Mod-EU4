@@ -17,12 +17,12 @@ discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1
 
-1531.1.1 = {
-	religion = s_baptist
-}
-
 1399.1.1 = {
 	fort_15th = yes 
+}
+
+1528.1.1 = {
+	religion = catholic
 }
 
 1675.2.4 = {

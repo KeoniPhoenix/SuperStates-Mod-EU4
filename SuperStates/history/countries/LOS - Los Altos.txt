@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = central_american_state_reform
+technology_group = mesoamerican
+religion = s_catholic
+primary_culture = guatemalan
+capital = 4587	# Quetzalenango
+
+1528.1.1 = {
+    religion = catholic
+}

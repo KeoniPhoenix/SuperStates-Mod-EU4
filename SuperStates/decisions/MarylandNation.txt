@@ -10,17 +10,18 @@ country_decisions = {
 			NOT = { exists = ASE }
 			NOT = { exists = MID }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			#NOT = { exists = CHS }
 			NOT = { exists = GCL }
 			NOT = { exists = DMV }
+			NOT = { has_country_flag = formed_maryland_flag } #Only once
 			OR = {
 				tag = WML
 				primary_culture = marylander
 				primary_culture = west_marylander
 				AND = {
 					primary_culture = delmarvan
-					NOT ={ tag = DMV }
+					NOT = { tag = DMV }
 				}
 				AND = {
 					primary_culture = districter
@@ -68,6 +69,7 @@ country_decisions = {
 								}
 			add_prestige = 10
 			change_tag = MYD
+			set_country_flag = formed_maryland_flag
 			MYD = {
 			if = {
 					limit = {

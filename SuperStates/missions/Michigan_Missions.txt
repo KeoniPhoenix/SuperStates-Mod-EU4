@@ -1,5 +1,117 @@
-mic_conquest = {
+mic_slot_1 = {
 	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = MIC
+	}
+	has_country_shield = yes
+
+	mic_ohio = {
+		icon = mission_assemble_an_army
+		required_missions = { mic_toledo }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = ohio_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ohio_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			erie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "mic_ohio_defeated"
+				duration = 5475
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	mic_erie = {
+		icon = mission_civil_war_battle
+		required_missions = { mic_ohio mic_ontario }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = erie_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = erie_area
+			}
+		}
+		effect = {
+			adirondack_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	mic_lake_ontario = {
+		icon = mission_lake_ontario
+		required_missions = { mic_erie }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = ontario_area
+				area = adirondack_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ontario_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			adirondack_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+			hudson_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+mic_slot_2 = {
+	slot = 2
 	generic = no
 	ai = yes
 	potential = {
@@ -23,12 +135,40 @@ mic_conquest = {
 			}
 		}
 		effect = {
-			maumee_area = {
-				add_permanent_claim = ROOT
+			2569 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
-			chicagoland_area = {
-				add_permanent_claim = ROOT
+			2570 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
+			3091 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = "mic_toledo_restored"
+				duration = 9125
+			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -56,16 +196,172 @@ mic_conquest = {
 			}
 		}
 		effect = {
-			southwest_ontario_area = {
+			wabash_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			add_prestige = 15
+			2565 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	mic_ontario = {
+		icon = mission_have_two_subjects
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = southwest_ontario_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = southwest_ontario_area
+			}
+		}
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 20
+			}
+			ontario_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	mic_trade = {
+		icon = mission_african_gold
+		required_missions = { mic_ontario }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2642
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		trigger = {
+			mercantilism = 20
+			2642 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			add_years_of_income = 1
+			add_country_modifier = {
+				name = "ili_trade"
+				duration = 9125
+			}
+		}
+	}
+}
+
+mic_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = MIC
+	}
+	has_country_shield = yes
+
+	mic_wisconsin = {
+		icon = mission_wisconsin_map
+		required_missions = { mic_yoopers }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = green_bay_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			green_bay_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					upper_peninsula_area = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				custom_tooltip = mic_defeated_wisconsin_tooltip
+				hidden_effect = { #Wisconsin loses cores and claims on upper peninsula area
+					upper_peninsula_area = {
+						if = {
+							limit = {
+								is_core = WIS
+							}
+							remove_core = WIS
+						}
+						if = {
+							limit = {
+								is_claim = WIS
+							}
+							remove_claim = WIS
+						}
+					}
+				}
+			}
+			2558 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			wisconsin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 
 	mic_chicago = {
 		icon = mission_cannons_firing
-		required_missions = { mic_indiana }
+		required_missions = { mic_indiana mic_wisconsin }
 		position = 3
 		provinces_to_highlight = {
 			OR = {
@@ -80,31 +376,114 @@ mic_conquest = {
 			}
 		}
 		effect = {
-			green_bay_area = {
+			add_country_modifier = {
+				name = "mic_chicago_modifier"
+				duration = 5475
+			}
+			illinois_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			wisconsin_area = {
+			sangamon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			2579 = { #Cuyahoga
+			little_egypt_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 100
+		}
 	}
 
-	mic_wisconsin = {
-		icon = mission_build_up_to_force_limit
+	mic_illinois = {
+		icon = mission_landsknecht_soldier
 		required_missions = { mic_chicago }
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			OR = {
-				area = wisconsin_area
-				area = green_bay_area
+				area = illinois_area
+				area = little_egypt_area
+				area = sangamon_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			green_bay_area = {
+			illinois_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sangamon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			little_egypt_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			iowa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			twin_cities_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			the_lakes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	mic_michigan_territory = {
+		icon = mission_unite_home_region
+		required_missions = { mic_illinois }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = iowa_area
+				area = twin_cities_area
+				area = the_lakes_area
+				area = wisconsin_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			iowa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			twin_cities_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			the_lakes_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -114,16 +493,47 @@ mic_conquest = {
 			}
 		}
 		effect = {
-			add_adm_power = 100
-			superior_area = {
-				add_claim = ROOT
+			add_country_modifier = {
+				name = "mic_michigan_territory_modifier"
+				duration = -1
 			}
+			east_river_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			red_river_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sakakawea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			superior_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
 
-mic_more = {
-	slot = 2
+mic_slot_4 = {
+	slot = 4
 	generic = no
 	ai = yes
 	potential = {
@@ -131,10 +541,248 @@ mic_more = {
 	}
 	has_country_shield = yes
 
-	mic_detroit = {
-		icon = mission_early_game_buildings
+	mic_yoopers = {
+		icon = purely_for_commerce
 		required_missions = { }
 		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = upper_peninsula_area
+			}
+			NOT = {
+				AND = {
+					religion = ROOT
+					province_is_or_accepts_culture = yes
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				upper_peninsula_area = {
+					type = all
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = ont_have_good_tolerance_heretics_tt
+					has_global_modifier_value = {
+						which = tolerance_heretic
+						value = 0.002
+					}
+				}
+			}
+			upper_peninsula_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_peninsula_area = {
+				type = all
+				province_is_or_accepts_culture = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mic_yoopers_united"
+				duration = -1
+			}
+			green_bay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3037 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2649 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2548 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2560 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	mic_lake_superior = {
+		icon = mission_ne_great_lakes_conquest
+		required_missions = { mic_yoopers }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3037
+				province_id = 2649
+				province_id = 2548
+				province_id = 2560
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			3037 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2649 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2548 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2560 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ili_lake_superior_modifier"
+				duration = 7300
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	mic_economy_2 = {
+		icon = mission_hanseatic_city
+		required_missions = { mic_economy_1 }
+		position = 4
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_production_building_trigger = no
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 10
+						has_production_building_trigger = yes
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_production_building_trigger = yes
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		}
+	}
+
+	mic_rust_belt = {
+		icon = mission_have_manufactories
+		required_missions = { mic_economy_2 }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = ROOT
+					trade_goods = iron
+				}
+			}
+			NOT = {
+				AND = {
+					base_production = 5
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				trade_goods = iron
+				base_production = 5
+				has_manufactory_trigger = yes
+				value = 10
+			}
+		}
+		effect = {
+			add_adm_power = 150
+			custom_tooltip = pen_has_steel_manufactories_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					if = {
+						limit = {
+							trade_goods = iron
+							has_manufactory_trigger = yes
+						}
+						add_base_production = 2
+						add_province_modifier = {
+							name = "pnn_steel_manufactory"
+							duration = 9125
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+mic_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = MIC
+	}
+	has_country_shield = yes
+
+	mic_economy_1 = {
+		icon = balance_the_estates
+		required_missions = { }
+		position = 3
+		trigger = {
+			share_of_starting_income = 2
+			NOT = { num_of_loans = 1 }
+			NOT = { corruption = 1 }
+			is_bankrupt = no
+			is_in_deficit = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mic_economical_upswing"
+				duration = 9125
+			}
+		}
+	}
+
+	mic_detroit = {
+		icon = mission_early_game_buildings
+		required_missions = { mic_economy_1 }
+		position = 5
 		provinces_to_highlight = {
 			province_id = 2573
 		}
@@ -146,92 +794,14 @@ mic_more = {
 			}
 		}
 		effect = {
-			add_adm_power = 100
 			2573 = {
-				add_base_tax = 1
 				add_base_production = 3
 			}
-		}
-	}
-
-	mic_ontario = {
-		icon = mission_have_two_subjects
-		required_missions = { mic_indiana }
-		position = 3
-		provinces_to_highlight = {
-			OR = {
-				area = southwest_ontario_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			southwest_ontario_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 20
-			}
-			ontario_area = {
-				add_claim = ROOT
-			}
-			northern_ontario_area = {
-				add_claim = ROOT
-			}
-		}
-	}
-
-	mic_cleveland = {
-		icon = mission_assemble_an_army
-		required_missions = { mic_chicago }
-		position = 4
-		provinces_to_highlight = {
-			OR = {
-				province_id = 2579 #cleveland
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			2579 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			ohio_area = {
-				add_claim = ROOT
-			}
-			erie_area = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-
-	mic_erie = {
-		icon = mission_conquer_5_states
-		required_missions = { mic_cleveland }
-		position = 5
-		provinces_to_highlight = {
-			OR = {
-				area = erie_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				area = erie_area
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "hegemonic_ambition"
-				duration = 9125 #25 years
-			}
-			add_dip_power = 50
-			adirondack_area = {
-				add_claim = ROOT
+			2573 = {
+				add_province_modifier = {
+					name = "mic_revived_detroit_modifier"
+					duration = -1
+				}
 			}
 		}
 	}

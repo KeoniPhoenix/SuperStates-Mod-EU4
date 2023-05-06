@@ -14,6 +14,7 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1700.1.1 = {
 	owner = ENG
 	controller = ENG
@@ -43,6 +44,7 @@ native_hostileness = 3
 	add_core = WSI
 }
 1962.5.31 = {
+	remove_core = JMC
 	owner = TCI
 	controller = TCI
 	add_core = TCI

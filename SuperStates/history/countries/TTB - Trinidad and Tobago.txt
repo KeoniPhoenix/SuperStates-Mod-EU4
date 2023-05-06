@@ -1,5 +1,4 @@
 government = monarchy
-add_government_reform = constitutional_monarchy
 technology_group = north_american
 primary_culture = trinidadian
 religion = s_protestant

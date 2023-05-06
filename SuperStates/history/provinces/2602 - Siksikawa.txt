@@ -21,6 +21,10 @@ discovered_by = mesoamerican
 	fort_15th = yes
 }
 
+1528.1.1 = {
+	religion = catholic
+}
+
 1555.1.1 = {
 	owner = NEW
 	controller = NEW
@@ -34,8 +38,8 @@ discovered_by = mesoamerican
 }
 
 1675.2.5 = {
-	owner = VER
-	controller = VER
+	owner = VRM
+	controller = VRM
 	remove_core = FSA
 }
 

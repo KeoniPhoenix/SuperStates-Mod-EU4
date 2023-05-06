@@ -8,7 +8,7 @@ country_decisions = {
 			NOT = { exists = MID }
 			NOT = { exists = FSA }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			OR = {
 				tag = PHL
 				primary_culture = pennsylvanian

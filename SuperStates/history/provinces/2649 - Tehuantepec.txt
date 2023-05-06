@@ -5,7 +5,7 @@ controller = ONT
 add_core = ONT
 add_core = NRO
 culture = northern_ontarian
-religion = s_catholic
+religion = s_protestant
 capital = "Thunder Bay" 
 is_city = yes #10840
 trade_goods = copper
@@ -16,6 +16,10 @@ base_manpower = 3
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1
+
+1528.1.1 = {
+	religion = s_methodist
+}
 
 1555.1.1 = {
 	owner = NFR

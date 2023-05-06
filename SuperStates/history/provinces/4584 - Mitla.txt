@@ -16,6 +16,8 @@ native_hostileness = 3
 discovered_by = PRT
 discovered_by = UVI
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
+
 1648.1.1 = {
 	owner = NED
 	controller = NED
@@ -26,7 +28,7 @@ discovered_by = UVI
 	owner = ENG
 	controller = ENG
 	culture = english
-	religion = anglican
+	religion = protestant
 }
 1707.5.12 = {
 	owner = GBR

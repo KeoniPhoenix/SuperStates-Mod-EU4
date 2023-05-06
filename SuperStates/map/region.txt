@@ -1336,7 +1336,7 @@ melanesia_region = {
 #MICRONESIA
 micronesia_region = { #3
 	areas = {
-		micronesia_area
+		west_micronesia_area
 		eastern_micronesia_area
 		marianas_area
 	}

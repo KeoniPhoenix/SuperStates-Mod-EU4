@@ -124,6 +124,20 @@ njy_empire_city = {
 	local_tax_modifier = 0.10
 }
 
+njy_lightbulb_modifier = {
+	production_efficiency = 0.10
+}
+
+njy_phonograph_modifier = {
+	prestige = 1
+	diplomatic_reputation = 1
+}
+
+njy_auto_telegraph_modifier = {
+	reinforce_speed = 0.15
+	reinforce_cost_modifier = -0.15
+}
+
 # California Missions
 cal_gran = {
 	years_of_nationalism = -5
@@ -136,8 +150,8 @@ cal_fortification = {
 }
 
 cal_marine = {
-	allowed_marine_fraction = 0.05
-	transport_cost = -0.10
+	allowed_marine_fraction = 0.1
+	transport_cost = -0.15
 }
 
 cal_trade = {
@@ -237,7 +251,7 @@ ris_naval_supplies = {
 
 ris_roads_to_rhodes = {
 	movement_speed = 0.1
-	movement_speed_onto_off_boat_modifier = 0.1
+	regiment_disembark_speed = 0.25
 }
 
 ris_spy = {
@@ -253,8 +267,8 @@ cut_investments = {
 }
 
 cut_manufactoring_modifier = {
-	development_cost = -0.05
-	production_efficiency = 0.1
+	local_development_cost = -0.05
+	local_production_efficiency = 0.15
 }
 
 cut_cape_navy_modifier = {
@@ -265,6 +279,11 @@ cut_cape_navy_modifier = {
 cut_victory_pennamite = {
 	land_morale = 0.10
 	culture_conversion_cost = -0.25
+}
+
+cut_cheney_silk = {
+	trade_goods_size = 0.5
+	province_trade_power_modifier = 0.15
 }
 
 #New Hampshire
@@ -397,6 +416,12 @@ gen_prosperous_indpendence = {
 gen_renewed_fur_trade = {
 	trade_efficiency = 0.15
 	land_attrition = -0.1
+}
+
+#Great Lakes
+gen_lake_traders = {
+	caravan_power = 0.25
+	embargo_efficiency = 0.15
 }
 
 #Ohio
@@ -1449,4 +1474,114 @@ force_convert_mormon = {
 	prestige = 0.25
 	warscore_cost_vs_other_religion = -0.15
 	tolerance_heathen = -2
+}
+
+
+#Hawaii
+pearl_harbor_upgraded_modifier = {
+	province_trade_power_value = 15
+	ship_recruit_speed = -0.15
+	local_sailors_modifier = 0.15
+	local_ship_repair = 0.25
+	picture = "estuary_icon"
+}
+
+hwi_marine_1_modifier = {
+	allowed_marine_fraction = 0.25
+	sailors_recovery_speed = 0.15
+}
+
+hwi_marine_2_modifier = {
+	shock_damage_received = -0.10
+	discipline = 0.05
+	is_marine_modifier = yes
+}
+
+hwi_navy_built_up = {
+	global_ship_cost = -0.15
+	naval_attrition = -0.20
+}
+
+hwi_navy_tradition_modifier = {
+	navy_tradition = 0.5
+}
+
+hwi_colonist_modifier = {
+	colonists = 1
+	global_colonial_growth = 15
+}
+
+hwi_pacific_islands_modifier = {
+	movement_speed_in_fleet_modifier = 1
+	transport_attrition = -0.25
+}
+
+hwi_wave_of_innovation = {
+	technology_cost = -0.05
+}
+
+hwi_trade_modifier = {
+	trade_range_modifier = 0.33
+	mercantilism_cost = -0.15
+}
+
+hwi_construction_efforts = {
+	local_build_cost = -0.25
+	local_development_cost = -0.10
+}
+
+hwi_education_modifier_no_dlc = {
+	institution_growth = 12
+	idea_cost = -0.05
+}
+
+hwi_education_modifier = {
+	institution_growth = 12
+	innovativeness_gain = 0.33 #TODO change this to yearly_innovativeness once 1.35 comes out
+}
+
+hwi_iolani_palace_modifier = {
+	monthly_splendor = 1
+	great_project_upgrade_cost = -0.15
+}
+
+hwi_culture_modifier = {
+	same_culture_advisor_cost = -0.20
+	prestige_decay = -0.02
+}
+
+#Michigan
+mic_ohio_defeated = {
+	infantry_cost = -0.10
+	prestige_decay = -0.01
+}
+
+mic_toledo_restored = {
+	ae_impact = -0.10
+	shock_damage = 0.05
+}
+
+mic_chicago_modifier = {
+	manpower_recovery_speed = 0.20
+	state_maintenance_modifier = -0.25
+}
+
+mic_michigan_territory_modifier = {
+	governing_capacity_modifier = 0.10
+	years_of_nationalism = -5
+}
+
+mic_yoopers_united = {
+	same_culture_advisor_cost = -0.15
+	num_accepted_cultures = 1
+}
+
+mic_revived_detroit_modifier = {
+	local_development_cost_modifier = -0.10
+	trade_goods_size_modifier = 0.1
+}
+
+mic_economical_upswing = {
+	production_efficiency = 0.15
+	global_prosperity_growth = 0.5
 }

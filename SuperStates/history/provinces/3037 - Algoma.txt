@@ -16,8 +16,8 @@ base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1444.10.1 = {
-	add_core = NRO
+1528.1.1 = {
+	religion = catholic
 }
 
 1555.1.1 = {

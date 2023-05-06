@@ -7,7 +7,7 @@
 			# NOT = { exists = AZL }
 			# NOT = { exists = NAH }
 			# NOT = { exists = NAM }
-			# NOT = { exists = USA }
+			# NOT = { tag = USA }
 			# NOT = { exists = IUS }
 			# #technology_group = north_american
 			# OR = {

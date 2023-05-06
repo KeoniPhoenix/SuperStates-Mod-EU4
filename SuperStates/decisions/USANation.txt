@@ -179,9 +179,160 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				superregion = america_superregion
 				province_id = 2616
 				province_id = 2585
+				AND = { #New York
+					province_id = 2601
+					ROOT = {
+						NOT = {
+							owns_core_province = 944
+						}
+					}
+				}
+				AND = { #LA
+					province_id = 944
+					ROOT = {
+						NOT = {
+							owns_core_province = 2601
+						}
+					}
+				}
+
+				AND = { #Cook
+					province_id = 2565
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2480
+								owns_core_province = 2545
+							}
+						}
+					}
+				}
+				AND = { #Dallas
+					province_id = 2480
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2565
+								owns_core_province = 2545
+							}
+						}
+					}
+				}
+				AND = { #Dade
+					province_id = 2545
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2480
+								owns_core_province = 2565
+							}
+						}
+					}
+				}
+
+				AND = { #San Francisco
+					province_id = 946
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2573
+								owns_core_province = 990
+							}
+						}
+					}
+				}
+				AND = { #Wayne
+					province_id = 2573
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 946
+								owns_core_province = 990
+							}
+						}
+					}
+				}
+				AND = { #Denver
+					province_id = 990
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 946
+								owns_core_province = 2573
+							}
+						}
+					}
+				}
+
+				AND = { #Fulton
+					province_id = 2510
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 936
+								owns_core_province = 3323
+							}
+						}
+					}
+				}
+				AND = { #Maricopa
+					province_id = 936
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2510
+								owns_core_province = 3323
+							}
+						}
+					}
+				}
+				AND = { #Hennipen
+					province_id = 3323
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 936
+								owns_core_province = 2510
+							}
+						}
+					}
+				}
+
+				AND = { #King
+					province_id = 965
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 2487
+								owns_core_province = 2609
+							}
+						}
+					}
+				}
+				AND = { #Harris
+					province_id = 2487
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 965
+								owns_core_province = 2609
+							}
+						}
+					}
+				}
+				AND = { #Suffolk
+					province_id = 2609
+					ROOT = {
+						NOT = {
+							OR = {
+								owns_core_province = 965
+								owns_core_province = 2487
+							}
+						}
+					}
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -192,96 +343,173 @@ country_decisions = {
 			adm_tech = 10
 			is_subject = no
 			is_at_war = no
-			OR = {
-				# Western-based USA
-					AND = {
-						num_of_owned_provinces_with = {
-							value = 25
-							region = pacific_coast_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
-							region = intermountain_west_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
-							region = american_southwest_region
-							is_core = root
-						}
+			if = {
+				limit = {
+					capital_scope = {
 						OR = {
-							num_of_owned_provinces_with = {
-								value = 15
-								region = great_plains_region
-								is_core = root
-							}
-							num_of_owned_provinces_with = {
-								value = 15
-								region = old_southwest_region
-								is_core = root
-							}
-						}
-					}
-				# Eastern-based USA
-					AND = {
-						num_of_owned_provinces_with = {
-							value = 25
-							region = mid_atlantic_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
 							region = deep_south_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
 							region = appalachia_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 15
+							region = mid_atlantic_region
 							region = new_england_region
-							is_core = root
+							region = maritimes_region
+							region = central_canada_region
+							superregion = caribbean_superregion
+							province_group = nunavut_provincegroup
+							province_group = new_york_provincegroup
+							province_group = pennsylvania_provincegroup
+							province_group = ohio_provincegroup
+							province_group = south_dakota_provincegroup
+							province_group = oklahoma_provincegroup
 						}
 					}
-				# Central-based USA
-					AND = {
-						num_of_owned_provinces_with = {
-							value = 20
-							region = great_lakes_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
-							region = american_midwest_region
-							is_core = root
-						}
-						num_of_owned_provinces_with = {
-							value = 20
-							region = appalachia_region
-							is_core = root
-						}
-						OR = {
-							num_of_owned_provinces_with = {
-								value = 15
-								region = great_plains_region
-								is_core = root
-							}
-							num_of_owned_provinces_with = {
-								value = 15
-								region = old_southwest_region
-								is_core = root
-							}
-							num_of_owned_provinces_with = {
-								value = 20
-								region = mid_atlantic_region
-								is_core = root
-							}
-						}
-					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = easternUSACheck
+					always = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 25
+					region = mid_atlantic_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = deep_south_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = appalachia_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 15
+					region = new_england_region
+					is_core = ROOT
+				}
 			}
+			else_if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							region = great_plains_region
+							region = old_southwest_region
+							province_group = michigan_provincegroup
+							province_group = indiana_provincegroup
+							province_group = illinois_provincegroup
+							province_group = wisconsin_provincegroup
+							province_group = missouri_provincegroup
+							province_group = iowa_provincegroup
+							province_group = minnesota_provincegroup
+							province_group = alberta_provincegroup
+							province_group = saskatchewan_provincegroup
+							province_group = northwest_territories_provincegroup
+							area = manitoba_area
+							province_group = new_mexico_provincegroup
+							province_group = texas_provincegroup
+							province_group = colorado_provincegroup
+							province_group = montana_provincegroup
+							province_group = wyoming_provincegroup
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = centralUSACheck
+					always = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = great_lakes_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = american_midwest_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = appalachia_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 10
+					region = mid_atlantic_region
+					is_core = ROOT
+				}
+				OR = {
+					num_of_owned_provinces_with = {
+						value = 15
+						region = great_plains_region
+						is_core = ROOT
+					}
+					num_of_owned_provinces_with = {
+						value = 15
+						region = old_southwest_region
+						is_core = ROOT
+					}
+				}
+			}
+
+			else_if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							province_group = california_provincegroup
+							province_group = oregon_provincegroup
+							province_group = washington_provincegroup
+							province_group = british_columbia_provincegroup
+							province_group = alaska_provincegroup
+							province_group = arizona_provincegroup
+							province_group = nevada_provincegroup
+							province_group = idaho_provincegroup
+							province_group = utah_provincegroup
+							province_group = yukon_provincegroup
+							superregion = central_america_superregion
+							superregion = oceania_superregion
+							region = moluccas_region
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = westernUSACheck
+					always = yes
+				}
+				num_of_owned_provinces_with = {
+					value = 25
+					region = pacific_coast_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = intermountain_west_region
+					is_core = ROOT
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = american_southwest_region
+					is_core = ROOT
+				}
+				OR = {
+					num_of_owned_provinces_with = {
+						value = 15
+						region = great_plains_region
+						is_core = ROOT
+					}
+					num_of_owned_provinces_with = {
+						value = 15
+						region = old_southwest_region
+						is_core = ROOT
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = CapitalUSACheck
+					always = no
+				}
+			}
+
 			OR = {
 				owns_core_province = 2601 # New York
 				owns_core_province = 944 # Los Angeles
@@ -322,9 +550,9 @@ country_decisions = {
 			USA = {
 				if = {
 					limit = {
-					NOT = { government_rank = 3 }
+						NOT = { government_rank = 3 }
 					}
-				set_government_rank = 3
+					set_government_rank = 3
 				}
 			}
 			puerto_rico_area = {
@@ -363,7 +591,12 @@ country_decisions = {
 			2585 = {
 				add_core = USA
 			}
-			add_government_reform = federal_republic
+			if = {
+				limit = {
+					government = republic
+				}
+				add_government_reform = federal_republic
+			}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap 
 		}

@@ -7,7 +7,7 @@
 			# ai = no
 			# NOT = { exists = LCA }
 			# NOT = { exists = CSA }
-			# NOT = { exists = USA }
+			# NOT = { tag = USA }
 			# NOT = { exists = IUS }
 			# NOT = { exists = DES }
 			# NOT = { exists = AZL }

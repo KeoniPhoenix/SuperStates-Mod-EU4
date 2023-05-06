@@ -5,7 +5,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = FSA }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = GLK }
 			NOT = { exists = NAM }
 			NOT = { has_country_flag = formed_great_lakes_flag }
@@ -13,11 +13,11 @@ country_decisions = {
 			NOT = { has_country_flag = formed_great_plains_flag }
 			#technology_group = north_american
 			OR = {
-			culture_group = great_laker
-			primary_culture = ohioan
-			primary_culture = hoosier
-			primary_culture = minnesotan
-			primary_culture = illinoisan
+				culture_group = great_laker
+				primary_culture = ohioan
+				primary_culture = hoosier
+				primary_culture = minnesotan
+				primary_culture = illinoisan
 			}
 			OR = {
 				ai = no

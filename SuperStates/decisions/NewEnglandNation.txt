@@ -6,7 +6,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = NAM }
 			NOT = { exists = NEW }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			#technology_group = north_american
 			culture_group = new_england_group
 			OR = {
@@ -15,6 +15,20 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 20
 				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2609
+				province_id = 2606
+				province_id = 2602
+				province_id = 2604
+				province_id = 2613
+				province_id = 2612
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {

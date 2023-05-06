@@ -11,7 +11,7 @@ base_manpower = 1
 native_size = 10
 native_ferocity = 2
 native_hostileness = 4
-discovered_by = polynesian_tech
+# discovered_by = polynesian_tech
 
 1791.1.1 = {
 	is_city = yes

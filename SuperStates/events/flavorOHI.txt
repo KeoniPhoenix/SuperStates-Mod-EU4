@@ -19,7 +19,9 @@ country_event = {
 	goto = 2579
 
 	trigger = {
-		tag = OHI
+		is_or_was_tag = {
+			tag = OHI
+		}
 		owns = 2579
 	}
 

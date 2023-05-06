@@ -9,8 +9,8 @@ country_decisions = {
 			#NOT = { exists = ACA }
 			NOT = { exists = PCF }
 			#NOT = { exists = FSA }
-			#NOT = { exists = NAU }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			#NOT = { exists = LCA }
 			#NOT = { exists = CSC }
 			#NOT = { exists = NSP }
@@ -180,7 +180,7 @@ country_decisions = {
 # 			#NOT = { exists = EUM }
 # 			NOT = { exists = MEX }
 # 			NOT = { exists = NAM }
-# 			NOT = { exists = USA }
+# 			NOT = { tag = USA }
 # 			NOT = { exists = NSP }
 # 			NOT = { exists = AZL }
 # 			#NOT = { exists = LCA }
@@ -491,7 +491,7 @@ country_decisions = {
 # 		NOT = { exists = CSC }
 # 		NOT = { exists = MEX }
 # 		NOT = { exists = NAM }
-# 		NOT = { exists = USA }
+# 		NOT = { tag = USA }
 # 		NOT = { exists = PCF }
 # 		NOT = { exists = ACA }
 # 		NOT = { has_country_flag = las_california_decision }

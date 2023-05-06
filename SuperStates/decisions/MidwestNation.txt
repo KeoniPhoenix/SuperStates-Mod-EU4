@@ -4,7 +4,7 @@ country_decisions = {
 	midwest_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			#NOT = { exists = GPL }
 			NOT = { exists = MDL }
 			#NOT = { exists = GLK }
@@ -15,7 +15,7 @@ country_decisions = {
 				culture_group = midwestern_group
 				primary_culture = chicagoan
 				primary_culture = wisconsinite
-				}
+			}
 			OR = {
 				ai = no
 				AND = {

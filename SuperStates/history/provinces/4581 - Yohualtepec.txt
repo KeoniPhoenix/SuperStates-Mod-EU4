@@ -14,12 +14,14 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1628.1.1 = {
 	owner = ENG
 	controller = ENG
 	add_core = ENG
 	is_city = yes
 	trade_goods = tobacco
+	religion = protestant
 }
 1648.1.1 = {
 	trade_goods = sugar

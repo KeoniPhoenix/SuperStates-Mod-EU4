@@ -6,7 +6,7 @@
 		# potential = {
 			# NOT = { exists = WBU }
 			# NOT = { exists = NAM }
-			# NOT = { exists = USA }
+			# NOT = { tag = USA }
 			# NOT = { exists = IUS }
 			# NOT = { exists = FSA }
 			# NOT = { exists = GLK }

@@ -4,7 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = CAM }
-			NOT = { exists = MEX }
+			NOT = { tag = MEX }
 			NOT = { exists = GCL }
 			OR = {
 				primary_culture = chiapan
@@ -15,6 +15,7 @@ country_decisions = {
 				tag = HND
 				tag = NCG
 				tag = PNM
+				tag = LOS
 				culture_group = central_american_group
 			}
 			OR = {
@@ -89,57 +90,41 @@ country_decisions = {
 			add_prestige = 20
 			change_tag = CAM
 			CAM = {
-			if = {
+				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
+						NOT = { government_rank = 2 }
+					}
 				set_government_rank = 2
-			}
-			guatemala_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = CAM
-			}
-			guatemala_lowlands_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				central_america_region = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+					add_permanent_claim = CAM
 				}
-				add_permanent_claim = CAM
-			}
-			honduras_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				if = {
+					limit = {
+						850 = { NOT = { owned_by = ROOT } }
+					}
+					850 = { add_permanent_claim = CAM }
 				}
-				add_permanent_claim = CAM
-			}
-			nicaragua_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				if = {
+					limit = {
+						851 = { NOT = { owned_by = ROOT } }
+					}
+					851 = { add_permanent_claim = CAM }
 				}
-				add_permanent_claim = CAM
-			}
-			panama_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CAM
 			}
 			if = {
 				limit = {
-					850 = { NOT = { owned_by = ROOT } }
+					government = republic
 				}
-				850 = { add_permanent_claim = CAM }
+				add_government_reform = central_american_republic_reform
 			}
-			if = {
-				limit = {
-					851 = { NOT = { owned_by = ROOT } }
-				}
-				851 = { add_permanent_claim = CAM }
-			}
-				}
-			swap_non_generic_missions = yes
-			country_event = { id = ideagroups.1 } #Swap
+			# swap_non_generic_missions = yes
+			# country_event = { id = ideagroups.1 } #Swap
 		}
 		ai_will_do = {
 			factor = 1

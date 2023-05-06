@@ -5,8 +5,8 @@ country_decisions = {
 			NOT = { exists = LOU }
 			NOT = { exists = NFR }
 			NOT = { exists = CSA }
-			NOT = { exists = ASE }
-			NOT = { exists = USA }
+			NOT = { tag = ASE }
+			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			NOT = { exists = GCL }
 			OR = {

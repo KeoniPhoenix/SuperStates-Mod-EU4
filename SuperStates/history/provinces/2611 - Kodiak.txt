@@ -5,7 +5,7 @@ controller = MSS
 add_core = MSS
 culture = bay_stater
 religion = s_catholic
-capital = "Worcester"
+capital = "Taunton"
 trade_goods = naval_supplies
 hre = no
 base_tax = 4
@@ -14,6 +14,10 @@ base_manpower = 4
 is_city = yes #4520
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1528.1.1 = {
+	religion = catholic
+}
 
 1555.1.1 = {
 	owner = NEW

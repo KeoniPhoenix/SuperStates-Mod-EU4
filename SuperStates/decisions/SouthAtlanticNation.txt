@@ -8,8 +8,8 @@ country_decisions = {
 			NOT = { exists = CSA }
 			NOT = { exists = NAM }
 			NOT = { exists = FSA }
-			NOT = { exists = USA }
-			NOT = { exists = CRL }
+			NOT = { tag = USA }
+			# NOT = { exists = CRL }
 			NOT = { tag = MID }
 			#technology_group = north_american
 			OR = {
@@ -28,20 +28,32 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 20
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 3019
-				province_id = 2544
 				province_id = 2546
 				province_id = 2512
 				province_id = 2522
 				province_id = 2528
-				province_id = 2510
-				province_id = 2545
+				AND = {
+					province_id = 2510
+					ROOT = { NOT = { owns_core_province = 2545 } }
+				}
+				AND = {
+					province_id = 2545
+					ROOT = { NOT = { owns_core_province = 2510 } }
+				}
+				AND = {
+					province_id = 3019
+					ROOT = { NOT = { owns_core_province = 2544 } }
+				}
+				AND = {
+					province_id = 2544
+					ROOT = { NOT = { owns_core_province = 3019 } }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -106,9 +118,9 @@ country_decisions = {
 			ASE = {
 				if = {
 					limit = {
-					NOT = { government_rank = 2 }
-							}
-				set_government_rank = 2
+						NOT = { government_rank = 2 }
+					}
+					set_government_rank = 2
 				}
 			}	
 			georgia_us_area = {
@@ -160,7 +172,12 @@ country_decisions = {
 				add_permanent_claim = ASE
 			}
 			# swap_non_generic_missions = yes #Currently has no missions
-			add_government_reform = confederate_republic
+			if = {
+				limit = {
+					government = republic
+				}
+				add_government_reform = confederate_republic
+			}
 		}
 		ai_will_do = {
 			factor = 1

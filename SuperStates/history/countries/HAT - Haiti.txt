@@ -1,0 +1,349 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = north_american
+religion = catholic
+primary_culture = haitian
+capital = 4618	# Port-Au-Prince
+
+
+1804.1.1 = {
+	monarch = {
+		name = "Jean-Jacques"
+		dynasty = "Dessalines"
+		birth_date = 1758.9.20
+		adm = 3
+		dip = 1
+		mil = 4
+		
+	}
+}
+
+1806.10.17 ={
+	monarch = {
+		name = "Henri"
+		dynasty = "Christophe"
+		birth_date = 1767.10.6
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1820.10.7 = {
+	government = republic
+	monarch = {
+		name = "Jean-Pierre Boyer"
+		birth_date = 1776.2.15
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+1843.4.4 = {
+	monarch = {
+		name = "Charles Rivière-Hèrard"
+		birth_date = 1789.2.16
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+1844.5.3 = {
+	monarch = {
+		name = "Philippe Guerrier"
+		birth_date = 1757.12.19
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+
+1845.4.16 = {
+	monarch = {
+		name = "Jean-Louis Pierrot"
+		birth_date = 1761.12.19
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1846.3.24 = {
+	monarch = {
+		name = "Jean-Baptiste Riché"
+		birth_date = 1780.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1847.3.2 = {
+	monarch = {
+		name = "Faustin"
+		dynasty = "Soulouque"
+		birth_date = 1782.8.15
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1849.8.26 = {
+	government = monarchy
+}
+
+1859.1.22 = {
+	government = republic
+	monarch = {
+		name = "Fabre Geffrard"
+		birth_date = 1806.9.23
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1867.5.4 = {
+	monarch = {
+		name = "Sylvain Salnave"
+		birth_date = 1827.2.6
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1869.12.27 = {
+	monarch = {
+		name = "Jean-Nicolas Saget"
+		birth_date = 1810.9.20
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1874.6.14 = {
+	monarch = {
+		name = "Michel Domingue"
+		birth_date = 1813.7.28
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+
+1876.4.23 = {
+	monarch = {
+		name = "Pierre Boisrond-Canal"
+		birth_date = 1832.6.12
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}
+
+1888.10.16 = {
+	monarch = {
+		name = "François Denys Légitime"
+		birth_date = 1841.11.20
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
+1889.10.17 = {
+	monarch = {
+		name = "Florvil Hyppolite"
+		birth_date = 1828.5.26
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1896.3.31 = {
+	monarch = {
+		name = "Tirésias Simon Sam"
+		birth_date = 1835.4.15
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}
+
+1902.12.21 = {
+	monarch = {
+		name = "Pierre Nord Alexis"
+		birth_date = 1820.8.2
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1908.12.6 = {
+	monarch = {
+		name = "François Antoine Simon"
+		birth_date = 1843.10.10
+		adm = 4
+		dip = 2
+		mil = 3
+	}
+}
+
+1915.8.12 = {
+	monarch = {
+		name = "Philippe Sudré Dartiguenave"
+		birth_date = 1863.4.6
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}
+
+1922.5.12 = {
+	monarch = {
+		name = "Louis Borno"
+		birth_date = 1865.9.20
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+
+1930.11.18 = {
+	monarch = {
+		name = "Sténio Vincent"
+		birth_date = 1874.2.22
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1941.5.12 = {
+	monarch = {
+		name = "Élie Lescot"
+		birth_date = 1883.12.9
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1946.8.16 = {
+	monarch = {
+		name = "Dumarsais Estimé"
+		birth_date = 1900.4.21
+		adm = 6
+		dip = 4
+		mil = 2
+	}
+}
+
+1950.12.6 = {
+	monarch = {
+		name = "Paul Magloire"
+		birth_date = 1907.7.19
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+1957.10.22 = {
+	monarch = {
+		name = "François"
+		dynasty = "Duvalier"
+		birth_date = 1907.4.14
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+
+1971.4.21 = {
+	monarch = {
+		name = "Jean-Claude"
+		dynasty = "Duvalier"
+		birth_date = 1951.7.3
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1986.2.7 = {
+	monarch = {
+		name = "Henri Namphy"
+		birth_date = 1932.10.2
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1991.2.7 = {
+	monarch = {
+		name = "Jean-Bertrand Aristide"
+		birth_date = 1953.7.15
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1996.2.7 = {
+	monarch = {
+		name = "René Préval"
+		birth_date = 1943.1.17
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+2001.2.7 = {
+	monarch = {
+		name = "Jean-Bertrand Aristide"
+		birth_date = 1953.7.15
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+2004.2.28 = {
+	monarch = {
+		name = "René Préval"
+		birth_date = 1943.1.17
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+
+2011.5.14 = {
+	monarch = {
+		name = "Michel Martelly"
+		birth_date = 1961.2.12
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+2016.2.7 = {
+	monarch = {
+		name = "Jovenel Moïse"
+		birth_date = 1968.6.26
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

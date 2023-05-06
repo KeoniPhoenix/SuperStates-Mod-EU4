@@ -16,8 +16,8 @@ base_manpower = 3
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1531.1.1 = {
-	religion = s_catholic
+1528.1.1 = {
+	religion = catholic
 }
 
 1675.2.4 = {

@@ -3,7 +3,7 @@ add_government_reform = micronesian_republic
 government_rank = 1
 technology_group = oceanian
 primary_culture = kosraean
-religion = austral_catholic
+religion = austral_protestant
 capital = 1995	#Lelu
 
 

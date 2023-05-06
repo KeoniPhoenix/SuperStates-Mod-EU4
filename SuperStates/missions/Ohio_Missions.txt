@@ -871,62 +871,62 @@ ohi_slot_3 = {
 	}
 }
 
-ohi_slot_5 = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = OHI
-			AND = {
-				tag = GLK
-				was_tag = OHI
-			}
-			AND = {
-				tag = APL
-				was_tag = OHI
-			}
-			AND = {
-				tag = MDL
-				was_tag = OHI
-			}
-		}
-	}
-	has_country_shield = yes
+# ohi_slot_5 = { #TODO - FIX THIS
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	potential = {
+# 		OR = {
+# 			tag = OHI
+# 			AND = {
+# 				tag = GLK
+# 				was_tag = OHI
+# 			}
+# 			AND = {
+# 				tag = APL
+# 				was_tag = OHI
+# 			}
+# 			AND = {
+# 				tag = MDL
+# 				was_tag = OHI
+# 			}
+# 		}
+# 	}
+# 	has_country_shield = yes
 
-	ohi_flavor_1 = {
-		icon = all_bases_covered
-		required_missions = { }
-		position = 3
-		trigger = {
-			legitimacy_equivalent = 95
-			has_adm_advisor_2 = yes
-			has_dip_advisor_2 = yes
-			has_mil_advisor_2 = yes
-			is_in_deficit = no
-		}
-		effect = {
-			if = {
-				limit = {
-					government = republic
-				}
-				custom_tooltip = ohi_better_elections_tt
-				set_country_flag = ohi_better_elections
-			}
-			else_if = {
-				limit = {
-					OR = {
-						current_age = age_of_absolutism
-						current_age = age_of_revolutions
-					}
-					NOT = { absolutism = 80 }
-					is_revolutionary = no
-				}
-				add_absolutism = 20
-			}
-			else = {
-				add_mil_power = 200
-			}
-		}
-	}
-}
+# 	ohi_flavor_1 = {
+# 		icon = all_bases_covered
+# 		required_missions = { }
+# 		position = 3
+# 		trigger = {
+# 			legitimacy_equivalent = 95
+# 			has_adm_advisor_2 = yes
+# 			has_dip_advisor_2 = yes
+# 			has_mil_advisor_2 = yes
+# 			is_in_deficit = no
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					government = republic
+# 				}
+# 				custom_tooltip = ohi_better_elections_tt
+# 				set_country_flag = ohi_better_elections
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					OR = {
+# 						current_age = age_of_absolutism
+# 						current_age = age_of_revolutions
+# 					}
+# 					NOT = { absolutism = 80 }
+# 					is_revolutionary = no
+# 				}
+# 				add_absolutism = 20
+# 			}
+# 			else = {
+# 				add_mil_power = 200
+# 			}
+# 		}
+# 	}
+# }

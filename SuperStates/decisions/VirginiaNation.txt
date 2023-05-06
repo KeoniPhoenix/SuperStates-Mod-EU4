@@ -7,11 +7,12 @@ country_decisions = {
 			NOT = { exists = VIR }
 			NOT = { exists = CSA }
 			NOT = { exists = NAM }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = ASE }
 			#NOT = { exists = CHS }
 			NOT = { exists = MID }
 			NOT = { exists = GCL }
+			NOT = { has_country_flag = formed_virginia_flag } #Only once
 			OR = {
 				tag = NVI
 				tag = WVA
@@ -82,6 +83,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			change_tag = VIR
+			set_country_flag = formed_virginia_flag
 			VIR = {
 				if = {
 					limit = {

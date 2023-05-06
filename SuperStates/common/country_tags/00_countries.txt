@@ -25,6 +25,7 @@ ATH	= "countries/Athens.txt"
 BOS	= "countries/Bosnia.txt"
 BUL	= "countries/Bulgaria.txt"
 BYZ	= "countries/ByzantineEmpire.txt"
+LAE	= "countries/Latin Empire.txt"
 CEP	= "countries/Corfu.txt"
 CRO	= "countries/Croatia.txt"
 CRT	= "countries/Crete.txt"
@@ -58,6 +59,7 @@ TYR = "countries/Tyrone.txt"
 WLS	= "countries/Wales.txt"
 NOL = "countries/Northumberland.txt"
 GBR	= "countries/GreatBritain.txt"
+AVE = "countries/AngevinEmpire.txt"
 MTH = "countries/Meath.txt"
 ULS = "countries/Ulster.txt"
 DMS = "countries/Desmond.txt" #Earldom of Desmond
@@ -70,6 +72,7 @@ FLY = "countries/Faly.txt"
 MCM = "countries/MacCarthy.txt" #Kingdom of Desmond
 KOI = "countries/Mann.txt"
 LOI = "countries/TheIsles.txt"
+EIC	= "countries/EastIndiaCompany.txt"
 
 #Colonies
 BRZ	= "countries/Brazil.txt"
@@ -957,6 +960,7 @@ COB = "countries/Coburg.txt"
 LOT = "countries/Lotharingia.txt"
 PGA = "countries/Perugia.txt"
 
+
 # 1.30 Formables
 TTS = "countries/Two Sicilies.txt"
 FKN = "countries/Franconia.txt"
@@ -1118,8 +1122,10 @@ OTG = "countries/OttawaGatineau.txt" 		# National Capital Region of Canada
 
 ##Mexico-Central America
 CAM = "countries/UPCA.txt"
+#CMX = "countries/CentralMexico.txt"			#Pre-Offical Mexican Tag
 EOC = "countries/Occidente.txt"
 MEX = "countries/Mexico.txt"				# End Tag
+#NBS = "countries/NewBiscay.txt"				#Spanish Nueva Vizcaya
 NOM = "countries/ElNorte.txt"				# Northern Mexico
 RRG = "countries/RioGrande.txt"
 LBC = "countries/LowerCalifornia.txt" 		# Baja Cali pen
@@ -1142,6 +1148,7 @@ PCO = "countries/PacificOceana.txt" 		# Unified Pacific islands & End Tag
 
 ##United States
 #ACA = "countries/AltaCalifornia.txt"		# End Tag, Greatest extent of California without Baja California
+#ALR = "countries/AlaskanRus.txt"			#Russian Alaska
 APL = "countries/Appalachia.txt"
 ASE = "countries/SoutheastUS.txt"
 AZL = "countries/Aztlan.txt"
@@ -1306,6 +1313,7 @@ MSK = "countries/Muskogee.txt" 				#In Florida
 NSH = "countries/NewShoreham.txt"			#New Shoreham
 NTQ = "countries/Nataqua.txt"				#Northwestern Nevada
 #NCN = "countries/NewConnecticut.txt"		#New Connecticut/Vermont Republic
+#OLE = "countries/NewOrleans.txt"			#City of New Orleans
 OZK = "countries/McDonald.txt"				#McDonald territory, Ozarks region
 MSL = "countries/Nantucket.txt" 			#Massachusetts Islands
 NCK = "countries/Nickajack.txt"				#In Georgia/Tennessee/Alabama
@@ -1336,8 +1344,12 @@ YPR = "countries/Superior.txt"				#Upper Peninsula of Michigan
 YZU = "countries/Yazoo.txt"					#Yazoo lands of Mississippi state
 
 #American Native Tribes
-
-
+# YUP = "countries/Yupik.txt"					#Native Western Alaska
+# HDA = "countries/Haida.txt"
+# BLA = "countries/Blackfoot.txt"
+# ASI = "countries/Assiniboine.txt"
+# SIO = "countries/Sioux.txt"
+# CHE = "countries/Cherokee.txt"
 
 #############################
 #Mexican States
@@ -1447,6 +1459,8 @@ HND = "countries/Honduras.txt"
 MSQ = "countries/Misquito.txt"
 NCG = "countries/Nicaragua.txt"
 PNM = "countries/Panama.txt"
+LOS = "countries/LosAltos.txt"
+
 
 #Caribbean States
 

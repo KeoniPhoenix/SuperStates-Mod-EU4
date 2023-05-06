@@ -7,15 +7,15 @@ add_accepted_culture = mantarian
 capital = 2642	# Toronto
 historical_rival = QUE
 
-change_estate_land_share = {
-	estate = estate_burghers
-	share = -20
-}
+# change_estate_land_share = {
+# 	estate = estate_burghers
+# 	share = -20
+# }
 
-change_estate_land_share = { #Spreads land out so the clergy don't have 0
-	estate = estate_church
-	share = 20
-}
+# change_estate_land_share = { #Spreads land out so the clergy don't have 0
+# 	estate = estate_church
+# 	share = 20
+# }
 
 1443.7.6 = {
 	monarch = {

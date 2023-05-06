@@ -6,8 +6,8 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ALA }
 			NOT = { exists = CAN }
-			NOT = { exists = NAU }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			NOT = { exists = ACU }
 			NOT = { has_country_flag = formed_alaska_flag }
 			OR = {

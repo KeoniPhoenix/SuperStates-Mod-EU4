@@ -17,6 +17,6 @@ historical_friend = SNA
 	}
 }
 
-1531.1.1 = {
-	religion = s_baptist
+1528.1.1 = {
+	religion = catholic
 }

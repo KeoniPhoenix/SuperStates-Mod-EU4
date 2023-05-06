@@ -631,6 +631,7 @@ native_american_tech_group = {
 				name = "rise_of_high_american"
 				duration = -1
 			}	
+			change_unit_type = high_american
 			change_technology_group = high_american
 		}
 	}

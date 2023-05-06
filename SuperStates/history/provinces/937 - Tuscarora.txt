@@ -21,8 +21,8 @@ center_of_trade = 1
 	fort_15th = yes #Tucson Presido
 }
 
-1531.1.1 = {
-	religion = s_baptist
+1528.1.1 = {
+	religion = catholic
 }
 
 1555.1.1 = {

@@ -3,7 +3,7 @@ add_government_reform = micronesian_republic
 government_rank = 1
 technology_group = oceanian
 primary_culture = marshallese
-religion = austral_catholic
+religion = austral_protestant
 capital = 1993	#Majuro
 
 1441.1.3 = {

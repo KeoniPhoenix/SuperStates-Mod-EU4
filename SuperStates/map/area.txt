@@ -410,7 +410,7 @@ upper_andalucia_area = { #4
 
 castille_area = { #5
 	color = { 58 58 207 }
-	215 217 2755 4551 4789
+	217 2755 4551 4789
 }
 
 toledo_area = { #5
@@ -418,7 +418,7 @@ toledo_area = { #5
 }
 
 asturias_area = { #4
-	 207 1745 4552 1746
+	1745 4552 1746 215
 }
 
 galicia_area = { #4
@@ -435,7 +435,7 @@ basque_country = { #3
 
 leon_area = { #3
 	color = { 243 235 28 }
-	208 216 4553 
+	208 216 4553 207 
 }
 
 extremadura_area = {
@@ -1719,9 +1719,9 @@ fiji_area = { #3
 # 	1241 1991 1993 1994
 # }
 
-# west_micronesia_area = { #3
-# 	1235 1995 1996
-# }
+west_micronesia_area = { #5
+	2726 2727 1996 4902 4897
+}
 
 # eastern_polynesia_area = { #3
 #	1244 1987 1988
@@ -2573,8 +2573,8 @@ saigoku_area = { #4 #Sanyodo
 # North Asia     	                   #
 ########################################
 
-kamchatka_area = { #5
-	1034 1035 1038 1041 2440
+kamchatka_area = { #6
+	1034 1035 1038 1041 2440 2670
 }
 
 kolyma_area = { #5
@@ -3161,7 +3161,7 @@ alaska_area = {
 }
 
 aleutia_area = {
-	974 2648 3235 3234 2670
+	974 2648 3235 3234
 }
 
 inside_passage_area = {
@@ -4100,20 +4100,20 @@ aus_indian_ocean_islands_area = {
 
 #ISLAND OCEANIA
 
-hawaii_area = { #4
-	969 3226 3227
+hawaii_area = { #5
+	969 3226 3227 968 3228
 }
 
-leeward_hawaiian_islands_area = { #4
-	968 1994 1997 3228
+leeward_hawaiian_islands_area = { #3
+	1994 1997 3338
 }
 
 marianas_area = { #4
 	1235 1240 2023 4896
 }
 
-western_polynesia_area = { #4
-	1241 3016 3389 3338
+western_polynesia_area = { #3
+	1241 3016 3389
 }
 
 central_polynesia_area = { #5
@@ -4155,9 +4155,9 @@ transvaal_area = { #4
 	4781 4782 4783 4784
 }
 
-micronesia_area = { #5
-	2726 2727 1996 4902 4897
-}
+# micronesia_area = { #5
+# 	2726 2727 1996 4902 4897
+# }
 
 eastern_micronesia_area = { #4
 	1995 1993 4898 2728

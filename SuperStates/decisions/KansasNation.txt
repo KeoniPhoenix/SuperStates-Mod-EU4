@@ -8,7 +8,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_great_plains_flag }
 			NOT = { has_country_flag = formed_kansas_flag }
 			NOT = { exists = KNS }
-			NOT = { exists = USA }
+			NOT = { tag = USA }
 			NOT = { exists = NAM }
 			NOT = { exists = GPL }
 			NOT = { exists = FSA }

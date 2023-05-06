@@ -34,8 +34,8 @@ discovered_by = mesoamerican
 }
 
 1675.2.5 = {
-	owner = VER
-	controller = VER
+	owner = VRM
+	controller = VRM
 	remove_core = FSA
 }
 

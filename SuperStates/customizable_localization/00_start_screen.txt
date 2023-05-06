@@ -668,7 +668,13 @@ defined_text = {
         localisation_key = string_start_superstates_great_plains
         trigger = {
 			capital_scope = {
-				region = great_plains_region
+				OR = {
+					region = great_plains_region
+					province_group = minnesota_provincegroup
+					province_group = iowa_provincegroup
+					province_group = missouri_provincegroup
+					province_group = oklahoma_provincegroup
+				}
 			}
         }
 	}
@@ -678,7 +684,12 @@ defined_text = {
         localisation_key = string_start_superstates_great_lakes
         trigger = {
 			capital_scope = {
-				region = great_lakes_region
+				OR = {
+					region = great_lakes_region
+					province_group = illinois_provincegroup
+					province_group = indiana_provincegroup
+					province_group = ohio_provincegroup
+				}
 			}
         }
 	}
@@ -688,7 +699,10 @@ defined_text = {
         localisation_key = string_start_superstates_american_south
         trigger = {
 			capital_scope = {
-				province_group = confederate_states_provincegroup
+				OR = {
+					province_group = confederate_states_provincegroup
+					province_group = kentucky_provincegroup
+				}
 			}
         }
 	}
@@ -698,7 +712,11 @@ defined_text = {
         localisation_key = string_start_superstates_mid_atlantic
         trigger = {
 			capital_scope = {
-				region = mid_atlantic_region
+				OR = {
+					region = mid_atlantic_region
+					province_group = west_virginia_provincegroup
+					province_group = pennsylvania_provincegroup
+				}
 			}
         }
 	}
@@ -1657,14 +1675,14 @@ defined_text = {
 			}
         }
     }
-	text = { #Central America
-        localisation_key = string_start_tag_central_america
-        trigger = {
-			capital_scope = {
-				superregion = central_america_superregion
-			}
-        }
-    }
+	# text = { #Central America
+    #     localisation_key = string_start_tag_central_america
+    #     trigger = {
+	# 		capital_scope = {
+	# 			superregion = central_america_superregion
+	# 		}
+    #     }
+    # }
 	text = { #Middle East
         localisation_key = string_start_tag_middle_east
         trigger = {

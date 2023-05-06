@@ -1,5 +1,4 @@
 government = republic
-add_government_reform = revolutionary_republic
 technology_group = north_american
 primary_culture = dominican
 religion = s_catholic

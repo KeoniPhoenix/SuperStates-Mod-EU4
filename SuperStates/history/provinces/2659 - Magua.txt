@@ -12,12 +12,13 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1502.1.1 = {
  	owner = CAS
 	controller = CAS
 	culture = castillian
 	add_core = CAS
-	religion = s_catholic
+	religion = catholic
 	is_city = yes
 } #First settlements of Puerto Plata
 1510.1.1 = { trade_goods = sugar }

@@ -385,7 +385,7 @@ wva_slot_3 = {
 			add_adm_power = 200
 			add_country_modifier = {
 				name = "wva_united_appalachia"
-				duration = 9125
+				duration = 7300
 			}
 		}
 		ai_weight = {
@@ -489,7 +489,7 @@ wva_slot_5 = {
 					owns_core_province = 2539
 				}
 				2539 = {
-					add_center_of_trade_level = 1
+					center_of_trade = 1
 				}
 			}
 			else = {

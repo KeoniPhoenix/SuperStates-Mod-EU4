@@ -2,7 +2,7 @@
 
 culture = carib
 religion = animism
-capital = "Dominica"
+capital = "Roseau"
 trade_goods = unknown 
 hre = no
 base_tax = 4
@@ -14,6 +14,7 @@ native_hostileness = 4
 #discovered_by = north_american
 #discovered_by = mesoamerican
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1715.1.1 = {
 	owner = FRA 
 	controller = FRA 
@@ -29,7 +30,7 @@ native_hostileness = 4
 	add_core = GBR
 	remove_core = FRA
 	culture = english
-	religion = reformed
+	religion = protestant
 } # The English took control at the end of the year
 1778.1.1 = {
 	owner = FRA

@@ -7,8 +7,8 @@ country_decisions = {
 			NOT = { exists = NYS }
 			NOT = { exists = MID }
 			NOT = { exists = FSA }
-			NOT = { exists = NAU }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			OR = {
 				tag = WNY
 				tag = NYC

@@ -14,14 +14,17 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1640.1.1 = {
 	owner = NED
 	controller = NED
 	add_core = NED
 	is_city = yes
 	culture = dutch
+	religion = reformed
 	trade_goods = sugar
 }
 1943.1.1 = {
-	add_core = SBA
+	culture = saban
+	add_core = SAB
 }

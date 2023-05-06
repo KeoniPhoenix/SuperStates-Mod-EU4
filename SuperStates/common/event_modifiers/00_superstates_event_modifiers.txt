@@ -443,15 +443,15 @@ cal_gold_mining  = {
 }
 
 cal_mil_silicon = {
-	mil_tech_cost_modifier = -0.05
+	mil_tech_cost_modifier = -0.075
 }
 
 cal_dip_silicon = {
-	dip_tech_cost_modifier = -0.05
+	dip_tech_cost_modifier = -0.075
 }
 
 cal_adm_silicon = {
-	adm_tech_cost_modifier = -0.05
+	adm_tech_cost_modifier = -0.075
 }
 
 cal_inno_silicon = {

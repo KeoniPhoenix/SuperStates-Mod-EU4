@@ -22,7 +22,7 @@ discovered_by = UVI
 	controller = SPA
 	add_core = SPA
 	culture = castillian
-	religion = s_catholic
+	religion = catholic
 	trade_goods = naval_supplies
 	is_city = yes
 } # Founded 
@@ -37,6 +37,7 @@ discovered_by = UVI
 1841.11.01 = { add_core = PNM }
 
 1903.11.3 = { 
+	culture = panamanian
 	owner = PNM
 	controller = PNM
 }

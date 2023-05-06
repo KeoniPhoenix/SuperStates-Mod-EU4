@@ -14,6 +14,7 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
+1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
 1649.1.1 = {
 	owner = FRA
 	controller = FRA
@@ -36,7 +37,6 @@ native_hostileness = 3
 1797.1.1 = {
 	unrest = 0
 	culture = english
-	religion = anglican
 } #Revolt crushed
 1843.1.1 = { trade_goods = spices }
 1958.1.3 = {

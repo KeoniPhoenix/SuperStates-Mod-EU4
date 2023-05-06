@@ -49,6 +49,7 @@ native_hostileness = 5
 1841.11.01 = { add_core = PNM }
 
 1903.11.3 = { 
+	culture = panamanian
 	owner = PNM
 	controller = PNM
 }

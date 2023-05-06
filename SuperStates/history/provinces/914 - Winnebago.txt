@@ -15,6 +15,10 @@ base_manpower = 4
 discovered_by = north_american
 discovered_by = mesoamerican
 
+1528.1.1 = {
+	religion = catholic
+}
+
 1399.1.1 = {
 	fort_15th = yes
 }

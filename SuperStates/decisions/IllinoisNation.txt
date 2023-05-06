@@ -3,16 +3,16 @@ country_decisions = {
 ## Reform into Illinois
 	reform_illinois = {
 		major = yes
-		potential = 	{
+		potential = {
 			NOT = { has_country_flag = formed_great_lakes_flag }
 			NOT = { has_country_flag = formed_midwest_flag }
 			NOT = { has_country_flag = formed_great_plains_flag }
 			NOT = { has_country_flag = formed_illinois_flag }
 			NOT = { exists = ILI }
-			NOT = { exists = USA }
+			NOT = { exists = NAM }
+			NOT = { tag = USA }
 			NOT = { exists = GLK }
 			#NOT = { exists = WBU }
-			NOT = { exists = USA }
 			#NOT = { exists = FSA }
 			OR = {
 				tag = CCK
