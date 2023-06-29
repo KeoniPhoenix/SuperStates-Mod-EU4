@@ -229,7 +229,7 @@ CSC_ideas = {
 CSA_ideas = {
 	start = {
 		cavalry_power = 0.2
-		free_leader_pool = 1
+		leader_cost = -0.1
 	}
 
 	bonus = {
@@ -260,7 +260,6 @@ CSA_ideas = {
 	legends_in_command = {
 		leader_land_fire = 1
 		leader_land_shock = 1
-	 	leader_land_manuever = 1
 	}
 	knights_of_the_golden_circle = {
 		unjustified_demands = -0.33
