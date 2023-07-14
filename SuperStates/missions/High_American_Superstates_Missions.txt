@@ -34,7 +34,7 @@ native_american_arctic = {
 					add_permanent_claim = ROOT
 				}
 			}
-			3003 = {
+			3033 = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
