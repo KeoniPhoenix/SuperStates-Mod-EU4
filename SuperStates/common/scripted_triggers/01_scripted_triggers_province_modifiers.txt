@@ -68,7 +68,27 @@ has_river_estuary_trigger = {
 			has_province_modifier = orinoco_estuary_modifier
 			#China
 			has_province_modifier = mng_bogue_modifier
-			##ADD Superstates Mod Province Modifiers
+			##Superstates Mod Province Modifiers
+			has_province_modifier = sfbay_estuary_modifier
+			has_province_modifier = colorado_estuary_modifier
+			has_province_modifier = chesapeake_estuary_modifier
+			has_province_modifier = hampton_roads_estuary_modifier
+			has_province_modifier = port_jackson_estuary_modifier
+			has_province_modifier = charles_estuary_modifier
+			has_province_modifier = savannah_estuary_modifier
+			has_province_modifier = mobile_estuary_modifier
+			has_province_modifier = galveston_estuary_modifier
+			has_province_modifier = pearl_harbor_modifier
+			has_province_modifier = biscayne_bay_modifier
+			has_province_modifier = narragansett_bay_modifier
+			has_province_modifier = passaic_river_modifier
+			has_province_modifier = guantanamo_bay_modifier
+			has_province_modifier = swan_river_modifier
+			has_province_modifier = puget_sound_modifier
+			has_province_modifier = lake_michigan_port_modifier
+			has_province_modifier = apalachicola_estuary_modifier
+			has_province_modifier = st_johns_estuary_modifier
+			has_province_modifier = connecticut_estuary_modifier 
 		}
 	}
 }
@@ -140,6 +160,27 @@ has_no_river_estuary_trigger = {
 			has_province_modifier = amur_estuary_modifier
 			has_province_modifier = orinoco_estuary_modifier
 			has_province_modifier = mng_bogue_modifier
+			##Superstates Mod Province Modifiers
+			has_province_modifier = sfbay_estuary_modifier
+			has_province_modifier = colorado_estuary_modifier
+			has_province_modifier = chesapeake_estuary_modifier
+			has_province_modifier = hampton_roads_estuary_modifier
+			has_province_modifier = port_jackson_estuary_modifier
+			has_province_modifier = charles_estuary_modifier
+			has_province_modifier = savannah_estuary_modifier
+			has_province_modifier = mobile_estuary_modifier
+			has_province_modifier = galveston_estuary_modifier
+			has_province_modifier = pearl_harbor_modifier
+			has_province_modifier = biscayne_bay_modifier
+			has_province_modifier = narragansett_bay_modifier
+			has_province_modifier = passaic_river_modifier
+			has_province_modifier = guantanamo_bay_modifier
+			has_province_modifier = swan_river_modifier
+			has_province_modifier = puget_sound_modifier
+			has_province_modifier = lake_michigan_port_modifier
+			has_province_modifier = apalachicola_estuary_modifier
+			has_province_modifier = st_johns_estuary_modifier
+			has_province_modifier = connecticut_estuary_modifier 
 		}
 	}
 }

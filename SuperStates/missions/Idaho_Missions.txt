@@ -97,6 +97,7 @@ IDA_greater_idaho = {
 				add_permanent_claim = ROOT
 			}
 			override_country_name = GREATER_IDA
+			set_country_flag = has_overriden_name_flag
 		}
 		ai_weight = {
 			factor = 75

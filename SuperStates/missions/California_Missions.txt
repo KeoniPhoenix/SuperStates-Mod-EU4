@@ -379,6 +379,7 @@ cal_las_and_gran = {
 		}
 		effect = {
 			country_event = { id = flavorCAL.1001 }
+			custom_tooltip = cal_las_cali_insight
 		}
 		ai_weight = {
 			factor = 75

@@ -550,6 +550,7 @@ cut_conquests_4 = {
 				country_event = {
 					id = flavorCUT.10
 				}
+				custom_tooltip = cut_westmoreland_insight_tt
 			}
 			else = {
 				4935 = {

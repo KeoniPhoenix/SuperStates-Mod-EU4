@@ -269,6 +269,7 @@ monarchy = {
 				manrent_reform
 				merchant_arsenal_reform
 				tercios_reform
+				expanded_black_army_reform
 			}
 		}
 		deliberative_assembly = {
@@ -434,6 +435,8 @@ monarchy = {
 		polish_great_sejm
 		system_of_councils_reform
 		courts_of_navarra
+		elective_monarchy_reform
+		elective_monarchy
 		#SuperStates Mod
 		american_empire_reform
 		mexican_empire_reform
@@ -611,6 +614,7 @@ republic = {
 				parliamentary_republic_reform
 				absolute_shogunate_reform
 				japanese_divine_empire
+				land_christian_sun_reform
 				#SuperStates Mod
 				american_republic
 				federal_republic
@@ -768,6 +772,7 @@ republic = {
 				manrent_reform
 				merchant_arsenal_reform
 				tercios_reform
+				expanded_black_army_reform
 			}
 		}
 		parliamentary_vs_presidential = {
@@ -1078,6 +1083,7 @@ tribal = {
 				manrent_reform
 				merchant_arsenal_reform
 				tercios_reform
+				expanded_black_army_reform
 			}
 		}
 		tribal_modernization = {
@@ -1309,6 +1315,7 @@ theocracy = {
 				manrent_reform
 				merchant_arsenal_reform
 				tercios_reform
+				expanded_black_army_reform
 			}
 		}
 		secularization = {

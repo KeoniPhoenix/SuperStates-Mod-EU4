@@ -606,7 +606,7 @@ merc_scottish_guard = {
 		}
 	}
 	modifier = {
-		fire_damage_received = -0.05
+        fire_damage_received = -0.05
 	}
 }
 
@@ -616,7 +616,7 @@ merc_scottish_guard_superstates = {
 	cavalry_weight = 0.1
 	artillery_weight = 0.3
 	cavalry_cap = 2
-	home_province = 1810
+	home_province = 1811
 	sprites = { dlc087_sco_sprite_pack dlc001_sco_sprite_pack sco_base_sprite_pack westerngfx_sprite_pack }
 	trigger = { 
 		is_allowed_to_recruit_mercenaries = yes 
@@ -630,15 +630,9 @@ merc_scottish_guard_superstates = {
 			any_owned_province = {
 				area = nova_scotia_area
 			}
-			OR = {
-				AND = {
-					owns = 3063
-					culture = cape_bretoner
-				}
-				AND = {
-					owns = 1810
-					culture = cape_bretoner
-				}
+			AND = {
+				owns = 1811
+				culture = nova_scotian
 			}
 			has_country_modifier = scottish_mercenaries
 			has_country_modifier = mercenaries_to_the_standard
@@ -776,6 +770,7 @@ merc_buccaneer_battalion = {
 				tooltip = golden_age_of_piracy_merc_tt
 				has_global_flag = golden_age_of_piracy
 			}
+			culture_group = caribbean_islander
 			exists = TOR
 		}
 		4590 = {
@@ -1749,12 +1744,12 @@ merc_miquelet_company = {
 
 merc_free_company_of_volunteers = {
     regiments_per_development = 0.03
-    home_province = 4579 # Sayula
+    home_province = 828 # Cartagena
 	sprites = { dlc011_spa_sprite_pack westerngfx_sprite_pack }
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		is_random_new_world = no
-		4579 = {
+		828 = {
 			is_city = yes
 			owner = {
 				OR = {
@@ -1827,72 +1822,59 @@ merc_free_swiss_guard = {
 
 merc_colonial_rangers = {
     regiments_per_development = 0.025
-    home_province = 2569 # Eskikewakik, eventually Halifax, Nova Scotia
+    home_province = 2616 #DC
     cost_modifier = 1.25
 	artillery_weight = 0.1
 	sprites = { dlc016_eng_sprite_pack westerngfx_sprite_pack }
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		is_random_new_world = no
-		2569 = {
-			is_city = yes
-			owner = {
-				OR = {
-					is_colonial_nation = yes
-					is_former_colonial_nation = yes
-				}
-			}
-		}
-		OR = {
-			is_colonial_nation = yes
-			is_former_colonial_nation = yes
-			any_subject_country = {
-				is_colonial_nation = yes
-			}
+		capital_scope = { 
+			region = mid_atlantic_region
 		}
 	}
     modifier = {
 		movement_speed = 0.1
-		land_morale = 0.1
+        land_morale = 0.1
 	}
 }
 
-merc_colonial_rangers_superstates = {
-	regiments_per_development = 0.025
-	home_province = 1811 # Eskikewakik, eventually Halifax, Nova Scotia
-	cost_modifier = 1.25
-	artillery_weight = 0.1
-	sprites = { dlc016_eng_sprite_pack westerngfx_sprite_pack }
-	trigger = {
-		is_allowed_to_recruit_mercenaries = yes 
-		is_random_new_world = no
-		OR = {
-			1811 = {
-				is_city = yes
-				owner = {
-					OR = {
-						is_colonial_nation = yes
-						is_former_colonial_nation = yes
-					}
-				}
-			}
-		}
-		any_owned_province = {
-			area = nova_scotia_area
-		}
-		OR = {
-			is_colonial_nation = yes
-			is_former_colonial_nation = yes
-			any_subject_country = {
-				is_colonial_nation = yes
-			}
-		}
-	}
-	modifier = {
-		movement_speed = 0.1
-		land_morale = 0.1
-	}
-}
+# merc_colonial_rangers_superstates = {
+# 	regiments_per_development = 0.025
+# 	home_province = 1811 # Eskikewakik, eventually Halifax, Nova Scotia
+# 	cost_modifier = 1.25
+# 	artillery_weight = 0.1
+# 	sprites = { dlc016_eng_sprite_pack westerngfx_sprite_pack }
+# 	trigger = {
+# 		is_allowed_to_recruit_mercenaries = yes 
+# 		is_random_new_world = no
+# 		OR = {
+# 			1811 = {
+# 				is_city = yes
+# 				owner = {
+# 					OR = {
+# 						is_colonial_nation = yes
+# 						is_former_colonial_nation = yes
+# 					}
+# 				}
+# 			}
+# 		}
+# 		any_owned_province = {
+# 			area = nova_scotia_area
+# 		}
+# 		OR = {
+# 			is_colonial_nation = yes
+# 			is_former_colonial_nation = yes
+# 			any_subject_country = {
+# 				is_colonial_nation = yes
+# 			}
+# 		}
+# 	}
+# 	modifier = {
+# 		movement_speed = 0.1
+# 		land_morale = 0.1
+# 	}
+# }
 
 merc_independent_cossack_host = {
     regiments_per_development = 0.05
@@ -2230,7 +2212,7 @@ merc_gascon_musket_company = {
     regiments_per_development = 0.025
     home_province = 175
     cost_modifier = 1.2
-	sprites = { dlc119_TOU_sprite_pack dlc001_amg_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
+	sprites = { dlc120_TOU_sprite_pack dlc001_amg_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		capital_scope = { superregion = europe_superregion }
@@ -2328,7 +2310,7 @@ merc_militant_order_of_saint_joan = {
 	cavalry_cap = 2
     home_province = 184
 	cost_modifier = 0.5
-	sprites = { dlc119_CHP_sprite_pack dlc001_orl_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
+	sprites = { dlc120_CHP_sprite_pack dlc001_orl_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		has_country_flag = militant_order_of_saint_joan
@@ -3425,18 +3407,15 @@ merc_jewish_legion = {
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		OR = {
-			capital_scope = {
-					region = mid_atlantic_region
+			any_owned_province = {
+				region = mid_atlantic_region
 			}
 			any_owned_province = {
-					region = mid_atlantic_region
-				}
-			any_owned_province = {
-					religion = jewish
-				}
+				religion = jewish
+			}
 			religion = jewish
-			}
 		}
+	}
 	modifier = {
 		discipline = 0.025
 	}

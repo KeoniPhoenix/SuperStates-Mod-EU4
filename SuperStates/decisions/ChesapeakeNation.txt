@@ -78,6 +78,7 @@ country_decisions = {
 								}
 			add_prestige = 10
 			override_country_name = CHESAPEAKE
+			set_country_flag = has_overriden_name_flag
 			# ROOT = {
 			# 	set_capital = 2531			# Baltimore
 			# }

@@ -645,8 +645,10 @@
  desc_hwi_iolani_palace_modifier:0 ""
  hwi_culture_modifier:0 "Native Hawaiian Culture"
  desc_hwi_culture_modifier:0 "We honor the legacy of the native Hawaiians."
- 
- 
+ hwi_govenment_support:0 "Support for Reforms"
+ desc_hwi_govenment_support:0 "The people and a majority of the elites in our government support the reforms that our nation is taking."
+ hwi_japan_modifier:0 "Presence in Japan"
+ desc_hwi_japan_modifier:0 "We have established a presence in Japan."
 
  #Michigan
  mic_ohio_defeated:0 "Ohio Crushed"

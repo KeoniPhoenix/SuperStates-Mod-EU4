@@ -1,0 +1,407 @@
+##########################
+#
+#  Written by:
+#  goik
+#
+##########################
+
+namespace = flavorHWI
+
+country_event = { #Restore the Hawaiian Monarchy?
+	id = flavorHWI.10
+	title = "flavorHWI.10t"
+	desc = "flavorHWI.10d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavorHWI.10opta"
+		change_government = monarchy
+		add_government_reform = hawaiian_monarchy_reform
+		reduce_estate_burghers_loyalty_effect = yes
+		change_government_reform_progress = -50
+		country_event = {
+			id = flavorHWI.11
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		trigger = {
+			government = republic
+		}
+		name = "flavorHWI.10optb"
+		add_estate_burghers_loyalty_effect = yes
+		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				government = republic
+			}
+		}
+		name = "flavorHWI.10optc"
+		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+country_event = { #Choose a dynasty
+	id = flavorHWI.11
+	title = "flavorHWI.11t"
+	desc = "flavorHWI.11d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #House of Kamehameha
+		name = "flavorHWI.11opta"
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {}
+		}
+		define_ruler = {
+			min_age = 20
+			max_age = 35
+			adm = 3
+			dip = 1
+			mil = 5
+			dynasty = "Kamehameha"
+			random_gender = yes
+			claim = 85
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { #House of Kalākaua
+		name = "flavorHWI.11optb"
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {}
+		}
+		define_ruler = {
+			min_age = 20
+			max_age = 35
+			adm = 4
+			dip = 3
+			mil = 2
+			dynasty = "Kalakaua"
+			random_gender = yes
+			claim = 85
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { #House of Kawānanakoa (modern decendents that exists today)
+		name = "flavorHWI.11optc"
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {}
+		}
+		define_ruler = {
+			min_age = 20
+			max_age = 35
+			adm = 2
+			dip = 4
+			mil = 3
+			dynasty = "Kawananakoa"
+			random_gender = yes
+			claim = 95
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { #Keep current ruler as king
+		name = "flavorHWI.11optd"
+		add_legitimacy = -10
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { # Mahele
+	id = flavorHWI.12
+	title = "flavorHWI.12t"
+	desc = "flavorHWI.12d"
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_or_was_tag = {
+			tag = HWI
+		}
+		has_reform = hawaiian_monarchy_reform
+		is_year = 1470
+		has_estate = estate_nobles
+		has_estate = estate_burghers
+	}
+
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	option = {
+		name = "flavorHWI.12opta"
+		add_years_of_income = 1
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -15
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 15
+		}
+		add_estate_nobles_loyalty_effect = yes
+		reduce_estate_burghers_loyalty_effect = yes
+		set_estate_privilege = estate_nobles_mahele
+	}
+}
+
+country_event = { #Expedition to America
+	id = flavorHWI.13
+	title = "flavorHWI.13t"
+	desc = "flavorHWI.13d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "flavorHWI.13opta"
+		custom_tooltip = hwi_expedition_tt
+		hidden_effect = {
+			country_event = {
+				id = flavorHWI.14
+				days = 300
+			}
+		}
+	}
+}
+
+country_event = { #Expedition Returns
+	id = flavorHWI.14
+	title = "flavorHWI.14t"
+	desc = "flavorHWI.14d"
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			discover_province = 1699
+			discover_province = 1693
+			discover_province = 1694
+			discover_province = 1687
+			discover_province = 1550
+			berring_sea_area = {
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			gulf_of_alaska_area = {
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			north_pacific_coast_area = {
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			pacific_coast_region = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			costa_oeste_region = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			western_canada_region = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			inside_passage_area = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			alaska_area = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			aleutia_area = {
+				limit = {
+					has_port = yes
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "flavorHWI.14opta"
+		add_prestige = 5
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		name = "flavorHWI.14optb"
+		add_prestige = 10
+		add_treasury = -50
+		create_explorer = {
+			tradition = 30
+		}
+	}
+}
+
+country_event = { #Ally or good relationed nation asked to sell institution
+	id = flavorHWI.15
+	title = "flavorHWI.15t"
+	desc = "flavorHWI.15d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		ROOT = {
+			save_event_target_as = hwi_institution_seller #used for localization
+		}
+	}
+
+	option = { #Yes, sell the renaissance
+		name = "flavorHWI.15opta"
+		add_treasury = 75
+		tooltip = {
+			HWI = {
+				capital_scope = {
+					add_institution_embracement = {
+						which = renaissance
+						value = 100
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = hwi_asker_for_renaissance
+				}
+				country_event = {
+					id = flavorHWI.16
+					days = 7
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #No can do pal.
+		name = "flavorHWI.15optb"
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					has_country_flag = hwi_asker_for_renaissance
+				}
+				country_event = {
+					id = flavorHWI.17
+					days = 7
+				}
+			}
+		}
+		ai_chance = { #AI will never say no - but a player could
+			factor = 0
+		}
+	}
+}
+
+country_event = { #They agree
+	id = flavorHWI.16
+	title = "flavorHWI.16t"
+	desc = "flavorHWI.16d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Perfect
+		name = "flavorHWI.16opta"
+		add_treasury = -75
+		capital_scope = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 100
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		clr_country_flag = hwi_asker_for_renaissance
+	}
+}
+
+country_event = { #They say no
+	id = flavorHWI.17
+	title = "flavorHWI.17t"
+	desc = "flavorHWI.17d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Very sad
+		name = "flavorHWI.17opta"
+		add_prestige = -5
+		ai_chance = {
+			factor = 1
+		}
+	}
+	after = {
+		clr_country_flag = hwi_asker_for_renaissance
+	}
+}

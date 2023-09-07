@@ -1,0 +1,73 @@
+country_decisions = {
+	guatemala_belize_colonization = {
+		major = yes
+		potential = {
+			OR = {
+				tag = GTM
+				tag = CAM
+			}
+			843 = {
+				is_city = no
+				is_colony = no
+			}
+			4589 = {
+				is_city = no
+				is_colony = no
+			}
+			total_development = 50
+			owns = 842
+			owns = 2636
+			owns = 4594 
+		}
+		allow = {
+			843 = {
+				is_empty = yes
+			}
+			4589 = {
+				is_empty = yes
+			}
+			capital_scope = {
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+			}
+			has_institution = feudalism
+			has_institution = renaissance
+			is_year = 1475
+			is_at_war = no
+			stability = 0
+			treasury = 500
+			total_development = 75
+			num_of_rebel_armies = 0
+			num_of_rebel_controlled_provinces = 0
+		}
+		effect = {
+			add_treasury = -500
+			capital_scope = {
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			random_owned_province = {
+				limit = {
+					AND = {
+						base_tax = 2
+						base_production = 2
+						base_manpower = 2
+					}
+				}
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			843 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+			4589 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+		}
+	}
+}
