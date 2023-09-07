@@ -1,0 +1,1140 @@
+hwi_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HWI } 
+
+	hwi_government_1 = {
+		icon = mission_oceania_royal_marriage
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			government_reform_progress = 50
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 40
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 40
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 40
+				}
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = flavorHWI.10
+			}
+			custom_tooltip = hwi_monarchy_insight_tt
+		}
+	}
+
+	hwi_government_2 = {
+		icon = balance_the_estates
+		position = 3
+		required_missions = { hwi_government_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			reform_level = 6
+			if = {
+				limit = {
+					government = monarchy
+				}
+				legitimacy = 95
+				NOT = {
+					has_estate_privilege = estate_nobles_mahele
+				}
+			}
+			else_if = {
+				limit = {
+					government = republic
+				}
+				republican_tradition = 95
+			}
+		}
+
+		effect = {
+			add_dip_power = 75
+			add_country_modifier = {
+				name = "hwi_govenment_support"
+				duration = 7300
+			}
+		}
+	}
+
+	hwi_japan_1 = {
+		icon = mission_trade_with_japan
+		position = 4
+		required_missions = {
+			hwi_government_2
+			hwi_marianas_islands
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = japan_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				region = japan_region
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					government = monarchy
+					exists = JAP
+					JAP = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					target = JAP
+					months = 300
+				}
+			}
+			else_if = {
+				limit = {
+					government = monarchy
+					any_country = {
+						has_reform = shogunate
+						is_subject = no
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = shogunate
+						is_subject = no
+					}
+					ROOT = {
+						add_casus_belli = {
+							type = cb_restore_personal_union
+							target = PREV
+							months = 300
+						}
+					}
+				}
+			}
+			else = {
+				add_country_modifier = { #For non-monarchies to get bonus
+					name = "hwi_japan_modifier"
+					duration = 7300
+				}
+			}
+			japan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	# hwi_japan_2 = {
+	# 	icon = mission_japanese_fort
+	# 	position = 5
+	# 	required_missions = { hwi_japan_1 } 
+	# 	provinces_to_highlight = {  } 
+
+	# 	trigger = {  } 
+
+	# 	effect = {  } 
+	# }
+}
+hwi_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HWI } 
+
+	hwi_midway = {
+		icon = mission_conquer_arakan
+		position = 2
+		required_missions = { hwi_navy_buildup } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 1997
+					}
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							is_city = yes
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 3338
+					}
+					NOT = {
+						OR = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = infantry
+								amount = 3
+							}
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 1994
+					}
+					NOT = {
+						OR = {
+							num_of_units_in_province = {
+								who = ROOT
+								type = infantry
+								amount = 3
+							}
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			1997 = {
+				owned_by = ROOT
+				is_city = yes
+			}
+			if = {
+				limit = {
+					3338 = { is_empty = yes }
+				}
+				3338 = {
+					OR = {
+						num_of_units_in_province = {
+							who = ROOT
+							type = infantry
+							amount = 3
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				owns_or_non_sovereign_subject_of = 3338
+			}
+			if = {
+				limit = {
+					1994 = { is_empty = yes }
+				}
+				1994 = {
+					OR = {
+						num_of_units_in_province = {
+							who = ROOT
+							type = infantry
+							amount = 3
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				owns_or_non_sovereign_subject_of = 1994
+			}
+		}
+
+		effect = {
+			marianas_area = {
+				limit = {
+					is_city = yes
+					NOT = { is_core = ROOT }
+				}
+				add_core = ROOT
+			}
+			create_colony_mission_reward = {
+				province = 1994 #Wake
+			}
+			create_colony_mission_reward = {
+				province = 3338 #Johnston Atoll
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						3338 = {
+							religion = noreligion
+						}
+					}
+					3338 = {
+						change_religion = ROOT
+					}
+				}
+				if = {
+					limit = {
+						3338 = {
+							culture = noculture
+						}
+					}
+					3338 = {
+						change_culture = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	hwi_marianas_islands = {
+		icon = mission_invade_island
+		position = 3
+		required_missions = { hwi_midway } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1235
+				province_id = 4896
+				province_id = 1240
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			1235 = {
+				owned_by = ROOT
+			}
+			4896 = {
+				owned_by = ROOT
+			}
+			1240 = {
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			west_micronesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_micronesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = hwi_discover_japan_tt
+			hidden_effect = {
+				japan_region = {
+					limit = {
+						has_port = yes
+					}
+					ROOT = {
+						discover_province = PREV
+					}
+				}
+				discover_province = 1390
+				discover_province = 1437
+				discover_province = 1439
+				discover_province = 1391
+				discover_province = 4224
+				discover_province = 1440
+				discover_province = 4225
+				discover_province = 1387
+				discover_province = 1980
+				discover_province = 1388
+				discover_province = 1376
+				discover_province = 1389
+				discover_province = 1392
+			}
+		}
+	}
+
+	hwi_micronesia = {
+		icon = mission_unite_coromandel
+		position = 4
+		required_missions = { hwi_marianas_islands } 
+		provinces_to_highlight = {
+			OR = {
+				area = west_micronesia_area
+				area = eastern_micronesia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			west_micronesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_micronesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			pacific_islands_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = hwi_philippines_tt
+			hidden_effect = {
+				palawan_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				west_mindanao_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				mindanao_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				visayas_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				luzon_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_luzon_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = "hwi_colonist_modifier"
+				duration = 10950
+			}
+		}
+	}
+
+	hwi_philippines = {
+		icon = mission_las_islas_filipinas
+		position = 5
+		required_missions = { hwi_micronesia } 
+		provinces_to_highlight = {
+			OR = {
+				area = southern_luzon_area
+				area = luzon_area
+				area = visayas_area
+				area = mindanao_area
+				area = west_mindanao_area
+				area = palawan_area
+			}
+			has_discovered = ROOT
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = yes
+				}
+			}
+		}
+
+		trigger = {
+			southern_luzon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+			luzon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+			visayas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+			west_mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+			palawan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+			mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_accepted_culture_or_dip_power = {
+				culture = filipino
+			}
+			add_mercantilism = 3
+		}
+	}
+}
+hwi_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HWI } 
+
+	hwi_navy_buildup = {
+		icon = mission_polynesian_navy_build
+		position = 1
+		trigger = {
+			num_of_admirals = 1
+			navy_size_percentage = 1
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_navy_built_up"
+				duration = 5475
+			}
+			if = {
+				limit = {
+					1997 = {
+						is_empty = yes
+					}
+				}
+				create_colony_mission_reward = {
+					province = 1997 #Midway
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						1997 = {
+							religion = noreligion
+						}
+					}
+					1997 = {
+						change_religion = ROOT
+					}
+				}
+				if = {
+					limit = {
+						1997 = {
+							culture = noculture
+						}
+					}
+					1997 = {
+						change_culture = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	hwi_royal_navy = {
+		icon = mission_establish_high_seas_navy
+		position = 2
+		required_missions = { hwi_navy_buildup } 
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+				}
+				has_flagship = yes
+				num_of_heavy_ship = 3
+			}
+			else = {
+				num_of_heavy_ship = 5
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_navy_tradition_modifier"
+				duration = 9125
+			}
+			add_navy_tradition = 15
+		}
+	}
+
+	hwi_pearl_harbor = {
+		icon = mission_galleys_in_port
+		position = 3
+		required_missions = { hwi_royal_navy }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 968
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+		}
+		trigger = {
+			968 = {
+				owned_by = ROOT
+				has_shipyard_building_trigger = yes
+			}
+			968 = {
+				has_dock_building_trigger = yes
+			}
+			OR = {
+				968 = {
+					has_building = impressment_offices
+				}
+				max_sailors = 7500
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_marine_1_modifier"
+				duration = -1
+			}
+			tooltip = {
+				968 = {
+					add_province_modifier = {
+						name = "pearl_harbor_upgraded_modifier"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = hwi_upgrade_pearl_harbor_tt
+			hidden_effect = {
+				968 = {
+					remove_province_modifier = "pearl_harbor_modifier"
+				}
+				968 = {
+					add_permanent_province_modifier = {
+						name = "pearl_harbor_upgraded_modifier"
+					}
+				}
+			}
+		}
+	}
+
+	hwi_marines = {
+		icon = army_reforms
+		position = 4
+		required_missions = { hwi_pearl_harbor } 
+		trigger = {
+			impressment_offices = 8
+			num_of_marines = 40
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_marine_2_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	hwi_island_hopping_4 = {
+		icon = mission_polynesian_grand_navy
+		position = 5
+		required_missions = { hwi_micronesia } 
+		provinces_to_highlight = {
+			OR = {
+				region = pacific_islands_region
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			pacific_islands_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_country_modifier = {
+				name = "hwi_pacific_islands_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+hwi_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HWI } 
+
+	hwi_expedition = {
+		icon = mission_look_west
+		position = 2
+		required_missions = { hwi_navy_buildup hwi_develop_1 }
+		trigger = {
+			treasury = 75
+		}
+
+		effect = {
+			add_treasury = -75
+			country_event = {
+				id = flavorHWI.13
+			}
+		} 
+	}
+
+	hwi_institutions = {
+		icon = purely_for_commerce
+		position = 3
+		required_missions = { hwi_expedition } 
+		trigger = {
+			OR = {
+				has_institution = renaissance
+				AND = {
+					treasury = 75
+					any_known_country = {
+						has_institution = renaissance
+						OR = {
+							has_opinion = {
+								who = ROOT
+								value = 125
+							}
+							alliance_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_wave_of_innovation"
+				duration = 5475 #15 years
+			}
+			custom_tooltip = hwi_can_change_techgroups_tt
+			hidden_effect = {
+				set_country_flag = hwi_can_change_techgroups_flag
+			}
+			custom_tooltip = hwi_can_buy_institutions_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_institution = renaissance
+						}
+					}
+					random_known_country = {
+						limit = {
+							has_institution = renaissance
+							OR = {
+								has_opinion = {
+									who = ROOT
+									value = 125
+								}
+								alliance_with = ROOT
+							}
+						}
+						country_event = {
+							id = flavorHWI.15
+							days = 7
+						}
+					}
+					set_country_flag = hwi_asker_for_renaissance
+				}
+			}
+		}
+	}
+
+	hwi_hawaiian_education = {
+		icon = mission_early_modern_university
+		position = 4
+		required_missions = { hwi_institutions } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 968
+			}
+			NOT = {
+				has_building = university
+			}
+		}
+
+		trigger = {
+			968 = {
+				owned_by = ROOT
+				has_building = university
+			}
+			has_better_tech_than_westerns = yes
+			is_lacking_institutions = no
+		}
+
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				968 = {
+					add_province_modifier = {
+						name = "hwi_education_modifier"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				968 = {
+					add_province_modifier = {
+						name = "hwi_education_modifier_no_dlc"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+hwi_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HWI } 
+
+	hwi_develop_1 = {
+		icon = mission_early_game_buildings
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 968
+			}
+			NOT = {
+				has_tax_building_trigger = yes
+			}
+		}
+
+		trigger = {
+			stability = 1
+			968 = {
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_adm_power = 50
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 5475
+			}
+		} 
+	}
+
+	hwi_develop_2 = {
+		icon = mission_colonial
+		position = 2
+		required_missions = { hwi_develop_1 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = hawaii_area
+					}
+					NOT = {
+						num_of_times_improved = 3
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 968
+					}
+					NOT = {
+						development = 20
+					}
+				}
+				AND = {
+					OR = {
+						area = hawaii_area
+					}
+					NOT = {
+						devastation = 0
+					}
+				}
+			}
+		}
+
+		trigger = {
+			968 = {
+				development = 20
+			}
+			hawaii_area = {
+				type = all
+				num_of_times_improved = 3
+			}
+			hawaii_area = {
+				type = all
+				devastation = 0
+			}
+		}
+
+		effect = {
+			hawaii_area = {
+				add_province_modifier = {
+					name = "hwi_construction_efforts"
+					duration = 9125
+				}
+			}
+			custom_tooltip = hwi_volcano_preparations_tt
+		}
+	}
+
+	hwi_develop_3 = {
+		icon = mission_asian_trader
+		position = 3
+		required_missions = { hwi_develop_2 } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 1697 #Coast of Hawaii
+					}
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 75
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 968
+					}
+					if = {
+						limit = { has_dlc = "Dharma" }
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					else = {
+						NOT = {
+							OR = {
+								has_building = trade_depot
+								has_building = stock_exchange
+							}
+						}	
+					}
+				}
+			}
+		}
+
+		trigger = {
+			968 = {
+				hidden_trigger = {
+					owned_by = ROOT
+				}
+				if = {
+					limit = { has_dlc = "Dharma" }
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}
+			}
+			1697 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
+			mercantilism = 20
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hwi_trade_modifier"
+				duration = -1
+			}
+			add_years_of_income = 2
+		}
+	}
+}
+
+hwi_slot_5_b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = HWI
+		has_dlc = "Leviathan"
+	}
+
+	hwi_palace = {
+		icon = mission_iolani_palace
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 968
+			}
+			NOT = {
+				OR = {
+					has_great_project = {
+						type = iolani_palace
+						tier = 2
+					}
+					has_great_project = {
+						type = iolani_palace
+						tier = 3
+					}
+				}
+			}
+		}
+
+		trigger = {
+			968 = {
+				OR = {
+					has_great_project = {
+						type = iolani_palace
+						tier = 2
+					}
+					has_great_project = {
+						type = iolani_palace
+						tier = 3
+					}
+				}
+			}
+		}
+
+		effect = {
+			change_ruler_stat = {
+				stat = adm
+				amount = 2
+			}
+			add_country_modifier = {
+				name = "hwi_iolani_palace_modifier"
+				duration = 10950
+			}
+		}
+	}
+
+	hwi_hawaiian_culture = {
+		icon = mission_oceania_dev_capital
+		position = 5
+		required_missions = { hwi_palace } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 90
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					in_golden_age = yes
+					has_had_golden_age = yes
+				}
+			}
+			else = {
+				stability = 3
+			}
+		}
+
+		effect = {
+			add_splendor = 400
+			add_country_modifier = {
+				name = "hwi_culture_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+
+hwi_slot_5_c = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = HWI
+		NOT = {
+			has_dlc = "Leviathan"
+		}
+	} 
+
+	hwi_hawaiian_culture_b = {
+		icon = mission_oceania_dev_capital
+		position = 4
+		required_missions = { } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 90
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					in_golden_age = yes
+					has_had_golden_age = yes
+				}
+			}
+			else = {
+				stability = 3
+			}
+		}
+
+		effect = {
+			add_splendor = 400
+			add_country_modifier = {
+				name = "hwi_culture_modifier"
+				duration = -1
+			}
+		}
+	}
+}
