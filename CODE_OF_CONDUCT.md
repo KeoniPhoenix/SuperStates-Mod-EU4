@@ -1,4 +1,4 @@
-#Code of Conduct
+# Code of Conduct #
 
 1. This is a relaxed project, there generally are no deadlines and therefore there is no need to stress.
 
