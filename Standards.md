@@ -33,6 +33,8 @@ Some Canadian provinces have only a single level of local government but have di
 
 Mexico operates mostly like the US however most of the time the county-equivalent is the only local government in that state, municipalities in Mexico are varied by state just like the United States.  The same rules apply in naming, though most large cities are also their municipality name in most, but not all, instances in Mexico.
 
+Argentina, Brazil, and Venezeula all use similar systems for their county-equivalent municipalities as Mexico.
+
 ## Use of DLC Features ##
 
 Some features of DLCs can be implemented within the mod, however the code for them must always restrict it so as to require the DLC in question to be active for the players playing the mod.  This is entirely a liability reduction issue between the Mod authors and Paradox Interactive.
