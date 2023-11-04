@@ -2,7 +2,7 @@
 
 ## Scope of Area ##
 
-The mod's scope of area is to defined as the **subnational entities** of nations with a **federal system** within the regions of **Australia, Oceania, North and South America**.  Not all federal nations are included currently (Brazil, Venezeula, Argentina, the long since defunct Federal Republic of Central America; over time these are expected to be added).
+The mod's scope of area is defined as the **subnational entities** of nations with a **federal system** within the regions of **Australia, Oceania, North and South America**.  Not all federal nations are included currently (Brazil, Venezeula, Argentina, the long since defunct Federal Republic of Central America; over time these are expected to be added).
 
 Most nations that are added that aren't federal in nature are included as flavor and are only intended to appear as the game progresses (such as the currently implimented Caribbean nations not part of the United States) and others are implimented from the start due to their past association with the United States or other federal nation (UN Pacific Trust Territories in the late 20th century).
 
