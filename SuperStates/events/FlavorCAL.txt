@@ -407,6 +407,11 @@ country_event = {
 		add_stability_or_adm_power = yes
 		add_prestige = 10
 	 	override_country_name = LAS_CALIFORNIAS
+		change_country_color = {
+			color = { 230 190 138 }
+		}
+		set_country_flag = has_overriden_color_flag
+		set_country_flag = has_overriden_name_flag
 	}
 	option = { #Keep Current Name
 		name = "flavorCAL.1001optb"

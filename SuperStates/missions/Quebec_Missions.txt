@@ -83,6 +83,7 @@ que_slot_1 = {
 			country_event = { #An event to either convert Ottawa to Quebecois - losing 3 dev points and giving Gatineu the dev points OR reducing unrest in all owned Ontarian cultured provinces
 				id = flavorQUE.101
 			}
+			custom_tooltip = que_ottawa_insight_tt
 			ontario_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -496,6 +497,7 @@ que_slot_2 = {
 				country_event = { #use ethiopia as an example - event popup to change but with option to pass and unlocking a decision if you want to do it later
 					id = flavorQUE.100
 				}
+				custom_tooltip = que_new_france_insight_tt
 			}
 			manitoba_area = {
 				limit = {

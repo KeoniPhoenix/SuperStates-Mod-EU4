@@ -14,9 +14,7 @@ estate_nobles_mahele = {
 		OR = {
 			NOT = { has_reform = hawaiian_monarchy_reform }
 			ruler_total_stats = {
-				custom_tooltip = hwi_have_good_ruler
 				stats = 14
-				who = ROOT
 			}
 			crown_land_share = 50
 			absolutism = 30

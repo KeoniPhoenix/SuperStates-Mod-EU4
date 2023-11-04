@@ -722,6 +722,28 @@ vir_slot_4 = {
 				name = "vir_focus_navy"
 				duration = 9125
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						481 = {
+							religion = noreligion
+						}
+					}
+					481 = {
+						change_religion = ROOT
+					}
+				}
+				if = {
+					limit = {
+						481 = {
+							culture = noculture
+						}
+					}
+					481 = {
+						change_culture = ROOT
+					}
+				}
+			}
 		}
 	}
 

@@ -382,3 +382,89 @@ gen_canadian = {
 		}
 	}
 }
+
+#Great Lake Regional
+gen_greatlakes = {
+	slot = 5
+	generic = yes
+	ai = yes
+
+	potential = {
+		capital_scope = {
+			region = great_lakes_region
+		}
+	}
+	has_country_shield = no
+
+
+	gen_greatlakes_1 = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { }
+		position = 2
+		trigger = {
+			num_of_merchants = 3
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "gen_borders_superior_tt"
+				}
+				hidden_trigger = {
+					any_owned_province = {
+						province_group = lake_superior_provincegroup
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "gen_borders_huron_tt"
+				}
+				hidden_trigger = {
+					any_owned_province = {
+						province_group = lake_huron_provincegroup
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "gen_borders_michigan_tt"
+				}
+				hidden_trigger = {
+					any_owned_province = {
+						province_group = lake_michigan_provincegroup
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "gen_borders_erie_tt"
+				}
+				hidden_trigger = {
+					any_owned_province = {
+						province_group = lake_erie_provincegroup
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				custom_trigger_tooltip = {
+					tooltip = "gen_borders_ontario_tt"
+				}
+				hidden_trigger = {
+					any_owned_province = {
+						province_group = lake_ontario_provincegroup
+					}
+				}
+				amount = 1
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_country_modifier = {
+				name = "gen_lake_traders"
+				duration = 9125
+			}
+		}
+	}
+}

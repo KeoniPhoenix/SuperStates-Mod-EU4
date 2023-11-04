@@ -265,6 +265,10 @@
  st_martin_nation_title:0 "Heal the division of Saint Martin"
  st_martin_nation_desc:0 "For far too long has our small island been split in half. We must declare a united state of Saint Martin."
 
+#Central America Region
+ guatemala_belize_colonization_title:0 "Colonize Belize"
+ guatemala_belize_colonization_desc:0 "The neighboring region of Belize is empty and suitable for our needs in growin our nation.  We can establish claims by enrolling citizens from other areas of Guatemala to move to the empty region and this would serve to keep out competing Mexican states' claims."
+
 #Pacific Islands Region
 # Pacific Oceania
  pacific_oceania_nation_title:0 "Form Pacific Oceania Nation"

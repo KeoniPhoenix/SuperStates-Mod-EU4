@@ -32,6 +32,8 @@
  cut_westmoreland_tooltip:0 "If we complete this mission while §MWestmoreland§! is our subject:"
  cut_westmoreland_tooltip_2:0 "\nOtherwise:"
  cut_westmoreland_tooltip_3:0 "§Y[Root.GetName]§! will get permanent claims on these provinces."
+ cut_westmoreland_insight_tt:0 "\n§GEvent Insight§!:\nThis event allows us to create @WMO §YWestmoreland§! as a loyal vassal state."
+ mss_maine_insight_tt:0 "\n§GEvent Insight§!:\nThis event allows us to send an offer to @MNE §YMaine§! demanding they become our vassal state."
 
  ## Mid Atlantic
  mid_atlantic_banking_tooltip:0 "Have §Yless inflation than any neighbor§! or have §Y0§! inflation"
@@ -58,6 +60,7 @@
 
  ## California
  cal_has_wine_tooltip:0 "All owned §YWine§! producing provinces gain §Y2§! £icon_production_in_text£ and '§YProductive Vineyards§!' for §Y25 years§!, giving the following effects:\nLocal Production Efficiency: §G+20.0%§!"
+ cal_las_cali_insight:0 "\n§GEvent Insight§!:\nThis event allows us to change our name and color to §YLas Californias§!."
 
  ## Canada
  flavorQUE_nfr_tt:0 "Enables a decision to form §YNew France§!."
@@ -75,6 +78,8 @@
  que_new_french_accepted_tt:0 "Provinces of the §YNew French§! culture group do not suffer from the penalties of unaccepted culture as long as this modifier is active.\n\n§YFrench Dominance§! gets §Rremoved§! should [Root.GetName] switch its culture group.\n"
  que_new_french_accepted_2_tt:0 "Provinces of the §YNew French§! culture group do not suffer from the penalties of unaccepted culture as long as this modifier is active.\n\n§YCultural Exchange§! gets §Rremoved§! should [Root.GetName] switch its culture group.\n"
  flavorQUE.103a.tt:0 "We will move into the French culture group and all owned §YQuébécois§! provinces will adopt §YFrench Québécois§!."
+ que_ottawa_insight_tt:0 "\n§GEvent Insight§!:\nThis event allows us to either move development from §YOttawa§! to §YGatineau§! or reduce nationalism in owned §YOntarian§! provinces."
+ que_new_france_insight_tt:0 "\n§GEvent Insight§!:\nThis event allows us form @NFR §YNew France§! and expand our available missions."
 
  ## Ohio
  ohi_stay_midwest_tt:0 "If §Y[Root.GetName]§! chooses the §YMidwestern§! path, the following triggers will be needed to complete this mission:"
@@ -96,8 +101,8 @@
  hwi_volcano_preparations_tt:0 "§Y[Root.GetName]§! will be prepared against future volcanic eruptions."
  hwi_can_change_techgroups_tt:0 "Unlocks a decision to change to the §YNorth American§! technology group."
  hwi_can_buy_institutions_tt:0 "If §Y[Root.GetName]§! hasn't embraced the §YRenaissance§!, we will attempt to purchase the institution for §R-75.00§! Ducats."
- hwi_have_good_ruler:0 "[Root.Monarch.GetName]'s £adm£ £dip£ & £mil£ add up to at least §Y14§!"
  hwi_expedition_tt:0 "An expedition will be sent out to discover America..."
+ hwi_monarchy_insight_tt:0 "\n§GEvent Insight§!:\nThis event allows us to decide between staying an §YAmerican State Republic§! or adopting the §YHawaiian Monarchy§!."
 
  #Mormon
  EST_952_HOLY_SITE:0 "From the §YSalt Lake§! Holy Site: "

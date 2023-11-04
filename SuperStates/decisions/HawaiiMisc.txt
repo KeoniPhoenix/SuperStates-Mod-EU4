@@ -1,0 +1,32 @@
+country_decisions = {
+	hwi_turn_north_american = { #Decision to turn to North American Tech group
+		major = yes
+		potential = {
+			NOT = {
+				technology_group = north_american
+			}
+			NOT = {
+				has_country_flag = hwi_turned_north_american_techgroup_flag
+			}
+			has_country_flag = hwi_can_change_techgroups_flag #Need to complete a Hawaiian Missison
+		}
+		allow = {
+			adm_power = 50
+			mil_power = 50
+			dip_power = 50
+		}
+		effect = {
+			change_unit_type = north_american
+			change_technology_group = north_american
+			hidden_effect = {
+				set_country_flag = hwi_turned_north_american_techgroup_flag
+			}
+			add_adm_power = -50
+			add_mil_power = -50
+			add_dip_power = -50
+		}
+		ai_will_do = { #Mostly for a player to do - not so much the ai
+			factor = 0
+		}
+	}
+}

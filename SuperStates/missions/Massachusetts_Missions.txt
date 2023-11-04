@@ -356,6 +356,7 @@ mss_conquests_3 = {
 				country_event = {
 					id = flavorMSS.1
 				}
+				custom_tooltip = mss_maine_insight_tt
 			}
 			else = {
 				maine_area = {
@@ -778,7 +779,7 @@ mss_flavor_2 = {
 				limit = {
 					has_dlc = "Leviathan"
 				}
-				2609 = {
+				3325 = {
 					owned_by = ROOT
 					grown_by_development = 10
 					OR = {
@@ -794,7 +795,7 @@ mss_flavor_2 = {
 				}
 			}
 			else = {
-				2609 = {
+				3325 = {
 					owned_by = ROOT
 					grown_by_development = 12
 					has_building = university
@@ -806,7 +807,7 @@ mss_flavor_2 = {
 				limit = {
 					has_dlc = "Leviathan"
 				}
-				2609 = {
+				3325 = {
 					if = {
 						limit = {
 							NOT = { has_building = university }
