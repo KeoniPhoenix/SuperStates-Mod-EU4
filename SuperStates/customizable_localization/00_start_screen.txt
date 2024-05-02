@@ -1517,6 +1517,18 @@ defined_text = {
 			}
         }
 	}
+	text = { #Ajam
+		localisation_key = string_start_ajam
+		trigger = {
+			tag = QOM
+		}
+	}
+	text = { #Ardabil
+		localisation_key = string_start_ardabil
+		trigger = {
+			tag = ARL
+		}
+	}
 	# India
 	text = { # The remnants of Delhi
 		localisation_key = string_start_delhi
@@ -1635,6 +1647,14 @@ defined_text = {
 			}
         }
     }
+	text = { #Arabia
+		localisation_key = string_start_tag_arabia
+		trigger	= {
+			capital_scope = {
+				region = arabia_region
+			}
+		}
+	}
 	text = { # Central Asia
         localisation_key = string_start_tag_central_asia
         trigger = {
@@ -1675,6 +1695,7 @@ defined_text = {
 			}
         }
     }
+    #### SUPERSTATES MOD- TO BE FIXED!
 	# text = { #Central America
     #     localisation_key = string_start_tag_central_america
     #     trigger = {

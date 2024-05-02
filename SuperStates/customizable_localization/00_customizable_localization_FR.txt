@@ -1,0 +1,6 @@
+###############################################################################
+# NOTICE: FRENCH LANGUAGE IS NOT CURRENTLY SUPPORTED!
+###############################################################################
+# DO NOT REPLACE UNTIL ALL BAD REFERENCES IN BASE GAME FILE ARE FIXED, 
+# THIS FILE IS MASSIVE AND IS EXTREMELY TIME CONSUMING TO EDIT!
+###############################################################################
