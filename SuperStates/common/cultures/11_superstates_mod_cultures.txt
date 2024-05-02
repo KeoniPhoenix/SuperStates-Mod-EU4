@@ -8931,6 +8931,56 @@ new_french = {
 			Walker Warmoth Watkins Wells White Wickliffe Wiltz
 		}
 	}
+
+	new_england_french = {
+		primary = NEF
+		
+		male_names = {
+			Adélard Antonio
+			Bernard
+			Charles
+			Daniel
+			Edmund
+			"Fèlix-Gabriel"
+			Gédéon
+			"Henri-Gustave" Honorè
+			Jacques Jean "Jean-Jacques" John "Joseph-Adolphe" "Joseph-Alfred"
+			Lomer "Louis-Alexandre" "Louis-Oliver" Lucien
+			Maurice
+			Paul Pierre "Pierre-Marc"
+			René Robert
+			"Simon-Napoléon"
+		}
+		female_names = { 
+			Adelaide Adele Adela Adelin Adelise Agnes Alberada Alienora Aline Alice Alison Amburga Aveis Avelina
+			Berengaria Busilla
+			Clarimond Clemenza Clementia Constance
+			Egelina Eleanor Elisabeth Elysande Emma Emonie Eremberga Elise
+			Felicia Flandina Fredesende Fressenda Fressende
+			Geva Giselle Gisela Gohilde Gundred
+			Hadwis Helewisa Heria Herleve Hermessent Hermine Hugolina 
+			Ida
+			Joan Judith
+			Mabel Marie Maria Matheode Maud Matilda Maysant Millicent Muriella
+			Oriel
+			Richenda Ricarda
+		}
+		dynasty_names = {
+			Barrette Bertrand Bouchard Bourassa
+			Chapleau Charest Chauveau
+			"de Boucherville" "de Lotbinère" Duplessis
+			Flynn
+			Godbout Gouin
+			Johnson
+			Landry Lesage Lévesque
+			Marchand Marois Mercier Mousseau
+			Ouimet
+			Parent Parizeau
+			Ross
+			Sauvé
+			Taillon Taschereau
+		}
+	}
 }
 
 western_canadian = {
