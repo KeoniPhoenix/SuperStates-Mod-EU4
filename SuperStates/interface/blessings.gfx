@@ -33,8 +33,8 @@ spriteTypes = {
 		texturefile = "gfx//interface//holy_sites//yerevan.dds"
 		loadType = "INGAME"
 	}
-
-	### Zoroastrina Holy sites ###
+	
+### Zoroastrina Holy sites ###
 	
 		spriteType = {
 		name = "GFX_holy_site_4430"
