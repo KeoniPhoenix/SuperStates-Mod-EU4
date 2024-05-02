@@ -161,7 +161,7 @@ trade_company_coromandel = {
 		536 2101 4412 #madura_area
 		2100 4408 4409 #lanka_area
 		572 2099 4407 #south_lanka_area
-		574 1101 1248 1998 1999 #indian_ocean_islands_area
+		574 1101 1248 #indian_ocean_islands_area
 		538 2085 4414 #kongu_area
 		2026 4415 4416 #tanjore_area
 		533 2031 4421 4422 4426 #mysore_area
@@ -1396,6 +1396,7 @@ trade_company_western_australia = {
 		1091 3191 3190 1090 #south_australia
 		3173 1092 1093 3172 #north_australia
 		3347 3346 3345 #Tiwi
+		1998 1999 #aus_indian_ocean_islands
 	}
 	
 	# Specific
@@ -1424,6 +1425,7 @@ trade_company_eastern_australia = {
 		2011 2014 3164 #sydney
 		3165 3166 2015 #hunter
 		2017 2012 2013 3167 4648 #canberra
+		3349 3350 3351 #Torres Islands
 		#1237 2719 2720 2721 2722 #papua
 		#1245 2718 2723 2724 #vogelkop
 	}
@@ -1443,6 +1445,8 @@ trade_company_new_zealand = {
 	
 	provinces = {
  		1106 1107 1108 1109 1246 2737 2738 2739 4638 4639 4640 4642 4643 4644 4647 4649 4650 4939 #New Zealand
+		
+		1238 1242 1239 1986 4637 4883 4884 4885 4886 4887 4888 4889 4890 4891 4892 4893 4894 4895 4900 4901 4903 4937 4938 #Melanesian Islands NOT apart of New Guinea
 	}
 	
 	# Specific
@@ -2050,21 +2054,6 @@ trade_company_greenland = {
 	}
 	names = {
 		name = "TRADE_COMPANY_GREENLAND_CANADA_Trade_Company"
-	}
-}
-
-trade_company_melanesia = {
-	color = { 54 120 77 }
-
-	provinces = {
-		4895 4893 4892 1238 4890 4891 4889 4894 4888 1239 4887 4886 4885 4884 4883 1986 4637 4903 4900 1242 4901 4937 4938 3353
-		3349 3350 3351 #Torres Islands
-	}
-	names = {
-		name = "TRADE_COMPANY_MELANESIA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_MELANESIA_AUSTRALIA_Trade_Company"
 	}
 }
 

@@ -311,7 +311,7 @@ technology = {
 	#enable = native_american_rifle_cavalry
 	# enable = central_american_rifle_cavalry
 	enable = south_american_rifle_cavalry	
-	enable = qizilbash_cavalry	
+	enable = qizilbash_cavalry_unit	
 	enable = east_mongolian_steppe	
 	enable = indian_elephant	
 	enable = steppe_riders
@@ -560,6 +560,7 @@ technology = {
 	enable = pacific_swarm_cav
 	enable = north_american_gallop
 	enable = oceanian_swarm
+	
 	combat_width = 2
 }
 
@@ -588,6 +589,7 @@ technology = {
 	enable = ottoman_reformed_janissary	
 	enable = asian_musketeer	
 	enable = incan_guerilla_warfare	
+	#enable = iroquois_rifle_scout
 	enable = peruvian_guerilla_warfare
 	# enable = mexican_guerilla_warfare	
 	# enable = maya_guerilla_warfare	

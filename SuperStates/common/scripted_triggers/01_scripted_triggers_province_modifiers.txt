@@ -68,27 +68,9 @@ has_river_estuary_trigger = {
 			has_province_modifier = orinoco_estuary_modifier
 			#China
 			has_province_modifier = mng_bogue_modifier
-			##Superstates Mod Province Modifiers
-			has_province_modifier = sfbay_estuary_modifier
-			has_province_modifier = colorado_estuary_modifier
-			has_province_modifier = chesapeake_estuary_modifier
-			has_province_modifier = hampton_roads_estuary_modifier
-			has_province_modifier = port_jackson_estuary_modifier
-			has_province_modifier = charles_estuary_modifier
-			has_province_modifier = savannah_estuary_modifier
-			has_province_modifier = mobile_estuary_modifier
-			has_province_modifier = galveston_estuary_modifier
-			has_province_modifier = pearl_harbor_modifier
-			has_province_modifier = biscayne_bay_modifier
-			has_province_modifier = narragansett_bay_modifier
-			has_province_modifier = passaic_river_modifier
-			has_province_modifier = guantanamo_bay_modifier
-			has_province_modifier = swan_river_modifier
-			has_province_modifier = puget_sound_modifier
-			has_province_modifier = lake_michigan_port_modifier
-			has_province_modifier = apalachicola_estuary_modifier
-			has_province_modifier = st_johns_estuary_modifier
-			has_province_modifier = connecticut_estuary_modifier 
+			has_province_modifier = expanded_nile_estuary_modifier
+			#SUPERSTATES MOD
+			##ADD Superstates Mod Province Modifiers
 		}
 	}
 }
@@ -160,28 +142,26 @@ has_no_river_estuary_trigger = {
 			has_province_modifier = amur_estuary_modifier
 			has_province_modifier = orinoco_estuary_modifier
 			has_province_modifier = mng_bogue_modifier
-			##Superstates Mod Province Modifiers
-			has_province_modifier = sfbay_estuary_modifier
-			has_province_modifier = colorado_estuary_modifier
-			has_province_modifier = chesapeake_estuary_modifier
-			has_province_modifier = hampton_roads_estuary_modifier
-			has_province_modifier = port_jackson_estuary_modifier
-			has_province_modifier = charles_estuary_modifier
-			has_province_modifier = savannah_estuary_modifier
-			has_province_modifier = mobile_estuary_modifier
-			has_province_modifier = galveston_estuary_modifier
-			has_province_modifier = pearl_harbor_modifier
-			has_province_modifier = biscayne_bay_modifier
-			has_province_modifier = narragansett_bay_modifier
-			has_province_modifier = passaic_river_modifier
-			has_province_modifier = guantanamo_bay_modifier
-			has_province_modifier = swan_river_modifier
-			has_province_modifier = puget_sound_modifier
-			has_province_modifier = lake_michigan_port_modifier
-			has_province_modifier = apalachicola_estuary_modifier
-			has_province_modifier = st_johns_estuary_modifier
-			has_province_modifier = connecticut_estuary_modifier 
+			#SUPERSTATES MOD
+			##ADD Superstates Mod Province Modifiers
 		}
+	}
+}
+
+#Has special Trade modifier
+has_special_trade_modifier = {
+	OR = {
+		has_province_modifier = sound_toll
+		has_province_modifier = bosphorous_sound_toll
+		has_province_modifier = trade_post_modifier
+		has_province_modifier = tur_hormuz_toll_modifier
+		has_province_modifier = birth_of_a_new_city_dip
+		has_province_modifier = birthplace_of_the_new_world
+		has_province_modifier = growth_of_global_trade
+		has_province_modifier = dominant_trade_hub
+		#SUPERSTATES MOD
+		has_province_modifier = hudson_strait_toll
+		has_province_modifier = torres_strait_toll
 	}
 }
 
@@ -204,8 +184,9 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district2
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
-		has_province_modifier = cut_cheney_silk
 		has_active_triggered_province_modifier = cerro_rico_modifier
+		#SUPERSTATES MOD
+		has_province_modifier = cut_cheney_silk
 	}
 }
 
@@ -228,9 +209,10 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district2
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
-		has_province_modifier = cut_cheney_silk
 		has_active_triggered_province_modifier = cerro_rico_modifier
 		has_latent_trade_goods = coal
+		#SUPERSTATES MOD
+		has_province_modifier = cut_cheney_silk
 	}
 }
 
