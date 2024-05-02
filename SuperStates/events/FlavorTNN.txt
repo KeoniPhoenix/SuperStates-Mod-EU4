@@ -19,33 +19,41 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TEN
+		tag = TNN
 		owns_core_province = 2518
 		owns_core_province = 2520
 		2520 = {
 			development = 20
 			culture = mountaineer
 			}
-		variable_arithmetic_trigger = { #This arithmetic trigger doesn't work as intended #TODO FIX THIS
-			export_to_variable = { #the purpose of this is to check whether knoxville has higher dev than nashville
-				which = nashville_dev
-				value = development
-				province_id = 2518
-				}
+		variable_arithmetic_trigger = {
+			export_to_variable = { 
+				variable_name = nashville_dev
+				value = trigger_value:development
+				who = ROOT
+			}
 			export_to_variable = {
-				which = knoxville_dev
-				value = development
-				province_id = 2520
-				}
-			if = {
-				limit = {
-					check_variable = {
-						which = knoxville_dev
-						which = nashville_dev
-						}
-					}
+				variable_name = knoxville_dev
+				value = trigger_value:development
+				who = FROM
+			}
+
+			ROOT = {
+				2518 = {
+					development = 0
 				}
 			}
+			FROM = {
+				2520 = {
+					development = 0
+				}
+			}
+
+			check_variable = {
+				which = knoxville_dev
+				which = nashville_dev
+			}
+		}
 	}	
 	mean_time_to_happen = {
 		months = 60
@@ -73,51 +81,49 @@ country_event = {
 	option = {
 		name = TNflavor.1b #We need to subdue these people before they become a bigger problem
 		ai_chance = { factor = 10 }
-		ROOT = {
-			add_stability = -1
-			remove_accepted_culture = mountaineer
-			}
+		add_stability = -1
+		remove_accepted_culture = mountaineer
 		2518 = {
 			add_base_manpower = -2
 			add_base_production = -1
 			add_base_tax = -2
 			change_culture = ROOT
-			}
+		}
 		3147 = {
 			add_base_manpower = -1
 			add_base_production = -1
 			add_base_tax = -1
 			change_culture = ROOT
-			}
+		}
 		2521 = {
 			add_base_manpower = -1
 			add_base_production = -1
 			add_base_tax = -1
 			change_culture = ROOT
-			}
 		}
+	}
 	option = {
 		name = TNflavor.1c #We will concede partial independence
 		ai_chance = { factor = 10 }
-		release = FKL
+		#release = FKL
 		ROOT = {
 			create_vassal = FKL
-			}
 		}
+	}
 	option = {
 		name = TNflavor.1d #We will grant increased autonomy but Tennessee must remain united
 		ai_chance = { factor = 60 }
 		2518 = {
 			add_local_autonomy = 25
-			}
+		}
 		3147 = {
 			add_local_autonomy = 25
-			}
+		}
 		2521 = {
 			add_local_autonomy = 25
-			}
 		}
 	}
+}
 #Rise of West Tennessee
 country_event = {
 	id = TNflavor.2
@@ -128,33 +134,41 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TEN
+		tag = TNN
 		owns_core_province = 2518
 		owns_core_province = 2519
 		2519 = {
 			development = 20
 			culture = west_tennessean
-			}
-		variable_arithmetic_trigger = { #This arithmetic trigger doesn't work as intended #TODO FIX THIS
-			export_to_variable = { #the purpose of this is to check whether memphis has higher dev than nashville
-				which = nashville_dev
-				value = development
-				province_id = 2518
-				}
+		}
+		variable_arithmetic_trigger = {
 			export_to_variable = {
-				which = memphis_dev
-				value = development
-				province_id = 2519
-				}
-			if = {
-				limit = {
-					check_variable = {
-						which = memphis_dev
-						which = nashville_dev
-						}
-					}
+				variable_name = nashville_dev
+				value = trigger_value:development
+				who = ROOT
+			}
+			export_to_variable = {
+				variable_name = memphis_dev
+				value = trigger_value:development
+				who = FROM
+			}
+
+			ROOT = {
+				2518 = {
+					development = 0
 				}
 			}
+			FROM = {
+				2519 = {
+					development = 0
+				}
+			}
+
+			check_variable = {
+				which = memphis_dev
+				which = nashville_dev
+			}
+		}
 	}	
 	mean_time_to_happen = {
 		months = 60
@@ -183,10 +197,9 @@ country_event = {
 	option = {
 		name = TNflavor.2b #We need to subdue these people before they become a bigger problem
 		ai_chance = { factor = 10 }
-		ROOT = {
-			add_stability = -1
-			remove_accepted_culture = west_tennessean
-			}
+		add_stability = -1
+		remove_accepted_culture = west_tennessean
+		
 		2519 = {
 			add_base_manpower = -2
 			add_base_production = -1
@@ -203,22 +216,22 @@ country_event = {
 	option = {
 		name = TNflavor.2c #We will concede partial independence
 		ai_chance = { factor = 10 }
-		release = WTN
+		#release = WTN
 		ROOT = {
 			create_vassal = WTN
-			}
 		}
+	}
 	option = {
 		name = TNflavor.2d #We will grant increased autonomy but Tennessee must remain united
 		ai_chance = { factor = 60 }
 		2518 = {
 			add_local_autonomy = 25
-			}
+		}
 		3147 = {
 			add_local_autonomy = 25
-			}
+		}
 		2521 = {
 			add_local_autonomy = 25
-			}
 		}
-	}	
+	}
+}	

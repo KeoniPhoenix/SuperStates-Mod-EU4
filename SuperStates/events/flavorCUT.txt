@@ -140,7 +140,7 @@ country_event = { #Cheney Silk
 
 	trigger = {
 		is_or_was_tag = {
-			TAG = CUT
+			tag = CUT
 		}
 		owns = 2613
 		2613 = {

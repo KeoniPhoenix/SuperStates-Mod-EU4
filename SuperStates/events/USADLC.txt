@@ -1,22 +1,58 @@
-#BONUS EVENTS FOR THOSE WHO PURCHASED AMERICAN DREAM DLC
-
 ##########################
 #
 #  Written by:
 #  KeoniPhoenix
 #
 ##########################
-#				NOTICE:
-#THESE EVENTS ARE RESTRICTED TO THOSE WHO HAVE PURCHASED
-#THE NECESSARY DLC TO ENFORCE PARADOX DEVELOPEMENT STUDIOS
-#RESTRICTIONS FOR FEATURES ADDED BY THE DLC.
-###########################################################
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#				ATTENTION!
-#MOD SUPPORT WILL NOT BE GIVEN TO PLAYERS WHO CIRCUMVENT
-#THE DLC REQUIREMENTS.  PLEASE RESPECT THIS.
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-###########################################################
+#BONUS EVENTS FOR THOSE WHO PURCHASED AMERICAN DREAM DLC
+
+namespace = usa_dlc
+normal_or_historical_nations = yes
+
+#CONSTITUTIONAL CONVENTION
+#Events fire upon taking the decision to form the USA/CSA
+#American Civil War will trigger other events.
+
+#country_event = {
+#	id = usa_dlc.1
+#	title = "usa_dlc.1t"
+#	desc = "usa_dlc.1d"
+#	picture = CONGRESS_eventPicture
+#	
+#	fire_only_once = yes
+#	
+#	trigger = {
+#		has_dlc = "American Dream"
+#		OR = {
+#			tag = USA
+#			has_country_flag = usa_declaration_independence_flag
+#		}
+#		is_year = 1781
+#	}
+#	
+#	mean_time_to_happen = { 
+#		months = 100 
+#	}
+#	
+#	option = {
+#		name = "usa_dlc.1opta"
+#		country_event = {
+#			id = usa_dlc.2 # Republic Option (US Constitution/Federal Republic)
+#		}
+#	}
+#	option = {
+#		name = "usa_dlc.1optb"
+#		country_event = {
+#			id = usa_dlc.3 # Parliamentary Option (Articles of Confederation/American Republic)
+#		}
+#	}
+#	option = {
+#		name = "usa_dlc.1optc"
+#		country_event = {
+#			id = usa_dlc.4 # Monarchy/Imperial Option
+#		}
+#	}
+#}
 
 #namespace = usa_dlc_superstates
 

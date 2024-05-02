@@ -1,44 +1,44 @@
 namespace = flavorSCR
 
-#Governor Affair
-country_event = {
-	id = flavorSCR.1
-	title = "flavorSCR.1t"
-	desc = "flavorSCR.1d"
-	picture = ACCUSATION_eventPicture
+# #Governor Affair
+# country_event = {
+# 	id = flavorSCR.1
+# 	title = "flavorSCR.1t"
+# 	desc = "flavorSCR.1d"
+# 	picture = ACCUSATION_eventPicture
 	
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	trigger = {
-		tag = SCR
-		is_female = no
-		OR = {
-			is_month = 4
-			is_month = 5
-			is_month = 6
-			is_month = 7
-			is_month = 8
-		}
-	}
+# 	trigger = {
+# 		tag = SCR
+# 		is_female = no
+# 		OR = {
+# 			is_month = 4
+# 			is_month = 5
+# 			is_month = 6
+# 			is_month = 7
+# 			is_month = 8
+# 		}
+# 	}
 	
-	mean_time_to_happen = {
-		months = 128
-	}
+# 	mean_time_to_happen = {
+# 		months = 128
+# 	}
 	
-	option = {
-		name = "flavorSCR.1opta" # Silence the reporter and cover it up.
-		add_corruption = 2
-	}
+# 	option = {
+# 		name = "flavorSCR.1opta" # Silence the reporter and cover it up.
+# 		add_corruption = 2
+# 	}
 
-	option = {
-		name = "flavorSCR.1optb" # Resign
-		country_event = { id = resign.1 }
-	}
+# 	option = {
+# 		name = "flavorSCR.1optb" # Resign
+# 		country_event = { id = resign.1 }
+# 	}
 	
-	option = {
-		name = "flavorSCR.1optc" # Keep ruler and hope for the best...
-		add_ruler_modifier = {
-			name = "governor_affair"
-		}
-	}
-}
+# 	option = {
+# 		name = "flavorSCR.1optc" # Keep ruler and hope for the best...
+# 		add_ruler_modifier = {
+# 			name = "governor_affair"
+# 		}
+# 	}
+# }

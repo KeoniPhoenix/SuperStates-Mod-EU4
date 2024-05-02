@@ -874,7 +874,7 @@ country_event = {
 					region = malaya_region
 					region = moluccas_region
 					region = indonesia_region
-					#region = oceanea_region
+					superregion = oceania_superregion
 				}
 			}
 		}
@@ -889,7 +889,7 @@ country_event = {
 						region = malaya_region
 						region = moluccas_region
 						region = indonesia_region
-						#region = oceanea_region
+						superregion = oceania_superregion
 					}
 				}
 			}

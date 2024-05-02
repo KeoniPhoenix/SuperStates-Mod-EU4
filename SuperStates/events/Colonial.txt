@@ -550,7 +550,7 @@ province_event = {
 
 ### Scripted by Sara Wendel-Örtqvist ###
 
-#A Witch!
+# A Witch!
 province_event = {
 	id = colonial.8
 	title = "colonial.EVTNAME8"
@@ -567,6 +567,7 @@ province_event = {
 			province_id = 2613 # Connecticut
 			province_id = 2612 # Narraganset
 			province_id = 3129 # Roanoke
+			province_id = 2609 # Boston
 		}
 		current_age = age_of_absolutism
 		owner = {
@@ -762,21 +763,21 @@ province_event = {
 #}
 
 # Fur Trade Dwindles
-#province_event = {
-#	id = colonial.13
-#	title = "colonial.EVTNAME13"
-#	desc = "colonial.EVTDESC13"
-#	picture = MERCHANTS_TALKING_eventPicture
-#	goto = ROOT
-#	
-#	is_triggered_only = yes
-#	
-#	trigger = {
-#		trade_goods = fur
-#		OR = {
-#			NOT = { has_province_flag = received_trade_goods }
-#			had_province_flag = { flag = received_trade_goods days = 3650 }
-#		}
+province_event = {
+	id = colonial.13
+	title = "colonial.EVTNAME13"
+	desc = "colonial.EVTDESC13"
+	picture = MERCHANTS_TALKING_eventPicture
+	goto = ROOT
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trade_goods = fur
+		OR = {
+			NOT = { has_province_flag = received_trade_goods }
+			had_province_flag = { flag = received_trade_goods days = 3650 }
+		}
 #		NOT = {
 #			any_neighbor_province = {
 #				OR = {
@@ -790,32 +791,39 @@ province_event = {
 #				}
 #			}
 #		}
-#		NOT = { has_empty_adjacent_province = yes }
-#		NOT = {
-#			any_neighbor_province = {
-#				owner = {
-#					has_reform = steppe_horde
-#				}
-#				controller = {
-#					has_reform = steppe_horde
-#				}
-#			}
-#		}
-#	}
-#	
-#	mean_time_to_happen = {
-#		days = 1
-#	}
-#	
-#	option = {
-#		name = "colonial.EVTOPTA13"
-#		change_trade_goods = naval_supplies
-#	}
-#	option = {
-#		name = "colonial.EVTOPTC13"
-#		change_trade_goods = grain
-#	}
-#}
+		NOT = { has_empty_adjacent_province = yes }
+		NOT = {
+			any_neighbor_province = {
+				owner = {
+					has_reform = steppe_horde
+				}
+				controller = {
+					has_reform = steppe_horde
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_province_flag = received_trade_goods
+			set_province_flag = received_trade_goods
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "colonial.EVTOPTA13"
+		change_trade_goods = naval_supplies
+	}
+	option = {
+		name = "colonial.EVTOPTC13"
+		change_trade_goods = grain
+	}
+}
 
 # Jesuit mission founded
 province_event = {
@@ -1106,6 +1114,13 @@ province_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
+
+	immediate = {
+		hidden_effect = {
+			clr_province_flag = received_trade_goods
+			set_province_flag = received_trade_goods
+		}
+	}
 	
 	option = {
 		name = "colonial.EVTOPTA18"
@@ -1119,79 +1134,89 @@ province_event = {
 }
 
 #Growth of Natural Port into CoT
-# province_event = {
-	# id = colonial.19
-	# title = "colonial.19.t"
-	# desc = "colonial.19.d"
-	# picture = CITY_DEVELOPMENT_eventPicture
+province_event = {
+	id = colonial.19
+	title = "colonial.19.t"
+	desc = "colonial.19.d"
+	picture = CITY_DEVELOPMENT_eventPicture
 	
-	# trigger = {
-		# province_has_center_of_trade_of_level = 1
-		# has_port = yes
-		# NOT = { province_has_center_of_trade_of_level = 2 }
-		# OR = {
-			# development = 15
-			# has_building = marketplace
-			# feudalism = 100
-		# }
-		# owner = {
-			# stability = 1
-			# has_institution = feudalism
-		# }
-		# OR = {
-			# continent = new_world
-			# continent = north_america
-			# continent = south_america
-		# }
-	# }
+	trigger = {
+		province_has_center_of_trade_of_level = 1
+		has_port = yes
+		NOT = { province_has_center_of_trade_of_level = 2 }
+		OR = {
+			development = 15
+			has_building = marketplace
+			feudalism = 100
+		}
+		owner = {
+			stability = 1
+			has_institution = feudalism
+		}
+		OR = {
+			colonial_region = colonial_new_guinea
+			superregion = caribbean_superregion
+			#continent = north_america
+			#continent = south_america
+		}
+	}
 	
-	# mean_time_to_happen = {
-		# months = 300
+	mean_time_to_happen = {
+		months = 300
 		
-		# modifier = {
-			# factor = 0.9
-			# owner = { full_idea_group = trade_ideas }
-		# }
-		# modifier = {
-			# factor = 0.9
-			# owner = { stability = 3 }
-		# }
-		# modifier = {
-			# factor = 0.7
-			# owner = { has_institution = global_trade }
-		# }
-		# modifier = {
-			# factor = 0.8
-			# development = 20
-		# }
-		# modifier = {
-			# factor = 0.7
-			# has_building = trade_depot
-		# }
-		# modifier = {
-			# factor = 0.9
-			# has_building = dock
-		# }
-		# modifier = {
-			# factor = 0.5
-			# development = 30
-		# }
-		# modifier = {
-			# factor = 0.95
-			# current_age = age_of_reformation
-		# }
-		# modifier = {
-			# factor = 0.9
-			# current_age = age_of_absolutism
-		# }
-		# modifier = {
-			# factor = 0.85
-			# current_age = age_of_revolutions
-		# }
-	# }
+		modifier = {
+			factor = 0.9
+			owner = { full_idea_group = trade_ideas }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { stability = 3 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { has_institution = global_trade }
+		}
+		modifier = {
+			factor = 0.8
+			development = 20
+		}
+		modifier = {
+			factor = 0.7
+			has_building = trade_depot
+		}
+		modifier = {
+			factor = 0.9
+			has_building = dock
+		}
+		modifier = {
+			factor = 0.5
+			development = 30
+		}
+		modifier = {
+			factor = 0.95
+			current_age = age_of_reformation
+		}
+		modifier = {
+			factor = 0.9
+			current_age = age_of_absolutism
+		}
+		modifier = {
+			factor = 0.85
+			current_age = age_of_revolutions
+		}
+	}
 	
-	# option = {
-		# name = "colonial.19.a"
-		# add_center_of_trade_level = 1
-	# }
-# }
+	option = {
+		name = "colonial.19.a"
+
+		if = {
+			limit = {
+				NOT = { province_has_center_of_trade_of_level = 2 }
+			}
+			add_center_of_trade_level = 1
+		}
+		else = {
+			add_base_production = 2
+		}
+	}
+}

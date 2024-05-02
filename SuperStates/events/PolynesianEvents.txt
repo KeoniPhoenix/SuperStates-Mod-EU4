@@ -906,120 +906,114 @@ country_event = { #Menehune People
 	}
 }
 
-# country_event = { #Ku Demands a Sacrifice
-# 	id = polynesian.22
-# 	title = "polynesian.22.t"
-# 	desc = "polynesian.22.d"
-# 	picture = EP_POLYNESIAN_MARAE_eventPicture
+country_event = { #Ku Demands a Sacrifice
+	id = polynesian.22
+	title = "polynesian.22.t"
+	desc = "polynesian.22.d"
+	picture = EP_POLYNESIAN_MARAE_eventPicture
 	
-# 	trigger = {
-# 		OR = {
-#			tag = HWI
-#			AND = {
-#				tag = PCO
-#				was_tag = HWI
-#			}
-#		}
-# 		religion = animism
-# 		OR = {
-# 			NOT = { 
-# 				stability = 0 
-# 			}
-# 			war_exhaustion = 10
-# 		}
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+		religion = animism
+		OR = {
+			NOT = { 
+				stability = 0 
+			}
+			war_exhaustion = 10
+		}
+	}
 	
-# 	mean_time_to_happen = {
-# 		months = 60
-# 	}
+	mean_time_to_happen = {
+		months = 60
+	}
 	
-# 	option = {
-# 		name = "polynesian.22.a"
-# 		trigger = { 
-# 			stability = -2
-# 		}
-# 		ai_chance = { 
-# 			factor = 75 
-# 			modifier = {
-# 				factor = 0
-# 				NOT = { treasury = 50 }
-# 			}
-# 		}
-# 		add_treasury = -50
-# 		add_stability = 1
-# 	}
+	option = {
+		name = "polynesian.22.a"
+		ai_chance = { 
+			factor = 75 
+			modifier = {
+				factor = 0
+				NOT = { treasury = 50 }
+			}
+		}
+		add_treasury = -50
+		add_stability = 1
+	}
 	
-# 	option = {
-# 		name = "polynesian.22.b"
-# 		trigger = { 
-# 			stability = -2
-# 		}
-# 		ai_chance = { 
-# 			factor = 25 
-# 			modifier = {
-# 				factor = 4
-# 				NOT = { treasury = 50 }
-# 			}
-# 		}
-# 		add_stability = -1
-# 	}
-# }
+	option = {
+		name = "polynesian.22.b"
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				factor = 4
+				NOT = { treasury = 50 }
+			}
+		}
+		add_stability = -1
+	}
+}
 
-# country_event = { #A Special Makahiki Festival
-# 	id = polynesian.23
-# 	title = "polynesian.23.t"
-# 	desc = "polynesian.23.d"
-# 	picture = EP_POLYNESIAN_HORN_eventPicture
+country_event = { #A Special Makahiki Festival
+	id = polynesian.23
+	title = "polynesian.23.t"
+	desc = "polynesian.23.d"
+	picture = EP_POLYNESIAN_HORN_eventPicture
 	
-# 	trigger = {
-# 		OR = {
-#			tag = HWI
-#			AND = {
-#				tag = PCO
-#				was_tag = HWI
-#			}
-#		}
-# 		religion = animism
-# 		stability = 2
-# 		has_country_modifier = makahiki_mod 
-# 		NOT = { has_country_modifier = lonos_blessing_mod }
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+		religion = animism
+		stability = 2
+		has_country_modifier = makahiki_mod 
+		NOT = { has_country_modifier = lonos_blessing_mod }
+	}
 	
-# 	mean_time_to_happen = {
-# 		months = 600
-# 	}
+	mean_time_to_happen = {
+		months = 600
+	}
 	
-# 	option = {
-# 		name = "polynesian.23.a"
-# 		ai_chance = { 
-# 			factor = 75 
-# 			modifier = {
-# 				factor = 0
-# 				NOT = { treasury = 100 }
-# 			}
-# 		}
-# 		add_treasury = -100
-# 		add_country_modifier = {
-# 			name = "lonos_blessing_mod"
-# 			duration = 9125
-# 		}
-# 	}
+	option = {
+		name = "polynesian.23.a"
+		ai_chance = { 
+			factor = 75 
+			modifier = {
+				factor = 0
+				NOT = { treasury = 100 }
+			}
+		}
+		add_treasury = -100
+		add_country_modifier = {
+			name = "lonos_blessing_mod"
+			duration = 9125
+		}
+	}
 	
-# 	option = {
-# 		name = "polynesian.23.b"
-# 		ai_chance = { 
-# 			factor = 25 
-# 			modifier = {
-# 				factor = 4
-# 				NOT = { treasury = 100 }
-# 			}
-# 		}
-# 		random = {
-# 			chance = 50
-# 			add_stability = -1
-# 		}
-# 	}
-# }
+	option = {
+		name = "polynesian.23.b"
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				factor = 4
+				NOT = { treasury = 100 }
+			}
+		}
+		random = {
+			chance = 50
+			add_stability = -1
+		}
+	}
+}
 
 country_event = { #Volcano Erupting
 	id = polynesian.24
@@ -1064,33 +1058,33 @@ country_event = { #Volcano Erupting
 	}
 }
 
-# country_event = { #Makahiki is Here
-# 	id = polynesian.25
-# 	title = "polynesian.25.t"
-# 	desc = "polynesian.25.d"
-# 	picture = EP_MANIHOLE_HELMET_eventPicture
+country_event = { #Makahiki is Here
+	id = polynesian.25
+	title = "polynesian.25.t"
+	desc = "polynesian.25.d"
+	picture = EP_MANIHOLE_HELMET_eventPicture
 	
-# 	trigger = {
-# 		OR = {
-#			tag = HWI
-#			AND = {
-#				tag = PCO
-#				was_tag = HWI
-#			}
-#		}
-# 		NOT = { has_country_modifier = makahiki_mod } 
-# 		is_month = 10
-# 		religion = animism
-# 	}
+	trigger = {
+		OR = {
+			tag = HWI
+			AND = {
+				tag = PCO
+				was_tag = HWI
+			}
+		}
+		NOT = { has_country_modifier = makahiki_mod } 
+		is_month = 10
+		religion = animism
+	}
 	
-# 	option = {
-# 		name = "polynesian.25.a"
-# 		add_country_modifier = {
-# 			name = "makahiki_mod"
-# 			duration = 120
-# 		}
-# 	}
-# }
+	option = {
+		name = "polynesian.25.a"
+		add_country_modifier = {
+			name = "makahiki_mod"
+			duration = 120
+		}
+	}
+}
 
 # Maori Events 26-30
 
@@ -1714,17 +1708,16 @@ country_event = { #Royal Mound Desecrated
 		}
 		add_prestige = 10
 		add_stability = -1
-		# random_list = {
-		# 	10 = {
-		# 		1989 = {
-		# 			spawn_rebels = {
-		# 				type = noble_rebels
-		# 				size = 1
-		# 				unrest = 1
-		# 			}
-		# 		}
-		# 	}
-		# }
+		random = {
+			chance = 10
+			1989 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+					unrest = 1
+				}
+			}
+		}
 	}
 	
 	option = {
@@ -1807,6 +1800,7 @@ country_event = { #A Strange Creature
 	desc = "polynesian.41.d"
 	picture = EP_MOAIS_eventPicture
 	
+	is_triggered_only = yes
 	fire_only_once = yes
 	
 	trigger = {
@@ -1858,15 +1852,15 @@ country_event = { #A Strange Advisor
 	
 	trigger = {
 		primary_culture = polynesian
-		# NOT = {
-		# 	OR = {
-		# 		tag = HAW
-		# 		tag = KAA
-		# 		tag = MAU
-		# 		tag = OAH
-		# 		tag = UHW
-		# 	}
-		# }
+		NOT = {
+			OR = {
+				tag = HWI
+				AND = {
+					tag = PCO
+					was_tag = HWI
+				}
+			}
+		}
 		has_ruler = "Moana"
 	}
 	

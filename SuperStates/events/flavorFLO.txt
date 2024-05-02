@@ -67,12 +67,13 @@ country_event = {
 			if = {
 				limit = {
 					any_country = {
-							capital_scope = {
-								continent = north_america
-							}
-							religion = s_catholic
-						}					
+						capital_scope = {
+							continent = north_america
+						}
+						religion = s_catholic
+					}					
 				}
+				change_religion = s_catholic
 			}   
 			 		
 			# If no North American Catholics, convert to regular Catholic
@@ -95,16 +96,18 @@ country_event = {
 		}
 		east_cuba_area = {
 			change_culture = cuban
-					if = {
+			if = {
 				limit = {
 					any_country = {
-							capital_scope = {
-								continent = north_america
-							}
-							religion = s_catholic
-						}					
+						capital_scope = {
+							continent = north_america
+						}
+						religion = s_catholic
+					}				
 				}
-			}   	
+				change_religion = s_catholic
+			}
+
 			# If no North American Catholics, convert to regular Catholic
 			else = {
 				change_religion = catholic
@@ -142,15 +145,16 @@ country_event = {
 		#custom_tooltip = flo_settle_cubans_tooltip
 		suncoast_area = {
 			change_culture = miamian
-				if = {
+			if = {
 				limit = {
 					any_country = {
-							capital_scope = {
-								continent = north_america
-							}
-							religion = s_catholic
-						}					
+						capital_scope = {
+							continent = north_america
+						}
+						religion = s_catholic
+					}					
 				}
+				change_religion = s_catholic
 			}   
 			 		
 			# If no North American Catholics, convert to regular Catholic
@@ -171,15 +175,16 @@ country_event = {
 		}
 		south_florida_area = {
 			change_culture = miamian
-				if = {
+			if = {
 				limit = {
 					any_country = {
-							capital_scope = {
-								continent = north_america
-							}
-							religion = s_catholic
-						}					
+						capital_scope = {
+							continent = north_america
+						}
+						religion = s_catholic
+					}							
 				}
+				change_religion = s_catholic
 			}   
 			 		
 			# If no North American Catholics, convert to regular Catholic
@@ -203,15 +208,16 @@ country_event = {
 		
 		3019 = {
 			change_culture = miamian
-				if = {
+			if = {
 				limit = {
 					any_country = {
-							capital_scope = {
-								continent = north_america
-							}
-							religion = s_catholic
-						}					
+						capital_scope = {
+							continent = north_america
+						}
+						religion = s_catholic
+					}					
 				}
+				change_religion = s_catholic
 			}   
 			 		
 			# If no North American Catholics, convert to regular Catholic
@@ -307,7 +313,7 @@ country_event = {
 			change_religion = ROOT
 			change_culture = ROOT
 			add_province_modifier = {
-				name = "the_big_peach_modifier"
+				name = the_big_peach_modifier
 				duration = -1
 			}
 		}
@@ -317,7 +323,7 @@ country_event = {
 		ai_chance = { factor = 30 }
 		capital_scope = {
 			add_province_modifier = {
-				name = "the_big_peach_modifier"
+				name = the_big_peach_modifier
 				duration = -1
 			}
 		}
@@ -336,7 +342,7 @@ country_event = {
 			change_religion = ROOT
 			change_culture = ROOT
 			add_province_modifier = {
-				name = "the_big_peach_modifier"
+				name = the_big_peach_modifier
 				duration = -1
 			}
 		}
