@@ -14,7 +14,7 @@ estate_nobles_mahele = {
 		OR = {
 			NOT = { has_reform = hawaiian_monarchy_reform }
 			ruler_total_stats = {
-				stats = 14
+				amount = 14
 			}
 			crown_land_share = 50
 			absolutism = 30
