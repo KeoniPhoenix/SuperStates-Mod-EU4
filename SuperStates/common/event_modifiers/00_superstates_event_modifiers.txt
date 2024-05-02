@@ -425,17 +425,38 @@ german_development = {
 	local_culture_conversion_cost = 0.50 # Purposely positive
 }
 
-# flo_consolidate_florida_mission = {
-	# #TO BE FILLED IN
-# }
+#Florida
+cubans_returned = {
+	local_development_cost_modifier = -0.25
+	local_unrest = -2
+}
 
-# flo_control_the_mississippi_modifier = {
-	# #TO BE FILLED IN
-# }
+cubans_resettled = {
+	local_state_maintenance_modifier = -0.50
+	local_tax_modifier = 0.20
+	local_unrest = 2
+}
 
-# flo_castillo_de_san_marcos_modifier = {
-	# #TO BE FILLED IN
-# }
+cubans_expelled = {
+	trade_goods_size_modifier = 0.35
+	local_unrest = 2
+}
+
+flo_consolidate_florida_mission = {
+	local_tax_modifier = 0.10
+	local_prosperity_growth = 0.10
+}
+
+flo_control_the_mississippi_modifier = {
+	province_trade_power_modifier = 0.15
+	local_center_of_trade_upgrade_cost = -0.10
+}
+
+flo_castillo_de_san_marcos_modifier = {
+	hostile_fleet_attrition = 2.5
+	hostile_disembark_speed = 0.5
+	block_slave_raid = yes
+}
 
 #California
 cal_gold_mining  = {
