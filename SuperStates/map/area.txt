@@ -240,7 +240,6 @@ bahama_channel_area = {
 	1503 1505 1524 1525
 }
 
-
 #Lakes:
 #Listed by themselves in order to be easier to remove if needed.
 
@@ -285,6 +284,7 @@ bahama_channel_area = {
 
 brittany_area = { #5
 	color = { 118  99  151 }
+
 	169 170 171 172 4384
 }
 
@@ -1176,7 +1176,7 @@ armenia_area = { #5
 
 shirvan_area = { #5 #Northern Azerbaijan
 	color = { 225 231 53 }
-	421 424 4299 4305 4340
+	421 4299 4305 4340
 }
 
 circassia_area = { #4
@@ -1696,7 +1696,7 @@ mascarenes_area = { #3
 }
 
 indian_ocean_islands_area = { #5
-	574 1101 1248 1998 1999
+	574 1101 1248
 }
 
 papua_area = { #4 (East Papua)
@@ -1707,30 +1707,7 @@ vogelkop_area = { #4
 	3363 3362 3361 1245 2718
 }
 
-# melanesia_area = { #4
-# 	1236 1238 1239 1986
-# }
-
-fiji_area = { #3
-	1242 4938 4900
-}
-
-# micronesia_area = { #4
-# 	1241 1991 1993 1994
-# }
-
-west_micronesia_area = { #5
-	2726 2727 1996 4902 4897
-}
-
-# eastern_polynesia_area = { #3
-#	1244 1987 1988
-# }
-
-# polynesia_area = { #4
-#	1243 1989 1990 1992
-# }
-
+#MODDED AREAS ARE IN OCEANIAN SECTION BELOW
 
 ########################################
 # West Africa					       #
@@ -1985,7 +1962,7 @@ isfahan_area = { #3
 }
 
 tabriz_area = { #4 Central Azerbaijan
-	416 2206 2207 4304
+	416 2206 2207 4304 424
 }
 
 tabarestan_area = { #5
@@ -2252,6 +2229,8 @@ tapti_area = { #3
 saurashtra_area = { #5
 	515 521 2052 4454 4455
 }
+
+
 
 ########################################
 # Indo-China  	                       #
@@ -3958,7 +3937,16 @@ south_windward_area = {
 }
 
 leeward_antilles_area = {
-	4591 4598 491 3331 3332
+	491 3331 3332
+	4591 4598 #To be Moved to caribbean_insular_area when SA changes finalized.
+}
+
+west_cuba_area = { #5
+	4624 484 4622 4586 4623
+}
+
+east_cuba_area = { #5
+	485 2656 2655 2654 486
 }
 
 #Vanilla
@@ -3985,14 +3973,6 @@ costa_rica_area = { #3
 
 panama_area = { #5
     835 2664 2819 4595
-}
-
-west_cuba_area = { #5
-	4624 484 4622 4586 4623
-}
-
-east_cuba_area = { #5
-	485 2656 2655 2654 486
 }
 
 ########################################
@@ -4094,18 +4074,17 @@ perth_area = {
 }
 
 aus_indian_ocean_islands_area = {
-	1101 #Diego Garcia 
 	1998 1999
 }
 
 #ISLAND OCEANIA
 
-hawaii_area = { #5
-	969 3226 3227 968 3228
+hawaii_area = { #3
+	969 3226 3227
 }
 
-leeward_hawaiian_islands_area = { #3
-	1994 1997 3338
+leeward_hawaiian_islands_area = { #4
+	968 1994 1997 3228
 }
 
 marianas_area = { #4
@@ -4113,15 +4092,23 @@ marianas_area = { #4
 }
 
 western_polynesia_area = { #3
-	1241 3016 3389
+	1992 1991 4899 1990
 }
 
-central_polynesia_area = { #5
+northern_polynesia_area = { #4
+	1241 3016 3389 3338
+}
+
+southern_polynesia_area = { #5
 	3014 3336 3015 3333 3334
 }
 
 eastern_polynesia_area = { #3
 	1988 3365 3390
+}
+
+fiji_area = { #3
+	1242 4938 4900
 }
 
 #New Zealand
@@ -4147,17 +4134,13 @@ vanuatu_area = { #5
 	4888 1239 4887 4886 4885
 }
 
-melanesia_area = { #3
-	1992 1991 4899 1990
-}
-
 transvaal_area = { #4
 	4781 4782 4783 4784
 }
 
-# micronesia_area = { #5
-# 	2726 2727 1996 4902 4897
-# }
+micronesia_area = { #5
+	2726 2727 1996 4902 4897
+}
 
 eastern_micronesia_area = { #4
 	1995 1993 4898 2728
@@ -4230,128 +4213,7 @@ society_islands_area = {
 #Deprecated:
 #############################
 
-great_moluccas_area = {
-
-}
-
-khorasan_area = {
-}
-
-libyan_desert_area = {
-	 
-}
-
-gharbia_area = {
-}
-
-sharqiya_area = {
-}
-
-central_egypt_area = {
-}
-
-upper_egypt_area = {
-}
-
-eastern_mediterrenean_islands_area = {
-}
-
-western_aegean_area = {
-}
-
-odishi_area = {
-}
-
-georgia_area = {
-}
-
-rakka_area = {
-}
-
-south_kurdistan_area = {
-}
-
-east_china_sea_islands_area = {
-
-}
-
-east_african_islands_area = {
-	 
-}
-
-arabian_sea_islands_area = {
-	 
-}
-
-baltic_islands_area = {
-	 
-}
-
-east_altishahr_area = {
-
-}
-
-amnok_area = {
-
-}
-
-north_korea_area = {
-
-}
-
-hejaz_area = {
-
-}
-
-sarat_area = {
-	
-}
-
-ad_dahna_area = {
-}
-
-najd_area = {
-
-}
-
-northern_england_area = {
-}
-
-mercia_area = { 
-}
-
-eastern_ireland_area = {
-}
-
-western_ireland_area = {
-}
-
-
-seine_area = {
-}
-
-luxemburg_liege_area = {
-}
-
-coromandel_area = {
-}
-
-carnatic_area = {
-
-}
-
-kerala_area = {
-
-}
-maharashtra_area = {
-
-}
-gujarat_area = { }
-
-central_doab_area = {
-}
-
-nepalese_area = { }
+#The areas below are used within other scripts and should be not deleted
 
 pomerelia_area = { }
 
@@ -4364,7 +4226,5 @@ netherlands_area = { }
 indonesian_islands_area = {  }
 
 iceland_area = { }
-
-ceram_area = { }
 
 south_laos_area = { }

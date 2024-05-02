@@ -1308,8 +1308,6 @@ west_australia_region = { #8
 #MELANESIA
 melanesia_region = {
 	areas = {
-		melanesia_area
-		southeastern_melanesia_area
 		vogelkop_area
 		papua_area
 		fly_river_area
@@ -1319,6 +1317,20 @@ melanesia_region = {
 		papua_highlands_area
 		bismarck_islands_area
 		louisiade_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
+
+eastern_melanesia_region = {
+	areas = {
+		southeastern_melanesia_area
 		west_solomon_area
 		east_solomon_area
 		vanuatu_area
@@ -1336,7 +1348,7 @@ melanesia_region = {
 #MICRONESIA
 micronesia_region = { #3
 	areas = {
-		west_micronesia_area
+		micronesia_area
 		eastern_micronesia_area
 		marianas_area
 	}
@@ -1351,8 +1363,9 @@ pacific_islands_region = { #6
 		hawaii_area
 		leeward_hawaiian_islands_area
 		western_polynesia_area
-		central_polynesia_area
+		southern_polynesia_area
 		eastern_polynesia_area
+		northern_polynesia_area
 		fiji_area
 		lau_area
 		society_islands_area
