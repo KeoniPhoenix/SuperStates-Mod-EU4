@@ -355,6 +355,7 @@ BUK = "countries/Bukhara.txt"
 AFG	= "countries/Afghanistan.txt"
 KHO	= "countries/Khorasan.txt"
 PER	= "countries/Persia.txt"
+ERS = "countries/Eranshahr.txt"
 QAR	= "countries/QaraKoyunlu.txt"
 TIM	= "countries/Timurid.txt"
 TRS = "countries/Transoxiana.txt"
@@ -1170,10 +1171,11 @@ MID = "countries/MidAtlanticLeague.txt"
 MDL = "countries/MidwestNation.txt"
 NAM = "countries/NorthAmericaUnion.txt"		#End Tag
 NEW = "countries/NewEngland.txt"
+NEF = "countries/Nouvelle-Angleterre.txt"	#French New England
 PCF = "countries/Pacifica.txt"
 RKY = "countries/RockyMountain.txt"
 USA = "countries/USA.txt"					#End Tag
-#WBU = "countries/WabashUnion.txt"
+#WBU = "countries/WabashUnion.txt"			#Illinois-Indiana Union
 WST = "countries/Westsylvania.txt"
 #GTX = "countries/GreaterTexas.txt" 			# Land claimed/owned by 1836 Republic of Texas - Tejas & End Tag
 SWW = "countries/Southwest.txt"
@@ -1351,9 +1353,10 @@ YZU = "countries/Yazoo.txt"					#Yazoo lands of Mississippi state
 # SIO = "countries/Sioux.txt"
 # CHE = "countries/Cherokee.txt"
 
-#############################
+####################################
+#CENTRAL AMERICAN AND MEXICAN STATES
+####################################
 #Mexican States
-#############################
 AGC = "countries/Aguascalientes.txt"
 BCN = "countries/BajaCalifornia.txt"
 BCS = "countries/BajaCaliforniaSur.txt"
@@ -1389,7 +1392,21 @@ ZCT = "countries/Zacatecas.txt"
 
 #Releasable States in Mexico
 
-DPO = "countries/DisconnectedPope.txt"
+#DPO = "countries/DisconnectedPope.txt"
+LOS = "countries/LosAltos.txt"
+
+#Central American States
+CRC = "countries/CostaRica.txt"
+ESL = "countries/ElSalvador.txt"
+GTM = "countries/Guatemala.txt"
+HND = "countries/Honduras.txt"
+NCG = "countries/Nicaragua.txt"
+
+#Releasable States in Central America
+BLZ = "countries/Belize.txt"
+MSQ = "countries/Misquito.txt"
+PNM = "countries/Panama.txt"
+
 #############################
 #Australian States
 #############################
@@ -1447,19 +1464,7 @@ WSM = "countries/WesternSamoa.txt"
 SMA = "countries/Samoa.txt"			#Unified Samoan Islands
 
 #############################################################
-#RELEASABLE STATES FOR CENTRAL AMERICA AND CARIBBEAN
-
-#Central American States
-
-BLZ = "countries/Belize.txt"
-CRC = "countries/CostaRica.txt"
-ESL = "countries/ElSalvador.txt"
-GTM = "countries/Guatemala.txt"
-HND = "countries/Honduras.txt"
-MSQ = "countries/Misquito.txt"
-NCG = "countries/Nicaragua.txt"
-PNM = "countries/Panama.txt"
-LOS = "countries/LosAltos.txt"
+#RELEASABLE STATES FOR THE CARIBBEAN
 
 
 #Caribbean States
