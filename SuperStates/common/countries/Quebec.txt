@@ -6,11 +6,13 @@ graphical_culture = westerngfx
 #color = { 0  114  187 }	#Spanish Blue variant
 color = { 49  140  231 }	#Bleu de France (Hedalric French Blue)		
 
+revolutionary_colors = { 10 0 16 }
+
 historical_idea_groups = {
 	offensive_ideas
-	naval_ideas
+	infrastructure_ideas
 	exploration_ideas
-	aristocracy_ideas
+	naval_ideas
 	defensive_ideas
 	administrative_ideas
 	economic_ideas

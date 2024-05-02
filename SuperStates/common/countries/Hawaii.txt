@@ -5,13 +5,15 @@ graphical_culture = westerngfx
 #color = { 113  101  0 }
 color = { 48  169  96 } #Victoria 2 color
 
+revolutionary_colors = { 5 13 16}
+
 historical_idea_groups = {
-	defensive_ideas
-	exploration_ideas
+	expansion_ideas
+	maritime_ideas
 	naval_ideas
-	diplomatic_ideas
-	offensive_ideas
+	economic_ideas
 	trade_ideas
+	offensive_ideas
 	quality_ideas
 	administrative_ideas
 }

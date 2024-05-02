@@ -4,12 +4,14 @@ graphical_culture = westerngfx
 
 color = { 212  60  0 }
 
+revolutionary_colors = { 13 8 5 }
+
 historical_idea_groups = {
 	offensive_ideas
-	defensive_ideas
 	diplomatic_ideas
+	defensive_ideas
+	infrastructure_ideas
 	quality_ideas
-	quantity_ideas
 	trade_ideas
 	economic_ideas
 	plutocracy_ideas

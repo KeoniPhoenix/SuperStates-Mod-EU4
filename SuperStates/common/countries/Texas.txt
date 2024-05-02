@@ -5,6 +5,8 @@ graphical_culture = westerngfx
 color = { 186  70  58 }	#Original Color for Mod
 #color = { 4  144  178 }		#Vic2 Color
 
+revolutionary_colors = { 13  0  5 }
+
 historical_idea_groups = {
 	offensive_ideas
 	exploration_ideas

@@ -1,0 +1,210 @@
+#Country Name: Nouvelle-Angleterre
+
+graphical_culture = westerngfx
+
+color = { 25  88  150 }
+
+historical_idea_groups = {
+	administrative_ideas
+	maritime_ideas
+	exploration_ideas
+	naval_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	north_american_battle_axe
+	north_american_armored_horsemen
+	north_american_men_at_arms
+	north_american_free_company
+	north_american_black_riders
+	north_american_free_shooter
+	north_american_caracole
+	north_american_charge
+	north_american_gallop
+	north_american_pike_and_shot
+	north_american_frontiersmen
+	north_american_dragoon
+	american_blue_coat
+	north_american_carabineer
+	north_american_reformed_light_cavalry
+	revolutionary_square
+	north_american_lancers
+}
+
+monarch_names = {
+	#AMERICAN LIST
+	"Alexander #0" = 10
+	"Alvan #0" = 1 
+	"Benjamin #0" = 5
+	"Caleb #0" = 5
+	"Calvin #0" = 5
+	"Channing #0" = 1
+	"Charles #0" = 5
+	"Christian #0" = 5
+	"Christopher #0" = 5
+	"Curtis #0" = 5
+	"David #0" = 5
+	"Deval #0" = 1
+	"Eben #0" = 1
+	"Edmund #0" = 1
+	"Edward #0" = 15
+	"Elbridge #0" = 1
+	"Emory #0" = 1
+	"Endicott #0" = 1
+	"Eugene #0" = 1
+	"Foster #0" = 1
+	"Francis #0" = 1
+	"Frank #0" = 5
+	"Frederic #0" = 1
+	"George #0" = 20
+	"Henry #0" = 10
+	"Increase #0" = 1
+	"James #0" = 15
+	"Jane  #0" = -5
+	"John #0" = 20
+	"Jonathan #0" = 5
+	"Joseph #0" = 10
+	"Josiah #0" = 1
+	"Leverett  #0" = 1
+	"Levi #0" = 10
+	"Marcus #0" = 5
+	"Matthew #0" = 5
+	"Maurice #0" = 5
+	"Michael #0" = 5
+	"Mitt #0" = 5
+	"Moses #0" = 5
+	"Nathaniel #0" = 5
+	"Oliver #0" = 5
+	"Paul #0" = 10
+	"Ralegh #0" = 5
+	"Richard #0" = 15
+	"Robert #0" = 10
+	"Roger #0" = 5
+	"Samuel #0" = 20
+	"Simon #0" = 5
+	"Spencer #0" = 5
+	"Thomas #0" = 20
+	"William #0" = 20
+	"Winthrop #0" = 5
+
+	#FRANCE LIST
+	"Louis #10" = 160
+	"Charles #5" = 80
+	"Henri #1" = 60
+	"François #0" = 40
+	"Philippe #6" = 10
+	"Jean #2" = 10
+	"Gaston #0" = 10
+	"Nicolas-Henri #0" = 10
+	"Louis-François #0" = 5
+	"Jacques #0" = 5
+	"Joachim #0" = 5
+	"Xavier #0" = 5
+	"Robert #2" = 1
+	"Hugues #1" = 1
+	"Raoul #1" = 1
+	"Alexandre #0" = 0
+	"Alphonse #0" = 0
+	"Ambroise #0" = 0
+	"Armand #0" = 0
+	"Augustin #0" = 0
+	"Barthélemy #0" = 0
+	"Benoît #0" = 0
+	"Bernard #0" = 0
+	"Blaise #0" = 0
+	"Claude #0" = 0
+	"Clément #0" = 0
+	"Denis #0" = 0
+	"Étienne #0" = 0
+	"Firmin #0" = 0
+	"Georges #0" = 0
+	"Guy #0" = 0
+	"Guillaume #0" = 0
+	"Ignace #0" = 0
+	"Jean-Antoine #0" = 0
+	"Jean-Baptiste #0" = 0
+	"Jean-Jacques #0" = 0
+	"Jean-Philippe #0" = 0
+	"Joseph #0" = 0
+	"Josquin #0" = 0
+	"Jules #0" = 0
+	"Marc #0" = 0
+	"Maurice #0" = 0
+	"Maximilien #0" = 0
+	"Michel #0" = 0
+	"Nicolas #0" = 0
+	"Pascal #0" = 0
+	"Pierre #0" = 0
+	"René #0" = 0
+	"Sébastien #0" = 0
+	"Simon #0" = 0
+	"Jeanne #0" = -10
+	"Marie #0" = -1
+	"Charlotte #0" = -1
+	"Anne #0" = -10
+	"Marguerite #0" = -10
+	"Adélaïde #0" = -10
+}
+
+leader_names = {
+	#FRENCH LIST
+	d'Ambleteuse d'Aulnay
+	"de Beauharnais" "de Bercy" "de Béthune" "de Boissieu" "de Bonnefoy" "de Bonneuil" "du Bosquet" "de la Bretonnière" "de Broglie"
+	"de Castaing" "de Caumartin" "de Chambly" "de Chambronne" "de Champmartin" "de Chevigny" "des Coulons" "de Crèvecœur" "de Crussol"
+	"de Dampierre" Desgouttes Duquesne
+	"des Écures" d'Entraigues d'Estrées
+	"du Fournay"
+	"de Galard"
+	"des Herbiers"
+	"de La Barthe" "de La Ferrandie" "de La Galissonière" "de La Mothe" "de La Motte d'Airan" "de La Porte" "Le Tellier" "de Lhéry" "de Luynes"
+	"de Marguerye" "de Maurepas"
+	"de Neufchâtel"
+	"d'Ornano"
+	"de Pellefort"
+	"de Richemont" "de Rochechouart" "de Rochemaure" "de Rieu"
+	"de Saint-Chamond" "de Saint-Esprit" "de Saint-Germain" "de Saint-Omer" "de Siorac"
+	"de Tocqueville" "de La Tour d'Auvergne" "de Tréville"
+	"d'Usson"
+	"du Valentinois" "de Vergennes" "de Vibien" "de Vigny" "de Villeneuve"
+
+	#AMERICAN LIST
+	Adams Allen Ames Andrew Andros Armstrong
+	Banks Bates Belcher Bellingham Boutwell Bowdoin Brackett Bradford Bradstreet Briggs Brooks Bullock Burnet Butler
+	Carver Cellucci Claflin Clifford Coolidge Coote Cox Cradock Crane Curley Cushing
+	Davis Dever Douglas Draper Dudley Dukakis Dummer
+	Ely Endecott Eustis Everett
+	Foss Fuller Furcolo
+	Gage Gardner Gaston Gerry Gilbert Gill Gore Gorges Greene Greenhalge Guild
+	Hancock Haynes Herter Hinckley Hurley Hutchinson
+	King
+	Leverett Lincoln Long
+	McCall Morton
+	Patrick Peabody Phips Popham Pownall Prence
+	Rice Robinson Romney Russell
+	Saltonstall Sanders Sargent Shirley Shute Stoughton Strong Sullivan Sumner Swift
+	Tailer Talbot Tobin
+	Vane Volpe
+	Walsh Washburn Weld Winslow Winthrop Wolcott
+}
+
+ship_names = {
+	Barnstable Berkshire Bristol
+	Cumberland
+	Devonshire Dukes
+	Essex
+	Franklin
+	Hampden Hampshire Hancock
+	Kennebec
+	Lincoln
+	Massachusetts Middlesex
+	Nantucket Norfolk
+	"Old Norfolk" Oxford
+	Penobscot Plymoth
+	Somerset Suffolk
+	Washington Worcester
+	York
+}
