@@ -18,15 +18,16 @@ opinion_earthquake = {
 	yearly_decay = 2.5
 }
 
-#opinion_gadsden_purchase_rejected = {
-#	opinion = -75
-#	years = 50
-#	yearly_decay = 1.5
-#}
+promoting_new_french_modifier = {
+	opinion = 25
+}
 
-#opinion_gadsden_purchase_completed = {
-#	opinion = 15
-#	years = 25
-#	yearly_decay = 1.67
-#}
+suppressing_new_french_modifier = {
+	opinion = -50
+	yearly_decay = 1
+}
 
+converted_to_new_england_french_modifier = {
+	opinion = 50
+	yearly_decay = 2
+}
