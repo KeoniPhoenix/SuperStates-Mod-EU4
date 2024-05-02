@@ -20,6 +20,7 @@
 #REMOVED
 
 # Colombia
+# TO BE REMOVED
 colonial_colombia = {
 	color = { 227 40 40 }
 
@@ -79,6 +80,7 @@ colonial_colombia = {
 }
 
 # Peru
+# TO BE REMOVED
 colonial_peru = {
 	color = { 124 140 162 }
 
@@ -145,6 +147,7 @@ colonial_peru = {
 }
 
 # La Plata
+# TO BE REMOVED
 colonial_la_plata = {
 	color = { 101 102 163 }
 
@@ -244,6 +247,7 @@ colonial_la_plata = {
 }
 
 # Brazil
+# TO BE REMOVED
 colonial_brazil = {
 	color = { 57 160 101 }
 
@@ -338,6 +342,7 @@ colonial_brazil = {
 
 # Australia
 #REMOVED
+
 colonial_new_guinea = {
 	color = { 191 79 81 } #Bird Of Paradise
 	provinces = {
@@ -348,6 +353,10 @@ colonial_new_guinea = {
 		name = "COLONIAL_NEW_GUINEA_Root_Culture_GetName_New_Guinea"
 	}
 }
+
+# TO BE ADDED:
+# AFRICA REGIONS:
+# West Africa, Cameroon, Abyssinia/Horn of Africa, East Africa, Congo, Mozambique, South Africa, Madagascar
 
 # Used for RNW
 colonial_placeholder_1 = {
