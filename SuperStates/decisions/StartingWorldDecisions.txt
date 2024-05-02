@@ -1,0 +1,386 @@
+country_decisions = {
+	#OPEN STARTING WORLD DECISIONS
+	open_remove_ai_decisions = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			NOT = {
+				calc_true_if = {
+					all_countries_including_self = {
+						ai = no
+					}
+					amount = 2
+				}
+			}
+			is_date = 1444.11.11
+			NOT = { has_global_flag = world_was_controlled }
+			NOT = { has_country_flag = controls_the_world }
+		}
+
+		allow = {
+			ai = no
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		effect = {
+			set_country_flag = controls_the_world
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#CLEAR THE WORLD DECISION, EMPTIES THE WORLD OF ALL AI NATIONS
+	clear_the_world_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_africa }
+			NOT = { has_global_flag = emptied_asia }
+			NOT = { has_global_flag = emptied_australia }
+			NOT = { has_global_flag = emptied_europe }
+			NOT = { has_global_flag = emptied_north_america }
+			NOT = { has_global_flag = emptied_south_america }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		effect = {
+			every_country = {
+				limit = { ai = yes }
+				remove_country = yes
+			}
+			clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+		}
+	}
+
+	clear_africa_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_africa }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+			NOT = { has_global_flag = emptied_africa }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						region = guinea_region
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						region = niger_region
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						region = sahel_region
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						region = horn_of_africa_region
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = southern_africa_superregion
+					}
+				}
+				remove_country = yes
+			}
+			#clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_africa
+		}
+	}
+
+	clear_asia_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_asia }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+			NOT = { has_global_flag = emptied_asia }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = persia_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = tartary_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = india_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = east_indies_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = china_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = far_east_superregion
+					}
+				}
+				remove_country = yes
+			}
+			#clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_asia
+		}
+	}
+
+	clear_europe_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_europe }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+			NOT = { has_global_flag = emptied_europe }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						continent = europe
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						superregion = near_east_superregion
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						region = maghreb_region
+					}
+				}
+				remove_country = yes
+			}
+			clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_europe
+		}
+	}
+
+	clear_south_america_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_south_america }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						continent = south_america
+					}
+				}
+				remove_country = yes
+			}
+			#clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_south_america
+		}
+	}
+
+	clear_australia_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_australia }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						continent = australia_continent
+					}
+				}
+				remove_country = yes
+			}
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						continent = oceania
+					}
+				}
+				remove_country = yes
+			}
+			clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_australia
+		}
+	}
+	
+	clear_north_america_decision = {
+		major = yes
+		color = { 128 0 0 }
+
+		potential = {
+			ai = no
+			NOT = { ironman = yes }
+			has_country_flag = controls_the_world
+			NOT = { has_global_flag = emptied_north_america }
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		allow = {
+			ai = no
+			has_country_flag = controls_the_world
+			NOT = { is_date = 1444.11.12 }
+		}
+
+		effect = {
+			every_country = {
+				limit = { 
+					ai = yes
+					capital_scope = {
+						continent = north_america
+					}
+				}
+				remove_country = yes
+			}
+			#clr_country_flag = controls_the_world
+			set_global_flag = world_was_controlled
+			set_global_flag = emptied_north_america
+		}
+	}
+
+}

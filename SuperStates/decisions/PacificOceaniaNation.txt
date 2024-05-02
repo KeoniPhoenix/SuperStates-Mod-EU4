@@ -30,14 +30,14 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			hawaii_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 3
+				region = eastern_melanesia_region
+				is_core = root
 			}
 			num_of_owned_provinces_with = {
 				value = 3
-				area = west_micronesia_area
+				region =  micronesia_region
 				is_core = root
 			}
 			num_of_owned_provinces_with = {
@@ -60,11 +60,23 @@ country_decisions = {
 			PCO = {
 				if = {
 					limit = {
-						NOT = { government_rank = 2 }
+						NOT = { government_rank = 3 }
 					}
-					set_government_rank = 2
+					set_government_rank = 3
 				}
-				melanesia_area = {
+				bismarck_islands_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
+				}
+				east_solomon_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = PCO
+				}
+				west_solomon_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 					}

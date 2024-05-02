@@ -6,7 +6,11 @@ country_decisions = {
 		potential = {
 			NOT = { exists = NAM }
 			NOT = { exists = NEW }
+			NOT = { exists = NEF }
 			NOT = { tag = USA }
+			capital_scope = {
+				region = new_england_region
+			}
 			#technology_group = north_american
 			culture_group = new_england_group
 			OR = {
@@ -73,6 +77,104 @@ country_decisions = {
 				add_permanent_claim = NEW
 			}
 				}
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	nouvelle-angleterre_formation = {
+		major = yes
+		potential = {
+			NOT = { exists = NAM }
+			NOT = { exists = NEW }
+			NOT = { exists = NEF }
+			NOT = { tag = USA }
+			capital_scope = {
+				region = new_england_region
+			}
+			#technology_group = north_american
+			culture_group = new_french
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 20
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2609
+				province_id = 2606
+				province_id = 2602
+				province_id = 2604
+				province_id = 2613
+				province_id = 2612
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 23
+				region = new_england_region
+				is_core = root
+			}
+			owns_core_province = 2609 # Boston
+			owns_core_province = 2606 # Augusta
+			owns_core_province = 2602 # Montpelier
+			owns_core_province = 2604 # Concord
+			owns_core_province = 2613 # Hartford
+			owns_core_province = 2612 # Providence
+		}
+		effect = {
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			change_tag = NEF
+			NEF = {
+			if = {
+					limit = {
+					NOT = { government_rank = 2 }
+							}
+				set_government_rank = 2
+			}
+			}
+			if = {
+				limit = {
+					any_rival_country = {
+						culture_group = new_french
+					}
+				}
+				force_remove_rival = THIS
+				every_rival_country = {
+					limit = {
+						culture_group = new_french
+					}
+					force_remove_rival = ROOT
+				}
+			}
+			new_england_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NEF
+			}
+			adirondack_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NEF
+			}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap 
 		}

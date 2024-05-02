@@ -3,20 +3,20 @@ country_decisions = {
 ## Reform into Arizona
 	reform_arizona = {
 		major = yes
-		potential = 	{
-		NOT = { has_country_flag = formed_arizona_flag }
-		NOT = { exists = ARZ }
-		NOT = { exists = DES }
-		#NOT = { exists = NAH }
-		#NOT = { exists = FSA }
-		NOT = { exists = CSA }
-		#NOT = { exists = NAM }
-		NOT = { tag = USA }
-		#NOT = { exists = GCL }
-		#NOT = { exists = NSP }
-		#NOT = { exists = AZL }
-		NOT = { tag = SWW }
-		OR = {
+		potential = {
+			NOT = { has_country_flag = formed_arizona_flag }
+			NOT = { exists = ARZ }
+			NOT = { exists = DES }
+			#NOT = { exists = NAH }
+			#NOT = { exists = FSA }
+			NOT = { exists = CSA }
+			#NOT = { exists = NAM }
+			NOT = { tag = USA }
+			#NOT = { exists = GCL }
+			#NOT = { exists = NSP }
+			#NOT = { exists = AZL }
+			NOT = { tag = SWW }
+			OR = {
 				tag = BAZ
 				primary_culture = arizonan
 				primary_culture = baja_arizonan

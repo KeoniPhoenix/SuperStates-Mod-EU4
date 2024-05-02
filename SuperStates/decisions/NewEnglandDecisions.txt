@@ -1,0 +1,155 @@
+country_decisions = {
+
+## ALL of NEW ENGLAND
+	promote_new_england_french = {
+		major = yes
+		potential = {
+			culture_group = new_england_group
+			any_neighbor_country = {
+				culture_group = new_french
+			}
+		}
+		allow = {
+			NOT = { has_country_flag = promoting_new_french }
+			NOT = { has_country_flag = suppressing_new_french }
+			adm_power = 25
+			dip_power = 25
+		}
+		effect = {
+			add_adm_power = -25
+			add_dip_power = -25
+			every_country = {
+				limit = { culture_group = new_french }
+				add_opinion = {
+					who = THIS
+					modifier = promoting_new_french_modifier
+				}
+			}
+			set_country_flag = promoting_new_french
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					OR = {
+						tag = MNE
+						tag = NWH
+						tag = VRM
+					}
+					any_neighbor_country = {
+						culture_group = new_french 
+						num_of_cities = 10
+					}
+					is_year = 1500
+				}
+				factor = 1
+			}
+		}
+	}
+
+	suppress_new_england_french = {
+		major = yes
+		potential = {
+			culture_group = new_england_group
+			has_country_flag = promoting_new_french
+		}
+		allow = {
+			NOT = { has_country_flag = suppressing_new_french }
+			stability = -2
+			adm_power = 75
+		}
+		effect = {
+			add_adm_power = -75
+			add_stability = -1
+			every_country = {
+				limit = { culture_group = new_french }
+				add_opinion = {
+					who = THIS
+					modifier = suppressing_new_french_modifier
+				}
+			}
+			clr_country_flag = promoting_new_french
+			set_country_flag = suppressing_new_french
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				AND = {
+					OR = {
+						tag = MNE
+						tag = NWH
+						tag = VRM
+					}
+					any_neighbor_country = {
+						culture_group = new_french 
+						NOT = { num_of_cities = 5 }
+					}
+				}
+				factor = 1
+			}
+		}
+	}
+
+	convert_to_new_england_french = {
+		major = yes
+		potential = {
+			culture_group = new_england_group
+			OR = {
+				any_neighbor_country = {
+					culture_group = new_french
+				}
+				overlord = {
+					culture_group = new_french
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					culture_group = new_french
+					NOT = { culture = root }
+					region = central_canada_region
+				}
+			}
+		}
+		allow = {
+			NOT = { has_country_flag = converted_to_new_england_french }
+			stability = -1
+			adm_power = 600
+
+		}
+		effect = {
+			add_adm_power = -600
+			add_stability = -2
+			ROOT = {
+				change_primary_culture = new_england_french
+				capital_scope = {
+					change_culture = new_england_french
+				}
+				every_owned_province = { 
+					limit = {
+						is_core = ROOT
+						culture_group = new_england_group
+					}
+					change_culture = new_england_french
+				}
+			}
+			every_country = {
+				limit = { culture_group = new_french }
+				add_opinion = {
+					who = THIS
+					modifier = converted_to_new_england_french_modifier
+				}
+			}
+			set_country_flag = converted_to_new_england_french
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				overlord = {
+					culture_group = new_french 
+					num_of_cities = 10
+				}
+
+				factor = 1
+			}
+		}
+	}
+}
