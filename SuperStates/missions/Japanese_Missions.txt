@@ -931,7 +931,9 @@ japanse_missions_domestic = {
 				limit = {
 					is_revolutionary = no
 				}
-				absolutism = 50
+				OR = {
+					absolutism = 50
+				}
 			}
 			if = {
 				limit = { has_dlc = "Mandate of Heaven" }

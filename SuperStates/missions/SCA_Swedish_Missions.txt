@@ -878,9 +878,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -932,9 +935,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -952,9 +958,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -2161,7 +2170,7 @@ swe_internal_slot = {
 			}
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = novgorodian }
+			add_accepted_culture_or_dip_power = { culture = novgorodian dip_reward = yes }
 			310 = {
 				change_province_name = "Hólmgarðr"
 				rename_capital = "Hólmgarðr"
@@ -2302,7 +2311,10 @@ swe_internal_slot = {
 						AND = {
 							alliance_with = ROOT
 							has_opinion = { who = ROOT value = 100 }
-							trust = { who = ROOT value = 75 }
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = { who = ROOT value = 75 }
+							}
 						}
 					}
 				}
@@ -2315,7 +2327,10 @@ swe_internal_slot = {
 						AND = {
 							alliance_with = ROOT
 							has_opinion = { who = ROOT value = 100 }
-							trust = { who = ROOT value = 75 }
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = { who = ROOT value = 75 }
+							}
 						}
 					}
 				}
@@ -2699,7 +2714,18 @@ swe_swedish_military_mission_slot = {
 					limit = { exists = PLC }
 					alliance_with = PLC
 					reverse_has_opinion = { who = PLC value = 150 }
-					PLC = { trust = { who = ROOT value = 80 } }
+					if = {
+						limit = { has_dlc = "Leviathan" }
+						PLC = { trust = { who = ROOT value = 80 } }
+					}
+					else = {
+						PLC = {
+							has_opinion_modifier = {
+								who = ROOT 
+								modifier = sent_gift
+							}
+						}
+					}
 					if = {
 						limit = { PLC = { government = monarchy } ROOT = { government = monarchy } }
 						marriage_with = PLC
@@ -2778,10 +2804,10 @@ swe_swedish_military_mission_slot = {
 				add_adm_power = 150
 			if = {
 				limit = { has_updated_culture = { culture = slavic } }
-				add_accepted_culture_or_dip_power = { culture = polish_new }
+				add_accepted_culture_or_dip_power = { culture = polish_new dip_reward = yes }
 			}
 			else = {
-				add_accepted_culture_or_dip_power = { culture = polish }
+				add_accepted_culture_or_dip_power = { culture = polish dip_reward = yes }
 			}
 				poland_region = {
 					limit = {
@@ -3274,7 +3300,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3283,7 +3309,7 @@ swe_religion_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 			custom_tooltip = swe_humanist_effects_tt
@@ -3410,7 +3436,7 @@ swe_religion_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3435,7 +3461,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3444,7 +3470,7 @@ swe_religion_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3470,13 +3496,13 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
 			custom_tooltip = swe_humanist_effects_tt
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -3771,7 +3797,7 @@ swe_catholic_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3826,7 +3852,7 @@ swe_catholic_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -4021,7 +4047,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -4030,7 +4056,7 @@ swe_protestant_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 			add_country_modifier = {
@@ -4084,7 +4110,7 @@ swe_protestant_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -4110,7 +4136,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -4257,7 +4283,7 @@ swe_humanist_mission_slot = {
 		}
 		effect = {
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}

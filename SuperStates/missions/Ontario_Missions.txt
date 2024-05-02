@@ -783,7 +783,7 @@ ont_slot_4 = {
 		position = 4
 		trigger = {
 			2642 = {
-				province_is_or_accepts_culture = ROOT
+				province_is_or_accepts_culture = yes
 			}
 			OR = {
 				2642 = {

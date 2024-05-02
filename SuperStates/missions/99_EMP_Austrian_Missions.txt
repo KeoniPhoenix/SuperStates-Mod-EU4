@@ -388,7 +388,7 @@ emp_hab_netherlands_branch = {
 						}
 						NOT = { owned_by = root }
 						NOT = { is_core = root }
-						NOT = { is_claim = root }
+						NOT = { is_permanent_claim = root }
 						any_neighbor_province = {
 							owned_by = root
 						}

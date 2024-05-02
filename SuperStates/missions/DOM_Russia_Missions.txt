@@ -82,7 +82,7 @@ mos_rus_handle_succession = {
 				legitimacy = 90
 			}
 			ruler_total_stats = {
-				stats = 10
+				amount = 10
 			}
 		}
 		effect = {
