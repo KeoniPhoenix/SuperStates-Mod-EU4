@@ -3,6 +3,8 @@ add_government_reform = pure_westminster_reform
 technology_group = north_american
 religion = s_catholic
 primary_culture = acadian
+add_accepted_culture = brayon
+add_accepted_culture = new_england_french
 capital = 1811	# Halifax
 
 1528.1.1 = {
