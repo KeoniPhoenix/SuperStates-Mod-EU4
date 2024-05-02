@@ -94,6 +94,15 @@
 # New England
  new_england_nation_title:0 "Form New England"
  new_england_nation_desc:0 "Consolidating the various state governments into New England gives the region a better standing in the world."
+ nouvelle-angleterre_formation_title:0 "Form Nouvelle-Angleterre"
+ nouvelle-angleterre_formation_desc:0 "Cosolidating the various state government into Nouvelle-Angleterre gives the region a better standing in the world and broadens the influence of the Francophone community."
+ promote_new_england_french_title:0 "Promote New England French"
+ promote_new_england_french_desc:0 "Our historical ties to Quebec, Acadia, and other neighboring regions that are linguistically Francophone as allowed for the development and flurishing dialact of our own here in New England.  As a sign of closer meaningful ties to our Francophone neighbors, we shall place an emphasis on our dialect over our Anglophone native language."
+ suppress_new_england_french_title:0 "Supress New England French"
+ suppress_new_england_french_desc:0 "The promotion and preference for the use of New England French has declined and at this point, it is much more useful to realign our cultural and diplomatic efforts in promoting our ties to the dominant Anglophone language we share with the rest of our American neighbors."
+ convert_to_new_england_french_title:0 "Convert to New England French"
+ convert_to_new_england_french_desc:0 "Our close ties with the Francophone world next door as only grown as the influence of the Anglophone world has declined, we shall recognize New England French as our primary language so as to join in fraternity with our Francophone neighbors."
+ 
 # New Jersey
  reform_new_jersey_title:0 "Reform into New Jersey"
  reform_new_jersey_desc:0 "The lands that once belonged to New Jersey are now ours. We must take their title for ourselves, and proclaim this nation the true and only Jersey."
