@@ -511,81 +511,6 @@ can_have_center_of_reformation_trigger = { #Province Scope
 	NOT = { has_climate = tropical }
 }
 
-s_can_have_center_of_reformation_trigger = { #Province Scope
-	#$RELIGION$ needs to match the religion of the center that is being spawned.
-	continent = north_america
-	OR = {
-		religion = s_protestant
-		religion = s_catholic
-		religion = s_baptist
-		religion = s_lutheran
-		religion = s_methodist
-		religion = anglican
-	}
-	NOT = { province_id = 118 }
-	is_in_capital_area = yes
-	is_reformation_center = no
-	is_island = no
-	expelling_minorities = no
-	development = 10
-	NOT = {
-		any_neighbor_province = {
-		is_reformation_center = yes
-		}
-	}
-	NOT = {
-		any_province = {
-			area = PREV
-			is_reformation_center = yes
-			religion = $RELIGION$
-		}
-	}
-	NOT = { has_climate = arctic }
-	NOT = { has_climate = arid }
-	NOT = { has_terrain = coastline }
-	NOT = { has_terrain = coastal_desert }
-	NOT = { has_terrain = steppe }
-	NOT = { has_terrain = desert }
-	NOT = { has_terrain = glacier }
-	NOT = { has_climate = tropical }
-}
-
-sa_can_have_center_of_reformation_trigger = { #Province Scope
-	#$RELIGION$ needs to match the religion of the center that is being spawned.
-	continent = australia_continent
-	OR = {
-		religion = anglican
-		religion = austral_catholic
-		religion = austral_protestant
-	}
-	NOT = { province_id = 118 }
-	is_in_capital_area = yes
-	is_reformation_center = no
-	is_island = no
-	expelling_minorities = no
-	development = 10
-	NOT = {
-		any_neighbor_province = {
-			is_reformation_center = yes
-		}
-	}
-	NOT = {
-		any_province = {
-			area = PREV
-			is_reformation_center = yes
-			religion = $RELIGION$
-		}
-	}
-	NOT = { has_climate = arctic }
-	NOT = { has_climate = arid }
-	NOT = { has_terrain = coastline }
-	NOT = { has_terrain = coastal_desert }
-	NOT = { has_terrain = steppe }
-	NOT = { has_terrain = desert }
-	NOT = { has_terrain = glacier }
-	NOT = { has_climate = tropical }
-}
-
 province_viable_for_industrialization_events_trigger = { #Province Scope
 	is_state = yes
 	NOT = { devastation = 1 }
@@ -658,11 +583,11 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { was_tag = SYN }
 				NOT = { was_tag = ADU }
 				NOT = { was_tag = LOT }
-				#NOT = { was_tag = USA }
-				#NOT = { was_tag = CAN }
-				#NOT = { was_tag = BRZ }
-				#NOT = { was_tag = AUS }
-				#NOT = { was_tag = MEX }
+				NOT = { was_tag = USA }
+				NOT = { was_tag = CAN }
+				NOT = { was_tag = BRZ }
+				NOT = { was_tag = AUS }
+				NOT = { was_tag = MEX }
 				NOT = { was_tag = ETH }
 				NOT = { was_tag = AKS }
 				NOT = { was_tag = GZI }
@@ -696,11 +621,11 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = SYN }
 				NOT = { tag = ADU }
 				NOT = { tag = LOT }
-				#NOT = { tag = USA }
-				#NOT = { tag = CAN }
-				#NOT = { tag = BRZ }
-				#NOT = { tag = AUS }
-				#NOT = { tag = MEX }
+				NOT = { tag = USA }
+				NOT = { tag = CAN }
+				NOT = { tag = BRZ }
+				NOT = { tag = AUS }
+				NOT = { tag = MEX }
 				NOT = { tag = ETH }
 				NOT = { tag = AKS }
 				NOT = { tag = GZI }
@@ -1184,9 +1109,45 @@ can_create_holy_orders = {
 	}
 }
 
-unlocked_holy_order = {
-	has_country_flag = unlocked_holy_order_$type$
+is_ahead_of_time_in_technology = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_technology_$tech$
+		has_global_modifier_value = {
+			which = ahead_of_time_benefit_$tech$
+			value = 1
+		}
+	}
 }
+
+num_of_age_rewards_taken = {
+	custom_trigger_tooltip = {
+		tooltip = num_of_age_rewards_taken_$amount$
+		has_global_modifier_value = {
+			which = num_of_age_rewards
+			value = $amount$
+		}
+	}
+}
+
+has_orthodox_religious_icon_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = BYZ_has_religious_icon
+		OR = {
+			current_icon = icon_michael
+			current_icon = icon_eleusa
+			current_icon = icon_pancreator
+			current_icon = icon_nicholas
+			current_icon = icon_climacus
+		}
+	}
+}
+
+can_have_incorporated_vassals = {
+    OR = {
+        has_government_attribute = GER_unlock_integrated_vassal
+        has_country_flag = hab_integrated_vassals_flag
+    }
+} 
 
 same_govt_as_root_trigger = {
 	custom_trigger_tooltip = {
@@ -1342,10 +1303,13 @@ has_been_insulted_by_root = {
 }
 
 valid_for_personal_unions_trigger = {
-	exists = yes
-	is_subject = no
-	government = monarchy
-	religion_group = christian
+    exists = yes
+    is_subject = no
+    OR = {
+        government = monarchy
+        has_reform = dutch_republic
+    }
+    religion_group = christian
 }
 
 is_shadow_kingdom_eligible_trigger = {
@@ -1669,59 +1633,59 @@ is_absolutism_active = {
 	}
 }
 
-# is_southeast_tribe = {
-# 	OR =  {
-# 		tag = HNI
-# 		tag = ALT
-# 		tag = ICH
-# 		tag = COF
-# 		tag = JOA
-# 		tag = ETO
-# 		tag = SAT
-# 		tag = CIA
-# 		tag = COO
-# 		tag = ABI
-# 		tag = COW
-# 		tag = NTZ
-# 		tag = CAQ
-# 		tag = PCH
-# 		tag = QUI
-# 		tag = CCA
-# 		tag = ATA
-# 		tag = KSI
-# 		tag = OEO
-# 		tag = ANL
-# 		tag = NTC
-# 		tag = OSA
-# 		tag = CAD
-# 		tag = POW
-# 		tag = CLG
-# 		tag = HWK
-# 		tag = CHO
-# 	}
-# }
+is_southeast_tribe = {
+	OR =  {
+		tag = HNI
+		tag = ALT
+		tag = ICH
+		tag = COF
+		tag = JOA
+		tag = ETO
+		tag = SAT
+		tag = CIA
+		tag = COO
+		tag = ABI
+		tag = COW
+		tag = NTZ
+		tag = CAQ
+		tag = PCH
+		tag = QUI
+		tag = CCA
+		tag = ATA
+		tag = KSI
+		tag = OEO
+		tag = ANL
+		tag = NTC
+		tag = OSA
+		tag = CAD
+		tag = POW
+		tag = CLG
+		tag = HWK
+		tag = CHO
+	}
+}
 
-# is_iroquois = {
-# 	OR = {
-# 		tag = TIO
-# 		tag = TAH
-# 		tag = ATT
-# 		tag = AGG
-# 		tag = ATW
-# 		tag = ARN
-# 		tag = OSH
-# 		tag = STA
-# 		tag = ERI
-# 		tag = WEN
-# 		tag = MOH
-# 		tag = ONE
-# 		tag = ONO
-# 		tag = CAY
-# 		tag = SEN
-# 		tag = TSC
-# 		tag = IRO
-# 	}
-# }
+is_iroquois = {
+	OR = {
+		tag = TIO
+		tag = TAH
+		tag = ATT
+		tag = AGG
+		tag = ATW
+		tag = ARN
+		tag = OSH
+		tag = STA
+		tag = ERI
+		tag = WEN
+		tag = MOH
+		tag = ONE
+		tag = ONO
+		tag = CAY
+		tag = SEN
+		tag = TSC
+		tag = IRO
+	}
+}
 
 is_volcanic_area = { #polynesia and indonesia
 	OR = {
@@ -1739,28 +1703,13 @@ is_volcanic_area = { #polynesia and indonesia
 		area = visayas_area
 		area = luzon_area #northern luzon
 		area = southern_luzon_area
-		# area = te_ika_a_maui_hauauru_area
-		# area = te_ika_a_maui_waho_area
-		area = new_ulster_area
-		# area = eastern_polynesia_area #tahiti
-		area = society_islands_area
-		area = tuamotu_islands_area
-		# area = northern_polynesia_area #hawaii
-		area = hawaii_area
-		# area = polynesia_area
-		# area = melanesia_area
-		# SUPERSTATES MOD
-		area = bismarck_islands_area
-		area = west_solomon_area
-		area = east_solomon_area
-		area = vanuatu_area
-		area = fiji_area
-		area = lau_area
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = eastern_polynesia_area #tahiti
+		area = northern_polynesia_area #hawaii
+		area = polynesia_area
+		area = melanesia_area
 		area = papua_area
-		area = momase_area
-		area = papua_highlands_area
-		area = louisiade_area
-
 	}
 }
 
@@ -1782,11 +1731,11 @@ is_trade_node_province = {
 			province_id = 1191
 			province_id = 2868
 			province_id = 2935
-			# province_id = 2499
-			# province_id = 2021
+			province_id = 2499
+			province_id = 2021
 			province_id = 730
 			province_id = 1507
-			# province_id = 2526
+			province_id = 2526
 			province_id = 1551
 			province_id = 677
 			province_id = 679
@@ -1794,8 +1743,8 @@ is_trade_node_province = {
 			province_id = 1365
 			province_id = 1371
 			province_id = 1397
-			# province_id = 1997
-			# province_id = 1411
+			province_id = 1997
+			province_id = 1411
 			province_id = 1376
 			province_id = 684
 			province_id = 700
@@ -1845,8 +1794,8 @@ is_trade_node_province = {
 			province_id = 835
 			province_id = 1516
 			province_id = 1500
-			# province_id = 1486
-			# province_id = 1490
+			province_id = 1486
+			province_id = 1490
 			province_id = 1652
 			province_id = 1975
 			province_id = 45
@@ -1857,34 +1806,6 @@ is_trade_node_province = {
 			province_id = 1298
 			province_id = 1308
 			province_id = 1269
-			#Superstates Trade Nodes
-			province_id = 871
-			province_id = 862
-			province_id = 3313
-			province_id = 2480
-			province_id = 2510
-			province_id = 936
-			province_id = 944
-			province_id = 3309
-			province_id = 990
-			province_id = 2635
-			province_id = 973
-			province_id = 2631
-			province_id = 1487
-			province_id = 1001
-			province_id = 2553
-			province_id = 2642
-			province_id = 2581
-			province_id = 3306
-			province_id = 2609
-			province_id = 2652
-			province_id = 3307
-			province_id = 1104
-			province_id = 1697
-			province_id = 4643
-			province_id = 2011
-			province_id = 1084
-			province_id = 1237
 		}
 	}
 }
@@ -1896,7 +1817,7 @@ is_inland_trade_node_province = {
 			province_id = 4064
 			province_id = 4097
 			province_id = 1191
-			# province_id = 2526
+			province_id = 2526
 			province_id = 677
 			province_id = 679
 			province_id = 700
@@ -1919,16 +1840,6 @@ is_inland_trade_node_province = {
 			province_id = 61
 			province_id = 1876
 			province_id = 186
-			#Superstates Trade Nodes
-			province_id = 871
-			province_id = 2480
-			province_id = 936
-			province_id = 990
-			province_id = 2553
-			province_id = 1001
-			province_id = 2581
-			province_id = 2642
-			province_id = 2631
 		}
 	}
 }
@@ -1939,7 +1850,7 @@ is_not_inland_trade_node_province = {
 		NOT = { province_id = 4064 }
 		NOT = { province_id = 4097 }
 		NOT = { province_id = 1191 }
-		# NOT = { province_id = 2526 }
+		NOT = { province_id = 2526 }
 		NOT = { province_id = 677 }
 		NOT = { province_id = 679 }
 		NOT = { province_id = 700 }
@@ -1962,16 +1873,6 @@ is_not_inland_trade_node_province = {
 		NOT = { province_id = 61 }
 		NOT = { province_id = 1876 }
 		NOT = { province_id = 186 }
-		#Superstates Trade Nodes
-		NOT = { province_id = 871 }
-		NOT = { province_id = 2480 }
-		NOT = { province_id = 936 }
-		NOT = { province_id = 990 }
-		NOT = { province_id = 2553 }
-		NOT = { province_id = 1001 }
-		NOT = { province_id = 2581 }
-		NOT = { province_id = 2642 }
-		NOT = { province_id = 2631 }
 	}
 }
 
@@ -2064,15 +1965,15 @@ is_african_trade_node_province = {
 #Province scope
 is_american_trade_node_province = {
 	OR = {
-		# province_id = 1490
-		# province_id = 1486
-		# province_id = 2526
+		province_id = 1490
+		province_id = 1486
+		province_id = 2526
 		province_id = 1500
 		province_id = 1507
-		# province_id = 2499
+		province_id = 2499
 		province_id = 1551
 		province_id = 1516
-		# province_id = 4637
+		province_id = 4637
 		province_id = 835
 		province_id = 2935
 		province_id = 809
@@ -2080,29 +1981,6 @@ is_american_trade_node_province = {
 		province_id = 1531
 		province_id = 1536
 		province_id = 2868
-		#Superstates Trade Nodes
-		province_id = 871
-		province_id = 862
-		province_id = 3313
-		province_id = 2480
-		province_id = 2510
-		province_id = 936
-		province_id = 944
-		province_id = 3309
-		province_id = 990
-		province_id = 2635
-		province_id = 973
-		province_id = 2631
-		province_id = 1487
-		province_id = 1001
-		province_id = 2553
-		province_id = 2642
-		province_id = 2581
-		province_id = 3306
-		province_id = 2609
-		province_id = 2652
-		province_id = 3307
-		province_id = 1104
 	}
 }
 
@@ -2142,29 +2020,6 @@ has_any_colonist_idea = {
 		has_idea = adu_expeditionary_sentiment
 		has_idea = ICE_nationalism	#Colonist is in the ambition
 		has_idea = maj_nusa_tenggara
-
-		#US State Ideas
-		has_idea = frontiersmen
-		has_idea = ponce_de_leon
-		has_idea = chamorro_colonists
-		has_idea = kilaueas_expansion
-		has_idea = pioneer_settlement
-		has_idea = columbus_legacy
-		has_idea = colonial_history
-		#Canada State Ideas
-		has_idea = legacy_of_vinland
-		#Mexico State Ideas
-		has_idea = spirit_of_opposition #Colonist is in the ambition
-		has_idea = topiltzin
-		has_idea = mayan_expeditions
-		has_idea = holding_the_gulf #Colonist is in the ambition
-		#Australia State Ideas
-		has_idea = TSM_port_arthur #Colonist is in the ambition
-		#Pacific Ideas
-		has_idea = FSM_compact_of_free_association #Colonist is in the ambition
-		#Formables Ideas
-		has_idea = legacy_of_the_pioneers
-		has_idea = NZL_pokarekare_ana #Colonist is in the ambition
 	}
 }
 
@@ -2297,15 +2152,6 @@ has_religion_of_increased_opinion_for_scope = {
 		AND = { religion = dreamtime $who$ = { has_country_flag = has_increased_dreamtime_opinion } }
 		AND = { religion = jewish $who$ = { has_country_flag = has_increased_jewish_opinion } }
 		AND = { religion = zoroastrian $who$ = { has_country_flag = has_increased_zoroastrian_opinion } }
-		AND = { religion = austral_catholic $who$ = { has_country_flag = has_increased_austral_catholic_opinion } }
-		AND = { religion = s_catholic $who$ = { has_country_flag = has_increased_s_catholic_opinion } }
-		AND = { religion = austral_protestant $who$ = { has_country_flag = has_increased_austral_protestant_opinion } }
-		AND = { religion = s_protestant $who$ = { has_country_flag = has_increased_s_protestant_opinion } }
-		AND = { religion = mormon $who$ = { has_country_flag = has_increased_mormon_opinion } }
-		AND = { religion = s_lutheran $who$ = { has_country_flag = has_increased_s_lutheran_opinion } }
-		AND = { religion = s_methodist $who$ = { has_country_flag = has_increased_s_methodist_opinion } }
-		AND = { religion = s_baptist $who$ = { has_country_flag = has_increased_s_baptist_opinion } }
-		AND = { religion = anabaptist $who$ = { has_country_flag = has_increased_anabaptist_opinion } }
 	}
 }
 
@@ -2339,15 +2185,6 @@ reverse_has_religion_of_increased_opinion_for_scope = {
 		AND = { $who$ = { religion = dreamtime } has_country_flag = has_increased_dreamtime_opinion }
 		AND = { $who$ = { religion = jewish } has_country_flag = has_increased_jewish_opinion }
 		AND = { $who$ = { religion = zoroastrian } has_country_flag = has_increased_zoroastrian_opinion }
-		AND = { $who$ = { religion = austral_catholic } has_country_flag = has_increased_austral_catholic_opinion }
-		AND = { $who$ = { religion = s_catholic } has_country_flag = has_increased_s_catholic_opinion }
-		AND = { $who$ = { religion = austral_protestant } has_country_flag = has_increased_austral_protestant_opinion }
-		AND = { $who$ = { religion = s_protestant } has_country_flag = has_increased_s_protestant_opinion }
-		AND = { $who$ = { religion = mormon } has_country_flag = has_increased_mormon_opinion }
-		AND = { $who$ = { religion = s_lutheran } has_country_flag = has_increased_s_lutheran_opinion }
-		AND = { $who$ = { religion = s_methodist } has_country_flag = has_increased_s_methodist_opinion }
-		AND = { $who$ = { religion = s_baptist } has_country_flag = has_increased_s_baptist_opinion }
-		AND = { $who$ = { religion = anabaptist } has_country_flag = has_increased_anabaptist_opinion }
 	}
 }
 
@@ -2542,8 +2379,15 @@ is_not_free_merc_company = {
 		NOT = { mercenary_company = merc_veteran_almogavars }
 		NOT = { mercenary_company = merc_byz_varangian_guard}
 		NOT = { mercenary_company = merc_byz_turkish_janissaries}
+		NOT = { mercenary_company = merc_gavras_house_guards }
+		NOT = { mercenary_company = merc_tatar_vanguard }
+		NOT = { mercenary_company = merc_inc_big_ears }
+		# NOT = { mercenary_company = merc_may_chontals }
+		NOT = { mercenary_company = merc_mug_elite_gurkhas }
+		NOT = { mercenary_company = merc_lisowczyk }
+		NOT = { mercenary_company = merc_ita_lost_legions }
 	}
-}
+} 
 
 has_free_mercs_trait = {
 	OR = {
@@ -2559,93 +2403,6 @@ has_not_free_mercs_trait = {
 	NOT = { has_idea = seasoned_veterans }
 	NOT = { has_government_attribute = mercs_do_not_cost_army_professionalism }
 	NOT = { has_country_flag = fra_free_mercs_bargain_sale_flag }
-}
-
-##########################################################
-# Supports following merc companies
-# merc_oyo_cavalry
-# merc_hakkapeliita_cavalry
-# merc_prussian_volunteer_army
-# merc_large_hakkapeliita_cavalry
-# merc_guerilla_hakkapeliita_cavalry
-# merc_elite_hakkapeliita_cavalry
-# merc_schwarze_garde
-# merc_hessian_jaegerkorps
-# merc_doppelsoeldner
-# merc_frisian_free_company
-# merc_flemish_company
-# merc_reislaufer
-##########################################################
-# When adding a new merc company then make sure that a unlock_$merc_company$_tt is defined in the localization
-# For localization purposes use the following line: "Has unlocked the §Y$merc_company$§! mercenary company."
-
-has_unlocked_estate_privilege = {
-	has_country_flag = unlocked_privilege_$estate_privilege$
-}
-
-has_unlocked_merc_company = {
-	custom_trigger_tooltip = {
-		tooltip = has_unlocked_$merc_company$
-		has_country_flag = unlocked_$merc_company$
-	}
-}
-
-##########################################################
-# Supports following merc companies
-##########################################################
-# When adding a new merc company then make sure that a unlock_$merc_company$_tt is defined in the localization
-# For localization purposes use the following line: "The §Y$merc_company$§! mercenary company has been globally unlocked."
-has_globally_unlocked_merc_company = {
-	custom_trigger_tooltip = {
-		tooltip = has_globally_unlocked_$merc_company$
-		has_global_flag = global_unlocked_$merc_company$
-	}
-
-}
-
-has_unlocked_government_reform = {
-	has_country_flag = unlocked_$government_reform$
-}
-
-#This trigger is used for enabled estates which should be active, but can naturally disappear (like through revolutions)
-has_unlocked_estate = {
-	has_country_flag = unlocked_$estate$_flag
-}
-
-#This trigger is used for enabled estates which should be active at all time, no matter what
-has_enabled_estate = {
-	has_country_flag = enables_$estate$_flag
-}
-
-has_disabled_estate = {
-	has_country_flag = disables_$estate$_flag
-}
-
-#### Supports the following government reforms ####
-# prussian_monarchy
-# prussian_monarchy_base
-# prussian_republic_reform
-# prussian_theocratic_reform
-# livonian_military_monarchy
-# livonian_naval_monarchy
-# livonian_trade_monarchy
-# livonian_theocratic_monarchy
-# livonian_elective_monarchy
-# livonian_monarchy
-# livonian_mercenary_monarchy
-# livonian_diplomatic_monarchy
-# livonian_constitutional_monarchy
-# livonian_administrative_monarchy
-# livonian_admiral_monarchy
-# livonian_naval_controlled_monarchy
-# livonian_general_controlled_monarchy
-# livonian_absolute_monarchy
-# livonian_enlightened_monarchy
-has_unlocked_government_reform_tooltip = {
-	custom_trigger_tooltip = {
-		tooltip = unlocked_$government_reform$_tt
-		has_country_flag = unlocked_$government_reform$
-	}
 }
 
 mal_target_country_exists_in_region = {
@@ -3600,11 +3357,11 @@ is_not_eligible_for_trade_good_wool = {
 		}
 		AND = {
 			OR = {
-				superregion = caribbean_superregion
+				region = carribeans_region
 				region = brazil_region
 				region = colombia_region
-				region = deep_south_region
-				region = old_southwest_region
+				region = southeast_america_region
+				region = mississippi_region
 			}
 			NOT = { has_terrain = mountain }
 		}
@@ -3634,24 +3391,26 @@ is_not_eligible_for_trade_good_fur = {
 		has_terrain = farmlands
 		has_terrain = mountain
 		continent = south_america
-		superregion = caribbean_superregion
+		region = carribeans_region
 		region = south_africa_region
-		superregion = australia_superregion
+		region = australia_region
 		region = central_africa_region
 		area = newfoundland_area
 	}
 }
 is_not_eligible_for_trade_good_salt = {
-	OR = {
-		area = newfoundland_area
-		NOT = { has_terrain = desert }
-		NOT = { has_terrain = marsh }
-		NOT = { has_terrain = mountain }
-		NOT = { has_terrain = highlands }
-		NOT = { any_neighbor_province = { province_id = 1649 } } #Lake Victoria
-		NOT = { any_neighbor_province = { province_id = 1650 } } #Lake Tangyanika
-		NOT = { any_neighbor_province = { province_id = 1651 } } #Lake Malawi
-	}
+    OR = {
+        area = newfoundland_area
+        AND = {
+            NOT = { has_terrain = desert }
+            NOT = { has_terrain = marsh }
+            NOT = { has_terrain = mountain }
+            NOT = { has_terrain = highlands }
+            NOT = { any_neighbor_province = { province_id = 1649 } } #Lake Victoria
+            NOT = { any_neighbor_province = { province_id = 1650 } } #Lake Tangyanika
+            NOT = { any_neighbor_province = { province_id = 1651 } } #Lake Malawi
+        }
+    }
 }
 is_not_eligible_for_trade_good_naval_supplies = {
 	OR = {
@@ -3687,15 +3446,15 @@ is_not_eligible_for_trade_good_copper = {
 			NOT = { area = minas_gerais_area }
 			NOT = { area = diamantina_area }
 			NOT = { area = mato_grosso_area }
-			NOT = { region = mid_atlantic_region }
-			# NOT = { area = susquehanna_area }
+			NOT = { area = great_valley_area }
+			NOT = { area = susquehanna_area }
 			NOT = { area = hudson_valley_area }
-			# NOT = { area = lake_superior_area }
-			# NOT = { area = south_iroquoisia_area }
-			# NOT = { area = upper_ontario_area }
-			# NOT = { area = laurentian_area }
-			# NOT = { area = inner_ontario_area }
-			# NOT = { area = maryland_area }
+			NOT = { area = lake_superior_area }
+			NOT = { area = south_iroquoisia_area }
+			NOT = { area = upper_ontario_area }
+			NOT = { area = laurentian_area }
+			NOT = { area = inner_ontario_area }
+			NOT = { area = maryland_area }
 			NOT = { area = ofaie_area }
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
@@ -3716,15 +3475,15 @@ is_not_eligible_for_trade_good_gold = {
 			is_random_new_world = no
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
-			NOT = { region = western_canada_region }
-			NOT = { superregion = australia_superregion }
-			NOT = { region = pacific_coast_region }
+			NOT = { region = cascadia_region }
+			NOT = { region = australia_region }
+			NOT = { region = california_region }
 			NOT = { region = south_africa_region }
 			NOT = { region = central_africa_region }
 			NOT = { region = peru_region }
 			NOT = { region = upper_peru_region }
 			NOT = { region = mexico_region }
-			NOT = { region = old_southwest_region }
+			NOT = { region = rio_grande_region }
 			NOT = { region = central_america_region }
 			NOT = { area = goias_area }
 			NOT = { area = pontal_area }
@@ -3743,7 +3502,7 @@ is_not_eligible_for_trade_good_gold = {
 			NOT = { continent = new_world }
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
-			NOT = { superregion = australia_superregion }
+			NOT = { region = australia_region }
 			NOT = { region = south_africa_region }
 			NOT = { region = central_africa_region }
 		}
@@ -3774,15 +3533,15 @@ is_not_eligible_for_trade_good_iron = {
 			NOT = { region = east_siberia_region }
 			NOT = { region = central_africa_region }
 			NOT = { province_id = 990 }
-			NOT = { region = mid_atlantic_region }
-			# NOT = { area = susquehanna_area }
+			NOT = { area = great_valley_area }
+			NOT = { area = susquehanna_area }
 			NOT = { area = hudson_valley_area }
-			# NOT = { area = lake_superior_area }
-			# NOT = { area = south_iroquoisia_area }
-			# NOT = { area = upper_ontario_area }
-			# NOT = { area = laurentian_area }
-			# NOT = { area = inner_ontario_area }
-			# NOT = { area = maryland_area }
+			NOT = { area = lake_superior_area }
+			NOT = { area = south_iroquoisia_area }
+			NOT = { area = upper_ontario_area }
+			NOT = { area = laurentian_area }
+			NOT = { area = inner_ontario_area }
+			NOT = { area = maryland_area }
 			NOT = { area = ofaie_area }
 			NOT = { province_id = 18 }
 			is_random_new_world = no
@@ -3810,7 +3569,7 @@ is_not_eligible_for_trade_good_ivory = {
 			NOT = { continent = asia }
 			NOT = { continent = africa }
 			NOT = { area = subarctic_islands_area }
-			NOT = { region = greenland_region }
+			NOT = { area = greenland_area }
 		}
 		AND = {
 			NOT = { has_terrain = jungle }
@@ -3921,7 +3680,7 @@ is_not_eligible_for_trade_good_coffee = {
 			NOT = { region = la_plata_region }
 			NOT = { region = peru_region }
 			NOT = { region = brazil_region }
-			NOT = { superregion = caribbean_superregion }
+			NOT = { region = carribeans_region }
 			NOT = { region = central_america_region }
 			NOT = { region = mexico_region }
 			NOT = { region = colombia_region }
@@ -3945,9 +3704,10 @@ is_not_eligible_for_trade_good_cotton = {
 		area = newfoundland_area
 		AND = {
 			is_random_new_world = no
-			NOT = { superregion = caribbean_superregion }
-			NOT = { region = deep_south_region }
-			NOT = { region = old_southwest_region }
+			NOT = { region = southeast_america_region }
+			NOT = { region = carribeans_region }
+			NOT = { region = mississippi_region }
+			NOT = { region = rio_grande_region }
 			NOT = { region = egypt_region }
 			NOT = { region = hindusthan_region }
 			NOT = { region = bengal_region }
@@ -3984,33 +3744,33 @@ is_not_eligible_for_trade_good_cotton = {
 	}
 }
 is_not_eligible_for_trade_good_sugar = {
-	OR = {
-		area = newfoundland_area
-		AND = {
-			NOT = { has_climate = tropical }
-			OR = {
-				has_winter = severe_winter
-				has_winter = normal_winter
-				has_winter = mild_winter
-				has_terrain = desert
-				has_terrain = mountain
-				has_terrain = hills
-				has_terrain = highlands
-				has_terrain = forest
-				has_terrain = steppe
-			}
-		}
-		AND = {
-			is_random_new_world = no
-			NOT = { superregion = caribbean_superregion }
-			NOT = { region = brazil_region }
-			NOT = { region = mexico_region }
-			NOT = { region = old_southwest_region }
-			NOT = { region = central_america_region }
-			NOT = { region = colombia_region }
-			NOT = { region = deccan_region }
-			NOT = { region = west_india_region }
-			NOT = { area = mascarenes_area }
+    OR = {
+        area = newfoundland_area
+        AND = {
+            NOT = { has_climate = tropical }
+            OR = {
+                has_winter = severe_winter
+                has_winter = normal_winter
+                has_winter = mild_winter
+                has_terrain = desert
+                has_terrain = mountain
+                has_terrain = hills
+                has_terrain = highlands
+                has_terrain = forest
+                has_terrain = steppe
+            }
+        }
+        AND = {
+            is_random_new_world = no
+            NOT = { region = carribeans_region }
+            NOT = { region = brazil_region }
+            NOT = { region = mexico_region }
+            NOT = { region = rio_grande_region }
+            NOT = { region = central_america_region }
+            NOT = { region = colombia_region }
+            NOT = { region = deccan_region }
+            NOT = { region = west_india_region }
+            NOT = { area = mascarenes_area }
         }
         AND = {
             is_random_new_world = yes
@@ -4026,14 +3786,14 @@ is_not_eligible_for_trade_good_tobacco = {
 		AND = {
 			is_random_new_world = no
 			NOT = { region = la_plata_region }
-			NOT = { region = new_england_region }
-			NOT = { region = deep_south_region }
-			NOT = { region = mid_atlantic_region }
-			NOT = { region = old_southwest_region }
+			NOT = { region = northeast_america_region }
+			NOT = { region = southeast_america_region }
+			NOT = { region = rio_grande_region }
 			NOT = { region = brazil_region }
-			NOT = { superregion = caribbean_superregion }
-			NOT = { superregion = australia_superregion }
-			NOT = { region = appalachia_region }
+			NOT = { region = carribeans_region }
+			NOT = { region = australia_region }
+			NOT = { area = appalachia_area }
+			NOT = { area = south_appalachia_area }
 		}
 		AND = {
 			is_random_new_world = yes
@@ -4114,7 +3874,7 @@ is_not_eligible_for_trade_good_dyes = {
 			NOT = { region = kongo_region }
 			NOT = { region = central_america_region }
 			NOT = { region = mexico_region }
-			NOT = { superregion = caribbean_superregion }
+			NOT = { region = carribeans_region }
 		}
 	}
 }
@@ -4156,11 +3916,11 @@ is_not_eligible_for_trade_good_livestock = {
 		}
 		AND = {
 			OR = {
-				superregion = caribbean_superregion
+				region = carribeans_region
 				region = brazil_region
 				region = colombia_region
-				region = deep_south_region
-				region = old_southwest_region
+				region = southeast_america_region
+				region = mississippi_region
 			}
 			NOT = { has_terrain = mountain }
 		}
@@ -4178,7 +3938,7 @@ is_not_eligible_for_trade_good_incense = {
 			NOT = { region = bengal_region }
 			NOT = { region = coromandel_region }
 			NOT = { region = south_east_pacific_region }
-			NOT = { superregion = australia_superregion }
+			NOT = { region = australia_region }
 			NOT = { area = indian_ocean_islands_area }
 		}
 		has_terrain = mountain
@@ -4203,7 +3963,7 @@ is_not_eligible_for_trade_good_gems = {
 			is_random_new_world = no
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
-			NOT = { superregion = australia_superregion }
+			NOT = { region = australia_region }
 			NOT = { region = south_africa_region }
 			NOT = { region = central_africa_region }
 			NOT = { region = central_america_region }
@@ -4240,7 +4000,7 @@ is_not_eligible_for_trade_good_gems = {
 			NOT = { continent = new_world }
 			NOT = { region = west_siberia_region }
 			NOT = { region = east_siberia_region }
-			NOT = { superregion = australia_superregion }
+			NOT = { region = australia_region }
 			NOT = { region = south_africa_region }
 			NOT = { region = indonesia_region }
 			NOT = { region = moluccas_region }
@@ -4269,7 +4029,7 @@ is_not_eligible_for_trade_good_gems = {
 		}
 		AND = {
 			NOT = { has_terrain = coastline }
-			NOT = { superregion = australia_superregion }
+			NOT = { region = australia_region }
 			continent = oceania #Pearls
 		}
 	}
@@ -4448,33 +4208,6 @@ num_of_converted_provinces = {
 	}
 }
 
-has_unlocked_trading_policy = {
-	custom_trigger_tooltip = {
-		tooltip = has_unlocked_trading_policy_$policy$_tt
-		NOT = { has_country_flag = locked_trading_policy_$policy$ }
-	}
-}
-
-has_locked_trading_policy = {
-	custom_trigger_tooltip = {
-		tooltip = has_locked_trading_policy_$policy$_tt
-		has_country_flag = locked_trading_policy_$policy$
-	}
-}
-
-has_enabled_trading_policy = {
-	has_country_flag = enabled_trading_policy_$policy$
-	NOT = { has_country_flag = disabled_trading_policy_$policy$ }
-}
-
-has_disabled_trading_policy = {
-	has_country_flag = disabled_trading_policy_$policy$
-}
-
-has_not_disabled_trading_policy = {
-	NOT = { has_country_flag = disabled_trading_policy_$policy$ }
-}
-
 trading_policy_or_upgraded_policy_in_node = {
 	OR = {
 		trading_policy_in_node = {
@@ -4485,17 +4218,6 @@ trading_policy_or_upgraded_policy_in_node = {
 			node = $node$
 			policy = $policy$_upgraded
 		}
-	}
-}
-
-# Supports the following decisions
-##################################
-# grand_vizier_selection
-# horse_breeding_decision
-has_unlocked_decision = {
-	custom_trigger_tooltip = {
-		tooltip = has_unlocked_decision_$type$_tt
-		has_country_flag = unlocked_decision_$type$
 	}
 }
 
@@ -4589,10 +4311,6 @@ has_defender_of_faith_religion = {
 	}
 }
 
-has_unlocked_diplomatic_action = {
-	has_country_flag = unlocked_diplomatic_action_$type$
-}
-
 has_unified_islam = {
 	custom_trigger_tooltip = {
 		tooltip = has_unified_islam_tt
@@ -4655,12 +4373,16 @@ has_completed_all_persian_missions = {
 has_any_ongoing_construction = {
 	custom_trigger_tooltip = {
 		tooltip = has_any_ongoing_construction_tt
-		has_construction = building
-		has_construction = core
-		has_construction = culture
-		has_construction = great_project
-		has_construction = canal
-		has_construction = missionary
+		OR = {
+			has_construction = building
+			has_construction = core
+			has_construction = culture
+			has_construction = great_project
+			has_construction = canal
+			has_construction = missionary
+			has_construction = state_house
+		}
+		
 	}
 }
 
@@ -4707,5 +4429,398 @@ has_domination_eoc_missions_available = {
 		tag = MHX
 		tag = KOR
 		tag = JAP
+	}
+}
+
+has_new_aztec_inca_maya_mission_trigger = {
+	OR = {
+		tag = INC
+		tag = CSU
+		tag = AZT 
+		has_generic_maya_missions = yes
+		has_country_flag = unlock_aztec_missions_flag
+	}
+}
+
+is_andean_society_trigger = {
+	OR = {
+		tag = INC #failsafe
+		technology_group = andean
+	}
+}
+
+is_mayan_society_trigger = {
+	OR = {
+		tag = MAY
+		religion = mesoamerican_religion
+		culture_group = maya
+	}
+}
+
+has_reformed_inti_religion_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = INC_has_passed_5_religious_reforms
+		has_global_modifier_value = {
+			which = inti_reforms_passed
+			value = 5
+		}
+	}
+}
+
+INC_every_part_of_route = {
+	820 = { $trigger$ }
+	817 = { $trigger$ }
+	2824 = { $trigger$ }
+	813 = { $trigger$ }
+	2825 = { $trigger$ }
+	2827 = { $trigger$ }
+	811 = { $trigger$ }
+	810 = { $trigger$ }
+	808 = { $trigger$ }
+	2829 = { $trigger$ }
+	804 = { $trigger$ }
+	2831 = { $trigger$ }
+	797 = { $trigger$ }
+	795 = { $trigger$ }
+}
+
+INC_part_of_the_route = {
+	OR = {
+		province_id = 820
+		province_id = 817
+		province_id = 2824
+		province_id = 813
+		province_id = 2825
+		province_id = 2827
+		province_id = 811
+		province_id = 810
+		province_id = 808
+		province_id = 2829
+		province_id = 804
+		province_id = 2831
+		province_id = 797
+		province_id = 795
+	}
+}
+
+INC_can_be_colonized_without_natives = {
+	is_empty = yes
+	OR = {
+		AND = {
+			ROOT = { has_country_flag = INC_expand_into_coastal_provs_flag }
+			OR = { #chincha valleys and nazca
+				province_id = 806
+				province_id = 2828
+				province_id = 805
+			}
+		}
+		AND = {
+			ROOT = { has_country_flag = INC_expansion_south_flag }
+			OR = { #extent of inca empire south
+				province_id = 796
+				province_id = 793
+				province_id = 2840
+				province_id = 2839
+				province_id = 2841
+				province_id = 2836
+				province_id = 791
+				province_id = 2843
+				province_id = 792
+				province_id = 2862
+				province_id = 787
+			}
+		}
+		AND = {
+			OR = { #extension into eastern lands
+				province_id = 2833
+				province_id = 803
+				province_id = 801
+				province_id = 2832
+			}
+			ROOT = { has_country_flag = INC_colonize_eastern_edges_flag }
+		}
+		AND = {
+			ROOT = { has_country_flag = CSU_will_be_able_to_colonize_mountains_flag }
+			OR = { #towards muisca
+				province_id = 4604
+				province_id = 2817
+				province_id = 2818
+				province_id = 4607
+			}
+		}
+	}
+	any_neighbor_province = {
+		country_or_non_sovereign_subject_holds = ROOT
+	}
+}
+INC_highlight_provinces_that_can_be_colonized = {
+	INC_can_be_colonized_without_natives = yes
+	native_size = 0.001
+}
+
+INC_has_any_provinces_to_colonize = {
+	any_province = {
+		INC_can_be_colonized_without_natives = yes
+	}
+}
+INC_has_any_provinces_to_colonize_with_trigger = {
+	any_province = {
+		INC_can_be_colonized_without_natives = yes
+		$trigger$
+	}
+}
+
+has_generic_maya_missions = {
+	OR = {
+		tag = CNP #Can Pech
+		tag = XIU #Xiu
+		tag = YOK #Yokotan 
+		tag = MAY #Maya
+		tag = LAC #Tzotzil
+		tag = COC #Cocomes
+		tag = CTM #Chactemal
+		tag = KIC #K'iche
+		tag = KAQ #Kaqkichel
+		tag = CHT #Chorti
+		tag = ITZ #Itza
+		tag = HST #Huastec
+	}
+}
+
+is_in_mesoamerica_trigger = {
+	OR = {
+		region = central_america_region
+		region = mexico_region
+	}
+}
+
+num_of_battles = {
+	custom_trigger_tooltip = {
+		tooltip = has_won_at_least_$amount$_battles #in case of adding a new number, localize
+		check_variable = {
+			which = num_of_battles_won_var
+			value = $amount$
+		}
+	}
+}
+
+num_of_wars = {
+	custom_trigger_tooltip = {
+		tooltip = has_won_at_least_$amount$_wars #in case of adding a new number, localize
+		check_variable = {
+			which = num_of_wars_won_var
+			value = $amount$
+		}
+	}
+}
+
+num_of_provinces_developed = {
+	custom_trigger_tooltip = {
+		tooltip = has_developed_at_least_$amount$_provinces
+		check_variable = {
+			which = num_of_times_developed
+			value = $amount$
+		}
+	}
+}
+
+has_obsidian_source_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = MAY_has_obsidian_source
+		OR = {
+			any_owned_province = {
+				has_province_modifier = MAY_active_obsidian_source
+			}
+			any_subject_country = {
+				any_owned_province = {
+					has_province_modifier = MAY_active_obsidian_source
+				}
+			}
+			any_ally = {
+				any_owned_province = {
+					has_province_modifier = MAY_active_obsidian_source
+				}
+			}
+		}
+	}
+}
+
+num_of_maya_religious_reforms = {
+	custom_trigger_tooltip = {
+		tooltip = maya_reforms_passed_tt_$amount$
+		has_global_modifier_value = {
+			which = maya_reforms_passed
+			value = $amount$
+		}
+	}
+}
+
+MAY_realm_size_trigger = {
+	num_of_cities = 20
+}
+
+MAY_pass_reform_trigger = {
+	num_of_maya_religious_reforms = { amount = $amount$ }
+}
+
+MAY_venus_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = MAY_has_killed_20k_troops
+		check_variable = {
+			which = land_units_killed_since_last_reform
+			value = 20000
+		}
+	}
+}
+
+has_had_disease_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_has_had_smallpox_tt
+		has_province_flag = had_smallpox_at_one_point
+		NOT = { has_province_modifier = inc_smallpox_outbreak }
+	}
+}
+
+former_colonial_territory_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_former_colonial_territory_tt
+		has_province_flag = SUN_colonial_territory
+	}
+}
+
+colonial_territory_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_colonial_territory_tt
+		owner = {
+			is_colonial_empire_trigger = yes
+		}
+	}
+}
+
+colonial_territory_trigger_on_action = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_colonial_territory_tt
+		FROM = {
+			is_colonial_empire_trigger = yes
+		}
+	}
+}
+
+is_colonial_empire_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_part_of_colonial_empire_tt
+		OR = {
+			is_colonial_nation = yes
+			AND = {
+				NOT = {
+					capital_scope = {
+						OR = {
+							continent = south_america
+							continent = north_america
+							continent = new_world
+						}
+					}
+				}
+				num_of_colonists = 1
+			}
+		}
+	}
+}
+
+is_non_new_world_tech_group = {
+	custom_trigger_tooltip = {
+		tooltip = SUN_not_native_technology_group
+		NOT = {
+			OR = {
+				technology_group = andean
+				technology_group = south_american
+				technology_group = mesoamerican
+				technology_group = north_american			
+			}
+		}
+	}
+}
+
+is_or_was_tatar_nation = {
+	OR = {
+		tag = GOL
+		tag = CRI
+		tag = NOG
+		tag = KAZ
+		tag = GLH
+		tag = SIB
+		tag = BSH
+		tag = AST
+		tag = QAS
+		tag = KLM
+		AND = {
+			tag = MGE
+			OR = {
+				was_tag = GOL
+				was_tag = CRI
+				was_tag = NOG
+				was_tag = KAZ
+				was_tag = GLH
+				was_tag = SIB
+				was_tag = BSH
+				was_tag = AST
+				was_tag = QAS
+				was_tag = KLM
+			}
+		}
+	}
+}
+
+is_or_was_mongol_nation = {
+	OR = {
+		tag = OIR
+		tag = KHA
+		tag = KRC
+		tag = HMI
+		tag = YUA
+		tag = KSD
+		tag = CHH
+		tag = KLK
+		tag = ZUN
+		AND = {
+			tag = MGE
+			OR = {
+				was_tag = OIR
+				was_tag = KHA
+				was_tag = KRC
+				was_tag = HMI
+				was_tag = YUA
+				was_tag = KSD
+				was_tag = CHH
+				was_tag = KLK
+				was_tag = ZUN
+			}
+		}
+	}
+}
+
+is_or_was_moghulistan_nation = {
+	OR = {
+		tag = KAS
+		tag = CHG
+		tag = SHY #Technically not Moghulistan, but part of Central Asia
+		tag = ILK #Technically not Moghulistan, but an extension of Uzbek
+		tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+		tag = KZH
+		tag = KOK
+		tag = KHI
+		AND = {
+			tag = MGE
+			OR = {
+				was_tag = KAS
+				was_tag = CHG
+				was_tag = SHY #Technically not Moghulistan, but part of Central Asia
+				was_tag = ILK #Technically not Moghulistan, but an extension of Uzbek
+				was_tag = BUK #Technically not Moghulistan, just an extension of Uzbek
+				was_tag = KZH
+				was_tag = KOK
+				was_tag = KHI
+			}
+		}
 	}
 }
