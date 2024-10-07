@@ -1605,4 +1605,8 @@ spriteTypes = {
 		name = "government_reform_hawaiian_monarchy"
 		texturefile = "gfx/interface/government_reform_icons/hawaiian_monarchy.dds"
 	}
+	spriteType = {
+		name = "government_reform_granddivisions"
+		texturefile = "gfx/interface/government_reform_icons/granddivisions.dds"
+	}
 }

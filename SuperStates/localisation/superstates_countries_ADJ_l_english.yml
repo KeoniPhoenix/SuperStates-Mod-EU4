@@ -52,7 +52,7 @@
  HELLULAND_ADJ:0 "Hellulander"
  
  #American States and Territories
- ALM_ADJ:0 "Alabaman"
+ ALM_ADJ:0 "Alabamian"
  ARZ_ADJ:0 "Arizonan"
  ARS_ADJ:0 "Arkansan"
  BAZ_ADJ:0 "Baja Arizonan"
@@ -70,7 +70,7 @@
  ILS_ADJ:0 "Little Egyptian"
  CAL_ADJ:0 "Californian"
  CLO_ADJ:0 "Coloradan"
- CUT_ADJ:0 "Connecticuter"
+ CUT_ADJ:0 "Nutmegger"
  DEL_ADJ:0 "Delawarean"
  WDC_ADJ:0 "Districter"
  FLO_ADJ:0 "Floridian"
@@ -92,7 +92,7 @@
  MNE_ADJ:0 "Mainer"
  MMD_ADJ:0 "MoCoite"
  MYD_ADJ:0 "Marylander"
- MSS_ADJ:0 "Massachusettsan"
+ MSS_ADJ:0 "Bay Stater"
  MIC_ADJ:0 "Michigander"
  MIM_ADJ:0 "Miamian"
  MNN_ADJ:0 "Minnesotan"
@@ -167,7 +167,7 @@
  CHS_ADJ:0 "Chesepian"
  CSA_ADJ:0 "Confederate"
  DAK_ADJ:0 "Dakotan"
- DES_ADJ:0 "Deseretian"
+ DES_ADJ:0 "Deseretan"
  GCL_ADJ:0 "Golden Knights"
  GLK_ADJ:0 "Laker"
  GTX_ADJ:0 "Tejano"
@@ -310,17 +310,27 @@
  YUC_ADJ:0 "Yucateco"
  NOM_ADJ:0 "North Mexican"
  
+ #Mexican Releasables
+ HOT_ADJ: "Calientiano"
+ SOC_ADJ: "Soconuscense"
+ HUS_ADJ: "Huastec"
+ LAG_ADJ: "Lagunense"
+ JUA_ADJ: "Juarense"
+ CMX_ADJ: "Mexiquense"
+ ZPA_ADJ: "Zapatista"
+ COT_ADJ: "Colotláno"
+ 
  #Central American States and Territories
  BLZ_ADJ:0 "Belizean"
  CRC_ADJ:0 "Costa Rican"
  CSZ_ADJ:0 "Cruzob"
- ESL_ADJ:0 "Salvadorian"
+ ESL_ADJ:0 "Salvadoran"
  GTM_ADJ:0 "Guatemalan"
  HND_ADJ:0 "Honduran"
  MSQ_ADJ:0 "Miskito"
  NCG_ADJ:0 "Nicaraguan"
  PNM_ADJ:0 "Panamanian"
- LOS_ADJ:0 "Altoan"
+ LOS_ADJ:0 "Altosano"
  
  #Central American Formables
  CAM_ADJ:0 "Central American"
@@ -350,6 +360,13 @@
  CTT_ADJ:0 "Central Australian"
  NQL_ADJ:0 "North Queenslander"
  PLD_ADJ:0 "Princelander"
+ SYD_ADJ:0 "Sydneysider"
+ RIV_ADJ:0 "Riverinan"
+ CQL_ADJ:0 "Capricornian"
+ NGL_ADJ:0 "New English"
+ CRP_ADJ:0 "Carpentarian"
+ DMP_ADJ:0 "Dampierian"
+ ILW_ADJ:0 "Illawarra"
 
  #Australian Formables
  AUS_ADJ:0 "Australian"

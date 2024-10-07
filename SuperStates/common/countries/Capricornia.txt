@@ -1,0 +1,112 @@
+#Country Name: Capricornia / Central Queensland
+
+graphical_culture = westerngfx
+
+color = { 5 75 147 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	naval_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Anderson #0" = 5
+	"Anna #0" = -5
+	"Arthur #0" = 20
+	"Boyd #0" = 5
+	"Campbell #0" = 5
+	"Charles #0" = 5
+	"Digby #0" = 1
+	"Edward #0" = 10
+	"Francis #0" = 5
+	"Frank #0" = 5
+	"George #0" = 5
+	"Gordon #0" = 5
+	"Hugh #0" = 5
+	"James #0" = 5
+	"Johannes #0" = 5
+	"John #0" = 10
+	"Michael #0" = 5
+	"Peter #0" = 5
+	"Robert #0" = 20
+	"Russell #0" = 5
+	"Samuel #0" = 5
+	"Thomas #0" = 15
+	"Vincent #0" = 5
+	"Wayne #0" = 5
+	"William #0" = 20
+}
+
+leader_names = {
+	Ahern
+	Beattie "Bjelke-Petersen" Bligh Borbidge Byrnes
+	Cair Chalk Cooper
+	Dawson Denham Dickson Douglas
+	Gillies Goss Griffith
+	Hanlon Herbert
+	Kidston
+	Lilley
+	Macalister Mackenzie McCormack McIlwraith Moore Morehead Morgan
+	Nelson Newman Nicklin
+	Palmer Philip Pizzey
+	Ryan
+	Smith
+	Theodore Thorn	
+}
+
+ship_names = {
+	Aurukun
+	Balonne Banana Barcaldine Barcoo Blackall Boulia Brisbane Bulloo Bundaberg Burdekin Burke
+	Cairns Carpentaria "Cassowary Coast" "Charter Towers" Cherbourg Cloncurry Cook Croydon
+	"Darling Downs" Diamantina Doomadgee
+	Etheridge
+	Flinders "Fraser Coast"
+	Gladstone "Gold Coast" Goondiwindi Gympie
+	Highlands Hinchinbrook Hopevale
+	Ipswich Isaac
+	Kowanyama
+	"Lockhart River" "Lockyer Valley" Logan Longreach
+	Mackay Mapoon Maranoa McKinlay "Moreton Bay" Mornington "Mount Isa" Murweh
+	Napranum "North Burnett"
+	"Palm Island" Paroo Pormpuraaw
+	Quilpie
+	Redland Richmond Rockhampton
+	"Scenic Rim" Somerset "South Burrentt" Sunshine
+	Tablelands Tambo Toowoomba Torres "Torres Strait Island" Townsville
+	Weipa Whitsunday Winton Woorabinda "Wujal Wujal"
+	Yarrabah
+}
+
+army_names = {
+	"Army of Queensland"
+	"Military Patrol of Brisbane"
+}
+
+fleet_names = {
+	"Queensland Naval Force"
+}

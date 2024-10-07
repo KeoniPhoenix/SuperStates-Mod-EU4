@@ -1,0 +1,202 @@
+namespace = flavorMYD
+
+#Culture Swap event
+country_event = {
+	id = flavorMYD.1000
+	title = flavorMYD.1000t
+	desc = flavorMYD.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Move to Southerner
+		name = flavorMYD.1000opta
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 5
+					culture = delmarvan
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					culture = southerner_marylander
+				}
+				primary_culture = delmarvan
+				primary_culture = southerner_marylander
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = southerner_marylander
+				}
+			}
+			change_primary_culture = southerner_marylander
+		}
+		change_country_color = {
+			country = MMD
+		}
+		hidden_effect = {
+			MMD = {
+				change_country_color = {
+					color = {
+						234  171  0
+					}
+				}
+				set_country_flag = myd_color_flag
+			}
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorMYD.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = delmarvan
+			remove_accepted_culture = marylander
+			remove_accepted_culture = west_marylander
+			set_ruler_culture = southerner_marylander
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = southerner_marylander
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = delmarvan
+                        consort_culture = marylander
+                        consort_culture = west_marylander
+                    }
+                }
+                set_consort_culture = southerner_marylander
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = marylander
+						culture = delmarvan
+						culture = west_marylander
+					}
+				}
+				change_culture = southerner_marylander
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Appalachian
+		name = flavorMYD.1000optb
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = west_marylander
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					culture = appalachian_marylander
+				}
+				primary_culture = west_marylander
+				primary_culture = appalachian_marylander
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_marylander
+				}
+			}
+			change_primary_culture = appalachian_marylander
+		}
+		change_country_color = {
+			country = WML
+		}
+		hidden_effect = {
+			WML = {
+				change_country_color = {
+					color = {
+						234  171  0
+					}
+				}
+				set_country_flag = myd_color_flag
+			}
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorMYD.1000b.tt
+		hidden_effect = {
+			remove_accepted_culture = delmarvan
+			remove_accepted_culture = marylander
+			remove_accepted_culture = west_marylander
+			set_ruler_culture = appalachian_marylander
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = appalachian_marylander
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = delmarvan
+                        consort_culture = marylander
+                        consort_culture = west_marylander
+                    }
+                }
+                set_consort_culture = appalachian_marylander
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = marylander
+						culture = delmarvan
+						culture = west_marylander
+					}
+				}
+				change_culture = appalachian_marylander
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Incase you somehow finish this mission while not being any marylander culture and wanna nope out
+		name = flavorMYD.1000optc
+		trigger = {
+			NOT = {
+				OR = {
+					primary_culture = delmarvan
+					primary_culture = west_marylander
+					primary_culture = appalachian_marylander
+					primary_culture = southerner_marylander
+					num_of_owned_provinces_with = {
+						value = 5
+						culture = delmarvan
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						culture = southerner_marylander
+					}
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = west_marylander
+					}
+					num_of_owned_provinces_with = {
+						value = 4
+						culture = appalachian_marylander
+					}
+				}
+			}
+		}
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -53,13 +53,21 @@ country_event = {
                 }
                 set_consort_culture = midatlantic_virginian
             }
-			virginia_provincegroup = {
+			every_province = {
 				limit = {
-					owned_by = ROOT
+					owner = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
 					OR = {
 						culture = virginian
 						culture = northern_virginian
-						culture = mountaineer
+						AND = {
+							culture = mountaineer
+							province_group = virginia_provincegroup
+						}
 						culture = midatlantic_virginian
 						culture = appalachian_virginian
 					}
@@ -118,9 +126,14 @@ country_event = {
                 }
                 set_consort_culture = appalachian_virginian
             }
-			virginia_provincegroup = {
+			every_province = {
 				limit = {
-					owned_by = ROOT
+					owner = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
 					OR = {
 						culture = virginian
 						culture = northern_virginian
@@ -170,6 +183,63 @@ country_event = {
 
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavorVIR.2
+	title = flavorVIR.2t
+	desc = flavorVIR.2d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Embrace West Virginian
+		name = flavorVIR.2a
+		add_accepted_culture_or_dip_power = { culture = west_virginian free = yes }
+		ai_chance = {
+			factor = 60
+		}
+	}
+
+	option = { # Integrate West Virginia
+		name = flavorVIR.2b
+		tooltip = {
+			monongahela_area = {
+				add_province_modifier = {
+					name = vir_integrating_wv
+					duration = 10950
+				}
+			}
+
+			2541 = {
+				add_province_modifier = {
+					name = vir_integrating_wv
+					duration = 10950
+				}
+			}
+
+			3011 = {
+				add_province_modifier = {
+					name = vir_integrating_wv
+					duration = 10950
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = west_virginian
+				}
+				add_province_modifier = {
+					name = vir_integrating_wv
+					duration = 10950
+				}
+			}
+	}
+		ai_chance = {
+			factor = 40
 		}
 	}
 }

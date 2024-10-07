@@ -1,5 +1,9 @@
 #Nanaimo
 
+latent_trade_goods = {
+	coal
+}
+
 owner = BCO
 controller = BCO
 add_core = BCO
@@ -8,7 +12,7 @@ culture = british_columbian
 religion = s_protestant
 capital = "Nanaimo" 
 is_city = yes #9050
-trade_goods = naval_supplies
+trade_goods = paper
 hre = no 
 base_tax = 3
 base_production = 3

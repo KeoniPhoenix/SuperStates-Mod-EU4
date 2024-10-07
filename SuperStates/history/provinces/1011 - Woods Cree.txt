@@ -3,7 +3,7 @@
 owner = OKL
 controller = OKL
 add_core = OKL
-culture = oklahoman
+culture = high_plainer
 religion = s_protestant
 capital = "Enid" 
 is_city = yes #4950

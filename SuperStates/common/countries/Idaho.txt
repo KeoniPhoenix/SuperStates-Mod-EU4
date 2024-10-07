@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 167  201  255 }
+color = { 85  162  204 } # 167  201  255
+# Diamond blue for the gem state
 
 historical_idea_groups = {
 	defensive_ideas

@@ -1,0 +1,207 @@
+##########################
+#
+#  Written by:
+#  Brandon
+#
+##########################
+
+namespace = flavorWVA
+
+country_event = { # A United Virginia
+	id = flavorWVA.1
+	title = "flavorWVA.1.t"
+	desc = "flavorWVA.1.d"
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Unite Virginia
+		name = "flavorWVA.1.opta"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_virginian
+				}
+			}
+			change_primary_culture = appalachian_virginian
+		}
+		if = {
+			limit = {
+				OR = {
+					accepted_culture = virginian
+					accepted_culture = appalachian_virginian
+					accepted_culture = midatlantic_virginian
+				}
+			}
+			add_dip_power = 100
+		}
+		if = {
+			limit = {
+				OR = {
+					accepted_culture = northern_virginian
+				}
+			}
+			add_dip_power = 50
+		}
+		override_country_name = VIRGINIA
+		set_country_flag = has_overriden_name_flag
+		custom_tooltip = flavorWVA.1.opta.tt
+		hidden_effect = {
+			set_ruler_culture = appalachian_virginian
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture =  appalachian_virginian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = virginian
+                        consort_culture = northern_virginian
+						consort_culture = midatlantic_virginian
+                    }
+                }
+                set_consort_culture = appalachian_virginian
+            }
+			remove_accepted_culture = midatlantic_virginian
+			remove_accepted_culture = northern_virginian
+			remove_accepted_culture = virginian
+			remove_accepted_culture = west_virginian
+			every_province = {
+				limit = {
+					owner = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					OR = {
+						culture = virginian
+						culture = northern_virginian
+						culture = midatlantic_virginian
+						culture = west_virginian
+						AND = {
+							culture = mountaineer
+							province_group = virginia_provincegroup
+						}
+					}
+				}
+				change_culture = appalachian_virginian
+			}
+		}
+		if = {
+			limit = {
+				VIR = {
+					is_subject_of = ROOT
+				}
+			}
+			VIR = {
+				if = {
+					limit = {
+						NOT = {
+							primary_culture = appalachian_virginian
+						}
+					}
+					change_primary_culture = appalachian_virginian
+				}
+				hidden_effect = {
+					set_ruler_culture = appalachian_virginian
+					if = {
+						limit = {
+							has_heir = yes
+						}
+						set_heir_culture =  appalachian_virginian
+					}
+					if = {
+						limit = {
+							has_consort = yes
+							OR = {
+								consort_culture = virginian
+								consort_culture = northern_virginian
+								consort_culture = midatlantic_virginian
+							}
+						}
+						set_consort_culture = appalachian_virginian
+					}
+					remove_accepted_culture = midatlantic_virginian
+					remove_accepted_culture = northern_virginian
+					remove_accepted_culture = virginian
+					remove_accepted_culture = west_virginian
+					every_owned_province = {
+						limit = {
+							OR = {
+								culture = virginian
+								culture = northern_virginian
+								culture = midatlantic_virginian
+								culture = west_virginian
+								AND = {
+									culture = mountaineer
+									province_group = virginia_provincegroup
+								}
+							}
+						}
+						change_culture = appalachian_virginian
+					}
+
+				}
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = { # Maintain our identity and seek closer ties to Virginia
+		name = "flavorWVA.1.optb"
+		add_prestige_or_monarch_power = { amount = 20}
+		if = {
+			limit = {
+				OR = {
+					any_subject_country = {
+						primary_culture = midatlantic_virginian
+					}
+					any_owned_province = {
+						culture = midatlantic_virginian
+					}
+				}
+			}
+			add_accepted_culture_or_dip_power = { culture = midatlantic_virginian free = yes }
+		}
+		if = {
+			limit = {
+				OR = {
+					any_subject_country = {
+						primary_culture = appalachian_virginian
+					}
+					any_owned_province = {
+						culture = appalachian_virginian
+					}
+				}
+			}
+			add_accepted_culture_or_dip_power = { culture = appalachian_virginian free = yes }
+		}
+		else = {
+			add_accepted_culture_or_dip_power = { culture = virginian free = yes }
+		}
+		if = {
+			limit = {
+				OR = {
+					any_subject_country = {
+						primary_culture = northern_virginian
+					}
+					any_owned_province = {
+						culture = northern_virginian
+					}
+				}
+			}
+			add_accepted_culture_or_dip_power = { culture = northern_virginian free = yes }
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}

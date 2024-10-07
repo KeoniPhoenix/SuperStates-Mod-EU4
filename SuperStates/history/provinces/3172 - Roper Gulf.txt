@@ -3,6 +3,7 @@
 owner = NTT
 controller = NTT
 add_core = NTT
+add_core = CRP
 culture = northern_territorian
 religion = austral_protestant
 capital = "Roper Gulf"
@@ -10,7 +11,7 @@ trade_goods = wool
 hre = no
 base_tax = 3
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 is_city = yes #1000
 discovered_by = australian
 

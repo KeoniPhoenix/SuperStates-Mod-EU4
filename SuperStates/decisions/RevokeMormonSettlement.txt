@@ -1,0 +1,102 @@
+country_decisions = {
+	revoke_mormon_settlement = { # Revoke the Mormon settlement modifier
+		major = yes
+		potential = {
+			any_owned_province = {
+				has_province_modifier = mormon_settlers
+			}
+		}
+		allow = {
+			stability = 1
+		}
+		effect = {
+			random_owned_province = {
+				if = {
+					limit = {
+						NOT = {
+							is_core = event_target:pioneer_origin_country
+						}
+						NOT = {
+							religion = mormon
+						}
+					}
+					add_core = event_target:pioneer_origin_country
+				}
+				limit = {
+					has_province_modifier = mormon_settlers
+				}
+				remove_province_modifier = mormon_settlers
+				if = {
+					limit = {
+						NOT = {
+							religion = mormon
+						}
+					}
+					spawn_rebels = {
+						type = mormon_rebels
+						size = 3
+						culture = event_target:pioneer_origin_country
+						religion = mormon
+						unrest = 5
+						friend = event_target:pioneer_origin_country
+						separatists_target = event_target:pioneer_origin_country
+						win = yes
+					}
+				}
+				set_province_flag = revoked_mormon_settlement
+			}
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.80
+				}
+
+				add_casus_belli = {
+					type = cb_crusade
+					target = THIS
+					months = 60
+				}
+			}
+		}
+		ai_will_do = { #Mostly for a player to do - not so much the ai
+			factor = 1
+
+			modifier = {
+				factor = 0
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					AND = {
+						is_subject_of = event_target:pioneer_origin_country
+						NOT = { religion = mormon }
+					}
+					has_opinion = {
+						who = event_target:pioneer_origin_country
+						value = 50
+					}
+					border_distance = {
+						who = event_target:pioneer_origin_country
+						distance = 1
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.15
+				army_strength = {
+					who = event_target:pioneer_origin_country
+					value = -0.25
+				}
+			}
+		}
+	}
+}

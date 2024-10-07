@@ -4,6 +4,7 @@ owner = NVS
 controller = NVS
 add_core = NVS
 add_core = CBI
+add_core = ACD
 culture = cape_bretoner
 religion = s_catholic
 capital = "Sydney" 

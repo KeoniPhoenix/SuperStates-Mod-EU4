@@ -7,7 +7,7 @@ add_core = CCK
 culture = chicagoan
 religion = s_catholic
 capital = "Chicago"
-trade_goods = cloth
+trade_goods = iron
 is_city = yes #269560
 hre = no
 base_tax = 11
@@ -22,9 +22,9 @@ add_permanent_province_modifier = {
 			duration = -1
 }
 
-1399.1.1 = {
-	fort_15th = yes 
-}
+# 1399.1.1 = {
+	# fort_15th = yes 
+# }
 
 1528.1.1 = {
 	religion = catholic

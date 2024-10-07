@@ -65,6 +65,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}
@@ -99,7 +100,7 @@ country_decisions = {
 				}
 				add_permanent_claim = GLK
 			}
-			superior_area = {
+			upper_peninsula_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

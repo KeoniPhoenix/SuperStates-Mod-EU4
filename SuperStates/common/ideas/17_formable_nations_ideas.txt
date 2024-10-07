@@ -279,12 +279,12 @@ CSA_ideas = {
 
 DES_ideas = {
 	start = {
-		warscore_cost_vs_other_religion = -0.25
+		warscore_cost_vs_other_religion = -0.15
 		ae_impact = -0.1
 	}
 	
 	bonus = {
-		cavalry_power = 0.15
+		diplomats = 1
 	}
 	
 	trigger = {
@@ -297,22 +297,21 @@ DES_ideas = {
 		production_efficiency = 0.15
 	}
 	mormon_tabernacle_choir = {
-		prestige = 1
+		missionaries = 1
 	}
 	a_proclamation_on_family = {
 		global_manpower_modifier = 0.2
-		land_morale = 0.1
 	}
 	legacy_of_the_pioneers = {
 		colonists = 1
-		leader_land_manuever = 1
+		envoy_travel_time = -0.25
 	}
 	reform_the_mormon_battalion = {
 		discipline = 0.05
 		infantry_power = 0.10
 	}
-	re-establish_the_united_order_of_enoch = {
-		tolerance_own = 3
+	reestablish_the_united_order_of_enoch = {
+		improve_relation_modifier = 0.30
 	}
 	zions_central_board_of_trade = {
 		global_trade_goods_size_modifier = 0.15
@@ -408,7 +407,7 @@ GLK_ideas = {
 GPL_ideas = {
 	start = {
 		global_manpower_modifier = 0.25
-		infantry_power = 0.15
+		infantry_power = 0.10
 	}
 
 	bonus = {
@@ -435,12 +434,11 @@ GPL_ideas = {
 		diplomatic_upkeep = 1
 	}
 	sortition_for_unelected_offices = {
-		adm_tech_cost_modifier = -0.1
+		adm_tech_cost_modifier = -0.05
 	 	yearly_corruption = -0.1
 	}
 	generals_of_the_plains = {
 		leader_land_fire = 1
-		infantry_fire = 0.1
 	}
 	wagon_train_trails = {
 		trade_efficiency = 0.1
@@ -495,7 +493,7 @@ GPL_ideas = {
 
 MEX_ideas = {
 	start = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.20
 		missionaries = 1
 	}
 	
@@ -510,13 +508,11 @@ MEX_ideas = {
 	
 		
 	rebuilding_mexico = {
-		build_cost = -0.1
 		tolerance_own = 2
 		global_missionary_strength = 0.01
 	}	
 	the_republic_of_indians = {
 		num_accepted_cultures = 2
-		years_of_nationalism = -5
 		native_uprising_chance = -0.75
 	}
     peace_by_purchase = {
@@ -732,28 +728,24 @@ NAM_ideas = {
 	 	global_trade_goods_size_modifier = 0.2
 	}
 	our_collective_strength = {
-		global_manpower_modifier = 0.33
-		land_forcelimit_modifier = 0.5
+		global_manpower_modifier = 0.15
+		land_forcelimit_modifier = 0.10
 	}
 	the_best_guns = {
-		backrow_artillery_damage = 0.2
-		artillery_fire = 0.75
+		artillery_fire = 1
 	}
 	they_fear_us = {
-		infantry_power = 0.2
-		discipline = 0.05
+		infantry_power = 0.20
 	}
 	large_mighty_navy = {
-		naval_forcelimit_modifier = 0.5
+		naval_forcelimit_modifier = 0.15
 		naval_morale = 0.15
 	}
 	manifestating_our_destiny = {
-	 	administrative_efficiency = 0.1
-		governing_capacity_modifier = 0.2
+	 	administrative_efficiency = 0.05
 	}
 	nonmonetary_compensation = {
-		advisor_cost = -0.33
-		land_maintenance_modifier = -0.15
+		advisor_cost = -0.20
 	}
 }
 
@@ -766,7 +758,7 @@ NAM_ideas = {
 PCF_ideas = {
 	start = {
 		naval_morale = 0.2
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.20
 	}
 
 	bonus = {
@@ -814,6 +806,10 @@ RRG_ideas = {
 	start = {
 		infantry_power = 0.15
 		republican_tradition = 0.3
+		legitimacy = 1
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
 	}
 
 	bonus = {
@@ -851,14 +847,61 @@ RRG_ideas = {
 
 #United States of America
 
+# USA_ideas = {
+	# start = {
+		# merchants = 1
+		# trade_efficiency = 0.25
+	# }
+	
+	# bonus = {
+		# republican_tradition = 0.5
+	# }
+	
+	# trigger = {
+		# tag = USA
+	# }
+	# free = yes
+	
+	# freedom_of_religion1 = {
+		# no_religion_penalty = yes
+	# }
+	# usa_bill_of_rights1 = {
+		# global_unrest = -2
+		# reform_progress_growth = 0.1
+		# years_of_nationalism = -5
+	# }
+	# empire_of_liberty1 = {
+		# stability_cost_modifier = -0.2
+	 	# global_institution_spread = 0.5
+	# }
+	# military_academy_at_west_point = {
+		# land_morale = 0.20
+		# army_tradition = 1
+	# }
+	# workshop_of_the_world1 = {
+		# global_trade_goods_size_modifier = 0.2
+	# }
+	# shining_city_on_a_hill1 = {
+		# prestige = 1.5
+	# }
+	# manifest_destiny = {
+		# colonists = 1
+		# administrative_efficiency = 0.1
+ 	# }
+# }
+
 USA_ideas = {
 	start = {
-		merchants = 1
-		trade_efficiency = 0.25
+		governing_capacity_modifier = 0.15
+		allowed_marine_fraction = 0.75
 	}
 	
 	bonus = {
-		republican_tradition = 0.5
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 	}
 	
 	trigger = {
@@ -866,32 +909,30 @@ USA_ideas = {
 	}
 	free = yes
 	
-	freedom_of_religion1 = {
+	freedom_of_religion = {
 		no_religion_penalty = yes
 	}
-	usa_bill_of_rights1 = {
+	usa_bill_of_rights = {
 		global_unrest = -2
-		reform_progress_growth = 0.1
-		years_of_nationalism = -5
-	}
-	empire_of_liberty1 = {
-		stability_cost_modifier = -0.2
-	 	global_institution_spread = 0.5
-	}
-	military_academy_at_west_point = {
-		land_morale = 0.20
-		army_tradition = 1
-	}
-	workshop_of_the_world1 = {
-		global_trade_goods_size_modifier = 0.2
-	}
-	shining_city_on_a_hill1 = {
-		prestige = 1.5
 	}
 	manifest_destiny = {
 		colonists = 1
-		administrative_efficiency = 0.1
- 	}
+		effect = { remove_temporary_colonist = yes }
+		administrative_efficiency = 0.05
+	}
+	lessons_of_valley_forge = {
+		land_morale = 0.20
+	}
+	workshop_of_the_world = {
+		global_trade_goods_size_modifier = 0.20
+	}
+	shining_city_on_a_hill = {
+		prestige = 1
+	}
+	empire_of_liberty = {
+		min_autonomy_in_territories = -0.15
+		global_autonomy = -0.025
+	}
 }
 
 #Western Canada
@@ -900,6 +941,10 @@ WCN_ideas = {
 	start = {
 		movement_speed = 0.15
 		republican_tradition = 0.3
+		legitimacy = 1
+		devotion = 1
+		meritocracy = 1
+		horde_unity = 1
 	}
 	
 	bonus = {
@@ -931,7 +976,7 @@ WCN_ideas = {
 		prestige = 0.25
 	}
 	mountain_experience = {
-		infantry_power = 0.15
+		infantry_power = 0.10
 	}
 	esquimalt_naval_arsenal = {
 	 	ship_durability = 0.1
@@ -954,7 +999,8 @@ WSI_ideas = {
 	}
 	free = yes      #will be added at load.
 	WSI_Plantation_Economy = {
-		production_efficiency = 0.2
+		build_cost = -0.10
+		production_efficiency = 0.10
 	}
 	WSI_Blue_Mountain_Coffee = {
 		idea_cost = -0.1
@@ -964,12 +1010,11 @@ WSI_ideas = {
 		global_unrest = -2
 	}
 	WSI_American_Trade_Hub = {
-		global_trade_power = 0.15
+		global_trade_power = 0.10
 		trade_range_modifier = 0.25
 	}
 	WSI_Miskoto_Zambos = {
 		num_accepted_cultures = 2
-		years_of_nationalism = -5
 	}
 	WSI_Interconnected_Relations = {
 		diplomatic_reputation = 1
@@ -994,12 +1039,17 @@ NZL_ideas = {
 	OR = {
 		tag = NZL
 		tag = ZLD
+		primary_culture = new_zealander
 		}
 	}
 	free = yes
 	NZL_maori_seats = {
 		no_religion_penalty = yes
 		republican_tradition = 0.15
+		legitimacy = 0.50
+		devotion = 0.50
+		horde_unity = 0.50
+		meritocracy = 0.50
 	}
 	NZL_otago_gold = {
 		global_trade_goods_size_modifier = 0.1
@@ -1025,7 +1075,7 @@ NZL_ideas = {
 AUS_ideas = {  #Australian ideas
 	start = {	
 		technology_cost = -0.1
-		governing_capacity_modifier = 0.2
+		global_colonial_growth = 25
 	}
 	bonus = {
 	 	trade_efficiency = 0.2
@@ -1048,7 +1098,7 @@ AUS_ideas = {  #Australian ideas
 	}
 	AUS_sandpaper_and_cheating = {
 		infantry_power = 0.1
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.50
 	}
 	AUS_royal_navy = {
 		naval_morale = 0.2
@@ -1059,6 +1109,7 @@ AUS_ideas = {  #Australian ideas
 		movement_speed = 0.05
 	}
 	AUS_waltzing_matilda = {
-		prestige = 1
+		build_cost = -0.05
+		global_allowed_num_of_buildings = 1
 	}
 }

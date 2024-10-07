@@ -305,7 +305,7 @@ renaissance = {
 				}
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1475
 				owner = {
 					#NOT = { technology_group = north_american }
 					#NOT = { technology_group = mesoamerican }
@@ -315,7 +315,7 @@ renaissance = {
 				superregion = south_america_superregion
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1475
 				owner = {
 					#NOT = { technology_group = north_american }
 					#NOT = { technology_group = mesoamerican }
@@ -325,7 +325,7 @@ renaissance = {
 				continent = north_america
 			}
 			AND = {
-				is_year = 1500
+				is_year = 1475
 				owner = {
 					#NOT = { technology_group = north_american }
 					#NOT = { technology_group = mesoamerican }
@@ -353,6 +353,45 @@ renaissance = {
 			AND = {
 				is_year = 1470
 				region = new_england_region
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_emptied_europe_renaissance
+				AND = {
+					has_global_flag = emptied_europe
+					is_year = 1460
+					OR = {
+						superregion = america_superregion
+						superregion = canada_superregion
+						AND = {
+							superregion = australia_superregion
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							continent = africa
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							continent = asia
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							continent = europe
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							superregion = central_america_superregion
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							continent = south_america
+							has_global_flag = emptied_north_america
+						}
+						AND = {
+							continent = north_america
+							has_global_flag = emptied_north_america
+						}
+					}
+				}
 			}
 		}
 		is_state = yes
@@ -826,6 +865,19 @@ new_world_i = {
 			continent = europe
 			continent = asia
 			continent = africa
+			custom_trigger_tooltip = {
+				tooltip = tooltip_has_emptied_colonialism
+				AND  = {
+					has_global_flag = emptied_europe
+					OR = {
+						technology_group = mesoamerican
+						technology_group = north_american
+						technology_group = australian
+						technology_group = oceanian
+						technology_group = high_american
+					}
+				}
+		}
 		}
 		has_port = yes
 		is_island = no
@@ -1219,6 +1271,39 @@ printing_press = {
 			religion = reformed
 			region = north_german_region
 			region = south_german_region
+			custom_trigger_tooltip = {
+				tooltip = tooltip_emptied_europe_printing_press_protestant
+				AND = {
+					has_global_flag = emptied_europe
+					OR = {
+						religion = austral_protestant
+						religion = s_baptist
+						religion = s_methodist
+						religion = s_lutheran
+						religion = s_protestant
+						religion = anabaptist
+						religion = hussite
+						religion = anglican
+					}
+				}
+		}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_emptied_europe_printing_press_fallback
+				AND = {
+					is_year = 1570
+					OR = {
+						technology_group = north_american
+						technology_group = australian
+						technology_group = mesoamerican
+						technology_group = high_american
+						AND = {
+							technology_group = oceanian
+							has_global_flag = emptied_australia
+							has_global_flag = emptied_north_america
+						}
+					}
+				}
+			}
 		}
 
 	}
@@ -1955,6 +2040,8 @@ manufactories = {
 			has_building = plantations
 			has_building = tradecompany
 			has_building = mills
+			has_building = distillery
+			has_building = cigar_factory
 		}
 	}
 	start_chance = 10		#in 100 for when a province can_start

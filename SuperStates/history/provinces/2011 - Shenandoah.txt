@@ -3,6 +3,7 @@
 owner = NSW
 controller = NSW
 add_core = NSW
+add_core = SYD
 culture = new_south_welsh
 religion = austral_catholic
 capital = "Sydney"

@@ -9,13 +9,19 @@ culture = vermonter
 religion = s_catholic
 capital = "Burlington" 
 is_city = yes #4250
-trade_goods = wool
+trade_goods = maple
 hre = no 
 base_tax = 4
 base_production = 4
 base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
+
+1000.1.1 = { add_permanent_province_modifier = {
+			name = vermont_maple
+			duration = -1
+		}
+}
 
 1528.1.1 = {
 	religion = catholic

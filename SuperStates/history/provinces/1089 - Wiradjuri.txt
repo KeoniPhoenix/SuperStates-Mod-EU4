@@ -6,11 +6,11 @@ add_core = SAU
 culture = south_australian
 religion = austral_protestant
 capital = "Port Pirie"
-trade_goods = grain
+trade_goods = wine
 hre = no
-base_tax = 2
-base_production = 1
-base_manpower = 1
+base_tax = 3
+base_production = 3
+base_manpower = 2
 is_city = yes #1450
 discovered_by = australian
 

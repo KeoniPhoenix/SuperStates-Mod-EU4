@@ -8,9 +8,9 @@ religion = austral_protestant
 capital = "Port Lincoln"
 trade_goods = fish
 hre = no
-base_tax = 3
+base_tax = 1
 base_production = 2
-base_manpower = 1
+base_manpower = 3
 is_city = yes #1450
 discovered_by = australian
 

@@ -2019,25 +2019,65 @@ merc_misquito_coast_company = {
     modifier = { }
 }
 
-#merc_navajo_raiders = {
-#	regiments_per_development = 0.04
-#	home_province = 3237 # Navajo
-#	sprites = { dlc015_nah_sprite_pack northamericagfx_sprite_pack }
-#	trigger = {
-#		is_random_new_world = no
-#		OR = {
-#			great_plains_region = {
-#				country_or_non_sovereign_subject_holds = root
-#			}
-#			american_southwest_region = {
-#				country_or_non_sovereign_subject_holds = root
-#			}
-#			primary_culture = navajo
-#			tag = NAH
-#		}
-#	}
-#	modifier = { }
-#}
+merc_navajo_raiders = {
+	regiments_per_development = 0.04
+	home_province = 3237 # Navajo
+	sprites = { dlc015_nah_sprite_pack northamericagfx_sprite_pack }
+	trigger = {
+		is_random_new_world = no
+		OR = {
+			great_plains_region = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			american_southwest_region = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			primary_culture = navajo
+			tag = NAH
+		}
+	}
+	modifier = { }
+}
+
+merc_navajo_warriors = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	home_province = 3237 # Navajo
+	sprites = { dlc015_nah_sprite_pack northamericagfx_sprite_pack }
+	trigger = {
+		is_random_new_world = no
+		OR = {
+			has_country_flag = uta_navajo_warriors
+			primary_culture = navajo
+			tag = NAH
+		}
+	}
+	modifier = {
+		infantry_shock = 1
+		movement_speed = 0.20
+	 }
+}
+
+merc_apache_warriors = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.04
+	cavalry_weight = 0.4
+	home_province = 4863 # Taos
+	sprites = { dlc015_nah_sprite_pack northamericagfx_sprite_pack }
+	trigger = {
+		is_random_new_world = no
+		OR = {
+			has_country_flag = des_apache_warriors
+			primary_culture = apache
+			primary_culture = navajo
+			tag = NAH
+		}
+	}
+	modifier = {
+		cavalry_shock = 1
+		movement_speed = 0.10
+	 }
+}
 
 merc_chonnonton_warriors = {
 	regiments_per_development = 0.025
@@ -2745,7 +2785,7 @@ merc_rough_riders = {
 		}
 	}
 	modifier = {
-		cavalry_power = 0.15
+		cavalry_power = 0.05
 	}
 }
 
@@ -2768,7 +2808,7 @@ merc_green_mountain_boys = {
 		}
 	}
 	modifier = {
-		discipline = 0.05
+		discipline = 0.025
 		shock_damage_received = -0.05
 	}
 }
@@ -2794,7 +2834,7 @@ merc_minutemen = {
 		}
 	}
 	modifier = {
-		fire_damage = 0.10
+		fire_damage = 0.05
 	}
 }
 
@@ -2810,18 +2850,19 @@ merc_volunteer_infantry = {
 		tag = TNN
 		primary_culture = tennessean
 		primary_culture = west_tennessean
+		primary_culture = mountaineer
 	}
 	OR = {
 		tennessee_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
-		blue_ridge_area = {
+		east_tennessee_area = {
 				country_or_non_sovereign_subject_holds = root
 		}
 			}
 	}
 	modifier = {
-		land_morale = 0.10
+		land_morale = 0.05
 	}
 }
 
@@ -2918,7 +2959,7 @@ merc_acadian_militia = {
 		}
 	}
 	modifier = {
-		fire_damage_received = -0.10
+		fire_damage_received = -0.05
 	}
 }
 
@@ -2945,7 +2986,7 @@ merc_seminole_fighters = {
 		}
 	}
 	modifier = {
-		movement_speed = 0.15
+		movement_speed = 0.10
 	}
 }
 
@@ -3000,7 +3041,7 @@ merc_apache_legions = {
 		}
 	}
 	modifier = {
-		shock_damage = 0.10
+		shock_damage = 0.05
 	}
 }
 
@@ -3030,8 +3071,8 @@ merc_comanche_riders = {
 		}
 	}
 	modifier = {
-		cavalry_power = 0.10
-		movement_speed = 0.10
+		cavalry_power = 0.05
+		movement_speed = 0.05
 	}
 }
 
@@ -3114,7 +3155,7 @@ merc_shoshone_warriors = {
 		}
 	}
 	modifier = {
-		infantry_power = 0.10
+		infantry_power = 0.05
 	}
 }
 
@@ -3150,7 +3191,7 @@ merc_shawnee_soldiers = {
 		}
 	}
 	modifier = {
-		infantry_power = 0.10
+		infantry_power = 0.05
 	}
 }
 
@@ -3178,7 +3219,7 @@ merc_jaguar_warriors = {
 		}
 	}
 	modifier = {
-		shock_damage = 0.10
+		shock_damage = 0.05
 	}
 }
 
@@ -3314,7 +3355,7 @@ merc_miami_regulars = { # Native Americans from Ohio Valley, not Florida
 merc_aboriginal_warriors = {
 	regiments_per_development = 0.04
 	home_province = 1092 # Darwin
-	sprites = { africangfx_sprite_pack }
+	sprites = { aboriginalgfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		OR = {
@@ -3339,7 +3380,7 @@ merc_aboriginal_warriors = {
 merc_papuan_warriors = {
 	regiments_per_development = 0.04
 	home_province = 1237 # Hanuabada
-	sprites = { africangfx_sprite_pack }
+	sprites = { aboriginalgfx_sprite_pack }
 	trigger = {
 			is_allowed_to_recruit_mercenaries = yes 
 			melanesia_region = {
@@ -3355,14 +3396,14 @@ merc_papuan_warriors = {
 			}
 		}
 	modifier = {
-		land_morale = 0.10
+		land_morale = 0.05
 	}
 }
 
 merc_maori_warriors = {
 	regiments_per_development = 0.04
 	home_province = 4640 # Auckland
-	sprites = { africangfx_sprite_pack }
+	sprites = { polynesiangfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 			new_zealand_region = {
@@ -3383,7 +3424,7 @@ merc_maori_warriors = {
 merc_kanaka_maoli_warriors = {
 	regiments_per_development = 0.04
 	home_province = 968 # Honolulu
-	sprites = { africangfx_sprite_pack }
+	sprites = { polynesiangfx_sprite_pack }
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		oceania_superregion = {
@@ -3428,6 +3469,9 @@ merc_mountaineer_regiments = {
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes 
 		OR = {
+			east_tennessee_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
 			blue_ridge_area = {
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -3470,7 +3514,7 @@ merc_appalachian_battalions = {
 		}
 	}
 	modifier = {
-		infantry_power = 0.10
+		infantry_power = 0.05
 	}
 }
 
@@ -3496,7 +3540,7 @@ merc_ozarker_company = {
 		}
 	}
 	modifier = {
-		infantry_power = 0.10
+		infantry_power = 0.05
 	}
 }
 
@@ -3530,7 +3574,7 @@ merc_california_rangers = {
 		}
 	}
 	modifier = {
-		fire_damage = 0.10
+		fire_damage = 0.05
 	}
 }
 
@@ -3564,7 +3608,7 @@ merc_desert_rangers = {
 		}
 	}
 	modifier = {
-		fire_damage = 0.10
+		fire_damage = 0.05
 	}
 }
 
@@ -3600,7 +3644,7 @@ merc_salish_bands = {
 		}
 	}
 	modifier = {
-		land_morale = 0.10
+		land_morale = 0.05
 	}
 }
 
@@ -3629,7 +3673,7 @@ merc_chinook_warriors = {
 		}
 	}
 	modifier = {
-		shock_damage = 0.10
+		shock_damage = 0.05
 	}
 }
 
@@ -3671,6 +3715,8 @@ merc_bushrangers = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			culture_group = australian_new_zealander
+			culture_group = west_australian_group
+			culture_group = australasian
 		}
 	}
 	modifier = {

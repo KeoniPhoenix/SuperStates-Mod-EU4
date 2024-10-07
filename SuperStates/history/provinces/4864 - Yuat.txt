@@ -8,6 +8,7 @@ culture = new_mexican
 religion = s_catholic
 capital = "Raton"
 is_city = yes #1000
+fort_15th = yes
 trade_goods = livestock
 hre = no
 base_tax = 3

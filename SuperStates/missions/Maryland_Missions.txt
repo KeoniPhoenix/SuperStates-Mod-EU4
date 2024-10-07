@@ -502,4 +502,232 @@ myd_flavor_missions = {
 			}
 		}
 	}
+
+	myd_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			province_group = maryland_provincegroup
+		}
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = west_marylander
+						primary_culture = marylander
+						primary_culture = delmarvan
+						primary_culture = southerner_marylander
+						primary_culture = appalachian_marylander
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = myd_has_unified_culture_tooltip
+						maryland_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = marylander
+						}
+					}
+					primary_culture = delmarvan
+					primary_culture = west_marylander
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = west_marylander
+						primary_culture = marylander
+						primary_culture = delmarvan
+						primary_culture = southerner_marylander
+						primary_culture = appalachian_marylander
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = myd_has_unified_culture_tooltip
+						maryland_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = marylander
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = myd_has_unified_culture_tooltip_2
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = appalachian_marylander
+									culture = west_marylander
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {
+									culture = delmarvan
+									culture = southerner_marylander
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ai = yes
+				}
+				is_at_war = no
+				NOT = { current_age = age_of_discovery }
+			}
+			else = {
+				2530 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = west_marylander
+						primary_culture = marylander
+						primary_culture = delmarvan
+						primary_culture = southerner_marylander
+						primary_culture = appalachian_marylander
+					}
+				}
+				custom_tooltip = myd_marylander_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = myd_shift_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorMYD.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = west_marylander
+						primary_culture = marylander
+						primary_culture = delmarvan
+						primary_culture = southerner_marylander
+						primary_culture = appalachian_marylander
+					}
+				}
+				custom_tooltip = myd_marylander_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = myd_shift_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorMYD.1000
+					}
+				}
+				custom_tooltip = myd_shift_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 100
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to Marylander / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						maryland_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = marylander
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+
+				else_if = { #If completed by converting culture - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						OR = {
+							primary_culture = delmarvan
+							primary_culture = west_marylander
+						}
+					}
+					country_event = {
+						id = flavorMYD.1000 #Event moves you to Southerner/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to Marylander
+						maryland_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = marylander
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+
+				}
+				else_if = { #If completed by spreading culture - trigger event 
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 4
+								OR = {
+									culture = west_marylander
+									culture = appalachian_marylander
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {
+									culture = delmarvan
+									culture = southerner_marylander
+								}
+							}
+						}
+					}
+					country_event = {
+						id = flavorMYD.1000 #Event moves you to Great Laker/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 100
+
+				}
+			}
+		}
+	}
 }

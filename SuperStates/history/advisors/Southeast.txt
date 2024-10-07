@@ -1,0 +1,23 @@
+## TENNESSEE
+
+advisor = { #Jackson as a legal advisor
+	advisor_id = 3000
+	name = "Andrew Jackson" #7th President, Senator of Tennessee, First Territorial Gov. of Florida, Justice of TSC, representative for Tennesseee in the HoR
+	location = 2520 
+	discount = yes
+	skill = 3
+	type = statesman
+	date = 1545.1.1 #
+	death_date = 1585.06.08 #dies
+}
+
+advisor = { #Jackson as a military advisor
+	advisor_id = 3001
+	name = "Andrew Jackson" #7th President, Senator of Tennessee, First Territorial Gov. of Florida, Justice of TSC, representative for Tennesseee in the HoR
+	location = 2520 #Lyonnais (Lyon)
+	discount = yes
+	skill = 3
+	type = commandant
+	date = 1545.1.1 #
+	death_date = 1585.06.08 #dies
+}

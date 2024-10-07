@@ -15,20 +15,21 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = cuban_culture
+		}
 		any_owned_province = {
 			OR = {
-			area = west_cuba_area
-			area = east_cuba_area
+				area = west_cuba_area
+				area = east_cuba_area
 			}
 			is_capital = no
 			owned_by = ROOT
 		}
 		west_cuba_area = {
-			type = all
 			NOT = { culture = cuban }
 		}
 		east_cuba_area = {
-			type = all
 			NOT = { culture = cuban }
 		}
 	}
@@ -91,6 +92,7 @@ country_event = {
 	
 	option = {
 		name = "CubaFlavor.1opta"
+		set_country_flag = cuban_culture
 		west_cuba_area = {
 			change_culture = cuban
 			add_core = CUB

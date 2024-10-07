@@ -1,5 +1,8 @@
 #Auckland/TÄ?maki Makaurau
 
+owner = TTT
+controller = TTT
+add_core = TTT
 culture = maori
 religion = animism
 capital = "Auckland"

@@ -518,6 +518,13 @@ wdc_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pamlico_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 75
@@ -533,6 +540,7 @@ wdc_slot_3 = {
 				area = north_carolina_area
 				area = blue_ridge_area
 				area = south_carolina_area
+				area = pamlico_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -549,6 +557,10 @@ wdc_slot_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				area = pamlico_area
+			} 
 		}
 		effect = {
 			georgia_us_area = {
@@ -583,6 +595,7 @@ wdc_slot_3 = {
 				area = blue_ridge_area
 				area = south_carolina_area
 				area = north_carolina_area
+				area = pamlico_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}

@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+government_rank = 1
+technology_group = australian
+religion = austral_catholic
+primary_culture = northern_territorian
+add_accepted_culture = s_aboriginal
+capital = 3172 	# Roper Gulf

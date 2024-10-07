@@ -1,0 +1,93 @@
+country_decisions = {
+
+## Mexico Valley / Central Mexico
+	unite_the_valley_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = mexico_valley_culture_flag }
+			NOT = { exists = CMX }
+			NOT = { exists = MEX }
+			#NOT = { exists = NFR }
+			#NOT = { exists = NAM }
+			#NOT = { exists = RUP }
+			#technology_group = north_american
+			OR = {
+				tag = EMX
+				tag = DFM
+				tag = MRL
+				tag = TLX
+				culture_group = altiplano_central
+			}
+		}
+			provinces_to_highlight = {
+				area = mexico_area
+				province_id = 865
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+		allow = {
+			is_at_war = no
+			if = {
+				limit = {
+					tag = EMX
+				}
+				871 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				owns = 872
+				owns = 865
+			}
+			if = {
+				limit = {
+					tag = DFM
+				}
+				873 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				872 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				owns = 865
+			}
+			else = {
+				mexico_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns = 865
+			}
+		}
+		effect = {
+			on_change_tag_effect = yes
+			#set_country_flag = formed_cmx_flag
+			if = {
+				limit = {
+					NOT = {
+						tag = DFM
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 1825
+			}
+			add_prestige = 10
+			change_tag = CMX
+			mexico_area = {
+				add_core = ROOT
+			}
+			865 = {
+				add_core = ROOT
+			}
+			country_event = {
+				id = cultureflavor.3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

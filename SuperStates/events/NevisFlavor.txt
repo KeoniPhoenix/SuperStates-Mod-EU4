@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = nevisian_culture
+		}
 		4581 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "NevisFlavor.1opta"
+		set_country_flag = nevisian_culture
 		4581 = {
 			change_culture = nevisian
 			add_core = NES

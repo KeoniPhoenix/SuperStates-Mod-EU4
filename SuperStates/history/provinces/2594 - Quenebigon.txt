@@ -6,12 +6,13 @@ add_core = NYS
 culture = adirondack
 religion = s_catholic
 capital = "Plattsburgh"
-trade_goods = wool
+trade_goods = maple
 hre = no
 base_tax = 3
 base_production = 1
 base_manpower = 1
 is_city = yes #2000
+fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

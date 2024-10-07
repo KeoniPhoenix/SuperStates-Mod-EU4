@@ -44,12 +44,32 @@ country_decisions = {
 			owns_core_province = 4582 # Barbuda
 		}
 		effect = {
+			#on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
 			}
 			add_prestige = 10
-			override_country_name = ANTIGUA_AND_BARBUDA
+			if = {
+				limit = {
+					OR = {
+						was_tag = ATG
+						primary_culture = antiguan
+					}
+				}
+				override_country_name = ANTIGUA_AND_BARBUDA
+				add_accepted_culture_or_dip_power = { culture = barbudan free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = BRD
+						primary_culture = barbudan
+					}
+				}
+				override_country_name = BARBUDA_AND_ANTIGUA
+				add_accepted_culture_or_dip_power = { culture = antiguan free = yes }
+			}
 			set_country_flag = formed_antigua_barbuda
 			ROOT = {
 				if = {

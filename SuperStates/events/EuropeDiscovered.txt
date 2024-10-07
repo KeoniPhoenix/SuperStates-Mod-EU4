@@ -24,7 +24,10 @@ country_event = {
 			technology_group = australian
 			technology_group = oceanian
 		}
-		religion = s_catholic
+		OR = {
+			religion = s_catholic
+			religion = austral_catholic
+		}
 		europe = {
 			has_discovered = ROOT
 		}
@@ -45,19 +48,83 @@ country_event = {
 	}
 	option = {
 		name = "superstates_papal.1opta"
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 90 }
 		add_prestige = 10
 		change_religion = catholic
 		add_papal_influence = 25
 		every_owned_province = {
 			limit = {
-				religion = s_catholic
+				OR = {
+					religion = s_catholic
+					religion = austral_catholic
+				}
 			}
 			change_religion = catholic
 		}
+		if = {
+			limit = { 
+				OR = {
+					ruler_religion = s_catholic
+					ruler_religion = austral_catholic
+				}
+			}
+				set_ruler_religion = catholic
+			}
+		if = {
+			limit = { 
+				has_heir = yes 
+				OR = {
+					heir_religion = s_catholic
+					heir_religion = austral_catholic
+				}
+			}
+				set_heir_religion = catholic
+		}
+		if = {
+			limit = { 
+				has_consort = yes
+				OR = {
+					consort_religion = s_catholic
+					consort_religion = austral_catholic
+				}
+			 }
+				set_consort_religion = catholic
+		}
 		every_subject_country = {
 			limit = {
-				religion = s_catholic
+				OR = {
+					religion = s_catholic
+					religion = austral_catholic
+				}
+			}
+			if = {
+				limit = { 
+					OR = {
+						ruler_religion = s_catholic
+						ruler_religion = austral_catholic
+					}
+				}
+					set_ruler_religion = catholic
+				}
+			if = {
+				limit = { 
+					has_heir = yes 
+					OR = {
+						heir_religion = s_catholic
+						heir_religion = austral_catholic
+					}
+				}
+					set_heir_religion = catholic
+			}
+			if = {
+				limit = { 
+					has_consort = yes
+					OR = {
+						consort_religion = s_catholic
+						consort_religion = austral_catholic
+					}
+				 }
+					set_consort_religion = catholic
 			}
 			every_owned_province = {
 				discover_country = PAP
@@ -66,7 +133,10 @@ country_event = {
 			add_papal_influence = 10
 			every_owned_province = {
 				limit = {
-					religion = s_catholic
+					OR = {
+						religion = s_catholic
+						religion = austral_catholic
+					}
 				}
 				change_religion = catholic
 			}
@@ -74,7 +144,7 @@ country_event = {
 	}
 	option = {
 		name = "superstates_papal.1optb"
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 10 }
 	
 	}
 }
@@ -90,7 +160,10 @@ province_event = {
 
 	trigger = {
 		is_capital = no
-		religion = s_catholic
+		OR = {
+			religion = s_catholic
+			religion = austral_catholic
+		}
 		owner = {
 			religion = catholic
 		}  
@@ -129,49 +202,52 @@ province_event = {
 #(This event converts Disconnected Catholic provinces in states other than Catholic states,
 # this is to allow the gradual conversion of all the Disconnected Catholic provinces to 
 # either Catholic, unless converted with a missionary before hand.)
-province_event = {
-	id = superstates_papal.3
-	title = "superstates_papal.3t"
-	desc = "superstates_papal.3d"
-	picture = POPE_PREACHING_eventPicture
+# province_event = {
+# 	id = superstates_papal.3
+# 	title = "superstates_papal.3t"
+# 	desc = "superstates_papal.3d"
+# 	picture = POPE_PREACHING_eventPicture
 
-	trigger = {
-		is_capital = no
-		religion = s_catholic
-		owner = {
-			OR = {
-				NOT = { religion = catholic }
-				NOT = { religion = s_catholic }
-			}
-		}  
-		any_neighbor_province = {
-			religion = catholic
-		}
-		NOT = { has_province_modifier = religious_zeal_at_conv }
-	}	
+# 	trigger = {
+# 		is_capital = no
+# 		OR = {
+# 			religion = s_catholic
+# 			religion = austral_catholic
+# 		}
+# 		owner = {
+# 			OR = {
+# 				NOT = { religion = catholic }
+# 				NOT = { religion = s_catholic }
+# 			}
+# 		}  
+# 		any_neighbor_province = {
+# 			religion = catholic
+# 		}
+# 		NOT = { has_province_modifier = religious_zeal_at_conv }
+# 	}	
 
-	mean_time_to_happen = {
-		months = 3000
-		modifier = {
-			factor = 0.9
-			has_owner_accepted_culture = yes
-		}
-		modifier = {
-			factor = 0.75
-			has_owner_culture = yes
-		}
-		modifier = {
-			factor = 0.5
-			all_neighbor_province = {
-				religion = catholic
-			}
-		}
-	}
+# 	mean_time_to_happen = {
+# 		months = 3000
+# 		modifier = {
+# 			factor = 0.9
+# 			has_owner_accepted_culture = yes
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			has_owner_culture = yes
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			all_neighbor_province = {
+# 				religion = catholic
+# 			}
+# 		}
+# 	}
 
-	#is_mtth_scaled_to_size = 1
+# 	#is_mtth_scaled_to_size = 1
 
-	option = {
-		name = "superstates_papal.3opta"
-		change_religion = catholic
-	}
-}
+# 	option = {
+# 		name = "superstates_papal.3opta"
+# 		change_religion = catholic
+# 	}
+# }

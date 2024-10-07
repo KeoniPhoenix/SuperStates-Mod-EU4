@@ -14,7 +14,7 @@ country_decisions = {
 				# culture_group = oriental_mexican
 				# culture_group = gulf_mexican
 				culture_group = altiplano_central
-				culture_group = pacific_mexican
+				#culture_group = pacific_mexican
 				culture_group = southwestern
 				primary_culture = miamian
 				primary_culture = west_floridian
@@ -31,7 +31,10 @@ country_decisions = {
 				primary_culture = panamanian
 			}
 			OR = {
-				ai = no
+				AND = {
+					ai = no
+					num_of_cities = 30
+				}
 				AND = {
 					ai = yes
 					num_of_cities = 45
@@ -388,6 +391,7 @@ country_decisions = {
 		}
 					
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}	

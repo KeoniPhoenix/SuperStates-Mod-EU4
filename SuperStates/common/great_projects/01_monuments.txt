@@ -34,7 +34,14 @@ hagia_sophia = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 					}
 					has_owner_religion = yes
@@ -44,7 +51,14 @@ hagia_sophia = {
 						OR = {
 							secondary_religion = orthodox
 							secondary_religion = coptic
-							secondary_religion = catholic
+							custom_trigger_tooltip = {
+								tooltip = any_catholic_second_tt
+								OR = {
+									secondary_religion = catholic
+									secondary_religion = s_catholic
+									secondary_religion = austral_catholic
+								}
+							}
 							secondary_religion = sunni
 							secondary_religion = shiite
 							secondary_religion = ibadi
@@ -53,7 +67,14 @@ hagia_sophia = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 						has_owner_religion = yes
 					}
@@ -90,7 +111,14 @@ hagia_sophia = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 					}
 					has_owner_religion = yes
@@ -100,7 +128,14 @@ hagia_sophia = {
 						OR = {
 							secondary_religion = orthodox
 							secondary_religion = coptic
-							secondary_religion = catholic
+							custom_trigger_tooltip = {
+								tooltip = any_catholic_second_tt
+								OR = {
+									secondary_religion = catholic
+									secondary_religion = s_catholic
+									secondary_religion = austral_catholic
+								}
+							}
 							secondary_religion = sunni
 							secondary_religion = shiite
 							secondary_religion = ibadi
@@ -109,7 +144,14 @@ hagia_sophia = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 						has_owner_religion = yes
 					}
@@ -120,14 +162,21 @@ hagia_sophia = {
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		custom_trigger_tooltip = {
+			custom_trigger_tooltip = {
 			tooltip = hagia_sophia_tt
 			OR = {
 				AND = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 					}
 					has_owner_religion = yes
@@ -137,7 +186,14 @@ hagia_sophia = {
 						OR = {
 							secondary_religion = orthodox
 							secondary_religion = coptic
-							secondary_religion = catholic
+							custom_trigger_tooltip = {
+								tooltip = any_catholic_second_tt
+								OR = {
+									secondary_religion = catholic
+									secondary_religion = s_catholic
+									secondary_religion = austral_catholic
+								}
+							}
 							secondary_religion = sunni
 							secondary_religion = shiite
 							secondary_religion = ibadi
@@ -146,7 +202,14 @@ hagia_sophia = {
 					OR = {
 						religion = orthodox
 						religion = coptic
-						religion = catholic
+						custom_trigger_tooltip = {
+							tooltip = any_catholic_tt
+							OR = {
+								religion = catholic
+								religion = s_catholic
+								religion = austral_catholic
+							}
+						}
 						religion_group = muslim
 						has_owner_religion = yes
 					}
@@ -2436,14 +2499,14 @@ chichen_itza = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#what to do when it's built
@@ -2459,27 +2522,27 @@ chichen_itza = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
 			culture_group = peninsular_mexican
 			culture_group = maya
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3030,10 +3093,18 @@ stpeters_cathedral = {
 
 	#can we build it?
 	build_trigger = {
-		province_is_or_accepts_religion = {
-			religion = catholic
-		}
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = s_catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = austral_catholic
+			}
 	}
+}
 
 	#what to do when it's built
 	on_built = {
@@ -3047,16 +3118,32 @@ stpeters_cathedral = {
 
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = catholic
-		}
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = s_catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = austral_catholic
+			}
+	}
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = catholic
-		}
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = s_catholic
+			}
+			province_is_or_accepts_religion = {
+				religion = austral_catholic
+			}
+	}
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3550,12 +3637,12 @@ tenochtitlan = {
 	build_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#what to do when it's built
@@ -3572,24 +3659,24 @@ tenochtitlan = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -3650,6 +3737,7 @@ tenochtitlan = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			shock_damage = 0.05
+			yearly_doom_reduction = 1
 		}
 
 		#what effects happen when this tier is achieved
@@ -3682,7 +3770,8 @@ tenochtitlan = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			shock_damage = 0.10
-			discipline = 0.025
+			#discipline = 0.025
+			yearly_doom_reduction = 2
 		}
 
 		#what effects happen when this tier is achieved
@@ -3716,9 +3805,9 @@ tenochtitlan = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			shock_damage = 0.10
-			discipline = 0.05
+			#discipline = 0.05
 			leader_land_shock = 1
-			#yearly_doom_reduction = 3
+			yearly_doom_reduction = 3
 		}
 
 		#what effects happen when this tier is achieved
@@ -4529,13 +4618,14 @@ mesa_verde = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			religion = totemism
-			#culture_group = native_american
-			culture = navajo
 			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = navajo
+				culture = pueblo
 			}
+			# culture_group = native_american
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -4554,13 +4644,14 @@ mesa_verde = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			religion = totemism
-			#culture_group = native_american
-			culture = navajo
 			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = navajo
+				culture = pueblo
 			}
+			# culture_group = native_american
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -4569,14 +4660,14 @@ mesa_verde = {
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			religion = totemism
-			religion = mesoamerican_religion
-			#culture_group = native_american
-			culture = navajo
 			culture_group = intermountain_western
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = navajo
+				culture = pueblo
 			}
+			# culture_group = native_american
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -7733,6 +7824,7 @@ inukshuk = {
 			culture_group = arctic_canadian
 			religion = totemism
 			culture = juneauvian
+			culture = haida
 			owner = {
 				technology_group = high_american
 			}
@@ -7752,17 +7844,18 @@ inukshuk = {
 	}
 
 	#can our country use it?
-	can_use_modifiers_trigger = {	
+	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = arctic_canadian
 			religion = totemism
 			culture = juneauvian
+			culture = haida
 			owner = {
 				technology_group = high_american
 			}
 		}
 		province_is_or_accepts_culture = yes
-		has_owner_religion = yes	
+		has_owner_religion = yes
 	}
 
 	#can our country upgrade it?
@@ -7771,6 +7864,7 @@ inukshuk = {
 			culture_group = arctic_canadian
 			religion = totemism
 			culture = juneauvian
+			culture = haida
 			owner = {
 				technology_group = high_american
 			}
@@ -11482,14 +11576,14 @@ cahokia = {
 		OR = {
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = greenlandic
+				culture = inuktitut
+				culture = navajo
+				culture = haida
 			}
 			# culture_group = native_american
-			# culture = greenlandic
-			# culture = inuktitut
-			culture = navajo
-			culture = haida
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	on_built = {
@@ -11502,28 +11596,28 @@ cahokia = {
 		OR = {
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = greenlandic
+				culture = inuktitut
+				culture = navajo
+				culture = haida
 			}
 			# culture_group = native_american
-			# culture = greenlandic
-			# culture = inuktitut
-			culture = navajo
-			culture = haida
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
 				technology_group = high_american
+				religion = totemism
+				culture = greenlandic
+				culture = inuktitut
+				culture = navajo
+				culture = haida
 			}
 			# culture_group = native_american
-			# culture = greenlandic
-			# culture = inuktitut
-			culture = navajo
-			culture = haida
 		}
-		province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -15180,21 +15274,21 @@ san_antonio_missions = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 					culture = mexican_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -15209,21 +15303,21 @@ san_antonio_missions = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 					culture = mexican_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -15232,21 +15326,21 @@ san_antonio_missions = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 					culture = mexican_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -16130,9 +16224,12 @@ tikal = {
 			culture_group = peninsular_mexican
 			culture_group = maya
 			culture_group = central_american_group
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	on_built = {
@@ -16146,9 +16243,12 @@ tikal = {
 			culture_group = peninsular_mexican
 			culture_group = maya
 			culture_group = central_american_group
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	can_upgrade_trigger = {
@@ -16156,9 +16256,12 @@ tikal = {
 			culture_group = peninsular_mexican
 			culture_group = maya
 			culture_group = central_american_group
-			religion = mesoamerican_religion
+			owner = {
+				religion = mesoamerican_religion
+			}
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	keep_trigger = {
@@ -17923,7 +18026,11 @@ palace_of_the_popes = {
 			if = {
 				limit = { 
 					202 = { has_cardinal = no } 
-					owner = { religion = catholic }
+					OR = {
+						owner = { religion = catholic }
+						owner = { religion = s_catholic }
+						owner = { religion = austral_catholic }
+					}
 				}
 				202 = { add_cardinal = yes }
 			}
@@ -17964,7 +18071,11 @@ palace_of_the_popes = {
 			if = {
 				limit = { 
 					202 = { has_cardinal = no } 
-					owner = { religion = catholic }
+					OR = {
+						owner = { religion = catholic }
+						owner = { religion = s_catholic }
+						owner = { religion = austral_catholic }
+					}
 				}
 				202 = { add_cardinal = yes }
 			}
@@ -18003,7 +18114,11 @@ palace_of_the_popes = {
 			if = {
 				limit = { 
 					202 = { has_cardinal = no } 
-					owner = { religion = catholic }
+					OR = {
+						owner = { religion = catholic }
+						owner = { religion = s_catholic }
+						owner = { religion = austral_catholic }
+					}
 				}
 				202 = { add_cardinal = yes }
 			}

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = samoan_culture
+		}
 		NOT = { primary_culture = polynesian }
 		1243 = { 
 			is_capital = no
@@ -73,6 +76,7 @@ country_event = {
 	
 	option = {
 		name = "WesternSamoanFlavor.1opta"
+		set_country_flag = samoan_culture
 		1243 = { 
 			change_culture = samoan_western
 			add_core = WSM

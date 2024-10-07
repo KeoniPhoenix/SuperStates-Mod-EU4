@@ -2,7 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = new_yorker
-add_accepted_culture = western_new_yorker
+#add_accepted_culture = western_new_yorker
 add_accepted_culture = knickerbocker
 religion = s_catholic
 capital = 2593 # Albany
@@ -11,9 +11,9 @@ historical_rival = MSS
 1443.1.3 = {
 	monarch = {
 		name = "George Clinton"
-		adm = 3
-		dip = 2
-		mil = 2
+		adm = 4
+		dip = 5
+		mil = 5
 	}
 }
 

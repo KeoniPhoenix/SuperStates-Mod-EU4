@@ -203,6 +203,14 @@ texan_slot_2 = {
 					add_core = ROOT
 				}
 			}
+			3289 = { # Cimarron
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
 			high_plains_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -757,6 +765,8 @@ texan_slot_4 = {
 						primary_culture = tejano
 						primary_culture = southern_texan
 						primary_culture = mexican_texan
+						primary_culture = plains_texan
+						primary_culture = high_plainer
 					}
 				}
 				1010 = {

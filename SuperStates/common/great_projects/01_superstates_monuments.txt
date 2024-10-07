@@ -270,7 +270,7 @@ rushmore = {
 			legitimacy = 1
 			republican_tradition = 0.30
 			reelection_cost = -0.25
-			local_heir_dip = 1
+			advisor_pool = 1
 			# Some bonuses only apply to republics, others to monarchies
 		}
 
@@ -294,8 +294,16 @@ castillo_de_san_marcos = {
 	type = monument
 	build_trigger = {
 		OR = {
+			custom_trigger_tooltip = {
+				tooltip = any_floridian_tt
+				OR = {
 					culture = floridian
-					#culture = south_floridian
+					culture = south_floridian
+					culture = west_floridian
+					culture = miamian
+					culture = caribbean_floridian
+				}
+			}
 					culture_group = british
 					culture_group = iberian
 				}
@@ -308,9 +316,17 @@ castillo_de_san_marcos = {
 	}
 
 	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = any_floridian_tt
 				OR = {
 					culture = floridian
-					#culture = south_floridian
+					culture = south_floridian
+					culture = west_floridian
+					culture = miamian
+					culture = caribbean_floridian
+				}
+			}
 					culture_group = british
 					culture_group = iberian
 				}
@@ -319,8 +335,16 @@ castillo_de_san_marcos = {
 
 	can_upgrade_trigger = {
 		OR = {
+			custom_trigger_tooltip = {
+				tooltip = any_floridian_tt
+				OR = {
 					culture = floridian
-					#culture = south_floridian
+					culture = south_floridian
+					culture = west_floridian
+					culture = miamian
+					culture = caribbean_floridian
+				}
+			}
 					culture_group = british
 					culture_group = iberian
 				}
@@ -512,7 +536,7 @@ liberty_bell = {
 		}
 
 		country_modifiers = {
-			adm_tech_cost_modifier = -0.10
+			adm_tech_cost_modifier = -0.05
 		}
 
 		on_upgraded = {
@@ -535,8 +559,8 @@ liberty_bell = {
 		}
 
 		country_modifiers = {
-			adm_tech_cost_modifier = -0.10
-			free_policy = 1
+			adm_tech_cost_modifier = -0.075
+			possible_policy = 1
 		}
 
 		on_upgraded = {
@@ -559,8 +583,8 @@ liberty_bell = {
 		}
 
 		country_modifiers = {
-			technology_cost = -0.05
-			free_policy = 1
+			adm_tech_cost_modifier = -0.10
+			free_adm_policy = 1
 			possible_policy = 1
 		}
 
@@ -789,7 +813,7 @@ alcatraz = {
 
 		country_modifiers = {
 			global_spy_defence = 0.15
-			spy_offence = 0.10
+			#spy_offence = 0.10
 			fabricate_claims_cost = -0.05
 		}
 
@@ -818,7 +842,7 @@ alcatraz = {
 
 		country_modifiers = {
 			global_spy_defence = 0.20
-			spy_offence = 0.15
+			spy_offence = 0.10
 			fabricate_claims_cost = -0.10
 		}
 
@@ -847,7 +871,7 @@ alcatraz = {
 
 		country_modifiers = {
 			global_spy_defence = 0.25
-			spy_offence = 0.20
+			spy_offence = 0.15
 			fabricate_claims_cost = -0.25
 		}
 
@@ -935,7 +959,7 @@ golden_gate = {
 
 		country_modifiers = {
 				envoy_travel_time = -0.10
-				build_cost = -0.10
+				great_project_upgrade_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -963,12 +987,12 @@ golden_gate = {
 
 		country_modifiers = {
 			envoy_travel_time = -0.20
-			build_cost = -0.15
 			#movement_speed = 0.05
 			great_project_upgrade_cost = -0.10
 		}
 
 		on_upgraded = {
+			center_of_trade = 1
 		}
 	}
 
@@ -993,12 +1017,12 @@ golden_gate = {
 
 		country_modifiers = {
 			envoy_travel_time = -0.30
-			build_cost = -0.15
 			#movement_speed = 0.05
 			great_project_upgrade_cost = -0.15
 		}
 
 		on_upgraded = {
+			add_center_of_trade_level = 1
 		}
 	}
 }
@@ -1077,7 +1101,7 @@ salt_lake_temple = {
 		}
 
 		country_modifiers = {
-				global_missionary_strength = 0.02
+				global_missionary_strength = 0.005
 				enforce_religion_cost = -0.20
 				church_loyalty_modifier = 0.05
 		}
@@ -1102,7 +1126,7 @@ salt_lake_temple = {
 		}
 
 		country_modifiers = {
-			global_missionary_strength = 0.02
+			global_missionary_strength = 0.01
 			enforce_religion_cost = -0.35
 			missionaries = 1
 			church_loyalty_modifier = 0.10
@@ -1134,7 +1158,7 @@ salt_lake_temple = {
 		}
 
 		country_modifiers = {
-			global_missionary_strength = 0.03
+			global_missionary_strength = 0.02
 			enforce_religion_cost = -0.35
 			missionaries = 1
 			church_loyalty_modifier = 0.10
@@ -1185,7 +1209,7 @@ palmyra_temple = {
 	}
 
 	keep_trigger = {
-		# religion = mormon
+		religion = mormon
 	}
 
 	tier_0 = {
@@ -1226,17 +1250,28 @@ palmyra_temple = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.20
+			religious_unity = 0.10
 			tolerance_own = 1
 			church_loyalty_modifier = 0.05
 		}
 
 		on_upgraded = {
-			# erie_area = {
-			# limit = { owned_by = ROOT 
-				# change_religion = mormon
-				# }
-			# }
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2598 = {
+					change_religion = mormon
+				}
+			}
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2668 = {
+					change_religion = mormon
+				}
+			}
 		}
 	}
 
@@ -1256,7 +1291,7 @@ palmyra_temple = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.33
+			religious_unity = 0.15
 			tolerance_own = 1
 			church_loyalty_modifier = 0.10
 		}
@@ -1268,11 +1303,22 @@ palmyra_temple = {
 					loyalty = 5
 				}
 			}
-			# erie_area = {
-			# limit = { owned_by = ROOT 
-				# change_religion = mormon
-				# }
-			# }
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2598 = {
+					change_religion = mormon
+				}
+			}
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2668 = {
+					change_religion = mormon
+				}
+			}
 		}
 	}
 
@@ -1292,7 +1338,7 @@ palmyra_temple = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.50
+			religious_unity = 0.20
 			tolerance_own = 2
 			church_loyalty_modifier = 0.10
 		}
@@ -1304,11 +1350,22 @@ palmyra_temple = {
 					loyalty = 10
 				}
 			}
-			# erie_area = {
-			# limit = { owned_by = ROOT 
-				# change_religion = mormon
-				# }
-			# }
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2598 = {
+					change_religion = mormon
+				}
+			}
+			if = {
+				limit = {
+					owned_by = ROOT
+				}
+				2668 = {
+					change_religion = mormon
+				}
+			}
 		}
 	}
 }
@@ -1761,6 +1818,12 @@ ryman_auditorium = {
 	build_trigger = {
 		OR = {
 			culture_group = southerner
+			hidden_trigger = {
+				culture = appalachian_tennessean
+			}
+			hidden_trigger = {
+				culture = midwestern_tennessean
+			}
 			culture = kentuckian
 			hidden_trigger = {
 				culture = midwestern_kentuckian
@@ -1865,6 +1928,7 @@ ryman_auditorium = {
 		country_modifiers = {
 			stability_cost_modifier = -0.15
 			years_of_nationalism = -5
+			liberty_desire_from_subject_development = -0.05
 		}
 
 		on_upgraded = {
@@ -1890,7 +1954,7 @@ ryman_auditorium = {
 		country_modifiers = {
 			stability_cost_modifier = -0.20
 			years_of_nationalism = -5
-			liberty_desire_from_subject_development = -0.20
+			liberty_desire_from_subject_development = -0.10
 		}
 
 		on_upgraded = {
@@ -1985,9 +2049,9 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.20
-			local_hostile_attrition = 1
-			local_defensiveness = 0.10
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
 		}
 		
 		area_modifier = {
@@ -2012,12 +2076,12 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.35
-			local_hostile_attrition = 1
-			local_defensiveness = 0.15
 		}
 
 		area_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
 		}
 
 		country_modifiers = {
@@ -2039,17 +2103,19 @@ denali = {
 		}
 
 		province_modifiers = {
-			local_hostile_movement_speed = -0.50
-			local_hostile_attrition = 1
-			local_defensiveness = 0.20
 		}
 
 		area_modifier = {
-			
+		}
+
+		region_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
 		}
 
 		country_modifiers = {
-			land_attrition = -0.15
+			land_attrition = -0.10
 			fort_maintenance_modifier = -0.20
 		}
 
@@ -2294,7 +2360,7 @@ everglades = {
 		}
 
 		country_modifiers = {
-			land_attrition = -0.10
+			leader_land_manuever = 1
 		}
 
 		on_upgraded = {
@@ -2322,7 +2388,7 @@ everglades = {
 
 		country_modifiers = {
 			leader_land_manuever = 1
-			land_attrition = -0.10
+			#land_attrition = -0.10
 		}
 
 		on_upgraded = {
@@ -2544,6 +2610,7 @@ frontenac = {
 	build_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture_group = great_laker
 		}
 		province_is_or_accepts_culture = yes
@@ -2557,6 +2624,7 @@ frontenac = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture_group = great_laker
 		}
 		province_is_or_accepts_culture = yes
@@ -2565,6 +2633,7 @@ frontenac = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = new_french
+			culture_group = french
 			culture_group = great_laker
 		}
 		province_is_or_accepts_culture = yes
@@ -2605,7 +2674,7 @@ frontenac = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		
 		area_modifier = {
@@ -2630,7 +2699,7 @@ frontenac = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 		}
 
 		area_modifier = {
@@ -2660,7 +2729,7 @@ frontenac = {
 		}
 
 		area_modifier = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 		}
 
 		country_modifiers = {
@@ -2768,7 +2837,8 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.025
+			#land_morale = 0.025
+			drill_decay_modifier = -0.10
 			recover_army_morale_speed = 0.05
 		}
 
@@ -2793,9 +2863,10 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.05
+			#land_morale = 0.05
+			drill_decay_modifier = -0.15
+			drill_gain_modifier = 0.20
 			recover_army_morale_speed = 0.10
-			leader_land_shock = 1
 		}
 
 		on_upgraded = {
@@ -2819,9 +2890,10 @@ washington_monument = {
 		}
 
 		country_modifiers = {
-			land_morale = 0.075
-			recover_army_morale_speed = 0.15
-			leader_land_shock = 1
+			#land_morale = 0.05
+			drill_decay_modifier = -0.25
+			drill_gain_modifier = 0.35
+			recover_army_morale_speed = 0.20
 		}
 
 		on_upgraded = {
@@ -3264,7 +3336,7 @@ gateway_arch = {
 	build_trigger = {
 		OR = {
 			culture_group = midwestern_group
-			culture_group = great_plainer_group
+			#culture_group = great_plainer_group
 			#culture = chicagoan
 			hidden_trigger = {
 				culture = southern_missourian
@@ -3281,7 +3353,7 @@ gateway_arch = {
 	can_use_modifiers_trigger = {
 		OR = {
 			culture_group = midwestern_group
-			culture_group = great_plainer_group
+			#culture_group = great_plainer_group
 			#culture = chicagoan
 			hidden_trigger = {
 				culture = southern_missourian
@@ -3293,7 +3365,7 @@ gateway_arch = {
 	can_upgrade_trigger = {
 		OR = {
 			culture_group = midwestern_group
-			culture_group = great_plainer_group
+			#culture_group = great_plainer_group
 			#culture = chicagoan
 			hidden_trigger = {
 				culture = southern_missourian
@@ -3345,7 +3417,7 @@ gateway_arch = {
 
 		country_modifiers = {
 			merchants = 1
-			center_of_trade_upgrade_cost = -0.10
+			#center_of_trade_upgrade_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -3371,7 +3443,7 @@ gateway_arch = {
 		country_modifiers = {
 			global_trade_power = 0.10
 			merchants = 1
-			center_of_trade_upgrade_cost = -0.15
+			#center_of_trade_upgrade_cost = -0.15
 		}
 
 		on_upgraded = {
@@ -3396,8 +3468,8 @@ gateway_arch = {
 
 		country_modifiers = {
 			global_trade_power = 0.15
-			merchants = 2
-			center_of_trade_upgrade_cost = -0.20
+			merchants = 1
+			#center_of_trade_upgrade_cost = -0.20
 		}
 
 		on_upgraded = {
@@ -3487,7 +3559,7 @@ independence_hall = {
 
 		country_modifiers = {
 			governing_capacity_modifier = 0.05
-			state_governing_cost = -0.05
+			#state_governing_cost = -0.05
 			expand_administration_cost = -0.15
 		}
 
@@ -3513,7 +3585,7 @@ independence_hall = {
 
 		country_modifiers = {
 			governing_capacity_modifier = 0.075
-			state_governing_cost = -0.15
+			#state_governing_cost = -0.15
 			expand_administration_cost = -0.25
 		}
 
@@ -3539,7 +3611,7 @@ independence_hall = {
 
 		country_modifiers = {
 			governing_capacity_modifier = 0.10
-			state_governing_cost = -0.25
+			#state_governing_cost = -0.25
 			expand_administration_cost = -0.33
 		}
 
@@ -3703,10 +3775,16 @@ biltmore = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 0
 
 	type = monument
 	build_trigger = {
+		OR = {
+			culture = north_carolinian
+			culture = mountaineer
+			culture = carolinian
+		}
+		province_is_or_accepts_culture = yes
 	}
 	on_built = {
 	}
@@ -3715,9 +3793,21 @@ biltmore = {
 	}
 
 	can_use_modifiers_trigger = {
+		OR = {
+			culture = north_carolinian
+			culture = mountaineer
+			culture = carolinian
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
+		OR = {
+			culture = north_carolinian
+			culture = mountaineer
+			culture = carolinian
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -3764,7 +3854,7 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.05
+			development_cost = -0.025
 			build_cost = -0.025
 			nobles_loyalty_modifier = 0.05
 			#church_loyalty_modifier = 0.05
@@ -3794,8 +3884,8 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.075
-			build_cost = -0.10
+			development_cost = -0.050
+			build_cost = -0.05
 			nobles_loyalty_modifier = 0.10
 			#church_loyalty_modifier = 0.10
 		}
@@ -3823,8 +3913,8 @@ biltmore = {
 		}
 
 		country_modifiers = {
-			development_cost = -0.10
-			build_cost = -0.15
+			development_cost = -0.075
+			build_cost = -0.10
 			nobles_loyalty_modifier = 0.10
 			#church_loyalty_modifier = 0.10
 		}
@@ -3849,10 +3939,30 @@ fort_sumter = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture_group = southerner
-			culture_group = midatlantic_group
-			culture_group = new_england_group
-		}
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -3863,19 +3973,59 @@ fort_sumter = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture_group = southerner
-			culture_group = midatlantic_group
-			culture_group = new_england_group
-		}
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture_group = southerner
-			culture_group = midatlantic_group
-			culture_group = new_england_group
-		}
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -3914,7 +4064,8 @@ fort_sumter = {
 		}
 
 		province_modifiers = {
-			
+			local_defensiveness = 0.10
+			blockade_force_required = 0.50
 		}
 		
 		area_modifier = {
@@ -3922,7 +4073,6 @@ fort_sumter = {
 
 		country_modifiers = {
 			global_naval_barrage_cost = -0.10
-			naval_morale = 0.05
 			navy_tradition = 0.50
 		}
 
@@ -3940,7 +4090,9 @@ fort_sumter = {
 		}
 
 		province_modifiers = {
-			
+			local_defensiveness = 0.15
+			blockade_force_required = 0.75
+			hostile_fleet_attrition = 5
 		}
 
 		area_modifier = {
@@ -3948,7 +4100,6 @@ fort_sumter = {
 
 		country_modifiers = {
 			global_naval_barrage_cost = -0.25
-			naval_morale = 0.10
 			navy_tradition = 0.75
 		}
 
@@ -3966,15 +4117,16 @@ fort_sumter = {
 		}
 
 		province_modifiers = {
+			hostile_fleet_attrition = 10
 		}
 
 		area_modifier = {
-			
+			local_defensiveness = 0.20
+			blockade_force_required = 1
 		}
 
 		country_modifiers = {
 			global_naval_barrage_cost = -0.50
-			naval_morale = 0.10
 			navy_tradition = 1
 			siege_blockade_progress = 1
 		}
@@ -4054,9 +4206,9 @@ hoover_dam = {
 		}
 
 		country_modifiers = {
-			build_cost = -0.10
+			build_cost = -0.025
 			build_time = -0.10
-			great_project_upgrade_cost = -0.10
+			great_project_upgrade_time = -0.10
 		}
 
 		on_upgraded = {
@@ -4082,9 +4234,9 @@ hoover_dam = {
 		}
 
 		country_modifiers = {
-			build_cost = -0.15
+			build_cost = -0.05
 			build_time = -0.15
-			great_project_upgrade_cost = -0.15
+			great_project_upgrade_time = -0.20
 		}
 
 		on_upgraded = {
@@ -4109,9 +4261,9 @@ hoover_dam = {
 		}
 
 		country_modifiers = {
-			build_cost = -0.25
+			build_cost = -0.075
 			build_time = -0.25
-			great_project_upgrade_cost = -0.20
+			great_project_upgrade_time = -0.25
 		}
 
 		on_upgraded = {
@@ -4264,7 +4416,7 @@ yosemite = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -4328,7 +4480,6 @@ yosemite = {
 		}
 
 		country_modifiers = {
-				movement_speed = 0.05
 		}
 
 		on_upgraded = {
@@ -4354,7 +4505,7 @@ yosemite = {
 		}
 
 		country_modifiers = {
-			movement_speed = 0.10
+			movement_speed = 0.025
 		}
 
 		on_upgraded = {
@@ -4381,7 +4532,7 @@ yosemite = {
 		}
 
 		country_modifiers = {
-			movement_speed = 0.15
+			movement_speed = 0.05
 		}
 
 		on_upgraded = {
@@ -4541,12 +4692,12 @@ teotihuacan = {
 	build_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 	on_built = {
 	}
@@ -4557,23 +4708,23 @@ teotihuacan = {
 	can_use_modifiers_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
 			owner = {
-				technology_group = mesoamerican
+				religion = nahuatl
 			}
 			culture_group = altiplano_central
-			religion = nahuatl
 		}
 		province_is_or_accepts_culture = yes
+		has_owner_religion = yes
 	}
 
 	keep_trigger = {
@@ -4620,7 +4771,7 @@ teotihuacan = {
 		}
 
 		country_modifiers = {
-			tolerance_heretic = 1
+			tolerance_heretic = 0.5
 		}
 
 		on_upgraded = {
@@ -4649,6 +4800,7 @@ teotihuacan = {
 		country_modifiers = {
 			tolerance_heretic = 1
 			tolerance_own = 1
+			stability_cost_modifier = -0.10
 		}
 
 		on_upgraded = {
@@ -4674,8 +4826,10 @@ teotihuacan = {
 		}
 
 		country_modifiers = {
-			tolerance_heretic = 2
-			tolerance_own = 2
+			tolerance_heretic = 1
+			tolerance_own = 1
+			stability_cost_modifier = -0.15
+			global_missionary_strength = 0.01
 		}
 
 		on_upgraded = {
@@ -4697,17 +4851,22 @@ chapultepec = {
 
 	type = monument
 	build_trigger = {
-		OR = {
-			owner = {
-				capital_scope = {
-					superregion = central_america_superregion
-				}
-			}
-			owner = {
-				technology_group = mesoamerican
-			}
-			culture_group = altiplano_central
+	OR = {
+		culture_group = iberian
+		owner = {
+			religion = nahuatl
 		}
+		custom_trigger_tooltip = {
+			tooltip = mexican_groups_tt
+				OR = {
+					culture_group = occidental_mexican
+					#culture_group = pacific_mexican
+					culture_group = peninsular_mexican
+					culture_group = mazatlan_mexican
+					culture_group = altiplano_central
+				}
+		}
+	}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -4718,32 +4877,42 @@ chapultepec = {
 
 	can_use_modifiers_trigger = {
 		OR = {
+			culture_group = iberian
 			owner = {
-				capital_scope = {
-					superregion = central_america_superregion
-				}
+				religion = nahuatl
 			}
-			owner = {
-				technology_group = mesoamerican
+			custom_trigger_tooltip = {
+				tooltip = mexican_groups_tt
+					OR = {
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = peninsular_mexican
+						culture_group = mazatlan_mexican
+						culture_group = altiplano_central
+					}
 			}
-			culture_group = altiplano_central
 		}
-		province_is_or_accepts_culture = yes
+			province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
+			culture_group = iberian
 			owner = {
-				capital_scope = {
-					superregion = central_america_superregion
-				}
+				religion = nahuatl
 			}
-			owner = {
-				technology_group = mesoamerican
+			custom_trigger_tooltip = {
+				tooltip = mexican_groups_tt
+					OR = {
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = peninsular_mexican
+						culture_group = mazatlan_mexican
+						culture_group = altiplano_central
+					}
 			}
-			culture_group = altiplano_central
 		}
-		province_is_or_accepts_culture = yes
+			province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -4845,7 +5014,7 @@ chapultepec = {
 			legitimacy = 1
 			monthly_heir_claim_increase = 0.20
 			global_regiment_cost = -0.10
-			nobles_loyalty_modifier = 0.15
+			nobles_loyalty_modifier = 0.10
 		}
 
 		on_upgraded = {
@@ -4868,12 +5037,36 @@ uluru = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
 			religion = dreamtime
-			# owner = {
-				# technology_group = australian
-			# }
-			#culture_group = aboriginal
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -4886,12 +5079,36 @@ uluru = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
-			religion = dreamtime
-			owner = {
-				technology_group = australian
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
 			}
-			#culture_group = aboriginal
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
+			religion = dreamtime
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -4899,12 +5116,36 @@ uluru = {
 
 	can_upgrade_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
-			religion = dreamtime
-			owner = {
-				technology_group = australian
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
 			}
-			#culture_group = aboriginal
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
+			religion = dreamtime
 		}
 		province_is_or_accepts_culture = yes
 		has_owner_religion = yes
@@ -4946,7 +5187,7 @@ uluru = {
 
 		province_modifiers = {
 			local_monthly_devastation = -0.05
-			local_development_cost = -0.05
+			#local_development_cost = -0.05
 		}
 		
 		area_modifier = {
@@ -4954,7 +5195,7 @@ uluru = {
 
 		country_modifiers = {
 			missionaries = 1
-			global_missionary_strength = 0.01
+			global_missionary_strength = 0.005
 		}
 
 		on_upgraded = {
@@ -4972,7 +5213,7 @@ uluru = {
 
 		province_modifiers = {
 			local_monthly_devastation = -0.10
-			local_development_cost = -0.15
+			#local_development_cost = -0.15
 		}
 
 		area_modifier = {
@@ -4980,7 +5221,7 @@ uluru = {
 
 		country_modifiers = {
 			missionaries = 1
-			global_missionary_strength = 0.02
+			global_missionary_strength = 0.01
 		}
 
 		on_upgraded = {
@@ -4997,7 +5238,7 @@ uluru = {
 		}
 
 		province_modifiers = {
-			local_development_cost = -0.20
+			#local_development_cost = -0.20
 		}
 
 		area_modifier = {
@@ -5006,7 +5247,7 @@ uluru = {
 
 		country_modifiers = {
 			missionaries = 2
-			global_missionary_strength = 0.03
+			global_missionary_strength = 0.02
 		}
 
 		on_upgraded = {
@@ -5029,10 +5270,9 @@ sydney_opera_house = {
 	type = monument
 	build_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
-			}
-			culture_group = australian_new_zealander
+			culture = new_south_welsh
+			culture = riverinan
+			culture = canberran
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -5044,20 +5284,18 @@ sydney_opera_house = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
-			}
-			culture_group = australian_new_zealander
+			culture = new_south_welsh
+			culture = riverinan
+			culture = canberran
 		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
-			}
-			culture_group = australian_new_zealander
+			culture = new_south_welsh
+			culture = riverinan
+			culture = canberran
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -5104,8 +5342,8 @@ sydney_opera_house = {
 		}
 
 		country_modifiers = {
+			stability_cost_modifier = -0.10
 			advisor_pool = 1
-			advisor_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -5130,7 +5368,7 @@ sydney_opera_house = {
 
 		country_modifiers = {
 			advisor_pool = 1
-			advisor_cost = -0.15
+			stability_cost_modifier = -0.15
 			num_accepted_cultures = 1
 		}
 
@@ -5156,7 +5394,7 @@ sydney_opera_house = {
 
 		country_modifiers = {
 			advisor_pool = 2
-			advisor_cost = -0.20
+			stability_cost_modifier = -0.20
 			num_accepted_cultures = 2
 		}
 
@@ -5180,11 +5418,21 @@ aoraki = {
 	type = monument
 	build_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
+		custom_trigger_tooltip = {
+			tooltip = new_zealand_cultures_tt
+			OR = {
+				culture = new_zealander
+				culture = south_islander
+				culture = north_islander
 			}
-			culture_group = australian_new_zealander
-			culture = maori
+		}
+		custom_trigger_tooltip = {
+			tooltip = maori_cultures_tt
+			OR = {
+				culture = maori
+				culture = moriori
+			}
+		}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -5196,24 +5444,44 @@ aoraki = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
+			custom_trigger_tooltip = {
+				tooltip = new_zealand_cultures_tt
+				OR = {
+					culture = new_zealander
+					culture = south_islander
+					culture = north_islander
+				}
 			}
-			culture_group = australian_new_zealander
-			culture = maori
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = maori_cultures_tt
+				OR = {
+					culture = maori
+					culture = moriori
+				}
+			}
+			}
+			province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			owner = {
-				technology_group = australian
+			custom_trigger_tooltip = {
+				tooltip = new_zealand_cultures_tt
+				OR = {
+					culture = new_zealander
+					culture = south_islander
+					culture = north_islander
+				}
 			}
-			culture_group = australian_new_zealander
-			culture = maori
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = maori_cultures_tt
+				OR = {
+					culture = maori
+					culture = moriori
+				}
+			}
+			}
+			province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -5341,10 +5609,13 @@ baltimore_basilica = {
 
 	type = monument
 	build_trigger = {
-		OR = {
-			religion = catholic
-			religion = s_catholic
-			religion = austral_catholic
+		custom_trigger_tooltip = {
+			tooltip = any_catholic_tt
+			OR = {
+				religion = catholic
+				religion = s_catholic
+				religion = austral_catholic
+			}
 		}
 		has_owner_religion = yes
 	}
@@ -5355,19 +5626,25 @@ baltimore_basilica = {
 	}
 
 	can_use_modifiers_trigger = {
-		OR = {
-			religion = catholic
-			religion = s_catholic
-			religion = austral_catholic
+		custom_trigger_tooltip = {
+			tooltip = any_catholic_tt
+			OR = {
+				religion = catholic
+				religion = s_catholic
+				religion = austral_catholic
+			}
 		}
 		has_owner_religion = yes
 	}
 
 	can_upgrade_trigger = {
-		OR = {
-			religion = catholic
-			religion = s_catholic
-			religion = austral_catholic
+		custom_trigger_tooltip = {
+			tooltip = any_catholic_tt
+			OR = {
+				religion = catholic
+				religion = s_catholic
+				religion = austral_catholic
+			}
 		}
 		has_owner_religion = yes
 	}
@@ -5506,17 +5783,18 @@ graceland = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture = tennessean
-			culture = west_tennessean
-			#culture = mountaineer
 			culture = mississippian
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_tennessean
-					culture = midwestern_tennessean
+			custom_trigger_tooltip = {
+					tooltip = graceland_tt
+					OR = {
+						culture = tennessean
+						culture = appalachian_tennessean
+						culture = midwestern_tennessean
+						culture = west_tennessean
+						culture = mountaineer
+					}
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -5527,33 +5805,35 @@ graceland = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture = tennessean
-			culture = west_tennessean
-			#culture = mountaineer
 			culture = mississippian
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_tennessean
-					culture = midwestern_tennessean
+			custom_trigger_tooltip = {
+					tooltip = graceland_tt
+					OR = {
+						culture = tennessean
+						culture = appalachian_tennessean
+						culture = midwestern_tennessean
+						culture = west_tennessean
+						culture = mountaineer
+					}
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture = tennessean
-			culture = west_tennessean
-			#culture = mountaineer
 			culture = mississippian
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_tennessean
-					culture = midwestern_tennessean
+			custom_trigger_tooltip = {
+					tooltip = graceland_tt
+					OR = {
+						culture = tennessean
+						culture = appalachian_tennessean
+						culture = midwestern_tennessean
+						culture = west_tennessean
+						culture = mountaineer
+					}
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -5599,8 +5879,8 @@ graceland = {
 		}
 
 		country_modifiers = {
-			monthly_splendor = 0.50
 			num_accepted_cultures = 1
+			diplomatic_annexation_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -5624,9 +5904,8 @@ graceland = {
 		}
 
 		country_modifiers = {
-			monthly_splendor = 1
 			num_accepted_cultures = 2
-			diplomatic_annexation_cost = -0.15
+			diplomatic_annexation_cost = -0.075
 		}
 
 		on_upgraded = {
@@ -5650,9 +5929,8 @@ graceland = {
 		}
 
 		country_modifiers = {
-			monthly_splendor = 2
 			num_accepted_cultures = 2
-			diplomatic_annexation_cost = -0.25
+			diplomatic_annexation_cost = -0.10
 		}
 
 		on_upgraded = {
@@ -5796,7 +6074,7 @@ louisiana_state_capitol = {
 		}
 
 		area_modifier = {
-			local_development_cost = -0.15
+			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.10
 		}
 
@@ -6220,7 +6498,7 @@ el_morro = {
 # 	}
 # }
 
-nyse = {
+nyse = { # New York Stock Exchange
 	start = 2601 #New York
 	date = 1444.01.01 #1716.01.01
 	time = {
@@ -6289,8 +6567,8 @@ nyse = {
 		}
 
 		country_modifiers = {
-			global_trade_power = 0.05
-			trade_steering = 0.10
+			#global_trade_power = 0.05
+			#trade_steering = 0.10
 			merchants = 1
 		}
 
@@ -6316,7 +6594,7 @@ nyse = {
 
 		country_modifiers = {
 			global_trade_power = 0.10
-			trade_steering = 0.15
+			#trade_steering = 0.15
 			merchants = 1
 		}
 
@@ -6326,6 +6604,14 @@ nyse = {
 					estate = estate_burghers
 					loyalty = 5
 				}
+			}
+
+			3283 = {
+				add_center_of_trade_level = 1
+			}
+
+			3282 = {
+				add_center_of_trade_level = 1
 			}
 		}
 	}
@@ -6347,8 +6633,8 @@ nyse = {
 		}
 
 		country_modifiers = {
-			global_trade_power = 0.20
-			trade_steering = 0.20
+			global_trade_power = 0.15
+			#trade_steering = 0.20
 			merchants = 2
 		}
 
@@ -6358,6 +6644,14 @@ nyse = {
 					estate = estate_burghers
 					loyalty = 10
 				}
+			}
+
+			3283 = {
+				add_center_of_trade_level = 1
+			}
+
+			3282 = {
+				add_center_of_trade_level = 1
 			}
 		}
 	}
@@ -6433,7 +6727,7 @@ parliament_hill = {
 
 		country_modifiers = {
 			ae_impact = -0.05
-			unjustified_demands = -0.10
+			#unjustified_demands = -0.10
 		}
 
 		on_upgraded = {
@@ -6451,7 +6745,7 @@ parliament_hill = {
 
 		province_modifiers = {
 			ae_impact = -0.10
-			unjustified_demands = -0.15
+			#unjustified_demands = -0.15
 			province_warscore_cost = -0.05
 		}
 
@@ -6484,7 +6778,7 @@ parliament_hill = {
 
 		country_modifiers = {
 			ae_impact = -0.15
-			unjustified_demands = -0.20
+			#unjustified_demands = -0.20
 			province_warscore_cost = -0.10
 		}
 
@@ -6635,6 +6929,11 @@ harvard = {
 
 	type = monument
 	build_trigger = {
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
+		province_is_or_accepts_culture = yes
 	}
 	on_built = {
 	}
@@ -6643,9 +6942,19 @@ harvard = {
 	}
 
 	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
+		province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -6683,15 +6992,18 @@ harvard = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			technology_cost = -0.025
-			innovativeness_gain = 0.15
+			reinforce_speed = 0.1
+			papal_influence = 0.25
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.05
+			innovativeness_gain = 0.10
 		}
 
 		on_upgraded = {
@@ -6708,17 +7020,19 @@ harvard = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		area_modifier = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		country_modifiers = {
-			technology_cost = -0.05
-			innovativeness_gain = 0.25
-			idea_cost = -0.025
+			reinforce_speed = 0.1
+			papal_influence = 0.50
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.1
+			innovativeness_gain = 0.20
 		}
 
 		on_upgraded = {
@@ -6738,16 +7052,20 @@ harvard = {
 		}
 
 		area_modifier = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 		}
 
 		country_modifiers = {
-			technology_cost = -0.075
+			reinforce_speed = 0.20
+			papal_influence = 1
+			monthly_fervor_increase = 1
+			church_power_modifier = 0.15
 			innovativeness_gain = 0.33
-			idea_cost = -0.05
 		}
 
 		on_upgraded = {
+			custom_tooltip = fewer_plagues_tt
+			owner = { set_country_flag = has_competent_doctors }
 		}
 	}
 }
@@ -6814,7 +7132,7 @@ banff = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 			allowed_num_of_buildings = 1
 		}
 		
@@ -6844,7 +7162,7 @@ banff = {
 		}
 
 		area_modifier = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		country_modifiers = {
@@ -6870,12 +7188,13 @@ banff = {
 		}
 
 		area_modifier = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 			allowed_num_of_buildings = 2
 		}
 
 		country_modifiers = {
-			diplomats = 2
+			diplomats = 1
+			diplomatic_annexation_cost = -0.10
 			#build_cost = -0.15
 			diplomatic_reputation = 1
 		}
@@ -6899,7 +7218,10 @@ breakers = {
 
 	type = monument
 	build_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -6909,12 +7231,18 @@ breakers = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -6962,7 +7290,7 @@ breakers = {
 		}
 
 		country_modifiers = {
-			global_trade_goods_size_modifier = 0.05
+			global_trade_goods_size_modifier = 0.025
 			burghers_loyalty_modifier = 0.05
 			nobles_loyalty_modifier = 0.05
 		}
@@ -6989,7 +7317,7 @@ breakers = {
 		}
 
 		country_modifiers = {
-			global_trade_goods_size_modifier = 0.075
+			global_trade_goods_size_modifier = 0.05
 			burghers_loyalty_modifier = 0.10
 			nobles_loyalty_modifier = 0.10
 		}
@@ -7016,9 +7344,9 @@ breakers = {
 		}
 
 		country_modifiers = {
-			global_trade_goods_size_modifier = 0.10
-			burghers_loyalty_modifier = 0.10
-			nobles_loyalty_modifier = 0.10
+			global_trade_goods_size_modifier = 0.05
+			burghers_loyalty_modifier = 0.15
+			nobles_loyalty_modifier = 0.15
 		}
 
 		on_upgraded = {
@@ -7107,7 +7435,7 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.10
+			religious_unity = 0.05
 			institution_spread_from_true_faith = 0.20
 		}
 
@@ -7132,7 +7460,7 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.20
+			religious_unity = 0.15
 			institution_spread_from_true_faith = 0.33
 			tolerance_own = 0.5
 		}
@@ -7158,7 +7486,7 @@ crater_lake = {
 		}
 
 		country_modifiers = {
-			religious_unity = 0.30
+			religious_unity = 0.20
 			institution_spread_from_true_faith = 0.50
 			tolerance_own = 1
 		}
@@ -7261,8 +7589,9 @@ lions_gate = {
 		}
 
 		country_modifiers = {
-				envoy_travel_time = -0.10
-				build_cost = -0.10
+			trade_steering = 0.05
+			global_ship_trade_power = 0.1
+			burghers_loyalty_modifier = 0.05
 		}
 
 		on_upgraded = {
@@ -7286,13 +7615,14 @@ lions_gate = {
 		}
 
 		country_modifiers = {
-			envoy_travel_time = -0.20
-			build_cost = -0.15
-			#movement_speed = 0.05
-			great_project_upgrade_cost = -0.10
+			trade_steering = 0.1
+			global_ship_trade_power = 0.1
+			merchants = 1
+			burghers_loyalty_modifier = 0.1
 		}
 
 		on_upgraded = {
+			add_center_of_trade_level = 1
 		}
 	}
 
@@ -7313,13 +7643,14 @@ lions_gate = {
 		}
 
 		country_modifiers = {
-			envoy_travel_time = -0.30
-			build_cost = -0.15
-			#movement_speed = 0.05
-			great_project_upgrade_cost = -0.15
+			trade_steering = 0.2
+			global_ship_trade_power = 0.3
+			merchants = 1
+			burghers_loyalty_modifier = 0.15
 		}
 
 		on_upgraded = {
+			add_center_of_trade_level = 1
 		}
 	}
 }
@@ -7460,7 +7791,7 @@ rainier = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -7561,7 +7892,7 @@ rainier = {
 		}
 
 		country_modifiers = {
-			global_prosperity_growth = 0.15
+			global_prosperity_growth = 0.10
 			global_monthly_devastation = -0.05
 		}
 
@@ -7590,7 +7921,7 @@ rainier = {
 		}
 
 		country_modifiers = {
-			global_prosperity_growth = 0.25
+			global_prosperity_growth = 0.20
 			global_monthly_devastation = -0.07
 		}
 
@@ -8003,7 +8334,10 @@ yale = {
 
 	type = monument
 	build_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -8013,12 +8347,18 @@ yale = {
 	}
 
 	can_use_modifiers_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		culture_group = new_england_group
+		OR = {
+			culture_group = new_england_group
+			culture = new_england_french
+		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -8057,15 +8397,15 @@ yale = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.10
-			embracement_cost = -0.10
+			church_privilege_slots = 1
+			#technology_cost = -0.025
 		}
 
 		on_upgraded = {
@@ -8082,16 +8422,17 @@ yale = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		area_modifier = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.15
-			embracement_cost = -0.10
+			church_privilege_slots = 1
+			church_loyalty_modifier = 0.1
+			technology_cost = -0.025
 		}
 
 		on_upgraded = {
@@ -8111,12 +8452,13 @@ yale = {
 		}
 
 		area_modifier = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.20
-			embracement_cost = -0.15
+			church_privilege_slots = 1 
+			church_loyalty_modifier = 0.15
+			technology_cost = -0.05
 		}
 
 		on_upgraded = {
@@ -8134,7 +8476,7 @@ princeton = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -8192,14 +8534,14 @@ princeton = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.10
+			global_institution_spread = 0.10
 			embracement_cost = -0.10
 		}
 
@@ -8217,16 +8559,17 @@ princeton = {
 		}
 
 		province_modifiers = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		area_modifier = {
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.15
+			global_institution_spread = 0.20
 			embracement_cost = -0.10
+			possible_dip_policy = 1
 		}
 
 		on_upgraded = {
@@ -8246,12 +8589,14 @@ princeton = {
 		}
 
 		area_modifier = {
-			development_cost = -0.10
+			local_development_cost = -0.10
 		}
 
 		country_modifiers = {
-			innovativeness_gain = 0.20
+			global_institution_spread = 0.30
 			embracement_cost = -0.15
+			possible_dip_policy = 1
+			#free_dip_policy = 1
 		}
 
 		on_upgraded = {
@@ -8259,7 +8604,7 @@ princeton = {
 	}
 }
 
-goliad = {
+goliad = { # Bahia
 	start = 2485 #Nueces
 	date = 1444.01.01 #1716.01.01
 	time = {
@@ -8269,28 +8614,27 @@ goliad = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				#culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
-					culture = mexican_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 	on_built = {
@@ -8303,21 +8647,20 @@ goliad = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				#culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
-					culture = mexican_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -8325,21 +8668,20 @@ goliad = {
 		NOT = {
 			owner = {
 				technology_group = mesoamerican
+				#culture_group = occidental_mexican
 			}
 		}
-		OR = {
-			culture = texan
-			culture = tejano
-			culture = high_plainer
-			culture = eastern_texan
-			hidden_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = texan_cultures_tt
 				OR = {
 					culture = southern_texan
 					culture = plains_texan
-					culture = mexican_texan
+					culture = texan
+					culture = tejano
+					culture = high_plainer
+					culture = eastern_texan
 				}
 			}
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -8386,7 +8728,7 @@ goliad = {
 		}
 
 		country_modifiers = {
-			global_heretic_missionary_strength = 0.01
+			global_heretic_missionary_strength = 0.005
 			curia_powers_cost = -0.05
 		}
 
@@ -8412,7 +8754,7 @@ goliad = {
 		}
 
 		country_modifiers = {
-			global_heretic_missionary_strength = 0.02
+			global_heretic_missionary_strength = 0.01
 			curia_powers_cost = -0.10
 		}
 
@@ -8438,7 +8780,7 @@ goliad = {
 		}
 
 		country_modifiers = {
-			global_heretic_missionary_strength = 0.03
+			global_heretic_missionary_strength = 0.02
 			curia_powers_cost = -0.20
 		}
 
@@ -8462,12 +8804,17 @@ scotts_bluff = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture_group = great_plainer_group
-			culture_group = midwestern_group
-			culture_group = intermountain_western
 			culture = oregonian
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+					tooltip = scotts_bluff_tt
+					OR = {
+						culture_group = southwestern
+						culture_group = midwestern_group
+						culture_group = intermountain_western
+					}
+				}
+			}
+			province_is_or_accepts_culture = yes
 	}
 	on_built = {
 	}
@@ -8477,22 +8824,32 @@ scotts_bluff = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture_group = great_plainer_group
-			culture_group = midwestern_group
-			culture_group = intermountain_western
 			culture = oregonian
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+					tooltip = scotts_bluff_tt
+					OR = {
+						culture_group = southwestern
+						culture_group = midwestern_group
+						culture_group = intermountain_western
+					}
+				}
+			}
+			province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture_group = great_plainer_group
-			culture_group = midwestern_group
-			culture_group = intermountain_western
 			culture = oregonian
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+					tooltip = scotts_bluff_tt
+					OR = {
+						culture_group = southwestern
+						culture_group = midwestern_group
+						culture_group = intermountain_western
+					}
+				}
+			}
+			province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -8885,11 +9242,15 @@ grito = {
 
 	type = monument
 	build_trigger = {
-		OR = {
-			owner = {
-				technology_group = mesoamerican
-			}
-			culture_group = occidental_mexican
+		custom_trigger_tooltip = {
+			tooltip = mexican_groups_tt
+				OR = {
+					culture_group = occidental_mexican
+					#culture_group = pacific_mexican
+					culture_group = peninsular_mexican
+					culture_group = mazatlan_mexican
+					culture_group = altiplano_central
+				}
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -8900,22 +9261,30 @@ grito = {
 	}
 
 	can_use_modifiers_trigger = {
-		OR = {
-			owner = {
-				technology_group = mesoamerican
+			custom_trigger_tooltip = {
+				tooltip = mexican_groups_tt
+					OR = {
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = peninsular_mexican
+						culture_group = mazatlan_mexican
+						culture_group = altiplano_central
+					}
 			}
-			culture_group = occidental_mexican
-		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
-		OR = {
-			owner = {
-				technology_group = mesoamerican
+			custom_trigger_tooltip = {
+				tooltip = mexican_groups_tt
+					OR = {
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = peninsular_mexican
+						culture_group = mazatlan_mexican
+						culture_group = altiplano_central
+					}
 			}
-			culture_group = occidental_mexican
-		}
 		province_is_or_accepts_culture = yes
 	}
 
@@ -8961,8 +9330,8 @@ grito = {
 		}
 
 		country_modifiers = {
-			fire_damage = 0.05
-			recover_army_morale_speed = 0.05
+			church_loyalty_modifier = 0.05
+			recover_army_morale_speed = 0.10
 		}
 
 		on_upgraded = {
@@ -8986,7 +9355,8 @@ grito = {
 		}
 
 		country_modifiers = {
-			fire_damage = 0.05
+			church_loyalty_modifier = 0.10
+			church_privilege_slots = 1
 			recover_army_morale_speed = 0.10
 			prestige_from_land = 0.50
 		}
@@ -9018,8 +9388,9 @@ grito = {
 		}
 
 		country_modifiers = {
-			fire_damage = 0.10
-			recover_army_morale_speed = 0.10
+			church_loyalty_modifier = 0.10
+			church_privilege_slots = 2
+			recover_army_morale_speed = 0.15
 			prestige_from_land = 1
 		}
 
@@ -9044,7 +9415,7 @@ copper_canyon = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -9185,7 +9556,7 @@ grand_pre = {
 	build_cost = 0
 	can_be_moved = yes
 	move_days_per_unit_distance = 7
-	starting_tier = 0
+	starting_tier = 2
 
 	type = monument
 	build_trigger = {
@@ -9337,7 +9708,7 @@ la_citadelle = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 7
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
@@ -9407,7 +9778,7 @@ la_citadelle = {
 		}
 
 		province_modifiers = {
-			
+			local_defensiveness = 0.15
 		}
 		
 		area_modifier = {
@@ -9436,6 +9807,7 @@ la_citadelle = {
 		}
 
 		area_modifier = {
+			local_defensiveness = 0.20
 		}
 
 		country_modifiers = {
@@ -9461,7 +9833,7 @@ la_citadelle = {
 		}
 
 		area_modifier = {
-			
+			local_defensiveness = 0.25
 		}
 
 		country_modifiers = {
@@ -9926,13 +10298,20 @@ lawnfield = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture = ohioan
-			culture = clevelander
-			culture = alleghenite
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_ohioan
-					culture = great_laker_ohioan
+			custom_trigger_tooltip = {
+					tooltip = lawnfield_tt
+					OR = {
+						culture = ohioan
+						culture = clevelander
+						culture = alleghenite
+						culture = appalachian_ohioan
+						culture = great_laker_ohioan
+					}
+				}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = UTA_may_use_lawnfield
+					has_country_flag = can_use_lawnfield
 				}
 			}
 		}
@@ -9946,13 +10325,20 @@ lawnfield = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture = ohioan
-			culture = clevelander
-			culture = alleghenite
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_ohioan
-					culture = great_laker_ohioan
+			custom_trigger_tooltip = {
+					tooltip = lawnfield_tt
+					OR = {
+						culture = ohioan
+						culture = clevelander
+						culture = alleghenite
+						culture = appalachian_ohioan
+						culture = great_laker_ohioan
+					}
+				}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = UTA_may_use_lawnfield
+					has_country_flag = can_use_lawnfield
 				}
 			}
 		}
@@ -9961,13 +10347,20 @@ lawnfield = {
 
 	can_upgrade_trigger = {
 		OR = {
-			culture = ohioan
-			culture = clevelander
-			culture = alleghenite
-			hidden_trigger = {
-				OR = {
-					culture = appalachian_ohioan
-					culture = great_laker_ohioan
+			custom_trigger_tooltip = {
+					tooltip = lawnfield_tt
+					OR = {
+						culture = ohioan
+						culture = clevelander
+						culture = alleghenite
+						culture = appalachian_ohioan
+						culture = great_laker_ohioan
+					}
+				}
+			owner = {
+				custom_trigger_tooltip = {
+					tooltip = UTA_may_use_lawnfield
+					has_country_flag = can_use_lawnfield
 				}
 			}
 		}
@@ -10018,7 +10411,7 @@ lawnfield = {
 		country_modifiers = {
 			stability_cost_modifier = -0.10
 			advisor_pool = 1
-			adm_tech_cost_modifier = -0.05
+			#adm_tech_cost_modifier = -0.025
 		}
 
 		on_upgraded = {
@@ -10044,7 +10437,7 @@ lawnfield = {
 		country_modifiers = {
 			stability_cost_modifier = -0.20
 			advisor_pool = 1
-			adm_tech_cost_modifier = -0.075
+			#adm_tech_cost_modifier = -0.050
 		}
 
 		on_upgraded = {
@@ -10070,7 +10463,7 @@ lawnfield = {
 		country_modifiers = {
 			stability_cost_modifier = -0.25
 			advisor_pool = 2
-			technology_cost = -0.075
+			#adm_tech_cost_modifier = -0.050
 		}
 
 		on_upgraded = {
@@ -10093,11 +10486,20 @@ fort_ticonderoga = {
 	type = monument
 	build_trigger = {
 		OR = {
-			culture = vermonter
-			culture = new_yorker
-			culture = english
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = any_new_yorker_tt
+				OR = {
+					culture = new_yorker
+					culture = western_new_yorker
+					culture = knickerbocker
+					culture = long_islander
+					culture = adirondack
+				}
+			}
+					culture = vermonter
+					culture_group = british
+				}
+				province_is_or_accepts_culture = yes
 	}
 	on_built = {
 	}
@@ -10107,20 +10509,38 @@ fort_ticonderoga = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture = vermonter
-			culture = new_yorker
-			culture = english
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = any_new_yorker_tt
+				OR = {
+					culture = new_yorker
+					culture = western_new_yorker
+					culture = knickerbocker
+					culture = long_islander
+					culture = adirondack
+				}
+			}
+					culture = vermonter
+					culture_group = british
+				}
+				province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture = vermonter
-			culture = new_yorker
-			culture = english
-		}
-		province_is_or_accepts_culture = yes
+			custom_trigger_tooltip = {
+				tooltip = any_new_yorker_tt
+				OR = {
+					culture = new_yorker
+					culture = western_new_yorker
+					culture = knickerbocker
+					culture = long_islander
+					culture = adirondack
+				}
+			}
+					culture = vermonter
+					culture_group = british
+				}
+				province_is_or_accepts_culture = yes
 	}
 
 	keep_trigger = {
@@ -10433,15 +10853,15 @@ greenfield_village = {
 		}
 
 		province_modifiers = {
-			
+			allowed_num_of_buildings = 1
 		}
 		
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			production_efficiency = 0.10
-			idea_cost = -0.025
+			production_efficiency = 0.05
+			
 		}
 
 		on_upgraded = {
@@ -10458,15 +10878,16 @@ greenfield_village = {
 		}
 
 		province_modifiers = {
-			
+			allowed_num_of_manufactories = 1
+			allowed_num_of_buildings = 2
 		}
 
 		area_modifier = {
 		}
 
 		country_modifiers = {
-			production_efficiency = 0.10
-			idea_cost = -0.05
+			production_efficiency = 0.075
+			
 		}
 
 		on_upgraded = {
@@ -10483,18 +10904,36 @@ greenfield_village = {
 		}
 
 		province_modifiers = {
+			allowed_num_of_manufactories = 2
+			allowed_num_of_buildings = 2
 		}
 
 		area_modifier = {
-			
 		}
 
 		country_modifiers = {
-			production_efficiency = 0.20
-			idea_cost = -0.075
+			production_efficiency = 0.10
 		}
 
 		on_upgraded = {
+			custom_tooltip = greenfield_tt
+			hidden_effect = {
+				2575 = {
+					add_province_triggered_modifier = industrial_fervor
+				}
+				2572 = {
+					add_province_triggered_modifier = industrial_fervor
+				}
+				3105 = {
+					add_province_triggered_modifier = industrial_fervor
+				}
+				2574 = {
+					add_province_triggered_modifier = industrial_fervor
+				}
+				3106 = {
+					add_province_triggered_modifier = industrial_fervor
+				}
+			}
 		}
 	}
 }
@@ -10513,7 +10952,17 @@ st_paul = {
 
 	type = monument
 	build_trigger = {
-			religion_group = christian
+		OR = {
+			culture_group = midwestern_group
+			custom_trigger_tooltip = {
+				tooltip = any_catholic_tt
+				OR = {
+					religion = catholic
+					religion = s_catholic
+					religion = austral_catholic
+				}
+			}
+		}
 			has_owner_religion = yes
 	}
 	on_built = {
@@ -10523,13 +10972,33 @@ st_paul = {
 	}
 
 	can_use_modifiers_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		OR = {
+			culture_group = midwestern_group
+			custom_trigger_tooltip = {
+				tooltip = any_catholic_tt
+				OR = {
+					religion = catholic
+					religion = s_catholic
+					religion = austral_catholic
+				}
+			}
+		}
+			has_owner_religion = yes
 	}
 
 	can_upgrade_trigger = {
-		religion_group = christian
-		has_owner_religion = yes
+		OR = {
+			culture_group = midwestern_group
+			custom_trigger_tooltip = {
+				tooltip = any_catholic_tt
+				OR = {
+					religion = catholic
+					religion = s_catholic
+					religion = austral_catholic
+				}
+			}
+		}
+			has_owner_religion = yes
 	}
 
 	keep_trigger = {
@@ -10658,12 +11127,31 @@ royal_exhibition = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 7
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
 			culture_group = british
 		}
 		province_is_or_accepts_culture = yes
@@ -10676,7 +11164,26 @@ royal_exhibition = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
 			culture_group = british
 		}
 		province_is_or_accepts_culture = yes
@@ -10684,7 +11191,26 @@ royal_exhibition = {
 
 	can_upgrade_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
 			culture_group = british
 		}
 		province_is_or_accepts_culture = yes
@@ -10803,13 +11329,14 @@ port_arthur = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 7
-	starting_tier = 0
+	starting_tier = 1
 
 	type = monument
 	build_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			culture = tasmanian
 			culture_group = british
+			culture = dutch
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -10821,16 +11348,18 @@ port_arthur = {
 
 	can_use_modifiers_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			culture = tasmanian
 			culture_group = british
+			culture = dutch
 		}
 		province_is_or_accepts_culture = yes
 	}
 
 	can_upgrade_trigger = {
 		OR = {
-			culture_group = australian_new_zealander
+			culture = tasmanian
 			culture_group = british
+			culture = dutch
 		}
 		province_is_or_accepts_culture = yes
 	}
@@ -10936,6 +11465,4230 @@ port_arthur = {
 		}
 
 		on_upgraded = {
+		}
+	}
+}
+
+adelaide_vineyards = {
+	start = 1088 #Adelaide
+	date = 1444.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		
+	}
+
+	can_upgrade_trigger = {
+	
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			development_cost_in_primary_culture = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			trade_goods_size = 1.5
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			development_cost_in_primary_culture = -0.10
+		}
+
+		on_upgraded = {
+			1089 = {
+				add_province_triggered_modifier = adelaide_vineyards_modifier
+				}
+			3186 = {
+				add_province_triggered_modifier = adelaide_vineyards_modifier
+				}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 2
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			development_cost_in_primary_culture = -0.05
+			development_cost = -0.05
+		}
+
+		on_upgraded = {
+			1089 = {
+				add_province_triggered_modifier = adelaide_vineyards_2
+				}
+			3186 = {
+				add_province_triggered_modifier = adelaide_vineyards_2
+					}
+		}
+	}
+}
+
+cape_byron = {
+	start = 3165 #Ballina
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					OR = {
+						culture_group = west_australian_group
+						culture_group = australian_new_zealander
+						culture_group = australasian
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					OR = {
+						culture = cocos_islander
+						culture = christmas_islander
+						culture = norfolk_islander
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = aboriginal_torres_tt
+				OR = {
+					OR = {
+						culture_group = aboriginal_australian
+						culture = torres_strait_islander
+					}
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			range = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			range = 0.30
+			colonists = 1
+			may_explore = yes
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			range = 0.40
+			colonists = 1
+			may_explore = yes
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+parliament_house = {
+	start = 2017 #Canberra
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+		custom_trigger_tooltip = {
+			tooltip = australian_groups_tt
+			AND = {
+				OR = {
+					culture_group = australian_new_zealander
+					culture_group = west_australian_group
+					culture_group = australasian
+				}
+				NOT = {
+					culture = new_zealander
+				}
+				NOT = {
+					culture = south_islander
+				}
+				NOT = {
+					culture = north_islander
+				}
+		}
+		}
+		custom_trigger_tooltip = {
+			tooltip = australian_territory_cultures_tt
+			OR = {
+				culture = cocos_islander
+				culture = christmas_islander
+				culture = norfolk_islander
+			}
+		}
+		}
+			owner = {
+				government = republic
+			}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				AND = {
+					OR = {
+						culture_group = australian_new_zealander
+						culture_group = west_australian_group
+						culture_group = australasian
+					}
+					NOT = {
+						culture = new_zealander
+					}
+					NOT = {
+						culture = south_islander
+					}
+					NOT = {
+						culture = north_islander
+					}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					culture = cocos_islander
+					culture = christmas_islander
+					culture = norfolk_islander
+				}
+			}
+			}
+				owner = {
+					government = republic
+				}
+			province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				AND = {
+					OR = {
+						culture_group = australian_new_zealander
+						culture_group = west_australian_group
+						culture_group = australasian
+					}
+					NOT = {
+						culture = new_zealander
+					}
+					NOT = {
+						culture = south_islander
+					}
+					NOT = {
+						culture = north_islander
+					}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					culture = cocos_islander
+					culture = christmas_islander
+					culture = norfolk_islander
+				}
+			}
+			}
+				owner = {
+					government = republic
+				}
+			province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			reform_progress_growth = 0.05
+			governing_capacity_modifier = 0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			reform_progress_growth = 0.10
+			governing_capacity_modifier = 0.10
+			num_of_parliament_issues = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			reform_progress_growth = 0.15
+			governing_capacity_modifier = 0.15
+			num_of_parliament_issues = 2
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+shrine_of_remembrance = {
+	start = 2018 #Melbourne
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					culture_group = australian_new_zealander
+					culture_group = west_australian_group
+					culture_group = australasian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					culture = norfolk_islander
+					culture = christmas_islander
+					culture = cocos_islander
+				}
+			}
+			}
+			province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					culture_group = australian_new_zealander
+					culture_group = west_australian_group
+					culture_group = australasian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					culture = norfolk_islander
+					culture = christmas_islander
+					culture = cocos_islander
+				}
+			}
+			}
+			province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = australian_groups_tt
+				OR = {
+					culture_group = australian_new_zealander
+					culture_group = west_australian_group
+					culture_group = australasian
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = australian_territory_cultures_tt
+				OR = {
+					culture = norfolk_islander
+					culture = christmas_islander
+					culture = cocos_islander
+				}
+			}
+			}
+			province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			army_tradition_decay = -0.005
+			drill_gain_modifier = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			army_tradition_decay = -0.01
+			drill_gain_modifier = 0.25
+			reinforce_speed = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			army_tradition_decay = -0.02
+			drill_gain_modifier = 0.50
+			reinforce_speed = 0.20
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+cathedral_of_learning = {
+	start = 2589 #Pittsburgh / Allegheny
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		culture_group = appalachian
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		culture_group = appalachian
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		culture_group = appalachian
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			institution_spread_from_true_faith = 0.10
+			religious_unity = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			institution_spread_from_true_faith = 0.15
+			national_focus_years = -1
+			religious_unity = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_institution_spread = 0.20
+			national_focus_years = -2
+			religious_unity = 0.20
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+greenbrier = {
+	start = 3154 #On the border of Kanawha / Raleigh provinces
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = appalachian
+			culture_group = southerner
+			culture = marylander
+			}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = appalachian
+			culture_group = southerner
+			culture = marylander
+			}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = appalachian
+			culture_group = southerner
+			culture = marylander
+			}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			diplomatic_reputation = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			diplomatic_reputation = 1
+			improve_relation_modifier = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			diplomatic_reputation = 1
+			improve_relation_modifier = 0.15
+			diplomats = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+stone_mountain = {
+	start = 2510 # Atlanta
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			owner = {
+			has_reform = slave_state_reform
+			}
+			culture = us_georgian
+				hidden_trigger = {
+				culture = south_georgian
+			}
+		}
+		owner = {
+			NOT = { has_country_modifier = the_abolish_slavery_act }
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			owner = {
+			has_reform = slave_state_reform
+			}
+			culture = us_georgian
+				hidden_trigger = {
+				culture = south_georgian
+			}
+		}
+		owner = {
+			NOT = { has_country_modifier = the_abolish_slavery_act }
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+				owner = {
+				has_reform = slave_state_reform
+				}
+				culture = us_georgian
+					hidden_trigger = {
+					culture = south_georgian
+				}
+			}
+			owner = {
+				NOT = { has_country_modifier = the_abolish_slavery_act }
+			}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			war_exhaustion = -0.01
+			rival_border_fort_maintenance = -0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			war_exhaustion = -0.01
+			artillery_barrage_cost = -0.15
+			rival_border_fort_maintenance = -0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			war_exhaustion = -0.02
+			artillery_barrage_cost = -0.25
+			rival_border_fort_maintenance = -0.75
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+inner_harbor = {
+	start = 2531 #Baltimore
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 2
+
+	type = monument
+	build_trigger = {
+		custom_trigger_tooltip = {
+					tooltip = inner_harbor_tt
+					OR = {
+						culture = marylander
+						culture = west_marylander
+						culture = delmarvan
+						culture = southerner_marylander
+						culture = appalachian_marylander
+					}
+				}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+					tooltip = inner_harbor_tt
+					OR = {
+						culture = marylander
+						culture = west_marylander
+						culture = delmarvan
+						culture = southerner_marylander
+						culture = appalachian_marylander
+					}
+				}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+					tooltip = inner_harbor_tt
+					OR = {
+						culture = marylander
+						culture = west_marylander
+						culture = delmarvan
+						culture = southerner_marylander
+						culture = appalachian_marylander
+					}
+				}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			province_trade_power_modifier = 0.10
+			local_center_of_trade_upgrade_cost = -0.15
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_ship_trade_power = 0.10
+			ship_power_propagation = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			province_trade_power_modifier = 0.15
+			local_center_of_trade_upgrade_cost = -0.25
+		}
+
+		area_modifier = {
+			province_trade_power_modifier = 0.05
+		}
+
+		country_modifiers = {
+			global_ship_trade_power = 0.20
+			ship_power_propagation = 0.20
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			province_trade_power_modifier = 0.20
+			local_center_of_trade_upgrade_cost = -0.33
+		}
+
+		country_modifiers = {
+			global_ship_trade_power = 0.25
+			ship_power_propagation = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+vicksburg = {
+	start = 2502 # Hinds, Jackson, Vicksburg
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+	OR = {
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+		custom_trigger_tooltip = {
+					tooltip = midatlantic_new_england_tt
+					OR = {
+						culture_group = midatlantic_group
+						culture_group = new_england_group
+						culture = new_england_french
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = midwest_great_laker_tt
+					OR = {
+						culture_group = midwestern_group
+						culture_group = great_laker
+					}
+				}
+		custom_trigger_tooltip = {
+					tooltip = southerner_or_appalachian_tt
+					OR = {
+						culture_group = southerner
+						culture_group = appalachian
+						culture = cajun
+					}
+				}
+			}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			siege_ability = 0.025
+			reinforce_cost_modifier = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			siege_ability = 0.025
+			reinforce_cost_modifier = -0.15
+			assault_fort_cost_modifier = -0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			siege_ability = 0.05
+			reinforce_cost_modifier = -0.20
+			assault_fort_cost_modifier = -0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+churchill_downs = {
+	start = 2515 # Louisville
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = churchill_downs_tt
+			OR = {
+				culture = kentuckian
+				culture = southern_kentuckian
+				culture = us_transylvanian
+				culture = midwestern_kentuckian
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = churchill_downs_tt
+			OR = {
+				culture = kentuckian
+				culture = southern_kentuckian
+				culture = us_transylvanian
+				culture = midwestern_kentuckian
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = churchill_downs_tt
+			OR = {
+				culture = kentuckian
+				culture = southern_kentuckian
+				culture = us_transylvanian
+				culture = midwestern_kentuckian
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_tax_modifier = 0.10
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_cost = -0.10
+			cav_to_inf_ratio = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_tax_modifier = 0.20
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_cost = -0.15
+			cav_to_inf_ratio = 0.20
+			cavalry_power = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_tax_modifier = 0.30
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_cost = -0.20
+			cav_to_inf_ratio = 0.25
+			cavalry_power = 0.15
+			can_recruit_hussars = yes
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+monticello = {
+	start = 3149 # Charlottesville
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			placed_merchant_power_modifier = 1
+			center_of_trade_upgrade_cost = -0.10
+		}
+
+		on_upgraded = {
+
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			trade_goods_size = 2
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			placed_merchant_power_modifier = 1
+			center_of_trade_upgrade_cost = -0.20
+			reduced_trade_penalty_on_non_main_tradenode = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 3
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			placed_merchant_power_modifier = 1
+			center_of_trade_upgrade_cost = -0.20
+			reduced_trade_penalty_on_non_main_tradenode = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+mount_vernon = {
+	start = 2536 # Arlington
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture = west_virginian
+			custom_trigger_tooltip = {
+				tooltip = monticello_tt
+				OR = {
+					culture = virginian
+					culture = northern_virginian
+					culture = appalachian_virginian
+					culture = midatlantic_virginian
+				}
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			yearly_government_power = 0.5
+			monarch_lifespan = 0.05
+			all_estate_loyalty_equilibrium = 0.05
+		}
+
+		on_upgraded = {
+			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			trade_goods_size = 2
+			local_build_cost = -0.10
+			local_build_time = -0.10
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			yearly_government_power = 0.75
+			monarch_lifespan = 0.10
+			all_estate_loyalty_equilibrium = 0.10
+		}
+
+		on_upgraded = {
+			custom_tooltip = mount_vernon_tt
+			hidden_effect = {
+				3148 = {
+					add_province_triggered_modifier = vernon_upgrade
+				}
+				2535 = {
+					add_province_triggered_modifier = vernon_upgrade
+				}
+				2533 = {
+					add_province_triggered_modifier = vernon_upgrade
+				}
+				2534 = {
+					add_province_triggered_modifier = vernon_upgrade
+				}
+				2537 = {
+					add_province_triggered_modifier = vernon_upgrade
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			trade_goods_size = 3
+			local_build_cost = -0.20
+			local_build_time = -0.20
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			yearly_government_power = 1
+			monarch_lifespan = 0.15
+			all_estate_loyalty_equilibrium = 0.10
+			no_stability_loss_on_monarch_death = yes
+		}
+
+		on_upgraded = {
+			custom_tooltip = mount_vernon2_tt
+			hidden_effect = {
+				3148 = {
+					add_province_triggered_modifier = vernon_upgrade2
+				}
+				2535 = {
+					add_province_triggered_modifier = vernon_upgrade2
+				}
+				2533 = {
+					add_province_triggered_modifier = vernon_upgrade2
+				}
+				2534 = {
+					add_province_triggered_modifier = vernon_upgrade2
+				}
+				2537 = {
+					add_province_triggered_modifier = vernon_upgrade2
+				}
+			}
+		}
+	}
+}
+
+dodge_city_monument = {
+	start = 1008 # Ford, Dodge City
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = southwestern
+			culture_group = intermountain_western
+			}
+		OR = {
+			has_owner_culture = yes
+				owner = {
+					primary_culture = kansan
+				}
+			}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = southwestern
+			culture_group = intermountain_western
+			}
+		OR = {
+			has_owner_culture = yes
+				owner = {
+					primary_culture = kansan
+				}
+			}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = southwestern
+			culture_group = intermountain_western
+			}
+		OR = {
+			has_owner_culture = yes
+				owner = {
+					primary_culture = kansan
+				}
+			}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_flanking = 0.25
+			manpower_in_culture_group_provinces = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_flanking = 0.50
+			manpower_in_culture_group_provinces = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			cavalry_flanking = 0.50
+			has_banners = yes
+			manpower_in_culture_group_provinces = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+totem_poles_monument = {
+	start = 3042 # Haida Gwaii
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = yes
+	move_days_per_unit_distance = 1
+	starting_tier = 2
+
+	type = monument
+	build_trigger = {
+		#OR = {
+			owner = {
+				OR = {
+					technology_group = high_american
+					religion = totemism
+					culture_group = arctic_canadian
+					culture = navajo
+					culture = haida
+				}
+			}
+			# culture_group = native_american
+		#}
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		#OR = {
+			owner = {
+				OR = {
+					technology_group = high_american
+					religion = totemism
+					culture_group = arctic_canadian
+					culture = navajo
+					culture = haida
+				}
+			}
+			# culture_group = native_american
+		#}
+	}
+
+	can_upgrade_trigger = {
+		#OR = {
+			owner = {
+				OR = {
+					technology_group = high_american
+					religion = totemism
+					culture_group = arctic_canadian
+					culture = navajo
+					culture = haida
+				}
+			}
+			# culture_group = native_american
+		#}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_heathen_missionary_strength = 0.01
+			warscore_cost_vs_other_religion = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_heathen_missionary_strength = 0.02
+			warscore_cost_vs_other_religion = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_heathen_missionary_strength = 0.03
+			warscore_cost_vs_other_religion = -0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+fremantle = {
+	start = 1084 # Perth
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = west_australian_group
+			culture = aus_western_australian
+			culture_group = british
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = west_australian_group
+			culture = aus_western_australian
+			culture_group = british
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = west_australian_group
+			culture = aus_western_australian
+			culture_group = british
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_unrest = -1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_unrest = -1
+			war_exhaustion = -0.01
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_unrest = -2
+			war_exhaustion = -0.02
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+taos_pueblo = {
+	start = 4863 # Taos
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = occidental_mexican
+			culture = new_mexican
+			culture = pueblo
+			OR = { 
+				owner = {
+					technology_group = high_american
+					religion = totemism
+					primary_culture = navajo
+			}
+		}
+	}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = occidental_mexican
+			culture = new_mexican
+			culture = pueblo
+			OR = { 
+				owner = {
+					technology_group = high_american
+					religion = totemism
+					primary_culture = navajo
+			}
+		}
+	}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = occidental_mexican
+			culture = new_mexican
+			culture = pueblo
+			OR = { 
+				owner = {
+					technology_group = high_american
+					religion = totemism
+					primary_culture = navajo
+			}
+		}
+	}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			culture_conversion_cost = -0.10
+			promote_culture_cost = -0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			culture_conversion_cost = -0.15
+			promote_culture_cost = -0.50
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			culture_conversion_cost = -0.20
+			promote_culture_cost = -0.75
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+terrace_hill = {
+	start = 2553 # Des Moines
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		culture = iowan
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		culture = iowan
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		culture = iowan
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			parliament_backing_chance = 0.025
+			max_possible_parliament_seats = 2
+			num_of_parliament_issues = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			parliament_backing_chance = 0.050
+			max_possible_parliament_seats = 4
+			num_of_parliament_issues = 2
+			can_revoke_parliament_seats = yes
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			parliament_backing_chance = 0.075
+			max_possible_parliament_seats = 6
+			num_of_parliament_issues = 3
+			can_revoke_parliament_seats = yes
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+larnach_castle = {
+	start = 4650 # Otago, Dunedin
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = new_zealand_cultures_tt
+				OR = {
+					culture = new_zealander
+					culture = south_islander
+					culture = north_islander
+				}
+			}
+			culture = new_south_welsh
+			}
+			province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = new_zealand_cultures_tt
+				OR = {
+					culture = new_zealander
+					culture = south_islander
+					culture = north_islander
+				}
+			}
+			culture = new_south_welsh
+			}
+			province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = new_zealand_cultures_tt
+				OR = {
+					culture = new_zealander
+					culture = south_islander
+					culture = north_islander
+				}
+			}
+			culture = new_south_welsh
+			}
+			province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			interest = -0.10
+			inflation_reduction = 0.02
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			interest = -0.25
+			inflation_reduction = 0.03
+			great_project_upgrade_cost = -0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			interest = -0.50
+			inflation_reduction = 0.05
+			great_project_upgrade_cost = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+de_ulua = {
+	start = 862 # Veracruz
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture = veracruzian
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture = veracruzian
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture = veracruzian
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_own_coast_naval_combat_bonus = 1
+			local_defensiveness = 0.15
+			block_slave_raid = yes
+			blockade_force_required = 0.5
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			naval_maintenance_modifier = -0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_own_coast_naval_combat_bonus = 1
+			blockade_force_required = 0.5
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.15
+			block_slave_raid = yes
+		}
+
+		country_modifiers = {
+			naval_maintenance_modifier = -0.15
+			global_sailors_modifier = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_own_coast_naval_combat_bonus = 1
+			blockade_force_required = 1
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+			block_slave_raid = yes
+		}
+
+		country_modifiers = {
+			naval_maintenance_modifier = -0.20
+			global_sailors_modifier = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+
+acapulco = {
+	start = 858 # Guess where?
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = mazatlan_mexican
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = mazatlan_mexican
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = mazatlan_mexican
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			trade_value_modifier = 0.1
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_tariffs = 0.10
+			treasure_fleet_income = 0.05
+			range = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			trade_value_modifier = 0.15
+		}
+
+		country_modifiers = {
+			global_tariffs = 0.15
+			treasure_fleet_income = 0.10
+			range = 0.15
+		}
+
+		on_upgraded = {
+			858 = {
+				if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			trade_value_modifier = 0.20
+		}
+
+		country_modifiers = {
+			global_tariffs = 0.20
+			treasure_fleet_income = 0.15
+			range = 0.20
+		}
+
+		on_upgraded = {
+			858 = {
+				if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+}
+
+# darien_gap_monument = {
+	# start = 2819 # Darien
+	# date = 1444.01.01 #1716.01.01
+	# time = {
+		# months = 0
+	# }
+
+	# build_cost = 0
+	# can_be_moved = no
+	# move_days_per_unit_distance = 1
+	# starting_tier = 2
+
+	# type = monument
+	# build_trigger = {
+	# }
+	# on_built = {
+	# }
+	
+	# on_destroyed = {
+	# }
+
+	# can_use_modifiers_trigger = {
+	# }
+
+	# can_upgrade_trigger = {
+	# }
+
+	# keep_trigger = {
+	# }
+
+	# tier_0 = {
+		# upgrade_time = {
+			# months = 0
+		# }
+
+		# cost_to_upgrade = {
+			# factor = 0
+		# }
+
+		# province_modifiers = {
+			# local_hostile_movement_speed = -0.20
+			# local_friendly_movement_speed = -0.20
+			# attrition = 2
+			# local_defensiveness = 0.10
+			# max_attrition = 5
+		# }
+
+		# area_modifier = {
+		# }
+
+		# country_modifiers = {
+		# }
+
+		# on_upgraded = {
+		# }
+	# }
+
+	# tier_1 = {
+		# upgrade_time = {
+			# months = 120
+		# }
+
+		# cost_to_upgrade = {
+			# factor = 1000
+		# }
+
+		# province_modifiers = {
+			# local_hostile_movement_speed = -0.20
+			# local_friendly_movement_speed = -0.15
+			# attrition = 2
+			# local_defensiveness = 0.10
+			# max_attrition = 5
+		# }
+		
+		# area_modifier = {
+		# }
+
+		# country_modifiers = {
+			
+		# }
+
+		# on_upgraded = {
+		# }
+	# }
+
+	# tier_2 = {
+		# upgrade_time = {
+			# months = 240
+		# }
+
+		# cost_to_upgrade = {
+			# factor = 2500
+		# }
+
+		# province_modifiers = {
+			# local_hostile_movement_speed = -0.35
+			# local_friendly_movement_speed = -0.10
+			# attrition = 2
+			# local_defensiveness = 0.15
+			# max_attrition = 5
+		# }
+
+		# area_modifier = {
+		# }
+
+		# country_modifiers = {
+			# land_attrition = -0.10
+		# }
+
+		# on_upgraded = {
+		# }
+	# }
+
+	# tier_3 = {
+		# upgrade_time = {
+			# months = 480
+		# }
+
+		# cost_to_upgrade = {
+			# factor = 5000
+		# }
+
+		# province_modifiers = {
+			# local_hostile_movement_speed = -0.50
+			# local_friendly_movement_speed = -0.10
+			# attrition = 3
+			# local_defensiveness = 0.20
+			# max_attrition = 5
+		# }
+
+		# area_modifier = {
+			
+		# }
+
+		# country_modifiers = {
+			# max_hostile_attrition = 1
+			# land_attrition = -0.10
+		# }
+		
+		# on_upgraded = {
+		# }
+	# }
+# }
+
+la_antigua = {
+	start = 2653 # Guatemala
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 7
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+			culture = chiapan
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = mexican_groups_tt
+					owner = {
+						OR = {
+							culture_group = mazatlan_mexican
+							culture_group = occidental_mexican
+							#culture_group = pacific_mexican
+							culture_group = altiplano_central
+							culture_group = peninsular_mexican
+						}
+					}
+				}
+				owner = { government_rank = 3 }
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+			culture = chiapan
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = mexican_groups_tt
+					OR = {
+						culture_group = mazatlan_mexican
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = altiplano_central
+						culture_group = peninsular_mexican
+					}
+				}
+				owner = { government_rank = 3 }
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+			culture = chiapan
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = mexican_groups_tt
+					OR = {
+						culture_group = mazatlan_mexican
+						culture_group = occidental_mexican
+						#culture_group = pacific_mexican
+						culture_group = altiplano_central
+						culture_group = peninsular_mexican
+					}
+				}
+				owner = { government_rank = 3 }
+			}
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_colonial_growth = 10
+			development_cost_in_primary_culture = -0.025
+			monthly_splendor = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_colonial_growth = 15
+			development_cost_in_primary_culture = -0.075
+			monthly_splendor = 0.75
+		}
+
+		on_upgraded = {
+			2653 = {
+				if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			global_colonial_growth = 15
+			development_cost_in_primary_culture = -0.10
+			monthly_splendor = 1
+		}
+
+		on_upgraded = {
+			2653 = {
+				if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 3 }
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+}
+
+portobelo_san_lorenzo = {
+	start = 835 # Panama
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = central_american_group
+			culture_group = iberian
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_own_coast_naval_combat_bonus = 1
+			local_defensiveness = 0.15
+			block_slave_raid = yes
+			blockade_force_required = 0.5
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			naval_tradition_from_trade = 0.1
+			global_own_trade_power = 0.10
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_own_coast_naval_combat_bonus = 1
+			blockade_force_required = 0.5
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.15
+			block_slave_raid = yes
+		}
+
+		country_modifiers = {
+			naval_tradition_from_trade = 0.20
+			leader_naval_manuever = 1
+			global_own_trade_power = 0.15
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			#local_own_coast_naval_combat_bonus = 1
+			blockade_force_required = 1
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+			#block_slave_raid = yes
+		}
+
+		country_modifiers = {
+			naval_tradition_from_trade = 0.30
+			leader_naval_manuever = 1
+			global_own_trade_power = 0.20
+		}
+
+		on_upgraded = {
+			#central_america_region = {
+			#	limit = {
+			#		owned_by = ROOT
+			#	}
+			#	add_province_triggered_modifier = CAM_fortifications
+			#}
+			owner = {
+			country_event = {
+				id = CAMflavor.1
+				tooltip = CAMflavor.1.tt
+			}
+		}
+		}
+	}
+}
+
+taputapuatea = {
+	start = 1987 # Raiatea
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+		
+		area_modifier = {
+		}
+
+		country_modifiers = {
+			may_explore = yes
+			missionaries = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_missionary_strength = 0.01
+		}
+
+		country_modifiers = {
+			may_explore = yes
+			missionaries = 1
+			colonists = 1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_missionary_strength = 0.02
+		}
+
+		country_modifiers = {
+			may_explore = yes
+			missionaries = 1
+			colonists = 1
+		}
+
+		on_upgraded = {
+			
+		}
+	}
+}
+
+levuka = {
+	start = 4901 # Ovalau
+	date = 1444.01.01 #1716.01.01
+	time = {
+		months = 0
+	}
+
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+
+	type = monument
+	build_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+	on_built = {
+	}
+	
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			culture_group = micronesian-pacific_islander
+			culture_group = pacific
+		}
+		province_is_or_accepts_culture = yes
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.05
+		}
+		
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+			trade_range_modifier = 0.15
+		}
+
+		on_upgraded = {
+			4901 = {
+				center_of_trade = 1
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_development_cost = -0.10
+		}
+
+
+		country_modifiers = {
+			trade_range_modifier = 0.25
+			development_cost_in_primary_culture = -0.05
+		}
+
+		on_upgraded = {
+			4901 = {
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					center_of_trade = 1
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+			local_development_cost = -0.10
+		}
+
+		country_modifiers = {
+			trade_range_modifier = 0.33
+			development_cost_in_primary_culture = -0.10
+		}
+
+		on_upgraded = {
+			4901 = {
+				if = {
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
+					}
+					center_of_trade = 1
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+			}
 		}
 	}
 }

@@ -106,6 +106,7 @@ country_decisions = {
 			#NOT = { tag = ACD }
 			NOT = { tag = AUS }
 			NOT = { tag = ENG }
+			NOT = { tag = GBR }
 			#technology_group = north_american
 			OR = {
 				AND = {
@@ -118,7 +119,7 @@ country_decisions = {
 				culture_group = appalachian
 				#culture_group = alaskan_group
 				culture_group = southerner
-				culture_group = great_plainer_group
+				#culture_group = great_plainer_group
 				culture_group = intermountain_western
 				culture_group = midatlantic_group
 				culture_group = midwestern_group
@@ -157,6 +158,7 @@ country_decisions = {
 				primary_culture = panamanian
 				primary_culture = baja_californian
 				primary_culture = south_baja_californian
+				primary_culture = united_baja_californian
 				# Pacific Islander, inc. associated north_american
 				primary_culture = hawaiian
 				primary_culture = guamanian
@@ -467,7 +469,7 @@ country_decisions = {
 							province_group = yukon_provincegroup
 							superregion = central_america_superregion
 							superregion = oceania_superregion
-							region = moluccas_region
+							region = philippines_region
 						}
 					}
 				}
@@ -538,6 +540,7 @@ country_decisions = {
 			owns_core_province = 2585 # Philadelphia
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

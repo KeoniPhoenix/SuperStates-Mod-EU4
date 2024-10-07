@@ -10,9 +10,9 @@ historical_rival = MIC
 1443.1.3 = {
 	monarch = {
 		name = "Edward Tiffin"
-		adm = 4
-		dip = 5
-		mil = 5
+		adm = 3
+		dip = 3
+		mil = 2
 	}
 }
 

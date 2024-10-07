@@ -7,7 +7,7 @@ culture = washingtonian
 religion = s_protestant
 capital = "Port Orchard"
 is_city = yes #1100
-trade_goods = naval_supplies
+trade_goods = fish
 hre = no
 base_tax = 4
 base_production = 2
@@ -15,9 +15,9 @@ base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 
-# 1399.1.1 = {
-	# fort_15th = yes 
-# }
+1399.1.1 = {
+	fort_15th = yes 
+}
 
 1528.1.1 = {
 	religion = s_methodist

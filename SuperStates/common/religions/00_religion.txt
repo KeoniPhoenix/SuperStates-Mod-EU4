@@ -320,6 +320,8 @@ christian = {
 
 		allowed_center_conversion = {
 			catholic
+			s_protestant
+			austral_protestant
 		}
 		country = {
 			development_cost = -0.1
@@ -848,20 +850,20 @@ christian = {
 	
 	austral_catholic = {
 		color = { 204 204 0 }
-		icon = 1
+		icon = 37
 	
 		allowed_conversion = {
 			austral_protestant
 			anglican
 		}
 		country = {
-			defensiveness = 0.25
-			development_cost = -0.1
+			tolerance_heretic = 2
+			same_religion_advisor_cost = -0.15
 		}
 		
 		country_as_secondary = {
 			diplomatic_reputation = 1
-			advisor_pool = 1
+			same_religion_advisor_cost = -0.15
 		}
 		
 		on_convert = {
@@ -887,7 +889,7 @@ christian = {
 	
 	s_catholic = {
 		color = { 179 179 102 }
-		icon = 1
+		icon = 35
 		
 		allowed_conversion = {
 			#catholic
@@ -897,12 +899,12 @@ christian = {
 			s_baptist
 		}
 		country = {
-			development_cost = -0.1
+			same_religion_advisor_cost = -0.15
 			tolerance_heretic = 2
 		}
 		country_as_secondary = {
 			diplomatic_reputation = 1
-			advisor_pool = 1
+			same_religion_advisor_cost = -0.15
 		}
 		#hre_religion = yes
 
@@ -929,7 +931,7 @@ christian = {
 	
 	austral_protestant = {
 		color = { 0 179 255 }
-		icon = 2
+		icon = 38
 
 		allowed_conversion = {
 			austral_catholic
@@ -937,12 +939,14 @@ christian = {
 		}
 		
 		country = {
-			manpower_recovery_speed = 0.1
 			global_tax_modifier = 0.1
+			diplomatic_reputation = 1
+			church_loyalty_modifier = 0.1
 		}
 		
 		country_as_secondary = {
-			 war_exhaustion = -0.1
+			diplomatic_reputation = 1
+			global_tax_modifier = 0.1
 		}
 		
 		on_convert = {
@@ -978,7 +982,7 @@ christian = {
 	
 	s_protestant = {
 		color = { 0 255 203 }
-		icon = 2
+		icon = 36
 
 		allowed_conversion = {
 			s_catholic
@@ -988,7 +992,8 @@ christian = {
 		}
 		country = {
 			global_tax_modifier = 0.1
-			innovativeness_gain = 0.25
+			innovativeness_gain = 0.10
+			church_loyalty_modifier = 0.1
 		}
 		
 		country_as_secondary = {
@@ -1026,12 +1031,34 @@ christian = {
 		heretic = { CAMERONIST CAVIEZELIST HESTONIST }
 	}
 	mormon = {
-		color = { 153 51 153 }
+		color = { 195  104  228 }
 		icon = 30
+
+		allowed_center_conversion = {
+			s_protestant
+			s_methodist
+			s_lutheran
+			s_baptist
+			protestant
+			reformed
+			catholic
+			s_catholic
+			austral_catholic
+			austral_protestant
+			anglican
+			animism
+			hinduism
+			shinto
+			buddhism
+			totemism
+			shamanism
+			tengri_pagan_reformed
+			inti
+		}
 		
 		country = {
 			defensiveness = 0.15
-			tolerance_own = 1
+			tolerance_own = 3
 		}
 		country_as_secondary = {
 			leader_siege = 1
@@ -1055,21 +1082,22 @@ christian = {
 			local_missionary_strength = -0.02
 		}
 		
-		heretic = { BICKERTONITES WOOLLEYITES JOHNSONITES DESMONDITES GODBEITES FELIZIANS }
+		heretic = { BICKERTONITES WOOLLEYITES JOHNSONITES DESMONDITES GODBEITES FELIZIANS STRANGITES }
 		
-		holy_sites = { 952 2579 2586 2597 2669 }
+		holy_sites = { 952 2586 2597 2669 3275 }
 
 		blessings = {
 			mormon_theodemocracy_blessing
-			resist_the_invaders_blessing
+			#resist_the_invaders_blessing
 			temple_constructions_blessing
 			mission_to_the_gentiles_blessing
 			nauvoo_legion_blessing
+			translated_book_of_mormon_blessing
 		}
 		
 		will_get_center = { #Refered to even for initial CoR Spawn
 			any_owned_province = {
-				s_can_have_center_of_reformation_trigger = {
+				can_have_mormon_center_of_reformation_trigger = {
 					RELIGION = mormon
 				}
 			}
@@ -1146,6 +1174,19 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
+
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						s_can_have_center_of_reformation_trigger = {
+							RELIGION = s_lutheran
+						}
+					}
+					change_religion = s_lutheran
+					add_reform_center = s_lutheran
+				}
+			}
+			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
 		}
 		
 		heretic = { EIELSENIAN LAESTADIAN RENEWALIAN }
@@ -1222,6 +1263,19 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
+
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						s_can_have_center_of_reformation_trigger = {
+							RELIGION = s_methodist
+						}
+					}
+					change_religion = s_methodist
+					add_reform_center = s_methodist
+				}
+			}
+			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
 		}
 		
 		
@@ -1280,6 +1334,19 @@ christian = {
 				name = "conversion_zeal"
 				duration = 3650
 			}
+
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						s_can_have_center_of_reformation_trigger = {
+							RELIGION = s_baptist
+						}
+					}
+					change_religion = s_baptist
+					add_reform_center = s_baptist
+				}
+			}
+			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
 		}
 		
 		heretic = { PHELPSIANS ROBERTSONITES FALWELLIANS }
@@ -1304,6 +1371,7 @@ christian = {
 		country = {
 			tolerance_own = 3
 			stability_cost_modifier = -0.10
+			yearly_corruption = -0.05
 		}
 		
 		country_as_secondary = {
@@ -1341,6 +1409,10 @@ christian = {
 			}
 		}
 		
+		province = {
+			local_missionary_strength = -0.02
+		}
+
 		heretic = { MENNONITE BRETHREN HUTTERITE }
 		
 		date = 1600.1.1

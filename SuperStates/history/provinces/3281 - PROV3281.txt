@@ -4,7 +4,7 @@ owner = NYS
 controller = NYS
 add_core = NYS
 add_core = NYC
-add_core = NJY
+#add_core = NJY
 # add_permanent_claim = NJY
 culture = knickerbocker
 religion = s_catholic
@@ -15,6 +15,7 @@ base_tax = 4
 base_production = 3
 base_manpower = 3
 is_city = yes #47950
+#fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

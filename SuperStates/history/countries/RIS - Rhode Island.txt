@@ -9,9 +9,9 @@ historical_rival = MSS
 1443.1.3 = {
 	monarch = {
 		name = "Nicholas Cooke"
-		adm = 5
-		dip = 3
-		mil = 5
+		adm = 4
+		dip = 4
+		mil = 3
 	}
 }
 

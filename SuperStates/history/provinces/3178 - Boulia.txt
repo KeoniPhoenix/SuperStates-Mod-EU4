@@ -3,6 +3,7 @@
 owner = QLD
 controller = QLD
 add_core = QLD
+add_core = CQL
 culture = queenslander
 religion = austral_protestant
 capital = "Boulia"

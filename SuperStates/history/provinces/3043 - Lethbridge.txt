@@ -3,11 +3,12 @@
 owner = ABR
 controller = ABR
 add_core = ABR
+add_core = BFF
 culture = albertan
 religion = s_protestant
 capital = "Lethbridge" 
 is_city = yes #9680
-trade_goods = grain
+trade_goods = wool
 hre = no 
 base_tax = 5
 base_production = 3

@@ -17,9 +17,9 @@ is_city = yes #5140
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1399.1.1 = {
-	fort_15th = yes 
-}
+# 1399.1.1 = {
+	# fort_15th = yes 
+# }
 
 1528.1.1 = {
 	religion = s_methodist

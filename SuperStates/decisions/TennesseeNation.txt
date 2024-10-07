@@ -10,10 +10,21 @@ country_decisions = {
 			NOT = { tag = USA }
 			NOT = { tag = APL }
 			OR = {
-				tag = NCK
+				tag = WTN
 				tag = FKL
-				primary_culture = mountaineer
+					AND = {
+						primary_culture = mountaineer
+						OR = {
+							capital_scope = {
+								area = tennessee_area
+							}
+							capital_scope = {
+								area = east_tennessee_area
+							}
+						}
+					}
 				primary_culture = tennessean
+				primary_culture = west_tennessean
 				primary_culture = midwestern_tennessean
 				primary_culture = appalachian_tennessean
 			}
@@ -28,9 +39,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = tennessee_area
-				province_id = 2521
-				province_id = 2520
-				province_id = 3147
+				area = east_tennessee_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -52,6 +61,7 @@ country_decisions = {
 			owns_core_province = 2520 # Knoxville
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
@@ -59,6 +69,36 @@ country_decisions = {
 			add_prestige = 10
 			change_tag = TNN
 			TNN = {
+				add_government_reform = grand_divisions_reform
+				hidden_effect = {
+					if = {
+						limit = {
+							was_tag = FKL
+						}
+						change_country_color = {
+							country = FKL
+						}
+						set_country_flag = has_overriden_color_flag
+					}
+					if = {
+						limit = {
+							was_tag = WTN
+						}
+						change_country_color = {
+							country = WTN
+						}
+						set_country_flag = has_overriden_color_flag
+					}
+					if = {
+						limit = {
+							was_tag = NCK
+						}
+						change_country_color = {
+							country = NCK
+						}
+						set_country_flag = has_overriden_color_flag
+					}
+				}
 			if = {
 					limit = {
 					NOT = { government_rank = 2 }
@@ -71,15 +111,11 @@ country_decisions = {
 				}
 				add_permanent_claim = TNN
 			}
-			if = {
+			east_tennessee_area = {
 				limit = {
-					NOT = { owns = 2521 }
-					NOT = { owns = 1810 }
-					NOT = { is_core = 3063 }
-					NOT = { is_core = 1810 }
+					NOT = { owned_by = ROOT }
 				}
-				2521 = { add_permanent_claim = TNN }
-				3147 = { add_permanent_claim = TNN }
+				add_permanent_claim = TNN
 			}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap

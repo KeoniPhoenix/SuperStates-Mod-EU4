@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = virgin_islander_culture
+		}
 		any_owned_province = {
 			area = east_virgin_islands_area
 			is_capital = no
@@ -69,6 +72,83 @@ country_event = {
 	
 	option = {
 		name = "BritishVirginIslandsFlavor.1opta"
+		set_country_flag = virgin_islander_culture
+		every_owned_province = {
+			limit = {
+				area = east_virgin_islands_area
+				is_capital = no
+			}
+			change_culture = virgin_islander
+			add_core = BVI
+		}
+	}
+}
+
+#BVI Event for USVI
+country_event = {
+	id = BritishVirginIslandsFlavor.2
+	title = "BritishVirginIslandsFlavor.1t"
+	desc = "BritishVirginIslandsFlavor.1d"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		NOT = {
+			has_country_flag = virgin_islander_culture
+		}
+		any_owned_province = {
+			area = east_virgin_islands_area
+			is_capital = no
+			owned_by = ROOT
+		}
+		east_virgin_islands_area = {
+			NOT = { is_core = BVI }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		
+		modifier = {
+			factor = 0.5
+			stability = -1
+		}
+		modifier = {
+			factor = 0.5
+			east_virgin_islands_area = {
+				type = all
+				has_owner_accepted_culture = no
+			}
+		}
+		modifier = {
+			factor = 0.5
+			east_virgin_islands_area = {
+				type = all
+				has_owner_religion = no
+			}
+		}
+		modifier = {
+			factor = 4
+			east_virgin_islands_area = {
+				type = all
+				is_core = ROOT
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				area = east_virgin_islands_area 
+				development = 35
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_any_disaster = yes
+		}
+	}
+	
+	option = {
+		name = "BritishVirginIslandsFlavor.1opta"
+		set_country_flag = virgin_islander_culture
 		every_owned_province = {
 			limit = {
 				area = east_virgin_islands_area

@@ -1,0 +1,52 @@
+aus_internal = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+
+	aus_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				culture_group = australian_new_zealander
+				culture_group = west_australian_group
+				region = east_australia_region
+				region = west_australia_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				AND = {
+					culture_group = australian_new_zealander
+					culture_group = west_australian_group
+					NOT = {
+						culture = new_zealander
+						culture = south_islander
+						culture = north_islander
+					}
+				}
+			}
+			west_australia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_australia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = FlavorAUS.1000
+			}
+			custom_tooltip = FlavorAUS.1000a.tt
+			custom_tooltip = flavorAUS.1000a.tt2
+		}
+	}
+}

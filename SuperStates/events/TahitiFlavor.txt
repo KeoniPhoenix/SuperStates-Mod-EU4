@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = tahitian_culture
+		}
 		1244 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -142,6 +145,7 @@ country_event = {
 	
 	option = {
 		name = "TahitianFlavor.1opta"
+		set_country_flag = tahitian_culture
 		1244 = { 
 			change_culture = tahitian
 			add_core = THT

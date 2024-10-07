@@ -8,9 +8,9 @@ capital = 2527 # Columbia
 1443.1.3 = {
 	monarch = {
 		name = "William Moultrie"
-		adm = 4
-		dip = 2
-		mil = 3
+		adm = 3
+		dip = 3
+		mil = 5
 	}
 }
 

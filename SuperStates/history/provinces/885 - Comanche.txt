@@ -3,6 +3,7 @@
 owner = JLC
 controller = JLC
 add_core = JLC
+add_core = COT
 culture = jaliscan
 religion = s_catholic
 capital = "Colotlán"

@@ -1,0 +1,187 @@
+##########################
+#
+#  Written by:
+#  goik
+#
+##########################
+
+namespace = flavorWIS
+
+country_event = { #Culture
+	id = flavorWIS.1000
+	title = "flavorWIS.1000t"
+	desc = "flavorWIS.1000d"
+	picture = CULTURE_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #Yes to Milwaukee Capital
+		name = "flavorWIS.1000opta"
+			trigger = {
+			owns = 2558
+				NOT = {
+					capital = 2558
+				}
+			OR = {
+				culture_group = great_laker
+				num_of_owned_provinces_with = {
+					value = 7
+					OR = {
+						culture = chicagoan
+						culture = great_laker_wisconsinite
+					}
+				}
+			}
+		}
+			if = {
+				limit = {
+					NOT = {
+						2558 = {
+							is_capital = yes
+						}
+					}
+				}
+				set_capital = 2558
+			}
+			2558 = {
+				add_base_tax = 2
+				add_base_production = 2
+			}
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = great_laker_wisconsinite
+					}
+				}
+				change_primary_culture = great_laker_wisconsinite
+			}
+			custom_tooltip = flavorWIS.1000a.tt
+			change_country_color = {
+				color = {
+					247 168 27 # Milwaukee yellow
+				}
+			}
+			set_country_flag = has_overriden_color_flag
+			hidden_effect = {
+				set_ruler_culture = great_laker_wisconsinite
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					set_heir_culture = great_laker_wisconsinite
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						OR = {
+							consort_culture = wisconsinite
+							consort_culture = chicagoan
+						}
+					}
+					set_consort_culture = great_laker_wisconsinite
+				}
+				remove_accepted_culture = chicagoan
+				remove_accepted_culture = wisconsinite
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						OR = {
+							culture = chicagoan
+							culture = wisconsinite
+						}
+					}
+					change_culture = great_laker_wisconsinite
+				}
+			}
+			ai_chance = {
+				factor = 90
+			}
+		}
+
+
+	option = { #No to Milwaukee Capital
+		name = "flavorWIS.1000optb"
+		trigger = {
+			OR = {
+				culture_group = great_laker
+				num_of_owned_provinces_with = {
+					value = 7
+					OR = {
+						culture = chicagoan
+						culture = great_laker_wisconsinite
+					}
+				}
+			}
+			NOT = {
+				2558 = {
+					is_capital = yes
+				}
+			}
+		}
+		capital_scope = {
+			add_base_tax = 2
+			add_base_production = 2
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = great_laker_wisconsinite
+				}
+			}
+			change_primary_culture = great_laker_wisconsinite
+		}
+		change_country_color = {
+			color = {
+				247 168 27 # Milwaukee yellow
+			}
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorWIS.1000a.tt
+		hidden_effect = {
+			set_ruler_culture = great_laker_wisconsinite
+			if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = great_laker_wisconsinite
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = wisconsinite
+                        consort_culture = chicagoan
+                    }
+                }
+                set_consort_culture = great_laker_wisconsinite
+            }
+			remove_accepted_culture = chicagoan
+			remove_accepted_culture = wisconsinite
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = chicagoan
+						culture = wisconsinite
+					}
+				}
+				change_culture = great_laker_wisconsinite
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = flavorWIS.1000optc
+
+		add_prestige_or_monarch_power = { amount = 20}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

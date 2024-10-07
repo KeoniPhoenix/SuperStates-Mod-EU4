@@ -9,9 +9,9 @@ religion = austral_protestant
 capital = "Mount Gambier"
 trade_goods = fish
 hre = no
-base_tax = 3
-base_production = 2
-base_manpower = 1
+base_tax = 4
+base_production = 3
+base_manpower = 2
 is_city = yes #2710
 discovered_by = australian
 

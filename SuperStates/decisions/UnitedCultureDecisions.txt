@@ -1,0 +1,215 @@
+country_decisions = {
+
+	## Carolinia Culture decision in case you don't get the event
+		carolina_culture_decision = {
+			major = yes
+			potential = {
+				NOT = { has_mission = crl_culture }
+				NOT = { tag = NCR }
+				NOT = { tag = SCR }
+				NOT = { has_country_flag = carolina_culture_flag }
+				NOT = {
+					any_province = {
+						culture = carolinian
+					}
+				}
+				OR = {
+					tag = CRL
+					primary_culture = north_carolinian
+					primary_culture = south_carolinian
+					primary_culture = high_tider
+				}
+			}
+				provinces_to_highlight = {
+					culture = south_carolinian
+					culture = north_carolinian
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			allow = {
+				is_at_war = no
+				owns_all_provinces = {
+					culture = south_carolinian
+				}
+				owns_all_provinces = {
+					culture = north_carolinian
+				}
+			}
+			effect = {
+				set_country_flag = carolina_culture_flag
+				country_event = {
+					id = cultureflavor.2
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		## Dakotan Culture decision in case you don't get the event
+		dakotan_culture_decision = {
+			major = yes
+			potential = {
+				NOT = { has_country_flag = dakotan_culture_flag }
+				NOT = { has_mission = dak_culture }
+				NOT = { tag = SDK }
+				NOT = { tag = NDK }
+				OR = {
+					primary_culture = south_dakotan
+					primary_culture = north_dakotan
+				}
+				NOT = {
+					any_province = {
+						culture = us_dakotan
+					}
+				}
+			}
+				provinces_to_highlight = {
+					culture = north_dakotan
+					culture = south_dakotan
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			allow = {
+				is_at_war = no
+				owns_all_provinces = {
+					culture = north_dakotan
+				}
+				owns_all_provinces = {
+					culture = south_dakotan
+				}
+			}
+			effect = {
+				set_country_flag = dakotan_culture_flag
+				country_event = {
+					id = cultureflavor.1
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		## Mexico Valley culture in case you don't get the event
+		mexico_valley_culture_decision = {
+			major = yes
+			potential = {
+				NOT = { has_country_flag = mexico_valley_culture_flag }
+				tag = CMX
+			}
+			provinces_to_highlight = {
+					culture = mexican_districter
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			allow = {
+				is_at_war = no
+				owns_all_provinces = {
+					culture = mexican_districter
+				}
+				owns_all_provinces = {
+					area = mexico_area
+				}
+			}
+			effect = {
+				set_country_flag = mexico_valley_culture_flag
+				country_event = {
+					id = cultureflavor.3
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		## Baja California culture in case you don't get the decision
+		baja_californian_culture_decision = {
+			major = yes
+			potential = {
+				NOT = { has_country_flag = baja_culture_flag }
+				#NOT = { has_mission = bajacaliforniamissionhere }
+				NOT = {
+					any_province = {
+						culture = united_baja_californian
+					}
+				}
+				OR = {
+					tag = LBC
+					tag = BCN
+					tag = BCS
+				}
+			}
+				provinces_to_highlight = {
+					culture = baja_californian
+					culture = south_baja_californian
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			allow = {
+				is_at_war = no
+				owns_all_provinces = {
+					culture = baja_californian
+				}
+				owns_all_provinces = {
+					culture = south_baja_californian
+				}
+			}
+			effect = {
+				set_country_flag = baja_culture_flag
+				country_event = {
+					id = cultureflavor.5
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		## Yucatan culture in case you don't get the decision
+		yucatan_culture_decision = {
+			major = yes
+			potential = {
+				NOT = { has_country_flag = yucatan_culture_flag }
+				OR = {
+					primary_culture = quintanaroan
+					primary_culture = campechian
+					primary_culture = yucatanian
+					tag = YTN
+				}
+			}
+				provinces_to_highlight = {
+					culture = quintanaroan
+					culture = campechian
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+			allow = {
+				is_at_war = no
+				owns_all_provinces = {
+					culture = quintanaroan
+				}
+				owns_all_provinces = {
+					culture = campechian
+				}
+			}
+			effect = {
+				set_country_flag = yucatan_culture_flag
+				country_event = {
+					id = cultureflavor.4
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}

@@ -2,8 +2,9 @@
 
 graphical_culture = westerngfx
 
-#color = { 24  120  0 }
-color = { 68  62  143 }
+#color = { 101  174  0  } # 24  120  0
+#color = { 68  62  143 }
+color = { 159  150  255  }
 
 historical_idea_groups = {
 	plutocracy_ideas

@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 97  120  113 }
+color = { 192  192  192 } # 97  120  113
+# Silver for silver mining history
 
 historical_idea_groups = {
 	economic_ideas

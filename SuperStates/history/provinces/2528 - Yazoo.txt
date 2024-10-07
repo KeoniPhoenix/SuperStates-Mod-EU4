@@ -3,7 +3,7 @@
 owner = SCR
 controller = SCR
 add_core = SCR
-culture = south_carolinian
+culture = south_georgian
 religion = s_protestant
 capital = "Charleston"
 trade_goods = naval_supplies
@@ -11,6 +11,7 @@ hre = no
 base_tax = 4
 base_production = 3
 base_manpower = 4
+fort_15th = yes
 is_city = yes #12010
 discovered_by = north_american
 discovered_by = mesoamerican

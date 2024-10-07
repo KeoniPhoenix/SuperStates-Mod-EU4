@@ -479,6 +479,10 @@ estate_church = {
 		estate_church_fund_madrasas
 		estate_church_sponsor_waqf_payments
 		estate_church_muslim_integration
+		# SuperStates
+		estate_church_mormon_missions
+		estate_church_bastion_of_faith
+		estate_church_development_of_temples_mormon
 	}
 
 	agendas = {
