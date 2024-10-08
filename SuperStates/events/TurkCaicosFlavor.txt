@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = turk_caicos_islander_culture
+		}
 		483 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -60,6 +63,7 @@ country_event = {
 	
 	option = {
 		name = "TurkCaicosFlavor.1opta"
+		set_country_flag = turk_caicos_islander_culture
 		483 = {
 			change_culture = turk_caicos_islander
 			add_core = TCI

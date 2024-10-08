@@ -3,14 +3,15 @@
 owner = QLD
 controller = QLD
 add_core = QLD
+add_core = CQL
 culture = queenslander
 religion = austral_protestant
 capital = "Longreach"
 trade_goods = wool
 hre = no
-base_tax = 1
+base_tax = 2
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 is_city = yes #1000
 discovered_by = australian
 

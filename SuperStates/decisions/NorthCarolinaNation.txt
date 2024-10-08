@@ -1,0 +1,118 @@
+country_decisions = {
+
+	## NORTH CAROLINA
+		north_carolina_nation = {
+			major = yes
+			potential = {
+				NOT = { exists = ASE }
+				NOT = { exists = CRL }
+				NOT = { tag = USA }
+				NOT = { exists = CSA }
+				NOT = { exists = NAM }
+				NOT = { exists = NCR }
+				NOT = { tag = SCR }
+				NOT = { has_country_flag = formed_north_carolina_flag }
+				#technology_group = north_american
+				OR = {
+					primary_culture = north_carolinian
+					primary_culture = high_tider
+					AND = {
+						primary_culture = mountaineer
+						OR = {
+							capital_scope = {
+								area = pamlico_area
+							}
+							capital_scope = {
+								area = north_carolina_area
+							}
+							capital_scope = {
+								AND = {
+									area = blue_ridge_area
+									NOT = { province_id = 2538 }
+									NOT = { province_id = 3150 }
+								}
+							}
+						}
+					}
+				}
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						num_of_cities = 3
+					}
+				}
+			}
+			provinces_to_highlight = {
+				OR = {
+					area = north_carolina_area
+					area = pamlico_area
+					province_id = 2523
+					province_id = 3131
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			allow = {
+				owns_core_province = 2523
+				owns_core_province = 2524
+				owns_core_province = 2522
+				owns_core_province = 3132
+				num_of_owned_provinces_with = {
+					value = 3
+					area = north_carolina_area
+					is_core = root
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					area = pamlico_area
+					is_core = root
+				}
+			}
+			effect = {
+				on_change_tag_effect = yes
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 730
+				}
+				add_prestige = 10
+				change_tag = NCR
+				swap_non_generic_missions = yes
+				NCR = {
+					if = {
+						limit = {
+							NOT = { government_rank = 2 }
+						}
+					set_government_rank = 2
+					}
+					north_carolina_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NCR
+					}
+					3131 = {
+						if = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+								add_permanent_claim = NCR
+						}
+					}
+					pamlico_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NCR
+					}
+					set_country_flag = formed_north_carolina_flag
+				}
+				country_event = { id = ideagroups.1 } #Swap 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}

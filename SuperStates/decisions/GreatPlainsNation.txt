@@ -11,7 +11,17 @@ country_decisions = {
 			NOT = { has_country_flag = formed_midwest_flag }
 			NOT = { has_country_flag = formed_great_plains_flag }
 			OR = {
-				culture_group = great_plainer_group
+				primary_culture = us_dakotan
+				primary_culture = north_dakotan
+				primary_culture = south_dakotan
+				primary_culture = high_plainer
+				primary_culture = oklahoman
+				primary_culture = nebraskan
+				primary_culture = manitoban
+				primary_culture = minnesotan
+				primary_culture = east_montanan
+				primary_culture = north_coloradan
+				primary_culture = west_kansan
 				primary_culture = west_nebraskan
 				primary_culture = iowan
 				primary_culture = montanan
@@ -67,6 +77,7 @@ country_decisions = {
 				}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

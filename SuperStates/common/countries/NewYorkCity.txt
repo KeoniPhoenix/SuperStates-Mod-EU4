@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 103  86  255 }
+color = { 255  102  0 }
+# Dutch orange
 
 historical_idea_groups = {
 	offensive_ideas

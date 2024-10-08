@@ -49,7 +49,26 @@ country_decisions = {
 				duration = 730
 			}
 			add_prestige = 10
-			override_country_name = TRINIDAD_AND_TOBAGO
+			if = {
+				limit = {
+					OR = {
+						was_tag = TBG
+						primary_culture = tobagonian
+					}
+				}
+				override_country_name = TOBAGO_AND_TRINIDAD
+				add_accepted_culture_or_dip_power = { culture = trinidadian free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = TTB
+						primary_culture = trinidadian
+					}
+				}
+				override_country_name = TRINIDAD_AND_TOBAGO
+				add_accepted_culture_or_dip_power = { culture = tobagonian free = yes }
+			}
 			set_country_flag = formed_trinidad_tobago
 			ROOT = {
 				if = {

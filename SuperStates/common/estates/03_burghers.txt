@@ -302,6 +302,7 @@ estate_burghers = {
 		estate_burghers_ARB_oasis_development
 		estate_burghers_YEM_coffee_monopoly
 		estate_burghers_persian_rugs
+		estate_burghers_strong_duchies
 	}
 
 	agendas = {

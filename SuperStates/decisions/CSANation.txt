@@ -4,14 +4,15 @@ country_decisions = {
 	confederate_states_nation = {
 		major = yes
 		potential = { 
-			NOT = { exists = AZL }
+			#NOT = { exists = AZL }
 			NOT = { exists = CSA }
 			NOT = { tag = USA }
-			NOT = { tag = ASE }
+			#NOT = { tag = ASE }
 			NOT = { exists = NAM }
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
 			NOT = { tag = NFR }
+			NOT = { has_country_flag = formed_csa_flag }
 			#technology_group = north_american
 			OR = {
 				culture_group = southerner
@@ -26,12 +27,14 @@ country_decisions = {
 				primary_culture = cajun
 				primary_culture = high_plainer
 				primary_culture = miamian
+				primary_culture = caribbean_floridian
 				primary_culture = west_marylander
-				primary_culture = mountaineer
+				#primary_culture = mountaineer
 				primary_culture = oklahoman
 				primary_culture = appalachian_tennessean
 				primary_culture = appalachian_virginian
 				primary_culture = plains_texan
+				#primary_culture = nickajack
 				AND = {
 					primary_culture = west_virginian
 					accepted_culture = virginian
@@ -123,6 +126,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}
@@ -199,6 +203,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 5475
 			}
+			set_country_flag = formed_csa_flag 
 			add_prestige = 30
 			if = {
 				limit = {

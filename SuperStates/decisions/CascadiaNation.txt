@@ -101,6 +101,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			set_country_flag = formed_cascadia_flag
 			add_country_modifier = {
 				name = "centralization_modifier"

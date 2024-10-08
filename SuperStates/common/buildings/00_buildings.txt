@@ -1969,6 +1969,8 @@ plantations = {
 		tobacco
 		tea
 		cocoa
+		agave
+		#maple
 	}
 	onmap = yes
 	on_built = {
@@ -2050,6 +2052,9 @@ farm_estate = {
 		grain
 		livestock
 		wine
+		maize
+		#agave
+		maple
 	}
 	onmap = yes
 	on_built = {
@@ -2177,6 +2182,386 @@ furnace = {
 	}
 }
 
+# SuperStates manufactories
+
+# Building a distillery will convert agave, sugar, or grain/maize to tequila, rum, or whiskey respectively.
+distillery = {
+	manufactory = {
+		agave
+		sugar
+		grain
+		maize
+	}
+
+	build_trigger = {
+        base_production = 5
+		# Whiskey may only be made in Scotland, Ireland, America, Canada, or Japan if they chose to accept European trade.
+	OR = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = maize
+				}
+			}
+			OR = {
+				AND = {
+					region = japan_region
+					owner = {
+						has_country_flag = jap_chose_trade_with_west_flag
+					}
+				}
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+				superregion = america_superregion
+				superregion = canada_superregion
+			}
+		}
+		# Rum may only be made in the Caribbeans, Florida, Australia, Philippines, Maritimes, or South America
+		if = {
+			limit = {
+				trade_goods = sugar
+			}
+			OR = {
+				region = east_australia_region
+				region = west_australia_region
+				region = central_america_region
+				superregion = caribbean_superregion
+				region = maritimes_region
+				area = luzon_area
+				area = southern_luzon_area
+				area = mindanao_area
+				area = west_mindanao_area
+				area = visayas_area
+				area = palawan_area
+				province_group = florida_provincegroup
+				continent = south_america
+			}
+		}
+		# Tequila may only be made in Mexico, but Southwest America is included to represent mezcal.
+		if = {
+			limit = {
+				trade_goods = agave
+			}
+			OR = {
+				region = mexico_region
+				region = mexican_gulf_coast_region
+				region = costa_oeste_region
+				region = american_southwest_region
+				area = san_diego_area
+			}
+		}
+	}
+    }
+
+    # The building gets removed if the conditions are not met.
+    #keep_trigger = {
+	#	NOT = {
+	#		OR = {
+	#			trade_goods = whiskey
+	#			trade_goods = rum
+	#			trade_goods = tequila
+	#			trade_goods = agave
+	#			trade_goods = sugar
+	#			trade_goods = maize
+	#			trade_goods = grain
+	#		}
+	#	}
+    #}
+	onmap = no
+	show_separate = yes
+	on_built = {
+		if = { # American provinces will produce bourbon whiskey
+			limit = {
+				trade_goods = maize
+				superregion = america_superregion
+			}
+			add_permanent_province_modifier = {
+				name = bourbon_modifier
+				duration = -1  
+			}
+		}
+		if = { # Kentucky provinces will produce high quality bourbon
+			limit = {
+				#trade_goods = maize
+				province_group = kentucky_provincegroup
+			}
+			add_permanent_province_modifier = {
+				name = kentucky_bourbon
+				duration = -1  
+			}
+		}
+		if = { # Tennessee provinces will produce high quality bourbon
+			limit = {
+				#trade_goods = maize
+				province_group = tennessee_provincegroup
+			}
+			add_permanent_province_modifier = {
+				name = tn_bourbon
+				duration = -1  
+			}
+		}
+		if = { # Jalisco will produce high quality tequila
+			limit = {
+				area = jalisco_area
+			}
+			add_permanent_province_modifier = {
+				name = jalisco_tequila
+				duration = -1  
+			}
+		}
+		if = { # Caribbean provinces will produce high quality rum
+			limit = {
+				trade_goods = sugar
+				superregion = caribbean_superregion
+			}
+			add_permanent_province_modifier = {
+				name = caribbean_rum
+				duration = -1  
+			}
+		}
+		add_development_from_building = {
+			building = manufactory
+			type = production
+			value = 2
+		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				trade_goods = agave
+			}
+			change_trade_goods = tequila
+		}
+		if = {
+			limit = {
+				trade_goods = sugar
+			}
+			change_trade_goods = rum
+		}
+		if = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = maize
+				}
+			}
+			change_trade_goods = whiskey
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				trade_goods = whiskey
+			}
+			random_list = {
+				50 = { 
+					change_trade_goods = maize 
+					modifier = {
+						factor = 2
+						OR = {
+							has_province_modifier = bourbon_modifier
+							has_province_modifier = kentucky_bourbon
+							has_province_modifier = tn_bourbon
+					}
+					}
+				}
+				50 = { change_trade_goods = grain }
+			}
+		}
+		if = {
+			limit = {
+				trade_goods = tequila
+			}
+			change_trade_goods = agave
+		}
+		if = {
+			limit = {
+				trade_goods = rum
+			}
+			change_trade_goods = sugar
+		}
+		remove_development_from_building = {
+			building = manufactory 
+			type = production 
+			value = 2 
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				has_province_modifier = caribbean_rum
+			}
+			remove_province_modifier = caribbean_rum
+		}
+		if = {
+			limit = {
+				has_province_modifier = jalisco_tequila
+			}
+			remove_province_modifier = jalisco_tequila
+		}
+		if = {
+			limit = {
+				has_province_modifier = bourbon_modifier
+			}
+			remove_province_modifier = bourbon_modifier
+		}
+		if = {
+			limit = {
+				has_province_modifier = tn_bourbon
+			}
+			remove_province_modifier = tn_bourbon
+		}
+		if = {
+			limit = {
+				has_province_modifier = kentucky_bourbon
+			}
+			remove_province_modifier = kentucky_bourbon
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = -1
+		}
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# Building a cigar factory - or galera - will convert tobacco to cigars.
+cigar_factory = {
+	manufactory = {
+		tobacco
+	}
+
+	build_trigger = {
+        base_production = 5
+		# Cigars may only be made in Mexico, Central America, Cuba, Hispaniola, Brazil, and South Florida.
+		OR = {
+			superregion = central_america_superregion
+			province_group = cuba_provincegroup
+			province_group = hispaniola_provincegroup
+			region = brazil_region
+			area = south_florida_area
+			area = suncoast_area
+		}
+    }
+
+    # The building gets removed if the conditions are not met.
+   # keep_trigger = {
+		#OR = {
+		#	trade_goods = cigars
+		#	trade_goods = tobacco
+		#}
+   # }
+	onmap = no
+	show_separate = yes
+	on_built = {
+		if = { # American provinces will produce bourbon whiskey
+			limit = {
+				OR = {
+					province_group = cuba_provincegroup
+					province_id = 2545 # Miami
+					province_id = 2544 # Tampa
+					province_id = 3020 # Key West
+				}
+			}
+			add_permanent_province_modifier = {
+				name = cuban_cigars
+				duration = -1  
+			}
+		}
+		add_development_from_building = {
+			building = manufactory
+			type = production
+			value = 2
+		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = 1
+		}
+		if = {
+			limit = {
+				trade_goods = tobacco
+			}
+			change_trade_goods = cigars
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				trade_goods = cigars
+			}
+			change_trade_goods = tobacco
+		}
+		if = {
+			limit = {
+				has_province_modifier = cuban_cigars
+			}
+			remove_province_modifier = cuban_cigars
+		}
+		remove_development_from_building = {
+			building = manufactory 
+			type = production 
+			value = 2 
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = -1
+		}
+	}
+	on_obsolete = {
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 ramparts = {
 	manufactory = {
 		all
@@ -2257,6 +2642,11 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		maize
+		maple
+		rum
+		whiskey
+		tequila
 	}
 
 	modifier = {

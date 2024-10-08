@@ -1,0 +1,18 @@
+﻿l_english:
+ mormon_mission_title:0 "Send Mormon Mission"
+ mormon_mission_desc:0 "Request that [From.GetName] allows a Mormon mission, welcoming them into our faith."
+ mormon_mission_tooltip:0 "Offer to send a Mormon mission"
+ mormon_mission_dialog:0 "[This.GetName] requests that we allow their missionaries to visit [Root.GetName] and spread their religion. Do we accept?"
+ mormon_mission_alert_tooltip:0 "A request to receive a Mormon mission"
+
+ mormon_mission_2_title:0 "Send Mormon Mission"
+ mormon_mission_2_desc:0 "Request that [From.GetName] allows a Mormon mission, welcoming them into our faith."
+ mormon_mission_2_tooltip:0 "Offer to send a Mormon mission"
+ mormon_mission_2_dialog:0 "[This.GetName] requests that we allow their missionaries to visit [Root.GetName] and spread their religion. Do we accept?"
+ mormon_mission_2_alert_tooltip:0 "A request to receive a Mormon mission"
+ promote_vassal_to_grand_division:0 "Promote to Grand Division"
+ promote_vassal_to_grand_division_title:0 "Promote to Grand Division"
+ promote_vassal_to_grand_division_desc:0 "Do you wish to turn §Y[From.GetName]§! into a §YGrand Division§! subject?\n§YGrand Divisions§! are not automatically called into your wars and cannot be annexed. However, they provide us with additional Manpower and Sailors."
+ promote_vassal_to_grand_division_tooltip:0 "Promote a vassal to the status of a Grand Division and turn them into a Grand Division subject."
+ promote_vassal_to_grand_division_alert_tooltip:0 "An offer to promote us to an §YGrand Division§!"
+ promote_vassal_to_grand_division_dialog:0 "[This.GetName] offers us to become their Grand Division subject. This will grant us additional autonomy and we will no longer be called into wars automatically."

@@ -3,6 +3,7 @@
 owner = COA
 controller = COA
 add_core = COA
+add_core = LAG
 culture = coahuilan
 religion = s_catholic
 capital = "Torreón"

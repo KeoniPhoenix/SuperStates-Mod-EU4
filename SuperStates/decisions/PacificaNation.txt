@@ -101,6 +101,7 @@ country_decisions = {
 			owns_core_province = 944		#Los Angeles
 		}
 		effect = {
+			on_change_tag_effect = yes
 			set_country_flag = formed_pacifica_flag
 			add_country_modifier = {
 				name = "centralization_modifier"

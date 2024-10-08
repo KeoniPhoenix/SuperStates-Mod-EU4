@@ -3,7 +3,10 @@ wva_slot_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WVA
+		OR = {
+			tag = WVA
+			tag = WST
+		}
 	}
 	has_country_shield = yes
 
@@ -55,7 +58,7 @@ wva_slot_1 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 2
 				area = virginia_area
 			}
 		}
@@ -105,6 +108,98 @@ wva_slot_1 = {
 			factor = 50
 		}
 	}
+
+	wva_growing = {
+		icon = mission_the_governing_senate
+		required_missions = { wva_blue_waters }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_group = virginia_provincegroup
+				culture = virginian
+				culture = northern_virginian
+				culture = appalachian_virginian
+				culture = midatlantic_virginian
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = wva_growing_tt
+				NOT = {
+					any_country = {
+						NOT = { is_subject_of = ROOT }
+							any_owned_province = {
+								OR = {
+									culture = virginian
+									culture = northern_virginian
+									hidden_trigger = {
+										culture = midatlantic_virginian
+										culture = appalachian_virginian
+									}
+								}
+							}
+						}
+					}
+				}
+			virginia_provincegroup = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+			OR = {
+				VIR = {
+					is_subject_of = ROOT
+				}
+				NOT = { 
+					exists = VIR
+				}
+			}	
+		}
+		effect = {
+			if = {
+				limit = {
+					VIR = {
+						is_subject_of = ROOT
+					}
+				}
+				custom_tooltip = wva_vir_subject_yes_tt
+			}
+			else = {
+				custom_tooltip = wva_vir_subject_no_tt
+			}
+			tooltip = {
+				VIR = {
+					override_country_name = EAST_VIRGINIA
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						VIR = {
+							is_subject_of = ROOT
+						}
+					}
+					VIR = {
+						override_country_name = EAST_VIRGINIA
+						set_country_flag = has_overriden_name_flag
+					}
+				}
+			}
+			tooltip = {
+				country_event = {
+					id = flavorWVA.1
+				}
+			}
+			country_event = {
+				id = flavorWVA.1
+				tooltip = flavorWVA.1.tt
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
 }
 
 wva_slot_2 = {
@@ -112,7 +207,10 @@ wva_slot_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WVA
+		OR = {
+			tag = WVA
+			tag = WST
+		}
 	}
 	has_country_shield = yes
 
@@ -163,7 +261,7 @@ wva_slot_2 = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = nickajack_area
+				area = east_tennessee_area
 				area = tennessee_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -172,7 +270,7 @@ wva_slot_2 = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
 				OR = {
-					area = nickajack_area
+					area = east_tennessee_area
 					area = tennessee_area
 				}
 			}
@@ -202,9 +300,9 @@ wva_slot_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			blue_ridge_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = blue_ridge_area
 			}
 		}
 		effect = {
@@ -222,11 +320,19 @@ wva_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pamlico_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 75
 		}
 	}
+
 }
 
 wva_slot_3 = {
@@ -234,7 +340,10 @@ wva_slot_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WVA
+		OR = {
+			tag = WVA
+			tag = WST
+		}
 	}
 	has_country_shield = yes
 
@@ -399,7 +508,10 @@ wva_slot_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = WVA
+		OR = {
+			tag = WVA
+			tag = WST
+		}
 	}
 	has_country_shield = yes
 
@@ -479,21 +591,31 @@ wva_slot_5 = {
 			}
 		}
 		trigger = {
-			all_owned_province = {
+			monongahela_area = {
 				development = 12
+				owned_by = ROOT
+			}
+			2541 = {
+				development = 12
+				owned_by = ROOT
+			}
+			3011 = {
+				development = 12
+				owned_by = ROOT
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					owns_core_province = 2539
+					has_dlc = "Dharma"
 				}
 				2539 = {
 					center_of_trade = 1
 				}
 			}
 			else = {
-				add_dip_power = 75
+				add_dip_power = 100
 			}
 			monongahela_area = {
 				limit = {

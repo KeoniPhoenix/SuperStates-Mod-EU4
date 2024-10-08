@@ -1,0 +1,262 @@
+ken_internal = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KEN
+			tag = TRN
+		}
+	}
+	has_country_shield = yes
+
+	ken_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			province_group = kentucky_provincegroup
+		}
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = us_transylvanian
+						primary_culture = southern_kentuckian
+						culture_group = midwestern_group
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ken_has_unified_culture_tooltip
+						kentucky_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = kentuckian
+						}
+					}
+					primary_culture = us_transylvanian
+					primary_culture = southern_kentuckian
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = us_transylvanian
+						primary_culture = kentuckian
+						primary_culture = southern_kentuckian
+						culture_group = midwestern_group
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ken_has_unified_culture_tooltip
+						kentucky_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = kentuckian
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ken_has_unified_culture_tooltip_2
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = kentucky_provincegroup
+								OR = {
+									culture = us_transylvanian
+									culture = southern_kentuckian
+								}
+							}
+					}
+					custom_trigger_tooltip = {
+						tooltip = ken_has_unified_culture_tooltip_3
+							num_of_owned_provinces_with = {
+								value = 4
+								province_group = kentucky_provincegroup
+								culture_group = midwestern_group
+							}
+							OR = {
+								culture_group = midwestern_group
+								accepted_culture = midwestern_kentuckian
+								accepted_culture = missourian
+								accepted_culture = midwestern_tennessean
+								accepted_culture = little_egyptian
+								accepted_culture = ohioan
+								accepted_culture = illinoisan
+								accepted_culture = hoosier
+							}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ai = yes
+				}
+				is_at_war = no
+				NOT = { current_age = age_of_discovery }
+			}
+			else = {
+				2514 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = us_transylvanian
+						primary_culture = kentuckian
+						primary_culture = southern_kentuckian
+					}
+				}
+				custom_tooltip = ken_culture_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ken_shift_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorKEN.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = us_transylvanian
+						primary_culture = kentuckian
+						primary_culture = southern_kentuckian
+						culture_group = midwestern_group
+					}
+				}
+				custom_tooltip = ken_culture_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = ken_shift_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorKEN.1000
+					}
+				}
+				custom_tooltip = ken_shift_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 100
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to Tennesseean / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						kentucky_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = kentuckian
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+
+				else_if = { #If completed by converting culture - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						OR = {
+							primary_culture = southern_kentuckian
+							primary_culture = us_transylvanian
+							culture_group = midwestern_group
+						}
+					}
+					country_event = {
+						id = flavorKEN.1000 #Event moves your culture
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to kentuckian
+						kentucky_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = kentuckian
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+					#set_country_flag = ken_had_focus_event
+					#set_country_flag = midatlantic_focus
+					#clr_country_flag = appalachian_focus
+					#clr_country_flag = southerner_focus
+					#swap_non_generic_missions = yes
+
+				}
+				else_if = { #If completed by spreading culture - trigger event 
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = kentucky_provincegroup
+								OR = {
+									culture = us_transylvanian
+									culture = southern_kentuckian
+								}
+							}
+							AND = {
+								num_of_owned_provinces_with = {
+									value = 4
+									province_group = kentucky_provincegroup
+									culture_group = midwestern_group
+								}
+								OR = {
+									accepted_culture = missourian
+									accepted_culture = ohioan
+									accepted_culture = illinoisan
+									accepted_culture = little_egyptian
+									accepted_culture = midwestern_tennessean
+								}
+							}
+						}
+					}
+					country_event = {
+						id = flavorKEN.1000 #Event moves you to Great Laker/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 100
+					#set_country_flag = ken_had_focus_event
+					#set_country_flag = midatlantic_focus
+					#clr_country_flag = appalachian_focus
+					#clr_country_flag = southerner_focus
+					#swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}

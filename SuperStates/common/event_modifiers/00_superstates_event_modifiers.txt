@@ -123,6 +123,37 @@ connecticut_estuary_modifier = {
 	picture = "estuary_icon"
 }
 
+#Panama
+isthmus_of_panama_province_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+magdalena_river_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+sinu_river_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+usumacinta_river_estuary = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+coco_river_estuary = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+motagua_river_estuary = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
 #Commented modifiers below are from the default game and will not be changed but are listed for completeness.
 
 #Portland
@@ -405,9 +436,20 @@ amish_accepted = {
 	tolerance_heretic = 2
 }
 
+amish_integration = {
+	num_accepted_cultures = 1
+}
+
 amish_migration = {
 	local_development_cost = -0.10
 	local_culture_conversion_cost = 0.50 # Purposely positive
+	local_missionary_strength = -0.03 # Harder to convert
+}
+
+flipped_amish_modifier = {
+	missionaries = 1
+	missionary_maintenance_cost = -0.50
+	cb_on_religious_enemies = yes
 }
 
 #Affair
@@ -425,21 +467,99 @@ german_development = {
 	local_culture_conversion_cost = 0.50 # Purposely positive
 }
 
+texas_german_integration = {
+	num_accepted_cultures = 1
+}
+
+# Michigan / Detroit event
+
+mic_migrant_labor_temp = {
+	local_prosperity_growth = 0.50
+	local_state_maintenance_modifier = -0.25
+}
+
+mic_migrant_labor = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+}
+
+mic_migrant_labor_maltese = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+}
+
+mic_migrant_labor_maltese_gc = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+}
+
+mic_migrant_labor_maltese = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+	global_sailors_modifier = 0.10
+}
+
+mic_migrant_labor_muslim = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+	tolerance_heathen = 1
+}
+
+mic_migrant_labor_polish = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+	tolerance_heretic = 1
+}
+
+mic_migrant_labor_albanian = {
+	local_great_project_upgrade_cost = -0.10
+	local_production_efficiency = 0.20
+	num_accepted_cultures = 1
+}
+
+mic_local_tolerance_muslim = {
+	#local_religious_unity_contribution = 0.20
+	local_tolerance_of_heathens = 5
+}
+
+mic_local_tolerance_christian = {
+	#local_religious_unity_contribution = 0.20
+	local_tolerance_of_heretics = 5
+}
+
+mic_accept_maltese = {
+	num_accepted_cultures = 1
+}
+
+mic_accept_lebanese = {
+	num_accepted_cultures = 1
+}
+
+mic_accept_polish = {
+	num_accepted_cultures = 1
+}
+
+mic_accept_albanian = {
+	num_accepted_cultures = 1
+}
+
 #Florida
 cubans_returned = {
-	local_development_cost_modifier = -0.25
+	local_development_cost_modifier = -0.05
 	local_unrest = -2
 }
 
 cubans_resettled = {
-	local_state_maintenance_modifier = -0.50
-	local_tax_modifier = 0.20
 	local_unrest = 2
 }
 
 cubans_expelled = {
-	trade_goods_size_modifier = 0.35
+	trade_goods_size_modifier = 0.10
 	local_unrest = 2
+}
+
+cuban_integration = {
+	num_accepted_cultures = 1
 }
 
 flo_consolidate_florida_mission = {
@@ -483,3 +603,37 @@ cal_inno_silicon = {
 s_permanent_cardinal = {
 	papal_influence = 0.5
 }
+
+ # Bourbon
+ bourbon_modifier = {
+	trade_goods_size = 0.35
+ }
+
+ # Kentucky bourbon
+ kentucky_bourbon = {
+	trade_goods_size = 0.50
+ }
+
+ # Tennessee Bourbon
+ tn_bourbon = {
+	trade_goods_size = 0.50
+ }
+
+ cuban_cigars = {
+	trade_goods_size = 0.50
+ }
+
+ # Blue agave Jalisco tequila
+ jalisco_tequila = {
+	trade_goods_size = 0.50
+ }
+
+ # Caribbean rum
+ caribbean_rum = {
+	trade_goods_size = 0.35
+ }
+
+ # Vermont Maple
+ vermont_maple = {
+	trade_goods_size = 0.35
+ }

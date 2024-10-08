@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = trinidadian_culture
+		}
 		502 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "TrinidadFlavor.1opta"
+		set_country_flag = trinidadian_culture
 		502 = { 
 			change_culture = trinidadian
 			add_core = TTB

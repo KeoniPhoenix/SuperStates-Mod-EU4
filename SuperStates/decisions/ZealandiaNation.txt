@@ -52,6 +52,7 @@ aotearoa_nation = {
 			NOT = { exists = AOT }
 		}
 		effect = {
+			on_change_tag_effect = yes
 			change_tag = AOT
 			if = {
 				limit = {

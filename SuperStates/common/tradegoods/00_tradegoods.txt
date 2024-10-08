@@ -616,7 +616,7 @@ copper = {
 			NOT = { area = monongahela_area }
 			NOT = { area = shenandoah_area }
 			NOT = { area = hudson_valley_area }
-			NOT = { area = superior_area }
+			NOT = { area = upper_peninsula_area }
 			NOT = { area = upper_peninsula_area }
 			NOT = { area = green_bay_area }
 			NOT = { area = vermont_area }
@@ -660,7 +660,6 @@ copper = {
 				area = monongahela_area
 				area = shenandoah_area
 				area = hudson_valley_area
-				area = superior_area
 				area = upper_peninsula_area
 				area = green_bay_area
 				area = vermont_area
@@ -833,7 +832,6 @@ iron = {
 			NOT = { area = monongahela_area }
 			NOT = { area = shenandoah_area }
 			NOT = { area = hudson_valley_area }
-			NOT = { area = superior_area }
 			NOT = { area = upper_peninsula_area }
 			NOT = { area = green_bay_area }
 			NOT = { area = vermont_area }
@@ -2275,4 +2273,236 @@ cloves = {
 
 unknown = {
 	color = { 0.5 0.5 0.5 }
+}
+
+whiskey = {
+	color = { 0.65 0.55 0.25 }
+	modifier = {
+		years_of_nationalism = -2.5
+	}
+	province = {
+		allowed_num_of_buildings = 1
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+rum = {
+	color = { 0.95 0.95 0.55 }
+	modifier = {
+		native_assimilation = 0.50
+	}
+	province = {
+		allowed_num_of_buildings = 1
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+maple = {
+	color = { 0.5 0.3 0.0 }
+	modifier = {
+		diplomatic_upkeep = 1
+	}
+	province = {
+		local_production_efficiency = 0.1
+	}
+	chance = {
+		factor = 15
+
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { area = ontario_area }
+			NOT = { area = quebec_area }
+			NOT = { area = bois_francs_area }
+			NOT = { area = southwest_ontario_area }
+			NOT = { province_group = illinois_provincegroup }
+			NOT = { province_group = missouri_provincegroup }
+			NOT = { region = maritimes_region }
+			NOT = { province_group = new_york_provincegroup }
+			NOT = { region = new_england_region }
+			NOT = { region = great_lakes_region }
+			NOT = { region = appalachia_region }
+		}
+
+		modifier = {
+			factor = 2.5
+			is_random_new_world = no
+			OR = {
+				area = vermont_area
+				area = ontario_area
+				area = bois_francs_area
+				area = southwest_ontario_area
+				area = new_hampshire_area
+				area = maine_area
+				area = adirondack_area
+			}
+		}
+	}
+}
+
+agave = {
+	color = { 0.55 0.95 0.75 }
+	modifier = {
+		special_unit_forcelimit = 0.10
+	}
+	province = {
+		province_trade_power_modifier = 0.10
+	}
+	chance = {
+		factor = 15
+
+		modifier = {
+			factor = 0
+			is_random_new_world = no
+			NOT = { region = american_southwest_region }
+			NOT = { superregion = central_america_superregion }
+			NOT = { area = san_diego_area }
+			NOT = { superregion = caribbean_superregion }
+		}
+
+		modifier = {
+			factor = 2.5
+			is_random_new_world = no
+			OR = {
+				region = american_southwest_region
+				superregion = central_america_superregion
+			}
+			NOT = { area = jalisco_area }
+		}
+
+		modifier = {
+			factor = 3.5
+			is_random_new_world = no
+			area = jalisco_area
+		}
+	}
+}
+
+tequila = {
+	color = { 0.95 1 0.85 }
+	modifier = {
+		trade_efficiency = 0.05
+	}
+	province = {
+		allowed_num_of_buildings = 1
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+cigars = {
+	color = { 0.60 0.55 0.25 }
+	modifier = {
+		improve_relation_modifier = 0.10
+	}
+	province = {
+		province_trade_power_modifier = 0.20
+	}
+	chance = {
+		factor = 0
+	}
+}
+
+maize = {
+	color = { 0.75 0.70 0.25 }
+	modifier = {
+		global_manpower_modifier = 0.10
+	}
+	province = {
+		land_forcelimit = 0.5
+	}
+	chance = {
+		factor = 35
+		modifier = {
+			factor = 0
+			OR = {
+			area = newfoundland_area
+			region = east_siberia_region
+			region = west_siberia_region
+			region = russia_region
+			region = ural_region
+			superregion = canada_superregion
+			region = new_zealand_region
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_terrain = desert
+				has_terrain = glacier
+				has_terrain = coastline
+				has_climate = arctic
+				#NOT = { has_global_flag = global_maize_flag }
+			}
+		}
+		modifier = {
+			factor = 0.15
+			OR = {
+				has_terrain = mountain
+				has_terrain = coastal_desert
+				has_terrain = forest
+				has_terrain = woods
+				has_terrain = hills
+				has_terrain = jungle
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_terrain = highlands
+				has_terrain = marsh
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_climate = arid
+				has_climate = tropical
+				
+			}
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				has_terrain = drylands
+				has_terrain = savannah
+				has_terrain = steppe
+			}
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				region = poland_region
+				region = ruthenia_region
+				region = american_midwest_region
+				region = great_plains_region
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					has_increased_trade_goods_discovery = { trade_goods = maize }
+					colonial_parent = { has_increased_trade_goods_discovery = { trade_goods = maize } }
+				}
+			}
+		}
+	}
 }

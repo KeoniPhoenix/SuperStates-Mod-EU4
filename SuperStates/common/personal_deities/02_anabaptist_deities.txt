@@ -3,12 +3,12 @@
 
 doctrine_the_ban = {
 	# (Diplomatic - Stability)
-	global_unrest = -2
-	tolerance_heretic = 2
+	global_unrest = -1
+	culture_conversion_cost = -0.20
 	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 13
 	
 	ai_will_do = {
 		factor = 1
@@ -43,12 +43,12 @@ doctrine_the_ban = {
 
 doctrine_the_sword = {
 	#(Diplomatic)
-	diplomatic_reputation = 2
 	improve_relation_modifier = 0.30
+	stability_cost_to_declare_war = 1
 	#land_maintenance_modifier = 0.20 # This is meant to be higher maintenance.
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 14
 	
 	ai_will_do = {
 		factor = 1
@@ -79,7 +79,7 @@ doctrine_the_sword = {
 doctrine_breaking_of_bread = {
 	#(Economic - Growth)
 	development_cost = -0.10
-	build_cost = -0.15
+	build_cost = -0.10
 	
 	potential = { religion = anabaptist }
 	sprite = 15
@@ -102,7 +102,7 @@ doctrine_separation_from_evil = {
 	stability_cost_modifier = -0.10
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 16
 	
 	ai_will_do = {
 		factor = 1
@@ -124,7 +124,7 @@ doctrine_pastors_in_the_church = {
 	global_missionary_strength = 0.02
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 17
 	
 	ai_will_do = {
 		factor = 1
@@ -146,10 +146,10 @@ doctrine_pastors_in_the_church = {
 doctrine_baptism = {
 	# (Military - Defensive)
 	defensiveness = 0.20
-	global_manpower_modifier = 0.20
+	global_manpower_modifier = 0.15
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 18
 	
 	ai_will_do = {
 		factor = 1
@@ -168,11 +168,11 @@ doctrine_the_oath = {
 	# Administrative
 	idea_cost = -0.05
 	legitimacy = 1
-	republican_tradition = 0.33
+	republican_tradition = 0.30
 	devotion = 1
 	
 	potential = { religion = anabaptist }
-	sprite = 15
+	sprite = 19
 	
 	ai_will_do = {
 		factor = 1

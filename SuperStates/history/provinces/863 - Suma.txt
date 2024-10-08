@@ -3,6 +3,7 @@
 owner = VRZ
 controller = VRZ
 add_core = VRZ
+add_core = HUS
 culture = veracruzian
 religion = s_catholic
 capital = "Xalapa"

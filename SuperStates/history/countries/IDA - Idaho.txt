@@ -2,6 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = idahoan
+add_historical_friend = UTA
 religion = mormon
 capital = 976 # Boise
 

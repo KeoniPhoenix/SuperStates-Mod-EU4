@@ -7,7 +7,7 @@
 
 namespace = BelizeFlavor
 
-#Honduras Culture Event
+# Belize Culture Event
 country_event = {
 	id = BelizeFlavor.1
 	title = "BelizeFlavor.1t"
@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = belizean_culture
+		}
 		843 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -72,6 +75,7 @@ country_event = {
 	
 	option = {
 		name = "BelizeFlavor.1opta"
+		set_country_flag = belizean_culture
 		843 = { 
 			change_culture = belizean
 			add_core = BLZ

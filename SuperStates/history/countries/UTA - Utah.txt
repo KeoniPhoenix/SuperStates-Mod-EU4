@@ -2,6 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = utahn
+add_historical_friend = IDA
 religion = mormon
 capital = 952  # Salt Lake City
 

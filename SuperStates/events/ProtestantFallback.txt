@@ -1,0 +1,38 @@
+# Fire Reformation if it has not happened due to emptying Europe
+country_event = {
+	id = protestantfallback
+	title = "protestantfallback.title"
+	desc = "protestantfallback.desc"
+	picture = BIG_BOOK_eventPicture
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { is_religion_enabled = protestant }
+		NOT = { has_global_flag = reformation_started }
+		NOT = { has_reform = papacy_reform }
+		OR = {
+			technology_group = north_american
+			technology_group = oceanian
+			technology_group = mesoamerican
+			technology_group = australian
+			technology_group = western
+			technology_group = high_american
+		}
+		has_global_flag = emptied_europe
+		is_year = 1517
+	}
+	
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	option = {
+		name = "protestantfallback.1"
+		country_event = { # Fire Protestant Reformation
+			id = 2001
+		}
+	}
+}
+

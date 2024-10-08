@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = saint_pierrais_culture
+		}
 		4576 = {
 			is_city = yes
 			is_capital = no
@@ -79,6 +82,7 @@ country_event = {
 	
 	option = {
 		name = "StPierreFlavor.1opta"
+		set_country_flag = saint_pierrais_culture
 		4576 = {
 			change_culture = saint_pierrais
 			add_core = SPM

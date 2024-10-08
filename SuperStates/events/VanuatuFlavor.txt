@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = vanuatu_culture
+		}
 		1239 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -102,6 +105,7 @@ country_event = {
 	
 	option = {
 		name = "VanuatuFlavor.1opta"
+		set_country_flag = vanuatu_culture
 		1239 = { 
 			change_culture = ni-vanuatu
 			add_core = VAN

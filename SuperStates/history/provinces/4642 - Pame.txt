@@ -1,5 +1,8 @@
 #Hawke's Bay/Matau-a-MÄ?ui
 
+owner = TAK
+controller = TAK
+add_core = TAK
 culture = maori
 religion = animism
 capital = "Napier"

@@ -3,14 +3,15 @@
 owner = VCT
 controller = VCT
 add_core = VCT
-culture = victorian
+add_core = RIV
+culture = riverinan
 religion = austral_catholic
 capital = "Shepparton"
 trade_goods = grain
 hre = no
 base_tax = 3
 base_production = 2
-base_manpower = 2
+base_manpower = 3
 is_city = yes #6390
 discovered_by = australian
 

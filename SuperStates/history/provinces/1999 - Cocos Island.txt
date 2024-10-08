@@ -3,7 +3,7 @@
 owner = CCI
 controller = CCI
 add_core = CCI
-add_core = WAU
+#add_core = WAU
 culture = cocos_islander
 religion = sunni
 capital = "West Island"

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = montserratian_culture
+		}
 		4636 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "MontserratFlavor.1opta"
+		set_country_flag = montserratian_culture
 		4636 = {
 			change_culture = montserratian
 			add_core = MSR

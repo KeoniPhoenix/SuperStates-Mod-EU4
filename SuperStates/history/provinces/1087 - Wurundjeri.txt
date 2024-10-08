@@ -9,8 +9,8 @@ capital = "Geraldton"
 trade_goods = wool
 hre = no
 base_tax = 4
-base_production = 1
-base_manpower = 1
+base_production = 3
+base_manpower = 4
 is_city = yes #1280
 discovered_by = australian
 

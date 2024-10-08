@@ -65,6 +65,12 @@ country_decisions = {
 			}
 			clr_country_flag = controls_the_world
 			set_global_flag = world_was_controlled
+			set_global_flag = emptied_africa
+			set_global_flag = emptied_asia
+			set_global_flag = emptied_europe
+			set_global_flag = emptied_australia
+			set_global_flag = emptied_north_america
+			set_global_flag = emptied_south_america
 		}
 	}
 

@@ -7,6 +7,7 @@ culture = wisconsinite
 religion = s_protestant
 capital = "Baraboo"
 is_city = yes #1200
+fort_15th = yes
 trade_goods = livestock
 hre = no
 base_tax = 3

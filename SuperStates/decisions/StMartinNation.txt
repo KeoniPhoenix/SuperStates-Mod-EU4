@@ -4,7 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_saint_martin } #Only once
-			NOT = { exists = USM }
+			#NOT = { exists = USM }
 			NOT = { tag = WIS }
 			NOT = { tag = ANI }
 			NOT = { tag = USA }
@@ -44,13 +44,35 @@ country_decisions = {
 			owns_core_province = 3051 # Sint Marteen
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
 			}
 			add_prestige = 10
 			change_tag = USM
+			USM = {
 			set_country_flag = formed_saint_martin
+			if = {
+				limit = {
+					OR = {
+						was_tag = SNM
+						primary_culture = maartener
+					}
+				}
+				override_country_name = SINT_MAARTEN
+				add_accepted_culture_or_dip_power = { culture = martinois free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = STM
+						primary_culture = martinois
+					}
+				}
+				add_accepted_culture_or_dip_power = { culture = maartener free = yes }
+			}
+			}
 				#swap_non_generic_missions = yes
 				#country_event = { id = ideagroups.1 } #Swap
 		}

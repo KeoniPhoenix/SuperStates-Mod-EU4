@@ -9,9 +9,9 @@ historical_rival = ALM
 
 1443.1.3 = {
 	monarch = {
-		name = "William Ewen"
+		name = "Archibald Bulloch"
 		adm = 3
-		dip = 2
+		dip = 3
 		mil = 4
 	}
 }

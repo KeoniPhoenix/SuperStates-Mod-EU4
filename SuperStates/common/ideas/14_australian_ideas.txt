@@ -60,7 +60,12 @@ NSW_ideas = { # New South Wales
 	}
 
 	trigger = {
+		OR = {
 			tag = NSW
+			tag = NGL
+			tag = SYD
+			tag = ILW
+			}
 	}
 	free = yes		#will be added at load.
 
@@ -104,6 +109,7 @@ QLD_ideas = { # Queensland
 		OR = {
 			tag = QLD
 			tag = NQL
+			tag = CQL
 			}
 	}
 	free = yes		#will be added at load.
@@ -232,7 +238,10 @@ VCT_ideas = { # Victoria
 	}
 
 	trigger = {
+		OR = {
 			tag = VCT
+			tag = RIV
+			}
 	}
 	free = yes		#will be added at load.
 
@@ -277,6 +286,7 @@ WAU_ideas = { # Western Australia
 		OR = {
 			tag = WAU
 			tag = AAL
+			tag = DMP
 			}
 	}
 	free = yes		#will be added at load.
@@ -319,6 +329,7 @@ NTT_ideas = { # Northern Territory
 			OR = {
 				tag = NTT
 				tag = CTT
+				tag = CRP
 			}
 	}
 	free = yes		#will be added at load.
@@ -533,6 +544,8 @@ australian_ideas = { # Generic Australian state ideas
 		AND = {
 			OR = {
 				culture_group = australian_new_zealander
+				culture_group = west_australian_group
+				culture_group = australasian
 				capital_scope = { superregion = australia_superregion }
 			}
 			NOT = {

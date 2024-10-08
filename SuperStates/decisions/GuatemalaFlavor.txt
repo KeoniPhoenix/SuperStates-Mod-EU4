@@ -44,9 +44,7 @@ country_decisions = {
 		effect = {
 			add_treasury = -500
 			capital_scope = {
-				add_base_tax = -1
-				add_base_production = -1
-				add_base_manpower = -1
+				add_base_manpower = -2
 			}
 			random_owned_province = {
 				limit = {
@@ -56,9 +54,7 @@ country_decisions = {
 						base_manpower = 2
 					}
 				}
-				add_base_tax = -1
-				add_base_production = -1
-				add_base_manpower = -1
+				add_base_manpower = -2
 			}
 			843 = {
 				add_siberian_construction = 500

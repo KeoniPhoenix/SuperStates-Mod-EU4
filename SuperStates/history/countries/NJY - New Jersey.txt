@@ -8,9 +8,9 @@ capital = 2591 # Trenton
 1442.1.3 = {
 	monarch = {
 		name = "William Livingston"
-		adm = 3
-		dip = 3
-		mil = 5
+		adm = 4
+		dip = 5
+		mil = 2
 	}
 }
 

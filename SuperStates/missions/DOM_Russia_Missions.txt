@@ -3676,7 +3676,10 @@ rus_russian_disaster = {
 			OR = {
 				num_of_owned_provinces_with = {
 					base_production = 6
-					trade_goods = grain
+					OR = {
+						trade_goods = grain
+						trade_goods = maize
+					}
 					value = 10
 				}
 				has_reform = vodka_of_the_crown_reform

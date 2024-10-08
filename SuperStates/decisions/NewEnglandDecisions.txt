@@ -5,8 +5,18 @@ country_decisions = {
 		major = yes
 		potential = {
 			culture_group = new_england_group
-			any_neighbor_country = {
-				culture_group = new_french
+			# any_neighbor_country = {
+			# 	culture_group = new_french
+			# }
+			OR = {
+				any_owned_province = {
+					OR = {
+						culture_group = new_french
+						culture_group = french
+					}
+				}
+
+				
 			}
 		}
 		allow = {
@@ -95,9 +105,9 @@ country_decisions = {
 		potential = {
 			culture_group = new_england_group
 			OR = {
-				any_neighbor_country = {
-					culture_group = new_french
-				}
+				# any_neighbor_country = {
+				# 	culture_group = new_french
+				# }
 				overlord = {
 					culture_group = new_french
 				}
@@ -105,28 +115,33 @@ country_decisions = {
 					value = 5
 					culture_group = new_french
 					NOT = { culture = root }
-					region = central_canada_region
+					OR = {
+						region = central_canada_region
+						region = maritimes_region
+						region = new_england_region
+					}
 				}
+				has_country_flag = promoting_new_french
 			}
 		}
 		allow = {
 			NOT = { has_country_flag = converted_to_new_england_french }
 			stability = -1
-			adm_power = 600
+			adm_power = 200
 
 		}
 		effect = {
-			add_adm_power = -600
-			add_stability = -2
+			add_adm_power = -200
+			add_stability = -1
 			ROOT = {
 				change_primary_culture = new_england_french
 				capital_scope = {
 					change_culture = new_england_french
 				}
-				every_owned_province = { 
+				every_owned_province = {
 					limit = {
 						is_core = ROOT
-						culture_group = new_england_group
+						culture = ROOT
 					}
 					change_culture = new_england_french
 				}

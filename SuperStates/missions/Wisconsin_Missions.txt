@@ -77,6 +77,219 @@ wis_conquest = {
 		}
 	}
 
+	wis_culture = {
+		icon = purely_for_commerce
+		required_missions = { wis_chicago }
+		position = 4
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = wisconsinite
+						primary_culture = chicagoan
+						primary_culture = great_laker_wisconsinite
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = wis_has_unified_culture_tooltip
+						2558 = {
+							owned_by = ROOT
+							culture = wisconsinite
+							religion = ROOT
+						}
+					}
+					primary_culture = chicagoan
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = wisconsinite
+						primary_culture = chicagoan
+						primary_culture = great_laker_wisconsinite
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = wis_has_unified_culture_tooltip_2
+						AND = {
+							2558 = {
+								owned_by = ROOT
+								OR = {
+									culture = chicagoan
+									culture = great_laker_wisconsinite
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 7
+								OR = {
+									culture = chicagoan
+									culture = great_laker_wisconsinite
+								}
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = wis_has_unified_culture_tooltip
+						2558 = {
+							owned_by = ROOT
+							culture = wisconsinite
+							religion = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				2558 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = wisconsinite
+						primary_culture = chicagoan
+						primary_culture = great_laker_wisconsinite
+					}
+				}
+				custom_tooltip = wis_wisconsinite_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = wis_chicagoan_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorWIS.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = wisconsinite
+						primary_culture = chicagoan
+						primary_culture = great_laker_wisconsinite
+					}
+				}
+				custom_tooltip = wis_wisconsinite_tooltip
+				tooltip = {
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = wis_chicagoan_tooltip
+				tooltip = {
+					country_event = {
+						id = flavorWIS.1000
+					}
+				}
+				custom_tooltip = wis_chicagoan_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 150
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to wisconsinite - buffs to your capital / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						2558 = {
+							owned_by = ROOT
+							religion = ROOT
+							culture = wisconsinite
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+
+				else_if = { #If completed by spreading Chicagoan - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						primary_culture = chicagoan
+					}
+					country_event = {
+						id = flavorWIS.1000 #Event moves you to Great Laker group and moves capital to Chicago along with +2 tax and prod
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to wisconsinite - buffs to your capital 
+						2558 = {
+							owned_by = ROOT
+							religion = ROOT
+							culture = wisconsinite
+						}
+					}
+					capital_scope = {
+						add_base_tax = 2
+						add_base_production = 2
+					}
+				}
+				else_if = { #If completed by spreading Chicagoan - trigger event 
+					limit = {
+						2558 = {
+							owned_by = ROOT
+							OR = {
+								culture = chicagoan
+								culture = great_laker_wisconsinite
+							}
+						}
+						num_of_owned_provinces_with = {
+							value = 7
+							OR = {
+								culture = chicagoan
+								culture = great_laker_wisconsinite
+							}
+						}
+					}
+					country_event = {
+						id = flavorWIS.1000 #Event moves you to Great Laker group and moves capital to Chicago along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 150
+				}
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
 	wis_illinois = {
 		icon = mission_conquer_5_states
 		required_missions = { wis_chicago }

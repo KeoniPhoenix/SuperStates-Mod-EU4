@@ -7,7 +7,7 @@ add_core = WNY
 culture = western_new_yorker
 religion = s_catholic
 capital = "Buffalo"
-trade_goods = wine
+trade_goods = grain
 hre = no
 base_tax = 4
 base_production = 4
@@ -23,9 +23,9 @@ center_of_trade = 1
 		}
 }
 
-1399.1.1 = {
-	fort_15th = yes
-}
+# 1399.1.1 = {
+	# fort_15th = yes
+# }
 
 1528.1.1 = {
 	religion = catholic

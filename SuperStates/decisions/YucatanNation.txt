@@ -4,14 +4,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_yucatan } #Only once
-			NOT = { exists = YUC } # Separate from YTN tag!
+			NOT = { tag = YTN }
 			NOT = { tag = MEX }
 			NOT = { tag = USA }
 			NOT = { exists = NAM }
-			OR = {
-				culture_group = peninsular_mexican
-				tag = YTN
-			}
+			culture_group = peninsular_mexican
 			OR = {
 				ai = no
 				AND = {
@@ -32,36 +29,41 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = { exists = YTN }
 			is_subject = no
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 3
 				area = yucatan_area
-				is_core = root
+				#is_core = root
 			}
 			num_of_owned_provinces_with = {
 				value = 3
 				area = quintana_roo_area
-				is_core = root
+				#is_core = root
 			}
 			num_of_owned_provinces_with = {
 				value = 3
 				area = campeche_area
-				is_core = root
+				#is_core = root
 			}
 			owns_core_province = 844 # Merida
 			owns_core_province = 847 # Chetumal
 			owns_core_province = 849 # Campeche
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
 			}
+			country_event = {
+				id = cultureflavor.4
+			}
 			add_prestige = 10
-			change_tag = YUC
+			change_tag = YTN
 			set_country_flag = formed_yucatan
-			YUC = {
+			YTN = {
 			if = {
 					limit = {
 					NOT = { government_rank = 2 }
@@ -69,18 +71,15 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			campeche_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = YUC
+				add_core = ROOT
 			}
 			quintana_roo_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = YUC
+				add_core = ROOT
 			}
-				swap_non_generic_missions = yes
+			yucatan_area = {
+				add_core = ROOT
+			}
+				#swap_non_generic_missions = yes
 				country_event = { id = ideagroups.1 } #Swap
 			}
 		}

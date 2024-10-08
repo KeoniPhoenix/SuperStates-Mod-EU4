@@ -3,6 +3,7 @@
 owner = EMX
 controller = EMX
 add_core = EMX
+add_core = CMX
 culture = estado_mexican
 religion = s_catholic
 capital = "Deprecate de Morelos"
