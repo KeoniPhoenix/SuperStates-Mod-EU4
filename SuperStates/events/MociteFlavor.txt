@@ -25,7 +25,7 @@ country_event = {
 				province_id = 2530
 				NOT = { has_province_flag = montgomery_county }
 			}
-			change_province_name = "Montgomery (MD)"
+			change_province_name = "Montgomery"
 			rename_capital = "Rockville"
 			set_province_flag = montgomery_county
 		}

@@ -1,3 +1,159 @@
+#Arizona
+arz_develop_strip_modifier = {
+	build_cost = -0.10
+}
+
+#arz_tucson_construction = {
+#	development_cost_modifier = -0.25
+#}
+
+arz_tucson_tax = {
+	global_tax_modifier = 0.10
+}
+
+arz_phoenix_admin = {
+	administrative_efficiency = 0.05
+}
+
+#arz_phoenix_desert = {
+#	development_cost_modifier = -0.50
+#}
+
+arz_university_tech = {	#permenant modifier
+	technology_cost = -0.05
+}
+
+arz_university_tech_temp = { #temp modifier
+	technology_cost = -0.10
+}
+
+arz_pleasant_business = {
+	trade_goods_size_modifier = 0.10
+}
+
+arz_pleasant_morale = {
+	land_morale = 0.10
+}
+
+arz_dutchman_interest = {
+	interest = -0.01
+}
+
+arz_dutchman_inflation = {
+	inflation_reduction = -0.10
+}
+
+arz_mining_infantry = {
+	infantry_cost = -0.10
+	#infantry_power = 0.10
+}
+
+arz_mining_artillery = {
+	artillery_cost = -0.10
+	#artillery_power = 0.10
+}
+
+arz_port_ship = {
+	global_ship_cost = -0.15
+}
+
+arz_gulf_sailors = {
+	global_sailors_modifier = 0.10
+}
+
+arz_army_discip = {
+	discipline = 0.025
+}
+
+# For Cradle of Civilization
+arz_army_morale = {
+	#land_morale = 0.05
+	drill_decay_modifier = -0.25
+}
+
+#else
+arz_army_morale2 = {
+	#land_morale = 0.05
+	prestige_from_land = 1
+}
+
+arz_annihilated_cal = {
+	prestige_decay = -0.01
+}
+
+arz_cal_conquest_trade = {
+	province_trade_power_modifier = 0.15
+}
+
+arz_navy_combat = {
+	light_ship_power = 0.10
+}
+
+arz_armada_bonus = {
+	naval_forcelimit_modifier = 0.10
+	heavy_ship_power = 0.10
+	#light_ship_power = 0.10
+	#galley_power = 0.10
+	#transport_power = 0.10
+	global_sailors_modifier = 0.10
+}
+
+arz_sonora_dip_bonus = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.20
+}
+
+arz_desert_caravan = {
+	caravan_power = 0.15
+}
+
+arz_wares_range = {
+	trade_range_modifier = 0.25
+}
+
+arz_panama_canal_bonus = {
+	merchants = 1
+	global_trade_power = 0.10
+}
+
+arz_panama_prov_bonus = {
+	province_trade_power_value = 25
+	local_development_cost_modifier = -0.20
+}
+
+arz_land_of_freedom = {
+	global_unrest = -1
+	culture_conversion_cost = -0.15
+}
+
+arz_converted_mormon = {
+	missionaries = 1
+	global_missionary_strength = 0.01
+}
+
+arz_converted_not_lds = {
+	global_tax_modifier = 0.10
+	missionary_maintenance_cost = -0.15
+}
+
+arz_promote_church_unrest = {
+	global_unrest = -1
+}
+
+arz_promote_church_stab = {
+	stability_cost_modifier = -0.10
+}
+
+arz_cultures_promotion = {
+	years_of_nationalism = -5
+	production_efficiency = 0.10
+}
+
+arz_last_mission_convert_bonus = {
+	local_missionary_strength = 0.02
+	missionaries = 1 
+}
+
 # Florida
 flo_control_the_mississippi_modifier = {
 	trade_efficiency = 0.15
@@ -18,7 +174,7 @@ flo_port_of_miami_modifier = {
 }
 
 flo_port_of_miami2_modifier = {
-	local_development_cost = -0.15
+	local_development_cost = -0.10
 	local_build_cost = -0.10
 }
 
@@ -91,6 +247,11 @@ vir_no_lev_pentagon = {
 vir_reunited_with_wv = {
 	local_unrest = -2
 	local_autonomy = -0.05
+}
+
+vir_integrating_wv = {
+	local_culture_conversion_cost = -0.25
+	#local_unrest = 2
 }
 
 vir_chesapeake_trade = {
@@ -257,6 +418,155 @@ ris_roads_to_rhodes = {
 ris_spy = {
 	spy_offence = 0.25
 	envoy_travel_time = -0.33
+}
+
+#Utah/Deseret
+ sword_of_the_church = {
+	warscore_cost_vs_other_religion = -0.10
+	extra_manpower_at_religious_war = yes
+	reverse_relation_with_same_religion = 20
+	relation_with_same_religion = 20
+}
+
+ uta_jefferson_lincoln = {
+	num_accepted_cultures = 2
+}
+
+ uta_oasis_development_fallback = {
+	development_cost = -0.05
+ }
+
+ uta_mormon_missions_fallback = {
+	range = 0.35
+ }
+
+uta_bastion_of_faith_fallback = {
+	local_defensiveness = 0.15
+	local_fort_maintenance_modifier = -0.20
+}
+
+ uta_mormon_fervor = {
+	warscore_cost_vs_other_religion = -0.15
+	infantry_power = 0.10
+}
+
+ mormon_religious_wars = {
+	cb_on_religious_enemies = yes
+ }
+
+ broke_the_bear = {
+	num_accepted_cultures = 1
+	monthly_splendor = 1
+ }
+
+ uta_phoenix_rises = {
+	years_of_nationalism = -2.5
+	prestige = 0.5
+}
+
+ uta_pacific_expansion = {
+	colonists = 1
+}
+
+ uta_emboldened_missionaries = {
+	diplomatic_reputation = 1
+ }
+
+ uta_brigham_canyon_modifier = {
+	trade_goods_size = 5
+ }
+
+ estate_church_bastion_of_faith_modifier = {
+	local_defensiveness = 0.15
+	local_fort_maintenance_modifier = -0.20
+	local_missionary_strength = 0.01
+ }
+
+ uta_glamor_of_vegas = {
+	monthly_splendor = 1.5
+	tolerance_own = -1
+	monthly_favor_modifier = 0.25
+ }
+
+ uta_protectors_of_jefferson = {
+	diplomatic_upkeep = 1
+ }
+
+ uta_new_zion = {
+	global_prosperity_growth = 0.05
+	global_monthly_devastation = -0.10
+ }
+
+ mormon_settlers = {
+	local_culture_conversion_cost = 0.75
+	local_missionary_strength = -0.10
+ }
+
+ uta_new_eden = {
+	monarch_lifespan = 0.10
+	reverse_relation_with_heretic_religion = 10
+	relation_with_heretics = 10
+ }
+
+ uta_nauvoo_capital = {
+	local_development_cost = -0.10
+	local_build_cost = -0.15
+	allowed_num_of_buildings = 1
+	allowed_num_of_manufactories = 1
+ }
+
+ uta_nauvoo = {
+	local_development_cost = -0.05
+	local_build_cost = -0.10
+	local_autonomy = -0.05
+	local_unrest = -5
+ }
+
+ uta_kirtland = {
+	church_loyalty_modifier = 0.10
+	missionaries = 1
+ }
+
+ uta_sighting_of_jesus = {
+	diplomatic_reputation = 1
+	no_religion_penalty = yes
+ }
+
+ uta_golden_plates = {
+	all_power_cost = 0.025
+	prestige_decay = -0.01
+	institution_spread_from_true_faith = 0.10
+ }
+
+ uta_mormon_legions = {
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
+	global_regiment_recruit_speed = -0.10
+ }
+
+ uta_nauvoo_legion_blessing = {
+	siege_ability = 0.075
+	shock_damage = 0.05
+}
+
+uta_temple_constructions = {
+	global_missionary_strength = 0.005
+	build_cost = -0.05
+}
+
+uta_first_temple = {
+	religious_unity = 0.20
+	center_of_trade_upgrade_cost = -0.10
+}
+
+uta_translated_book_of_mormon = {
+	institution_spread_from_true_faith = 0.10
+	idea_cost = -0.025
+}
+
+uta_mission_to_the_gentiles = {
+	core_creation = -0.05
+	culture_conversion_cost = -0.10
 }
 
 #Connecticut
@@ -740,6 +1050,26 @@ pnn_army_reform_mod = {
 
 # #Texas/Matagorda
 
+new_german_union_modifier = {
+	prestige = 0.50
+}
+
+new_german_union_province = {
+	local_unrest = -2
+	local_tax_modifier = 0.33
+	local_missionary_strength = 0.02
+	local_manpower_modifier = 0.33
+	local_sailors_modifier = 0.2
+}
+
+new_german_union_province_republic = {
+	local_unrest = -1.5
+	local_tax_modifier = 0.23
+	local_missionary_strength = 0.02
+	local_manpower_modifier = 0.23
+	local_sailors_modifier = 0.15
+}
+
 tex_expanded_development = {
 	local_unrest = -2
 	local_tax_modifier = 0.1
@@ -794,7 +1124,7 @@ texas_unity = {
 }
 
 development_initiative = {
-	global_tax_modifier = -0.10
+	global_tax_modifier = 0.10
 	development_cost = -0.1
 	build_cost = -0.25
 	picture = "development_cost"
@@ -837,7 +1167,7 @@ wva_liberated_west_maryland = {
 }
 
 wva_united_appalachia = {
-	core_creation = -0.33
+	core_creation = -0.30
 	discipline = 0.05
 }
 
@@ -922,6 +1252,12 @@ ont_family_compact_bad = {
 	yearly_corruption = 0.1
 	reform_progress_growth = -0.15
 	global_autonomy = 0.05
+}
+
+# Carolina
+crl_united_modifier = {
+	stability_cost_modifier = -0.10
+	land_morale = 0.10
 }
 
 #Louisiana
@@ -1474,6 +1810,10 @@ force_convert_mormon = {
 	prestige = 0.25
 	warscore_cost_vs_other_religion = -0.15
 	tolerance_heathen = -2
+}
+
+uta_chart_pacific = {
+	range = 0.50
 }
 
 

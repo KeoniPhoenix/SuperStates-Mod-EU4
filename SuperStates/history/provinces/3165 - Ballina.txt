@@ -3,6 +3,7 @@
 owner = NSW
 controller = NSW
 add_core = NSW
+add_core = NGL
 culture = new_south_welsh
 religion = austral_catholic
 capital = "Ballina"

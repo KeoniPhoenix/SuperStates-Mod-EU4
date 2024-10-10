@@ -2,6 +2,9 @@
 
 # United States Decisions
 # In alphabetical order by name being formed
+# Alabama
+ alabama_nation_title: "Reform Alabama"
+ alabama_nation_desc: "The lands that once belonged to Alabama are now unified under our banner. We must reclaim this title!"
 # Alaska
  reform_alaska_title:0 "Reform into Alaska"
  reform_alaska_desc:0 "The lands that once belonged to Alaska are now ours. We must take their title for ourselves, and proclaim this nation the true and only Alaska."
@@ -20,14 +23,20 @@
 # Carolina
  carolina_nation_title:0 "Reconstitute the State of Carolina"
  carolina_nation_desc:0 "Rectify the division between North and South Carolina to create the State of Carolina."
+# North Carolina
+ north_carolina_nation_title: "Reform North Carolina"
+ north_carolina_nation_desc: "The lands that once belonged to North Carolina are now unified under our banner. We must reclaim this title!"
+# South Carolina
+ south_carolina_nation_title: "Reform South Carolina"
+ south_carolina_nation_desc: "The lands that once belonged to South Carolina are now unified under our banner. We must reclaim this title!"
 # Cascadia
  cascadian_nation_title:0 "Form Cascadia"
  cascadian_nation_desc:0 "Our regional union can be completed by forming Cascadia.\n\nForming §YCascadia§! will §Rprevent us from forming Pacifica and Western Canada.§!"
 # Chesapeake
  form_chesapeake_title:0 "Revive the nation of Chesapeake"
  form_chesapeake_desc:0 "Our lands along the Chesapeake are once again united under one banner. Let us celebrate by declaring ourselves a new nation!"
- CHESAPEAKE:0 "Chesapeake"
- CHESAPEAKE_ADJ:0 "Chesapeakean"
+ #CHESAPEAKE:0 "Chesapeake"
+ #CHESAPEAKE_ADJ:0 "Chesapeakean"
 # Colorado
  reform_colorado_title:0 "Restore Colorado"
  reform_colorado_desc:0 "The unification of our lands allows us to restore Colorado whole again."
@@ -68,8 +77,8 @@
  lakotah_nation_title:0 "Proclaim the Republic of Lakotah"
  lakotah_nation_desc:0 "The proposed boundaries of Lakotah are the Yellowstone River to the north, the North Platte River to the south, the Missouri River to the east and an irregular line marking the west. These borders coincide with those set by the 1851 Treaty of Fort Laramie."
 # Long Island
- long_island_nation_title:0 "Reform into Long Island"
- long_island_nation_desc:0 "The lands that once belonged to Long Island are now ours. We must take their title for ourselves, and proclaim this nation the true and only Long Island."
+ long_island_nation_title:0 "Proclaim a state of Long Island"
+ long_island_nation_desc:0 "We have successfully united the populous island of Long Island, and may now declare ourselves a new state!"
 # Louisiana
  louisiana_nation_title:0 "Restore Louisiana Nation"
  louisiana_nation_desc:0 "Restoration of Louisiana will bring immense praise to our people."
@@ -85,12 +94,15 @@
 # Michigan
  michigan_nation_title:0 "Reform into Michigan"
  michigan_nation_desc:0 "The lands that once belonged to Michigan are now ours. We must take their title for ourselves, and proclaim this nation the true and only Michigan."
+# Mississippi
+ mississippi_nation_title:0 "Reform Mississippi"
+ mississippi_nation_desc:0 "The lands that once belonged to Mississippi are now ours. We must take their title for ourselves, and proclaim this nation the true and only Mississippi."
  # Midwest Nation
  midwest_nation_title:0 "Unite the Midwestern States"
  midwest_nation_desc:0 "The states of the Midwest are far better united than they are divided. By consolidating them, we can become a regional power on the continent."
 # Navajo Nation
  navajo_nation_title:0 "Form the nation of Navajo"
- navajo_nation_desc:0 "There has been a mysterious power in possessing the four cornered provinces that meet together between Arizona, Utah, Colorado, and New Mexico and it calls upon us to proclaim a new nation around this important human geographical feature."
+ navajo_nation_desc:0 "There has been a mysterious power in possessing the four cornered provinces that meet together between Arizona, Utah, Colorado, and New Mexico and it calls upon us to proclaim a new nation around this important human geographical feature.""
 # New England
  new_england_nation_title:0 "Form New England"
  new_england_nation_desc:0 "Consolidating the various state governments into New England gives the region a better standing in the world."
@@ -136,6 +148,19 @@
 # Utah
  reform_utah_title:0 "Reform into Utah"
  reform_utah_desc:0 "The lands that once belonged to Utah are now ours. We must take their title for ourselves, and proclaim this nation the true and only Utah."
+ revoke_mormon_settlement: "Revoke Mormon Settlement"
+ revoke_mormon_settlement_desc: "We have allowed the Mormons in our land freedom for too long. It is time we change that."
+ mormon_nauvoo_title: "Victory for Nauvoo!"
+ mormon_nauvoo_desc: "We have reclaimed the holy land of Nauvoo for our faith!"
+ mormon_kirtland_title: "Victory for Kirtland!"
+ mormon_kirtland_desc: "We have reclaimed the holy land of Kirtland for our faith!"
+ mormon_restoration_title: "Victory for the Priesthood Restoration Site!"
+ mormon_restoration_desc: "We have reclaimed the holy land near the Priesthood Restoration Site for our faith!"
+ mormon_palmyra_title: "Victory for Palmyra!"
+ mormon_palmyra_desc: "We have reclaimed the holy land of Palmyra for our faith!"
+ mormon_diahman_title: "Victory for Adam-ondi-Ahman!"
+ mormon_diahman_desc: "We have reclaimed the holy land of Adam-ondi-Ahman for our faith!"
+
 # Virginia
  reform_virginia_title:0 "Reform into Virginia"
  reform_virginia_desc:0 "The lands that once belonged to Virginia are now ours. We must take their title for ourselves, and proclaim this nation the true and only Virginia."
@@ -239,6 +264,9 @@
 # Mexico
  mexico_nation_title:0 "Unification of Mexico"
  mexico_nation_desc:0 "The unification of all the lands of Mexico brings forth the nation of Mexico."
+ # Mexico Valley / Central Mexico
+ unite_the_valley_nation_title: "Unite the Valley"
+ unite_the_valley_nation_desc: "The Valley of Mexico has long been the heartland of all of Mexico. Now that we have unified this diverse region under one banner, we can stand to gain from declaring a united Mexico Valley."
 # New Spain
  new_spain_nation_title:0 "Gloria a Nueva España"
  new_spain_nation_desc:0 "New Spain was a colonial territory of the Spanish Empire in the New World north of the Isthmus of Panama. It was established following the Spanish conquest of the Aztec Empire in 1521, and following additional conquests, it was made a viceroyalty in 1535. The first of four viceroyalties Spain created in the Americas, it comprised Mexico, Central America, much of the Southwestern and Central United States, and Spanish Florida."
@@ -250,7 +278,7 @@
  rio_grande_nation_desc:0 "Become a safe haven for those resisting the tyranny of the Mexican dysfunction and stand up for justice."
 # Yucatan
  greater_yucatan_nation_title:0 "Form the Yucatán Nation"
- greater_yucatan_nation_desc:0 "Become a safe haven for those resisting the tyranny of the Mexican dysfunction and stand up for justice by unifying the Yucatán Peninsula."
+ greater_yucatan_nation_desc:0 "We will become a safe haven for those resisting the tyranny of the Mexican dysfunction and stand up for justice by unifying the Yucatán Peninsula."
 
 # Caribbean Regions
  antilles_nation_title:0 "Unify the Antilles"
@@ -267,16 +295,28 @@
  trinidad_tobago_nation_desc:0 "Our two islands have a long history. Let us unite under one banner."
  TRINIDAD_AND_TOBAGO:0 "Trinidad and Tobago"
  TRINIDAD_AND_TOBAGO_ADJ:0 "Trinidadian"
+ TOBAGO_AND_TRINIDAD: "Tobago and Trinidad"
+ TOBAGO_AND_TRINIDAD_ADJ: "Tobagonian"
+ NEVIS_AND_SAINT_KITTS: "Nevis and Saint Kitts"
+ NEVIS_AND_SAINT_KITTS_ADJ: "Nevisian"
+ LABRADOR_AND_NEWFOUNDLAND: "Labrador and Newfoundland"
+ LABRADOR_AND_NEWFOUNDLAND_ADJ: "Labradorian"
+ BARBUDA_AND_ANTIGUA: "Barbuda and Antigua"
+ BARBUDA_AND_ANTIGUA_ADJ: "Barbudan"
  unite_virgin_islands_title:0 "Unite the Virgin Islands"
  unite_virgin_islands_desc:0 "We have unified the formerly-divided Virgin Islands under us. We shall declare a new nation, independent of any foreign influence!"
  west_indies_nation_title:1 "Declare the West Indies Federation"
  west_indies_nation_desc:1 "The Caribbean islands are disparate and weak. We must demonstrate to the world that we are no longer a puppet of greater nations, but our own empire!"
  st_martin_nation_title:0 "Heal the division of Saint Martin"
  st_martin_nation_desc:0 "For far too long has our small island been split in half. We must declare a united state of Saint Martin."
+ SINT_MAARTEN: "Sint Maarten"
+ SINT_MAARTEN_ADJ: "Sint Maartener"
 
 #Central America Region
  guatemala_belize_colonization_title:0 "Colonize Belize"
- guatemala_belize_colonization_desc:0 "The neighboring region of Belize is empty and suitable for our needs in growin our nation.  We can establish claims by enrolling citizens from other areas of Guatemala to move to the empty region and this would serve to keep out competing Mexican states' claims."
+ guatemala_belize_colonization_desc:0 "The neighboring region of Belize is empty and suitable for our needs in growing our nation.  We can establish claims by enrolling citizens from other areas of [Root.GetName] to move to the empty region and this would serve to keep out competing Mexican states' claims."
+ cam_panama_colonization_title:0 "Colonize Panama"
+ cam_panama_colonization_desc:0 "The neighboring region of Panama is empty and suitable for our needs in growing our nation. We can establish claims by enrolling citizens from other areas of [Root.GetName] to move to the empty region and this would serve to keep out colonizer claims."
 
 #Pacific Islands Region
 # Pacific Oceania
@@ -315,3 +355,19 @@ s_ask_for_cardinal_title:0 "Ask Pope for Cardinal"
 s_ask_for_cardinal_desc:0 "We have finally reconnected with Rome, and for a small sum, we can have a Cardinal permanently residing in our nation."
 s_move_cardinal_title:0 "Move Cardinal to Capital"
 s_move_cardinal_desc:0 "We have been granted a Permanent Cardinal by His Holiness, yet lack a permanent cardinal in our nation. We can relocate the Cardinal to our Capital."
+
+# Unite culture decisions
+carolina_culture_decision_title: "A Carolinian Culture"
+carolina_culture_decision_desc: "If we were to unite the Carolinas, we would be able to bridge the cultural divides present in this area."
+mexico_valley_culture_decision_title: "Unity in the Valley of Mexico"
+mexico_valley_culture_decision_desc: "If we were to unite the Valley of Mexico, we would be able to bridge the cultural divides present in this area."
+baja_californian_culture_decision_title: "A United Baja Californian Culture"
+baja_californian_culture_decision_desc: "If we were to unite the Baja California peninsula, we would be able to bridge the cultural divides present in this area."
+yucatan_culture_decision_title: "Unity in Yucatan"
+yucatan_culture_decision_desc: "If we were to unite the Yucatan peninsula, we would be able to bridge the cultural divides present in this area."
+dakotan_culture_decision_title: "A Dakotan Culture"
+dakotan_culture_decision_desc: "If we were to unite the Dakotas, we would be able to bridge the cultural divides present in this area."
+
+# Revoke Mormon settlement
+revoke_mormon_settlement_title: "Revoke Mormon Settlement"
+revoke_mormon_settlement_desc: "For too long, we have granted autonomy to the Mormons settled in our lands. This cannot stand any longer."

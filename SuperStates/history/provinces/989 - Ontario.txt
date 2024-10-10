@@ -8,11 +8,12 @@ culture = wyomingite
 religion = mormon
 capital = "Cody" 
 is_city = yes #1000
+fort_15th = yes
 trade_goods = fur
 hre = no 
-base_tax = 8
+base_tax = 7
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 

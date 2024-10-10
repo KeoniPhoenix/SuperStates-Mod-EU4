@@ -3,6 +3,7 @@
 owner = EMX
 controller = EMX
 add_core = EMX
+add_core = HOT
 culture = estado_mexican
 religion = s_catholic
 capital = "Toluca de Lerdo"

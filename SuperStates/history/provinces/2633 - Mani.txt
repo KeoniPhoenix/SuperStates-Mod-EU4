@@ -1,13 +1,17 @@
 #Bighorn
+latent_trade_goods = {
+	coal
+}
 
 owner = ABR
 controller = ABR
 add_core = ABR
+add_core = BFF
 culture = albertan
 religion = s_protestant
 capital = "Canmore" 
 is_city = yes #1230
-trade_goods = wool
+trade_goods = fur
 hre = no 
 base_tax = 4
 base_production = 3

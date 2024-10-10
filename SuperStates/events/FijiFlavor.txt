@@ -16,6 +16,9 @@ country_event = {
 	
 	trigger = {
 		NOT = { primary_culture = melanesian }
+		NOT = {
+			has_country_flag = fijian_culture
+		}
 		1242 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -112,6 +115,7 @@ country_event = {
 	
 	option = {
 		name = "FijiFlavor.1opta"
+		set_country_flag = fijian_culture
 		1242 = { 
 			change_culture = fijian
 			add_core = FIJ

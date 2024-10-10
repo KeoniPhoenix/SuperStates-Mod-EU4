@@ -959,7 +959,7 @@ colombia_region = {
 		coquivacoa_area
 		bogota_area
 		popayan_area
-		panama_area
+		#panama_area
 		maracaibo_area
 		central_llanos_area
 		cordillera_occidental_area
@@ -1018,6 +1018,7 @@ malaya_region = {	#Western Indonesia Malaya.
 		batak_area
 		minangkabau_area
 		indian_ocean_islands_area
+		aus_indian_ocean_islands_area
 	}
 	monsoon = {
 		00.10.01
@@ -1034,18 +1035,31 @@ moluccas_region = {
 	areas = {
 		molluca_area
 		sulawesi_area
-		luzon_area
-		southern_luzon_area
-		mindanao_area
-		west_mindanao_area
-		visayas_area
-		palawan_area
 		#papua_area
 		#vogelkop_area
 		timor_area
 		south_sulawesi_area
 		makassar_area
 		spice_islands_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
+
+philippines_region = {
+	areas = {
+		luzon_area
+		southern_luzon_area
+		mindanao_area
+		west_mindanao_area
+		visayas_area
+		palawan_area
 	}
 	monsoon = {
 		00.10.01
@@ -1163,6 +1177,7 @@ central_america_region = {
 		honduras_area
 		nicaragua_area
 		costa_rica_area
+		panama_area
 	}
 }
 
@@ -1292,7 +1307,6 @@ west_australia_region = { #8
 		south_australia_area
 		centralia_area
 		north_australia_area
-		aus_indian_ocean_islands_area
 		tiwi_islands_area
 	}
 	monsoon = {
@@ -1433,6 +1447,7 @@ intermountain_west_region = { #10
 		wyoming_area
 		absaroka_area
 		western_slope_area
+		utah_area
 	}
 }
 
@@ -1449,7 +1464,7 @@ american_southwest_region = { #8
 		high_plains_area
 		trans_pecos_area
 		gila_area
-		utah_area
+		#utah_area
 	}
 }
 
@@ -1515,6 +1530,7 @@ deep_south_region = { #11
 		south_florida_area
 		black_prairie_area
 		west_florida_area
+		pamlico_area
 	}
 }
 
@@ -1532,7 +1548,7 @@ old_southwest_region = { #9
 	}
 }
 
-appalachia_region = { #8
+appalachia_region = { #9
 	areas = {
 		blue_ridge_area
 		kentucky_area
@@ -1542,6 +1558,7 @@ appalachia_region = { #8
 		shenandoah_area
 		monongahela_area
 		pennyroyal_area
+		east_tennessee_area
 	}
 }
 
@@ -1602,6 +1619,7 @@ american_midwest_region = { #11
 		wabash_area
 		ohio_area
 		sangamon_area
+		otter_tail_area
 	}
 }
 

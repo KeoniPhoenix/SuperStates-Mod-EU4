@@ -3,7 +3,7 @@
 owner = BCO
 controller = BCO
 add_core = BCO
-#add_core = HDA
+add_core = HDA
 culture = haida
 religion = totemism
 capital = "Queen Charlotte" 

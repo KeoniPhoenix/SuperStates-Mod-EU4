@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = statian_culture
+		}
 		4580 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "SintEustasiusFlavor.1opta"
+		set_country_flag = statian_culture
 		4580 = {
 			change_culture = statian
 			add_core = SEU

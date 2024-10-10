@@ -9,7 +9,7 @@ add_core = DMV
 culture = delawarean
 religion = s_protestant
 capital = "Dover"
-trade_goods = naval_supplies
+trade_goods = maize
 hre = no
 base_tax = 3
 base_production = 1
@@ -18,9 +18,9 @@ is_city = yes #3610
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1399.1.1 = {
-	fort_15th = yes
-}
+# 1399.1.1 = {
+	# fort_15th = yes
+# }
 
 1531.1.1 = {
 	religion = s_baptist

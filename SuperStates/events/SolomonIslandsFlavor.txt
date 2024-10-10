@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = soloman_islander_culture
+		}
 		1238 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -132,6 +135,7 @@ country_event = {
 	
 	option = {
 		name = "SolomonIslandsFlavor.1opta"
+		set_country_flag = soloman_islander_culture
 		1238 = { 
 			change_culture = solomon_islander
 			add_core = SLM

@@ -49,7 +49,26 @@ country_decisions = {
 				duration = 730
 			}
 			add_prestige = 10
-			override_country_name = SAINT_KITTS_AND_NEVIS
+			if = {
+				limit = {
+					OR = {
+						was_tag = STN
+						primary_culture = kittitian
+					}
+				}
+				override_country_name = SAINT_KITTS_AND_NEVIS
+				add_accepted_culture_or_dip_power = { culture = nevisian free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = NES
+						primary_culture = nevisian
+					}
+				}
+				override_country_name = NEVIS_AND_SAINT_KITTS
+				add_accepted_culture_or_dip_power = { culture = kittitian free = yes }
+			}
 			set_country_flag = formed_st_kitts_nevis
 			ROOT = {
 			if = {

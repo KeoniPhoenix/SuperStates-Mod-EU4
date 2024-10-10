@@ -1,6 +1,6 @@
 #Chatham Islands/Wharekauri
 
-culture = maori
+culture = moriori
 religion = animism
 capital = "Waitangi"
 trade_goods = unknown 

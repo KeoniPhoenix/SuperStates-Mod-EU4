@@ -1,0 +1,247 @@
+namespace = flavorKEN
+
+#Culture Swap event
+country_event = {
+	id = flavorKEN.1000
+	title = flavorKEN.1000t
+	desc = flavorKEN.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Move to Southerner and move capital
+		name = flavorKEN.1000opta
+		trigger = {
+			owns = 2515
+			NOT = {
+				capital = 2515
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					culture = us_transylvanian
+				}
+				num_of_owned_provinces_with = {
+					value = 6
+					culture = southern_kentuckian
+				}
+				primary_culture = us_transylvanian
+				primary_culture = southern_kentuckian
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = southern_kentuckian
+				}
+			}
+			change_primary_culture = southern_kentuckian
+		}
+		set_capital = 2515
+		change_country_color = {
+			country = TRN
+		}
+		hidden_effect = {
+			TRN = {
+				change_country_color = {
+					color = {
+						0 51 160
+					}
+				}
+				set_country_flag = kentucky_color_flag
+			}
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorKEN.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = us_transylvanian
+			remove_accepted_culture = kentuckian
+			set_ruler_culture = southern_kentuckian
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = southern_kentuckian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = us_transylvanian
+                        consort_culture = kentuckian
+                    }
+                }
+                set_consort_culture = southern_kentuckian
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = kentuckian
+						culture = us_transylvanian
+					}
+				}
+				change_culture = southern_kentuckian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Southerner
+		name = flavorKEN.1000optb
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					culture = us_transylvanian
+				}
+				num_of_owned_provinces_with = {
+					value = 6
+					culture = southern_kentuckian
+				}
+				primary_culture = us_transylvanian
+				primary_culture = southern_kentuckian
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = southern_kentuckian
+				}
+			}
+			change_primary_culture = southern_kentuckian
+		}
+		hidden_effect = {
+			TRN = {
+				change_country_color = {
+					color = {
+						0 51 160
+					}
+				}
+				set_country_flag = kentucky_color_flag
+			}
+		}
+		change_country_color = {
+			country = TRN
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorKEN.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = us_transylvanian
+			remove_accepted_culture = kentuckian
+			set_ruler_culture = southern_kentuckian
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = southern_kentuckian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = us_transylvanian
+                        consort_culture = kentuckian
+                    }
+                }
+                set_consort_culture = southern_kentuckian
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = kentuckian
+						culture = us_transylvanian
+					}
+				}
+				change_culture = southern_kentuckian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Midwestern
+		name = flavorKEN.1000optc
+		trigger = {
+			AND = {
+				OR = {
+					accepted_culture = missourian
+					accepted_culture = ohioan
+					accepted_culture = illinoisan
+					accepted_culture = little_egyptian
+					accepted_culture = midwestern_tennessean
+					accepted_culture = midwestern_kentuckian
+					culture_group = midwestern_group
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					province_group = kentucky_provincegroup
+					culture_group = midwestern_group
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = midwestern_kentuckian
+				}
+			}
+			change_primary_culture = midwestern_kentuckian
+		}
+		#set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorKEN.1000b.tt
+		hidden_effect = {
+			remove_accepted_culture = us_transylvanian
+			remove_accepted_culture = kentuckian
+			set_ruler_culture = midwestern_kentuckian
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = midwestern_kentuckian
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = us_transylvanian
+                        consort_culture = kentuckian
+                    }
+                }
+                set_consort_culture = midwestern_kentuckian
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = kentuckian
+						culture = us_transylvanian
+					}
+				}
+				change_culture = midwestern_kentuckian
+			}
+			kentucky_provincegroup = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				change_culture = midwestern_kentuckian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #In case you somehow finish this mission while not being any kentuckian culture and wanna nope out
+		name = flavorKEN.1000optd
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

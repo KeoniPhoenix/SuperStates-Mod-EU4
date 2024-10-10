@@ -404,6 +404,9 @@ florida_colonial = {
 				}
 			}
 			south_florida_area = {
+				limit = { 
+					NOT = { has_province_modifier = flo_port_of_miami_modifier }
+			 }
 				add_province_modifier = {
 					name = "flo_port_of_miami2_modifier"
 					duration = 5475

@@ -19,7 +19,7 @@ country_decisions = {
 				culture_group = atlantic_canadian
 				culture_group = new_french
 				culture_group = western_canadian
-				culture_group = great_plainer_group
+				#culture_group = great_plainer_group
 				AND = {
 					culture_group = french
 					tag = NFR
@@ -62,6 +62,7 @@ country_decisions = {
 			
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

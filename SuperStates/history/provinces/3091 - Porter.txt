@@ -3,7 +3,7 @@
 owner = INI
 controller = INI
 add_core = INI
-culture = hoosier
+culture = chicagoan
 religion = s_protestant
 capital = "Valparaiso"
 trade_goods = iron

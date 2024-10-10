@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 109  213  255 }
+color = { 75  156  211 }
+# Tar Heel blue
 
 historical_idea_groups = {
 	naval_ideas

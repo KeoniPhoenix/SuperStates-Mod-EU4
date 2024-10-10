@@ -1,0 +1,469 @@
+######################
+#
+#  Poorly written by:
+#	TheAtomicGerbil
+#	Edited by:
+#	Brandon
+#
+######################
+
+namespace = flavorMIC
+
+#The Need for Labor
+country_event = {
+	id = flavorMIC.1
+	title = flavorMIC.1.t
+	desc = flavorMIC.1.d
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 2573
+		2573 = {
+			has_great_project = {
+				type = greenfield_village
+				tier = 1
+			}
+		}
+		has_institution = printing_press
+		NOT = { has_country_flag = mic_labor_event }
+		OR = {
+			mashriq_region = { has_discovered = ROOT }
+			italy_region = { has_discovered = ROOT }
+			north_german_region = { has_discovered = ROOT }
+			south_german_region = { has_discovered = ROOT }
+			munster_area = { has_discovered = ROOT }
+			connacht_area = { has_discovered = ROOT }
+			leinster_area = { has_discovered = ROOT }
+			ulster_area = { has_discovered = ROOT }
+			arabia_region = { has_discovered = ROOT }
+			poland_region = { has_discovered = ROOT }
+		}
+		OR = {
+			LEB = { # Lebanon
+				exists = yes
+			}
+			JAI = { # Malta
+				exists = yes
+			}
+			KNI = { # The Knights
+				exists = yes
+				owns = 126 # Malta
+				accepted_culture = maltese
+				OR = {
+					stability = -1
+					war_exhaustion = 2
+					has_idea_group = exploration_ideas
+					has_idea_group = expansion_ideas
+					has_any_disaster = yes
+				}
+			}
+			any_known_country = {
+			OR = {
+				AND = {
+					capital_scope = { region = british_isles_region }
+					primary_culture = irish
+				}
+				AND = {
+					capital_scope = { region = mashriq_region }
+					OR = {
+						primary_culture = al_suryah_arabic # Syrian
+						accepted_culture = al_suryah_arabic
+					}
+				}
+				AND = {
+					capital_scope = { region = arabia_region }
+					primary_culture = yemeni_culture
+				}
+				capital_scope = { region = poland_region }
+				capital_scope = { region = italy_region }
+				capital_scope = { region = north_german_region }
+				capital_scope = { region = south_german_region }
+				owns = 378 # Tarablus
+				owns = 1855 # Sayda
+			}
+			OR = {
+				stability = -2
+				war_exhaustion = 3
+				has_idea_group = exploration_ideas
+				has_idea_group = expansion_ideas
+				has_any_disaster = yes
+			}
+		}
+	}
+	}	
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	immediate = {
+		set_country_flag = mic_labor_event
+	}
+
+	option = {
+		name = flavorMIC.1a #Certainly. Make the arrangements immediately.
+		ai_chance = { factor = 100 }
+
+		2573 = {
+			set_province_flag = mic_accepted_migrants
+
+			add_base_production = 4
+			add_base_manpower = 2
+
+			add_province_modifier = {
+				name = mic_migrant_labor_temp
+				duration = 7305
+			}
+
+			add_province_modifier = {
+				name = mic_migrant_labor
+				duration = -1
+			}
+		}
+		}
+	option = {
+		name = flavorMIC.1b #No, we cannot be certain of their loyalties.
+		ai_chance = { factor = 0 }
+	}
+}
+
+# A Place in Society
+country_event = {
+	id = flavorMIC.2
+	title = "flavorMIC.2.t"
+	desc = "flavorMIC.2.d"
+	picture = STREET_SPEECH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 2573
+		has_country_flag = mic_labor_event
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		set_country_flag = mic_place_in_society
+		clr_country_flag = mic_labor_event
+	}
+	
+	option = { # The Maltese have worked tirelessly.
+		name = flavorMIC.2a
+		set_country_flag = chose_maltese
+		set_country_flag = may_use_san_juan
+		#set_country_flag = enable_holy_orders_flag 
+			2573 = {
+				hidden_effect = {
+					remove_province_modifier = mic_migrant_labor
+				}
+				if = {
+					limit = {
+						has_dlc = "Golden Century"
+					}
+				add_province_modifier = {
+					name = mic_migrant_labor_maltese_gc
+					duration = -1
+				}
+				custom_tooltip = flavorMIC.2a.tt2
+			}
+			else_if = {
+				limit = {
+					NOT = { has_dlc = "Golden Century" }
+				}
+				add_province_modifier = {
+					name = mic_migrant_labor_maltese
+					duration = -1
+				}
+			}
+			}
+	
+		custom_tooltip = flavorMIC.2a.tt  # "We will upgrade Detroit's province modifier to reflect the Maltese people."
+		custom_tooltip = flavorMIC.2.tt
+		ai_chance = {
+			factor = 7
+		}
+	}
+	option = { # The Muslims have shown their resourcefulness.
+	name = flavorMIC.2b
+	set_country_flag = chose_muslims
+		2573 = {
+			hidden_effect = {
+				remove_province_modifier = mic_migrant_labor
+			}
+			add_province_modifier = {
+			name = mic_migrant_labor_muslim
+				duration = -1
+			}
+		}
+
+		custom_tooltip = flavorMIC.2b.tt  # "We will upgrade Detroit's province modifier to reflect the Muslim people."
+		custom_tooltip = flavorMIC.2.tt
+		ai_chance = {
+			factor = 7
+		}
+	}
+	option = { # The Polish always were an industrious people.
+	name = flavorMIC.2c
+	set_country_flag = chose_polish
+		2573 = {
+			hidden_effect = {
+				remove_province_modifier = mic_migrant_labor
+			}
+			add_province_modifier = {
+			name = mic_migrant_labor_polish
+				duration = -1
+			}
+		}
+
+		custom_tooltip = flavorMIC.2c.tt  # "We will upgrade Detroit's province modifier to reflect the Polish people."
+		custom_tooltip = flavorMIC.2.tt
+		ai_chance = {
+			factor = 7
+		}
+	}
+	option = { # The Albanians have not disappointed us.
+	name = flavorMIC.2d
+	set_country_flag = chose_albanians
+		2573 = {
+			hidden_effect = {
+				remove_province_modifier = mic_migrant_labor
+			}
+			add_province_modifier = {
+			name = mic_migrant_labor_albanian
+				duration = -1
+			}
+		}
+
+		custom_tooltip = flavorMIC.2d.tt  # "We will upgrade Detroit's province modifier to reflect the Albanian people."
+		custom_tooltip = flavorMIC.2.tt
+		ai_chance = {
+			factor = 7
+		}
+	}
+	option = { # The current status of the laborers benefits us.
+	name = flavorMIC.2e
+	ai_chance = {
+		factor = 70
+	}
+	}
+}
+
+# Changing Demographics
+country_event = {
+	id = flavorMIC.3
+	title = "flavorMIC.3.t"
+	desc = "flavorMIC.3.d"
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 2573
+		has_country_flag = mic_place_in_society
+	}
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	immediate = {
+		clr_country_flag = mic_place_in_society
+	}
+
+	option = { # Such is the way of things.
+		name = flavorMIC.3a
+		trigger = {
+			has_country_flag = chose_maltese
+		}
+			2573 = {
+				change_culture = maltese
+				if = {
+					limit = {
+						NOT = { religion = catholic }
+					}
+					change_religion = catholic
+				}
+				if = {
+					limit = {
+						ROOT = {
+							NOT = { religion = catholic }
+						}
+					}
+					add_province_modifier = {
+						name = mic_local_tolerance_christian
+						duration = -1
+					}
+				}
+			}
+		hidden_effect = {
+				add_country_modifier = {
+					name = "mic_accept_maltese"
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { accepted_culture = maltese }
+				}
+					add_accepted_culture = maltese
+			else = {
+					add_dip_power = 100
+				}
+			}
+			custom_tooltip = flavorMIC.maltese.tt
+			clr_country_flag = chose_maltese
+			ai_chance = {
+				factor = 5
+			}
+	}
+	option = { # Such is the way of things.
+		name = flavorMIC.3b
+		trigger = {
+			has_country_flag = chose_muslims
+		}
+		2573 = {
+			change_culture = lebanese
+			if = {
+				limit = {
+					NOT = { religion = sunni }
+				}
+				change_religion = sunni
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { religion = sunni }
+					}
+				}
+				add_province_modifier = {
+					name = mic_local_tolerance_muslim
+					duration = -1
+				}
+			}
+		}
+	hidden_effect = {
+		add_country_modifier = {
+			name = "mic_accept_lebanese"
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = { 
+			NOT = { accepted_culture = lebanese }
+		}
+			add_accepted_culture = lebanese
+	else = {
+			add_dip_power = 100
+		}
+	}
+	custom_tooltip = flavorMIC.lebanese.tt
+	clr_country_flag = chose_muslims
+	ai_chance = {
+		factor = 5
+	}
+	}
+	option = { # Such is the way of things.
+		name = flavorMIC.3c
+		trigger = {
+			has_country_flag = chose_polish
+		}
+		2573 = {
+			change_culture = polish
+			if = {
+				limit = {
+					NOT = { religion = catholic }
+				}
+				change_religion = catholic
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { religion = catholic }
+					}
+				}
+				add_province_modifier = {
+					name = mic_local_tolerance_christian
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = "mic_accept_polish"
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { accepted_culture = polish }
+			}
+				add_accepted_culture = polish
+		else = {
+				add_dip_power = 100
+			}
+		}
+		custom_tooltip = flavorMIC.polish.tt	
+		clr_country_flag = chose_polish
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { # Such is the way of things.
+		name = flavorMIC.3d
+		trigger = {
+			has_country_flag = chose_albanians
+		}
+		2573 = {
+			change_culture = albanian
+			if = {
+				limit = {
+					NOT = { religion = orthodox }
+				}
+				change_religion = orthodox
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { religion = orthodox }
+					}
+				}
+				add_province_modifier = {
+					name = mic_local_tolerance_christian
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = "mic_accept_albanian"
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { accepted_culture = albanian }
+			}
+				add_accepted_culture = albanian
+		else = {
+				add_dip_power = 100
+			}
+		}
+		custom_tooltip = flavorMIC.albanian.tt
+		clr_country_flag = chose_albanians
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { # This is ridiculous!
+	name = flavorMIC.3e
+	ai_chance = {
+		factor = 80
+	}
+	}
+}

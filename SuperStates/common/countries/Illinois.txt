@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 101  109  0 }
+color = { 44  73  127 } # 101  109  0 # 65  182  230
+# Current blue is from the sesquicentennial flag
 
 revolutionary_colors = { 15 8 15 }
 

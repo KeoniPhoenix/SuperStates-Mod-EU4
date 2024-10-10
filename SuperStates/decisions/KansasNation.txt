@@ -20,7 +20,7 @@ country_decisions = {
 				primary_culture = kansan
 				#primary_culture = jayhawker
 				primary_culture = west_kansan
-				primary_culture = plains_kansan
+				#primary_culture = plains_kansan
 			}
 			OR = {
 				ai = no
@@ -53,6 +53,7 @@ country_decisions = {
 			}
 				}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

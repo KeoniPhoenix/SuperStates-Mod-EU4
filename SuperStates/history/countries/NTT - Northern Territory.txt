@@ -4,6 +4,7 @@ government_rank = 1
 technology_group = australian
 religion = austral_protestant
 primary_culture = northern_territorian
+add_accepted_culture = s_aboriginal
 capital = 1092 	# Darwin
 
 1440.12.19 = {

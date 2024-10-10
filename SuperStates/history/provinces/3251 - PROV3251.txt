@@ -13,6 +13,7 @@ base_tax = 9
 base_production = 12
 base_manpower = 7
 is_city = yes #32450 
+center_of_trade = 1
 discovered_by = north_american
 discovered_by = mesoamerican
 

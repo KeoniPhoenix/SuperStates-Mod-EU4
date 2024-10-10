@@ -949,13 +949,19 @@ mormon_theodemocracy_reform = {
 	icon = "mormon"
 	potential = {
 		OR = {
-			tag = UTA
 			tag = DES
+			was_tag = DES
 		}
+		religion = mormon
 	}
 	
 	modifiers = {
-		global_missionary_strength = 0.015
+		global_missionary_strength = 0.02
+		cb_on_religious_enemies = yes
+		governing_capacity = 100
+		devotion = 1
+		republican_tradition = 0.30
+		legitimacy = 1
 	}
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes
@@ -964,7 +970,11 @@ mormon_theodemocracy_reform = {
 	allow_normal_conversion = yes
 	legacy_equivalent = mormon_theodemocracy_legacy
 	monastic = yes
-	fixed_rank = 2
+	#fixed_rank = 3
+	custom_attributes = {
+		#gain_monarch_power_from_force_converting = yes
+		gain_devotion_from_force_converting = yes
+	}
 }
 
 #Internal vs External Mission
@@ -1504,6 +1514,7 @@ council_of_fifty_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_reform = mormon_theodemocracy_reform
+		has_country_flag = council_of_fifty_reform_flag
 	}
 
 	modifiers = {

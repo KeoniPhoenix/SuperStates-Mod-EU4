@@ -1,8 +1,9 @@
-#Country Name: Cape Brenton Island
+#Country Name: Cape Breton Island
 
 graphical_culture = westerngfx
 
-color = { 94  117  55 }
+#color = { 94  117  55 }
+color = { 15  107  58 }
 
 historical_idea_groups = {
 	defensive_ideas

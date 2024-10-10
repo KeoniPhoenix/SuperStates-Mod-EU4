@@ -518,7 +518,7 @@ mic_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			superior_area = {
+			upper_peninsula_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

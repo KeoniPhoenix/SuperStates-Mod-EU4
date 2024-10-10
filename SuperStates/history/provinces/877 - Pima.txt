@@ -1,11 +1,11 @@
-#Colima
+#Colima/Manzanillo
 
 owner = CLM
 controller = CLM
 add_core = CLM
 culture = coliman
 religion = s_catholic
-capital = "Colima"
+capital = "Manzanillo"
 is_city = yes #14690
 trade_goods = sugar
 hre = no
@@ -14,7 +14,7 @@ base_production = 4
 base_manpower = 4
 discovered_by = north_american
 discovered_by = mesoamerican
-center_of_trade = 1
+center_of_trade = 2
 
 1399.1.1 = {
 	fort_15th = yes

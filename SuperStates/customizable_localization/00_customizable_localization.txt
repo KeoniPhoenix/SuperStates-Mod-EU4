@@ -14,6 +14,40 @@
 
 ### Titular for Overlord
 #Ex: "On a mission to visit the [Son of Heaven]"
+# SuperStates
+
+defined_text = {
+    name = CAM_form_mexico_tt
+
+    text = {
+        localisation_key = CAM_can_form_mexico_tt
+        trigger = {
+			OR = {
+				AND = {
+					culture_group = central_american_group
+					OR = {
+						development_in_provinces = {
+							value = 40
+							region = costa_oeste_region
+						}
+						development_in_provinces = {
+							value = 40
+							region = mexican_gulf_coast_region
+						}
+					}
+					NOT = { primary_culture = panamanian }
+					NOT = { exists = CAM }
+				}
+				AND = {
+					culture_group = central_american_group
+					has_country_flag = CAM_can_form_mexico
+				}
+			}
+        }
+    }
+}
+
+# Base game 
 defined_text = {
     name = GetTributaryOverlord
 
@@ -2977,6 +3011,22 @@ defined_text = {
 			trade_goods = coal
 		}
 	}
+	text = {
+		localisation_key = building_cigar_factory
+		trigger = {
+			trade_goods = cigars
+		}
+	}
+	text = {
+		localisation_key = building_distillery
+		trigger = {
+			OR = {
+				trade_goods = tequila
+				trade_goods = whiskey
+				trade_goods = rum
+			}
+		}
+	}
 }
 
 #Prints the noun associated with the religion e.g. "Catholicism" or "Sunni Islam". Works in country and province scope.
@@ -3137,6 +3187,60 @@ defined_text = {
 		localisation_key = zoroastrianism_string
 		trigger = {
 			religion = zoroastrian
+		}
+	}
+	text = {
+		localisation_key = mormonism_string
+		trigger = {
+			religion = mormon
+		}
+	}
+	text = {
+		localisation_key = amero_protestantism_string
+		trigger = {
+			religion = s_protestant
+		}
+	}
+	text = {
+		localisation_key = amero_catholicism_string
+		trigger = {
+			religion = s_catholic
+		}
+	}
+	text = {
+		localisation_key = austral_catholic_string
+		trigger = {
+			religion = austral_catholic
+		}
+	}
+	text = {
+		localisation_key = austral_protestant_string
+		trigger = {
+			religion = austral_protestant
+		}
+	}
+	text = {
+		localisation_key = anabaptistism_string
+		trigger = {
+			religion = anabaptist
+		}
+	}
+	text = {
+		localisation_key = methodism_string
+		trigger = {
+			religion = s_methodist
+		}
+	}
+	text = {
+		localisation_key = lutheranism_string
+		trigger = {
+			religion = s_lutheran
+		}
+	}
+	text = {
+		localisation_key = baptism_string
+		trigger = {
+			religion = s_baptist
 		}
 	}
 }

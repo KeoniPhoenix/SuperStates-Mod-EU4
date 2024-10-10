@@ -1,0 +1,113 @@
+#Country Name: Dampieria
+
+graphical_culture = westerngfx
+
+color = { 56 47 1 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	naval_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Alan #0" = 5
+	"Albert #0" = 5
+	"Alfred #0" = 5
+	"Brian #0" = 5
+	"Carmen #0" = 5
+	"Charles #0" = 5
+	"Colin #0" = 5
+	"Cornthwaite #0" = 5
+	"David #0" = 5
+	"Frank #0" = 10
+	"Geoff #0" = 5
+	"George #0" = 10
+	"Harry #0" = 5
+	"Henry #0" = 10
+	"James #0" = 5
+	"John #0" = 20
+	"Newton #0" = 5
+	"Peter #0" = 5
+	"Philip #0" = 5
+	"Raymond #0" = 5
+	"Richard #0" = 5
+	"Ross #0" = 5
+	"Walter #0" = 5
+}
+
+leader_names = {
+	Barnett Brand Burke
+	Carpenter Colebatch Collier Court
+	Daglish Dowding
+	Forrest
+	Gallop
+	Hawke
+	James
+	Lawrence Leake Lefoy
+	McLarty Mitchell Moore Morgans
+	O'Conner
+	Rason
+	Scaddan
+	Throssell Tonkin
+	Willcock Wilson Wise	
+}
+
+ship_names = {
+	Agusta Albany Armadale Ashburton
+	Balingup Ballidu Bassendean Bayswater Belmont Beverley Boddington Boulder "Boyup Brook" Bridgetown Brookton Broome Broomehill "Bruce Rock" Bunbury Busselton
+	Cambridge Canning Capel Carnamah Carnarvon "Chapman Valley" Chittering Claremont Cockburn Collie Coolgardie Coorow Corrigin Cottesloe Cranbrook Cuballing Cue Cunderdin
+	Dalwallinu Dandaragan Dardanup Denmark Derby Donnybrook Dowerin Dumbleyung Dundas 
+	"East Fremantle" Esperance Exmouth
+	Fremantle
+	Geraldton Gingin Gnowangerup Goomalling Gosnells Greenbushes
+	"Halls Creek" Harvey
+	Irwin
+	Jarrahdale Jerramungup Joondalup
+	Kalamunda Kalgoorlie Katanning Kellerberrin Kent Kimberly Kojonup Kondinin Koorda Kulin Kwinana
+	"Lake Grace" Laverton Leonora
+	Mandurah Manjimup "Margaret River" Meekatharra Melville Menzies Merredin Mingenew Moora Morawa "Mosman Park" "Mount Magnet" "Mount Marshall" Mukinbudin Mundaring Murchison Murray
+	Nannup Narebeen Narrogin Nedlands Ngaanyatjarraku Northam Northampton Nungarin
+	"Peppermint Grove" Perenjori Perth Pilbara Pingelly Plantagenet "Port Hedland"
+	Quairading
+	Ravensthorpe Rockingham Roebourne
+	Sandstone Serpentine "Shark Bay" "South Perth" Stirling Subiaco
+	Tambellup Tammin "Three Springs" Toodyay Trayning
+	"Upper Gascoyne"
+	"Victoria Park" "Victoria Plains" Vincent
+	Wagin Wandering Wanneroo Waroona "West Arthur" Westonia Wickepin Williams Wiluna Wongan Woodanilling Wyalkatchem Wyndham
+	Yalgoo Yilgam York
+}
+
+army_names = {
+	"Western Australian Army"
+	"Swan River Defense Army"
+}
+
+fleet_names = {
+	"Defense Fleet of Perth"
+}

@@ -1,0 +1,1038 @@
+namespace = FlavorAUS
+
+#Culture Swap event
+country_event = {
+	id = FlavorAUS.1000
+	title = FlavorAUS.1000t
+	desc = FlavorAUS.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # Unite Australian culture
+		name = FlavorAUS.1000opta
+		
+		custom_tooltip = FlavorAUS.1000a.tt
+		custom_tooltip = flavorAUS.1000a.tt2
+		add_accepted_culture_or_dip_power = { culture = christmas_islander free = yes }
+		add_accepted_culture_or_dip_power = { culture = cocos_islander free = yes }
+		hidden_effect = {
+			remove_accepted_culture = tasmanian
+			remove_accepted_culture = victorian
+			remove_accepted_culture = queenslander
+			remove_accepted_culture = north_queenslander
+			remove_accepted_culture = western_australian
+			remove_accepted_culture = auralian
+			remove_accepted_culture = northern_territorian
+			remove_accepted_culture = south_australian
+			remove_accepted_culture = riverinan
+			remove_accepted_culture = canberran
+			remove_accepted_culture = new_zealander
+			remove_accepted_culture = norfolk_islander
+			remove_accepted_culture = north_islander
+			remove_accepted_culture = south_islander
+
+			every_country = {
+				limit = {
+					primary_culture = canberran
+				}
+				change_primary_culture = aus_canberran
+			}
+
+			# every_country = {
+			# 	limit = {
+			# 		primary_culture = christmas_islander
+			# 	}
+			# 	change_primary_culture = aus_christmas_islander
+			# }
+
+			# every_country = {
+			# 	limit = {
+			# 		primary_culture = cocos_islander
+			# 	}
+			# 	change_primary_culture = aus_cocos_islander
+			# }
+
+			every_country = {
+				limit = {
+					primary_culture = new_south_welsh
+				}
+				change_primary_culture = aus_new_south_welsh
+			}
+
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+					primary_culture = new_zealander
+				}
+				change_primary_culture = aus_new_zealander
+			}
+
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+					primary_culture = north_islander
+				}
+				change_primary_culture = aus_north_islander
+			}
+
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+					primary_culture = south_islander
+				}
+				change_primary_culture = aus_south_islander
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = norfolk_islander
+				}
+				change_primary_culture = aus_norfolk_islander
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = northern_territorian
+				}
+				change_primary_culture = aus_northern_territorian
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = riverinan
+				}
+				change_primary_culture = aus_riverinan
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = queenslander
+				}
+				change_primary_culture = aus_queenslander
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = north_queenslander
+				}
+				change_primary_culture = aus_north_queenslander
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = south_australian
+				}
+				change_primary_culture = aus_south_australian
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = tasmanian
+				}
+				change_primary_culture = aus_tasmanian
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = western_australian
+				}
+				change_primary_culture = aus_western_australian
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = auralian
+				}
+				change_primary_culture = aus_auralian
+			}
+
+			every_country = {
+				limit = {
+					primary_culture = norfolk_islander
+				}
+				if = {
+					limit = {
+						ruler_culture = norfolk_islander
+					}
+					set_ruler_culture = aus_norfolk_islander
+				}
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = norfolk_islander
+					}
+					set_heir_culture = aus_norfolk_islander
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = norfolk_islander
+					}
+					set_consort_culture = aus_norfolk_islander
+				}
+			}
+
+			# Ruler culture for subjects
+			every_subject_country = {
+				if = {
+					limit = {
+						ruler_culture = tasmanian
+					}
+					set_ruler_culture = aus_tasmanian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = victorian
+					}
+					set_ruler_culture = aus_victorian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = queenslander
+					}
+					set_ruler_culture = aus_queenslander
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = north_queenslander
+					}
+					set_ruler_culture = aus_north_queenslander
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = western_australian
+					}
+					set_ruler_culture = aus_western_australian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = auralian
+					}
+					set_ruler_culture = aus_auralian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = northern_territorian
+					}
+					set_ruler_culture = aus_northern_territorian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = south_australian
+					}
+					set_ruler_culture = aus_south_australian
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = riverinan
+					}
+					set_ruler_culture = aus_riverinan
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = canberran
+					}
+					set_ruler_culture = aus_canberran
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = new_zealander
+					}
+					set_ruler_culture = aus_new_zealander
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = norfolk_islander
+					}
+					set_ruler_culture = aus_norfolk_islander
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = south_islander
+					}
+					set_ruler_culture = aus_south_islander
+				}
+	
+				if = {
+					limit = {
+						ruler_culture = north_islander
+					}
+					set_ruler_culture = aus_north_islander
+				}
+	
+				# if = {
+				# 	limit = {
+				# 		ruler_culture = christmas_islander
+				# 	}
+				# 	set_ruler_culture = aus_christmas_islander
+				# }
+	
+				# if = {
+				# 	limit = {
+				# 		ruler_culture = cocos_islander
+				# 	}
+				# 	set_ruler_culture = aus_cocos_islander
+				# }
+				
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = tasmanian
+					}
+					set_heir_culture = aus_tasmanian
+				}
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = canberran
+					}
+					set_heir_culture = aus_canberran
+				}
+				# if = {
+				# 	limit = {
+				# 		has_heir = yes
+				# 		heir_culture = christmas_islander
+				# 	}
+				# 	set_heir_culture = aus_christmas_islander
+				# }
+				# if = {
+				# 	limit = {
+				# 		has_heir = yes
+				# 		heir_culture = cocos_islander
+				# 	}
+				# 	set_heir_culture = aus_cocos_islander
+				# }
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = new_south_welsh
+					}
+					set_heir_culture = aus_new_south_welsh
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = new_zealander
+					}
+					set_heir_culture = aus_new_zealander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = north_islander
+					}
+					set_heir_culture = aus_north_islander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = south_islander
+					}
+					set_heir_culture = aus_south_islander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = norfolk_islander
+					}
+					set_heir_culture = aus_norfolk_islander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = northern_territorian
+					}
+					set_heir_culture = aus_northern_territorian
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = riverinan
+					}
+					set_heir_culture = aus_riverinan
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = queenslander
+					}
+					set_heir_culture = aus_queenslander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = north_queenslander
+					}
+					set_heir_culture = aus_north_queenslander
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = south_australian
+					}
+					set_heir_culture = aus_south_australian
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = victorian
+					}
+					set_heir_culture = aus_victorian
+				}
+	
+				if = {
+					limit = {
+						has_heir = yes
+						heir_culture = auralian
+					}
+					set_heir_culture = aus_auralian
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = tasmanian
+					}
+					set_consort_culture = aus_tasmanian
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = canberran
+					}
+					set_consort_culture = aus_canberran
+				}
+				# if = {
+				# 	limit = {
+				# 		has_consort = yes
+				# 		consort_culture = christmas_islander
+				# 	}
+				# 	set_consort_culture = aus_christmas_islander
+				# }
+				# if = {
+				# 	limit = {
+				# 		has_consort = yes
+				# 		consort_culture = cocos_islander
+				# 	}
+				# 	set_consort_culture = aus_cocos_islander
+				# }
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = new_south_welsh
+					}
+					set_consort_culture = aus_new_south_welsh
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = new_zealander
+					}
+					set_consort_culture = aus_new_zealander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = north_islander
+					}
+					set_consort_culture = aus_north_islander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = south_islander
+					}
+					set_consort_culture = aus_south_islander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = norfolk_islander
+					}
+					set_consort_culture = aus_norfolk_islander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = northern_territorian
+					}
+					set_consort_culture = aus_northern_territorian
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = riverinan
+					}
+					set_consort_culture = aus_riverinan
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = queenslander
+					}
+					set_consort_culture = aus_queenslander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = north_queenslander
+					}
+					set_consort_culture = aus_north_queenslander
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = south_australian
+					}
+					set_consort_culture = aus_south_australian
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = victorian
+					}
+					set_consort_culture = aus_victorian
+				}
+	
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = auralian
+					}
+					set_consort_culture = aus_auralian
+				}
+			}
+
+			# Ruler culture 
+			if = {
+				limit = {
+					ruler_culture = tasmanian
+				}
+				set_ruler_culture = aus_tasmanian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = victorian
+				}
+				set_ruler_culture = aus_victorian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = queenslander
+				}
+				set_ruler_culture = aus_queenslander
+			}
+
+			if = {
+				limit = {
+					ruler_culture = north_queenslander
+				}
+				set_ruler_culture = aus_north_queenslander
+			}
+
+			if = {
+				limit = {
+					ruler_culture = western_australian
+				}
+				set_ruler_culture = aus_western_australian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = auralian
+				}
+				set_ruler_culture = aus_auralian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = northern_territorian
+				}
+				set_ruler_culture = aus_northern_territorian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = south_australian
+				}
+				set_ruler_culture = aus_south_australian
+			}
+
+			if = {
+				limit = {
+					ruler_culture = riverinan
+				}
+				set_ruler_culture = aus_riverinan
+			}
+
+			if = {
+				limit = {
+					ruler_culture = canberran
+				}
+				set_ruler_culture = aus_canberran
+			}
+
+			if = {
+				limit = {
+					ruler_culture = new_zealander
+				}
+				set_ruler_culture = aus_new_zealander
+			}
+
+			if = {
+				limit = {
+					ruler_culture = norfolk_islander
+				}
+				set_ruler_culture = aus_norfolk_islander
+			}
+
+			if = {
+				limit = {
+					ruler_culture = south_islander
+				}
+				set_ruler_culture = aus_south_islander
+			}
+
+			if = {
+				limit = {
+					ruler_culture = north_islander
+				}
+				set_ruler_culture = aus_north_islander
+			}
+
+			# if = {
+			# 	limit = {
+			# 		ruler_culture = christmas_islander
+			# 	}
+			# 	set_ruler_culture = aus_christmas_islander
+			# }
+
+			# if = {
+			# 	limit = {
+			# 		ruler_culture = cocos_islander
+			# 	}
+			# 	set_ruler_culture = aus_cocos_islander
+			# }
+			
+            if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = tasmanian
+                }
+                set_heir_culture = aus_tasmanian
+            }
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = canberran
+                }
+                set_heir_culture = aus_canberran
+            }
+			# if = {
+            #     limit = {
+            #         has_heir = yes
+			# 		heir_culture = christmas_islander
+            #     }
+            #     set_heir_culture = aus_christmas_islander
+            # }
+			# if = {
+            #     limit = {
+            #         has_heir = yes
+			# 		heir_culture = cocos_islander
+            #     }
+            #     set_heir_culture = aus_cocos_islander
+            # }
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = new_south_welsh
+                }
+                set_heir_culture = aus_new_south_welsh
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = new_zealander
+                }
+                set_heir_culture = aus_new_zealander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = north_islander
+                }
+                set_heir_culture = aus_north_islander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = south_islander
+                }
+                set_heir_culture = aus_south_islander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = norfolk_islander
+                }
+                set_heir_culture = aus_norfolk_islander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = northern_territorian
+                }
+                set_heir_culture = aus_northern_territorian
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = riverinan
+                }
+                set_heir_culture = aus_riverinan
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = queenslander
+                }
+                set_heir_culture = aus_queenslander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = north_queenslander
+                }
+                set_heir_culture = aus_north_queenslander
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = south_australian
+                }
+                set_heir_culture = aus_south_australian
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = victorian
+                }
+                set_heir_culture = aus_victorian
+            }
+
+			if = {
+                limit = {
+                    has_heir = yes
+					heir_culture = auralian
+                }
+                set_heir_culture = aus_auralian
+            }
+
+			# Consort culture 
+
+            if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = tasmanian
+                }
+                set_consort_culture = aus_tasmanian
+            }
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = canberran
+                }
+                set_consort_culture = aus_canberran
+            }
+			# if = {
+            #     limit = {
+            #         has_consort = yes
+			# 		consort_culture = christmas_islander
+            #     }
+            #     set_consort_culture = aus_christmas_islander
+            # }
+			# if = {
+            #     limit = {
+            #         has_consort = yes
+			# 		consort_culture = cocos_islander
+            #     }
+            #     set_consort_culture = aus_cocos_islander
+            # }
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = new_south_welsh
+                }
+                set_consort_culture = aus_new_south_welsh
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = new_zealander
+                }
+                set_consort_culture = aus_new_zealander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = north_islander
+                }
+                set_consort_culture = aus_north_islander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = south_islander
+                }
+                set_consort_culture = aus_south_islander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = norfolk_islander
+                }
+                set_consort_culture = aus_norfolk_islander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = northern_territorian
+                }
+                set_consort_culture = aus_northern_territorian
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = riverinan
+                }
+                set_consort_culture = aus_riverinan
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = queenslander
+                }
+                set_consort_culture = aus_queenslander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = north_queenslander
+                }
+                set_consort_culture = aus_north_queenslander
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = south_australian
+                }
+                set_consort_culture = aus_south_australian
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = victorian
+                }
+                set_consort_culture = aus_victorian
+            }
+
+			if = {
+                limit = {
+                    has_consort = yes
+					consort_culture = auralian
+                }
+                set_consort_culture = aus_auralian
+            }
+
+			# Provinces
+
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = canberran
+				}
+				change_culture = aus_canberran
+			}
+			# every_province = {
+			# 	limit = {
+			# 		country_or_non_sovereign_subject_holds = ROOT
+			# 		culture = christmas_islander
+			# 	}
+			# 	change_culture = aus_christmas_islander
+			# }
+			# every_province = {
+			# 	limit = {
+			# 		country_or_non_sovereign_subject_holds = ROOT
+			# 		culture = cocos_islander
+			# 	}
+			# 	change_culture = aus_cocos_islander
+			# }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = new_south_welsh
+				}
+				change_culture = aus_new_south_welsh
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = south_islander
+				}
+				change_culture = aus_south_islander
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = north_islander
+				}
+				change_culture = aus_north_islander
+			}
+			every_province = {
+				limit = {
+					culture = norfolk_islander
+				}
+				change_culture = aus_norfolk_islander
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = northern_territorian
+				}
+				change_culture = aus_northern_territorian
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = riverinan
+				}
+				change_culture = aus_riverinan
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = queenslander
+				}
+				change_culture = aus_queenslander
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = north_queenslander
+				}
+				change_culture = aus_north_queenslander
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = south_australian
+				}
+				change_culture = aus_south_australian
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = tasmanian
+				}
+				change_culture = aus_tasmanian
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = victorian
+				}
+				change_culture = aus_victorian
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = western_australian
+				}
+				change_culture = aus_western_australian
+			}
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = auralian
+				}
+				change_culture = aus_auralian
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { # Keep status quo
+		name = FlavorAUS.1000optb
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}

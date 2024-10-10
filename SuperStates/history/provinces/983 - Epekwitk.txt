@@ -8,11 +8,12 @@ culture = montanan
 religion = s_protestant
 capital = "Cut Bank" 
 is_city = yes #1000
-trade_goods = fur
+trade_goods = grain
+fort_15th = yes
 hre = no 
-base_tax = 3
+base_tax = 2
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 

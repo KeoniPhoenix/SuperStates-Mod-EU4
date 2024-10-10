@@ -3,11 +3,12 @@
 owner = ALM
 controller = ALM
 add_core = ALM
+add_core = NCK
 culture = nickajack
 religion = s_protestant
 capital = "Decatur" 
 is_city = yes #5570
-trade_goods = iron
+trade_goods = copper
 hre = no 
 base_tax = 3
 base_production = 1

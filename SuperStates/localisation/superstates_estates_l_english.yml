@@ -1,0 +1,18 @@
+﻿l_english:
+ estate_burghers_grand_west_division:0 "Grand West Division"
+ estate_burghers_grand_west_division_desc:0 "[Root.GetName] has guaranteed the distinct geographic and cultural regions of our state legal and economic privileges in the name of unity. The Grand Division of West Tennessee, in exchange for these liberties, supplies our armies with rations from their vast plantations."
+ estate_burghers_grand_middle_division:0 "Grand Middle Division"
+ estate_burghers_grand_middle_division_desc:0 "[Root.GetName] has guaranteed the distinct geographic and cultural regions of our state legal and economic privileges in the name of unity. The Grand Division of Middle Tennessee, in exchange for these liberties, provides our merchants with precedence in their markets."
+ estate_burghers_grand_east_division:0 "Grand East Division"
+ estate_burghers_grand_east_division_desc:0 "[Root.GetName] has guaranteed the distinct geographic and cultural regions of our state legal and economic privileges in the name of unity. The Grand Division of East Tennessee, in exchange for these liberties, offers their best engineers and craftsmen to assist us in taming rugged terrain."
+
+ estate_church_mormon_missions:0 "Mormon Missions"
+ estate_church_mormon_missions_desc:0 "The Church will endorse our efforts to chart the oceans in order to spread the word of God."
+ estate_church_bastion_of_faith:0 "Bastions of Faith"
+ estate_church_bastion_of_faith_desc:0 "By requesting the assistance of the Church, we can ensure our fortifications are well-prepared to defend from gentile invasion."
+
+ estate_church_development_of_temples_mormon:0 "Development of Temples"
+ estate_church_development_of_temples_mormon_desc:0 "The temples of the state are places of refuge and the seat of the [Root.GetClergyName]. The sovereignty of these institutions must be guaranteed, and their development must be promoted."
+
+ estate_burghers_strong_duchies: "Empowered Bureaucrats"
+ estate_burghers_strong_duchies_desc: "By empowering bureaucrats within the [Root.GetAdjective] government, we can distribute some of the governing process to them so that we may focus on more internal affairs."

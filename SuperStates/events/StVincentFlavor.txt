@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = vincentian_culture
+		}
 		500 = {
 			is_capital = no
 			owned_by = ROOT
@@ -77,6 +80,7 @@ country_event = {
 	
 	option = {
 		name = "StVincentFlavor.1opta"
+		set_country_flag = vincentian_culture
 		500 = {
 			change_culture = vincentian
 			add_core = STV

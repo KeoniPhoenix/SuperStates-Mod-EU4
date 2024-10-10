@@ -1,8 +1,8 @@
-#Country Name: Illinois
+#Country Name: South Illinois / Little Egypt
 
 graphical_culture = westerngfx
 
-color = { 212  144  195 }
+color = { 189  168  94 } # 212  144  195
 
 historical_idea_groups = {
 	plutocracy_ideas

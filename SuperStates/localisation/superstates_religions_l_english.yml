@@ -43,6 +43,7 @@
  DESMONDITES:0 "Desmondites"
  GODBEITES:0 "Godbeites"
  FELIZIANS:0 "Felizians"
+ STRANGITES:0 "Strangites"
  
  KENNEDYIANS:0 "Kennedyians"
  NEOCATHOLIC:0 "Neocatholics"
@@ -133,13 +134,14 @@
  anabaptist_rebels_army:0 "$RELIGION$ Army"
 
  #Mormon Exclusive Church Blessings
- mormon_blessings:0 "Mormon Blessings"
- pick_mormon_blessing:0 "Pick Blessing"
- mormon_theodemocracy_blessing:0 "Mormon Theodemocracy"
- resist_the_invaders_blessing:0 "Resist the Invaders"
- temple_constructions_blessing:0 "Temple Constructions"
- mission_to_the_gentiles_blessing:0 "Mission to the Gentiles"
- nauvoo_legion_blessing:0 "Nauvoo Legion"
+ mormon_blessings: "Mormon Blessings"
+ pick_mormon_blessing: "Pick Blessing"
+ mormon_theodemocracy_blessing: "Mormon Theodemocracy"
+ resist_the_invaders_blessing: "Resist the Invaders"
+ temple_constructions_blessing: "Temple Constructions"
+ mission_to_the_gentiles_blessing: "Mission to the Gentiles"
+ nauvoo_legion_blessing: "Nauvoo Legion"
+ translated_book_of_mormon_blessing: "Translated Book of Mormon"
  
  #Mormon Holy Sites
  HOLY_SITE_952:0 "Salt Lake City"
@@ -152,6 +154,8 @@
  HOLY_SITE_2597_DESC:0 "Palmyra is where we believe the Golden Plates, from which Joseph Smith wrote the Book of Mormon, can be found."
  HOLY_SITE_2669:0 "Adam-ondi-Ahman"
  HOLY_SITE_2669_DESC:0 "Diahman is the site where Adam and Eve lived after their expulsion from the Garden of Eden, and is sacred to Mormon theology."
+ HOLY_SITE_3275: "Nauvoo"
+ HOLY_SITE_3275_DESC: "Nauvoo was an early sanctuary from the violence Mormons faced, and for a time was a prosperous city led by Joseph Smith."
  
  #Church Aspects
  S_PROTESTANT_ASPECTS_LONG:0 "Church Actions"
@@ -160,6 +164,18 @@
  S_METHODIST_ASPECTS_SHORT:0 "Aspect"
  S_LUTHERAN_ASPECTS_LONG:0 "Church Aspect"
  S_LUTHERAN_ASPECTS_SHORT:0 "Aspect"
+
+ s_lutheran_center_of_reformation: "Center of Reformation"
+ s_methodist_center_of_reformation: "Center of Reformation"
+ s_baptist_center_of_reformation: "Center of Reformation"
+ s_anabaptist_center_of_reformation: "Center of Reformation"
+ s_mormon_center_of_reformation: "Mission Center"
+ mormon_center_of_reformation: "Mission Center"
+ anabaptist_center_of_reformation: "Center of Reformation"
+ baptist_center_of_reformation: "Center of Reformation"
+ methodist_center_of_reformation: "Center of Reformation"
+ lutheran_center_of_reformation: "Center of Reformation"
+ #s_puritan_center_of_reformation: "Center of Reformation"
  
  #Lutheran Church Aspects
  aspect_dominus_reget_me:0 "Dominus Regit Me"
@@ -216,11 +232,11 @@
  #Anabaptist Doctrines/Deities
  doctrine_baptism:0 "Baptism"
  doctrine_baptism_desc:0 "We will reserve baptisms only for those who have both turned away from sin and repented, but also requested such."
- doctrine_the_ban:0 "Excommunication"
+ doctrine_the_ban:0 "The Ban"
  doctrine_the_ban_desc:0 "We shall discipline and admonish those who do not walk in the way of righteousness with Christ."
- doctrine_breaking_of_bread:0 "Communion"
+ doctrine_breaking_of_bread:0 "Eucharist"
  doctrine_breaking_of_bread_desc:0 "We shall reserve participation in communion for those who are members of our Body."
- doctrine_separation_from_evil:0 "Separation"
+ doctrine_separation_from_evil:0 "Brethren"
  doctrine_separation_from_evil_desc:0 "We must have no association with those who remain in disobedience and a spirit of rebellion against God."
  doctrine_pastors_in_the_church:0 "Pastors"
  doctrine_pastors_in_the_church_desc:0 "All elders and leaders in the church must be men of good repute, as described in Scripture."

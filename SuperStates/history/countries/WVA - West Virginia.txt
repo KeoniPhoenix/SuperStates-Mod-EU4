@@ -8,8 +8,8 @@ capital = 2539 # Charleston
 1441.1.3 = {
 	monarch = {
 		name = "Arthur Boreman"
-		adm = 5
-		dip = 5
+		adm = 3
+		dip = 3
 		mil = 3
 	}
 }

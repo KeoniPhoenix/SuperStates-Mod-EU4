@@ -7,6 +7,7 @@ culture = michigander
 religion = s_protestant
 capital = "Traverse City"
 is_city = yes #1470
+#fort_15th = yes
 trade_goods = fur
 hre = no
 base_tax = 3

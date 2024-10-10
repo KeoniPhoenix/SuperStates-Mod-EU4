@@ -31,3 +31,12 @@ converted_to_new_england_french_modifier = {
 	opinion = 50
 	yearly_decay = 2
 }
+
+is_grand_division_modifier = {
+	opinion = 50
+}
+
+converted_to_mormon = {
+	opinion = 100
+	yearly_decay = 2
+}

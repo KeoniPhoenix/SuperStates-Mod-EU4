@@ -3,6 +3,7 @@
 owner = DRG
 controller = DRG
 add_core = DRG
+add_core = LAG
 culture = durangoan
 religion = s_catholic
 capital = "Gómez Palacio"

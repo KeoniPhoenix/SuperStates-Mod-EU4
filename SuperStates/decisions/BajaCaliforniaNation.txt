@@ -16,14 +16,10 @@ country_decisions = {
 			NOT = { exists = NSP }
 			#technology_group = mesoamerican
 			OR = {
-				AND = {
-					primary_culture = baja_californian
-					NOT = { exists = BCS }
-				}
-				AND = {
-					primary_culture = south_baja_californian
-					NOT = { exists = BCN }
-				}
+				primary_culture = baja_californian
+				primary_culture = south_baja_californian
+				primary_culture = united_baja_californian
+				primary_culture = pacific_baja_californian
 			}
 			OR = {
 				ai = no
@@ -62,6 +58,7 @@ country_decisions = {
 			owns_core_province = 932 # La Paz
 		}
 		effect = {
+			on_change_tag_effect = yes
 		set_country_flag = formed_baja_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -89,8 +86,11 @@ country_decisions = {
 				add_permanent_claim = LBC
 			}
 			}
-			swap_non_generic_missions = yes
-			country_event = { id = ideagroups.1 } #Swap
+			#swap_non_generic_missions = yes
+			#country_event = { id = ideagroups.1 } #Swap
+			country_event = {
+				id = cultureflavor.7
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -19,10 +19,10 @@ historical_rival = QUE
 
 1443.7.6 = {
 	monarch = {
-		name = "John Macdonald"
-		adm = 2
-		dip = 2
-		mil = 5
+		name = "John Sandfield Macdonald"
+		adm = 4
+		dip = 3
+		mil = 3
 	}
 }
 

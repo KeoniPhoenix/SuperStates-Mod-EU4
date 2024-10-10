@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = antiguan_culture
+		}
 		495 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -53,6 +56,7 @@ country_event = {
 	
 	option = {
 		name = "AntiguanFlavor.1opta"
+		set_country_flag = antiguan_culture
 		495 = { 
 			change_culture = antiguan
 			add_core = ATG

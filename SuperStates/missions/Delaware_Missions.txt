@@ -110,6 +110,13 @@ del_slot_1 = {
 				}
 				add_claim = ROOT
 			}
+			pamlico_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 75
@@ -504,6 +511,13 @@ dmv_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 			north_carolina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			pamlico_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }

@@ -1,0 +1,3974 @@
+##########################
+#
+#  Written by:
+#  Brandon
+#
+##########################
+
+namespace = flavorUTA
+
+# Brothers in the Faith
+country_event = {
+	id = flavorUTA.1
+	title = flavorUTA.1.t
+	desc = flavorUTA.1.desc
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# Ask Idaho to become our vassal
+		name = flavorUTA.1.a
+		custom_tooltip = flavorUTA.1.a.tt
+		hidden_effect = {
+			IDA = {
+				country_event = {
+					id = flavorUTA.15
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	
+	option = {	# Keep the Idahoan Alliance
+		name = flavorUTA.1.b
+		add_trust = {
+			who = IDA
+			value = 30
+			mutual = yes
+		}
+		define_advisor = {
+			type = statesman
+			skill = 1
+			cost_multiplier = 0.25
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+# Utah asks for our allegiance
+country_event = {
+	id = flavorUTA.15
+	title = flavorUTA.15.t
+	desc = flavorUTA.15.desc
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# Accept to become vassals of Utah
+		name = flavorUTA.15.a
+		custom_tooltip = flavorUTA.15.a.tt
+		tooltip = {
+			FROM = {
+				vassalize = ROOT
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = flavorUTA.16
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				OR = {
+					ai = no
+					was_player = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_enemy = FROM
+					is_rival = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { 
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = { diplomatic_reputation = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { NOT = { diplomatic_reputation = 0 }}
+			}
+		}
+	}
+	
+	option = {	# Refuse
+		name = flavorUTA.15.b
+		custom_tooltip = flavorUTA.15.b.tt
+		tooltip = {
+			reverse_add_casus_belli = {
+				type = cb_vassalize_mission
+				target = FROM
+				months = 360
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = FROM
+				months = 360
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = flavorUTA.17
+				}
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = FROM
+				months = 360
+			}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0.57
+				FROM = { 
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 0.29
+				FROM = { diplomatic_reputation = 2 }
+			}
+			modifier = {
+				factor = 1.21
+				FROM = { NOT = { diplomatic_reputation = 0 } }
+			}
+		}
+	}
+}
+
+# Accept vassalization
+country_event = {
+	id = flavorUTA.16
+	title = flavorUTA.16.t
+	desc = flavorUTA.16.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# Idaho accepts to be our vassal
+		name = flavorUTA.16.a
+		vassalize = FROM
+		add_historical_friend = FROM
+		FROM = { add_historical_friend = ROOT }
+		add_trust = {
+			who = FROM
+			value = 20
+			mutual = yes
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Decline vassalization
+country_event = {
+	id = flavorUTA.17
+	title = flavorUTA.17.t
+	desc = flavorUTA.17.desc
+	picture = ACCUSATION_eventPicture
+	is_triggered_only = yes
+	
+	option = {	# This will mean war
+		name = flavorUTA.17.a
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			target = FROM
+			months = 360
+		}
+
+		idaho_area = {
+			add_permanent_claim = ROOT
+		}
+
+		979 = {
+			add_permanent_claim = ROOT
+		}
+
+		978 = {
+			add_permanent_claim = ROOT
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Great Salt Lake City
+country_event = {
+	id = flavorUTA.2
+	title = "flavorUTA.2t"
+	desc = "flavorUTA.2d"
+	picture = BYZ_JERUSALEM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 952
+		#OR = {
+		#	tag = DES
+		#	tag = UTA
+		#	tag = SUT
+		#}
+	}
+	
+	option = { # We will build a new Zion for our people.
+	name = flavorUTA.2.opta
+
+		952 = {
+			change_province_name = "Zion"
+			rename_capital = "Great Salt Lake City"
+			if = {
+				limit = {
+					NOT = {
+						has_great_project = {
+							type = salt_lake_temple
+							tier = 3
+						}
+				}
+				}
+					add_great_project_tier = {
+						type = salt_lake_temple
+						tier = 1
+				}
+			}
+			add_province_modifier = {
+				name = uta_new_zion
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						656 = {
+							is_reformation_center = yes
+						}
+					}
+					NOT = {
+						4352 = {
+							is_reformation_center = yes
+						}
+					}
+					NOT = {
+						766 = {
+							is_reformation_center = yes
+						}
+					}
+					NOT = {
+						778 = {
+							is_reformation_center = yes
+						}
+					}
+					NOT = {
+						809 = {
+							is_reformation_center = yes
+						}
+					}
+				}
+				add_reform_center = mormon
+			}
+			else = { # Workaround to a hard coded limitation of not allowing a tag to spawn more than one CoR at a time.
+				custom_tooltip = mormon.center.tt2
+				hidden_effect = {
+					cede_province = IDA # UTA is the previous owner, so we opt for the nearest tag.
+					remove_core = ROOT
+					add_reform_center = mormon
+					set_province_flag = salt_lake_cor
+					ROOT = {
+						country_event = {
+							id = flavorUTA.1001
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Plight of the Jeffersonians
+	id = flavorUTA.3
+	title = "flavorUTA.3t"
+	desc = "flavorUTA.3d"
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = DES
+			tag = UTA
+			tag = SUT
+		}
+	}
+
+	option = { # We have shared the plight of the Jeffersonians before. Let us aid them.
+	name = flavorUTA.3.opta
+	hidden_effect = {
+		jefferson_area = {
+			add_core = JEF
+			remove_core = ROOT 
+		}
+		high_desert_area = {
+			add_core = JEF
+			remove_core = ROOT
+		}
+	}
+	if = {
+		limit = { NOT = { exists = JEF } }
+		release = JEF
+		hidden_effect = {
+			ROOT = {
+				add_historical_friend = JEF
+			}
+			JEF = {
+				add_historical_friend = ROOT
+				if = {
+					limit = {
+						government = republic
+					}
+					change_government = republic
+				}
+				if = {
+					limit = {
+						government = monarchy
+					}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						government = theocracy
+					}
+					change_government = theocracy
+				}
+				else = {
+					change_government = theocracy
+				}
+				add_government_reform = american_state_reform
+				if = {
+					limit = {
+						ROOT = {
+							religion = mormon
+						}
+					}
+					change_religion = mormon
+				}
+				change_primary_culture = jeffersonian
+				set_prestige_to_zero = yes
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+		}
+	}
+	if = {
+		limit = { JEF = { is_subject = no } }
+		if = {
+			limit = { valid_for_personal_unions_trigger = yes JEF = { valid_for_personal_unions_trigger = yes } }
+			create_subject = {
+				who = JEF
+				subject_type = personal_union
+			}
+		}
+		else = {
+			create_subject = {
+				who = JEF
+				subject_type = vassal
+			}
+		}
+	}
+	hidden_effect = {
+		add_country_modifier = {
+			name = uta_protectors_of_jefferson
+			duration = -1
+			hidden = yes
+		}
+	}
+	custom_tooltip = protectors_of_jefferson_tt
+	}
+	
+	option = { # We are better off holding this land ourselves.
+	name = flavorUTA.3.optb
+		add_adm_power = 50
+	}
+}
+
+# A Wretched Hive
+country_event = {
+	id = flavorUTA.4
+	title = "flavorUTA.4t"
+	desc = "flavorUTA.4d"
+	picture = BYZ_REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 949
+		OR = {
+			tag = DES
+			tag = UTA
+			tag = SUT
+		}
+	}
+	
+	option = { # You will never find a more wretched hive of scum and villainy.
+	name = flavorUTA.4.opta
+
+		949 = {
+			change_culture = ROOT
+			change_religion = ROOT
+			if = {
+				limit = {
+					is_territorial_core = ROOT
+				}
+				add_core = ROOT
+			}
+			add_devastation = 5
+			add_nationalism = -10
+			add_base_manpower = -2
+			add_base_production = -2
+			add_base_tax = -2
+		}
+		add_treasury = 200
+		add_ruler_personality = zealot_personality
+		
+		ai_chance = {
+			factor = 75
+		}
+	}
+
+	option = { # Gambling, spirits, and women you say...?
+	name = flavorUTA.4.optb
+
+		capital_scope = {
+			add_province_modifier = {
+				name = uta_glamor_of_vegas
+				duration = -1
+			}
+		}
+
+		random_list = {
+			50 = {
+				add_treasury = -250
+			}
+			50 = {
+				add_treasury = 500
+			}
+		}
+		random_list = {
+			33 = {
+				add_ruler_personality = sinner_personality
+			}
+			33 = {
+				add_ruler_personality = drunkard_personality
+			}
+			33 = {
+				add_ruler_personality = greedy_personality
+			}
+		}
+		if = {
+			limit = {
+				government = theocracy
+			}
+			add_devotion = -20
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# Deseret Ascendant
+country_event = {
+	id = flavorUTA.5
+	title = "flavorUTA.5t"
+	desc = "flavorUTA.5d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { exists = DES }
+		is_subject = no
+	}
+	
+	option = { # Blessed be our land!
+	name = flavorUTA.5.opta
+
+		if = {
+			limit = {
+				NOT = { exists = DES }
+			}
+			change_tag = DES
+		}
+		if = {
+			limit = {
+				NOT = { government = theocracy }
+			}
+			change_government = theocracy
+		}
+		if = {
+			limit = {
+				NOT = { has_reform = mormon_theodemocracy_reform }
+			}
+			add_government_reform = mormon_theodemocracy_reform
+		}
+		# if = {
+		# 	limit = {
+		# 	NOT = { government_rank = 3 }
+		# 	}
+		# set_government_rank = 3
+		# }
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 3650
+		}
+		swap_non_generic_missions = yes
+		set_country_flag = formed_deseret_flag
+		add_prestige_or_monarch_power = { value = 20 }
+		country_event = { id = ideagroups.1 } #Swap
+		hidden_effect = {
+			add_devotion = 100
+		}
+
+		arizona_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		nevada_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		san_diego_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		colorado_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		new_mexico_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		mojave_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		wyoming_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # We must forge our own path.
+	name = flavorUTA.5.optb
+
+		add_prestige = 20
+
+		set_country_flag = declined_deseret
+		custom_tooltip = declined_deseret_tt
+
+		if = {
+			limit = {
+			NOT = { government_rank = 3 }
+			}
+		set_government_rank = 3
+		}
+
+		arizona_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		nevada_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		san_diego_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		colorado_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		new_mexico_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		mojave_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		wyoming_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Bingham Canyon
+country_event = {
+	id = flavorUTA.6
+	title = "flavorUTA.6t"
+	desc = "flavorUTA.6d"
+	picture = FALUN_COPPER_MINE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 953
+		OR = {
+			tag = DES
+			tag = UTA
+			tag = SUT
+		}
+	}
+	
+	option = { # Wealth and prosperity for [953.GetName]!
+	name = flavorUTA.6.opta
+
+		953 = {
+			change_trade_goods = copper
+			add_province_modifier = {
+				name = uta_brigham_canyon_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+#[Root.GetName] joins the [root.religion.getname] community
+country_event = {
+	id = flavorUTA.10
+	title = flavorUTA.10t
+	desc = flavorUTA.10d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = flavorUTA.10.opta
+		hidden_effect = {
+			every_known_country = {
+				limit = { religion = mormon }
+				add_opinion = {
+					who = root
+					modifier = converted_to_mormon
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# A Deseretian Language
+country_event = {
+	id = flavorUTA.1000
+	title = flavorUTA.1000.t
+	desc = flavorUTA.1000.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = flavorUTA.1000.opta
+			change_primary_culture = deseretan
+			custom_tooltip = DES_deseretan_culture_tt
+
+			hidden_effect = {
+				set_ruler_culture = deseretan
+				if = {
+					limit = {
+						accepted_culture = utahn
+					}
+					remove_accepted_culture = utahn
+				}
+				if = {
+					limit = {
+						accepted_culture = south_utahn
+					}
+					remove_accepted_culture = south_utahn
+				}
+				if = {
+					limit = {
+						accepted_culture = nevadan
+					}
+					remove_accepted_culture = nevadan
+				}
+				if = {
+					limit = {
+						accepted_culture = idahoan
+					}
+					remove_accepted_culture = idahoan
+				}
+				if = {
+					limit = {
+						accepted_culture = las_vegan
+					}
+					remove_accepted_culture = las_vegan
+				}
+				if = {
+					limit = { has_heir = yes }
+					set_heir_culture = deseretan
+				}
+				if = {
+					limit = { 
+						has_consort = yes
+						OR = {
+							consort_culture = utahn
+							consort_culture = south_utahn
+							consort_culture = las_vegan
+							consort_culture = nevadan
+							consort_culture = idahoan
+							AND = {
+								owns_all_provinces = {
+									culture = wyomingite
+								}
+								consort_culture = deseretan
+							}
+							AND = {
+								owns_all_provinces = {
+									culture = arizonan
+								}
+								consort_culture = deseretan
+							}
+							AND = {
+								owns_all_provinces = {
+									culture = coloradan
+								}
+								consort_culture = deseretan
+							}
+						}
+					}
+					set_consort_culture = deseretan
+				}
+				every_subject_country = {
+					limit = {
+						OR = {
+							culture = las_vegan
+							culture = nevadan
+							culture = idahoan
+							culture = south_utahn
+							culture = utahn
+							culture = arizonan
+							culture = wyomingite
+							culture = coloradan
+						}
+					}
+					change_primary_culture = deseretan
+				}
+				every_province = {
+					limit = {
+						OR = {
+							culture = las_vegan
+							culture = nevadan
+							culture = idahoan
+							culture = south_utahn
+							culture = utahn
+							culture = arizonan
+							culture = wyomingite
+							culture = coloradan
+						}
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					change_culture = deseretan
+				}
+			}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = flavorUTA.1000.optb
+		add_dip_power = 50
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Philippines CoR
+country_event = {
+	id = flavorUTA.11
+	title = "flavorUTA.11t"
+	desc = "flavorUTA.11d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			656 = { # Manila
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			656 = {
+				religion = mormon
+			}
+			4352 = { # Cebu
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4352 = {
+				religion = mormon
+			}
+		}
+	}
+	
+	option = { # Establish a temple in Manila
+	name = flavorUTA.11.opta
+	trigger = {
+		OR = {
+			656 = { # Manila
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			656 = {
+					religion = mormon
+				}
+			}
+		}
+
+		hidden_effect = { # Workaround to a hard coded limitation of not letting one tag spawn more than one CoT at a time
+		if = {
+			limit = {
+				656 = {
+					owned_by = ROOT
+				}
+			}
+			656 = {
+				cede_province = previous_owner
+				set_province_flag = manila_chosen
+				remove_core = ROOT
+			}
+		}
+	}
+
+		656 = {
+			custom_tooltip = mormon.center.tt
+			if = {
+				limit = {
+					NOT = { religion = mormon }
+				}
+				change_religion = mormon
+			}
+			add_reform_center = mormon
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.1001
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = { # Establish a temple in Cebu
+	name = flavorUTA.11.optb
+	trigger = {
+		OR = {
+			4352 = { # Cebu
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			4352 = {
+					religion = mormon
+				}
+			}
+		}
+
+		hidden_effect = { # Workaround to a hard coded limitation of not letting one tag spawn more than one CoT at a time
+		if = {
+			limit = {
+				4352 = {
+					owned_by = ROOT
+				}
+			}
+			4352 = {
+				cede_province = previous_owner
+				set_province_flag = cebu_chosen
+				remove_core = ROOT
+			}
+		}
+	}
+
+		4352 = {
+			custom_tooltip = mormon.center.tt
+			if = {
+				limit = {
+					NOT = { religion = mormon }
+				}
+				change_religion = mormon
+			}
+			add_reform_center = mormon
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.1001
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = { # No, leave the locals be.
+	name = flavorUTA.11.optc
+		add_prestige_or_monarch_power = { amount = 20 }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# South America CoR
+country_event = {
+	id = flavorUTA.12
+	title = "flavorUTA.12t"
+	desc = "flavorUTA.12d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			809 = { # Lima
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			809 = {
+				religion = mormon
+			}
+			766 = { # Sao Paulo
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			766 = {
+				religion = mormon
+			}
+			778 = { # Buenos Aires
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			778 = {
+				religion = mormon
+			}
+		}
+	}
+	
+	option = { # Establish a temple in Lima
+	name = flavorUTA.12.opta
+	trigger = {
+		OR = {
+			809 = { # Lima
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			809 = {
+					religion = mormon
+				}
+			}
+		}
+
+		hidden_effect = { # Workaround to a hard coded limitation of not letting one tag spawn more than one CoT at a time
+		if = {
+			limit = {
+				809 = {
+					owned_by = ROOT
+				}
+			}
+			809 = {
+				cede_province = previous_owner
+				set_province_flag = lima_chosen
+				remove_core = ROOT
+			}
+		}
+	}
+
+		809 = {
+			custom_tooltip = mormon.center.tt
+			if = {
+				limit = {
+					NOT = { religion = mormon }
+				}
+				change_religion = mormon
+			}
+			add_reform_center = mormon
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.1001
+			}
+		}
+
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { # Establish a temple in Sao Paulo
+	name = flavorUTA.12.optb
+	trigger = {
+		766 = {
+			is_city = yes
+		}
+		OR = {
+			766 = { # Sao Paulo
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			766 = {
+					religion = mormon
+				}
+			}
+		}
+
+		hidden_effect = { # Workaround to a hard coded limitation of not letting one tag spawn more than one CoT at a time
+		if = {
+			limit = {
+				766 = {
+					owned_by = ROOT
+				}
+			}
+			766 = {
+				cede_province = TUA # Sao Paulo starts uncolonized, so Tapuia is the nearest tag.
+				set_province_flag = sao_paulo_chosen
+				remove_core = ROOT
+			}
+		}
+	}
+
+		766 = {
+			custom_tooltip = mormon.center.tt
+			if = {
+				limit = {
+					NOT = { religion = mormon }
+				}
+				change_religion = mormon
+			}
+			add_reform_center = mormon
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.1001
+			}
+		}
+
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { # Establish a temple in Buenos Aires
+	name = flavorUTA.12.optc
+	trigger = {
+		778 = {
+			is_city = yes
+		}
+		OR = {
+			778 = { # Buenos Aires
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			778 = {
+					religion = mormon
+				}
+			}
+		}
+
+		hidden_effect = { # Workaround to a hard coded limitation of not letting one tag spawn more than one CoT at a time
+		if = {
+			limit = {
+				778 = {
+					owned_by = ROOT
+				}
+			}
+			778 = {
+				cede_province = previous_owner
+				set_province_flag = buenos_aires_chosen
+				remove_core = ROOT
+			}
+		}
+	}
+
+		778 = {
+			custom_tooltip = mormon.center.tt
+			if = {
+				limit = {
+					NOT = { religion = mormon }
+				}
+				change_religion = mormon
+			}
+			add_reform_center = mormon
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.1001
+			}
+		}
+
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { # No, leave the locals be
+	name = flavorUTA.12.optd
+		
+		add_prestige_or_monarch_power = { amount = 20 }
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Californian Markets
+country_event = {
+	id = flavorUTA.1002
+	title = "flavorUTA.1002t"
+	desc = "flavorUTA.1002d"
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { # Bolster our presence in San Francisco
+	name = flavorUTA.1002.opta
+
+	trigger = {
+		OR = {
+			946 = { country_or_non_sovereign_subject_holds = ROOT }
+			951 = { country_or_non_sovereign_subject_holds = ROOT }
+			2734 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+	}
+		946 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+
+		951 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+
+		if = {
+			limit = {
+				2734 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			2734 = {
+				center_of_trade = 1
+			}
+		}
+		
+		if = {
+			limit = {
+				2734 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				951 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				946 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			add_dip_power = 200
+			add_years_of_income = 1.5
+		}
+
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { # Bolster our presence in Los Angeles
+	name = flavorUTA.1002.optb
+	trigger = {
+		OR = {
+			943 = { 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			942 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			944 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+
+		944 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+
+		943 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+
+		942 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				center_of_trade = 1
+			}
+		}
+		
+		if = {
+			limit = {
+				943 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				944 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				942 = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			add_dip_power = 200
+			add_years_of_income = 1.5
+		}
+		ai_chance = {
+			factor = 33
+		}
+	}
+
+	option = { # No, our current situation works.
+	name = flavorUTA.1002.optc
+
+		if = {
+			limit = {
+				953 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			953 = {
+				center_of_trade = 1
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+				952 = {
+					province_has_center_of_trade_of_level = 3
+					}
+				}
+			}
+			952 = {
+				add_center_of_trade_level = 1
+			}
+		}
+
+		if = {
+			limit = {
+				976 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					952 = {
+						province_has_center_of_trade_of_level = 3
+						}
+					}
+			}
+			976 = {
+				add_center_of_trade_level = 1
+			}
+		}
+
+		ai_chance = {
+			factor = 33
+		}
+	}
+}
+
+country_event = { # Workaround, hidden event that will fire to ensure Utah can spawn a CoR in mission provinces even if they already own one.
+	id = flavorUTA.1001
+	title = "flavorUTA.1001t"
+	desc = "flavorUTA.1001d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				766 = {
+					has_province_flag = sao_paulo_chosen
+				}
+			}
+			766 = {
+				cede_province = ROOT
+				add_core = ROOT
+				clr_province_flag = sao_paulo_chosen
+				add_local_autonomy = -100
+				add_prosperity = 100
+				remove_core = TUA
+			}
+		}
+
+		if = {
+			limit = {
+				778 = {
+					has_province_flag = buenos_aires_chosen
+				}
+			}
+			778 = {
+				cede_province = ROOT
+				add_core = ROOT
+				clr_province_flag = buenos_aires_chosen
+				add_local_autonomy = -100
+				add_prosperity = 100
+			}
+		}
+
+		if = {
+			limit = {
+				809 = {
+					has_province_flag = lima_chosen
+				}
+			}
+			809 = {
+				cede_province = ROOT
+				add_core = ROOT
+				add_center_of_trade_level = 1
+				clr_province_flag = lima_chosen
+				add_local_autonomy = -100
+				add_prosperity = 100
+			}
+		}
+
+		if = {
+			limit = {
+				656 = {
+					has_province_flag = manila_chosen
+				}
+			}
+			656 = {
+				cede_province = ROOT
+				add_core = ROOT
+				add_center_of_trade_level = 1
+				clr_province_flag = manila_chosen
+				add_local_autonomy = -100
+				add_prosperity = 100
+			}
+		}
+
+		if = {
+			limit = {
+				4352 = {
+					has_province_flag = cebu_chosen
+				}
+			}
+			4352 = {
+				cede_province = ROOT
+				add_core = ROOT
+				add_center_of_trade_level = 1
+				clr_province_flag = cebu_chosen
+				add_local_autonomy = -100
+				add_prosperity = 100
+			}
+		}
+
+		if = {
+			limit = {
+				952 = {
+					has_province_flag = salt_lake_cor
+				}
+			}
+			952 = {
+				cede_province = ROOT
+				add_core = ROOT
+				add_center_of_trade_level = 1
+				clr_province_flag = salt_lake_cor
+				add_local_autonomy = -100
+				add_prosperity = 100
+				remove_core = IDA
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = flavorUTA.1003
+	title = flavorUTA.1003.t
+	desc = flavorUTA.1003.d
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.1003.opta
+		baja_california_provincegroup = {
+			add_core = LBC
+		}
+		if = {
+			limit = { NOT = { exists = LBC } }
+			release = LBC
+			hidden_effect = {
+				baja_california_provincegroup = {
+					remove_core = ROOT
+					remove_claim = ROOT
+				}
+				ROOT = {
+					add_historical_friend = LBC
+				}
+				LBC = {
+					remove_accepted_culture = baja_californian
+					remove_accepted_culture = south_baja_californian
+					add_historical_friend = ROOT
+					if = {
+						limit = {
+							ROOT = {
+								government = republic
+							}
+						}
+						change_government = republic
+						add_government_reform = american_state_reform
+					}
+					if = {
+						limit = {
+							ROOT = {
+								government = monarchy
+							}
+						}
+						change_government = monarchy
+					}
+					if = {
+						limit = {
+							ROOT = {
+								government = theocracy
+							}
+						}
+						change_government = theocracy
+					}
+					else = {
+						change_government = theocracy
+					}
+					if = {
+						limit = {
+							ROOT = {
+								religion = mormon
+							}
+						}
+						change_religion = mormon
+					}
+					add_accepted_culture_or_dip_power = { culture = baja_californian free = yes }
+					add_accepted_culture_or_dip_power = { culture = south_baja_californian free = yes }
+					set_prestige_to_zero = yes
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+					if = {
+						limit = {
+							932 = {
+								owned_by = LBC
+							}
+						}
+						set_capital = 932 # La Paz
+					}
+				}
+			}
+		}
+		if = {
+			limit = { LBC = { is_subject = no } }
+			if = {
+				limit = { valid_for_personal_unions_trigger = yes LBC = { valid_for_personal_unions_trigger = yes } }
+				create_subject = {
+					who = LBC
+					subject_type = personal_union
+				}
+			}
+			else = {
+				create_subject = {
+					who = LBC
+					subject_type = vassal
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = {
+		name = flavorUTA.1003.optb
+		
+		934 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+
+		ai_chance = {
+			factor = 30
+		}
+	}
+
+	option = {
+		name = flavorUTA.1003.optc
+		add_ruler_personality = calm_personality
+		add_stability_or_adm_power = yes
+		
+		if = {
+			limit = {
+				government = monarchy
+			}
+			define_heir = {
+				dynasty = ROOT
+				claim = 50
+				no_consort_with_heir = yes
+			}
+		}
+
+		if = {
+			limit = {
+				government = monarchy
+			}
+			define_consort = {
+				culture = baja_californian
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = flavorUTA.1004
+	title = flavorUTA.1004.t
+	desc = flavorUTA.1004.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			LBC = {
+				is_subject_of = ROOT
+			}
+		}
+		name = flavorUTA.1004.opta
+		custom_tooltip = pacific_baja_californian_tt2
+		if = {
+			limit = {
+				LBC = {
+					is_subject_of = ROOT
+					is_subject_of_type = vassal
+				}
+			}
+			create_march = LBC
+		}
+		LBC = {
+			if = {
+				limit = {
+					932 = {
+						owned_by = LBC
+					}
+				}
+				set_capital = 932 # La Paz
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_consort = yes
+					consort_culture = baja_californian
+				}
+				set_consort_culture = pacific_baja_californian
+			}
+			LBC = {
+				change_primary_culture = pacific_baja_californian
+				set_ruler_culture = pacific_baja_californian
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					set_heir_culture = pacific_baja_californian
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						OR = {
+							consort_culture = baja_californian
+							consort_culture = south_baja_californian
+							consort_culture = united_baja_californian
+						}
+					}
+					set_consort_culture = pacific_baja_californian
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owned_by_subject_of = ROOT
+					}
+					OR = {
+						culture = baja_californian
+						culture = south_baja_californian
+						culture = united_baja_californian
+					}
+				}
+				change_culture = pacific_baja_californian
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = {
+		name = flavorUTA.1004.optb
+
+		custom_tooltip = pacific_baja_californian_tt2
+		hidden_effect = {
+			if = {
+				limit = {
+					has_consort = yes
+					consort_culture = baja_californian
+				}
+				set_consort_culture = pacific_baja_californian
+			}
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owned_by_subject_of = ROOT
+					}
+					OR = {
+						culture = baja_californian
+						culture = south_baja_californian
+						culture = united_baja_californian
+					}
+				}
+				change_culture = pacific_baja_californian
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = {
+	id = flavorUTA.1005
+	title = flavorUTA.1005.t
+	desc = flavorUTA.1005.d
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.1005.opta
+		trigger = {
+			LBC = {
+				is_subject_of = ROOT
+			}
+		}
+
+		LBC = {
+			change_tag = ROS
+			change_government = republic
+			hidden_effect = {
+				add_government_reform = american_state_reform
+			}
+		}
+		hidden_effect = {
+			ROS = {
+				change_primary_culture = pacific_baja_californian
+				add_accepted_culture_or_dip_power = { culture = sonoran_culture free = yes }
+				add_accepted_culture_or_dip_power = { culture = sinaloan free = yes }
+			}
+		}
+		create_march = ROS
+		sonora_area = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cede_province = ROS
+		}
+		sinaloa_area = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cede_province = ROS
+		}
+		sinaloa_area = {
+			add_permanent_claim = ROS
+		}
+		hidden_effect = {
+			ROOT = {
+				add_historical_friend = ROS
+			}
+			ROS = {
+				add_historical_friend = ROOT
+			}
+			sonora_area = {
+				add_permanent_claim = ROS
+			}
+		}
+	# 	baja_california_provincegroup = {
+	# 		add_core = ROS
+	# 	}
+	# 	sonora_area = {
+	# 		add_core = ROS
+	# 	}
+	# 	sinaloa_area = {
+	# 		add_core = ROS
+	# 	}
+	# 	LBC = {
+	# 	if = {
+	# 		limit = { NOT = { exists = ROS } }
+	# 		release = ROS
+	# 		hidden_effect = {
+	# 			baja_california_provincegroup = {
+	# 				remove_core = LBC
+	# 				remove_claim = LBC
+	# 			}
+	# 			sonora_area = {
+	# 				remove_core = LBC
+	# 				remove_claim = LBC
+	# 			}
+	# 			sinaloa_area = {
+	# 				remove_core = LBC
+	# 			}
+	# 			PREV = {
+	# 				add_historical_friend = ROS
+	# 			}
+	# 			ROS = {
+	# 				add_historical_friend = ROOT
+	# 				change_government = republic
+	# 				add_government_reform = american_state_reform
+	# 				if = {
+	# 					limit = {
+	# 						ROOT = {
+	# 							religion = mormon
+	# 						}
+	# 					}
+	# 					change_religion = mormon
+	# 				}
+	# 				remove_accepted_culture = baja_californian
+	# 				remove_accepted_culture = south_baja_californian
+	# 				change_primary_culture = pacific_baja_californian
+	# 				add_accepted_culture_or_dip_power = { culture = sonoran_culture free = yes }
+	# 				add_accepted_culture_or_dip_power = { culture = sinaloan free = yes }
+	# 				set_prestige_to_zero = yes
+	# 				add_adm_power = 50
+	# 				add_dip_power = 50
+	# 				add_mil_power = 50
+	# 				if = {
+	# 					limit = {
+	# 						932 = {
+	# 							owned_by = ROS
+	# 						}
+	# 					}
+	# 					set_capital = 932 # La Paz
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# 	if = {
+	# 		limit = { ROS = { is_subject = no } }
+	# 		if = {
+	# 			limit = { valid_for_personal_unions_trigger = yes ROS = { valid_for_personal_unions_trigger = yes } }
+	# 			create_subject = {
+	# 				who = ROS
+	# 				subject_type = personal_union
+	# 			}
+	# 		}
+	# 		else = {
+	# 			create_subject = {
+	# 				who = ROS
+	# 				subject_type = vassal
+	# 			}
+	# 		}
+	# 	}
+
+		set_country_flag = sonora_to_subject_flag
+
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = {
+		name = flavorUTA.1005.optb
+
+		add_accepted_culture_or_dip_power = { culture = pacific_baja_californian }
+		
+		932 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 1
+					}
+				}
+				center_of_trade = 1
+			}
+		}
+
+		920 = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 1
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				center_of_trade = 1
+			}
+		}
+
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Mormon Pioneer Events, IDs start at 50.
+
+country_event = {
+	id = flavorUTA.50
+	title = flavorUTA.50.t
+	desc = flavorUTA.50.d
+	picture = USA_COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.50.opta
+
+		custom_tooltip = mormon_pioneers_tt
+		hidden_effect = {
+			set_country_flag = mormon_pioneers_flag_diahman
+			set_country_flag = mormon_pioneers_flag_nauvoo
+			ROOT = {
+				save_global_event_target_as = pioneer_origin_country
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { # Mormon Pioneers arrive in [2669.GetName], Buchanan Missouri
+	id = flavorUTA.51
+	title = flavorUTA.51.t
+	desc = flavorUTA.51.d
+	picture = USA_COLONIZATION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		event_target:pioneer_origin_country = {
+			has_country_flag = mormon_pioneers_flag_diahman
+		}
+
+		2669 = {
+			owned_by = ROOT
+			NOT = {
+				religion = mormon
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	immediate = {
+		event_target:pioneer_origin_country = {
+			clr_country_flag = mormon_pioneers_flag_diahman
+		}
+	}
+
+	option = {
+		name = flavorUTA.51.opta
+		
+		custom_tooltip = accept_mormon_pioneers_tt
+		event_target:pioneer_origin_country = {
+			set_country_flag = diahman_pioneers_accepted
+		}
+
+		2669 = {
+			change_religion = event_target:pioneer_origin_country
+			#change_culture = event_target:pioneer_origin_country
+			add_permanent_province_modifier = {
+				name = mormon_settlers
+				duration = -1
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.52
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.51.optb
+
+		tooltip = {
+			reverse_add_opinion = {
+				who = event_target:pioneer_origin_country
+				modifier = opinion_insulted
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				reverse_add_casus_belli = {
+					type = cb_crusade
+					target = ROOT
+					months = 60
+				}
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_core = 2669
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.53 # Missouri rejects our settlers!
+				}
+			}
+			set_country_flag = diahman_pioneers_rejected
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { # Missouri accepts our settlers
+	id = flavorUTA.52
+	title = flavorUTA.52.t
+	desc = flavorUTA.52.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.52.opta
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = mormon
+					NOT = {
+						has_country_modifier = uta_temple_constructions
+					}
+				}
+				add_country_modifier = {
+					name = uta_temple_constructions
+					duration = -1
+				}
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = uta_temple_constructions
+				duration = -1
+			}
+		}
+
+		custom_tooltip = every_mormon_country_tt
+		custom_tooltip = remove_blessing_modifier_tt
+
+		tooltip = {
+			2669 = {
+				change_religion = ROOT
+				#change_culture = ROOT
+				add_permanent_province_modifier = {
+					name = mormon_settlers
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {  # Missouri rejects our settlers!
+	id = flavorUTA.53
+	title = flavorUTA.53.t
+	desc = flavorUTA.53.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.53.opta
+
+			add_opinion = {
+				who = FROM
+				modifier = opinion_insulted
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+
+			add_core = 2669
+	}
+}
+
+# Mormon Pioneer events for Nauvoo
+
+country_event = { # Mormon Pioneers arrive in [3275.GetName], Knox Illinois
+	id = flavorUTA.54
+	title = flavorUTA.54.t
+	desc = flavorUTA.54.d
+	picture = USA_COLONIZATION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		event_target:pioneer_origin_country = {
+			has_country_flag = mormon_pioneers_flag_nauvoo
+		}
+
+		3275 = {
+			owned_by = ROOT
+			NOT = {
+				religion = mormon
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 4 
+	}
+
+	immediate = {
+		event_target:pioneer_origin_country = {
+			clr_country_flag = mormon_pioneers_flag_nauvoo
+		}
+	}
+
+	option = {
+		name = flavorUTA.54.opta
+		
+		custom_tooltip = accept_mormon_pioneers_tt
+		event_target:pioneer_origin_country = {
+			set_country_flag = nauvoo_pioneers_accepted
+		}
+
+		3275 = {
+			change_religion = event_target:pioneer_origin_country
+			#change_culture = event_target:pioneer_origin_country
+			add_permanent_province_modifier = {
+				name = mormon_settlers
+				duration = -1
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.55
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.54.optb
+
+		tooltip = {
+			reverse_add_opinion = {
+				who = event_target:pioneer_origin_country
+				modifier = opinion_insulted
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_casus_belli = {
+					type = cb_crusade
+					target = ROOT
+					months = 60
+				}
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_core = 3275
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.56 # Illinois rejects our settlers!
+				}
+				set_country_flag = nauvoo_pioneers_rejected
+			}
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { # Illinois accepts our settlers
+	id = flavorUTA.55
+	title = flavorUTA.55.t
+	desc = flavorUTA.55.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 3275
+
+	option = {
+		name = flavorUTA.55.opta
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = mormon
+					NOT = {
+						has_country_modifier = uta_nauvoo_legion_blessing
+					}
+				}
+				add_country_modifier = {
+					name = uta_nauvoo_legion_blessing
+					duration = -1
+				}
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = uta_nauvoo_legion_blessing
+				duration = -1
+			}
+		}
+
+		custom_tooltip = every_mormon_country_tt
+		custom_tooltip = remove_blessing_modifier_tt
+
+		tooltip = {
+			3275 = {
+				change_religion = ROOT
+				#change_culture = ROOT
+				add_permanent_province_modifier = {
+					name = mormon_settlers
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {  # Illinois rejects our settlers!
+	id = flavorUTA.56
+	title = flavorUTA.56.t
+	desc = flavorUTA.56.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 3275
+
+	option = {
+		name = flavorUTA.56.opta
+
+			add_opinion = {
+				who = FROM
+				modifier = opinion_insulted
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+
+			add_core = 3275
+	}
+}
+
+# Mormon Pioneer Events for Kirtland
+
+country_event = { # Mormon Pioneers arrive in [2579.GetName], Cuyahoga Ohio
+	id = flavorUTA.57
+	title = flavorUTA.57.t
+	desc = flavorUTA.57.d
+	picture = USA_COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	goto = 3275
+
+	trigger = {
+		event_target:pioneer_origin_country = {
+			has_country_flag = mormon_pioneers_flag_kirtland
+		}
+
+		2579 = {
+			owned_by = ROOT
+			NOT = {
+				religion = mormon
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 4 
+	}
+
+	immediate = {
+		event_target:pioneer_origin_country = {
+			clr_country_flag = mormon_pioneers_flag_kirtland
+		}
+	}
+
+	option = {
+		name = flavorUTA.57.opta
+		
+		custom_tooltip = accept_mormon_pioneers_tt
+		event_target:pioneer_origin_country = {
+			set_country_flag = kirtland_pioneers_accepted
+		}
+
+		2579 = {
+			change_religion = event_target:pioneer_origin_country
+			#change_culture = event_target:pioneer_origin_country
+			add_permanent_province_modifier = {
+				name = mormon_settlers
+				duration = -1
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.58
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.57.optb
+
+		tooltip = {
+			reverse_add_opinion = {
+				who = event_target:pioneer_origin_country
+				modifier = opinion_insulted
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				reverse_add_casus_belli = {
+					type = cb_crusade
+					target = ROOT
+					months = 60
+				}
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_core = 2579
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.59 # Ohio rejects our settlers!
+				}
+				set_country_flag = kirtland_pioneers_rejected
+			}
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { # Ohio accepts our settlers
+	id = flavorUTA.58
+	title = flavorUTA.58.t
+	desc = flavorUTA.58.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavorUTA.58.opta
+		goto = 2579
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = mormon
+					NOT = {
+						has_country_modifier = uta_first_temple
+					}
+				}
+				add_country_modifier = {
+					name = uta_first_temple
+					duration = -1
+				}
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = uta_first_temple
+				duration = -1
+			}
+		}
+
+		custom_tooltip = every_mormon_country_tt
+
+		tooltip = {
+			2579 = {
+				change_religion = ROOT
+				#change_culture = ROOT
+				add_permanent_province_modifier = {
+					name = mormon_settlers
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {  # Ohio rejects our settlers!
+	id = flavorUTA.59
+	title = flavorUTA.59.t
+	desc = flavorUTA.59.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 2579
+
+	option = {
+		name = flavorUTA.59.opta
+
+			add_opinion = {
+				who = FROM
+				modifier = opinion_insulted
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+
+			add_core = 2579
+	}
+}
+
+# Mormon Pioneer Events for Monroe
+
+country_event = { # Mormon Pioneers arrive in [2597.GetName], Monroe New York
+	id = flavorUTA.60
+	title = flavorUTA.60.t
+	desc = flavorUTA.60.d
+	picture = USA_COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	goto = 2597
+
+	trigger = {
+		event_target:pioneer_origin_country = {
+			has_country_flag = mormon_pioneers_flag_sacred
+		}
+
+		2597 = {
+			owned_by = ROOT
+			NOT = {
+				religion = mormon
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 4 
+	}
+
+	immediate = {
+		event_target:pioneer_origin_country = {
+			clr_country_flag = mormon_pioneers_flag_sacred
+		}
+	}
+
+	option = {
+		name = flavorUTA.60.opta
+		
+		custom_tooltip = accept_mormon_pioneers_tt
+		event_target:pioneer_origin_country = {
+			set_country_flag = palmyra_pioneers_accepted
+		}
+
+		2579 = {
+			change_religion = event_target:pioneer_origin_country
+			#change_culture = event_target:pioneer_origin_country
+			add_permanent_province_modifier = {
+				name = mormon_settlers
+				duration = -1
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.61
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.60.optb
+
+		tooltip = {
+			reverse_add_opinion = {
+				who = event_target:pioneer_origin_country
+				modifier = opinion_insulted
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				reverse_add_casus_belli = {
+					type = cb_crusade
+					target = ROOT
+					months = 60
+				}
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_core = 2597
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.62 # New York rejects our settlers!
+				}
+				set_country_flag = palmyra_pioneers_rejected
+			}
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { # New York accepts our settlers
+	id = flavorUTA.61
+	title = flavorUTA.61.t
+	desc = flavorUTA.61.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 2597
+
+	option = {
+		name = flavorUTA.61.opta
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = mormon
+						NOT = {
+							has_country_modifier = uta_translated_book_of_mormon
+						}
+					}
+					add_country_modifier = {
+						name = uta_translated_book_of_mormon
+						duration = -1
+					}
+				}
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = uta_translated_book_of_mormon
+					duration = -1
+				}
+			}
+			custom_tooltip = every_mormon_country_tt
+			custom_tooltip = remove_blessing_modifier_tt
+		
+		tooltip = {
+			2597 = {
+				change_religion = ROOT
+				#change_culture = ROOT
+				add_permanent_province_modifier = {
+					name = mormon_settlers
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {  # New York rejects our settlers!
+	id = flavorUTA.62
+	title = flavorUTA.62.t
+	desc = flavorUTA.62.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 2597
+
+	option = {
+		name = flavorUTA.62.opta
+
+			add_opinion = {
+				who = FROM
+				modifier = opinion_insulted
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+
+			add_core = 2597
+	}
+}
+
+# Mormon Pioneer Events for Lackawanna
+
+country_event = { # Mormon Pioneers arrive in [2586.GetName], Lackawanna Pennsylvania
+	id = flavorUTA.63
+	title = flavorUTA.63.t
+	desc = flavorUTA.63.d
+	picture = USA_COLONIZATION_eventPicture
+
+	fire_only_once = yes
+	goto = 2586
+
+	trigger = {
+		event_target:pioneer_origin_country = {
+			has_country_flag = mormon_pioneers_flag_restoration
+		}
+
+		2586 = {
+			owned_by = ROOT
+			NOT = {
+				religion = mormon
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 4 
+	}
+
+	immediate = {
+		event_target:pioneer_origin_country = {
+			clr_country_flag = mormon_pioneers_flag_restoration
+		}
+	}
+
+	option = {
+		name = flavorUTA.63.opta
+		
+		custom_tooltip = accept_mormon_pioneers_tt
+		event_target:pioneer_origin_country = {
+			set_country_flag = restoration_pioneers_accepted
+		}
+
+		2586 = {
+			change_religion = event_target:pioneer_origin_country
+			#change_culture = event_target:pioneer_origin_country
+			add_permanent_province_modifier = {
+				name = mormon_settlers
+				duration = -1
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.64
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.63.optb
+
+		tooltip = {
+			reverse_add_opinion = {
+				who = event_target:pioneer_origin_country
+				modifier = opinion_insulted
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				reverse_add_casus_belli = {
+					type = cb_crusade
+					target = ROOT
+					months = 60
+				}
+			}
+		}
+
+		tooltip = {
+			event_target:pioneer_origin_country = {
+				add_core = 2586
+			}
+		}
+
+		hidden_effect = {
+			event_target:pioneer_origin_country = {
+				country_event = {
+					id = flavorUTA.65 # Pennsylvania rejects our settlers!
+				}
+				set_country_flag = restoration_pioneers_rejected
+			}
+		}
+
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+country_event = { # Pennsylvania accepts our settlers
+	id = flavorUTA.64
+	title = flavorUTA.64.t
+	desc = flavorUTA.64.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 2586
+
+	option = {
+		name = flavorUTA.64.opta
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = mormon
+					NOT = {
+						has_country_modifier = uta_mission_to_the_gentiles
+					}
+				}
+				add_country_modifier = {
+					name = uta_mission_to_the_gentiles
+					duration = -1
+				}
+			}
+		}
+		tooltip = {
+			add_country_modifier = {
+				name = uta_mission_to_the_gentiles
+				duration = -1
+			}
+		}
+		custom_tooltip = every_mormon_country_tt
+		custom_tooltip = remove_blessing_modifier_tt
+
+		tooltip = {
+			2586 = {
+				change_religion = ROOT
+				#change_culture = ROOT
+				add_permanent_province_modifier = {
+					name = mormon_settlers
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+country_event = {  # Pennsylvania rejects our settlers!
+	id = flavorUTA.65
+	title = flavorUTA.65.t
+	desc = flavorUTA.65.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	goto = 2586
+
+	option = {
+		name = flavorUTA.65.opta
+
+			add_opinion = {
+				who = FROM
+				modifier = opinion_insulted
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+
+			add_core = 2586
+	}
+}
+
+# Events for owning Mormon holy sites directly, starts at ID 70.
+
+#Buchanan, Adam-ondi-Ahman/Diahman
+country_event = {
+	id = flavorUTA.70
+	title = "flavorUTA.70t" # Adam and Eve
+	desc = "flavorUTA.70d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	is_triggered_only = yes
+	goto = 2669
+
+	trigger = {
+		owns = 2669
+	}
+
+	immediate = {
+		set_country_flag = diahman_event_flag
+	}
+	
+	option = { 
+	name = flavorUTA.70.opta
+
+		2669 = {
+			change_province_name = "Adam-ondi-Ahman"
+			rename_capital = "New Eden"
+			add_building = cathedral
+			add_province_modifier = {
+				name = uta_new_eden
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture = ROOT
+					}
+				}
+				change_culture = ROOT
+			}
+		}
+	}
+}
+
+# Nauvoo, Knox 
+country_event = {
+	id = flavorUTA.71
+	title = "flavorUTA.71t" # City of Nauvoo
+	desc = "flavorUTA.71d"
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 3275
+	}
+
+	immediate = {
+		set_country_flag = nauvoo_event_flag
+	}
+	
+	option = { 
+	name = flavorUTA.71.opta # Make Nauvoo the capital
+	goto = 3275
+
+		set_capital = 3275
+
+		3275 = {
+			change_province_name = "Nauvoo"
+			rename_capital = "Nauvoo"
+			add_latest_building = {
+				builder = ROOT
+				trade = yes
+			}
+			center_of_trade = 2
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = uta_nauvoo_capital
+				duration = -1
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture = ROOT
+					}
+				}
+				change_culture = ROOT
+			}
+		}
+
+		2565 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+			}
+	}
+
+	option = { 
+		name = flavorUTA.71.optb # Don't make Nauvoo the capital
+
+			3275 = {
+				change_province_name = "Nauvoo"
+				rename_capital = "Nauvoo"
+				add_latest_building = {
+					builder = ROOT
+					trade = yes
+				}
+				center_of_trade = 1
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = uta_nauvoo
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = {
+							religion = ROOT
+						}
+					}
+					change_religion = ROOT
+				}
+				if = {
+					limit = {
+						NOT = {
+							culture = ROOT
+						}
+					}
+					change_culture = ROOT
+				}
+			}
+		}
+}
+
+# Kirtland, Cuyahoga
+country_event = {
+	id = flavorUTA.72
+	title = "flavorUTA.72t" # The First Temple
+	desc = "flavorUTA.72d"
+	picture = ST_PETERS_CHURCH_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 2579
+
+	trigger = {
+		owns = 2579
+	}
+
+	immediate = {
+		set_country_flag = kirtland_event_flag
+	}
+	
+	option = { 
+	name = flavorUTA.72.opta
+		2579 = {
+			change_province_name = "Kirtland"
+			rename_capital = "Kirtland"
+			add_latest_building = {
+				builder = ROOT
+				tax = yes
+			}
+			add_province_modifier = {
+				name = uta_kirtland
+				duration = -1
+			}
+			ROOT = {
+				set_country_flag = can_use_lawnfield
+				add_country_modifier = {
+					name = uta_sighting_of_jesus
+					duration = 240
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture = ROOT
+					}
+				}
+				change_culture = ROOT
+			}
+		}
+	}
+}
+
+# Lackawanna
+country_event = {
+	id = flavorUTA.73
+	title = "flavorUTA.73t" # Translated Book of Mormon
+	desc = "flavorUTA.73d"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 2586
+	}
+
+	immediate = {
+		set_country_flag = restoration_event_flag
+	}
+	
+	option = { 
+	name = flavorUTA.73.opta
+
+		every_known_country = {
+			limit = {
+					NOT = {
+						religion = mormon
+					}
+					NOT = {
+						religion = anabaptist
+					}
+					religion_group = christian
+				OR = {
+					capital_scope = {
+						region = mid_atlantic_region
+					}
+					capital_scope = {
+						region = new_england_region
+					}
+					capital_scope = {
+						area = erie_area
+					}
+					capital_scope = {
+						area = adirondack_area
+					}
+					capital_scope = {
+						area = allegheny_area
+					}
+					capital_scope = {
+						area = monongahela_area
+					}
+					capital_scope = {
+						area = ohio_area
+					}
+				}
+			}
+			country_event = {
+				id = flavorUTA.74 # Translated Book of Mormon (non-Mormons)
+			}
+		}
+
+		2586 = {
+			change_province_name = "Susquehanna"
+			rename_capital = "Harmony"
+			if = {
+				limit = {
+					NOT = {
+						religion = ROOT
+					}
+				}
+				change_religion = ROOT
+			}
+		}
+	}
+}
+
+# Translated Book of Mormon (non-Mormons)
+country_event = {
+	id = flavorUTA.74
+	title = "flavorUTA.74t"
+	desc = "flavorUTA.74d"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	
+	option = { 
+	name = flavorUTA.74.opta
+
+		random_owned_province = {
+			limit = {
+				NOT = {
+					is_capital = yes
+				}
+				NOT = {
+					development = 15
+				}
+				region = capital
+			}
+			change_religion = mormon
+		}
+
+		if = {
+			limit = {
+				num_of_provinces_in_states = 7
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+					NOT = {
+						development = 15
+					}
+					region = capital
+				}
+				change_religion = mormon
+			}
+		}
+
+		FROM = {
+			add_opinion = {
+				who = THIS
+				modifier = opinion_pleased
+			}
+		}
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_rivalry
+					}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_outraged
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 1
+					NOT = { diplomatic_reputation = 2 }
+				}
+			}
+			modifier = {
+				factor = 1.3
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 2
+				}
+			}
+			modifier = {
+				factor = 0.80
+				event_target:pioneer_origin_country = {
+					diplomatic_reputation = 0
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ai_attitude = {
+						who = event_target:pioneer_origin_country
+						attitude = attitude_allied
+					}
+					is_subject_of = event_target:pioneer_origin_country
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = flavorUTA.74.optb
+	
+			FROM = {
+				add_opinion = {
+					who = THIS
+					modifier = opinion_displeased
+				}
+			}
+
+			ai_chance = {
+				factor = 60
+			}
+		}
+}
+
+# Golden Plates
+country_event = {
+	id = flavorUTA.75
+	title = "flavorUTA.75t"
+	desc = "flavorUTA.75d"
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 2597
+	}
+
+	immediate = {
+		set_country_flag = palmyra_event_flag
+	}
+	
+	option = { # Search for the Golden Plates!
+	name = flavorUTA.75.opta
+
+		random_list = {
+			40 = {
+				country_event = {
+					id = flavorUTA.76 # Golden Plates Discovered!
+				}
+			}
+
+			60 = {
+				if = {
+					limit = {
+						2597 = {
+							NOT = {
+								has_great_project = {
+									type = palmyra_temple
+									tier = 3
+								}
+							}
+						}
+					}
+					2597 = {
+						add_great_project_tier = {
+							type = palmyra_temple
+							tier = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Golden Plates discovered!
+
+country_event = {
+	id = flavorUTA.76
+	title = "flavorUTA.76t"
+	desc = "flavorUTA.76d"
+	picture = BYZ_JERUSALEM_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 2597
+	}
+	
+	option = { 
+	name = flavorUTA.76.opta
+
+		add_country_modifier = {
+			name = uta_golden_plates
+			duration = -1
+		}
+	}
+}
+
+# Mormon Settlement Revoked
+
+country_event = {
+	id = flavorUTA.80
+	title = "flavorUTA.80t"
+	desc = "flavorUTA.80d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { 
+	name = flavorUTA.80.opta
+		tooltip = {
+			every_province = {
+				limit = {
+					has_province_flag = revoked_mormon_settlement
+				}
+				add_core = ROOT
+			}
+
+			add_casus_belli = {
+				type = cb_crusade
+				target = FROM
+				months = 60
+			}
+		}
+	}
+}
+
+# Holy site owned directly by a Mormon - hidden
+country_event = {
+	id = flavorUTA.100
+	title = "flavorUTA.100t" 
+	desc = "flavorUTA.100d"
+	picture = BYZ_JERUSALEM_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		any_country = {
+			OR = {
+				has_country_modifier = uta_temple_constructions
+				has_country_modifier = uta_nauvoo_legion_blessing
+				has_country_modifier = uta_mission_to_the_gentiles
+				has_country_modifier = uta_translated_book_of_mormon
+			}
+		}
+
+		OR = {
+			2669 = {
+				religion = mormon
+				owner = {
+					religion = mormon
+				}
+			}
+			3275 = {
+				religion = mormon
+				owner = {
+					religion = mormon
+				}
+			}
+			2586 = {
+				religion = mormon
+				owner = {
+					religion = mormon
+				}
+			}
+			2597 = {
+				religion = mormon
+				owner = {
+					religion = mormon
+				}
+			}
+		}
+
+		ROOT = {
+			religion = mormon
+		}
+	}
+	
+	option = { 
+	name = flavorUTA.100.opta
+		if = {
+			limit = {
+				2669 = { # Buchanan
+					religion = mormon
+					owner = {
+						religion = mormon
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_modifier = uta_temple_constructions
+				}
+				remove_country_modifier = uta_temple_constructions
+			}
+		}
+		if = {
+			limit = {
+				3275 = { # Knox, Illinois
+					religion = mormon
+					owner = {
+						religion = mormon
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_modifier = uta_nauvoo_legion_blessing
+				}
+				remove_country_modifier = uta_nauvoo_legion_blessing
+			}
+		}
+		if = {
+			limit = {
+				2586 = { # Lackawanna
+					religion = mormon
+					owner = {
+						religion = mormon
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_modifier = uta_mission_to_the_gentiles
+				}
+				remove_country_modifier = uta_mission_to_the_gentiles
+			}
+		}
+		if = {
+			limit = {
+				2597 = { # Palmyra, New York
+					religion = mormon
+					owner = {
+						religion = mormon
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_modifier = uta_translated_book_of_mormon
+				}
+				remove_country_modifier = uta_translated_book_of_mormon
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = flavorUTA.101
+	title = "flavorUTA.101t"
+	desc = "flavorUTA.101d"
+	picture = USA_NATIVE_AMERICANS_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 4570
+		owns = 4863
+	}
+	
+	option = { 
+	name = flavorUTA.101.opta
+
+		add_accepted_culture_or_dip_power = {
+			culture = pueblo
+			free = yes
+		}
+		if = {
+			limit = {
+				4570 = {
+					owned_by = ROOT
+				}
+			}
+			4570 = {
+				change_culture = pueblo
+				add_core = PUE
+			}
+		}
+
+		if = {
+			limit = {
+				4863 = {
+					owned_by = ROOT
+				}
+			}
+			4863 = {
+				change_culture = pueblo
+				add_core = PUE
+			}
+		}
+
+		if = {
+			limit = {
+				992 = {
+					owned_by = ROOT
+				}
+			}
+			992 = {
+				change_culture = pueblo
+				add_core = PUE
+			}
+		}
+	}
+
+	option = {
+		name = flavorUTA.101.optb
+	}
+}
+
+
+# Deseret Ascendant for non-Mormons
+country_event = {
+	id = flavorUTA.2000
+	title = "flavorUTA.2000t"
+	desc = "flavorUTA.2000d"
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { exists = DES }
+		is_subject = no
+	}
+
+	option = { # Onwards, to glory!
+	name = flavorUTA.2000.opta
+
+		set_country_flag = declined_deseret
+		custom_tooltip = declined_deseret_tt
+
+		if = {
+			limit = {
+			NOT = { government_rank = 3 }
+			}
+		set_government_rank = 3
+		}
+
+		arizona_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		nevada_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		san_diego_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		colorado_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		new_mexico_provincegroup = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		mojave_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		wyoming_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

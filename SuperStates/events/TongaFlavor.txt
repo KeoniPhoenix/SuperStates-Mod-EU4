@@ -16,6 +16,9 @@ country_event = {
 	
 	trigger = {
 		NOT = {
+			has_country_flag = tongan_culture
+		}
+		NOT = {
 			tag = TOG #Native Tonga
 		}
 		1989 = { 
@@ -95,6 +98,7 @@ country_event = {
 	
 	option = {
 		name = "TonganFlavor.1opta"
+		set_country_flag = tongan_culture
 		1989 = { 
 			change_culture = tongan
 			add_core = TGA

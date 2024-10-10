@@ -3,6 +3,7 @@
 owner = NTT
 controller = NTT
 add_core = NTT
+add_core = CRP
 culture = northern_territorian
 religion = austral_protestant
 capital = "Alyangula"

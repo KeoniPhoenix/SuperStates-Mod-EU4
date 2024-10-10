@@ -1,0 +1,526 @@
+crl_conquests = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SCR
+			tag = NCR
+			tag = CRL
+		}
+	}
+	has_country_shield = yes
+
+	crl_unite = {
+		icon = mission_landsknecht_soldier
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 0.90
+			manpower_percentage = 0.60
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = NCR
+				}
+				south_carolina_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				north_carolina_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				pamlico_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				3131 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				2523 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+	crl_successful_conquest = {
+		icon = mission_conquer_5_states
+		required_missions = { crl_unite }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				province_group = north_carolina_provincegroup
+				area = south_carolina_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 12
+				OR = {
+					province_group = north_carolina_provincegroup
+					area = south_carolina_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "crl_united_modifier"
+				duration = 9125
+			}
+			if = {
+				limit = {
+					primary_culture = south_carolinian
+				}
+				add_accepted_culture_or_dip_power = { culture = north_carolinian free = yes }
+			}
+			if = {
+				limit = {
+					primary_culture = north_carolinian
+				}
+				add_accepted_culture_or_dip_power = { culture = south_carolinian free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = NCR
+						was_tag = NCR
+					}
+				}
+				east_tennessee_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_core = ROOT
+				}
+			}
+			else = {
+				east_tennessee_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			georgia_us_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savannah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	crl_georgia = {
+		icon = mission_cannons_firing
+		required_missions = { crl_successful_conquest }
+		position = 3
+ 
+		provinces_to_highlight = {
+			province_group = georgia_provincegroup
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				province_group = georgia_provincegroup
+			}
+		}
+		effect = {
+			st_johns_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_florida_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			2544 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+ 
+	crl_florida = {
+		icon = mission_assemble_an_army
+		required_missions = { crl_georgia }
+		position = 5
+ 
+		provinces_to_highlight = {
+			province_group = florida_provincegroup
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				province_group = florida_provincegroup
+			}
+		}
+		effect = {
+			add_prestige = 20
+			west_florida_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			suncoast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}    
+}
+
+# crl_monuments = {
+# 	slot = 5
+# 	generic = no
+# 	ai = yes
+# 	potential = {
+# 		OR = {
+# 			tag = SCR
+# 			tag = CRL
+# 		}
+# 	}
+# 	has_country_shield = yes
+
+# 	crl_rushmore = {
+# 		icon = mission_mount_rushmore
+# 		required_missions = { }
+# 		position = 1
+# 		provinces_to_highlight = {
+# 			province_id = 1001
+# 		}
+# 		trigger = {
+# 			if = {
+# 				limit = {
+# 					has_dlc = Leviathan
+# 				}
+# 				1001 = {
+# 					OR = {
+# 						has_great_project = {
+# 							type = rushmore
+# 							tier = 2
+# 						}
+# 						has_great_project = {
+# 							type = rushmore
+# 							tier = 3
+# 						}
+# 					}
+# 				}
+# 			}
+# 			1001 = {
+# 				development = 12
+# 				num_of_buildings_in_province = 3
+# 			}
+# 		}
+# 		effect = {
+# 			1001 = {
+# 				add_province_modifier = {
+# 					name = "crl_rushmore"
+# 					duration = -1
+# 				}
+# 			}
+# 			else = {
+# 				add_dip_power = 50
+# 			}
+# 		}
+# 	}
+# }
+
+crl_united = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = carolinian
+			tag = CRL
+		}
+	}
+	has_country_shield = yes
+
+	crl_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				culture = north_carolinian
+				culture = south_carolinian
+				area = north_carolina_area
+				area = pamlico_area
+				area = south_carolina_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				AND = {
+					culture = south_carolinian
+					culture = north_carolinian
+				}
+			}
+			north_carolina_area = {
+				type = all
+				owned_by = ROOT
+			}
+			pamlico_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_carolina_area = {
+				type = all
+				owned_by = ROOT
+			}
+			if = {
+				limit = {
+					primary_culture = north_carolinian
+				}
+				accepted_culture = south_carolinian
+			}
+			if = {
+				limit = {
+					primary_culture = south_carolinian
+				}
+				accepted_culture = north_carolinian
+			}
+
+			OR = {
+				2523 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3131 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+
+			2522 = {
+				development = 20
+				owned_by = ROOT
+			}
+
+			2527 = {
+				development = 14
+				owned_by = ROOT
+			}
+
+			2528 = {
+				development = 14
+				owned_by = ROOT
+			}
+
+			2528 = {
+				development = 14
+				owned_by = ROOT
+			}
+
+			2524 = {
+				development = 20
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = cultureflavor.2
+				tooltip = cultureflavor.2.opta.tt
+			}
+		}
+	}
+}
+
+crl_more_conquest = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = SCR
+			tag = NCR
+			tag = CRL
+		}
+	}
+	has_country_shield = yes
+
+	crl_tennessee = {
+		icon = mission_build_up_to_force_limit
+		position = 3
+		required_missions = { crl_successful_conquest }
+
+		provinces_to_highlight = {
+			OR = {
+				area = east_tennessee_area
+				province_id = 3078
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = east_tennessee_area
+					province_id = 3078
+				}
+			}
+		}
+		effect = {
+			blue_ridge_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			virginia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			chesapeake_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	crl_virginia = {
+		icon = mission_have_two_subjects
+		required_missions = { crl_georgia }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = blue_ridge_area
+				area = virginia_area
+				area = chesapeake_area
+				province_id = 2731
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			blue_ridge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = virginia_area
+					area = chesapeake_area
+					province_id = 2731
+				}
+			}
+		}
+		effect = {
+			potomac_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_florida_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	crl_north_south = {
+		icon = mission_cannons_firing
+		required_missions = { crl_virginia }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = south_florida_area
+				area = potomac_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = south_florida_area
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = potomac_area
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = 9125 #25 years
+			}
+			add_adm_power = 50
+			add_dip_power = 50
+		}
+	}
+}

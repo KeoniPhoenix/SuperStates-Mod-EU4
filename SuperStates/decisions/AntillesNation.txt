@@ -59,6 +59,7 @@ country_decisions = {
 			is_at_war = no
 		}
 		effect = {
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }

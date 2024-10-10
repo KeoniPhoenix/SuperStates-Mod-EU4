@@ -36,7 +36,11 @@ catholic_rome = {
 	potential = {
 		normal_or_historical_nations = yes
 		owner = {
-			religion = catholic
+			OR = {
+				religion = catholic
+				religion = s_catholic
+				religion = austral_catholic
+				}
 			NOT = { tag = PAP }
 		}
 	}
@@ -1681,4 +1685,308 @@ per_chinese_embassy = {
 	diplomatic_upkeep = 1
 	local_institution_spread = 0.25
 	province_trade_power_value = 5	
+}
+
+## SUPERSTATES
+
+adelaide_vineyards_modifier = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+		1088 = {
+			has_great_project = {
+				type = adelaide_vineyards
+				tier = 2
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = adelaide_vineyards
+					tier = 3
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = adelaide_vineyards_2
+			}
+		}
+
+    # Whether the triggered modifier is active
+    trigger = {
+        1088 = {
+			has_great_project = {
+				type = adelaide_vineyards
+				tier = 2
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = adelaide_vineyards
+					tier = 3
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = adelaide_vineyards_2
+			}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    trade_goods_size = 1.5
+    
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
+}
+
+adelaide_vineyards_2 = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+        1088 = {
+			has_great_project = {
+				type = adelaide_vineyards
+				tier = 3
+			}
+			owned_by = ROOT
+		}
+    }
+
+    # Whether the triggered modifier is active
+    trigger = {
+        1088 = {
+			has_great_project = {
+				type = adelaide_vineyards
+				tier = 3
+			}
+		}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    trade_goods_size = 2
+    
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
+}
+
+industrial_fervor = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+        2573 = {
+			has_great_project = {
+				type = greenfield_village
+				tier = 3
+			}
+			owned_by = ROOT
+		}
+    }
+
+    # Whether the triggered modifier is active
+    trigger = {
+        2573 = {
+			has_great_project = {
+				type = greenfield_village
+				tier = 3
+			}
+			owned_by = ROOT
+		}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    allowed_num_of_manufactories = 1
+	allowed_num_of_buildings = 2
+    
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
+}
+
+vernon_upgrade2 = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+		2536 = {
+			has_great_project = {
+				type = mount_vernon
+				tier = 3
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 2
+				}
+			}
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 1
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = vernon_upgrade
+			}
+		}
+
+    # Whether the triggered modifier is active
+    trigger = {
+        2536 = {
+			has_great_project = {
+				type = mount_vernon
+				tier = 3
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 2
+				}
+			}
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 1
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = vernon_upgrade
+			}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    local_build_cost = -0.20
+	local_build_time = -0.20
+    
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
+}
+
+vernon_upgrade = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+		2536 = {
+			has_great_project = {
+				type = mount_vernon
+				tier = 2
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 3
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = vernon_upgrade2
+			}
+		}
+
+    # Whether the triggered modifier is active
+    trigger = {
+        2536 = {
+			has_great_project = {
+				type = mount_vernon
+				tier = 2
+			}
+			owned_by = ROOT
+			NOT = {
+				has_great_project = {
+					type = mount_vernon
+					tier = 3
+				}
+			}
+		}
+		NOT = {
+				has_active_triggered_province_modifier = vernon_upgrade2
+			}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    local_build_cost = -0.10
+	local_build_time = -0.10
+    
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
+}
+
+CAM_fortifications = {
+    # Whether the triggered modifier is visible in the Province view window
+    potential = {
+	OR = {
+		835 = {
+			has_great_project = {
+				type = portobelo_san_lorenzo
+				tier = 2
+			}
+			owned_by = ROOT
+		}
+		835 = {
+			NOT = { owned_by = ROOT }
+		}
+	}
+		}
+
+    # Whether the triggered modifier is active
+    trigger = {
+		835 = {
+			has_great_project = {
+				type = portobelo_san_lorenzo
+				tier = 3
+			}
+			owned_by = ROOT
+		}
+    }
+
+    # The modifier to apply when the triggered modifier is active
+    block_slave_raid = yes
+	local_own_coast_naval_combat_bonus = 1
+	
+    # Province scope
+    # Effects to execute when the triggered modifiers switches to active
+    on_activation = {
+    
+    }
+    
+    # Effects to execute when the triggered modifiers switches to inactive
+    on_deactivation = {
+    
+    } 
 }

@@ -1,0 +1,54 @@
+# DEBUG EVENT(S) TO BE USED IN CONSOLE WHEN MODDING.
+
+# For mod users: if you find this file, feel free to use it by activating console (~) then entering "event debugEvent.1" to fix your missions if they are bugged.
+
+namespace = debugEvent
+
+# Refresh your missions. Helps when you modify a mission tree during an existing save and it bugs out.
+country_event = {
+	id = debugEvent.1
+	title = "debugEvent.1t"
+	desc = "debugEvent.1d"
+	picture = TEMPORAL_RIFT_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { # Debug only ROOT's missions.
+		name = "debugEvent.1opta"
+
+		ROOT = {
+			swap_non_generic_missions = yes
+		}
+	}
+
+	option = { # Debug all known nation's missions
+		name = "debugEvent.1optb"
+		
+		hidden_effect = {
+			every_known_country = {
+				swap_non_generic_missions = yes
+			}
+			ROOT = {
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+
+	option = { # Debug ALL nation's missions
+		name = "debugEvent.1optc"
+		
+		hidden_effect = {
+			every_country = {
+				swap_non_generic_missions = yes
+			}
+			ROOT = {
+				swap_non_generic_missions = yes
+			}
+		}
+	}
+
+	option = { # Close
+		name = "debugEvent.1optd"
+	
+	}
+}

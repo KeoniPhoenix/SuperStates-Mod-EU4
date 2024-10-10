@@ -12,6 +12,7 @@ country_decisions = {
 			OR = {
 				primary_culture = baja_californian
 				primary_culture = south_baja_californian
+				primary_culture = united_baja_californian
 				primary_culture = chihuahuan
 				primary_culture = coahuilan
 				primary_culture = durangoan
@@ -104,6 +105,7 @@ country_decisions = {
 			owns_core_province = 932 # La Paz
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
