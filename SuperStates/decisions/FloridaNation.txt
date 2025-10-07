@@ -11,15 +11,19 @@ country_decisions = {
 			NOT = { exists = GCL }
 			NOT = { exists = NSP }
 			NOT = { exists = ASE }
+			NOT = { has_country_flag = formed_florida_flag }
 			OR  = {
 				tag = SFL
 				tag = MIM
 				tag = KYS
 				tag = WFL
+				tag = MSK
+				tag = EFL
 				primary_culture = floridian
 				primary_culture = south_floridian
 				primary_culture = west_floridian
 				primary_culture = miamian
+				primary_culture = caribbean_floridian
 				AND = {
 					primary_culture = cuban
 					capital_scope = {
@@ -29,7 +33,7 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				AND = 		{
+				AND = {
 					ai = yes
 					num_of_cities = 3
 				}
@@ -37,7 +41,7 @@ country_decisions = {
 		}
 		allow = {
 			num_of_owned_provinces_with = {
-				value = 4
+				value = 2
 				area = north_florida_area
 				is_core = root
 			}
@@ -58,6 +62,7 @@ country_decisions = {
 			}
 		}	
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
@@ -95,6 +100,23 @@ country_decisions = {
 				}
 				add_permanent_claim = FLO
 			}
+			3266 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+						add_permanent_claim = FLO
+				}
+			}
+			2543 = {
+				if = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+						add_permanent_claim = FLO
+				}
+			}
+			set_country_flag = formed_florida_flag
 				}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap

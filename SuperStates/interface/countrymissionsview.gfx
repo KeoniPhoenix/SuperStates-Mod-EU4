@@ -966,4 +966,52 @@ spriteTypes = {
 		name = "mission_northeast_america"
 		texturefile = "gfx//interface//missions//easternamerica//mission_northeast_america.dds"
 	}
+	spriteType = {
+		name = "mission_deseret_flag"
+		texturefile = "gfx//interface//missions//intermountain//mission_deseret_flag.dds"
+	}
+	spriteType = {
+		name = "mission_salt_lake"
+		texturefile = "gfx//interface//missions//intermountain//mission_salt_lake.dds"
+	}
+	spriteType = {
+		name = "mission_beehive"
+		texturefile = "gfx//interface//missions//intermountain//mission_beehive.dds"
+	}
+	spriteType = {
+		name = "mission_nevada"
+		texturefile = "gfx//interface//missions//intermountain//mission_nevada.dds"
+	}
+	spriteType = {
+		name = "mission_colorado"
+		texturefile = "gfx//interface//missions//intermountain//mission_colorado.dds"
+	}
+	spriteType = {
+		name = "mission_phoenix_fall"
+		texturefile = "gfx//interface//missions//intermountain//mission_phoenix_fall.dds"
+	}
+	spriteType = {
+		name = "mission_nauvoo"
+		texturefile = "gfx//interface//missions//intermountain//mission_nauvoo.dds"
+	}
+	spriteType = {
+		name = "mission_priesthood"
+		texturefile = "gfx//interface//missions//intermountain//mission_priesthood.dds"
+	}
+	spriteType = {
+		name = "mission_diahman"
+		texturefile = "gfx//interface//missions//intermountain//mission_diahman.dds"
+	}
+	spriteType = {
+		name = "mission_mormon_pioneers"
+		texturefile = "gfx//interface//missions//intermountain//mission_mormon_pioneers.dds"
+	}
+	spriteType = {
+		name = "mission_golden_plates"
+		texturefile = "gfx//interface//missions//intermountain//mission_golden_plates.dds"
+	}
+	spriteType = {
+		name = "mission_kirtland"
+		texturefile = "gfx//interface//missions//intermountain//mission_kirtland.dds"
+	}
 }

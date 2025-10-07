@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = martinican_culture
+		}
 		498 = {
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "MartiniqueFlavor.1opta"
+		set_country_flag = martinican_culture
 		498 = {
 			change_culture = martinican
 			add_core = MTQ

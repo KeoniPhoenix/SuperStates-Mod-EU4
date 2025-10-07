@@ -3,14 +3,15 @@
 owner = VCT
 controller = VCT
 add_core = VCT
-culture = victorian
+add_core = RIV
+culture = riverinan
 religion = austral_catholic
 capital = "Bendigo"
 trade_goods = gold
 hre = no
 base_tax = 3
-base_production = 3
-base_manpower = 3
+base_production = 4
+base_manpower = 4
 is_city = yes #11230
 discovered_by = australian
 

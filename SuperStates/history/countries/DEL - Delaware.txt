@@ -9,9 +9,9 @@ capital = 2615 # Dover
 1441.1.3 = {
 	monarch = {
 		name = "John McKinly"
-		adm = 5
-		dip = 3
-		mil = 3
+		adm = 1
+		dip = 2
+		mil = 2
 	}
 }
 

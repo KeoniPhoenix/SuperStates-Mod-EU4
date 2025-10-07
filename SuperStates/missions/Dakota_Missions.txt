@@ -17,8 +17,8 @@ dak_conquests = {
 		position = 1
 
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = 0.80
+			manpower_percentage = 0.50
 		}
 		effect = {
 			if = {
@@ -102,9 +102,9 @@ dak_conquests = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			dakota_provincegroup = {
-				type = all
-				owned_by = ROOT
+			num_of_owned_provinces_with = {
+				value = 12
+				province_group = dakota_provincegroup
 			}
 		}
 		effect = {
@@ -288,6 +288,83 @@ dak_sdk = {
 			}
 			else = {
 				add_dip_power = 50
+			}
+		}
+	}
+}
+
+dak_united = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = us_dakotan
+			tag = DAK
+		}
+	}
+	has_country_shield = yes
+
+	dak_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				culture = north_dakotan
+				culture = south_dakotan
+				province_group = dakota_provincegroup
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_all_provinces = {
+				AND = {
+					culture = south_dakotan
+					culture = north_dakotan
+				}
+			}
+			dakota_provincegroup = {
+				type = all
+				owned_by = ROOT
+			}
+			if = {
+				limit = {
+					primary_culture = north_dakotan
+				}
+				accepted_culture = south_dakotan
+			}
+			if = {
+				limit = {
+					primary_culture = south_dakotan
+				}
+				accepted_culture = north_dakotan
+			}
+
+			994 = {
+				development = 12
+				owned_by = ROOT
+			}
+
+			998 = {
+				development = 12
+				owned_by = ROOT
+			}
+
+			995 = {
+				development = 10
+				owned_by = ROOT
+			}
+
+			1000 = {
+				development = 10
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = cultureflavor.1
+				tooltip = cultureflavor.1.opta.tt
 			}
 		}
 	}

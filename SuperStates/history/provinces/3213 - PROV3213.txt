@@ -3,6 +3,7 @@
 owner = ABR
 controller = ABR
 add_core = ABR
+add_core = BFF
 culture = albertan
 religion = s_protestant
 capital = "Edson" 

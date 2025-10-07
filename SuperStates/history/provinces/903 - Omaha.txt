@@ -3,6 +3,7 @@
 owner = TML
 controller = TML
 add_core = TML
+add_core = HUS
 culture = tamaulipasian
 religion = s_catholic
 capital = "Tampico"

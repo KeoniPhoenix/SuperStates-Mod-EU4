@@ -49,6 +49,7 @@ country_decisions = {
 			owns_core_province = 2609 # Boston
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

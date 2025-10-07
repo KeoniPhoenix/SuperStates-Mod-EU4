@@ -8,11 +8,12 @@ culture = yooper
 religion = s_protestant
 capital = "Sault Ste. Marie" 
 is_city = yes #1420
+fort_15th = yes
 trade_goods = copper
 hre = no 
 base_tax = 2
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 

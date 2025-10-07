@@ -80,14 +80,24 @@ age_of_discovery = {
 		
 		obj_two_unions = {
 			allow = {
-				religion_group = christian
+					religion_group = christian
+					NOT = { technology_group = mesoamerican }
+					NOT = { technology_group = north_american }
+					NOT = { technology_group = australian }
+					NOT = { technology_group = oceanian }
 			}
 			personal_union  = 2
 		}
 		
 		obj_many_vassals = {
 			allow = {
-				NOT = { religion_group = christian }
+				OR = {
+					NOT = { religion_group = christian }
+					technology_group = mesoamerican
+					technology_group = north_american
+					technology_group = australian
+					technology_group = oceanian
+				}
 			}
 			vassal = 5
 		}		
@@ -177,7 +187,13 @@ age_of_discovery = {
 		
 		ab_ottoman_siege_ability = {
 			allow = {
-				tag = TUR
+				OR = {
+					tag = TUR
+					tag = VIR
+					hidden_trigger = {
+						was_tag = VIR
+					}
+				}
 			}
 			modifier = {
 				leader_siege = 1 
@@ -190,7 +206,13 @@ age_of_discovery = {
 		ab_portugal_colonial_growth = {
 		
 			allow = {
-				tag = POR
+				OR = {
+					tag = POR
+					tag = FLO
+					hidden_trigger = {
+						was_tag = FLO
+					}
+				}
 			}
 			modifier = {
 				global_colonial_growth = 50
@@ -202,7 +224,21 @@ age_of_discovery = {
 		ab_denmark_reduced_lib_desire = {
 		
 			allow = {
-				tag = DAN
+				OR = {
+					tag = DAN
+					tag = WDC
+					tag = ACT
+					tag = DFM
+					tag = OTW
+					hidden_trigger = {
+						OR = {
+							was_tag = ACT
+							was_tag = WDC
+							was_tag = DFM
+							was_tag = OTW
+						}
+					}
+				}
 			}
 			modifier = {
 				reduced_liberty_desire = 30
@@ -222,7 +258,14 @@ age_of_discovery = {
 		ab_venice_ship_trade = {
 		
 			allow = {
-				tag = VEN
+				OR = {
+					tag = VEN
+					tag = NYS
+					tag = MID
+					hidden_trigger = {
+						was_tag = MID
+					}
+				}
 			}
 			modifier = {
 				global_ship_trade_power = 0.5
@@ -255,6 +298,7 @@ age_of_reformation = {
 				religion = s_lutheran
 				religion = s_methodist
 				religion = s_baptist
+				religion = anabapist
 			}
 		}
 		
@@ -388,8 +432,18 @@ age_of_reformation = {
 
 		ab_spain_shock_tactics = {
 			allow = {
+				OR = {
 				tag = SPA
+				tag = CSA
+				tag = TEX
+				hidden_trigger = {
+					OR = {
+						was_tag = CSA
+						was_tag = TEX
+					}
+				}
 			}
+		}
 			modifier = {
 				leader_land_shock = 1
 			}
@@ -399,7 +453,14 @@ age_of_reformation = {
 		}
 		ab_mughal_artillery = {
 			allow = {
-				tag = MUG
+				OR = {
+					tag = MUG
+					tag = UTA
+					tag = DES
+					hidden_trigger = {
+						was_tag = UTA
+					}
+				}
 			}
 			modifier = {
 				artillery_power = 0.15
@@ -414,9 +475,13 @@ age_of_reformation = {
 				OR = {
 					tag = PLC
 					tag = POL
+					tag = CAL
 					custom_trigger_tooltip = {
 						tooltip = enable_this_ability_tt
 						has_country_flag = unlock_polish_ability_flag
+					}
+					hidden_trigger = {
+						was_tag = CAL
 					}
 				}
 			}
@@ -437,6 +502,14 @@ age_of_reformation = {
 					}
 					tag = PER
 					tag = ERS
+					tag = ARZ
+					tag = SWW
+					hidden_trigger = {
+						OR = {
+						was_tag = ARZ
+						was_tag = SWW
+						}
+					}
 				}
 			}
 			modifier = {
@@ -586,7 +659,15 @@ age_of_absolutism = {
 	
 		ab_french_absolutism = {
 			allow = {
-				tag = FRA
+				OR = {
+					tag = FRA
+					tag = QUE
+					tag = NFR
+					hidden_trigger = {
+						was_tag = QUE
+						was_tag = NFR
+					}
+				}
 			}
 			modifier = {
 				max_absolutism_effect = 0.3
@@ -597,7 +678,13 @@ age_of_absolutism = {
 		}
 		ab_dutch_trade = {
 			allow = {
-				tag = NED
+				OR = {
+					tag = NED
+					tag = MTU
+					hidden_trigger = {
+						was_tag = MTU
+					}
+				}
 			}
 			modifier = {
 				trade_steering = 0.33
@@ -611,6 +698,12 @@ age_of_absolutism = {
 				OR = {
 					tag = SWE
 					tag = SCA
+					tag = ILI
+					tag = MDL
+					hidden_trigger = {
+						was_tag = ILI
+						was_tag = MDL
+					}
 				}
 			}
 			modifier = {
@@ -626,6 +719,7 @@ age_of_absolutism = {
 				OR = {
 					tag = MCH
 					tag = QNG
+					tag = GPL
 				}
 			}
 			effect = {
@@ -800,6 +894,7 @@ age_of_revolutions = {
 				OR = {
 					tag = PRU
 					tag = GER
+					tag = USA
 				}
 			}
 			modifier = {
@@ -814,6 +909,11 @@ age_of_revolutions = {
 				OR = {
 					tag = AVE
 					tag = GBR
+					tag = NEW
+					tag = AUS
+					hidden_trigger = {
+						was_tag = NEW
+					}
 				}
 			}
 			modifier = {
@@ -825,7 +925,10 @@ age_of_revolutions = {
 		}
 		ab_russia_boost = {
 			allow = {
-				tag = RUS
+				OR = {
+					tag = RUS
+					tag = CAN
+				}
 			}
 			modifier = {
 				min_autonomy_in_territories = -0.1
@@ -839,6 +942,7 @@ age_of_revolutions = {
 				OR = {
 					tag = HAB
 					tag = HLR
+					tag = MEX
 				}
 			}
 			modifier = {

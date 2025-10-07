@@ -3347,16 +3347,24 @@ michigan_area = {
 }
 
 upper_peninsula_area = {
-	2576 2577 3278 3208
+	2577 3208 2576
 }
 
 #Minnesota
-superior_area = {
-	2548 2550 2549
-}
+ superior_area = {
+	2548 2560 2561
+ }
+ 
+ otter_tail_area = {
+	3109 2550 2549
+ }
 
 twin_cities_area = {
-	3107 2552 2547 3323
+	3107 2547 3323
+}
+
+the_lakes_area = {
+	3108 2551 2552
 }
 
 #Mississippi
@@ -3377,9 +3385,6 @@ salem_area = {
 	2501 3114 2497 3113
 }
 
-the_lakes_area = {
-	3108 3109 2551
-}
 
 #Montana
 montana_area = {
@@ -3451,11 +3456,15 @@ long_island_area = {
 
 #North Carolina
 north_carolina_area = {
-	2526 2525 3130 2522 3129
+	3130 2522 3132 2524
 }
 
 blue_ridge_area = {
-	2524 3132 3131 2523 3147
+	3131 2523 3150 2538
+}
+
+pamlico_area = {
+	2525 2526 3129
 }
 
 #North Dakota
@@ -3532,7 +3541,11 @@ tennessee_area = {
 }
 
 nickajack_area = {
-	2520 2521 3078 2509 3229
+	3078 2509 3229
+}
+
+east_tennessee_area = {
+	2521 2520 3147
 }
 
 #Texas
@@ -3549,7 +3562,7 @@ high_plains_area = {
 }
 
 rio_grande_area = {
-	3296 2486 3295 #3298 2484
+	3296 2486 3295 905
 }
 
 trans_pecos_area = {
@@ -3584,11 +3597,11 @@ vermont_area = {
 
 #Virginia
 virginia_area = {
-	3150 3151 2538 3149 2537 #2533
+	3149 2537 3151
 }
 
 chesapeake_area = {
-	2533 2534 2535 3148 #2536
+	2533 2534 2535 3148
 }
 
 #Washington State
@@ -3609,7 +3622,7 @@ gulf_islands_area = {
 
 #West Virginia
 shenandoah_area = {
-	4641 2541 3011 2532 #3150
+	4641 2541 3011 2532
 }
 
 monongahela_area = {
@@ -3618,11 +3631,11 @@ monongahela_area = {
 
 #Wisconsin
 wisconsin_area = {
-	2557 3157 2561 3305 2560
+	2557 3157 3305 3158
 }
 
 green_bay_area = {
-	2559 3158 3304
+	2559 3304 3278
 }
 
 #Wyoming
@@ -3842,7 +3855,7 @@ sonora_area = {
 }
 
 tamaulipas_area = {
-	903 904 905 906
+	903 904 906
 }
 
 veracruz_area = {
@@ -4014,7 +4027,7 @@ north_queensland_area = {
 }
 
 cooksland_area = {
-	3180 3176 1790 3175
+	3176 1790 3175
 }
 
 murray_darling_area = {
@@ -4026,7 +4039,7 @@ hunter_area = {
 }
 
 central_queensland_area = {
-	3179 2010 3177
+	3179 2010 3177 3180
 }
 
 torres_straits_area = {

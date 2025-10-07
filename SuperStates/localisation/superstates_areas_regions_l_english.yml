@@ -3,7 +3,7 @@
 #UNITED STATES
  alabama_area: "Alabama"
  alabama_area_name: "Alabama"
- alabama_area_adj: "Alabaman"
+ alabama_area_adj: "Alabamian"
  
  nickajack_area: "Nickajack"
  nickajack_area_name: "Nickajack"
@@ -111,7 +111,7 @@
  
  st_johns_area: "Saint Johns"
  st_johns_area_name: "Saint Johns"
- st_johns_area_adj: "Saint Johnnies"
+ st_johns_area_adj: "Saint Johner"
  
  #Georgia
  georgia_us_area: "Georgia"
@@ -128,9 +128,9 @@
  idaho_area_adj: "Idahoan"
  
  #Illinois
- illinois_area: "Illinois"
- illinois_area_name: "Illinois"
- illinois_area_adj: "Illinoisan"
+ illinois_area: "Rock" #Illinois
+ illinois_area_name: "Rock"
+ illinois_area_adj: "Rocker"
  
  little_egypt_area: "Little Egypt"
  little_egypt_area_name: "Little Egypt"
@@ -177,9 +177,9 @@
  acadiana_area_name: "Acadiana"
  acadiana_area_adj: "Cajun"
  
- louisiana_area: "Louisiana"
- louisiana_area_name: "Louisiana"
- louisiana_area_adj: "Louisianan"
+ louisiana_area: "North Louisiana"
+ louisiana_area_name: "North Louisiana"
+ louisiana_area_adj: "North Louisianan"
  
  mississippi_delta_area: "Mississippi Delta"
  mississippi_delta_area_name: "Mississippi Delta"
@@ -222,13 +222,17 @@
  twin_cities_area_name: "Twin Cities"
  twin_cities_area_adj: "Twinner"
  
- the_lakes_area: "The Lakes"
- the_lakes_area_name: "The Lakes"
- the_lakes_area_adj: "Laker"
+ the_lakes_area: "Minnesota River"
+ the_lakes_area_name: "Minnesota River"
+ the_lakes_area_adj: "Minnesotan"
  
  superior_area: "Superior"
  superior_area_name: "Superior"
  superior_area_adj: "Superiorite"
+
+ otter_tail_area: "Otter Tail"
+ otter_tail_area_name: "Otter Tail"
+ otter_tail_area_adj: "Otter Tailer"
  
  #Mississippi 
  black_prairie_area: "Black Prairie"
@@ -331,6 +335,10 @@
  blue_ridge_area: "Blue Ridge"
  blue_ridge_area_name: "Blue Ridge"
  blue_ridge_area_adj: "Blue Ridger"
+
+ pamlico_area: "Pamlico"
+ pamlico_area_name: "Pamlico"
+ pamlico_area_adj: "Pamlicoan"
  
  #North Dakota
  red_river_area: "Red River"
@@ -409,6 +417,9 @@
  tennessee_area: "Tennessee"
  tennessee_area_name: "Tennessee"
  tennessee_area_adj: "Tennessean"
+ east_tennessee_area: "East Tennessee"
+ east_tennessee_area_name: "East Tennessee"
+ east_tennessee_adj: "East Tennessee"
  
  # Texas 
  texas_area: "Texas"
@@ -441,17 +452,17 @@
  utah_area_adj: "Utah"
  
  #Virginia
- virginia_area: "Virginia"
- virginia_area_name: "Virginia"
- virginia_area_adj: "Virginian"
+ virginia_area: "Shenandoah"
+ virginia_area_name: "Shenandoah"
+ virginia_area_adj: "Shenandoahian"
  
- shenandoah_area: "Shenandoah"
- shenandoah_area_name: "Shenandoah"
- shenandoah_area_adj: "Shenandoahnian"
+ shenandoah_area: "Augusta"
+ shenandoah_area_name: "Augusta"
+ shenandoah_area_adj: "Augustan"
  
- chesapeake_area: "Cheasapeake"
- chesapeake_area_name: "Cheasapeake"
- chesapeake_area_adj: "Cheasapeaker"
+ chesapeake_area: "Virginia"
+ chesapeake_area_name: "Virginia"
+ chesapeake_area_adj: "Virginian"
  
  #Vermont
  vermont_area: "Vermont"
@@ -655,21 +666,21 @@
  baja_california_sur_area_name: "Baja California Sur"
  baja_california_sur_area_adj: "South Baja Californian"
  
- chiapas_oaxaca_area: "Chiapas-Oaxaca"
- chiapas_oaxaca_area_name: "Chiapas-Oaxaca"
- chiapas_oaxaca_area_adj: "Chiapas-Oaxacan"
+ chiapas_oaxaca_area: "Tehuantepec"
+ chiapas_oaxaca_area_name: "Tehuantepec"
+ chiapas_oaxaca_area_adj: "Tehuantepecano"
  
  chihuahua_area: "Chihuahua"
  chihuahua_area_name: "Chihuahua"
- chihuahua_area_adj: "Chihuahuan"
+ chihuahua_area_adj: "Chihuahuense"
  
  coahuila_area: "Coahuila"
  coahuila_area_name: "Coahuila"
- coahuila_area_adj: "Coahuilan"
+ coahuila_area_adj: "Coahuilense"
  
  durango_area: "Durango"
  durango_area_name: "Durango"
- durango_area_adj: "Durangoan"
+ durango_area_adj: "Duranguense"
  
  guanajuanto_area: "Guanajuanto"
  guanajuanto_area_name: "Guanajuanto"
@@ -679,13 +690,13 @@
  guerrero_area_name: "Guerrero"
  guerrero_area_adj: "Guerreroan"
  
- hidalgo_queretaro_area: "Hidalgo-Queretaro"
- hidalgo_queretaro_area_name: "Hidalgo-Queretaro"
- hidalgo_queretaro_area_adj: "Hidalgoan-Queretan"
+ hidalgo_queretaro_area: "Sierra Gorda"
+ hidalgo_queretaro_area_name: "Sierra Gorda"
+ hidalgo_queretaro_area_adj: "Sierra Gordano"
  
  jalisco_area: "Jalisco"
  jalisco_area_name: "Jalisco"
- jalisco_area_adj: "Jaliscan"
+ jalisco_area_adj: "Jalisciense"
  
  mexico_area: "Mexico"
  mexico_area_name: "Mexico"
@@ -703,9 +714,9 @@
  nuevo_leon_area_name: "Nuevo Leon"
  nuevo_leon_area_adj: "Nuevo Leonian"
  
- puebla_tlaxcala_area: "Puebla-Tlaxcala"
- puebla_tlaxcala_area_name: "Puebla-Tlaxcala"
- puebla_tlaxcala_area_adj: "Pueblan-Tlaxcalan"
+ puebla_tlaxcala_area: "Upper Balsas"
+ puebla_tlaxcala_area_name: "Upper Balsas"
+ puebla_tlaxcala_area_adj: "Upper Balsasano"
  
  quintana_roo_area: "Quintana Roo"
  quintana_roo_area_name: "Quintana Roo"
@@ -717,11 +728,11 @@
  
  sinaloa_area: "Sinaloa"
  sinaloa_area_name: "Sinaloa"
- sinaloa_area_adj: "Sinaloan"
+ sinaloa_area_adj: "Sinaloense"
  
  sonora_area: "Sonora"
  sonora_area_name: "Sonora"
- sonora_area_adj: "Sonoran"
+ sonora_area_adj: "Sonorense"
  
  tabasco_area: "Tabasco"
  tabasco_area_name: "Tabasco"
@@ -737,11 +748,11 @@
  
  western_yucatan_area: "Western Yucatan"
  western_yucatan_area_name: "Western Yucatan"
- western_yucatan_area_adj: "Western Yucatanian"
+ western_yucatan_area_adj: "Western Yucateco"
  
- yucatan_area: "Yucatan"
- yucatan_area_name: "Yucatan"
- yucatan_area_adj: "Yucatanian"
+ yucatan_area:0 "Yucatan"
+ yucatan_area_name:0 "Yucatan"
+ yucatan_area_adj:0 "Yucateco"
  
  zacatecas_area: "Zacatecas"
  zacatecas_area_name: "Zacatecas"
@@ -841,9 +852,9 @@
  perth_area_name: "Perth"
  perth_area_adj: "Perthite"
  
- aus_indian_ocean_islands_area: "Australian Indian Ocean"
- aus_indian_ocean_islands_area_name: "Australian Indian Ocean"
- aus_indian_ocean_islands_area_adj: "Australian Indian Oceaner"
+ aus_indian_ocean_islands_area: "Zenith"
+ aus_indian_ocean_islands_area_name: "Zenith"
+ aus_indian_ocean_islands_area_adj: "Zenither"
  
  #New Zealand
  auckland_area: "Auckland"
@@ -1262,6 +1273,9 @@
  turks_caicos_provincegroup: "Turks & Caicos"
  bahamas_provincegroup: "Bahamas"
  grenada_provincegroup: "Grenada"
+ santo_domingo_provincegroup: "Santo Domingo"
+ belize_provincegroup: "Belize"
+ panama_provincegroup: "Panama"
   ## Canada
  cape_breton_provincegroup: "Cape Breton"
  prince_edward_island_provincegroup: "Prince Edward Island"
@@ -1277,6 +1291,16 @@
  northern_mariana_islands_provincegroup: "Northern Mariana Islands"
  guam_provincegroup: "Guam"
  marshall_islands_provincegroup: "Marshall Islands"
+ philippines_provincegroup: "Philippines"
+ philippines_region: "Philippines"
+ fiji_provincegroup: "Fiji"
+ tahiti_provincegroup: "Tahiti"
+ new_caledonia_provincegroup: "New Caledonia"
+ solomon_islands_provincegroup: "Solomon Islands"
+ cook_islands_provincegroup: "Cook Islands"
+ kiribati_provincegroup: "Kiribati"
+ vanuatu_provincegroup: "Vanuatu"
+ western_samoa_provincegroup: "Western Samoa"
   ## America
  alabama_provincegroup: "Alabama"
  alaska_provincegroup: "Alaska"

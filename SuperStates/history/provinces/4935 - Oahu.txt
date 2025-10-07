@@ -1,5 +1,9 @@
 #4935 - Luzerne
 
+latent_trade_goods = {
+	coal
+}
+
 owner = PNN
 controller = PNN
 add_core = PNN

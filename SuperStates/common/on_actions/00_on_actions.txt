@@ -1510,6 +1510,11 @@ on_annexed = {
 			limit = { tag = FIN }
 			every_country = { limit = { has_country_modifier = rus_grand_duke_of_finland } remove_country_modifier = rus_grand_duke_of_finland }
 		}
+
+		if = {
+			limit = { tag = JEF }
+			every_country = { limit = { has_country_modifier = uta_protectors_of_jefferson } remove_country_modifier = uta_protectors_of_jefferson }
+		}
 	}
 }
 
@@ -1973,6 +1978,9 @@ on_yearly_pulse_3 = {
 on_yearly_pulse_4 = {
 }
 on_yearly_pulse_5 = {
+	events = {
+		ColonialCulture.1
+	}
 }
 
 on_bi_yearly_pulse = {
@@ -4500,6 +4508,101 @@ on_province_owner_change = {
 			duration = -1
 		}
 	}
+	## SUPERSTATES
+	 # Quebec Cultural Union
+	#if = {
+	#	limit = {
+	#		culture_group = new_french
+	#		NOT = { has_province_modifier = que_new_french_accepted_province_republic }
+	#		owner = {
+	#			has_country_modifier = que_cultural_exchange
+	#			government = republic
+	#		}
+	#	}
+	#	add_province_modifier = {
+	#		name = que_new_french_accepted_province_republic
+	#		duration = -1
+	#	}
+	#}
+	#if = {
+	#	limit = {
+	#		has_province_modifier = que_new_french_accepted_province_republic 
+	#		owner = {
+	#			NOT = { has_country_modifier = que_cultural_exchange }
+	#		}
+	#	}
+	#	remove_province_modifier = que_new_french_accepted_province_republic 
+	#}
+	#if = {
+	#	limit = {
+	#		culture_group = new_french
+	#		NOT = { has_province_modifier = que_new_french_accepted_province }
+	#		owner = {
+	#			has_country_modifier = que_cultural_exchange
+	#			NOT = { government = republic }
+	#		}
+	#	}
+	#	add_province_modifier = {
+	#		name = que_new_french_accepted_province
+	#		duration = -1
+	#	}
+	#}
+	#if = {
+	#	limit = {
+	#		has_province_modifier = que_new_french_accepted_province
+	#		owner = {
+	#			NOT = { has_country_modifier = que_cultural_exchange }
+	#		}
+	#	}
+	#	remove_province_modifier = que_new_french_accepted_province
+	#}
+	# New German cultural union
+	if = {
+		limit = {
+			NOT = { has_province_modifier = new_german_union_province_republic }
+			culture_group = new_german
+			owner = {
+				has_country_modifier = new_german_union_modifier
+				government = republic
+			}
+		}
+		add_province_modifier = {
+			name = new_german_union_province_republic
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = new_german_union_province_republic 
+			owner = {
+				NOT = { has_country_modifier = new_german_union_modifier }
+			}
+		}
+		remove_province_modifier = new_german_union_province_republic 
+	}
+	if = {
+		limit = {
+			culture_group = new_german
+			NOT = { has_province_modifier = new_german_union_province }
+			owner = {
+				has_country_modifier = new_german_union_modifier
+				NOT = { government = republic }
+			}
+		}
+		add_province_modifier = {
+			name = new_german_union_province
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = new_german_union_province
+			owner = {
+				NOT = { has_country_modifier = new_german_union_modifier }
+			}
+		}
+		remove_province_modifier = new_german_union_province
+	}
 }
 
 # country
@@ -5368,6 +5471,16 @@ on_conquest = {
 		emperor = { 
 			add_imperial_influence = 1
 		}
+	}
+
+	else_if = {
+		limit = {
+			religion = mormon
+			any_owned_province = {
+				has_province_modifier = mormon_settlers
+			}
+		}
+		remove_province_modifier = mormon_settlers
 	}
 }
 

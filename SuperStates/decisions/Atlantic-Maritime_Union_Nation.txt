@@ -46,6 +46,7 @@ country_decisions = {
 			owns_core_province = 1810 # Sydney
 		}
 		effect = {
+			on_change_tag_effect = yes
 			set_country_flag = formed_maritime_flag
 			change_tag = MTU
 			add_country_modifier = {

@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 48  147  73 }
+color = { 252  64  3 }
+# Orange from the flag
 
 historical_idea_groups = {
 	defensive_ideas

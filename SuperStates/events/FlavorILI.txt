@@ -42,6 +42,20 @@ country_event = { #Culture
 			change_primary_culture = great_laker_illinoisan
 		}
 		custom_tooltip = flavorILI.1000a.tt
+		change_country_color = {
+			country = CCK
+		}
+		set_country_flag = has_overriden_color_flag
+		hidden_effect = {
+			CCK = {
+				change_country_color = {
+					color = {
+						44  73  127
+					}
+				}
+				set_country_flag = ili_color_flag
+			}
+		}
 		hidden_effect = {
 			set_ruler_culture = great_laker_illinoisan
 			if = {
@@ -97,6 +111,20 @@ country_event = { #Culture
 				}
 			}
 			change_primary_culture = great_laker_illinoisan
+		}
+		change_country_color = {
+			country = CCK
+		}
+		set_country_flag = has_overriden_color_flag
+		hidden_effect = {
+			CCK = {
+				change_country_color = {
+					color = {
+						44  73  127
+					}
+				}
+				set_country_flag = ili_color_flag
+			}
 		}
 		custom_tooltip = flavorILI.1000a.tt
 		hidden_effect = {

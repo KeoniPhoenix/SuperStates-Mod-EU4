@@ -14,6 +14,7 @@ east_indies_superregion = {
 	moluccas_region	
 	indonesia_region	
 	indo_china_region
+	philippines_region
 }
 
 china_superregion = {

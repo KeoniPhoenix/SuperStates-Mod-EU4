@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = grenadian_culture
+		}
 		3327 = {
 			is_capital = no
 			owned_by = ROOT
@@ -72,6 +75,7 @@ country_event = {
 	
 	option = {
 		name = "GrenadaFlavor.1opta"
+		set_country_flag = grenadian_culture
 		3327 = {
 			change_culture = grenadian
 			add_core = GNA

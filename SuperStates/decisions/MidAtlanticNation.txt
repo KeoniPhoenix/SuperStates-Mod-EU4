@@ -183,6 +183,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

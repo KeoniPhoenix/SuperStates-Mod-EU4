@@ -16,6 +16,9 @@ country_event = {
 	
 	trigger = {
 		NOT = { primary_culture = hawaiian }
+		NOT = {
+			has_country_flag = midway_culture
+		}
 		1997 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -56,6 +59,7 @@ country_event = {
 	
 	option = {
 		name = "MidwayAtollFlavor.1opta"
+		set_country_flag = midway_culture
 		1997 = { 
 			change_culture = hawaiian
 			add_core = MWA
@@ -71,6 +75,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = midway_culture
+		}
 		primary_culture = hawaiian
 		1997 = { 
 			is_capital = no
@@ -108,6 +115,7 @@ country_event = {
 	}
 	option = {
 		name = "MidwayAtollFlavor.2opta"
+		set_country_flag = midway_culture
 		1997 = { 
 			change_culture = hawaiian
 			add_core = MWA

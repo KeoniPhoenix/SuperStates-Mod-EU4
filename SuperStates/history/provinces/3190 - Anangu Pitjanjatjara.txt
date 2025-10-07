@@ -3,7 +3,7 @@
 owner = SAU
 controller = SAU
 add_core = SAU
-culture = south_australian
+culture = s_aboriginal
 religion = austral_protestant
 capital = "Umuwa"
 trade_goods = salt

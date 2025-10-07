@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = st_lucian_culture
+		}
 		499 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "StLuciaFlavor.1opta"
+		set_country_flag = st_lucian_culture
 		499 = {
 			change_culture = st_lucian
 			add_core = STL

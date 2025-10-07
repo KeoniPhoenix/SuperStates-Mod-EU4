@@ -18,19 +18,40 @@ country_decisions = {
 				# culture_group = oriental_mexican
 				culture_group = altiplano_central
 				# culture_group = gulf_mexican
-				culture_group = pacific_mexican
+				#culture_group = pacific_mexican
 				culture_group = mazatlan_mexican
 				primary_culture = new_mexican
 				primary_culture = southern_californian
 				primary_culture = tejano
 				primary_culture = baja_arizonan
 				primary_culture = mexican_texan
+				OR = {
+					AND = {
+						culture_group = central_american_group
+						OR = {
+							development_in_provinces = {
+								value = 40
+								region = costa_oeste_region
+							}
+							development_in_provinces = {
+								value = 40
+								region = mexican_gulf_coast_region
+							}
+						}
+						NOT = { primary_culture = panamanian }
+						NOT = { exists = CAM }
+					}
+					AND = {
+						culture_group = central_american_group
+						has_country_flag = CAM_can_form_mexico
+					}
+				}
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 40
+					num_of_cities = 30
 				}
 			}
 		}
@@ -48,14 +69,22 @@ country_decisions = {
 		allow = {
 			is_subject = no
 			is_at_war = no
+			if = {
+				limit = {
+					culture_group = central_american_group
+				}
+				custom_trigger_tooltip = {
+					tooltip = CAM_form_mexico_tt
+				}
+			}
 			OR = {
 				num_of_owned_provinces_with = {
-					value = 20
+					value = 15
 					region = mexican_gulf_coast_region
 					is_core = root
 				}
 				num_of_owned_provinces_with = {
-					value = 20
+					value = 15
 					region = costa_oeste_region
 					is_core = root
 				}
@@ -88,6 +117,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

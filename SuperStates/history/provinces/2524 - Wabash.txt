@@ -14,6 +14,7 @@ base_manpower = 5
 is_city = yes #75110
 discovered_by = north_american
 discovered_by = mesoamerican
+center_of_trade = 1
 
 1399.1.1 = {
 	fort_15th = yes 

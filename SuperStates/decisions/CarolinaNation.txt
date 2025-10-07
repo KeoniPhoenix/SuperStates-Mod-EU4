@@ -9,11 +9,39 @@ country_decisions = {
 			NOT = { tag = USA }
 			NOT = { exists = CSA }
 			NOT = { exists = NAM }
+			NOT = { has_country_flag = formed_carolina_flag }
 			#technology_group = north_american
 			OR = {
 				primary_culture = north_carolinian
 				primary_culture = south_carolinian
-				primary_culture = mountaineer
+				primary_culture = carolinian
+				AND = {
+					primary_culture = south_georgian
+					capital_scope = {
+						area = south_carolina_area
+					}
+				}
+				AND = {
+					primary_culture = mountaineer
+					OR = {
+						capital_scope = {
+							area = south_carolina_area
+						}
+						capital_scope = {
+							area = pamlico_area
+						}
+						capital_scope = {
+							area = north_carolina_area
+						}
+						capital_scope = {
+							AND = {
+								area = blue_ridge_area
+								NOT = { province_id = 2538 }
+								NOT = { province_id = 3150 }
+							}
+						}
+					}
+				}
 				primary_culture = high_tider
 			}
 			OR = {
@@ -28,7 +56,13 @@ country_decisions = {
 			OR = {
 				area = north_carolina_area
 				area = south_carolina_area
-				area = blue_ridge_area
+				area = pamlico_area
+				province_id = 2523
+				province_id = 3131
+				province_id = 2522
+				province_id = 2524
+				province_id = 2528
+				province_id = 2527
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -36,14 +70,19 @@ country_decisions = {
 			}
 		}
 		allow = {
+			owns_core_province = 2522
+			owns_core_province = 2524
+			owns_core_province = 2523
+			owns_core_province = 2528
+			owns_core_province = 2527
 			num_of_owned_provinces_with = {
-				value = 4
+				value = 3
 				area = north_carolina_area
 				is_core = root
 			}
 			num_of_owned_provinces_with = {
-				value = 4
-				area = blue_ridge_area
+				value = 2
+				area = pamlico_area
 				is_core = root
 			}
 			num_of_owned_provinces_with = {
@@ -53,12 +92,15 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
+			
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
 			}
 			add_prestige = 10
 			change_tag = CRL
+			swap_non_generic_missions = yes
 			CRL = {
 				if = {
 					limit = {
@@ -78,11 +120,22 @@ country_decisions = {
 					}
 					add_permanent_claim = CRL
 				}
-				blue_ridge_area = {
+				3131 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+							add_permanent_claim = CRL
+					}
+				}
+				pamlico_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 					}
 					add_permanent_claim = CRL
+				}
+				hidden_effect = {
+					set_country_flag = formed_carolina_flag
 				}
 			}
 		}

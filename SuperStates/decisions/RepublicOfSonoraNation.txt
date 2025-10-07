@@ -18,6 +18,7 @@ country_decisions = {
 			OR = {
 				primary_culture = baja_californian
 				primary_culture = south_baja_californian
+				primary_culture = united_baja_californian
 				primary_culture = sonoran_culture
 			}
 			OR = {
@@ -58,6 +59,7 @@ country_decisions = {
 		}			
 		
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

@@ -12,6 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 5
 is_city = yes #43800
+fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 center_of_trade = 1

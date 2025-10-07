@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = nauruan_culture
+		}
 		1992 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "NauruFlavor.1opta"
+		set_country_flag = nauruan_culture
 		1992 = { 
 			change_culture = nauruan
 			add_core = NAU

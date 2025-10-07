@@ -3,7 +3,8 @@
 owner = DFM
 controller = DFM
 add_core = DFM
-add_core = EMX
+#add_core = EMX
+add_core = CMX
 culture = mexican_districter
 religion = s_catholic
 capital = "Mexico"
@@ -15,7 +16,7 @@ base_production = 12
 base_manpower = 9
 discovered_by = north_american
 discovered_by = mesoamerican
-center_of_trade = 2
+center_of_trade = 3
 
 1399.1.1 = {
 	fort_15th = yes

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = ikiribati_culture
+		}
 		1241 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -92,6 +95,7 @@ country_event = {
 	
 	option = {
 		name = "KiribatiFlavor.1opta"
+		set_country_flag = ikiribati_culture
 		1241 = { 
 			change_culture = i-kiribati
 			add_core = KRB

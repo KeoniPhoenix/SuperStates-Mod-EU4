@@ -1049,4 +1049,129 @@ spriteTypes = {
 		name = "GFX_great_project_port_arthur"
 		texturefile = "gfx//interface//great_projects//great_project_port_arthur.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_great_project_cape_byron"
+		texturefile = "gfx//interface//great_projects//great_project_cape_byron.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_adelaide_vineyards"
+		texturefile = "gfx//interface//great_projects//great_project_adelaide_vineyards.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_parliament_house"
+		texturefile = "gfx//interface//great_projects//great_project_parliament_house.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_shrine_of_remembrance"
+		texturefile = "gfx//interface//great_projects//great_project_shrine_of_remembrance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_cathedral_of_learning"
+		texturefile = "gfx//interface//great_projects//great_project_cathedral_of_learning.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_greenbrier"
+		texturefile = "gfx//interface//great_projects//great_project_greenbrier.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_stone_mountain"
+		texturefile = "gfx//interface//great_projects//great_project_stone_mountain.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_inner_harbor"
+		texturefile = "gfx//interface//great_projects//great_project_inner_harbor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_vicksburg"
+		texturefile = "gfx//interface//great_projects//great_project_vicksburg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_churchill_downs"
+		texturefile = "gfx//interface//great_projects//great_project_churchill_downs.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_monticello"
+		texturefile = "gfx//interface//great_projects//great_project_monticello.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_mount_vernon"
+		texturefile = "gfx//interface//great_projects//great_project_mount_vernon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_dodge_city_monument"
+		texturefile = "gfx//interface//great_projects//great_project_dodge_city.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_totem_poles_monument"
+		texturefile = "gfx//interface//great_projects//great_project_totem_poles.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_fremantle"
+		texturefile = "gfx//interface//great_projects//great_project_fremantle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_taos_pueblo"
+		texturefile = "gfx//interface//great_projects//great_project_taos_pueblo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_terrace_hill"
+		texturefile = "gfx//interface//great_projects//great_project_terrace_hill.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_larnach_castle"
+		texturefile = "gfx//interface//great_projects//great_project_larnach_castle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_de_ulua"
+		texturefile = "gfx//interface//great_projects//great_project_de_ulua.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_acapulco"
+		texturefile = "gfx//interface//great_projects//great_project_acapulco.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_darien_gap_monument"
+		texturefile = "gfx//interface//great_projects//great_project_darien_gap_monument.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_la_antigua"
+		texturefile = "gfx//interface//great_projects//great_project_la_antigua.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_portobelo_san_lorenzo"
+		texturefile = "gfx//interface//great_projects//great_project_portobelo_san_lorenzo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_levuka"
+		texturefile = "gfx//interface//great_projects//great_project_levuka.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_project_taputapuatea"
+		texturefile = "gfx//interface//great_projects//great_project_taputapuatea.dds"
+	}
 }

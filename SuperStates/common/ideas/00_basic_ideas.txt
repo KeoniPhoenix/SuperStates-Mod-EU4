@@ -1477,7 +1477,7 @@ expansion_ideas = {
                 tag = CSA
                 tag = USA
                 tag = MEX
-                tag = YUC
+                tag = YTN
             }
         }
 		modifier = {

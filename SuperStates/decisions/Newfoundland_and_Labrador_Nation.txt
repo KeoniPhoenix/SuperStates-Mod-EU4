@@ -44,6 +44,7 @@ country_decisions = {
 			owns_core_province = 1805 # Goose Bay
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_prestige = 10
 			change_tag = NFL
 			NFL = {
@@ -52,6 +53,26 @@ country_decisions = {
 					NOT = { government_rank = 2 }
 							}
 				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = LBD
+						primary_culture = labradorian
+						primary_culture = inuktitut
+					}
+				}
+				override_country_name = LABRADOR_AND_NEWFOUNDLAND
+				add_accepted_culture_or_dip_power = { culture = newfoundlander free = yes }
+			}
+			if = {
+				limit = {
+					OR = {
+						was_tag = NWF
+						primary_culture = newfoundlander
+					}
+				}
+				add_accepted_culture_or_dip_power = { culture = labradorian free = yes }
 			}
 			newfoundland_area = {
 				limit = {
@@ -66,7 +87,7 @@ country_decisions = {
 				add_permanent_claim = NFL
 			}
 				}
-			swap_non_generic_missions = yes
+			#swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap
 		}
 		ai_will_do = {

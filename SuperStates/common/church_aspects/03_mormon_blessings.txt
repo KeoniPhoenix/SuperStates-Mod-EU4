@@ -38,13 +38,26 @@ mormon_theodemocracy_blessing = {
 	}
 }
 
-resist_the_invaders_blessing = {
+# resist_the_invaders_blessing = {
+# 	is_blessing = yes
+
+# 	modifier = {
+# 		defensiveness = 0.15
+# 		leader_land_manuever = 1
+# 	}
+# 	ai_will_do = {
+# 		factor = 10
+# 	}
+# }
+
+translated_book_of_mormon_blessing = {
 	is_blessing = yes
 
 	modifier = {
-		defensiveness = 0.15
-		leader_land_manuever = 1
+		institution_spread_from_true_faith = 0.15
+		idea_cost = -0.05
 	}
+
 	ai_will_do = {
 		factor = 10
 	}
@@ -54,7 +67,8 @@ temple_constructions_blessing = {
 	is_blessing = yes
 
 	modifier = {
-		global_missionary_strength = 0.02
+		global_missionary_strength = 0.015
+		build_cost = -0.10
 	}
 	ai_will_do = {
 		factor = 10
@@ -85,7 +99,7 @@ nauvoo_legion_blessing = {
 	is_blessing = yes
 
 	modifier = {
-		siege_ability = 0.15
+		siege_ability = 0.10
 		shock_damage = 0.10
 	}
 	ai_will_do = {

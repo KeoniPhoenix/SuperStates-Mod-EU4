@@ -12,7 +12,7 @@ country_event = {
 		NOT = { exists = NSS }
 		has_global_flag = new_providence_fired
 		has_global_flag = golden_age_of_piracy
-		NOT = { has_global_flag = usviblackbeard_flag }
+		#NOT = { has_global_flag = usviblackbeard_flag }
 		NOT = { has_reform = pirate_republic_reform }
 		has_dlc = "Golden Century"
 		owns_core_province = 3129
@@ -26,8 +26,8 @@ country_event = {
 			any_country = {
 				capital_scope = {
 					OR = {
-					region = greater_antilles_region
-					region = lesser_antilles_region
+						region = greater_antilles_region
+						region = lesser_antilles_region
 					}
 				}
 				war_exhaustion = 5
@@ -42,6 +42,8 @@ country_event = {
 				tag = ASE
 					OR = {
 						primary_culture = north_carolinian
+						primary_culture = carolinian
+						primary_culture = high_tider
 						primary_culture = south_carolinian
 						primary_culture = mountaineer
 					}
@@ -55,7 +57,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 150
 	}
 
 	option = {
@@ -103,7 +105,7 @@ country_event = {
 		add_stability = -1
 
 		ai_chance = {
-			factor = 1
+			factor = 50
 		}
 	}
 	option = {
@@ -115,7 +117,7 @@ country_event = {
 				}
 			}
 		ai_chance = {
-			factor = 1
+			factor = 50
 		}
 	}
 }
@@ -227,7 +229,7 @@ country_event = {
 		name = "PiratesSuperStates.2.b"
 		add_years_of_income = 5
 		ai_chance = {
-			factor = 1
+			factor = 50
 		}
 	}
 	option = {
@@ -239,131 +241,7 @@ country_event = {
 				}
 			}
 		ai_chance = {
-			factor = 1
+			factor = 50
 		}
 	}
 }
-
-# # Peter Easton
-# country_event = {
-	# id = PiratesSuperStates.2
-	# title = "PiratesSuperStates.2.name"
-	# picture = SMUGGLERS_eventPicture
-	# desc = "PiratesSuperStates.2.desc"
-
-	# fire_only_once = yes
-
-	# trigger = {
-		# has_global_flag = golden_age_of_piracy
-		# NOT = { has_reform = pirate_republic_reform }
-		# has_dlc = "Golden Century"
-		# owns_core_province = 1807
-		# OR = {
-			# 1516 = {
-				# recent_treasure_ship_passage = yes
-			# }
-			# 1807 = {
-				# privateer_power = { share = 1 }
-			# }
-			# OR = {
-				# any_country = {
-					# capital_scope = {
-						# OR = {
-						# region = greater_antilles_region
-						# region = lesser_antilles_region
-						# }
-						
-					# }
-					# war_exhaustion = 5
-				# }
-				# CAS = {
-					# war_exhaustion = 5
-				# }
-				# SPA = {
-					# war_exhaustion = 5
-				# }
-				# ENG = {
-					# war_exhaustion = 5
-				# }
-				# GBR = {
-					# war_exhaustion = 5
-				# }
-			# }
-		# }
-		# OR = {
-			# tag = NFL
-			# tag = NWF
-			# tag = LBD
-			# tag = MTU
-		# }
-		# NOT = { total_development =  500 }
-		# OR = {
-			# ai = no
-			# is_subject = no
-		# }
-	# }
-
-	# mean_time_to_happen = {
-		# months = 6
-	# }
-
-	# option = {
-		# name = "PiratesSuperStates.2.a"
-		# define_ruler = {
-			# name = "Peter Easton"
-			# adm = 3
-			# dip = 5
-			# mil = 5
-			# culture = english
-		# }
-			# 1807 = {
-				# create_flagship = {	
-					# name = "Happy Adventure"
-					# type = heavy_ship
-				# }
-			# }
-		# custom_tooltip = historical_pirate_tooltip
-		# set_ruler_flag = historical_pirate
-		# set_global_flag = easton_flag
-		# change_government = republic
-		# add_government_reform = pirate_republic_reform
-		# adopt_reform_progress = ROOT
-		# add_republican_tradition = 50
-		# swap_non_generic_missions = yes
-
-		# 1807 = {
-			# galley = root
-			# galley = root
-			# galley = root
-		# }
-		# if = {
-			# limit = {
-				# NOT = { capital = 1807 }
-			# }
-			# set_capital = 1807
-		# }
-		# ai_chance = {
-			# factor = 0
-		# }
-	# }
-
-	# option = {
-		# name = "PiratesSuperStates.2.b"
-		# add_years_of_income = 5
-		# ai_chance = {
-			# factor = 1
-		# }
-	# }
-	# option = {
-		# name = "PiratesSuperStates.2.c"
-		# 1807 = {
-			# spawn_rebels = {
-					# type = anti_tax_rebels
-					# size = 2
-				# }
-			# }
-		# ai_chance = {
-			# factor = 1
-		# }
-	# }
-# }

@@ -1,0 +1,7 @@
+government = republic
+add_government_reform = american_state_reform
+government_rank = 1
+primary_culture = pueblo
+religion = totemism
+technology_group = north_american
+capital = 4863 # Taos Pueblo

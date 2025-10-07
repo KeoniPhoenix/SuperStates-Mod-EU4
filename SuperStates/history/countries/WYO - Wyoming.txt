@@ -8,9 +8,9 @@ capital = 986 # Cheyenne
 1443.1.3 = {
 	monarch = {
 		name = "Francis Warren"
-		adm = 5
+		adm = 4
 		dip = 3
-		mil = 3
+		mil = 5
 	}
 }
 

@@ -3,11 +3,12 @@
 owner = MCN
 controller = MCN
 add_core = MCN
+add_core = HOT
 culture = michoacanian
 religion = s_catholic
 capital = "Morelia"
 is_city = yes #59790
-trade_goods = grain
+trade_goods = maize
 hre = no
 base_tax = 4
 base_production = 4 

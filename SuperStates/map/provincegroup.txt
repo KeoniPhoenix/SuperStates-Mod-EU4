@@ -147,6 +147,18 @@ grenada_provincegroup = {
 	3327 4574
 }
 
+santo_domingo_provincegroup = {
+	490 2658 2659
+}
+
+panama_provincegroup = {
+	835 2664 4595
+}
+
+belize_provincegroup = {
+	843 4589
+}
+
 # Canada
 cape_breton_provincegroup = {
 	3063 1810
@@ -160,7 +172,7 @@ st_pierre_miquelon_provincegroup = {
 	3050 4576
 }
 
-## Pacific Province Groups
+## Pacific and Caribbean Province Groups
 micronesia_states_provincegroup = {
 	2726 2727 2728 1995 4902 4897
 }
@@ -171,6 +183,38 @@ associated_states_provincegroup = {
 
 us_pacific_territories_provincegroup = {
 	1240 1235 2617 3315 4896
+}
+
+solomon_islands_provincegroup = {
+	1238 4889 4890 4891 4892 4893 4894 4895
+}
+
+new_caledonia_provincegroup = {
+	1986 4883 4884
+}
+
+kiribati_provincegroup = {
+	1241 1991 4899 3389
+}
+
+fiji_provincegroup = {
+	1242 4900 4901 4902 4938 4537
+}
+
+tahiti_provincegroup = {
+	1244 1987 3390 3344 3343 3342 3341 3340 3339
+}
+
+vanuatu_provincegroup = {
+	1239 4885 4886 4887 4888
+}
+
+western_samoa_provincegroup = {
+	1243 3335
+}
+
+cook_islands_provincegroup = {
+	3014 3336
 }
 
 # northern_mariana_islands_provincegroup = [
@@ -195,6 +239,10 @@ american_samoa_provincegroup = {
 
 samoa_islands_provincegroup = {
 	2617 3315 1243 3335
+}
+
+philippines_provincegroup = {
+	2701 652 653 2702 4355 4354 651 4356 655 4351 4352 2700 4353 654 2699 4350 656 4349 2697 2698 658 4348 657
 }
 
 # Greenland - to be expanded

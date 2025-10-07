@@ -30,6 +30,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_prestige = 10
 			change_tag = LBD
 			LBD = {

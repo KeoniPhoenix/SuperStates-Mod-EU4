@@ -3,13 +3,13 @@
 owner = NSW
 controller = NSW
 add_core = NSW
-culture = new_south_welsh
+culture = riverinan
 religion = austral_catholic
 capital = "Broken Hill"
 trade_goods = copper
 hre = no
-base_tax = 3
-base_production = 1
+base_tax = 2
+base_production = 4
 base_manpower = 1
 is_city = yes #1840
 discovered_by = australian

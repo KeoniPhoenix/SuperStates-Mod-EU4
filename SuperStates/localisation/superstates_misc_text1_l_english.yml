@@ -65,7 +65,18 @@
  desc_lake_michigan_port_modifier:0 "Holding the Chicago Bay is of vital importance in controlling the trade in the region."
  torres_strait_toll:0 "Sound Toll"
  desc_torres_strait_toll:0 "Let us impose a toll upon those who transit the Torres Strait and leverage our regional position."
- 
+ isthmus_of_panama_province_modifier:0 "Isthmus of Panama"
+ desc_isthmus_of_panama_province_modifier:0 "This narrow strip of land allows us to easily access the markets of both the Pacific and Atlantic Oceans, bolstering our trade presence."
+ magdalena_river_modifier:0 "Magdalena Estuary"
+ desc_magdalena_river_modifier:0 "Holding the Magdalena River is of vital importance in controlling the trade in the region."
+ sinu_river_modifier:0 "Sinú Estuary"
+ desc_sinu_river_modifier:0 "Holding the Sinú River is of vital importance in controlling the trade in the region."
+ usumacinta_river_estuary:0 "Usumacinta Estuary"
+ desc_usumacinta_river_estuary:0 "Holding the Usumacinta River is of vital importance in controlling the trade in the region."
+ coco_river_estuary:0 "Coco Estuary"
+ desc_coco_river_estuary:0 "Holding the Rio Coco is of vital importance in controlling the trade in the region."
+ motagua_river_estuary:0 "Motagua Estuary"
+ desc_motagua_river_estuary:0 "Holding the Motagua River is of vital importance in controlling the trade in the region."
  #Death Valley
  death_valley_modifier:0 "Death Valley"
  desc_death_valley_modifier:0 "The hottest desert valley in all of North America is an easy trap to lead enemy forces into and suffer the miserable heat without water anywhere in sight."
@@ -322,6 +333,7 @@
  merc_yucatan_company_superstates:0 "Yucatán Company"
  merc_yucatan_company:0 "Yucatán Company"
  merc_rough_riders:0 "Rough Riders"
+ merc_navajo_warriors: "Navajo Warriors"
  merc_green_mountain_boys:0 "Green Mountain Boys"
  merc_minutemen:0 "Minutemen"
  merc_volunteer_infantry:0 "Volunteer Infantry"
@@ -361,6 +373,7 @@
  merc_french_volunteer_company:0 "French Volunteers"
  unlock_merc_french_volunteer_company_tt:0 "Unlock the mercenary company §YFrench Volunteers§! to recruit."
  merc_central_american_company:0 "Central American Company"
+ merc_apache_warriors: "Apache Band"
   
  #Misc Text
  random_new_world_region:0 "Random New World Region"
@@ -372,6 +385,8 @@
  estate_nobles_mahele_desc:0 "Mahele or "to divide or portion" are laws restricting property rights, giving the Ali-i a significant portion of land."
  hwi_turn_north_american_title:0 "Embrace North American"
  hwi_turn_north_american_desc:0 "Embrace the North American Technology group and their associated military tactics."
+
+ amaleki:0 "Amaleki"
 
  #MISC STARTING GAMEPLAY DECISIONS
  open_remove_ai_decisions_title:0 "§YOpen Remove AI Decisions§"
@@ -389,5 +404,5 @@
  clear_australia_decision_title:0 "§YClear Australia§"
  clear_australia_decision_desc:0 "This empties Australia and Oceania of all nations.  §RTHIS DECISION IS NOT SUPPORTED DURING A MULTIPLAYER SESSION, instead load in single player and take the necessary decisions, save the game, load save file in a new session.§"
  clear_north_america_decision_title:0 "§YClear North America§"
- clear_north_america_decision_desc:0 "This empties North Americxa of all nations.  §RTHIS DECISION IS NOT SUPPORTED DURING A MULTIPLAYER SESSION, instead load in single player and take the necessary decisions, save the game, load save file in a new session.§"
+ clear_north_america_decision_desc:0 "This empties North America of all nations.  §RTHIS DECISION IS NOT SUPPORTED DURING A MULTIPLAYER SESSION, instead load in single player and take the necessary decisions, save the game, load save file in a new session.§"
  

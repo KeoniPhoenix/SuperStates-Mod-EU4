@@ -8,9 +8,9 @@ capital = 2602 # Montpelier
 1443.1.3 = {
 	monarch = {
 		name = "Thomas Chittenden"
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 }
 

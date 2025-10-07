@@ -2,7 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = coloradan
-add_accepted_culture = north_coloradan
+#add_accepted_culture = north_coloradan
 religion = s_protestant
 capital = 990 # Denver
 

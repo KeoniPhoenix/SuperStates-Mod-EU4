@@ -15,6 +15,7 @@ country_decisions = {
 			OR = {
 				primary_culture = north_carolinian
 				primary_culture = south_carolinian
+				primary_culture = carolinian
 				primary_culture = us_georgian
 				primary_culture = virginian
 				primary_culture = floridian
@@ -23,6 +24,7 @@ country_decisions = {
 				primary_culture = miamian
 				primary_culture = high_tider
 				primary_culture = south_georgian
+				primary_culture = caribbean_floridian
 			}
 			OR = {
 				ai = no
@@ -73,6 +75,11 @@ country_decisions = {
 				is_core = root
 			}
 			num_of_owned_provinces_with = {
+				value = 2
+				area = pamlico_area
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
 				value = 3
 				area = north_florida_area
 				is_core = root
@@ -106,6 +113,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			hidden_effect = {
 				restore_country_name = yes
 			}

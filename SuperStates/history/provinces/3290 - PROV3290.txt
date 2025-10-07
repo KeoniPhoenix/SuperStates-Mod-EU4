@@ -6,12 +6,13 @@ add_core = RIS
 culture = rhode_islander
 religion = s_catholic
 capital = "Newport"
-trade_goods = naval_supplies
+trade_goods = fish
 hre = no
 base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes #2400
+fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

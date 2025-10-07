@@ -7,13 +7,14 @@ culture = tamaulipasian
 religion = s_catholic
 capital = "Nuevo Laredo"
 is_city = yes #37370
-trade_goods = grain
+trade_goods = maize
 hre = no
 base_tax = 3
 base_production = 3
 base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
+center_of_trade = 1
 
 1528.1.1 = {
 	religion = catholic

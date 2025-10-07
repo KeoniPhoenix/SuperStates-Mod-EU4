@@ -8,6 +8,7 @@ culture = alabaman
 religion = s_protestant
 capital = "Montgomery" 
 is_city = yes #20580
+fort_15th = yes
 trade_goods = cotton
 hre = no 
 base_tax = 4

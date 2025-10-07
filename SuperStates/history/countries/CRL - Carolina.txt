@@ -2,7 +2,7 @@ government = republic
 add_government_reform = american_republic
 technology_group = north_american
 primary_culture = north_carolinian
-add_accepted_culture = south_carolinian
+add_accepted_culture_or_dip_power = { culture = south_carolinian free = yes}
 religion = s_protestant
 capital = 2528	# Charleston
 

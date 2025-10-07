@@ -75,6 +75,7 @@ country_decisions = {
 			}
 		}		
 		effect = {
+			on_change_tag_effect = yes
 			change_tag = APL
 			# swap_non_generic_missions = yes #Currently has no missions
 			APL = {

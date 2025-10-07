@@ -3,6 +3,7 @@
 owner = HDL
 controller = HDL
 add_core = HDL
+add_core = HUS
 culture = hidalgoan
 religion = s_catholic
 capital = "Huejutla de Reyes"

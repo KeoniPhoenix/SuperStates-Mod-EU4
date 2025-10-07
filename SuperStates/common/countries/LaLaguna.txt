@@ -1,0 +1,147 @@
+#Country Name: La Laguna
+
+graphical_culture = westerngfx
+
+color = { 242 248 77 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Agustín #0" = 5
+	"Alfredo #0" = 5
+	"Alonso #0" = 5
+	"Andrés #0" = 5
+	"Ángel #0" = 5
+	"Antonio #0" = 20
+	"Arnulfo #0" = 5
+	"Bartolomé #0" = 5
+	"Benecio #0" = 5
+	"Blas #0" = 10
+	"Braulio #0" = 5
+	"Bruno #0" = 5
+	"Carlos #0" = 10
+	"Clemente #0" = 5
+	"Diego #0" = 10
+	"Domingo #0" = 5
+	"Eduardo #0" = 5
+	"Eliseo #0" = 5
+	"Encarnación #0" = 5
+	"Enrique #0" = 5
+	"Eulalio #0" = 5
+	"Evaristo #0" = 5
+	"Francisco #0" = 20
+	"Gregorio #0" = 10
+	"Gustavo #0" = 5
+	"Hipólito #0" = 5
+	"Humberto #0" = 5
+	"Ignacio #0" = 10
+	"Isidro #0" = 5
+	"Ismael #0" = 5
+	"Jacinto #0" = 5
+	"Jacobo #0" = 5
+	"Jerónimo #0" = 5
+	"Jesús #0" = 20
+	"Jorge #0" = 5
+	"José #0" = 20
+	"Juan #0" = 20
+	"Julio #0" = 5
+	"Lorenzo #0" = 5
+	"Luis #0" = 5
+	"Manuel #0" = 20
+	"Marcial #0" = 5
+	"Martín #0" = 5
+	"Matías #0" = 5
+	"Melchor #0" = 5
+	"Miguel #0" = 20
+	"Nazario #0" = 5
+	"Oscar #0" = 5
+	"Paz #0" = 5
+	"Pedro #0" = 20
+	"Praxedis #0" = 5
+	"Rafael #0" = 15
+	"Ramón #0" = 5
+	"Raúl #0" = 10
+	"Rogelio #0" = 5
+	"Rubén #0" = 5
+	"Santiago #0" = 15
+	"Simón #0" = 5
+	"Telésforo #0" = 5
+	"Venustiano #0" = 5
+	"Vicente #0" = 5
+	"Victor #0" = 5
+	"Victoriano #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Alcocer Antonio Arizpe Azlo
+	Blanco Borrego Breceda
+	Cancio Cárdenas Cardona Carranza Cepeda Cervantes Charles Claudio Cordero Costilla Crespo Cuervo
+	Dávila "de Aguirre" "de Alarcón" "de Barríos" "de Cárdenas" "de la Aguirre" "de la Garza" "de la Peña" "de las Fuentes" "de León" "de Padilla" "de Paula" "de Rábago" "de Salinas" "de Sandoval" "de Sesman" "de Terán" "de Ugarte" "de Valdes" "de Valle"
+	Elosúa Espinoza
+	Faz Fermín Fernández Flores Franco Fuentes Fuero Fueros
+	Galindo García Garza Gómez González Gutiérrez
+	Hernández
+	Ignacio
+	Joaquín Jose José Lobo
+	López
+	Madero María Martín Martínez Martos Mejía Mendoza Miguel Montemayor Moreira Moreira
+	Neyra
+	Ortiz
+	Palacios Pardo Pérez
+	Quesada
+	Rafael Ramón Reyes Rodríguez
+	Salas Sánchez
+	Torres
+	Valdés Valdez Valerio Vázquez Vicente Vidaurri Viesca
+}
+
+ship_names = {
+	Abasolo Acuña Allende Arizpe Artega
+	Castaños Cendela Colonias Cuatrociénegas
+	Escobedo
+	Francisco Frontera
+	"General Cepeda" Guerrero
+	Hidalgo
+	Jiménez Juárez 
+	Lamadrid
+	Madero Matamoros Monclova Morelos Múzquiz 
+	Nadadores Nava Negras
+	Ocampo
+	Parras Piedras Progreso
+	Ramos
+	Sabinas Sacramento Saltillo "San Buenaventura" "San Juan" "San Pedro" "Sierra Mojada"
+	Torreón
+	Viesca "Villa Unión"
+	Zaragoza
+}

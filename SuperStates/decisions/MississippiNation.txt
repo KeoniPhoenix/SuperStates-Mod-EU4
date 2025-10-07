@@ -1,0 +1,123 @@
+country_decisions = {
+
+	## MISSISSIPPI
+		mississippi_nation = {
+			major = yes
+			potential = {
+				NOT = { tag = USA }
+				NOT = { exists = CSA }
+				NOT = { exists = NAM }
+				NOT = { exists = MPP }
+				NOT = { has_country_flag = formed_mississippi_flag }
+				#technology_group = north_american
+				OR = {
+					primary_culture = mississippian
+					AND = {
+						primary_culture = west_floridian
+						OR = {
+							capital_scope = {
+								province_id = 2503
+							}
+							capital_scope = {
+								area = pearl_river_area
+							}
+							capital_scope = {
+								area = black_prairie_area
+							}
+						}
+					}
+					AND = {
+						primary_culture = west_tennessean
+						OR = {
+							capital_scope = {
+								province_id = 2503
+							}
+							capital_scope = {
+								area = pearl_river_area
+							}
+							capital_scope = {
+								area = black_prairie_area
+							}
+						}
+					}
+				}
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						num_of_cities = 3
+					}
+				}
+			}
+			provinces_to_highlight = {
+				OR = {
+					area = pearl_river_area
+					area = black_prairie_area
+					province_id = 2503
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			allow = {
+				owns_core_province = 2502 #Jackson
+				OR = {
+					owns_core_province = 2505 #Tupelo
+					owns_core_province = 2503 #Gulfport
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					area = pearl_river_area
+					is_core = root
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					area = black_prairie_area
+					is_core = root
+				}
+			}
+			effect = {
+				on_change_tag_effect = yes
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 730
+				}
+				add_prestige = 10
+				change_tag = MPP
+				MPP = {
+					if = {
+						limit = {
+							NOT = { government_rank = 2 }
+						}
+					set_government_rank = 2
+					}
+					pearl_river_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MPP
+					}
+					black_prairie_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MPP
+					}
+					2503 = {
+						if = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+								add_permanent_claim = MPP
+						}
+					}
+					set_country_flag = formed_mississippi_flag
+				}
+				country_event = { id = ideagroups.1 } #Swap 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}

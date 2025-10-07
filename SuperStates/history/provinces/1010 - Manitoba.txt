@@ -7,13 +7,14 @@ culture = oklahoman
 religion = s_protestant
 capital = "Oklahoma City"
 is_city = yes #59200
-trade_goods = grain
+trade_goods = paper
 hre = no
 base_tax = 4
 base_production = 5
 base_manpower = 5
 discovered_by = north_american
 discovered_by = mesoamerican
+center_of_trade = 2
 
 1399.1.1 = {
 	fort_15th = yes 

@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_catholic
+primary_culture = queenslander
+capital = 3180 # Rockhampton

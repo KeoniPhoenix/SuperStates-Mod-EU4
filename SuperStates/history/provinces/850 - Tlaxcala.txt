@@ -4,6 +4,7 @@ owner = CPS
 controller = CPS
 add_core = CPS
 add_core = LOS
+add_core = SOC
 culture = chiapan
 religion = s_catholic
 capital = "Tapachula"

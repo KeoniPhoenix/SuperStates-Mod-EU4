@@ -1,0 +1,154 @@
+#Country Name: Soconusco
+
+graphical_culture = westerngfx
+
+color = { 78 156 51 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	central_american_battle_axe
+	central_american_horsemen
+	central_american_militia
+	central_american_early_cavalry
+	central_american_pikemen
+	central_american_hussar
+	central_american_off_musketeer
+	central_american_reformed_hussar
+	central_american_tercio
+	zapatistan_infantry
+	central_american_light_cavalry
+	itrubidian_infantry
+	mexican_green_coat
+	central_american_lancer
+	central_american_dragoon
+	central_american_mass
+}
+
+monarch_names = {
+	"Abraham #0" = 5
+	"Absalón #0" = 5
+	"Adrián #0" = 5
+	"Alberto #0" = 5
+	"Alejo #0" = 5
+	"Alvaro #0" = 5
+	"Amadeo #0" = 5
+	"Amador #0" = 5
+	"Amilcar #0" = 5
+	"Ángel #0" = 5
+	"Benigno #0" = 5
+	"Bernardo #0" = 5
+	"Blas #0" = 5
+	"Carlos #0" = 10
+	"César #0" = 10
+	"Clemente #0" = 15
+	"Diego #0" = 5
+	"Domingo #0" = 5
+	"Eduardo #0" = 5
+	"Efraín #0" = 10
+	"Eleuterio #0" = 5
+	"Elmar #0" = 5
+	"Emeterio #0" = 10
+	"Emilio #0" = 5
+	"Ernesto #0" = 5
+	"Fausto #0" = 10
+	"Federico #0" = 10
+	"Flavio #0" = 5
+	"Francisco #0" = 20
+	"Gustavo #0" = 5
+	"Ignacio #0" = 10
+	"Javier #0" = 5
+	"Jerónimo #0" = 5
+	"Jesús #0" = 5
+	"Joaquín  #0" = 5
+	"Jorge #0" = 5
+	"José  #0" = 20
+	"Juan #0" = 20
+	"Julio #0" = 5
+	"Luis #0" = 15
+	"Manuel #0" = 20
+	"Marco #0" = 10
+	"Mariano #0" = 20
+	"Martín #0" = 10
+	"Matías  #0" = 5
+	"Miguel #0" = 10
+	"Moisés #0" = 15
+	"Nicolás #0" = 10
+	"Onofre #0" = 10
+	"Pablo #0" = 10
+	"Pascual #0" = 5
+	"Patrocinio #0" = 5
+	"Policarpio #0" = 5
+	"Ponciano #0" = 5
+	"Quirino #0" = 5
+	"Rafael #0" = 10
+	"Ramón  #0" = 10
+	"Raúl #0" = 15
+	"Raymundo #0" = 15
+	"Roberto #0" = 15
+	"Rosendo #0" = 10
+	"Salomón #0" = 5
+	"Salvador #0" = 10
+	"Samuel #0" = 5
+	"Sebastián #0" = 5
+	"Tiburcio #0" = 5
+	"Victórico #0" = 5
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Aceituno Aguilar Agustín Albino Albores Alvarez Aranda Armendáriz Ascención Aurelio Aurelio Ayanegui
+	Barberena Betanzos Borda
+	Cal Camboa Cancino Cardona Carrascosa Castañón Castellanos Castillo Cerón Clímaco Coello Constantino Córdova Corral Coutiño Cruz Culebro
+	"de la Vega" "de León" "del Pino" "Delabre" Diego Domínguez
+	Encarnación Enríquez Escandón Escobar Esponda
+	Farrera Fuentes
+	Gabriel García González Gordillo Grajales Guillén Gutiérrez
+	Ignacio Inés
+	José
+	Lara Larraínzar León López
+	María Mariano Miguel Moguel Montes Morales
+	Nicolás
+	Palafox Paredes Pimentel Pineda Piñeiro
+	Rabasa Rafael Ramírez Ramos Reyes Robledo Robles Rojas Rovelo Rueda Ruiz
+	Sabines Salazar Santeliz Setzer Solórzano
+	Tovilla Trejo
+	Utrilla
+	Velasco Vidal Villasana Villers
+	Zertuche
+}
+
+ship_names = {
+	Acacoyagua Acala Acapetahua Agua Aldama Allende Altamirano Amatán Amatenango Angel Arriaga
+	Bejucal "Bella Vista" Benemérito Berriozábal Bochil
+	Cacahoatán Catazajá Chalchihuitán Chamula Chanal Chapultenango Chenalhó Chiapa Chiapilla Chicoasén Chicomuselo Chilón Cintalapa Coapilla Comillas Comitán Copainalá
+	Domínguez Duraznal
+	"El Bosque" "El Porvenir" Escuintla Espinosa
+	"Francisco León" "Frontera Comalapa" "Frontera Hidalgo"
+	Guerrero
+	Huehuetán Huitiupán Huixtán
+	Ixhuatán Ixtacomitán Ixtapa Ixtapangajoya
+	Jiquipilas Jitotol Juárez
+	"La Concordia" "La Grandeza" "La Independencia" "La Libertad" "La Trinitaria" Larráinzar "Las Margaritas" "Las Rosas"
+	Madero Mapastepec "Maravilla Tenejapa" Marqués Mazapa Mazatán Mendoza Metapa Mitontic Montecristo Motozintla
+	"Nicolás Ruíz"
+	Ocosingo Ocotepec Ocozocoautla Ostuacán Osumacinta Oxchuc
+	Palenque Pantelhó Pantepec Pichucalco Pijijiapan Pinar "Pueblo Nuevo"
+	Rayón Reforma
+	Sabanilla Salto "San Andrés" "San Cristóbal" "San Fernando" "San Juan Cancuc" "San Lucas" Santiago Siltepec Simojovel Sitalá Socoltenango Solistahuacán Solosuchiapa Soyaló Suchiapa Suchiate Sunuapa
+	Tapachula Tapalapa Tapilula Tecpatán Tenejapa Tila Tonalá Totolapa Tumbalá "Tuxtla Chico" "Tuxtla Gutiérrez" Tuzantán Tzimol
+	"Unión Juárez" 
+	"Venustiano Carranza" "Villa Comaltitlán" "Villa Corzo" "Villaflores"
+	Yajalón 
+}

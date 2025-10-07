@@ -1,0 +1,800 @@
+##########################
+#
+#  Written by:
+#  Brandon
+#
+##########################
+
+namespace = ColonialCulture
+
+#Colonial Culture Event
+country_event = {
+	id = ColonialCulture.1
+	title = "ColonialCulture.1t"
+	desc = "ColonialCulture.1d"
+	picture = COLONIZATION_eventPicture
+	hidden = yes # NOT VISIBLE
+
+	trigger = {
+		OR = {
+			# Cook Islands
+			3014 = {
+				culture = cook_islander
+				NOT = { is_core = CKI }
+			}
+			3336 = {
+				culture = cook_islander
+				NOT = { is_core = CKI }
+			}
+			# Cuba
+			west_cuba_area = {
+				type = any
+				culture = cuban
+				NOT = { is_core = CUB }
+			}
+			east_cuba_area = {
+				type = any
+				culture = cuban
+				NOT = { is_core = CUB }
+			}
+			# Bahamas
+			bahamas_area = {
+				type = any
+				culture = bahamian
+				NOT = { is_core = BHM }
+			}
+			4626 = {
+				culture = bahamian
+				NOT = { is_core = BHM }
+			}
+			3326 = {
+				culture = bahamian
+				NOT = { is_core = BHM }
+			}
+			# Belize
+			843 = {
+				culture = belizean
+				NOT = { is_core = BLZ }
+			}
+			4589 = {
+				culture = belizean
+				NOT = { is_core = BLZ }
+			}
+			# Fiji
+			1242 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			4900 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			4901 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			4902 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			4938 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			4537 = {
+				culture = fijian
+				NOT = { is_core = FIJ }
+			}
+			# Greenland
+			greenland_region = {
+				type = any
+				culture = greenlandic
+				NOT = { is_core = GRL }
+			}
+			#Grenada
+			3327 = {
+				culture = grenadian
+				NOT = { is_core = GNA }
+			}
+			4574 = {
+				culture = grenadian
+				NOT = { is_core = GNA }
+			}
+			# Guadeloupe
+			496 = {
+				culture = guadeloupean
+				NOT = { is_core = GDL }
+			}
+			4583 = {
+				culture = guadeloupean
+				NOT = { is_core = GDL }
+			}
+			# Haiti
+			north_haiti_area = {
+				type = any
+				culture = haitian
+				NOT = { is_core = HAT }
+			}
+			south_haiti_area = {
+				type = any
+				culture = haitian
+				NOT = { is_core = HAT }
+			}
+			# Jamaica
+			jamaica_area = {
+				type = any
+				culture = jamaican
+				NOT = { is_core = JMC }
+			}
+			# Kiribati
+			1241 = {
+				culture = i-kiribati
+				NOT = { is_core = KRB }
+			}
+			1991 = {
+				culture = i-kiribati
+				NOT = { is_core = KRB }
+			}
+			4899 = {
+				culture = i-kiribati
+				NOT = { is_core = KRB }
+			}
+			3389 = {
+				culture = i-kiribati
+				NOT = { is_core = KRB }
+			}
+			# New Caledonia
+			1986 = {
+				culture = new_caledonian
+				NOT = { is_core = NCL }
+			}
+			4883 = {
+				culture = new_caledonian
+				NOT = { is_core = NCL }
+			}
+			4884 = {
+				culture = new_caledonian
+				NOT = { is_core = NCL }
+			}
+			# New Zealand
+			south_island_provincegroup = {
+				type = any
+				culture = south_islander
+				NOT = { is_core = NZL }
+			}
+			north_island_provincegroup = {
+				type = any
+				culture = north_islander
+				NOT = { is_core = NZL }
+			}
+			# Panama
+			835 = {
+				culture = panamanian
+				NOT = { is_core = PNM }
+			}
+			2664 = {
+				culture = panamanian
+				NOT = { is_core = PNM }
+			}
+			4595 = {
+				culture = panamanian
+				NOT = { is_core = PNM }
+			}
+			# Santo Domingo / Dominican Republic
+			490 = {
+				culture = dominican
+				NOT = { is_core = SDM }
+			}
+			2658 = {
+				culture = dominican
+				NOT = { is_core = SDM }
+			}
+			2659 = {
+				culture = dominican
+				NOT = { is_core = SDM }
+			}
+			# Solomon Islands
+			1238 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4889 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4890 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4891 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4892 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4893 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4894 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			4895 = {
+				culture = solomon_islander
+				NOT = { is_core = SLM }
+			}
+			# St Pierre and Miquelon
+			4576 = {
+				culture = saint_pierrais
+				NOT = { is_core = SPM }
+			}
+			3050 = {
+				culture = saint_pierrais
+				NOT = { is_core = SPM }
+			}
+			# Saint Vincent
+			500 = {
+				culture = vincentian
+				NOT = { is_core = STV }
+			}
+			4575 = {
+				culture = vincentian
+				NOT = { is_core = STV }
+			}
+			# Tahiti
+			1244 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			1987 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3390 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3344 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3343 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3342 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3341 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3340 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			3339 = {
+				culture = tahitian
+				NOT = { is_core = THT }
+			}
+			# Tortola / British Virgin Islands
+			east_virgin_islands_area = {
+				type = any
+				culture = virgin_islander
+				NOT = { is_core = BVI }
+			}
+			# Vanuatu
+			1239 = {
+				culture = ni-vanuatu
+				NOT = { is_core = VAN }
+			}
+			4885 = {
+				culture = ni-vanuatu
+				NOT = { is_core = VAN }
+			}
+			4886 = {
+				culture = ni-vanuatu
+				NOT = { is_core = VAN }
+			}
+			4887 = {
+				culture = ni-vanuatu
+				NOT = { is_core = VAN }
+			}
+			4888 = {
+				culture = ni-vanuatu
+				NOT = { is_core = VAN }
+			}
+			# Western Samoa
+			1243 = {
+				culture = samoan_western
+				NOT = { is_core = WSM }
+			}
+			3335 = {
+				culture = samoan_western
+				NOT = { is_core = WSM }
+			}
+			# Cayman Islands
+			cayman_islands_area = {
+				type = any
+				culture = caymanian
+				NOT = { is_core = CYM }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+	}
+	
+	option = {
+		name = "ColonialCulture.1opta"
+		if = {
+			limit = {
+				OR = {
+					3014 = {
+						culture = cook_islander
+						NOT = { is_core = CKI }
+						is_city = yes
+					}
+					3336 = {
+						culture = cook_islander
+						NOT = { is_core = CKI }
+						is_city = yes
+					}
+				}
+			}
+			cook_islands_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = cook_islander
+				}
+				add_core = CKI
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					west_cuba_area = {
+						type = any
+						culture = cuban
+						NOT = { is_core = CUB }
+					}
+					east_cuba_area = {
+						type = any
+						culture = cuban
+						NOT = { is_core = CUB }
+					}
+				}
+			}
+			west_cuba_area = {
+				limit = {
+					is_city = yes
+					culture = cuban
+				}
+				add_core = CUB
+			}
+			east_cuba_area = {
+				limit = {
+					is_city = yes
+					culture = cuban
+				}
+				add_core = CUB
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					bahamas_area = {
+						type = any
+						culture = bahamian
+						NOT = { is_core = BHM }
+					}
+					4626 = {
+						culture = bahamian
+						NOT = { is_core = BHM }
+					}
+					3326 = {
+						culture = bahamian
+						NOT = { is_core = BHM }
+					}
+				}
+			}
+			bahamas_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = bahamian
+				}
+				add_core = BHM
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					843 = {
+						culture = belizean
+						NOT = { is_core = BLZ }
+					}
+					4589 = {
+						culture = belizean
+						NOT = { is_core = BLZ }
+					}
+				}
+			}
+			belize_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = belizean
+				}
+				add_core = BHM
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					1242 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+					4900 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+					4901 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+					4902 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+					4938 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+					4537 = {
+						culture = fijian
+						NOT = { is_core = FIJ }
+					}
+				}
+			}
+			fiji_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = fijian
+				}
+				add_core = FIJ
+			}
+		}
+		if = {
+			limit = {
+				greenland_region = {
+					type = any
+					culture = greenlandic
+					NOT = { is_core = GRL }
+				}
+			}
+			greenland_region = {
+				limit = {
+					is_city = yes
+					culture = greenlandic
+				}
+				add_core = GRL
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					3327 = {
+						culture = grenadian
+						NOT = { is_core = GNA }
+					}
+					4574 = {
+						culture = grenadian
+						NOT = { is_core = GNA }
+					}
+				}
+			}
+			grenada_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = grenadian
+				}
+				add_core = GNA
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					496 = {
+						culture = guadeloupean
+						NOT = { is_core = GDL }
+					}
+					4583 = {
+						culture = guadeloupean
+						NOT = { is_core = GDL }
+					}
+				}
+			}
+			guadeloupe_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = guadeloupean
+				}
+				add_core = GDL
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					north_haiti_area = {
+						type = any
+						culture = haitian
+						NOT = { is_core = HAT }
+					}
+					south_haiti_area = {
+						type = any
+						culture = haitian
+						NOT = { is_core = HAT }
+					}
+				}
+			}
+			south_haiti_area = {
+				limit = {
+					is_city = yes
+					culture = haitian
+				}
+				add_core = HAT
+			}
+			north_haiti_area = {
+				limit = {
+					is_city = yes
+					culture = haitian
+				}
+				add_core = HAT
+			}
+		}
+		if = {
+			limit = {
+				jamaica_area = {
+					type = any
+					culture = jamaican
+					NOT = { is_core = JMC }
+				}
+			}
+			jamaica_area = {
+				limit = {
+					is_city = yes
+					culture = jamaican
+				}
+				add_core = JMC
+			}
+		}
+		if = {
+			limit = {
+				kiribati_provincegroup = {
+					type = any
+					culture = i-kiribati
+					NOT = { is_core = KRB }
+				}
+			}
+			kiribati_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = i-kiribati
+				}
+				add_core = KRB
+			}
+		}
+		if = {
+			limit = {
+				new_caledonia_provincegroup = {
+					type = any
+					culture = new_caledonian
+					NOT = { is_core = NCL }
+				}
+			}
+			new_caledonia_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = new_caledonian
+				}
+				add_core = NCL
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					south_island_provincegroup = {
+						type = any
+						culture = south_islander
+						NOT = { is_core = NZL }
+					}
+					north_island_provincegroup = {
+						type = any
+						culture = north_islander
+						NOT = { is_core = NZL }
+					}
+				}
+			}
+			south_island_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = south_islander
+				}
+				add_core = NZL
+			}
+			north_island_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = north_islander
+				}
+				add_core = NZL
+			}
+		}
+		if = {
+			limit = {
+				panama_provincegroup = {
+					type = any
+					culture = panamanian
+					NOT = { is_core = PNM }
+				}
+			}
+			panama_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = panamanian
+				}
+				add_core = PNM
+			}
+		}
+		if = {
+			limit = {
+				santo_domingo_provincegroup = {
+					type = any
+					culture = dominican
+					NOT = { is_core = SDM }
+				}
+			}
+			santo_domingo_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = dominican
+				}
+				add_core = SDM
+			}
+		}
+		if = {
+			limit = {
+				solomon_islands_provincegroup = {
+					type = any
+					culture = solomon_islander
+					NOT = { is_core = SLM }
+				}
+			}
+			solomon_islands_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = solomon_islander
+				}
+				add_core = SLM
+			}
+		}
+		if = {
+			limit = {
+				st_pierre_miquelon_provincegroup = {
+					type = any
+					culture = saint_pierrais
+					NOT = { is_core = SPM }
+				}
+			}
+			st_pierre_miquelon_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = saint_pierrais
+				}
+				add_core = SPM
+			}
+		}
+		if = {
+			limit = {
+				st_vincent_grenadines_provincegroup = {
+					type = any
+					culture = vincentian
+					NOT = { is_core = STV }
+				}
+			}
+			st_vincent_grenadines_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = vincentian
+				}
+				add_core = STV
+			}
+		}
+		if = {
+			limit = {
+				tahiti_provincegroup = {
+					type = any
+					culture = tahitian
+					NOT = { is_core = THT }
+				}
+			}
+			tahiti_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = tahitian
+				}
+				add_core = THT
+			}
+		}
+		if = {
+			limit = {
+				east_virgin_islands_area = {
+					type = any
+					culture = virgin_islander
+					NOT = { is_core = BVI }
+				}
+			}
+			east_virgin_islands_area = {
+				limit = {
+					is_city = yes
+					culture = virgin_islander
+					NOT = { owned_by = VII }
+				}
+				add_core = BVI
+			}
+		}
+		if = {
+			limit = {
+				vanuatu_provincegroup = {
+					type = any
+					culture = ni-vanuatu
+					NOT = { is_core = VAN }
+				}
+			}
+			vanuatu_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = ni-vanuatu
+				}
+				add_core = VAN
+			}
+		}
+		if = {
+			limit = {
+				western_samoa_provincegroup = {
+					type = any
+					culture = samoan_western
+					NOT = { is_core = WSM }
+				}
+			}
+			western_samoa_provincegroup = {
+				limit = {
+					is_city = yes
+					culture = samoan_western
+				}
+				add_core = WSM
+			}
+		}
+		if = {
+			limit = {
+				cayman_islands_area = {
+					type = any
+					culture = caymanian
+					NOT = { is_core = CYM }
+				}
+			}
+			cayman_islands_area = {
+				limit = {
+					is_city = yes
+					culture = caymanian
+				}
+				add_core = CYM
+			}
+		}
+	}
+}

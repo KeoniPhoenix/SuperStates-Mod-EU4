@@ -1,0 +1,35 @@
+namespace = CAMflavor
+
+#Aruban Culture Event
+country_event = {
+	id = CAMflavor.1
+	title = "CAMflavor.1t"
+	desc = "CAMflavor.1d"
+	picture = CARIBBEAN_PIRATE_FORT_eventPicture
+	
+	is_triggered_only = yes
+
+	trigger = {
+		835 = { 
+			owned_by = ROOT
+			has_great_project = {
+				type = portobelo_san_lorenzo
+				tier = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "CAMflavor.1opta"
+		custom_tooltip = CAMflavor.2.tt
+		hidden_effect = {
+		every_owned_province = {
+				limit = {
+					owned_by = ROOT
+					region = central_america_region
+				}
+				add_province_triggered_modifier = CAM_fortifications
+			}
+		}
+	}
+}

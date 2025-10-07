@@ -3,7 +3,7 @@
 owner = NTT
 controller = NTT
 add_core = NTT
-culture = northern_territorian
+culture = s_aboriginal
 religion = austral_protestant
 capital = "Minjilang"
 trade_goods = fish

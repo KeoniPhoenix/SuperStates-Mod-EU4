@@ -6,12 +6,13 @@ add_core = NYS
 culture = adirondack
 religion = s_catholic
 capital = "Watertown"
-trade_goods = livestock
+trade_goods = maple
 hre = no
 base_tax = 3
 base_production = 1
 base_manpower = 2
 is_city = yes #2710
+fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

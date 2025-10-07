@@ -9,9 +9,9 @@ capital = 2530  # Annapolis
 1443.1.3 = {
 	monarch = {
 		name = "Thomas Johnson"
-		adm = 2
-		dip = 3
-		mil = 3
+		adm = 3
+		dip = 4
+		mil = 4
 	}
 }
 

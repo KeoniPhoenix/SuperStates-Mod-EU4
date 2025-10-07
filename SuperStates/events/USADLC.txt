@@ -6,8 +6,8 @@
 ##########################
 #BONUS EVENTS FOR THOSE WHO PURCHASED AMERICAN DREAM DLC
 
-namespace = usa_dlc
-normal_or_historical_nations = yes
+##namespace = usa_dlc
+#ormal_or_historical_nations = yes
 
 #CONSTITUTIONAL CONVENTION
 #Events fire upon taking the decision to form the USA/CSA
@@ -54,7 +54,7 @@ normal_or_historical_nations = yes
 #	}
 #}
 
-#namespace = usa_dlc_superstates
+##namespace = usa_dlc_superstates
 
 #1.12 Obseleted this event, it will be replaced with special events in the future.
 

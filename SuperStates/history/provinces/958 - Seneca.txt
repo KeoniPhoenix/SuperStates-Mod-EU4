@@ -19,9 +19,9 @@ discovered_by = mesoamerican
 	religion = s_baptist
 }
 
-1399.1.1 = {
-	fort_15th = yes
-}
+# 1399.1.1 = {
+	# fort_15th = yes
+# }
 
 1555.1.1 = {
 	owner = TEX

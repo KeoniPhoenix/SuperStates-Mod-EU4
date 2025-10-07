@@ -10,6 +10,12 @@
  superstates_europe.101d:0 "Far across the Atlantic Ocean to the East is the European Continent and its numerous kingdoms and the bastian of Christianity.  Having established a connection to Europe, we are now faced with adapting to the European ways or continuing our own ways."
  superstates_europe.101opta:0 "This could get interesting."
  #The discovery of Europe is revealed to all North American.
+
+ # Protestant Fallback event
+ protestantfallback.title: "A Dream of Reformation"
+ protestantfallback.desc: "Despite the land of Europe being a vast and uncharted territory largely presumed to be empty, there has nonetheless been what can only be described as a widespread phenomenon of our people yearning for what they call the 'Reformation.' We are unsure exactly what this means, but we have a feeling it may result in shifting the tides of history as we know it."
+ protestantfallback.1: "This sounds like supernatural heresy, but we cannot impede a force greater than ourselves."
+ protestantfallback.2: "This is all so strange!"
  
  #Discovery of Rome for American Catholics
  superstates_papal.1t:0 "Mission from the Holy See"
@@ -30,6 +36,20 @@
  #Discover of European Reformation for American Protestants
  superstates_europe.4t:0 "The European Reformation Reaches Across the Sea"
  superstates_europe.4d:0 "The European Catholic Church has become divided by the theological challenges of reformers creating a division of the Church of Rome.  The Papacy and its cardinals in support of the traditional ways view these reformers and desenters as Protestants for protesting the infalibility of the Pope.  Missionaries sent by the leaders of the new Protestant faith from their centers of theological."
+
+ # Debug Events
+ debugEvent.1t: "Mission Debugging"
+ debugEvent.1d: "This event is used to debug missions by firing the 'swap_non_generic_missions' effect for the nations selected. This forces the game to reload the mission tree, which can solve some issues when loading a save from an outdated version of the mod."
+ debugEvent.1opta: "Only reload my missions."
+ debugEvent.1optb: "Reload missions for every known (visible) country."
+ debugEvent.1optc: "Reload missions for all countries."
+ debugEvent.1optd: "Get me out of here!"
+ debugEvent.2t: "Country Flag Debugging"
+ debugEvent.2d: "This event is used to debug country flags by firing the 'clr_country_flag = ALL' effect for the nations selected. These flags are internally used in code to 'flag' nations or global events."
+ debugEvent.2opta: "Only clear my country flags."
+ debugEvent.2optb: "Clear country flags for all known (visible) countries."
+ debugEvent.2optc: "Clear country flags for all countries."
+ debugEvent.2optd: "Get me out of here!"
  
  #Discovery of Protestant Reformation for Australian Protestants
  
@@ -351,7 +371,7 @@
  #flavorCUT.2optc:0 "Military academy. May the drums of war play from dawn to dusk."
  #+10% discipline, +1 yearly army tradition, -10% mil tech cost. 
  flavorCUT.10t:0 "Creation of Westmoreland"
- flavorCUT.10d:0 "Overlapping claims over land in the Wyoming Valley has sent settlers from both Connecticut and Pennsylvania to stake land in the area. This has expectedly led to conflict with Pennsylvania, who has ordered the expulsion of all Connecticut settlers in the Wyoming Valley. Connecticuter settlers are requesting protection and for the formation of Westmoreland."
+ flavorCUT.10d:0 "Overlapping claims over land in the Wyoming Valley has sent settlers from both Connecticut and Pennsylvania to stake land in the area. This has expectedly led to conflict with Pennsylvania, who has ordered the expulsion of all Connecticut settlers in the Wyoming Valley. Nutmegger settlers are requesting protection and for the formation of Westmoreland."
  flavorCUT.10opta:0 "Create Westmoreland."
  flavorCUT.10optb:0 "No need, we will manage the territory ourselves."
  flavorCUT.11t:0 "Cheney Brothers Silk"
@@ -533,6 +553,12 @@
  flavorKEN.1d:0 "The opening of the Wilderness Road led to massive economic and urban development in western Kentucky. Now we must decide the direction the state will take from this benefit"
  flavorKEN.1opta:0 "We must strengthen the backbone of our military and defenses."
  flavorKEN.1optb:0 "Invest in a strong economy."
+ flavorKEN.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorKEN.1000d:0 "[Root.GetName] sits on the line between three separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go."
+ flavorKEN.1000opta:0 "We will adopt Southern culture and rule from [2515.GetCapitalName]."
+ flavorKEN.1000optb:0 "We will adopt Southern culture."
+ flavorKEN.1000optc:0 "We will adopt Midwestern culture."
+ flavorKEN.1000optd: "We will stick to our current culture."
  
  #####Flavor for Louisiana
  flavorLOU.1t:0 "YELLOW FEVER!"
@@ -551,6 +577,12 @@
  flavorMYD.1t:0 "Baltimore Basilica"
  flavorMYD.1d:0 "A gem of Maryland. It is considered to be the greatest work of Ben Latrobe, who was known as developing the standards for American Architecture."
  flavorMYD.opta:0 "A tribute to the people of Maryland, and all those who yearn to be part of her."
+
+ flavorMYD.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorMYD.1000d:0 "[Root.GetName] sits on the line between three separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go."
+ flavorMYD.1000opta:0 "We will adopt Southerner culture."
+ flavorMYD.1000optb:0 "We will adopt Appalachian culture."
+ flavorMYD.1000optc:0 "We will stick to our current culture."
  
  #####Flavor for Massachusetts
  flavorMSS.5t:0 "The Boston Light"
@@ -574,6 +606,47 @@
  flavorMSS.4d:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName]! $FROMCOUNTRY$ has rejected our offer and spurned our envoy! How dare they?!"
  flavorMSS.4opta:0 "Outrageous! I will show them proper diplomacy!"
  
+
+ # United Culture Events
+ cultureflavor.1.t: "A United Dakotan Culture"
+ cultureflavor.1.d: "Now that we have unified the Dakotas, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.1.opta: "Indeed, we are all Dakotan!"
+ cultureflavor.1.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
+
+ cultureflavor.2.t: "A United Carolinian Culture"
+ cultureflavor.2.d: "Now that we have unified the Carolinas, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.2.opta: "Indeed, we are all Carolinian!"
+ cultureflavor.2.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
+ 
+ cultureflavor.3.t: "A United Mexican Valley Culture"
+ cultureflavor.3.d: "Now that we have unified the Valley of Mexico, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.3.opta: "Indeed, we are all Mexiquense!"
+ cultureflavor.3.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
+ 
+ cultureflavor.4.t: "A United Yucatan Culture"
+ cultureflavor.4.d: "Now that we have unified the Yucatan Peninsula, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.4.opta: "Indeed, we are all Yucateco!"
+ cultureflavor.4.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
+ 
+ cultureflavor.5.t: "A United Baja Californian Culture"
+ cultureflavor.5.d: "Now that we have unified the Baja California Peninsula, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.5.opta: "Indeed, we are all Bajacaliforniano!"
+ cultureflavor.5.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
+ 
+ cultureflavor.6.t: "Californian Migrants Flock to Baja California"
+ cultureflavor.6.d: "Recent demographic shifts have seen an influx of migrants from the state of California move southward into Baja California, establishing themselves as an increasingly-prominent power bloc within the region. Perhaps this shift in the cultural landscape could be used to our advantage..."
+ cultureflavor.6.opta: "Promote Pacific Coastal migration to Baja California"
+ cultureflavor.6.optb: "No, we shall respect the culture of the region."
+ 
+ cultureflavor.7.t: "Our Peninsular Path"
+ cultureflavor.7.d: "Now that we have unified the Baja California Peninsula, our attention has been cast not only within, but outward to the broader world around us. The question of where we stand as a united nation, and what our culture represents, now lies before us."
+ cultureflavor.7.opta: "[Root.GetName] belongs to the [Root.Culture.GetName]!"
+ cultureflavor.7.optb: "Perhaps closer ties to our Pacific neighbors would prove beneficial..."
+ 
+ cultureflavor.8.t: "A United New England Culture"
+ cultureflavor.8.d: "Now that we have unified New England, we have observed less and less of a cultural divide within our state. Perhaps it is time we acknowledged that we are all one people?"
+ cultureflavor.8.opta: "Indeed, we are all New Englanders!"
+ cultureflavor.8.optb: "No, [Root.GetName] shall always be [Root.Culture.GetName]."
  
  #####Flavor for Michigan/Superior
  #Detroit Goes Bankrupt
@@ -596,6 +669,25 @@
  flavorMIC.03d:0 "The Summer Games are a glorious event to showcase our famous city, Detroit.  However, the bids are won by larger or more famous cities elsewhere in the Americas.  Having the state help we can finally show the Summer Games why they shouldn't have pass us up so many times before."
  flavorMIC.03opta:0 "No.  It will never bring the Summer Games here." #+50 ADM power, +50 DIP power
  flavorMIC.03optb:0 "Sure!"  #+1 Stability, +10 prestige, -1 years income, -100 ADM power, -100 DIP power.
+
+ flavorMIC.1.t:0 "The Need for Labor"
+ flavorMIC.1.d:0 "With our growing manufacturing sector, there has arisen a need for workers to help run our industries. Many [Root.GetAdjective]s look down upon this form of manual labor, making it difficult to maintain productivity.\n\nHowever, we have noticed an influx of migrants from Europe and the Near East, escaping political turmoil. Perhaps we could offer them work within [Root.GetName]?"
+ flavorMIC.1a:0 "Certainly. Make the arrangements immediately."
+ flavorMIC.1b:0 "No, we cannot be certain of their loyalties."
+ flavorMIC.2.t:0 "A Place in Society"
+ flavorMIC.2.d:0 "Our arrangements to invite migrant workers from around the world have proven successful, with the economy of [2573.GetName] exploding as a result. Many of these groups have made a name for themselves and established communities in the surrounding area.\nDespite this, their identity in [Root.GetName] is still largely that of a migrant population, not yet seen by [Root.GetAdjective]s as our own people, but outsiders.\n\nPerhaps we can publicly promote one of these groups to reach a higher status?"
+ flavorMIC.2a:0 "The Maltese have worked tirelessly."
+ flavorMIC.2b:0 "The Muslims have shown their resourcefulness."
+ flavorMIC.2c:0 "The Polish always were an industrious people."
+ flavorMIC.2d:0 "The Albanians have not disappointed us."
+ flavorMIC.2e:0 "The current status of the laborers benefits us."
+ flavorMIC.3.t:0 "Changing Demographics"
+ flavorMIC.3.d:0 "Our decision to promote immigration has reaped great benefits, but it is also showing us a rapid increase in migrants from these regions. If we do not counteract the trend, it seems likely that the migrant workers will become the dominant culture within [2573.GetName].\n\nWhat shall we do?"
+ flavorMIC.3a:0 "Such is the way of things."
+ flavorMIC.3b:0 "Such is the way of things."
+ flavorMIC.3c:0 "Such is the way of things."
+ flavorMIC.3d:0 "Such is the way of things."
+ flavorMIC.3e:0 "This is ridiculous!"
  
  
  #####Flavor for Minnesota
@@ -676,7 +768,7 @@
  flavorNJY.1002opta:0 "The Empire City prospers."
  flavorNJY.1002optb:0 "Redirect the wealth to [Root.Capital.GetName]."
  flavorNJY.10t:0 "Edison's Inventions"
- flavorNJY.10d:0 "Thomas Edison, a great inventor has taken residence in Menlo Park, New Jersey, and has already patented hundreds of inventions. We could help fund Edison's projects and spread these inventions across our state. The only question is which inventions to fund? \n\nPerhaps Edison's most famous invention, a highly efficient incandescent light bulb, would surely aid productivity in factories.\n\nThe phonograph, a device capable of recording and playing back audio, would allow [Root.GetName] to share it's greatest works to the world.\n\nThe automatic telegraph, a device allowing faster transmission of messaging via Morse Code, would give us an edge on the battlefield."
+ flavorNJY.10d:0 "Thomas Edison, a great inventor has taken residence in Menlo Park, New Jersey, and has already patented hundreds of inventions. We could help fund Edison's projects and spread these inventions across our state. The only question is which inventions to fund? \n\nPerhaps Edison's most famous invention, a highly efficient incandescent light bulb, would surely aid productivity in factories.\n\nThe phonograph, a device capable of recording and playing back audio, would allow [Root.GetName] to share its greatest works to the world.\n\nThe automatic telegraph, a device allowing faster transmission of messaging via Morse Code, would give us an edge on the battlefield."
  flavorNJY.10opta:0 "The Lightbulb."
  flavorNJY.10optb:0 "The Phonograph."
  flavorNJY.10optc:0 "The Automatic Telegraph."
@@ -777,19 +869,30 @@
  #####Flavor for Pennsylvania
  flavorPNN.1t:0 "Trouble in West Philadelphia"
  flavorPNN.1d:0 "A disturbance in West Philadelphia has resulted in a number of serious consequences for one young man. Instead of a life of numerous troubles, it has been suggested that he be sent to live with his Uncle far away in the western lands of our continent."
- flavorPNN.1opta:0 "Keep the boy here, it was just one little fight." 	#Does nothing
- flavorPNN.1optb:0 "Who knows, he might just become royalty."			#Sets Flag for future event.
+ flavorPNN.1opta:0 "Keep the boy here, it was just one little fight."
+ flavorPNN.1optb:0 "Who knows, he might just become royalty."
  flavorPNN.2t:0 "California Ambassador Returns to Hometown."
  flavorPNN.2d:0 "Years ago, a young mischievous teenager of West Philadelphia was given a rare opportunity to escape the troubles of that neighborhood to a place far to the west known only as 'Bel-Air'.  His experiences in the services of his uncle enriched his spirit and life to where he has become educated and respectful to our society's institutions."
  flavorPNN.2opta:0 "He's the Prince of Bel-Air."
  flavorPNN.3t:0 "Arrival of the Amish"
  flavorPNN.3d:0 "With most of Germany embroiled in religious turmoil, many Germans find themselves caught in the middle of the strife. A significant number of them have fled the continent, seeking a peaceful life in the New World. To this extent, they have arrived in [Root.GetName] and are requesting asylum, declaring that they are fellow followers of Christ and reminding us of the virtues of Jesus Christ. This particular group claims to be a mixture of Alsatian and Swiss Germans, following a doctrine of Christianity they call Anabaptism. Shall we allow these refugees into our country?"
  flavorPNN.3opta:0 "We must remember our origins, and welcome these refugees with open arms."
+ flavorPNN.3opta2:0 "We must remember our origins, and welcome these refugees with open arms."
+ flavorPNN.3opta3:0 "We must remember our origins, and welcome these refugees with open arms."
+ flavorPNN.3opta4:0 "We must remember our origins, and welcome these refugees with open arms."
  flavorPNN.3optb:0 "This is none of our business. Turn them away."
- flavorPNN.4t:0 "Amish Influence Spreads"
+ flavorPNN.4t:0 "The Amish Among Us"
+ flavorPNN.4d:0 "It has been a fair amount of time since we welcomed the Amish refugees. However, we have yet to fully integrate them into our society. The question now arises as to whether we should fully accept these strange people, or if they are more trouble than they are worth."
+ flavorPNN.4opta:0 "The Amish have made a good name for themselves. Let them integrate into our society."
+ flavorPNN.4optb:0 "We cannot accept the Amish any longer."
+ flavorPNN.4optc:0 "The simple life always appealed to me, actually..."
  flavorPNN.1000t:0 "Direction of Our Culture" #Culture related event
- flavorPNN.1000d:0 "[Root.GetName] sits on the line between two separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go.\n\nOur citizens celebrate our decision to look towards the mountains and join the Appalachian culture group."
- flavorPNN.1000a:0 "Embrace Appalachian"
+ flavorPNN.1000d:0 "[Root.GetName] sits on the line between two separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
+ flavorPNN.1000a: "Embrace Appalachian and rule from [2589.GetCapitalName]"
+ flavorPNN.1000b: "Embrace Appalachian"
+ flavorPNN.1000c: "Embrace Great Laker and rule from [2588.GetCapitalName]"
+ flavorPNN.1000d2: "Embrace Great Laker"
+ flavorPNN.1000e: "The current situation works for us."
   
  
  #####Flavor for Puerto Rico
@@ -843,6 +946,38 @@
  TNflavor.2b:0 "We need to subdue these people before they become a bigger problem."
  TNflavor.2c:0 "We will grant increased autonomy but Tennessee must remain united."
  TNflavor.2d:0 "Perhaps we can work out a deal to benefit us both..."
+ TNflavor.3.title:0 "A title for our eastern Grand Division"
+ TNflavor.3.desc:0 "The need to declare an appropriate name for our newly-created Grand Division has arisen. There are a few options available to us. What shall [FKL.GetName] be called within our realm?"
+ TNflavor.3a:0 "Declare them to be the Grand Division of East Tennessee."
+ TNflavor.3b:0 "Franklin has a nice ring to it."
+ TNflavor.3c:0 "Cumberland shall be the name of this Grand Division."
+ TNflavor.4.title:0 "A title for our western Grand Division"
+ TNflavor.4.desc:0 "The need to declare an appropriate name for our newly-created Grand Division has arisen. There are a few options available to us. What shall [WTN.GetName] be called within our realm?"
+ TNflavor.4a:0 "Declare them to be the Grand Division of West Tennessee."
+ TNflavor.4b:0 "Memphis has a nice ring to it."
+ TNflavor.4c:0 "Chickasaw shall be the name of this Grand Division."
+ TNflavor.5.title:0 "A title for our Grand Division"
+ TNflavor.5.desc:0 "The need to declare an appropriate name for our newly-created Grand Division in Carolina has arisen. There are a few options available to us. What shall [WSC.GetName] be called within our realm?"
+ TNflavor.5a:0 "Declare them to be the Grand Division of West Carolina."
+ TNflavor.5b:0 "Blue Ridge has a nice ring to it."
+ TNflavor.5c:0 "Land of Sky shall be the name of this Grand Division."
+ TNflavor.6.title:0 "A title for our Grand Division"
+ TNflavor.6.desc:0 "The need to declare an appropriate name for our newly-created Grand Division in Kentucky has arisen. There are a few options available to us. What shall [TRN.GetName] be called within our realm?"
+ TNflavor.6a:0 "Declare them to be the Grand Division of Transylvania."
+ TNflavor.6b:0 "Boone has a nice ring to it."
+ TNflavor.6c:0 "North Tennessee shall be the name of this Grand Division."
+ TNflavor.7.title:0 "A title for our Grand Division"
+ TNflavor.7.desc:0 "The need to declare an appropriate name for our newly-created Grand Division to the south has arisen. There are a few options available to us. What shall [NCK.GetName] be called within our realm?"
+ TNflavor.7a:0 "Declare them to be the Grand Division of Nickajack."
+ TNflavor.7b:0 "South Tennessee has a nice ring to it."
+ TNflavor.7c:0 "Coosa shall be the name of this Grand Division."
+ flavorTNN.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorTNN.1000d:0 "[Root.GetName] sits on the line between three separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go."
+ flavorTNN.1000opta:0 "We will adopt Appalachian culture."
+ flavorTNN.1000opta2:0 "We will adopt Appalachian culture and rule from [2520.GetCapitalName]."
+ flavorTNN.1000optb:0 "We will adopt Midwestern culture."
+ flavorTNN.1000optb2:0 "We will adopt Midwestern culture and rule from [2519.GetCapitalName]."
+ flavorTNN.1000optc:0 "We will stick to our current culture."
  
  #####Flavor for Texas/East Texas/North Texas/Commanche/Lipan
  flavorTEX.1t:0 "In El Paso, Four Dead in Five Seconds"
@@ -866,10 +1001,13 @@
  flavorTEX.1002optb:0 "Let the settlers occupy the lands."
  flavorTEX.1003t:0 "Direction of Our Culture"
  flavorTEX.1003d:0 "[Root.GetName] sits on the line between four separate and distinct cultural groups. We have recently unified our culture and can pick a direction for our culture to go."
- flavorTEX.1003opta:0 "Join Southerner"
- flavorTEX.1003optb:0 "Join Norteño"
- flavorTEX.1003optc:0 "Join Great Plainer"
- flavorTEX.1003optd:0 "Stay our current culture"
+ flavorTEX.1003opta:0 "Join Southerner and rule from [2487.GetCapitalName]"
+ flavorTEX.1003opta2:0 "Join Southerner"
+ flavorTEX.1003optb:0 "Join Norteño and rule from [3296.GetCapitalName]" # Norteno
+ flavorTEX.1003optb3:0 "Join Norteño and rule from [2484.GetCapitalName]" # Norteno
+ flavorTEX.1003optb2:0 "Join Norteño"
+ flavorTEX.1003optc:0 "Join Midwestern"
+ flavorTEX.1003optd:0 "The current cultural situation works for us."
 
  waco_events.1.title:0 "The Branch Davidians"
  waco_events.1.desc:0 "The South has always been a rife with religious fundamentalism, and Texas is no exception. Indeed, there is perhaps no better example than the town of Waco. Situated between Austin and Dallas, the area seems to attract those that find themselves disillusioned with society and city life. Chief among these people is a man by the name of David Koresh, who has cultivated a small but devout flock that call themselves the Branch Dividians. Claiming Divine inspiration, Koresh preaches the nearing of the end times, and inspires in his followers a distrust in longstanding institutions like the Church and Crown. Local governors fear that Koresh may incite revolt if we allow this to continue."
@@ -889,6 +1027,40 @@
  #####Flavor for Utah/Deseret
  #Utah Mormon Paranoia - Currently Postponed
  
+ flavorUTA.1.t:0 "Brothers in the Faith"
+ flavorUTA.1.desc:0 "Our longstanding alliance with our Mormon brethren in Idaho has helped us stand in resistance to the invasions of the heretics, and they have always been loyal adherents to the Mormon church. However, this alliance may not maintain our safety for long. Perhaps we would be stronger together, under a united banner with us at the head."
+ flavorUTA.1.a:0 "Send an envoy to request an oath of loyalty from Idaho."
+ flavorUTA.1.a.tt:0 "We will ask Idaho to become our vassals. They will be more likely to accept if we improve our diplomatic reputation."
+ flavorUTA.1.b:0 "No, we will respect the sovereignty of our brethren and strengthen our alliance."
+ flavorUTA.15.t:0 "[From.GetName] Requests our Allegiance"
+ flavorUTA.15.desc:0 "An envoy from [From.Capital.GetCapitalName] has approached us, presenting us with a request of vassalge to the [From.Monarch.GetTitle] of [From.GetName]. They claim that serving under their banner would mutually improve our chances of standing against the attacks of the neighboring heretic. Accepting this offer would, of course, make us subservient to [From.Capital.GetCapitalName], but perhaps their claims have merit... or we could refuse, and stake our claim to head the Mormon church."
+ flavorUTA.15.a:0 "A sound strategy."
+ flavorUTA.15.a.tt:0 "We will become vassals to [From.GetName]."
+ flavorUTA.15.b:0 "Preposterous! We have long been loyal allies to [From.GetName], and this is how they repay us?!"
+ flavorUTA.15.b.tt:0 "We will refuse, and stake our claim to head the Mormon church instead. This will anger [From.GetName]."
+ flavorUTA.16.t:0 "[From.GetName] accepts!"
+ flavorUTA.16.desc:0 "[From.GetName] has graciously accepted our offer, and now swears their loyalty to us."
+ flavorUTA.16.a:0 "Wonderful!"
+ flavorUTA.17.t:0 "[From.GetName] refuses!"
+ flavorUTA.17.desc:0 "[From.GetName] has refused our reasonable request; they have even went as far as to claim that they should lead the Church instead!"
+ flavorUTA.17.a:0 "Outrageous! We shall teach them the error of their ways."
+ flavorUTA.11t: "A Temple in the Philippines?"
+ flavorUTA.11d: "With our recent conversions in the Philippines, we are presented with the unique opportunity to establish a mission center and temple within the region to help support our conversion efforts further."
+ flavorUTA.11.opta: "Establish a temple in [656.GetName]."
+ flavorUTA.11.optb: "Etablish a temple in [4352.GetName]."
+ flavorUTA.11.optc: "No, leave the locals be."
+ flavorUTA.12t: "A Temple in South America?"
+ flavorUTA.12d: "With our recent conversions in South America, we are presented with the unique opportunity to establish a mission center and temple within the region to help support our conversion efforts further."
+ flavorUTA.12.opta: "Establish a temple in [809.GetName]."
+ flavorUTA.12.optb: "Etablish a temple in [766.GetName]."
+ flavorUTA.12.optc: "Etablish a temple in [778.GetName]."
+ flavorUTA.12.optd: "No, leave the locals be."
+ flavorUTA.101t: "Pueblo Resurgence"
+ flavorUTA.101d: "Now that we have liberated the Pueblo people from their oppressors, their populations have shown out in support of [Root.GetName], pledging their loyalty to our cause!"
+ flavorUTA.101.opta: "Interesting..."
+ flavorUTA.101.optb: "The status quo benefits us well enough."
+
+ 
  #####Flavor for Virgin Islands
  
  
@@ -904,6 +1076,146 @@
  flavorVRM.3opta:0 "Let the world know where he came from!"
  flavorVRM.3optb:0 "Invite him back to [Root.GetName] to advise the [Root.Monarch.GetTitle]"
  flavorVRM.3optc:0 "He can spread the word of our great nation across the continent!"
+
+ # Flavor for Utah/ Deseret
+ flavorUTA.2t:0 "New Zion"
+ flavorUTA.2d:0 "The Book of Mormon speaks of a time where a new, utopian land will rise from the ashes of the Old, creating a New Zion for all.\n\nWith the grandeur of our capital and the status of our faith, it is only fair to say that we have created such a utopia. We are the Children of God, and He is our guide in our journey.\n\nFurther, our records indicate that [952.GetName] was once called 'Great Salt Lake City.' A city such as ours is surely worthy of that title, no?"
+ flavorUTA.2.opta:0 "Weep not for Zion, for it has been found."
+ flavorUTA.3t:0 "Plight of the Jeffersonians"
+ flavorUTA.3d:0 "Not far from our borders reside the Jeffersonians. They are a people who find themselves disconnected from the elitist culture of their homeland's core areas, residing mostly on the fringes of their realms. As such, they are often subject to persecution.\n\nMany in the so-called 'State of Jefferson' dream of a day they can separate from their oppressors.\n\nWith our recent conquest of the area, many Jeffersonians are praising [Root.GetName] for freeing them from unjust rule."
+ flavorUTA.3.opta:0 "We have shared the plight of the Jeffersonians before. Let us aid them."
+ flavorUTA.3.optb:0 "I wouldn't say 'freed'. More like... under new management."
+ flavorUTA.4t:0 "A Wretched Hive"
+ flavorUTA.4d:0 "Our [Root.Religion.GetName] Legions march triumphantly into [949.GetCapitalName], singing praises to the Lord and in high spirits as they celebrate their victory. The city, by all accounts, is lavish and grand. Ornate architecture spans the city, and it is truly a jewel in what would otherwise be a barren desert.\n\nThere is, however, the small issue of this city's people and their practices. Gambling, infidelity, insobriety, gluttony, and many more of its practices fly in the face of all that the Book of Mormon teaches.\n\n[Root.Monarch.GetName] gazes upon the city, an inquisitive look forming on [Root.Monarch.GetHerHis] face. [Root.Monarch.GetSheHeCap] opens [Root.Monarch.GetHerHis] mouth to say:"
+ flavorUTA.4.opta:0 "'You will never find a more wretched hive of scum and villainy.'"
+ flavorUTA.4.optb:0 "'Gambling, spirits, and courtesans you say...?'"
+ flavorUTA.5t:0 "Deseret Ascendant"
+ flavorUTA.5d:0 "Just as the Golden Plates foretold, we have once again risen above all odds to claim our birthright. Our newfound status gives us the power to proclaim a new nation for all Mormons, an idyllic society blessed by our ancestors - Deseret.\n\nLet God, Moroni, Joseph Smith, and our ancestors smile down upon us as we carry on their prophecies and teachings!\n\nWe will create a Zion for all Mormons and embark on a journey of reveleation!"
+ flavorUTA.5.opta:0 "Blessed be the land of the honeybee!"
+ flavorUTA.5.optb:0 "No, we must forge our own path."
+ flavorUTA.6t:0 "The Mine at Bingham Canyon"
+ flavorUTA.6d:0 "We have been blessed by the Lord with access to the largest copper mine the world has ever seen, in Bingham Canyon.\n\nThis vast and productive canyon will be the source of the bulk of our copper mining, helping to fuel our economy."
+ flavorUTA.6.opta:0 "Wealth and prosperity for [953.GetCapitalName]!"
+ flavorUTA.10t:0 "[Root.GetName] Joins the [Root.Religion.GetName] Community!"
+ flavorUTA.10d:0 "We have joined the Mormon community, increasing our renown in the Mormon world!"
+ flavorUTA.10.opta:0 "Wonderful."
+ flavorUTA.1000.t: "A Deseretan Language"
+ flavorUTA.1000.d: "As we have now established a state for all Mormons, we have increasingly found that our subjects adhering to the true faith have become more interconnected as time goes on. Our greatest scholars have devised a new script and language to be used by the Mormon faith, and with this newfound sense of brotherhood among former enemies, they are advising that we push for the adoption of this new language."
+ flavorUTA.1000.opta: "A Deseret Language would greatly benefit our people!"
+ flavorUTA.1000.optb: "No, we cannot trample the cultural practices of our subjects."
+ flavorUTA.1002t: "The Emigrant Trail"
+ flavorUTA.1002d: "Now that we have established ourselves in the markets of California, a number of merchants and settlers alike have embarked west, either in search of wealth or starting a new life. In doing so, they have created what has been dubbed the 'Emigran Trail,' representing the path between Utah and California. With our increasing presence in the area, we can capitalize on this trend to strengthen our trading presence in California."
+ flavorUTA.1002.opta: "The markets of San Francisco are the natural choice."
+ flavorUTA.1002.optb: "Los Angeles is a prime location to bolster a trading presence."
+ flavorUTA.1002.optc: "Our economy is in the Rocky Mountains, not California!"
+ flavorUTA.1003.t: "The State of Lower California"
+ flavorUTA.1003.d: "With our conquest of Baja California, we have recovered documents regarding the attempted Republic of Lower California, led by a brave filibuster crossing from the Californian border. This has raised the interesting possibility of administrating this peninsula through a subject state. There is also the matter of the increase of settlers rushing to this comparitively barren land, potentially shifting its cultural demographics."
+ flavorUTA.1003.opta: "A shrewd decision!"
+ flavorUTA.1003.optb: "The peninsula is better off in our hands directly."
+ flavorUTA.1003.optc: "Can we just use it as a vacation destination...?"
+ flavorUTA.1004.t: "Unifying Baja California"
+ flavorUTA.1004.d: "After our recent conquest of the Baja California peninsula under one banner, more and more settlers from the Pacific Coast have migrated south, displacing the remaining locals and introducing a new cultural climate in the region."
+ flavorUTA.1004.opta: "Such is the way of things. Our subject can handle it."
+ flavorUTA.1004.optb: "How curious!"
+ flavorUTA.1005.t: "Republic of Sonora"
+ flavorUTA.1005.d: "Our recent excursion into Sonora while holding control over Lower California has presented us with interesting records of a long-lost state, encompassing Baja California, Sonora, and Sinaloa. Declaring this state may prove beneficial to us, as others will view our conquests with less suspicion..."
+ flavorUTA.1005.opta: "A marvelous idea. A la gloria!"
+ flavorUTA.1005.optb: "This valuable land is far better under our direct control."
+ flavorUTA.50.t: "The Mormon Trail"
+ flavorUTA.50.d: "Long ago our faithful people were driven from their homes, forced to embark on a path westward from Nauvoo, Illinois and eventually finding themselves in Utah, where they established [952.GetName]. This long and treacherous route was deemed the 'Mormon Trail.'/nNow that we have strengthened our nation and our religion, our people are eager to return to their ancestral lands and embark once more upon the Mormon Trail in search of the holy lands."
+ flavorUTA.50.opta: "Forward, unto Nauvoo!"
+ flavorUTA.2000t: "The Legacy of Deseret"
+ flavorUTA.2000d: "Our nation is a direct successor to the lost state of Deseret. While we do not share the faith required to declare this state, we do have the rights to pursue their territorial claims and legacy."
+ flavorUTA.2000.opta: "Onward, to glory!"
+
+ flavorUTA.51.t: "Mormon Pioneers arrive in [2669.GetName]"
+ flavorUTA.51.d: "A caravan of migrants coming from the west, proclaiming themselves to be followers of the Mormon Church have arrived in [2669.GetName], insisting that the land is sacred to their faith and requesting that we allow them the right to re-establishment a settlement there."
+ flavorUTA.51.opta: "Who are we to deny a righteous people their holy land?"
+ flavorUTA.51.optb: "Bah! These heretics are more trouble than they are worth."
+ flavorUTA.52.t: "[2669.Owner.GetName] accepts our settlers!"
+ flavorUTA.52.d: "Good news returns from the east! [2669.Owner.GetName] has graciously allowed our people to settle in the holy land of [2669.GetName]."
+ flavorUTA.52.opta: "Excellent!"
+ flavorUTA.53.t: "[2669.Owner.GetName] rejects our settlers!"
+ flavorUTA.53.d: "Black news! [2669.Owner.GetName] has outrageously refused our people to settle in the holy land of [2669.GetName]!"
+ flavorUTA.53.opta: "They will pay for their transgressions against the Lord!"
+
+ flavorUTA.54.t: "Mormon Pioneers arrive in [3275.GetName]"
+ flavorUTA.54.d: "A caravan of migrants coming from the west, proclaiming themselves to be followers of the Mormon Church have arrived in [3275.GetName], insisting that the land is sacred to their faith and requesting that we allow them the right to re-establishment a settlement there."
+ flavorUTA.54.opta: "Who are we to deny a righteous people their holy land?"
+ flavorUTA.54.optb: "Bah! These heretics are more trouble than they are worth."
+ flavorUTA.55.t: "[3275.Owner.GetName] accepts our settlers!"
+ flavorUTA.55.d: "Good news returns from the east! [3275.Owner.GetName] has graciously allowed our people to settle in the holy land of [3275.GetName]."
+ flavorUTA.55.opta: "Excellent!"
+ flavorUTA.56.t: "[3275.Owner.GetName] rejects our settlers!"
+ flavorUTA.56.d: "Black news! [3275.Owner.GetName] has outrageously refused our people to settle in the holy land of [3275.GetName]!"
+ flavorUTA.56.opta: "They will pay for their transgressions against the Lord!"
+
+ flavorUTA.57.t: "Mormon Pioneers arrive in [2579.GetName]"
+ flavorUTA.57.d: "A caravan of migrants coming from the west, proclaiming themselves to be followers of the Mormon Church have arrived in [2579.GetName], insisting that the land is sacred to their faith and requesting that we allow them the right to re-establishment a settlement there."
+ flavorUTA.57.opta: "Who are we to deny a righteous people their holy land?"
+ flavorUTA.57.optb: "Bah! These heretics are more trouble than they are worth."
+ flavorUTA.58.t: "[2579.Owner.GetName] accepts our settlers!"
+ flavorUTA.58.d: "Good news returns from the east! [2579.Owner.GetName] has graciously allowed our people to settle in the holy land of [2579.GetName]."
+ flavorUTA.58.opta: "Excellent!"
+ flavorUTA.59.t: "[2579.Owner.GetName] rejects our settlers!"
+ flavorUTA.59.d: "Black news! [2579.Owner.GetName] has outrageously refused our people to settle in the holy land of [2579.GetName]!"
+ flavorUTA.59.opta: "They will pay for their transgressions against the Lord!"
+
+ flavorUTA.60.t: "Mormon Pioneers arrive in [2597.GetName]"
+ flavorUTA.60.d: "A caravan of migrants coming from the west, proclaiming themselves to be followers of the Mormon Church have arrived in [2597.GetName], insisting that the land is sacred to their faith and requesting that we allow them the right to re-establishment a settlement there."
+ flavorUTA.60.opta: "Who are we to deny a righteous people their holy land?"
+ flavorUTA.60.optb: "Bah! These heretics are more trouble than they are worth."
+ flavorUTA.61.t: "[2597.Owner.GetName] accepts our settlers!"
+ flavorUTA.61.d: "Good news returns from the east! [2597.Owner.GetName] has graciously allowed our people to settle in the holy land of [2597.GetName]."
+ flavorUTA.61.opta: "Excellent!"
+ flavorUTA.62.t: "[2597.Owner.GetName] rejects our settlers!"
+ flavorUTA.62.d: "Black news! [2597.Owner.GetName] has outrageously refused our people to settle in the holy land of [2597.GetName]!"
+ flavorUTA.62.opta: "They will pay for their transgressions against the Lord!"
+
+ flavorUTA.63.t: "Mormon Pioneers arrive in [2586.GetName]"
+ flavorUTA.63.d: "A caravan of migrants coming from the west, proclaiming themselves to be followers of the Mormon Church have arrived in [2586.GetName], insisting that the land is sacred to their faith and requesting that we allow them the right to re-establishment a settlement there."
+ flavorUTA.63.opta: "Who are we to deny a righteous people their holy land?"
+ flavorUTA.63.optb: "Bah! These heretics are more trouble than they are worth."
+ flavorUTA.64.t: "[2586.Owner.GetName] accepts our settlers!"
+ flavorUTA.64.d: "Good news returns from the east! [2586.Owner.GetName] has graciously allowed our people to settle in the holy land of [2586.GetName]."
+ flavorUTA.64.opta: "Excellent!"
+ flavorUTA.65.t: "[2586.Owner.GetName] rejects our settlers!"
+ flavorUTA.65.d: "Black news! [2586.Owner.GetName] has outrageously refused our people to settle in the holy land of [2586.GetName]!"
+ flavorUTA.65.opta: "They will pay for their transgressions against the Lord!"
+
+ flavorUTA.70t: "Adam and Eve in Adam-ondi-Ahman"
+ flavorUTA.70d: "The teachings of our Church state that Adam-ondi-Ahman is the site where Adam and Eve lived after being expelled from the Garden of Eden. It is the place that will be a gathering spot for a meeting of the priesthood leadership, including prophets of all ages and other righteous people, prior to the Second Coming of Jesus Christ."
+ flavorUTA.70.opta: "We will create a new Garden of Eden on this holy site!"
+
+ flavorUTA.71t: "City of Nauvoo"
+ flavorUTA.71d: "Nauvoo was one of the earliest sites of our faith, and it is where our Founder first held political office. This city was instrumental to the early development of our church, and with it once more returned to us, it is vital that we restore it to its former glory!"
+ flavorUTA.71.opta: "Just as Nauvoo was once the seat of our faith, so it shall be again."
+ flavorUTA.71.optb: "Begin preparations to restore Nauvoo immediately!"
+
+ flavorUTA.72t: "The First Temple"
+ flavorUTA.72d: "Kirtland is the site of the first temple of our religion, created after our Founder had a series of revelations bestowed upon him by God. Not long after the dedication of this temple, many adherents reported seeing Jesus Christ 'standing upon the breastwork of the pulpit.' The acquisition of this sacred site is a historic moment for our nation."
+ flavorUTA.72.opta: "Glory be to God!"
+
+ flavorUTA.73t: "Translated Book of Mormon"
+ flavorUTA.73d: "After acquiring the land on which our Priesthood Restoration Site was founded, we have rediscovered the writings of our Founder: the Book of Mormon, translated into a variety of languages from its original language."
+ flavorUTA.73.opta: "Spread these writings far and wide!"
+
+ flavorUTA.74t: "Translated Book of Mormon"
+ flavorUTA.74d: "Mormon missionaries have been making their way across [Root.GetName], attempting to spread the word of their religion and passing out their form of the Bible. What do we do?"
+ flavorUTA.74.opta: "Allow them free passage throughout the land."
+ flavorUTA.74.optb: "This is heresy! Banish them immediately."
+
+ flavorUTA.75t: "The Golden Plates"
+ flavorUTA.75d: "The sacred text of our faith, the Book of Mormon, was translated to English by our Founder by utilizing the Golden Plates, long thought to be a mythical object. It is said that he discovered these plates deep in the Sacred Grove in [2597.GetName], after the angel Moroni led him to their location. Now that the Grove is in our hands, perhaps we can look for these Plates once more...?"
+ flavorUTA.75.opta: "Pray to Moroni that we find them!"
+
+ flavorUTA.76t: "Golden Plates Discovered!"
+ flavorUTA.76d: "An envoy enters the court chamber, hefting a heavy stone box and placing it in front of [Root.Monarch.GetName], covered by a frock, then promptly collapses from exhaustion.\n[Root.Monarch.GetHerHimCap] lifts the frock and slides the lid off of the chest, and the room is promptly filled with a blinding, golden - almost holy - aura. [Root.Monarch.GetName] smiles as [Root.Monarch.GetHerHis] face basks in the glow."
+ flavorUTA.76.opta: "Moroni has smiled upon us!"
+
+ flavorUTA.80t: "Settlers driven away!"
+ flavorUTA.80d: "Our settlers have been driven away from their homes in [From.GetName]!"
+ flavorUTA.80.opta: "[From.GetName] will pay for this affront to God!"
  
  #####Flavor for Virginia/Northern Virginia
  flavorVIR.1t:0 "The Richmond Calamity"
@@ -915,6 +1227,11 @@
  flavorVIR.1000a:0 "Join Mid-Atlantic"
  flavorVIR.1000b:0 "Join Appalachian"
  flavorVIR.1000e:0 "Stay our current culture"
+ flavorVIR.2t: "A Cultural Reunion"
+ flavorVIR.2d: "Now that we have reunited with our brothers in West Virginia, the time has come to address the cultural divide that has since grown between our people."
+ flavorVIR.2a: "We welcome our West Virginian compatriots with open arms."
+ flavorVIR.2b: "Their 'culture' is a stain on the grandeur that is [Root.Culture.GetName]!"
+
  
  #####Flavor for Washington (state)/Lincoln
  flavorWAS.1t:0 "Beneath the Shadow"
@@ -941,11 +1258,22 @@
  flavorWVA.1optb:0 "No citizen of West Virginia should feel they need a union to protect their rights" 
  #(lost autonomy, but boost to diplo points)
  
+ flavorWVA.1.t: "A United Virginia"
+ flavorWVA.1.d: "We have established ourselve as the one and only Virginia, firmly solidifying the divide that our two states have suffered for quite some time. However, in the time since our states were apart, there has grown a vast cultural divide, with the so-called Virginians maintaining a vastly different cultural identity to our own. Now that we are one state once more, however, the question arises as to how to address this cultural divide."
+ flavorWVA.1.opta: "We have shown that we are the true Virginia. They must all fall in line."
+ flavorWVA.1.optb: "We must mend the wounds, not reopen them."
+ 
  #####Flavor for Wisconsin
  flavorWIS.1t:0 "Promote Dairy Industry"
  flavorWIS.1d:0 "Our pastures and fields run green with mildew, and potential. So why do we let it sit untamed? Investing in agrarian industry will bring profit and development to Wisconsin much faster than our rivals. We could import cows, and monopolize in the dairy field, or we could use the fertile land to plant crops, and try to expand into the vegetable market."
  flavorWIS.1opta:0 "Bring in cows from abroad, and offer tax benefits for businesses to invest in dairy."
  flavorWIS.1optb:0 "Simply use grain and vegetable seeds from our own supplies."
+ flavorWIS.1000t:0 "Direction of Our Culture" #Culture related event
+ flavorWIS.1000d:0 "[Root.GetName] sits on the line between two separate and distinct cultural groups. We have recently unified our culture and have picked a direction for our culture to go.\n\nCitizens in [Root.GetName] and Milwaukee celebrate our unified culture and decision to prioritize the Great Lakes region of our country."
+ flavorWIS.1000opta:0 "[Root.GetName] shall be ruled directly from [2558.GetCapitalName]."
+ flavorWIS.1000optb:0 "We will stick to ruling in $CAPITAL_CITY$."
+ flavorWIS.1000optc:0 "Our current culture works for us."
+ 
  
  
  #####Flavor for Wyoming
@@ -1032,6 +1360,7 @@
  #Gold Rush
  
  ##########Australian States Flavor
+
  #####Flavor for Australian Capital Territory
  
  
@@ -1065,6 +1394,10 @@
  
  
  #####Flavor for Australia
+ FlavorAUS.1000t: "Cultural Unity in [Root.GetName]"
+ FlavorAUS.100d: "As [Root.GetName] rapidly centralizes, we are increasingly seeing less of a cultural divide between the western and eastern halves of the continent. With the right push, we could reasonably assimilate the regional cultures of our nation and see less friction due to this."
+ FlavorAUS.1000opta: "We are all Australian!"
+ FlavorAUS.1000.optb: "The current situation works for us."
  
  
  #####Flavor for Canada
@@ -1308,6 +1641,10 @@
  
  ##############################################################################
  #####Central American Nations Events
+ 
+ CAMflavor.1t:0 "Bolstering Our Coastal Defenses"
+ CAMflavor.1d:0 "Now that we have completed our coastal fortifications in [835.GetName], we have established a formidable hold in the region. Our presence of batteries in the vital isthmus of Panama means we can keep a watchful eye over our merchants on both our Pacific and Atlantic coasts.\n\nFollowing this, we have developed a robust navy without fear of pirates harassing our progress.\n\nThis will allow us to extend our naval presence across Central America, making it a bane for any would-be privateer."
+ CAMflavor.1opta:0 "Excellent."
  
  #Belize
  BelizeFlavor.1t:0 "Belize Beginnings"

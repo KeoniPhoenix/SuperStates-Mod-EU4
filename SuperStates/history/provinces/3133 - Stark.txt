@@ -12,11 +12,12 @@ culture = north_dakotan
 religion = s_protestant
 capital = "Dickinson" 
 is_city = yes #1780
+fort_15th = yes
 trade_goods = grain
 hre = no 
-base_tax = 4
+base_tax = 3
 base_production = 2
-base_manpower = 1
+base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 

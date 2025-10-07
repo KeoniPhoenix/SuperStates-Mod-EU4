@@ -369,7 +369,10 @@ DFM_ideas = {
 	}
 	
 	trigger = {
-		tag = DFM
+		OR = {
+			tag = DFM
+			tag = CMX
+		}
 	}
 	free = yes		#will be added at load.
 	
@@ -1409,7 +1412,7 @@ mexican_ideas = {
 					# culture_group = gulf_mexican
 					# culture_group = oriental_mexican
 					culture_group = occidental_mexican
-					culture_group = pacific_mexican
+					#culture_group = pacific_mexican
 					capital_scope = { superregion = central_america_superregion }
 				}
 			NOT = {

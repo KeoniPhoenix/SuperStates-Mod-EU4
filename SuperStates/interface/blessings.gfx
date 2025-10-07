@@ -96,5 +96,11 @@ spriteTypes = {
 		texturefile = "gfx//interface//holy_sites//priesthood_restoration.dds"
 		loadType = "INGAME"
 	}
+
+	spriteType = {
+		name = "GFX_holy_site_3275"
+		texturefile = "gfx//interface//holy_sites//nauvoo.dds"
+		loadType = "INGAME"
+	}
 	
 }

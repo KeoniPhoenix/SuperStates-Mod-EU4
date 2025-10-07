@@ -15,6 +15,18 @@ country_decisions = {
 				primary_culture = western_pennsylvanian
 				primary_culture = west_virginian
 				primary_culture = west_marylander
+				AND = {
+					primary_culture = mountaineer
+					capital_scope = {
+						province_id = 3150
+					}
+				}
+				AND = {
+					primary_culture = kentuckian
+					capital_scope = {
+						province_id = 2516
+					}
+				}
 			}
 			ai = no
 		}
@@ -22,9 +34,7 @@ country_decisions = {
 			OR = {
 				area = allegheny_area
 				area = monongahela_area
-				province_id = 2516
-				province_id = 2532
-				province_id = 3150
+				area = shenandoah_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -33,13 +43,14 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
+			owns_core_province = 2589
 			monongahela_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
-				value = 2
+				value = 3
 				area = shenandoah_area
 				is_core = root
 			}
@@ -50,11 +61,12 @@ country_decisions = {
 			}
 			OR = {
 			owns_core_province = 2516 # Pikeville
-			owns_core_province = 2532 # Frederick
+			owns_core_province = 4641 # Frederick
 			owns_core_province = 3150 # Bristol
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 1825
@@ -62,8 +74,8 @@ country_decisions = {
 			add_prestige = 10
 			change_tag = WST
 			WST = {
-			add_accepted_culture = west_virginian
-			add_accepted_culture = western_pennsylvanian
+				add_accepted_culture_or_dip_power = { culture = west_virginian free = yes }
+				add_accepted_culture_or_dip_power = { culture = western_pennsylvanian free = yes }
 			if = {
 					limit = {
 					NOT = { government_rank = 2 }
@@ -82,15 +94,45 @@ country_decisions = {
 				}
 				add_permanent_claim = WST
 			}
-			if = { 
+			if = {
 				limit = {
 					2532 = { owned_by = ROOT }
 				}
 				2532 = { change_culture = ROOT }
 			}
+			if = {
+				limit = {
+					4641 = { owned_by = ROOT }
 				}
-			swap_non_generic_missions = yes
-			country_event = { id = ideagroups.1 } #Swap
+				4641 = { change_culture = ROOT }
+			}
+				}
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							was_tag = WVA
+						}
+						NOT = {
+							tag = WVA
+						}
+					}
+				}
+					swap_non_generic_missions = yes
+				}
+			if = {
+				limit = {
+					OR = {
+						NOT = {
+							was_tag = WVA
+						}
+						NOT = {
+							tag = WVA
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap
+			}
 		}
 		ai_will_do = {
 			factor = 0

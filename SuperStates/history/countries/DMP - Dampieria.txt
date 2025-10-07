@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_protestant
+primary_culture = western_australian
+capital =  1086	# Broome

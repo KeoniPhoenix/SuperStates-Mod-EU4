@@ -15,7 +15,6 @@ country_decisions = {
 			NOT = { has_country_flag = formed_virginia_flag } #Only once
 			OR = {
 				tag = NVI
-				tag = WVA
 				primary_culture = virginian
 				primary_culture = northern_virginian
 				primary_culture = appalachian_virginian
@@ -24,6 +23,7 @@ country_decisions = {
 					OR = {
 						primary_culture = districter
 						primary_culture = west_virginian
+						tag = WVA
 					}
 					OR = {
 						accepted_culture = virginian
@@ -32,7 +32,6 @@ country_decisions = {
 						accepted_culture = midatlantic_virginian
 					}
 				}
-
 			}
 			OR = {
 				ai = no
@@ -44,7 +43,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = shenandoah_area
 				area = virginia_area
 				area = chesapeake_area
 				province_id = 2534
@@ -57,26 +55,26 @@ country_decisions = {
 			}
 		}
 		allow = {
-			virginia_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			chesapeake_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
 			num_of_owned_provinces_with = {
 				value = 2
-				area = shenandoah_area
+				area = tennessee_area
 				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				area = tennessee_area
+				is_core = root
+			}
+			OR = {
+				owns_core_province = 3150
+				owns_core_province = 2538
 			}
 			owns_core_province = 2536 # Arlington
 			owns_core_province = 2533 # Richmond
 			owns_core_province = 2534 # Virginia Beach
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730
@@ -100,13 +98,42 @@ country_decisions = {
 						complete_mission = vir_conquer_wv
 					}
 				}
-				shenandoah_area = {
+				virginia_area = {
 					limit = {
 						NOT = { owned_by = ROOT }
 					}
 					add_permanent_claim = VIR
 				}
-				
+				chesapeake_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = VIR
+				}
+				2731 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+							add_permanent_claim = VIR
+					}
+				}
+				2538 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+							add_permanent_claim = VIR
+					}
+				}
+				3150 = {
+					if = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+							add_permanent_claim = VIR
+					}
+				}
 			}
 			swap_non_generic_missions = yes
 			country_event = { id = ideagroups.1 } #Swap

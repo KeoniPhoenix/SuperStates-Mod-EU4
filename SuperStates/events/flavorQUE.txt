@@ -309,6 +309,16 @@ country_event = { #Cultural Exchange
 					set_consort_culture = fra_quebecois
 				}
 			}
+			add_accepted_culture_or_dip_power = { culture = cajun free = yes }
+			add_accepted_culture_or_dip_power = { culture = acadian free = yes }
+			hidden_effect = {
+				add_accepted_culture_or_dip_power = { culture = new_england_french free = yes }
+				add_accepted_culture_or_dip_power = { culture = saint_pierrais free = yes }
+				add_accepted_culture_or_dip_power = { culture = brayon free = yes }
+				add_accepted_culture_or_dip_power = { culture = montrealer free = yes }
+				add_accepted_culture_or_dip_power = { culture = quebecois free = yes }
+			}
+			#set_country_flag = new_french_integration
 		}
 		custom_tooltip = flavorQUE.103a.tt
 		hidden_effect = {
@@ -324,35 +334,35 @@ country_event = { #Cultural Exchange
 			duration = -1
 		}
 		custom_tooltip = que_new_french_accepted_2_tt
-		hidden_effect = {
-			if = {
-				limit = {
-					government = republic
-				}
-				every_owned_province = {
-					limit = {
-						culture_group = new_french
-						has_owner_accepted_culture = no
-					}
-					add_province_modifier = {
-						name = que_new_french_accepted_province_republic
-						duration = -1
-					}
-				}
-			}
-			else = {
-				every_owned_province = {
-					limit = {
-						culture_group = new_french
-						has_owner_accepted_culture = no
-					}
-					add_province_modifier = {
-						name = que_new_french_accepted_province
-						duration = -1
-					}
-				}
-			}
-		}
+		#hidden_effect = {
+		#	if = {
+		#		limit = {
+		#			government = republic
+		#		}
+		#		every_owned_province = {
+		#			limit = {
+		#				culture_group = new_french
+		#				has_owner_accepted_culture = no
+		#			}
+		#			add_province_modifier = {
+		#				name = que_new_french_accepted_province_republic
+		#				duration = -1
+		#			}
+		#		}
+		#	}
+		#	else = {
+		#		every_owned_province = {
+		#			limit = {
+		#				culture_group = new_french
+		#				has_owner_accepted_culture = no
+		#			}
+		#			add_province_modifier = {
+		#				name = que_new_french_accepted_province
+		#				duration = -1
+		#			}
+		#		}
+		#	}
+		#}
 		add_country_modifier = {
 			name = "que_treaty_and_peace"
 			duration = -1

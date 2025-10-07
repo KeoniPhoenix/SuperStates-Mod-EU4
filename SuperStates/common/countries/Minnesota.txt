@@ -2,8 +2,9 @@
 
 graphical_culture = westerngfx
 
-color = { 190  136  116 }
+color = { 115  198  229 } # 190  136  116
 #color = { 57  53  45 }
+# Light blue from its flag and all the lakes in the state
 
 historical_idea_groups = {
 	offensive_ideas

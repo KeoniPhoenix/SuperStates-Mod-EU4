@@ -68,6 +68,7 @@ country_decisions = {
 		}
 		effect = {
 		change_tag = ACD
+		on_change_tag_effect = yes
 		swap_non_generic_missions = yes
 			add_country_modifier = {
 				name = "centralization_modifier"

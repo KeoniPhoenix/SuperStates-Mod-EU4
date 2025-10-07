@@ -14,6 +14,7 @@ base_production = 3
 base_manpower = 3
 discovered_by = north_american
 discovered_by = mesoamerican
+center_of_trade = 2
 
 1528.1.1 = {
 	religion = catholic

@@ -517,10 +517,14 @@ s_can_have_center_of_reformation_trigger = { #Province Scope
 	OR = {
 		religion = s_protestant
 		religion = s_catholic
+		religion = catholic
 		religion = s_baptist
 		religion = s_lutheran
 		religion = s_methodist
 		religion = anglican
+		#religion = mormon
+		religion = anabaptist
+		#religion = puritan
 	}
 	NOT = { province_id = 118 }
 	is_in_capital_area = yes
@@ -550,6 +554,21 @@ s_can_have_center_of_reformation_trigger = { #Province Scope
 	NOT = { has_climate = tropical }
 }
 
+can_have_mormon_center_of_reformation_trigger = { #Province Scope
+	#$RELIGION$ needs to match the religion of the center that is being spawned.
+	OR = {
+		continent = north_america
+		continent = south_america
+		region = philippines_region
+		superregion = oceania_superregion
+	}
+	religion = mormon
+	NOT = { province_id = 118 }
+	NOT = { province_id = 651 }
+	#is_reformation_center = no
+	expelling_minorities = no
+}
+
 sa_can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	continent = australia_continent
@@ -557,6 +576,7 @@ sa_can_have_center_of_reformation_trigger = { #Province Scope
 		religion = anglican
 		religion = austral_catholic
 		religion = austral_protestant
+		religion = catholic
 	}
 	NOT = { province_id = 118 }
 	is_in_capital_area = yes
@@ -753,6 +773,8 @@ has_manufactory_trigger = { #Province Scope
 			has_building = soldier_households
 			has_building = impressment_offices
 			has_building = state_house
+			has_building = cigar_factory
+			has_building = distillery
 		}
 	}
 }
@@ -831,6 +853,22 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 		}
 		has_building = furnace
 	}
+	else_if = {
+		limit = {
+			trade_goods = cigars
+		}
+		has_building = cigar_factory
+	}
+	else_if = {
+		limit = {
+			OR = {
+				trade_goods = whiskey
+				trade_goods = rum
+				trade_goods = tequila
+			}
+		}
+		has_building = distillery
+	}
 	else = {
 		has_building = plantations
 	}
@@ -849,6 +887,8 @@ has_no_manufactory_trigger = { #Province Scope
 	NOT = { has_building = soldier_households }
 	NOT = { has_building = impressment_offices }
 	NOT = { has_building = state_house }
+	NOT = { has_building = cigar_factory }
+	NOT = { has_building = distillery }
 }
 
 # Does not include new manufactories - they don't fit for the purposes of this trigger
@@ -877,6 +917,19 @@ root_can_build_manufactory_here_trigger = {
                 trade_goods = cloth
                 trade_goods = silk
                 trade_goods = dyes
+				# Cigars
+				AND = {
+					base_production = 5
+					trade_goods = tobacco
+					OR = {
+						superregion = central_america_superregion
+						province_group = cuba_provincegroup
+						province_group = hispaniola_provincegroup
+						region = brazil_region
+						area = south_florida_area
+						area = suncoast_area
+					}
+				}
             }
 			ROOT = { adm_tech = 11 }
 		}
@@ -888,6 +941,32 @@ root_can_build_manufactory_here_trigger = {
                 trade_goods = tobacco
                 trade_goods = tea
                 trade_goods = cocoa
+				trade_goods = agave
+				# Whiskey
+				AND = {
+					base_production = 5
+					OR = {
+						trade_goods = maize
+						trade_goods = grain
+					}
+					OR = {
+						AND = {
+							region = japan_region
+							owner = {
+								has_country_flag = jap_chose_trade_with_west_flag
+							}
+						}
+						area = lowlands_area
+						area = highlands_area
+						area = kingdom_of_the_isles_area
+						area = munster_area
+						area = connacht_area
+						area = leinster_area
+						area = ulster_area
+						superregion = america_superregion
+						superregion = canada_superregion
+					}
+				}
             }
 			ROOT = { adm_tech = 14 }
 		}
@@ -2577,7 +2656,7 @@ has_not_free_mercs_trait = {
 # merc_reislaufer
 ##########################################################
 # When adding a new merc company then make sure that a unlock_$merc_company$_tt is defined in the localization
-# For localization purposes use the following line: "Has unlocked the §Y$merc_company$§! mercenary company."
+# For localization purposes use the following line: "Has unlocked the ï¿½Y$merc_company$ï¿½! mercenary company."
 
 has_unlocked_estate_privilege = {
 	has_country_flag = unlocked_privilege_$estate_privilege$
@@ -2594,7 +2673,7 @@ has_unlocked_merc_company = {
 # Supports following merc companies
 ##########################################################
 # When adding a new merc company then make sure that a unlock_$merc_company$_tt is defined in the localization
-# For localization purposes use the following line: "The §Y$merc_company$§! mercenary company has been globally unlocked."
+# For localization purposes use the following line: "The ï¿½Y$merc_company$ï¿½! mercenary company has been globally unlocked."
 has_globally_unlocked_merc_company = {
 	custom_trigger_tooltip = {
 		tooltip = has_globally_unlocked_$merc_company$
@@ -2904,6 +2983,7 @@ has_not_any_exploration_ideas = {
 	NOT = { has_idea = samoa_trade }
 	NOT = { has_idea = legendary_voyagers }
 	NOT = { has_idea_group = ICE_ideas }
+
 }
 
 has_any_exploration_idea = {
@@ -2986,6 +3066,79 @@ has_mills_trade_goods = {
 		trade_goods = tropical_wood
 		trade_goods = glass
 		trade_goods = chinaware
+	}
+}
+
+can_produce_tequila = {
+	AND = {
+		trade_goods = agave
+		OR = {
+			region = mexico_region
+			region = mexican_gulf_coast_region
+			region = costa_oeste_region
+			region = american_southwest_region
+			area = san_diego_area
+		}
+	}
+}
+
+can_produce_whiskey = {
+	AND = {
+		OR = {
+			trade_goods = grain
+			trade_goods = maize
+		}
+		OR = {
+			AND = {
+				region = japan_region
+				owner = {
+					has_country_flag = jap_chose_trade_with_west_flag
+				}
+			}
+			area = lowlands_area
+			area = highlands_area
+			area = kingdom_of_the_isles_area
+			area = munster_area
+			area = connacht_area
+			area = leinster_area
+			area = ulster_area
+			superregion = america_superregion
+			superregion = canada_superregion
+		}
+	}
+}
+
+can_produce_rum = {
+	AND = {
+		trade_goods = sugar
+		OR = {
+			region = east_australia_region
+			region = west_australia_region
+			region = central_america_region
+			superregion = caribbean_superregion
+			region = maritimes_region
+			area = luzon_area
+			area = southern_luzon_area
+			area = mindanao_area
+			area = west_mindanao_area
+			area = visayas_area
+			area = palawan_area
+			province_group = florida_provincegroup
+			continent = south_america
+		}
+	}
+}
+
+has_cigar_factory_trade_goods = {
+	trade_goods = tobacco
+}
+
+has_distillery_trade_goods = {
+	OR = {
+		trade_goods = sugar
+		trade_goods = agave
+		trade_goods = maize
+		trade_goods = grain
 	}
 }
 

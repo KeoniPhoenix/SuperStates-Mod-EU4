@@ -2,6 +2,5 @@ government = republic
 add_government_reform = hybrid_westminster_reform
 technology_group = australian
 religion = austral_protestant
-#primary_culture = north_queenslander
-primary_culture = queenslander
+primary_culture = north_queenslander
 capital = 1791 # Townsville

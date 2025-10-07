@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 200  100  50 }
+color = { 255  130  0 }
+# UT orange
 
 historical_idea_groups = {
 	defensive_ideas

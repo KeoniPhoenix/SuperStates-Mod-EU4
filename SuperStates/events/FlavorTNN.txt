@@ -10,228 +10,827 @@
 namespace = TNflavor
 
 #Rise of East Tennessee
-country_event = {
-	id = TNflavor.1
-	title = TNflavor.1tit
-	desc = TNflavor.1desc
+# country_event = {
+# 	id = TNflavor.1
+# 	title = TNflavor.1tit
+# 	desc = TNflavor.1desc
+# 	picture = CITY_DEVELOPMENT_eventPicture
+	
+# 	fire_only_once = yes
+	
+# 	trigger = {
+# 		tag = TNN
+# 		owns_core_province = 2518
+# 		owns_core_province = 2520
+# 		2520 = {
+# 			development = 20
+# 			culture = mountaineer
+# 			}
+# 		variable_arithmetic_trigger = {
+# 			export_to_variable = { 
+# 				variable_name = nashville_dev
+# 				value = trigger_value:development
+# 				who = ROOT
+# 			}
+# 			export_to_variable = {
+# 				variable_name = knoxville_dev
+# 				value = trigger_value:development
+# 				who = FROM
+# 			}
+
+# 			ROOT = {
+# 				2518 = {
+# 					development = 0
+# 				}
+# 			}
+# 			FROM = {
+# 				2520 = {
+# 					development = 0
+# 				}
+# 			}
+
+# 			check_variable = {
+# 				which = knoxville_dev
+# 				which = nashville_dev
+# 			}
+# 		}
+# 	}	
+# 	mean_time_to_happen = {
+# 		months = 60
+# 	}	
+# 	option = {
+# 		name = TNflavor.1a #We should aspire to be more like the Mountaineer people
+# 		ai_chance = { factor = 10 }
+# 		change_primary_culture = mountaineer
+# 		2518 = {
+# 			add_base_manpower = -1
+# 			add_base_production = -1
+# 			add_base_tax = -1
+# 			change_culture = mountaineer
+# 			}
+# 		2520 = {
+# 			move_capital_effect = yes
+# 			}
+# 		3145 = {
+# 			change_culture = mountaineer
+# 			}
+# 		3146 = {
+# 			change_culture = mountaineer
+# 			}
+# 		}
+# 	option = {
+# 		name = TNflavor.1b #We need to subdue these people before they become a bigger problem
+# 		ai_chance = { factor = 10 }
+# 		add_stability = -1
+# 		remove_accepted_culture = mountaineer
+# 		2518 = {
+# 			add_base_manpower = -2
+# 			add_base_production = -1
+# 			add_base_tax = -2
+# 			change_culture = ROOT
+# 		}
+# 		3147 = {
+# 			add_base_manpower = -1
+# 			add_base_production = -1
+# 			add_base_tax = -1
+# 			change_culture = ROOT
+# 		}
+# 		2521 = {
+# 			add_base_manpower = -1
+# 			add_base_production = -1
+# 			add_base_tax = -1
+# 			change_culture = ROOT
+# 		}
+# 	}
+# 	option = {
+# 		name = TNflavor.1c #We will concede partial independence
+# 		ai_chance = { factor = 10 }
+# 		#release = FKL
+# 		ROOT = {
+# 			create_vassal = FKL
+# 		}
+# 	}
+# 	option = {
+# 		name = TNflavor.1d #We will grant increased autonomy but Tennessee must remain united
+# 		ai_chance = { factor = 60 }
+# 		2518 = {
+# 			add_local_autonomy = 25
+# 		}
+# 		3147 = {
+# 			add_local_autonomy = 25
+# 		}
+# 		2521 = {
+# 			add_local_autonomy = 25
+# 		}
+# 	}
+# }
+# #Rise of West Tennessee
+# country_event = {
+# 	id = TNflavor.2
+# 	title = TNflavor.2tit
+# 	desc = TNflavor.2desc
+# 	picture = CITY_DEVELOPMENT_eventPicture
+	
+# 	fire_only_once = yes
+	
+# 	trigger = {
+# 		tag = TNN
+# 		owns_core_province = 2518
+# 		owns_core_province = 2519
+# 		2519 = {
+# 			development = 20
+# 			culture = west_tennessean
+# 		}
+# 		variable_arithmetic_trigger = {
+# 			export_to_variable = {
+# 				variable_name = nashville_dev
+# 				value = trigger_value:development
+# 				who = ROOT
+# 			}
+# 			export_to_variable = {
+# 				variable_name = memphis_dev
+# 				value = trigger_value:development
+# 				who = FROM
+# 			}
+
+# 			ROOT = {
+# 				2518 = {
+# 					development = 0
+# 				}
+# 			}
+# 			FROM = {
+# 				2519 = {
+# 					development = 0
+# 				}
+# 			}
+
+# 			check_variable = {
+# 				which = memphis_dev
+# 				which = nashville_dev
+# 			}
+# 		}
+# 	}	
+# 	mean_time_to_happen = {
+# 		months = 60
+# 	}	
+# 	option = {
+# 		name = TNflavor.2a #We should aspire to be more like the Memphian people
+# 		ai_chance = { factor = 10 }
+# 		change_primary_culture = west_tennessean
+# 		2520 = {
+# 			add_base_manpower = -1
+# 			add_base_production = -1
+# 			add_base_tax = -1
+# 			change_culture = west_tennessean
+# 			}
+# 		2519 = {
+# 			change_culture = west_tennessean
+# 			move_capital_effect = yes
+# 			}
+# 		3145 = {
+# 			change_culture = west_tennessean
+# 			}
+# 		3146 = {
+# 			change_culture = west_tennessean
+# 			}
+# 		}
+# 	option = {
+# 		name = TNflavor.2b #We need to subdue these people before they become a bigger problem
+# 		ai_chance = { factor = 10 }
+# 		add_stability = -1
+# 		remove_accepted_culture = west_tennessean
+		
+# 		2519 = {
+# 			add_base_manpower = -2
+# 			add_base_production = -1
+# 			add_base_tax = -2
+# 			change_culture = ROOT
+# 			}
+# 		3144 = {
+# 			add_base_manpower = -1
+# 			add_base_production = -1
+# 			add_base_tax = -1
+# 			change_culture = ROOT
+# 			}
+# 		}
+# 	option = {
+# 		name = TNflavor.2c #We will concede partial independence
+# 		ai_chance = { factor = 10 }
+# 		#release = WTN
+# 		ROOT = {
+# 			create_vassal = WTN
+# 		}
+# 	}
+# 	option = {
+# 		name = TNflavor.2d #We will grant increased autonomy but Tennessee must remain united
+# 		ai_chance = { factor = 60 }
+# 		2518 = {
+# 			add_local_autonomy = 25
+# 		}
+# 		3147 = {
+# 			add_local_autonomy = 25
+# 		}
+# 		2521 = {
+# 			add_local_autonomy = 25
+# 		}
+# 	}
+# }
+# Naming decisions for Grand Divisions
+country_event = { # Renaming East Tennessee / Franklin / Cumberland
+	id = TNflavor.3
+	title = TNflavor.3.title
+	desc = TNflavor.3.desc
 	picture = CITY_DEVELOPMENT_eventPicture
 	
 	fire_only_once = yes
 	
 	trigger = {
-		tag = TNN
-		owns_core_province = 2518
-		owns_core_province = 2520
-		2520 = {
-			development = 20
-			culture = mountaineer
-			}
-		variable_arithmetic_trigger = {
-			export_to_variable = { 
-				variable_name = nashville_dev
-				value = trigger_value:development
-				who = ROOT
-			}
-			export_to_variable = {
-				variable_name = knoxville_dev
-				value = trigger_value:development
-				who = FROM
-			}
-
-			ROOT = {
-				2518 = {
-					development = 0
-				}
-			}
-			FROM = {
-				2520 = {
-					development = 0
-				}
-			}
-
-			check_variable = {
-				which = knoxville_dev
-				which = nashville_dev
-			}
+		has_reform = grand_divisions_reform
+		
+		FKL = {
+			is_subject_of = ROOT
+			is_subject_of_type = grand_division_subject
 		}
 	}	
 	mean_time_to_happen = {
-		months = 60
+		months = 12
 	}	
 	option = {
-		name = TNflavor.1a #We should aspire to be more like the Mountaineer people
-		ai_chance = { factor = 10 }
-		change_primary_culture = mountaineer
-		2518 = {
-			add_base_manpower = -1
-			add_base_production = -1
-			add_base_tax = -1
-			change_culture = mountaineer
-			}
-		2520 = {
-			move_capital_effect = yes
-			}
-		3145 = {
-			change_culture = mountaineer
-			}
-		3146 = {
-			change_culture = mountaineer
+		name = TNflavor.3a #Declare them to be the Grand Division of East Tennessee.
+			ai_chance = { factor = 33 }
+			FKL = {
+				override_country_name = EAST_TENNESSEE_NAME
+				set_country_flag = has_overriden_name_flag
 			}
 		}
 	option = {
-		name = TNflavor.1b #We need to subdue these people before they become a bigger problem
-		ai_chance = { factor = 10 }
-		add_stability = -1
+		name = TNflavor.3b #Franklin has a nice ring to it.
+		ai_chance = { factor = 33 }
+			FKL = {
+				restore_country_name = yes
+			}
+	}
+	option = {
+		name = TNflavor.3c #Cumberland shall be the name of this Grand Division.
+		ai_chance = { factor = 33 }
+			FKL = {
+				override_country_name = CUMBERLAND_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+}
+
+country_event = { # Renaming West Carolina / Blue Ridge / Land of Sky
+	id = TNflavor.5
+	title = TNflavor.5.title
+	desc = TNflavor.5.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_reform = grand_divisions_reform
+		
+		WSC = {
+			is_subject_of = ROOT
+			is_subject_of_type = grand_division_subject
+		}
+	}	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	option = {
+		name = TNflavor.5a #Declare them to be the Grand Division of West Carolina.
+			ai_chance = { factor = 33 }
+			WSC = {
+				restore_country_name = yes
+			}
+		}
+	option = {
+		name = TNflavor.5b #Blue Ridge has a nice ring to it.
+		ai_chance = { factor = 33 }
+			WSC = {
+				override_country_name = BLUE_RIDGE_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+	option = {
+		name = TNflavor.5c #Land of Sky shall be the name of this Grand Division.
+		ai_chance = { factor = 33 }
+			WSC = {
+				override_country_name = LAND_OF_SKY_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+}
+
+country_event = { # Renaming West Tennessee / Memphis / Chickasaw
+	id = TNflavor.4
+	title = TNflavor.4.title
+	desc = TNflavor.4.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_reform = grand_divisions_reform
+		
+		WTN = {
+			is_subject_of = ROOT
+			is_subject_of_type = grand_division_subject
+		}
+	}	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	option = {
+		name = TNflavor.4a #Declare them to be the Grand Division of West Tennessee.
+			ai_chance = { factor = 33 }
+			WTN = {
+				restore_country_name = yes
+			}
+		}
+	option = {
+		name = TNflavor.4b #Memphis has a nice ring to it.
+		ai_chance = { factor = 33 }
+			WTN = {
+				override_country_name = MEMPHIS_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+	option = {
+		name = TNflavor.4c #Chickasaw shall be the name of this Grand Division.
+		ai_chance = { factor = 33 }
+			WTN = {
+				override_country_name = CHICKASAW_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+}
+
+country_event = { # Rename Transylvania / Boone / North Tennessee
+	id = TNflavor.6
+	title = TNflavor.6.title
+	desc = TNflavor.6.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_reform = grand_divisions_reform
+		
+		TRN = {
+			is_subject_of = ROOT
+			is_subject_of_type = grand_division_subject
+		}
+	}	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	option = {
+		name = TNflavor.6a #Declare them to be the Grand Division of Transylvania.
+			ai_chance = { factor = 33 }
+			TRN = {
+				restore_country_name = yes
+			}
+		}
+	option = {
+		name = TNflavor.6b #Boone has a nice ring to it.
+		ai_chance = { factor = 33 }
+			TRN = {
+				override_country_name = BOONE_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+	option = {
+		name = TNflavor.6c #North Tennessee shall be the name of this Grand Division.
+		ai_chance = { factor = 33 }
+			TRN = {
+				override_country_name = NORTH_TENNESSEE_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+}
+
+country_event = { # Rename Nickajack / Coosa / South Tennessee
+	id = TNflavor.7
+	title = TNflavor.7.title
+	desc = TNflavor.7.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_reform = grand_divisions_reform
+		
+		NCK = {
+			is_subject_of = ROOT
+			is_subject_of_type = grand_division_subject
+		}
+	}	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	option = {
+		name = TNflavor.7a #Declare them to be the Grand Division of Nickajack.
+			ai_chance = { factor = 33 }
+			NCK = {
+				restore_country_name = yes
+			}
+		}
+	option = {
+		name = TNflavor.7b #South Tennessee has a nice ring to it.
+		ai_chance = { factor = 33 }
+			NCK = {
+				override_country_name = SOUTH_TENNESSEE_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+	option = {
+		name = TNflavor.7c #Coosa shall be the name of this Grand Division.
+		ai_chance = { factor = 33 }
+			NCK = {
+				override_country_name = COOSA_NAME
+				set_country_flag = has_overriden_name_flag
+			}
+	}
+}
+
+#Culture Swap event
+country_event = {
+	id = TNflavor.1000
+	title = flavorTNN.1000t
+	desc = flavorTNN.1000d
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Move to Appalachian and move capital
+	name = flavorTNN.1000opta2
+	trigger = {
+		owns = 2520
+		OR = {
+			num_of_owned_provinces_with = {
+				value = 6
+				province_group = tennessee_provincegroup
+				OR = {
+					culture = mountaineer
+					culture = appalachian_tennessean
+				}
+			}
+			primary_culture = mountaineer
+			primary_culture = appalachian_tennessean
+		}
+	}
+
+	set_capital = 2520	
+	2520 = {
+		if = {
+			limit = {
+				NOT = {
+					province_has_center_of_trade_of_level = 1
+				}
+			}
+			center_of_trade = 1
+		}
+		add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 2
+	}
+	# change_country_color = { country = FKL }
+	# set_country_flag = has_overriden_color_flag
+
+	# hidden_effect = {
+	# 	FKL = {
+	# 		change_country_color = { 
+	# 			color = {
+	# 				255  130  0
+	# 			}
+	# 		}
+	# 		set_country_flag = tnn_color_flag
+	# 	}
+	# }
+
+	if = {
+		limit = {
+			NOT = {
+				primary_culture = appalachian_tennessean
+			}
+		}
+		change_primary_culture = appalachian_tennessean
+	}
+	
+	custom_tooltip = flavorTNN.1000a.tt
+	hidden_effect = {
 		remove_accepted_culture = mountaineer
-		2518 = {
-			add_base_manpower = -2
-			add_base_production = -1
-			add_base_tax = -2
-			change_culture = ROOT
+		remove_accepted_culture = tennessean
+		remove_accepted_culture = west_tennessean
+		set_ruler_culture = appalachian_tennessean
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			set_heir_culture = appalachian_tennessean
 		}
-		3147 = {
-			add_base_manpower = -1
-			add_base_production = -1
-			add_base_tax = -1
-			change_culture = ROOT
+		if = {
+			limit = {
+				has_consort = yes
+				OR = {
+					consort_culture = mountaineer
+					consort_culture = tennessean
+					consort_culture = west_tennessean
+				}
+			}
+			set_consort_culture = appalachian_tennessean
 		}
-		2521 = {
-			add_base_manpower = -1
-			add_base_production = -1
-			add_base_tax = -1
-			change_culture = ROOT
+		every_owned_province = {
+			limit = {
+				OR = {
+					culture = tennessean
+					culture = mountaineer
+					culture = west_tennessean
+				}
+			}
+			change_culture = appalachian_tennessean
 		}
 	}
-	option = {
-		name = TNflavor.1c #We will concede partial independence
-		ai_chance = { factor = 10 }
-		#release = FKL
-		ROOT = {
-			create_vassal = FKL
+	ai_chance = {
+		factor = 0.5
+	}
+}
+
+	option = { #Move to Appalachian
+		name = flavorTNN.1000opta
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 6
+					province_group = tennessee_provincegroup
+					OR = {
+						culture = mountaineer
+						culture = appalachian_tennessean
+					}
+				}
+				primary_culture = mountaineer
+				primary_culture = appalachian_tennessean
+			}
+		}
+
+		# change_country_color = { country = FKL }
+		# set_country_flag = has_overriden_color_flag
+
+		# hidden_effect = {
+		# 	FKL = {
+		# 		change_country_color = { 
+		# 			color = { 200  100  50 }
+		# 		}
+		# 	}
+		# }
+
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = appalachian_tennessean
+				}
+			}
+			change_primary_culture = appalachian_tennessean
+		}
+		hidden_effect = {
+			FKL = {
+				change_country_color = {
+					country = TNN
+				}
+				set_country_flag = tnn_color_flag
+			}
+		}
+		change_country_color = {
+			country = FKL
+		}
+		set_country_flag = has_overriden_color_flag
+		custom_tooltip = flavorTNN.1000a.tt
+		hidden_effect = {
+			remove_accepted_culture = mountaineer
+			remove_accepted_culture = tennessean
+			remove_accepted_culture = west_tennessean
+			set_ruler_culture = appalachian_tennessean
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = appalachian_tennessean
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = mountaineer
+                        consort_culture = tennessean
+                        consort_culture = west_tennessean
+                    }
+                }
+                set_consort_culture = appalachian_tennessean
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = tennessean
+						culture = mountaineer
+						culture = west_tennessean
+					}
+				}
+				change_culture = appalachian_tennessean
+			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
-	option = {
-		name = TNflavor.1d #We will grant increased autonomy but Tennessee must remain united
-		ai_chance = { factor = 60 }
-		2518 = {
-			add_local_autonomy = 25
+
+	option = { #Move to Midwestern and move capital
+		name = flavorTNN.1000optb2
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						culture = west_tennessean
+						culture = midwestern_tennessean
+					}
+				}
+				primary_culture = west_tennessean
+				primary_culture = midwestern_tennessean
+			}
 		}
-		3147 = {
-			add_local_autonomy = 25
+
+		set_capital = 2519
+		change_country_color = { country = WTN }
+		set_country_flag = has_overriden_color_flag
+
+		hidden_effect = {
+			WTN = {
+				change_country_color = { 
+					color = { 200  100  50 }
+				}
+				set_country_flag = tnn_color_flag
+			}
 		}
-		2521 = {
-			add_local_autonomy = 25
+
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = midwestern_tennessean
+				}
+			}
+			change_primary_culture = midwestern_tennessean
+		}
+		custom_tooltip = flavorTNN.1000b.tt
+		hidden_effect = {
+			remove_accepted_culture = mountaineer
+			remove_accepted_culture = tennessean
+			remove_accepted_culture = west_tennessean
+			set_ruler_culture = midwestern_tennessean
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = midwestern_tennessean
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = mountaineer
+                        consort_culture = tennessean
+                        consort_culture = west_tennessean
+                    }
+                }
+                set_consort_culture = midwestern_tennessean
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = tennessean
+						culture = mountaineer
+						culture = west_tennessean
+					}
+				}
+				change_culture = midwestern_tennessean
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Move to Midwestern
+		name = flavorTNN.1000optb
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						culture = west_tennessean
+						culture = midwestern_tennessean
+					}
+				}
+				primary_culture = west_tennessean
+				primary_culture = midwestern_tennessean
+			}
+		}
+
+		change_country_color = { country = WTN }
+		set_country_flag = has_overriden_color_flag
+
+		hidden_effect = {
+			WTN = {
+				change_country_color = { 
+					color = { 200  100  50 }
+				}
+				set_country_flag = tnn_color_flag
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = midwestern_tennessean
+				}
+			}
+			change_primary_culture = midwestern_tennessean
+		}
+		custom_tooltip = flavorTNN.1000b.tt
+		hidden_effect = {
+			remove_accepted_culture = mountaineer
+			remove_accepted_culture = tennessean
+			remove_accepted_culture = west_tennessean
+			set_ruler_culture = midwestern_tennessean
+            if = {
+                limit = {
+                    has_heir = yes
+                }
+                set_heir_culture = midwestern_tennessean
+            }
+            if = {
+                limit = {
+                    has_consort = yes
+                    OR = {
+                        consort_culture = mountaineer
+                        consort_culture = tennessean
+                        consort_culture = west_tennessean
+                    }
+                }
+                set_consort_culture = midwestern_tennessean
+            }
+			every_province = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						culture = tennessean
+						culture = mountaineer
+						culture = west_tennessean
+					}
+				}
+				change_culture = midwestern_tennessean
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { #Incase you somehow finish this mission while not being any tennessean culture and wanna nope out
+		name = flavorTNN.1000optc
+		trigger = {
+			NOT = {
+				OR = {
+					primary_culture = mountaineer
+					primary_culture = west_tennessean
+					primary_culture = midwestern_tennessean
+					primary_culture = appalachian_tennessean
+					num_of_owned_provinces_with = {
+						value = 6
+						province_group = tennessee_provincegroup
+						OR = {
+							culture = mountaineer
+							culture = appalachian_tennessean
+						}
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						OR = {
+							culture = west_tennessean
+							culture = midwestern_tennessean
+						}
+					}
+				}
+			}
+		}
+		add_prestige = 20
+
+		ai_chance = {
+			factor = 1
 		}
 	}
 }
-#Rise of West Tennessee
-country_event = {
-	id = TNflavor.2
-	title = TNflavor.2tit
-	desc = TNflavor.2desc
-	picture = CITY_DEVELOPMENT_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = TNN
-		owns_core_province = 2518
-		owns_core_province = 2519
-		2519 = {
-			development = 20
-			culture = west_tennessean
-		}
-		variable_arithmetic_trigger = {
-			export_to_variable = {
-				variable_name = nashville_dev
-				value = trigger_value:development
-				who = ROOT
-			}
-			export_to_variable = {
-				variable_name = memphis_dev
-				value = trigger_value:development
-				who = FROM
-			}
-
-			ROOT = {
-				2518 = {
-					development = 0
-				}
-			}
-			FROM = {
-				2519 = {
-					development = 0
-				}
-			}
-
-			check_variable = {
-				which = memphis_dev
-				which = nashville_dev
-			}
-		}
-	}	
-	mean_time_to_happen = {
-		months = 60
-	}	
-	option = {
-		name = TNflavor.2a #We should aspire to be more like the Memphian people
-		ai_chance = { factor = 10 }
-		change_primary_culture = west_tennessean
-		2520 = {
-			add_base_manpower = -1
-			add_base_production = -1
-			add_base_tax = -1
-			change_culture = west_tennessean
-			}
-		2519 = {
-			change_culture = west_tennessean
-			move_capital_effect = yes
-			}
-		3145 = {
-			change_culture = west_tennessean
-			}
-		3146 = {
-			change_culture = west_tennessean
-			}
-		}
-	option = {
-		name = TNflavor.2b #We need to subdue these people before they become a bigger problem
-		ai_chance = { factor = 10 }
-		add_stability = -1
-		remove_accepted_culture = west_tennessean
-		
-		2519 = {
-			add_base_manpower = -2
-			add_base_production = -1
-			add_base_tax = -2
-			change_culture = ROOT
-			}
-		3144 = {
-			add_base_manpower = -1
-			add_base_production = -1
-			add_base_tax = -1
-			change_culture = ROOT
-			}
-		}
-	option = {
-		name = TNflavor.2c #We will concede partial independence
-		ai_chance = { factor = 10 }
-		#release = WTN
-		ROOT = {
-			create_vassal = WTN
-		}
-	}
-	option = {
-		name = TNflavor.2d #We will grant increased autonomy but Tennessee must remain united
-		ai_chance = { factor = 60 }
-		2518 = {
-			add_local_autonomy = 25
-		}
-		3147 = {
-			add_local_autonomy = 25
-		}
-		2521 = {
-			add_local_autonomy = 25
-		}
-	}
-}	

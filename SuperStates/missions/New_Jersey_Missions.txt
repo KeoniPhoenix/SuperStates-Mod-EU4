@@ -442,8 +442,19 @@ njy_slot_3 = {
 			south_jersey_area = {
 				type = all
 				owned_by = ROOT
-				is_core = ROOT
 				development = 15
+			}
+			custom_trigger_tooltip = {
+				tooltip = njy_camden_tt
+				3126 = {
+					AND = {
+						owned_by = ROOT
+						development = 20
+						has_building = marketplace
+						has_building = workshop
+						has_building = dock
+					}
+				}
 			}
 		}
 		effect = {
@@ -457,7 +468,51 @@ njy_slot_3 = {
 				limit = {
 					NOT = { primary_culture = south_jerseyan }
 				}
-				add_accepted_culture_or_dip_power = { culture = south_jerseyan }
+				add_accepted_culture_or_dip_power = { culture = south_jerseyan free = yes }
+			}
+				else = {
+					add_dip_power = 100
+					add_adm_power = 100
+				}
+			if = {
+				limit = {
+					3126 = {
+						AND = {
+							owned_by = ROOT
+							development = 20
+							has_building = marketplace
+							has_building = workshop
+							has_building = dock
+						}
+					}
+				}
+				custom_tooltip = njy_camden_yes_tt
+			}
+			else = {
+				custom_tooltip = njy_camden_no_tt
+			}
+			tooltip = {
+				3126 = {
+					center_of_trade = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						3126 = {
+							AND = {
+								owned_by = ROOT
+								development = 20
+								has_building = marketplace
+								has_building = workshop
+								has_building = dock
+							}
+						}
+					}
+					3126 = {
+						center_of_trade = 1
+					}
+				}
 			}
 		}
 	}

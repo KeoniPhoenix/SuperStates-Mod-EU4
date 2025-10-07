@@ -16,6 +16,12 @@ country_decisions = {
 			#technology_group = north_american
 			culture_group = intermountain_western
 			OR = {
+				NOT = {
+					has_mission = uta_deseret_ascendant
+				}
+				has_country_flag = declined_deseret
+			}
+			OR = {
 				ai = no
 				AND = {
 					ai = yes
@@ -62,6 +68,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = kittitian_culture
+		}
 		494 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "StKittsFlavor.1opta"
+		set_country_flag = kittitian_culture
 		494 = {
 			change_culture = kittitian
 			add_core = STN

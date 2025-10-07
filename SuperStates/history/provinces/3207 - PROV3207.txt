@@ -3,7 +3,8 @@
 owner = WAU
 controller = WAU
 add_core = WAU
-culture = western_australian
+add_core = DMP
+culture = s_aboriginal
 religion = austral_catholic
 capital = "Derby"
 trade_goods = livestock

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = wake_islander_culture
+		}
 		1994 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "WakeIslandFlavor.1opta"
+		set_country_flag = wake_islander_culture
 		1994 = { 
 			change_culture = wake_islander
 			add_core = WKI

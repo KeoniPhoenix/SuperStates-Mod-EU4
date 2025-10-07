@@ -113,9 +113,7 @@ portuguese_marines = {
 		OR = {
 			primary_culture = portugese
 			primary_culture = brazilian
-			culture_group = australian_new_zealander
-			tag = CAL
-			tag = USA
+			tag = AUS
 		}
 	}
 

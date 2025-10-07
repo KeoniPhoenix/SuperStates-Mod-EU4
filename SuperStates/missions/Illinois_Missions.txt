@@ -55,13 +55,13 @@ ili_slot_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = twin_cities_area
-				area = superior_area
+				area = upper_peninsula_area
 				area = the_lakes_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			superior_area = {
+			upper_peninsula_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -164,7 +164,7 @@ ili_slot_2 = {
 		}
 		effect = {
 			add_mil_power = 50
-			superior_area = {
+			upper_peninsula_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -716,7 +716,7 @@ ili_slot_5 = {
 								}
 							}
 							num_of_owned_provinces_with = {
-								value = 4
+								value = 7
 								OR = {
 									culture = chicagoan
 									culture = great_laker_illinoisan
@@ -871,7 +871,7 @@ ili_slot_5 = {
 							}
 						}
 						num_of_owned_provinces_with = {
-							value = 4
+							value = 7
 							OR = {
 								culture = chicagoan
 								culture = great_laker_illinoisan

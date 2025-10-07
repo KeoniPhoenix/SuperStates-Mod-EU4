@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = barthelmois_culture
+		}
 		4578 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "StBartsFlavor.1opta"
+		set_country_flag = barthelmois_culture
 		4578 = {
 			change_culture = barthelemois
 			add_core = SBT

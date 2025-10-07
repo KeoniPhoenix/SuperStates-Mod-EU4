@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = hybrid_westminster_reform
+technology_group = australian
+religion = austral_catholic
+primary_culture = new_south_welsh
+capital = 3165 	# Ballina

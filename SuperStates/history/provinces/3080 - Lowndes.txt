@@ -7,12 +7,13 @@ add_core = SGR
 culture = south_georgian
 religion = s_protestant
 capital = "Valdosta"
-trade_goods = paper
+trade_goods = tobacco
 hre = no
 base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes #5450
+#fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

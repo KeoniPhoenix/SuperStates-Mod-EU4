@@ -3,6 +3,7 @@
 owner = GRR
 controller = GRR
 add_core = GRR
+add_core = HOT
 culture = guerreroan
 religion = s_catholic
 capital = "Zihuatanejo"

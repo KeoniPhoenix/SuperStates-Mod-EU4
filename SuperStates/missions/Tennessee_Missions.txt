@@ -1,0 +1,253 @@
+tnn_internal = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = TNN
+			tag = FKL
+			tag = WTN
+			tag = NCK
+		}
+	}
+	has_country_shield = yes
+
+	tnn_culture = {
+		icon = purely_for_commerce
+		required_missions = { }
+		position = 3
+		provinces_to_highlight = {
+			province_group = tennessee_provincegroup
+		}
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = mountaineer
+						primary_culture = tennessean
+						primary_culture = west_tennessean
+						primary_culture = midwestern_tennessean
+						primary_culture = appalachian_tennessean
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = tnn_has_unified_culture_tooltip
+						tennessee_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = tennessean
+						}
+					}
+					primary_culture = west_tennessean
+					primary_culture = mountaineer
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						primary_culture = mountaineer
+						primary_culture = tennessean
+						primary_culture = west_tennessean
+						primary_culture = midwestern_tennessean
+						primary_culture = appalachian_tennessean
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = tnn_has_unified_culture_tooltip
+						tennessee_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = tennessean
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = tnn_has_unified_culture_tooltip_2
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = tennessee_provincegroup
+								OR = {
+									culture = mountaineer
+									culture = appalachian_tennessean
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {
+									culture = west_tennessean
+									culture = midwestern_tennessean
+								}
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ai = yes
+				}
+				is_at_war = no
+				NOT = { current_age = age_of_discovery }
+			}
+			else = {
+				2518 = {
+					owned_by = ROOT
+					province_is_or_accepts_culture = yes
+				}
+			}
+		}
+		effect = {
+			if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					NOT = {
+						has_dlc = "The Cossacks"
+					}
+					OR = {
+						primary_culture = mountaineer
+						primary_culture = tennessean
+						primary_culture = west_tennessean
+						primary_culture = midwestern_tennessean
+						primary_culture = appalachian_tennessean
+					}
+				}
+				custom_tooltip = tnn_tennessean_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = tnn_shift_no_dlc_tooltip
+				tooltip = {
+					country_event = {
+						id = TNflavor.1000
+					}
+				}
+				custom_tooltip = ili_dash_tooltip
+			}
+
+			else_if = { #All of this is just fancy tooltips to make it look pretty
+				limit = {
+					OR = {
+						primary_culture = mountaineer
+						primary_culture = tennessean
+						primary_culture = west_tennessean
+						primary_culture = midwestern_tennessean
+						primary_culture = appalachian_tennessean
+					}
+				}
+				custom_tooltip = tnn_tennessean_tooltip
+				tooltip = {
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+				custom_tooltip = ili_dash_tooltip
+				custom_tooltip = tnn_shift_tooltip
+				tooltip = {
+					country_event = {
+						id = TNflavor.1000
+					}
+				}
+				custom_tooltip = tnn_shift_2_tooltip
+				custom_tooltip = ili_dash_tooltip
+			}
+			else = {
+				tooltip = {
+					add_dip_power = 100
+				}
+			}
+
+			#Here is where the actual effects are
+			add_country_modifier = { #Always get this modifier
+				name = "super_culture_change_modifier"
+				duration = 5475
+			}
+
+			hidden_effect = {
+				if = {
+					limit = { #If completed by converting to Tennesseean / only if no Cossacks DLC
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						tennessee_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = tennessean
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+				}
+
+				else_if = { #If completed by converting culture - trigger event / only if no Cossacks DLC
+					limit = {
+						NOT = {
+							has_dlc = "The Cossacks"
+						}
+						OR = {
+							primary_culture = west_tennessean
+							primary_culture = mountaineer
+						}
+					}
+					country_event = {
+						id = TNflavor.1000 #Event moves your culture
+					}
+				}
+
+				else_if = {
+					limit = { #If completed by converting to tennessean
+						tennessee_provincegroup = {
+							type = all
+							owned_by = ROOT
+							culture = tennessean
+						}
+					}
+					add_stability_or_adm_power = yes
+					add_dip_power = 100
+					#set_country_flag = tnn_had_focus_event
+					#set_country_flag = midatlantic_focus
+					#clr_country_flag = appalachian_focus
+					#clr_country_flag = southerner_focus
+					#swap_non_generic_missions = yes
+
+				}
+				else_if = { #If completed by spreading culture - trigger event 
+					limit = {
+						OR = {
+							num_of_owned_provinces_with = {
+								value = 6
+								province_group = tennessee_provincegroup
+								OR = {
+									culture = mountaineer
+									culture = appalachian_tennessean
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {
+									culture = west_tennessean
+									culture = midwestern_tennessean
+								}
+							}
+						}
+					}
+					country_event = {
+						id = TNflavor.1000 #Event moves you to Great Laker/Appalachian group and moves capital along with +2 tax and prod
+					}
+				}
+				else = { #For if you did neither
+					add_dip_power = 100
+					#set_country_flag = tnn_had_focus_event
+					#set_country_flag = midatlantic_focus
+					#clr_country_flag = appalachian_focus
+					#clr_country_flag = southerner_focus
+					#swap_non_generic_missions = yes
+				}
+			}
+		}
+	}
+}

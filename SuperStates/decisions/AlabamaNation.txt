@@ -1,0 +1,129 @@
+country_decisions = {
+
+	## ALABAMA
+		alabama_nation = {
+			major = yes
+			potential = {
+				NOT = { tag = USA }
+				NOT = { exists = CSA }
+				NOT = { exists = NAM }
+				NOT = { exists = ALM }
+				NOT = { has_country_flag = formed_alabama_flag }
+				#technology_group = north_american
+				OR = {
+					primary_culture = alabaman
+					AND = {
+						primary_culture = west_floridian
+						OR = {
+							capital_scope = {
+								province_id = 2508
+							}
+							capital_scope = {
+								AND = {
+									area = nickajack_area
+									NOT = { province_id = 3078 }
+								}
+							}
+							capital_scope = {
+								area = alabama_area
+							}
+						}
+					}
+					AND = {
+						primary_culture = nickajack
+						OR = {
+							capital_scope = {
+								province_id = 2508
+							}
+							capital_scope = {
+								AND = {
+									area = nickajack_area
+									NOT = { province_id = 3078 }
+								}
+							}
+							capital_scope = {
+								area = alabama_area
+							}
+						}
+					}
+				}
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						num_of_cities = 3
+					}
+				}
+			}
+			provinces_to_highlight = {
+				OR = {
+					area = alabama_area
+					AND = {
+						area = nickajack_area
+						NOT = { province_id = 3078 }
+					}
+					province_id = 2508
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			allow = {
+				owns_core_province = 2506 #Montgomery
+				owns_core_province = 2507 #Birmingham
+				OR = {
+					owns_core_province = 2509 #Huntsville
+					owns_core_province = 2508 #Mobile
+				}
+				num_of_owned_provinces_with = {
+					value = 4
+					area = alabama_area
+					is_core = root
+				}
+			}
+			effect = {
+				on_change_tag_effect = yes
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 730
+				}
+				add_prestige = 10
+				change_tag = ALM
+				ALM = {
+					if = {
+						limit = {
+							NOT = { government_rank = 2 }
+						}
+					set_government_rank = 2
+					}
+					alabama_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ALM
+					}
+					nickajack_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+							NOT = { province_id = 3078 }
+						}
+						add_permanent_claim = ALM
+					}
+					2508 = {
+						if = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+								add_permanent_claim = ALM
+						}
+					}
+					set_country_flag = formed_alabama_flag
+				}
+				country_event = { id = ideagroups.1 } #Swap 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}

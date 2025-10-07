@@ -15,13 +15,20 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = haiti_culture
+		}
 		north_haiti_area = {
 			is_capital = no
 			owned_by = ROOT
+			NOT = { culture = haitian }
+			NOT = { is_core = HAT  }
 		}
 		south_haiti_area = {
 			is_capital = no
 			owned_by = ROOT
+			NOT = { culture = haitian }
+			NOT = { is_core = HAT  }
 		}
 	}
 	
@@ -67,6 +74,7 @@ country_event = {
 	}
 	option = {
 		name = "HaitiFlavor.1opta"
+		set_country_flag = haiti_culture
 		north_haiti_area = { 
 			change_culture = haitian
 			add_core = HAT 

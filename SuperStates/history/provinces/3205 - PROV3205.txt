@@ -3,6 +3,7 @@
 owner = WAU
 controller = WAU
 add_core = WAU
+add_core = DMP
 culture = western_australian
 religion = austral_catholic
 capital = "Karratha"

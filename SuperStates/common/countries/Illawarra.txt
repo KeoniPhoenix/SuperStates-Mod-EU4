@@ -1,0 +1,115 @@
+#Country Name: Illawarra
+
+graphical_culture = westerngfx
+
+color = { 204 13 46 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	exploration_ideas
+	naval_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	australian_battle_axe
+	australian_horsemen
+	australian_militia
+	australian_early_cavalry
+	australian_pike
+	australian_hussar
+	australian_off_musketeer
+	australian_reformed_hussar
+	australian_third
+	anzac_infantry
+	australian_light_cavalry
+	australian_bushmen
+	australian_brown_coat
+	australian_lancer
+	australian_dragoon
+	australian_adv_infantry
+}
+
+monarch_names = {
+	"Alexander #0" = 10
+	"Barrie #0" = 5
+	"Barry #0" = 5
+	"Bertram #0" = 1
+	"Charles #0" = 5
+	"Eric #0" = 5
+	"George #0" = 15
+	"Henry #0" = 10
+	"James #0" = 20
+	"John #0" = 20
+	"Joseph #0" = 10
+	"Kristina #0" = -5
+	"Morris #0" = 5
+	"Nathan #0" = 5
+	"Neville #0" = 1
+	"Nicolas #0" = 5
+	"Patrick #0" = 5
+	"Robert #0" = 15
+	"Stuart #0" = 5
+	"Thomas #0" = 15
+	"William #0" = 20
+}
+
+leader_names = {
+	Askin
+	Bavin
+	Cahill Carr Carruthers Cowper
+	Dibbs Donaldson Dooley
+	Fahey Farnell Forster Fuller
+	Greiner
+	Heffron Holman
+	Iemma
+	Jennings
+	Keneally
+	Lang Lewis Lyne
+	Mair Martin McGirr McGowen McKell
+	O'Farrell
+	Parker Parkes
+	Rees Reid Renshaw Robertson
+	See Stevens Storey Stuart
+	Unsworth
+	Waddell Wade Willis Wran	
+}
+
+ship_names = {
+	Albury "Armidale Dumaresq" Ashfield Auburn
+	Ballina Balranald Bankstown Bathhurst "Bega Valley" Bellingen Berrigan Blacktown Bland Blayney "Blue Mountains" Bogan Bombala Boorowa "Botany Bay" Bourke Brewarrina "Broken Hill" Burwood Byron
+	Caboone Camden Campbelltown "Canada Bay" Canterbury Carrathool Cessnock "Clarence Valley" Cobar "Coffs Harbour" Coolamon Cooma Coonable Cootamundra Corowa Cowra
+	Darling Denilquin Dubbo Dungog
+	Eurobodalla
+	Fairfield Forbes
+	Gilgandra "Glen Innes Severn" Gloucester Gosford Goulburn "Great Lakes" Griffith Gundagai Gunnedah Guyra Gwydir
+	Harden Hastings Hawkesbury Hay "The Hills" Holroyd Hornsby Hume Hunter "Hunter's Hill" Hurstville
+	Illawarra Inverell
+	Jerilderie Junee
+	Kempsey Kiama Kogarah "Ku-ring-gai" Kyogle
+	Lachlan "Lake Macquarie" "Lane Cove" Leeton Leichhardt Lismore Lithgow Liverpool "Liverpool Plains" Lockhart "Lord Howe Island"
+	Maitland Manly Marrickville Monaro Mosman Murray Murrumbigee Muswellbrook
+	Nambucca Narrabi Narrandera Newcastle Norromine "North Sydney"
+	Oberon Orange
+	Palerang Parkes Parramatta Penrith Pittwater "Port Macquarie" "Port Stephens"
+	Queanbeyan
+	Randwick Richmond Rockdale Ryde
+	Shellharbour Shoalhaven Singleton "Snowy River" Strathfield Sutherland Sydney
+	Tamworth Taree Temora Tenterfield Tumbarumba Tumut Tweed
+	Uralla Urana
+	"Wagga Wagga" Wakool Walcha Walgett Warren Warringah Warrunbungle Waverley Weddin Wellington Wentworth Willoughby Wingecarribee Wollondilly Wollongong Woollahra Wyong
+	"Yass Valley" Young
+}
+
+army_names = {
+	"New South Welsh Army"
+	"Sydney Defense Force"
+}
+
+fleet_names = {
+	"Sydney Naval Patrol"
+}

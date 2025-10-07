@@ -1,0 +1,126 @@
+country_decisions = {
+	mormon_nauvoo = { # Pop Nauvoo event if you didn't get it before
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = nauvoo_event_flag
+			}
+			owns = 3275
+			religion = mormon
+		}
+		allow = {
+			owns = 3275
+			3275 = {
+				religion = mormon
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.71
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+
+	mormon_kirtland = { # Pop Kirtland event if you didn't get it before
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = kirtland_event_flag
+			}
+			owns = 2579
+			religion = mormon
+		}
+		allow = {
+			owns = 2579
+			2579 = {
+				religion = mormon
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.72
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+
+	mormon_restoration = { # Pop Restoration event if you didn't get it before
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = restoration_event_flag
+			}
+			owns = 2586
+			religion = mormon
+		}
+		allow = {
+			owns = 2586
+			2586 = {
+				religion = mormon
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.73
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+
+	mormon_palmyra = { # Pop Palmyra event if you didn't get it before
+	major = yes
+	potential = {
+		NOT = {
+			has_country_flag = palmyra_event_flag
+		}
+		owns = 2597
+		religion = mormon
+	}
+	allow = {
+		owns = 2597
+		2597 = {
+			religion = mormon
+		}
+	}
+	effect = {
+		country_event = {
+			id = flavorUTA.75
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+	mormon_diahman = { # Pop Diahman event if you didn't get it before
+	major = yes
+	potential = {
+		NOT = {
+			has_country_flag = diahman_event_flag
+		}
+		owns = 2669
+		religion = mormon
+	}
+	allow = {
+		owns = 2669
+		2669 = {
+			religion = mormon
+		}
+	}
+	effect = {
+		country_event = {
+			id = flavorUTA.70
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+	}
+}

@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = barbudan_culture
+		}
 		4582 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -53,6 +56,7 @@ country_event = {
 	
 	option = {
 		name = "BarbudanFlavor.1opta"
+		set_country_flag = barbudan_culture
 		4582 = {
 			change_culture = barbudan
 			add_core = BRD

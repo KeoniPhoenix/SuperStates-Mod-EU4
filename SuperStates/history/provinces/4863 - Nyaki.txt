@@ -3,7 +3,7 @@
 owner = NMX
 controller = NMX
 add_core = NMX
-#add_core = PUE
+add_core = PUE
 culture = new_mexican
 religion = s_catholic
 capital = "Taos"

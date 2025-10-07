@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = tuvaluan_culture
+		}
 		1990 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -54,6 +57,7 @@ country_event = {
 	
 	option = {
 		name = "TuvaluFlavor.1opta"
+		set_country_flag = tuvaluan_culture
 		1990 = { 
 			change_culture = tuvaluan
 			add_core = TUV

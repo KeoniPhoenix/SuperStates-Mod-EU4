@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 100 255 128 }
+#color = { 100 255 128 }
+color = { 0 104 71 }
 
 historical_idea_groups = {
 	defensive_ideas
@@ -37,9 +38,9 @@ historical_units = {
 monarch_names = {
 	"Abel #0" = 5
 	"Agustín #0" = 10
-	"Álejandro #0" = 5
+	"ÿlejandro #0" = 5
 	"Alonso #0" = 20
-	"Álvaro #0" = 10
+	"ÿlvaro #0" = 10
 	"Andrés #0" = 5
 	"Antonio #0" = 20
 	"Arcadio #0" = 5
@@ -72,7 +73,7 @@ monarch_names = {
 	"Hircano #0" = 5
 	"Hugo #0" = 5
 	"Humberto #0" = 10
-	"Íñigo #0" = 5
+	"ÿñigo #0" = 5
 	"Ivonne #0" = 5
 	"Jerónimo #0" = 5
 	"Jesús #0" = 5
@@ -111,10 +112,10 @@ monarch_names = {
 }
 
 leader_names = {
-	Ainz Alayola Alpuche Alvarado Álvarez Ancona Antonio Artazo Ávila Ayuso Aznar
+	Ainz Alayola Alpuche Alvarado ÿlvarez Ancona Antonio Artazo ÿvila Ayuso Aznar
 	Barbachano Bazán Berzunza Boilio Bolio
 	Cámara Campero Canto Cantón Cárdenas Carrillo Carvajal Castro Centeno Cepeda Cervera Cocom Cordóñez Cortaire Cortés Crespo Cunco
-	Dávila "de Aguirre" "de Aréchiga" "de Argüello" "de Azcárraga" "de Bazán" "de Cárdenas" "de Castro" "de Castro" "de Céspedes" "de Figueroa" "de Figueroa" "de Gálvez" "de las Casas" "de Layseca" "de los Santos" "de Lozada" "de Luna" "de Meneses" "de Montejo" "de Navarrete" "de Oliver" "de Paredes" "de Quero" "de Quijada" "de Rivaguda" "de Robles" "de Sámano" "de Santillán" "de Soberanis" "de Solís" "de Urzúa" "de Valdés" "de Vargas" "de Velásquez" "de Vértiz" "de Zayas" Delgado
+	Dávila "de Aguirre" "de Aréchiga" "de Argÿello" "de Azcárraga" "de Bazán" "de Cárdenas" "de Castro" "de Castro" "de Céspedes" "de Figueroa" "de Figueroa" "de Gálvez" "de las Casas" "de Layseca" "de los Santos" "de Lozada" "de Luna" "de Meneses" "de Montejo" "de Navarrete" "de Oliver" "de Paredes" "de Quero" "de Quijada" "de Rivaguda" "de Robles" "de Sámano" "de Santillán" "de Soberanis" "de Solís" "de Urzúa" "de Valdés" "de Vargas" "de Velásquez" "de Vértiz" "de Zayas" Delgado
 	Echeverri Escobedo Esquivel
 	Fernández Flores Francisco Franco
 	García Garrido González Granja Guerra

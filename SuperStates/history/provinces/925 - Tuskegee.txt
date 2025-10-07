@@ -3,6 +3,7 @@
 owner = HHC
 controller = HHC
 add_core = HHC
+add_core = JUA
 culture = chihuahuan
 religion = s_catholic
 capital = "Ciudad Juárez"

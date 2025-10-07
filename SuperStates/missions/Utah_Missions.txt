@@ -1,0 +1,1794 @@
+utah_slot_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+    		tag = UTA
+			tag = SUT
+			tag = DES
+		}
+    }
+    has_country_shield = yes
+
+	uta_expand_true_faith = {
+		icon = mission_sword_of_the_reformation
+		required_missions = { }
+		position = 1
+		
+		provinces_to_highlight = {
+			AND = {
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { religion = ROOT }
+			}
+		}
+		trigger = {
+		OR = {
+			AND = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				religion = ROOT
+			}	
+			is_defender_of_faith = yes
+		}
+			is_defender_of_faith_of_tier = 2
+		}
+		}
+		effect = {
+			if = {
+					limit = {
+						religion = mormon
+					}
+			set_country_flag = sword_of_the_church_flag
+			add_country_modifier = { 
+   				 name = sword_of_the_church
+    			duration = -1  
+				desc = UNTIL_NO_MORE_DOTF
+			}
+			}
+			else = {
+				add_prestige_or_monarch_power = { amount = 25 }
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	uta_true_holy_site = {
+		icon = mission_salt_lake
+		required_missions = { uta_expand_true_faith }
+		position = 2
+		
+		provinces_to_highlight = {
+			province_id = 952 # Salt Lake
+			AND = {
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { religion = ROOT }
+			}
+		}
+		trigger = {
+			952 = {
+				owned_by = ROOT
+				development = 40
+				num_of_buildings_in_province = 5
+				if = {
+					limit = {
+						has_dlc = Dharma
+					}
+					province_has_center_of_trade_of_level = 3
+				}
+				else = {
+					development = 40
+					num_of_buildings_in_province = 6
+				}
+			}
+			OR = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				religion = ROOT
+			}
+			is_defender_of_faith_of_tier = 3
+		}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+				}
+			country_event = {
+						id = flavorUTA.2
+					}
+			custom_tooltip = uta_new_zion_tt
+			custom_tooltip = mormon.center.tt2
+		}
+
+			else = {
+				add_prestige_or_monarch_power = { amount = 50 }
+			}
+	}
+	ai_weight = {
+		factor = 100
+	}
+	}
+
+	uta_push_cascades = {
+		icon = claim_the_borderlands
+		required_missions = { uta_unity_of_faith }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+			area = high_desert_area
+			province_id = 3137
+		}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			high_desert_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3137 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_subject = no
+			}
+
+			tooltip = {
+				country_event = {
+					id = flavorUTA.3
+				}
+				custom_tooltip = uta_plight_jefferson_tt
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavorUTA.3
+			}
+		}
+		}
+			jefferson_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	uta_jefferson_question = {
+		icon = mission_alliances
+		required_missions = { uta_push_cascades }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				is_core = JEF
+				province_id = 960
+				area = jefferson_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = jefferson_area
+					province_id = 960
+				}
+				religion = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					JEF = {
+						is_subject_of = ROOT
+					}
+				}
+				custom_tooltip = uta_jefferson_subject_yes_tt
+			}
+			else = {
+				custom_tooltip = uta_jefferson_subject_no_tt
+			}
+			tooltip = {
+				JEF = {
+					lincoln_area = {
+						limit = { 
+							NOT = { owned_by = JEF }
+							NOT = { owned_by = ROOT }
+						}
+						add_core = JEF
+					}
+			}
+			}
+			hidden_effect = {
+			if = {
+				limit = {
+					JEF = {
+						is_subject_of = ROOT
+					}
+				}
+				JEF = {
+						lincoln_area = {
+							limit = { 
+								NOT = { owned_by = JEF }
+								NOT = { owned_by = ROOT }
+							}
+							add_core = JEF
+						}
+							if = {
+								limit = {
+									NOT = { accepted_culture = lincolnite }
+								}
+								add_accepted_culture_or_dip_power = { culture = lincolnite free = yes }
+							}
+				}
+			}
+		}
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				NOT = { owned_by = JEF }
+				OR = {
+					area = jefferson_area
+					province_id = 960
+				}
+				religion = ROOT
+			}
+		}
+			custom_tooltip = uta_jefferson_owned_yes_tt
+		}
+		else = {
+			custom_tooltip = uta_jefferson_owned_no_tt
+		}
+		tooltip = {
+			add_accepted_culture_or_dip_power = { culture = jeffersonian free = yes }
+			#add_accepted_culture_or_dip_power = { culture = lincolnite free = yes }
+			lincoln_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					NOT = { owned_by = JEF }
+					OR = {
+						area = jefferson_area
+						province_id = 960
+					}
+					religion = ROOT
+				}
+			}
+				add_accepted_culture_or_dip_power = { culture = jeffersonian free = yes }
+				#add_accepted_culture_or_dip_power = { culture = lincolnite free = yes }
+				lincoln_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		}
+	}
+
+	uta_mountain_bastions = {
+		icon = alpine_defenses
+		required_missions = { uta_jefferson_question }
+		position = 5
+		
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			NOT = { fort_level = 2 }
+			OR = {
+				has_terrain = highlands
+				has_terrain = mountain
+				has_terrain = hills
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					has_terrain = highlands
+					has_terrain = mountain
+					has_terrain = hills
+				}
+				fort_level = 2
+			}
+		}
+		effect = {
+			every_country = {
+				limit = {
+					religion = mormon
+				}
+				set_country_flag = bastions_of_faith_enabled
+			}
+			custom_tooltip = bastion_of_faith_tt
+			#custom_tooltip = estate_church_bastion_of_faith_bonuses
+			if = {
+				limit = {
+					has_estate = estate_church
+					religion = mormon
+				}
+				set_estate_privilege = estate_church_bastion_of_faith
+			}
+			else = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_terrain = highlands
+							has_terrain = mountain
+							has_terrain = hills
+						}
+						fort_level = 2
+					}
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = uta_bastion_of_faith_fallback
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+uta_slot_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+			tag = UTA
+			tag = SUT
+			tag = DES
+		}
+    }
+	has_country_shield = yes
+
+	uta_mormon_alliance = {
+		icon = mission_diplomatic_relation
+		required_missions = { }
+		position = 1
+
+		provinces_to_highlight = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				area = idaho_area
+				province_id = 979
+				province_id = 978
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					IDA = { is_subject = no }
+					IDA = { exists = yes }
+				}
+				OR = {
+					is_rival = IDA
+					IDA = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+					IDA = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+					}
+					IDA = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+			else = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					area = idaho_area
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						IDA = {
+							OR = {
+								is_rival = ROOT
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+							}
+						}
+						is_rival = IDA
+					}
+			}
+				custom_tooltip = uta_rival_yes_tt
+			}
+			else = {
+				custom_tooltip = uta_rival_no_tt
+			}
+			tooltip = {
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					target = IDA
+					months = 240
+				}
+				idaho_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+
+				979 = {
+					add_permanent_claim = ROOT
+				}
+
+				978 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							IDA = {
+								OR = {
+									is_rival = ROOT
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+								}
+							}
+							is_rival = IDA
+						}
+					}
+					add_casus_belli = {
+						type = cb_vassalize_mission
+						target = IDA
+						months = 240
+					}
+					idaho_provincegroup = {
+						limit = {
+							NOT = { owned_by = ROOT }
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					IDA = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+				custom_tooltip = uta_friendship_yes_tt
+			}
+			else = {
+				custom_tooltip = uta_friendship_no_tt
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.1 # Change to 1
+				}
+				custom_tooltip = flavorUTA.1_tt
+		}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						IDA = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+					country_event = {
+						id = flavorUTA.1 # Change to 1
+					}
+				}
+			
+			else_if = {
+				limit = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 3
+							area = idaho_area
+						}
+				}
+				idaho_area = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				979 = {
+					add_permanent_claim = ROOT
+				}
+				978 = {
+					add_permanent_claim = ROOT
+				}
+				add_adm_power = 75
+				add_dip_power = 75
+				add_prestige_or_monarch_power = { amount = 25 }
+			}
+		}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	uta_unity_of_faith = {
+		icon = mission_religious
+		required_missions = { uta_mormon_alliance }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = idaho_area
+				province_id = 978
+				province_id = 979
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					IDA = {
+						is_subject_of = ROOT
+					}
+				}
+				IDA = {
+					NOT = {	liberty_desire = 30 }
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					area = idaho_area
+				}
+			}
+
+			else_if = {
+				limit = {
+					NOT = { IDA = { is_subject_of = ROOT } }
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					area = idaho_area
+				}
+				OR = {
+					979 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+
+					978 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				}
+			}
+		effect = {
+			if = {
+				limit = {
+					IDA = {
+						is_subject_of = ROOT
+						NOT = { historical_friend_with = ROOT }
+					}
+				}
+				IDA = {
+					add_historical_friend = ROOT 
+				}
+
+				ROOT = {
+					add_historical_friend = IDA
+				}
+			}
+			custom_tooltip = every_mormon_province_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						religion = mormon
+						continent = north_america
+						OR = {
+							culture_group = intermountain_western
+							culture_group = southwestern
+							culture = navajo
+							culture_group = pacific_coastal
+						}
+					}
+					add_core = ROOT
+				}
+		}
+			black_rock_area = {
+				add_permanent_claim = ROOT
+			}
+			western_slope_area = {
+				add_permanent_claim = ROOT
+			}
+			high_desert_area = {
+				add_permanent_claim = ROOT
+			}
+			3137 = {
+				add_permanent_claim = ROOT
+			}
+			987 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3159 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			989 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	uta_claims_to_nevada = {
+		icon = mission_nevada
+		required_missions = { uta_unity_of_faith }
+		position = 3
+		
+		provinces_to_highlight = {
+			area = black_rock_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = black_rock_area
+				}
+
+				if = {
+					limit = {
+						NVA = {
+							OR = {
+								owns = 948
+								owns = 3279
+								owns = 950
+								owns = 951
+								owns = 4866
+							}
+						}
+					}
+					has_spy_network_in = {
+						who = NVA
+						value = 50
+					}
+				}
+			}
+		}
+		effect = {
+			mojave_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			arizona_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			dixie_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = { 
+				name = mormon_religious_wars
+				duration = 18250
+			}
+			if = {
+				limit = {
+					has_spy_network_in = {
+						who = NVA
+						value = 50
+					}
+				}
+				custom_tooltip = uta_spynetworkNVA_yes_tt
+			}
+			else = {
+				custom_tooltip = uta_spynetworkNVA_no_tt
+			}
+			tooltip = {
+				black_rock_area = {
+					limit = {
+						OR = {
+						is_claim = ROOT
+						is_core = ROOT
+						}
+						religion = ROOT
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					spawn_rebels = {
+						type = nationalist_rebels
+						friend = ROOT
+						separatists_target = ROOT
+						#religion = ROOT
+						size = 2
+					}
+				}
+			}
+			hidden_effect = {
+			if = {
+				limit = {
+					has_spy_network_in = {
+						who = NVA
+						value = 50
+					}
+				}
+				black_rock_area = {
+					limit = {
+						OR = {
+						is_claim = ROOT
+						is_core = ROOT
+						}
+						religion = ROOT
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					spawn_rebels = {
+						type = nationalist_rebels
+						friend = ROOT
+						separatists_target = ROOT
+						religion = ROOT
+						size = 2
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = black_rock_area
+			}
+			}
+			custom_tooltip = uta_own_black_rock_yes_tt
+		}
+		else = {
+			custom_tooltip = uta_own_black_rock_no_tt
+		}
+		tooltip = { 
+			black_rock_area = {
+				add_nationalism = -10
+				add_local_autonomy = -50
+			}
+		}
+			hidden_effect = {
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = black_rock_area
+				}
+				}
+				black_rock_area = {
+					add_nationalism = -10
+					add_local_autonomy = -50
+				}
+			}
+		}
+
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	uta_patrolling_the_mojave = {
+		icon = mission_pue_chaco_roads
+		required_missions = { uta_claims_to_nevada }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4847
+				province_id = 940
+				province_id = 3237
+				area = mojave_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					area = mojave_area
+					religion = ROOT
+				}
+			owns = 949
+			4847 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			940 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3237 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+				}
+			country_event = {
+				id = flavorUTA.4
+			}
+
+			add_country_modifier = {
+				name = uta_mormon_fervor
+				duration = 7300
+			}
+		}
+			san_diego_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+
+			mojave_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	uta_deseret_ascendant = {
+		icon = mission_deseret_flag
+		required_missions = { uta_patrolling_the_mojave uta_arizona_legions }
+		position = 5
+
+		provinces_to_highlight = {
+				OR = {
+					area = san_diego_area
+					area = arizona_area
+					area = mojave_area
+					area = black_rock_area
+					area = western_slope_area
+					area = dixie_area
+					area = utah_area
+					area = salt_lake_area
+					area = idaho_area
+					province_id = 987
+					province_id = 4570
+					province_id = 4865
+					province_id = 4863
+				}
+				OR = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { religion = ROOT }
+				}
+		}
+		trigger = {
+			#is_subject = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = san_diego_area
+				religion = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = arizona_area
+				religion = ROOT
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = idaho_area
+				religion = ROOT
+			}
+			black_rock_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			western_slope_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			mojave_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			utah_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			salt_lake_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			dixie_area = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+			}
+			OR = {
+				987 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4570 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4865 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4863 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+					is_subject = no
+				}
+			country_event = {
+				id = flavorUTA.5 # Become Deseret, attain new missions, become empire.
+			}
+			#add_government_reform = mormon_theodemocracy_reform
+			set_country_flag = formed_deseret_flag
+		}
+			else = {
+				country_event = {
+					id = flavorUTA.2000 # Alternate event
+				}
+				add_mil_power = 100
+				add_adm_power = 100
+				add_dip_power = 100
+				add_prestige_or_monarch_power = { amount = 50 }
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+uta_slot_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+       OR = {
+		tag = UTA
+		tag = SUT
+		tag = DES
+	   }
+    }
+	has_country_shield = yes
+
+	uta_buzzing_hive = {
+		icon = mission_beehive
+		required_missions = { }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				trade_goods = copper
+				trade_goods = iron
+				trade_goods = gold
+				trade_goods = salt
+				trade_goods = gems
+				province_id = 953
+			}
+			owned_by = ROOT
+			OR = {
+				NOT = { base_production = 6 }
+				NOT = { has_building = workshop }
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					trade_goods = copper
+					trade_goods = iron
+					trade_goods = gold
+					trade_goods = salt
+					trade_goods = gems
+				}
+				OR = {
+					has_building = workshop
+					base_production = 6
+				}
+			}
+		}
+		effect = {
+			set_country_flag = ARB_unlock_oasis_development_flag
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				set_estate_privilege = estate_burghers_ARB_oasis_development
+			}
+			else = {
+				add_country_modifier = {
+					name = uta_oasis_development_fallback
+					duration = -1
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	uta_bingham_canyon = {
+		icon = mission_dalaskogen
+		required_missions = { uta_buzzing_hive }
+		position = 2
+		
+		provinces_to_highlight = {
+			province_id = 953 # Provo
+		}
+		trigger = {
+			953 = {
+				base_production = 10
+				has_building = workshop
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.6
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	uta_claims_to_colorado = {
+		icon = mission_colorado
+		required_missions = { uta_unity_of_faith }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = western_slope_area
+				province_id = 987
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = western_slope_area
+			}
+			OR = {
+				987 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				if = {
+					limit = {
+						987 = {
+							owned_by = WYO
+						}
+					}
+					has_spy_network_in = {
+						who = WYO
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_spy_network_in = {
+						who = WYO
+						value = 25
+					}
+					987 = {
+						owned_by = WYO
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				custom_tooltip = uta_spynetworkWYO_yes_tt
+			}
+			else = {
+				custom_tooltip = uta_spynetworkWYO_no_tt
+			}
+			tooltip = {
+				987 = {
+					spawn_rebels = {
+						type = nationalist_rebels
+						friend = ROOT
+						separatists_target = ROOT
+						size = 2
+					}
+			}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_spy_network_in = {
+							who = WYO
+							value = 25
+						}
+						987 = {
+							owned_by = WYO
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						}
+					}
+					987 = {
+						spawn_rebels = {
+							type = nationalist_rebels
+							friend = ROOT
+							separatists_target = ROOT
+							size = 2
+						}
+				}
+				}
+		}
+
+		if = {
+			limit = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = western_slope_area
+			}
+			}
+			custom_tooltip = uta_own_west_slope_yes_tt
+		}
+		else = {
+			custom_tooltip = uta_own_west_slope_no_tt
+		}
+		tooltip = { 
+			western_slope_area = {
+				add_nationalism = -10
+				add_local_autonomy = -50
+			}
+		}
+			hidden_effect = {
+			if = {
+				limit = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = western_slope_area
+				}
+				}
+				western_slope_area = {
+					add_nationalism = -10
+					add_local_autonomy = -50
+				}
+			}
+		}
+			wyoming_area = {
+				add_permanent_claim = ROOT
+			}
+
+			colorado_area = {
+				add_permanent_claim = ROOT
+			}
+
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	uta_arizona_legions = {
+		icon = mission_swedish_military_advise
+		required_missions = { uta_claims_to_colorado }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = arizona_area
+				area = baja_arizona_area
+				province_id = 4847
+				province_id = 3236
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = arizona_area
+					province_id = 4847
+					province_id = 3236
+					area = baja_arizona_area
+				}
+			}
+
+		}
+		effect = {
+			add_accepted_culture_or_dip_power = { culture = navajo free = yes }
+			add_mil_power = 75
+			936 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7305
+					power = 20
+					key = STRONG_MERCHANTS
+				}
+			}
+			if = {
+				limit = {
+					936 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				custom_tooltip = uta_phoenix_owned_yes
+			}
+			else = {
+				custom_tooltip = uta_phoenix_owned_no
+			}
+			tooltip = {
+				add_country_modifier = {
+					name = uta_phoenix_rises
+					duration = -1
+				}
+				add_permanent_power_projection = { 
+					type = 10_permanent_power_projection
+					amount = 10 
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						936 = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+
+					add_country_modifier = {
+						name = uta_phoenix_rises
+						duration = -1
+					}
+					add_permanent_power_projection = { 
+						type = 10_permanent_power_projection
+						amount = 10 
+					}
+				}
+			}
+		}
+	}
+}
+
+uta_slot_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+			tag = UTA
+			tag = DES
+		}
+    }
+	has_country_shield = yes
+
+	uta_appease_church = {
+		icon = mission_hands_praying
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			num_of_estate_privileges = {
+				estate = estate_church
+				value = 3
+			}
+		}
+		effect = {
+			add_years_of_income = 3
+			custom_tooltip = may_use_mormon_missions_tt
+			set_country_flag = may_use_mormon_missions
+			if = {
+				limit = {
+					has_estate = estate_church
+					religion = mormon
+				}
+				set_estate_privilege = estate_church_mormon_missions
+			}
+			else = {
+				add_country_modifier = {
+					name = uta_chart_pacific
+					duration = 10950
+				}
+			}
+		}
+	}
+
+	uta_temples_of_mormon = {
+		icon = mission_european_church
+		required_missions = { uta_appease_church }
+		position = 2
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_building = temple }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Domination"
+				}
+			custom_tooltip = development_of_temples_tt
+			every_country = {
+				limit = {
+					religion = mormon
+				}
+				set_country_flag = development_of_temples_upgrade
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_estate_privilege = estate_church_development_of_temples
+					}
+					remove_estate_privilege = estate_church_development_of_temples
+					set_estate_privilege = estate_church_development_of_temples_mormon
+				}
+			}
+			}
+			else = {
+				add_prestige_or_monarch_power = { amount = 50 }
+			}
+				capital_scope = {
+					add_building = cathedral
+					add_base_tax = 2
+					add_base_manpower = 2
+					add_base_production = 1
+				}
+		}
+	}
+
+	uta_mormon_philippines = {
+		icon = mission_las_islas_filipinas
+		required_missions = { uta_pacific_missions }
+		position = 4
+		provinces_to_highlight = {
+			region = philippines_region
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { religion = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_country = {
+						capital_scope ={
+							region = philippines_region
+						}
+						religion = mormon
+					}
+			amount = 3
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = philippines_region
+				religion = ROOT
+			}
+		}
+		}
+		effect = {
+			if = {
+					limit = {
+						has_dlc = "Cradle of Civilization"
+						NOT = { has_country_flag = mormon_may_propagate }
+						NOT = { has_country_flag = can_use_propagate_religion }
+						religion = mormon
+					}
+					every_country = {
+						limit = {
+							religion = mormon
+						}
+						set_country_flag = mormon_may_propagate
+						set_country_flag = can_use_propagate_religion
+						set_country_flag = can_propagate_religion_in_christian_provinces
+					}
+				custom_tooltip = mormon_may_propagate_tt
+			}
+			if = {
+				limit = {
+					religion = mormon
+				}
+				country_event = {
+					id = flavorUTA.11
+				}
+				custom_tooltip = flavorUTA.11.tt
+			}
+			
+			else = {
+				add_dip_power = 200
+				add_prestige_or_monarch_power = { amount = 20 }
+			}
+
+			1397 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 7305
+					power = 30
+					key = STRONG_MERCHANTS
+				}
+			}
+		}
+	}
+}
+uta_slot_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    potential = {
+		OR = {
+			tag = UTA
+			tag = DES
+		}
+    }
+	has_country_shield = yes
+
+	uta_holy_waters = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		position = 1
+		
+		provinces_to_highlight = {
+			OR = {
+				region = pacific_coast_region
+				area = baja_california_area
+				area = baja_california_sur_area
+				area = sonora_area
+				region = western_canada_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_port = yes
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 7
+				has_port = yes
+			}
+
+			num_of_total_ports = 4
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+				}
+			set_saved_name = {
+				key = amaleki_explorer
+				type = simple
+				name = "Amaleki"
+			}
+			define_explorer = {
+				shock = 3
+				fire = 3
+				manuever = 5
+				siege = 3
+				name = "Amaleki"
+				trait = great_explorer_personality
+			}
+		}
+			
+			add_sailors = 2000
+
+			if = {
+				limit = {
+					any_owned_province = {
+						has_port = no
+					}
+				}
+				custom_tooltip = uta_build_boats_tooltip
+			}
+
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					NOT = {
+						has_construction = navy
+					}
+				}
+				add_unit_construction = {
+					type = light_ship
+					amount = 3
+					speed = 0.50
+					cost = 0
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					NOT = {
+						has_construction = navy
+					}
+				}
+				add_unit_construction = {
+					type = light_ship
+					amount = 3
+					speed = 0.50
+					cost = 0
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+					NOT = {
+						has_construction = navy
+					}
+				}
+				add_unit_construction = {
+					type = heavy_ship
+					amount = 3
+					speed = 0.50
+					cost = 0
+				}
+			}
+			add_country_modifier = {
+				name = uta_chart_pacific
+				duration = 10950
+			}
+		}
+	}
+	
+	uta_chart_the_pacific = {
+		icon = mission_raid_christian_trade
+		required_missions = { uta_holy_waters uta_appease_church }
+		position = 2
+		provinces_to_highlight = {
+			NOT = { has_discovered = ROOT }
+			OR = {
+				area = hawaii_area
+				area = leeward_hawaiian_islands_area
+				area = samoa_area
+				area = tonga_area
+				area = fiji_area
+				area = lau_area
+				region = micronesia_region
+			}
+		}
+		trigger = {
+			hawaii_area = {
+				has_discovered = ROOT
+			}
+			hidden_trigger = {
+				leeward_hawaiian_islands_area = {
+					has_discovered = ROOT
+				}
+			}
+			samoa_area = {
+				has_discovered = ROOT
+			}
+			tonga_area = {
+				has_discovered = ROOT
+			}
+			fiji_area = {
+				has_discovered = ROOT
+			}
+			hidden_trigger = {
+				lau_area = {
+					has_discovered = ROOT
+				}
+			}
+			micronesia_region = {
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+			add_temporary_colonist = {
+				duration = 36500
+			}
+			#custom_tooltip = uta_pacific_expansion_tt
+			custom_tooltip = may_send_mission_tt_1
+			set_country_flag = may_use_send_mission_1
+		}
+	}
+
+	uta_pacific_missions = {
+		icon = mission_sail_to_the_east_indies
+		required_missions = { uta_chart_the_pacific }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			superregion = oceania_superregion
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+						all_country = {
+							capital_scope ={
+								continent = oceania
+							}
+							religion = mormon
+						}
+				amount = 5
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					religion = ROOT
+					continent = oceania
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Third Rome"
+						has_dlc = Domination
+					}
+					religion = mormon
+				}
+				4906 = {
+					add_siberian_construction = 300
+					change_religion = ROOT
+				}
+			}
+			set_country_flag = may_use_send_mission_2
+			clr_country_flag = may_use_send_mission_1
+			custom_tooltip = may_send_mission_tt_2
+
+			add_country_modifier = {
+				name = uta_emboldened_missionaries
+				duration = 10950
+			}
+		}
+	}
+	uta_convert_south_america = {
+		icon = mission_brazilian_bandeirantes
+		required_missions = { uta_pacific_missions }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			continent = south_america
+		}
+		trigger = {
+			OR = {
+				calc_true_if = {
+					all_country = {
+						capital_scope ={
+							continent = south_america
+						}
+						religion = mormon
+					}
+			amount = 5
+			}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 25
+					religion = ROOT
+					continent = south_america
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+				}
+				country_event = {
+					id = flavorUTA.12
+				}
+				custom_tooltip = flavorUTA.12.tt
+			}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+					NOT = { has_country_flag = mormon_may_propagate }
+					NOT = { has_country_flag = can_use_propagate_religion }
+					religion = mormon
+				}
+				every_country = {
+					limit = {
+						religion = mormon
+					}
+					set_country_flag = mormon_may_propagate
+					set_country_flag = can_use_propagate_religion
+					set_country_flag = can_propagate_religion_in_christian_provinces
+				}
+			custom_tooltip = mormon_may_propagate_tt
+		}
+		else = {
+			add_dip_power = 200
+			add_prestige_or_monarch_power = { amount = 20 }
+		}
+
+		2935 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7305
+				power = 30
+				key = STRONG_MERCHANTS
+			}
+		}
+
+		1531 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7305
+				power = 30
+				key = STRONG_MERCHANTS
+			}
+		}
+		}
+	}
+}

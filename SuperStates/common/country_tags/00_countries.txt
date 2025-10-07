@@ -771,7 +771,7 @@ HIN = "countries/Hindustan.txt"
 # PIM = "countries/Pima.txt"
 # POT = "countries/Potawatomi.txt"
 # POW = "countries/Powhatan.txt"
-# PUE = "countries/Pueblo.txt"
+PUE = "countries/Pueblo.txt"
 # SHO = "countries/Shoshone.txt"
 # SIO = "countries/Sioux.txt"
 # SUS = "countries/Susquehannock.txt"
@@ -829,7 +829,7 @@ BRT = "countries/Buryats.txt"
 # #CLM = "countries/Colima.txt"
 # CNK = "countries/Chinook.txt"
 # COC = "countries/Cocomes.txt"
-# HDA = "countries/Haida.txt"
+ #HDA = "countries/Haida.txt"
 # ITZ = "countries/Itza.txt"
 # KIC = "countries/Kiche.txt"
 # KIO = "countries/Kiowa.txt"
@@ -1132,10 +1132,10 @@ RRG = "countries/RioGrande.txt"
 LBC = "countries/LowerCalifornia.txt" 		# Baja Cali pen
 ROS = "countries/GreaterSonora.txt"			# Sonora + Baja Cali
 #MSO = "countries/Mesoamerica.txt" 			# Cultural region of Mesoamerica, except Central America
-CSZ = "countries/ChanSantaCruz.txt"			# Most of Yucatan pen, NW Belize and NE Guatemala
+#CSZ = "countries/ChanSantaCruz.txt"			# Most of Yucatan pen, NW Belize and NE Guatemala
 #MAY = "countries/MayaNation.txt" 			# Unified Mayan culture
 NSP = "countries/NewSpain.txt" 				# North American part & End Tag
-YUC = "countries/GreaterYucatan.txt"		# Historical Yucatan State
+#YUC = "countries/GreaterYucatan.txt"		# Historical Yucatan State
 
 ##Caribbean
 WSI = "countries/WestIndies.txt"			#Federation of the West Indies
@@ -1347,7 +1347,7 @@ YZU = "countries/Yazoo.txt"					#Yazoo lands of Mississippi state
 
 #American Native Tribes
 # YUP = "countries/Yupik.txt"					#Native Western Alaska
-# HDA = "countries/Haida.txt"
+ HDA = "countries/Haida.txt"
 # BLA = "countries/Blackfoot.txt"
 # ASI = "countries/Assiniboine.txt"
 # SIO = "countries/Sioux.txt"
@@ -1391,6 +1391,14 @@ YTN = "countries/Yucatan.txt"
 ZCT = "countries/Zacatecas.txt"
 
 #Releasable States in Mexico
+HOT = "countries/TierraCaliente.txt"
+SOC = "countries/Soconusco.txt"
+HUS = "countries/Huasteca.txt"
+LAG = "countries/LaLaguna.txt"
+JUA = "countries/Juarez.txt"
+CMX = "countries/MexicoValley.txt"
+COT = "countries/Colotlan.txt"
+ZPA = "countries/Zapatistas.txt"
 
 #DPO = "countries/DisconnectedPope.txt"
 LOS = "countries/LosAltos.txt"
@@ -1429,6 +1437,13 @@ CTT = "countries/CentralAustralia.txt"
 NQL = "countries/NorthQueensland.txt"
 PLD = "countries/Princeland.txt"
 TSI = "countries/TorresStraitIslands.txt"
+SYD = "countries/Sydney.txt"
+RIV = "countries/Riverina.txt"
+CQL = "countries/Capricornia.txt"
+NGL = "countries/NewEnglandNSW.txt"
+DMP = "countries/Dampieria.txt"
+CRP = "countries/Carpentaria.txt"
+ILW = "countries/Illawarra.txt"
 
 #############################
 #Micronesian States

@@ -4,7 +4,7 @@ greenland_nation = {
 		major = yes
 		potential = {
 			greenland_region = {
-				ROOT = { num_of_cities = 5 }
+				ROOT = { num_of_cities = 3 }
 				owned_by = ROOT
 			}
 			OR = {
@@ -16,7 +16,7 @@ greenland_nation = {
 			capital_scope = {
 					region = greenland_region
 				}
-			NOT = { num_of_cities = 22 }
+			#NOT = { num_of_cities = 22 }
 			NOT = { has_country_flag = formed_greenland } # Only once
 			OR = {
 				ai = no
@@ -41,12 +41,13 @@ greenland_nation = {
 			NOT = { num_of_cities = 22 }
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 15
+				value = 10
 				region = greenland_region
 				is_core = root
 			}
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 730

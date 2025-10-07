@@ -16,6 +16,9 @@ country_event = {
 	# is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_flag = south_islander_culture
+		}
 		any_owned_province = {
 			province_group = south_island_provincegroup
 			is_capital = no
@@ -70,6 +73,7 @@ country_event = {
 	
 	option = {
 		name = "new_zealand_culture.1opta"
+		set_country_flag = south_islander_culture
 		every_owned_province = {
 			limit = {
 				province_group = south_island_provincegroup
@@ -90,6 +94,9 @@ country_event = {
 	# is_triggered_only = yes
 	
 	trigger = {
+		NOT = {
+			has_country_flag = north_islander_culture
+		}
 		any_owned_province = {
 			province_group = north_island_provincegroup
 			is_capital = no
@@ -144,6 +151,7 @@ country_event = {
 	
 	option = {
 		name = "new_zealand_culture.2opta"
+		set_country_flag = north_islander_culture
 		every_owned_province = {
 			limit = {
 				province_group = north_island_provincegroup

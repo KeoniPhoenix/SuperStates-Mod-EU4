@@ -19,17 +19,18 @@ vir_slot_1 = {
 			OR = {
 				area = north_carolina_area
 				area = blue_ridge_area
+				area = pamlico_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 3
 				area = north_carolina_area
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				area = blue_ridge_area
+				value = 2
+				area = pamlico_area
 			}
 		}
 		effect = {
@@ -223,6 +224,15 @@ vir_slot_2 = {
 			}
 		}
 		effect = {
+			tooltip = {
+				country_event = {
+					id = flavorVIR.2
+				}
+			}
+			country_event = { 
+				id = flavorVIR.2
+				tooltip = flavorVIR.2.tt
+			}
 			shenandoah_area = {
 				limit = {
 					NOT = { is_core = ROOT }

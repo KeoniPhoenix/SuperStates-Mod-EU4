@@ -15,14 +15,13 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = greenlandic_culture
+		}
 		any_owned_province = {
 			region = greenland_region
 			is_capital = no
 			owned_by = ROOT
-		}
-		greenland_region = {
-			type = all
-			NOT = { culture = greenlandic }
 		}
 	}
 	
@@ -69,6 +68,7 @@ country_event = {
 	
 	option = {
 		name = "GreenlandFlavor.1opta"
+		set_country_flag = greenlandic_culture
 		greenland_region = {
 			change_culture = greenlandic
 			add_core = GRL

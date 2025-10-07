@@ -17,7 +17,10 @@ country_decisions = {
 			NOT = { exists = SCA }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
-			culture_group = scandinavian
+			OR = {
+				culture_group = scandinavian
+				primary_culture = greenlandic
+			}
 			OR = {
 				ai = no
 				AND = {

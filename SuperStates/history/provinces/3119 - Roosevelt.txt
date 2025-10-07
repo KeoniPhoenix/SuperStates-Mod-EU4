@@ -4,7 +4,7 @@ owner = MNT
 controller = MNT
 add_core = MNT
 add_core = CPP
-culture = montanan
+culture = east_montanan
 religion = s_protestant
 capital = "Wolf Point" 
 is_city = yes #1000
@@ -12,7 +12,7 @@ trade_goods = grain
 hre = no 
 base_tax = 2
 base_production = 1
-base_manpower = 1
+base_manpower = 2
 discovered_by = north_american
 discovered_by = mesoamerican
 

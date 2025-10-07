@@ -1,0 +1,100 @@
+country_decisions = {
+	cam_panama_colonization = {
+		major = yes
+		potential = {
+			OR = {
+				tag = CAM
+				culture_group = central_american_group
+			}
+
+			4595 = {
+				is_city = no
+				is_colony = no
+			}
+			2664 = {
+				is_city = no
+				is_colony = no
+			}
+			835 = {
+				is_city = no
+				is_colony = no
+			}
+			2819 = {
+				is_city = no
+				is_colony = no
+			}
+			total_development = 100
+			OR = {
+				owns = 836
+				owns = 4597
+			}
+		}
+		allow = {
+			OR = {
+				tag = CAM
+					AND = {
+						culture_group = central_american_group
+						total_development = 300
+					}
+			}
+			4595 = {
+				is_empty = yes
+			}
+			2664 = {
+				is_empty = yes
+			}
+			835 = {
+				is_empty = yes
+			}
+			2819 = {
+				is_empty = yes
+			}
+			capital_scope = {
+				base_tax = 2
+				base_production = 2
+				base_manpower = 2
+			}
+			has_institution = feudalism
+			has_institution = renaissance
+			is_year = 1500
+			is_at_war = no
+			stability = 0
+			treasury = 750
+			total_development = 150
+			num_of_rebel_armies = 0
+			num_of_rebel_controlled_provinces = 0
+		}
+		effect = {
+			add_treasury = -750
+			capital_scope = {
+				add_base_manpower = -2
+			}
+			random_owned_province = {
+				limit = {
+					AND = {
+						base_tax = 2
+						base_production = 2
+						base_manpower = 2
+					}
+				}
+				add_base_manpower = -2
+			}
+			4595 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+			2664 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+			835 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+			2819 = {
+				add_siberian_construction = 500
+				add_core = ROOT
+			}
+		}
+	}
+}

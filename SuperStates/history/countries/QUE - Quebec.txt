@@ -9,9 +9,9 @@ historical_rival = ONT
 1441.7.15 = {
 	monarch = {
 		name = "Pierre-Joseph-Olivier Chauveau"
-		adm = 4
+		adm = 3
 		dip = 4
-		mil = 5
+		mil = 3
 	}
 }
 

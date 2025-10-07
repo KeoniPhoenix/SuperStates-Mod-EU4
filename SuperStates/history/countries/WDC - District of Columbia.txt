@@ -9,8 +9,8 @@ capital = 2616 # Washington D.C.
 1443.1.3 = {
 	monarch = {
 		name = "Walter Washington"
-		adm = 2
-		dip = 2
+		adm = 3
+		dip = 3
 		mil = 2
 	}
 }

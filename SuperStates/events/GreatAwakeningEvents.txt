@@ -37,10 +37,19 @@ country_event = {
 		
 		modifier = {
 			factor = 0.4
+			culture_group = midwestern_group
+		}
+
+		modifier = {
+			factor = 0.50
 			OR = {
-				culture_group = midwestern_group
-				culture_group = great_laker
-				}
+				primary_culture = wisconsinite
+				#primary_culture = great_laker_wisconsinite
+				primary_culture = south_dakotan
+				primary_culture = us_dakotan
+				primary_culture = nebraskan
+				primary_culture = iowan
+			}
 		}
 				
 		modifier = {
@@ -60,10 +69,10 @@ country_event = {
 			reform_desire = 1.15
 		}
 		modifier = {
-			factor = 0.50
+			factor = 0.30
 			OR = {
-				primary_culture = wisconsinite
-				primary_culture = pennsylvanian
+				primary_culture = minnesotan
+				primary_culture = north_dakotan
 			}
 		}
 		modifier = {
@@ -104,6 +113,7 @@ country_event = {
 			factor = 10.0
 			OR = {
 				culture_group = southerner
+				culture_group = caribbean_islander
 				capital_scope = {
 					superregion = central_america_superregion
 				}
@@ -174,17 +184,27 @@ country_event = {
 		months = 80
 		
 		modifier = {
-			factor = 0.4
+			factor = 0.30
 			OR = {
-				culture_group = midwestern_group
 				primary_culture = west_virginian
+				primary_culture = kansan
+				primary_culture = west_kansan
+				primary_culture = nebraskan
+				primary_culture = high_plainer
+				primary_culture = delmarvan
+				primary_culture = high_tider
 				}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.40
 			OR = {
-				culture_group = appalachian
-				primary_culture = delmarvan
+				primary_culture = iowan
+				primary_culture = pennsylvanian
+				primary_culture = hoosier
+				primary_culture = ohioan
+				primary_culture = great_laker_ohioan
+				primary_culture = alleghenite
+				primary_culture = appalachian_ohioan
 				}
 		}
 		modifier = {
@@ -235,6 +255,7 @@ country_event = {
 			factor = 5
 			OR = {
 				culture_group = southerner
+				culture_group = caribbean_islander
 				capital_scope = {
 					superregion = central_america_superregion
 				}
@@ -314,9 +335,18 @@ country_event = {
 		modifier = {
 			factor = 0.4
 				OR = {
-				culture_group = appalachian
+					AND = {
+						culture_group = appalachian
+						NOT = { primary_culture = western_pennsylvanian }
+						NOT = { primary_culture = west_marylander }
+						NOT = { primary_culture = alleghenite }
+					}
 				primary_culture = missourian
 				primary_culture = oklahoman
+				primary_culture = texan
+				#primary_culture = north_texan
+				primary_culture = southern_texan
+				primary_culture = plains_texan
 				}
 			}
 		modifier = {
@@ -365,9 +395,12 @@ country_event = {
 		}
 		modifier = {
 			factor = 10.0
+			OR = {
 				capital_scope = {
 					superregion = central_america_superregion
 				}
+				culture_group = caribbean_islander
+			}
 		}
 	}
 	
@@ -444,13 +477,21 @@ country_event = {
 		modifier = {
 			factor = 0.3
 				OR = {
-				culture_group = arctic_canadian
-				primary_culture = ontarian
-				primary_culture = torontoan
-				primary_culture = mantarian
-				primary_culture = northern_ontarian
-				primary_culture = labradorian
-				primary_culture = newfoundlander
+					AND = {
+						culture_group = arctic_canadian
+						NOT = { primary_culture = alaskan }
+					}
+					#primary_culture = ontarian
+					#primary_culture = torontoan
+					#primary_culture = quebecois
+					primary_culture = vancouverite
+					primary_culture = british_columbian
+					primary_culture = pacific_british_columbian
+					primary_culture = saskatchewanian
+					primary_culture = mantarian
+					#primary_culture = northern_ontarian
+					primary_culture = labradorian
+					primary_culture = newfoundlander
 				}
 			}
 		modifier = {
@@ -497,13 +538,13 @@ country_event = {
 			factor = 2.0
 			OR  = {
 			has_reform = feudal_theocracy
-			culture_group = western_canadian
+			primary_culture = albertan
 				}
 		}
-		modifier = {
-			factor = 15
-			culture_group = new_french
-			}
+		#modifier = {
+		#	factor = 15
+		#	culture_group = new_french
+		#	}
 		}
 	
 	option = {
@@ -583,6 +624,13 @@ country_event = {
 				primary_culture = tasmanian
 				}
 			}
+		modifier = {
+				factor = 0.40
+					OR = {
+					primary_culture = queenslander
+					primary_culture = western_australian
+					}
+				}
 		modifier = {
 			factor = 0.5
 			religion_years = { s_lutheran = 20 }

@@ -3,6 +3,7 @@
 owner = SLP
 controller = SLP
 add_core = SLP
+add_core = HUS
 culture = san_luis_potosian
 religion = s_catholic
 capital = "Ciudad Valles"

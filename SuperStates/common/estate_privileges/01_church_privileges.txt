@@ -2509,6 +2509,7 @@ estate_church_development_of_temples = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_dlc = "Domination"
+		NOT = { has_country_flag = development_of_temples_upgrade }
 	}
 	on_granted = {
 		custom_tooltip = estate_church_development_of_temples_gt
@@ -2564,6 +2565,72 @@ estate_church_development_of_temples = {
 	#}
 	ai_will_do = {
 		factor = 0
+	}
+}
+# SuperStates form
+estate_church_development_of_temples_mormon = {
+	icon = privilege_religious
+	loyalty = 0.1
+	influence = 0.05
+	max_absolutism = 0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+			has_dlc = "Domination"
+			has_country_flag = development_of_temples_upgrade
+	}
+	on_granted = {
+		custom_tooltip = estate_church_development_of_temples_gt
+		tooltip = {
+			add_province_modifier = {
+				name = estate_church_development_of_temples_mod
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_development_of_temples_rt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					has_owner_religion = yes
+					has_owner_harmonized_religion = yes
+					has_owner_secondary_religion = yes
+				}
+				has_tax_building_trigger = yes
+			}
+			add_province_modifier = {
+				name = estate_church_development_of_temples_mod
+				duration = -1
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = estate_church_development_of_temples_mod }
+			remove_province_modifier = estate_church_development_of_temples_mod
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = estate_church_development_of_temples_mod }
+			remove_province_modifier = estate_church_development_of_temples_mod
+		}
+	}
+
+	mechanics = {
+	}
+	conditional_modifier = {
+		trigger = { has_government_mechanic = russian_modernization_mechanic }
+		modifier = { monthly_russian_modernization = -0.03 }
+	}
+	#conditional_modifier = {
+	#	trigger = { has_government_mechanic = ottoman_decadence_mechanic }
+	#	modifier = { monthly_ottoman_decadence = 0.02 }
+	#}
+	ai_will_do = {
+		factor = 1
 	}
 }
 estate_church_expand_the_theology = {
@@ -3115,6 +3182,72 @@ estate_church_sponsor_waqf_payments = {
 		tolerance_own = 1
 		stability_cost_modifier = -0.25
 		establish_order_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+# SuperStates
+
+estate_church_mormon_missions = {
+	icon = privilege_grant_new_world_charter
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		has_country_flag = may_use_mormon_missions
+		religion = mormon
+	}
+	benefits = {
+		may_explore = yes
+		range = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_church_bastion_of_faith = {
+	icon = privilege_fort
+	max_absolutism = 0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		has_country_flag = bastions_of_faith_enabled
+		religion = mormon
+	}
+	on_granted = {
+		custom_tooltip = estate_church_bastion_of_faith_bonuses
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_terrain = highlands
+						has_terrain = mountain
+						has_terrain = hills
+					}
+					fort_level = 2
+				}
+				add_province_modifier = {
+					name = estate_church_bastion_of_faith_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_bastion_of_faith_bonuses_revoke
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_church_bastion_of_faith_modifier
+				}
+				remove_province_modifier = estate_church_bastion_of_faith_modifier
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 10

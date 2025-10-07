@@ -2,7 +2,7 @@ government = republic
 add_government_reform = american_state_reform
 technology_group = north_american
 primary_culture = baja_californian
-add_accepted_culture = south_baja_californian
+add_accepted_culture_or_dip_power = { culture = south_baja_californian free = yes }
 religion = s_catholic
 capital = 932  # La Paz
 

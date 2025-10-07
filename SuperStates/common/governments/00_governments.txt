@@ -986,6 +986,7 @@ republic = {
 		micronesian_republic
 		central_american_state_reform
 		central_american_republic_reform
+		grand_divisions_reform
 	}
 	exclusive_reforms = {
 		lottery_reform

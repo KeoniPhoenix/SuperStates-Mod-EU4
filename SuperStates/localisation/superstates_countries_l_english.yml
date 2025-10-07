@@ -309,6 +309,16 @@
  EUM:0 "United Mexican States"
  NOM:0 "El Norte"
  YUC:0 "Yucatán"
+ 
+ #Mexican Releasables
+ HOT: "Tierra Caliente"
+ SOC: "Soconusco"
+ HUS: "Huasteca"
+ LAG: "La Laguna"
+ JUA: "Juárez"
+ CMX: "Mexico Valley"
+ ZPA: "Zapatistas"
+ COT: "Colotlán"
 
 #Central American States and Territories
  BLZ:0 "Belize"
@@ -335,27 +345,67 @@
  CCI:0 "Cocos Island"
  CKI:0 "Cook Islands"
  NSW:0 "New South Wales"
- NQL:0 "North Queensland"
  PLD:0 "Princeland"
  QLD:0 "Queensland"
  SAU:0 "South Australia"
  WAU:0 "Western Australia"
  NZL:0 "New Zealand"
  NTT:0 "Northern Territory"
- ACT:0 "Australian Capital Territory"
+ ACT:0 "Canberra"
  VCT:0 "Victoria"
  TSM:0 "Tasmania"
- JBT:0 "Jervis Bay Territory"
+ JBT:0 "Jervis Bay"
  NFI:0 "Norfolk Island"
  THT:0 "Tahiti"
  TSI:0 "Torres Strait Islands"
  
+ SYD:0 "Sydney"
+ RIV:0 "Riverina"
+ NQL:0 "North Queensland"
+ CQL:0 "Capricornia"
+ NGL:0 "New England" # NEW SOUTH WALES, AUSTRALIA, NOT AMERICA
+ DMP:0 "Dampieria"
+ CRP:0 "Carpentaria"
+ ILW:0 "Illawarra"
+ 
  #Australian Formables
  AUS:0 "Australia"
+ NORTH_AUSTRALIA_NAME:0 "North Australia"
+ NORTH_AUSTRALIA_NAME_ADJ:0 "North Australian"
  
  #Argentine Provinces and Territories
  #
 
  # Other
  DPO:0 "Papal Legate"
- 
+ # Country Name Overrides
+ VIRGINIA: "Virginia"
+ VIRGINIA_ADJ: "Virginian"
+ EAST_VIRGINIA: "East Virginia"
+ EAST_VIRGINIA_ADJ: "East Virginian"
+ TEJAS: "Tejas"
+ TEJAS_ADJ: "Tejano"
+ CHESAPEAKE:0 "Chesapeake"
+ CHESAPEAKE_ADJ:0 "Chesapeakean"
+ EAST_TENNESSEE_NAME:0 "East Tennessee"
+ EAST_TENNESSEE_NAME_ADJ:0 "East Tennesseean"
+ CUMBERLAND_NAME:0 "Cumberland"
+ CUMBERLAND_NAME_ADJ:0 "Cumberlander"
+ MEMPHIS_NAME:0 "Memphis"
+ MEMPHIS_NAME_ADJ:0 "Memphian"
+ CHICKASAW_NAME:0 "Chickasaw"
+ CHICKASAW_NAME_ADJ:0 "Chickasaw"
+ BLUE_RIDGE_NAME:0 "Blue Ridge"
+ BLUE_RIDGE_NAME_ADJ:0 "Blue Ridge"
+ LAND_OF_SKY_NAME:0 "Land of Sky"
+ LAND_OF_SKY_NAME_ADJ:0 "Skylander"
+ BOONE_NAME:0 "Boone"
+ BOONE_NAME_ADJ:0 "Boone"
+ NORTH_TENNESSEE_NAME:0 "North Tennessee"
+ NORTH_TENNESSEE_NAME_ADJ:0 "North Tennesseean"
+ COOSA_NAME:0 "Coosa"
+ COOSA_NAME_ADJ:0 "Coosa"
+ SOUTH_TENNESSEE_NAME:0 "South Tennessee"
+ SOUTH_TENNESSEE_NAME_ADJ:0 "South Tennesseean"
+ BAJA_CALIFORNIA: "Baja California"
+ BAJA_CALIFORNIA_ADJ: "Bajacaliforniano"

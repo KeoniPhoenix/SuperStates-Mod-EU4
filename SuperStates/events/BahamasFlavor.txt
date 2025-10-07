@@ -15,14 +15,29 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = bahamian_culture
+		}
 		any_owned_province = {
 			area = bahamas_area
 			is_capital = no
 			owned_by = ROOT
 		}
-		bahamas_area = {
-			type = all
-			NOT = { culture = bahamian }
+		OR = {
+			bahamas_area = {
+				NOT = { culture = bahamian }
+				NOT = { is_core = BHM }
+			}
+
+			4626 = {
+				NOT = { culture = bahamian }
+				NOT = { is_core = BHM }
+			}
+
+			3326 = {
+				NOT = { culture = bahamian }
+				NOT = { is_core = BHM }
+			}
 		}
 	}
 	
@@ -69,6 +84,7 @@ country_event = {
 	
 	option = {
 		name = "BahamasFlavor.1opta"
+		set_country_flag = bahamian_culture
 		bahamas_area = {
 			change_culture = bahamian
 			add_core = BHM

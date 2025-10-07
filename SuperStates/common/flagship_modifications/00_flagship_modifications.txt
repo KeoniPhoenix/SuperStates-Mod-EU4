@@ -375,7 +375,7 @@ portuguese_corps_of_fusiliers = {
 		OR = {
 			tag = POR
 			tag = BRZ
-			culture_group = australian_new_zealander
+			tag = AUS
 		}
         normal_or_historical_nations = yes
     }
@@ -406,7 +406,7 @@ integrated_marines = {
                 OR = {
                     tag = POR
                     tag = BRZ
-					culture_group = australian_new_zealander
+					tag = AUS
 					tag = USA
 					tag = CAL
 					tag = TEX

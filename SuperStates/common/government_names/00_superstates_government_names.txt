@@ -168,7 +168,7 @@ gov_mex_state_governor = {
 				culture_group = altiplano_central
 				# culture_group = gulf_mexican
 				# culture_group = oriental_mexican
-				culture_group = pacific_mexican
+				#culture_group = pacific_mexican
 				culture_group = occidental_mexican
 			}
 	}
@@ -317,7 +317,11 @@ gov_hybrid_westminster_reform = {
 
 	trigger = {
 		has_reform = hybrid_westminster_reform
-		culture_group = australian_new_zealander
+		OR = {
+			culture_group = australian_new_zealander
+			culture_group = west_australian_group
+			culture_group = australasian
+		}
 	}
 }
 

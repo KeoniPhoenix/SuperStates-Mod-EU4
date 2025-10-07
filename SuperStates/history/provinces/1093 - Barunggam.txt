@@ -3,7 +3,8 @@
 owner = NTT
 controller = NTT
 add_core = NTT
-culture = northern_territorian
+add_core = CRP
+culture = s_aboriginal
 religion = austral_protestant
 capital = "Nhulunbuy"
 trade_goods = iron

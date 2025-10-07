@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = guadeloupean_culture
+		}
 		496 = {
 			is_capital = no
 			owned_by = ROOT
@@ -72,6 +75,7 @@ country_event = {
 	}
 	option = {
 		name = "GuadeloupeFlavor.1opta"
+		set_country_flag = guadeloupean_culture
 		496 = {
 			change_culture = guadeloupean
 			add_core = GDL

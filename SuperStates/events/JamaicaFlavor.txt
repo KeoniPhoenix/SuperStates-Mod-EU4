@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = jamaican_culture
+		}
 		jamaica_area = {
 			is_capital = no
 			owned_by = ROOT
@@ -51,6 +54,7 @@ country_event = {
 	}
 	option = {
 		name = "JamaicaFlavor.1opta"
+		set_country_flag = jamaican_culture
 		jamaica_area = { 
 			change_culture = jamaican
 			add_core = JMC

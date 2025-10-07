@@ -2055,7 +2055,7 @@ american_state_reform = {
 			primary_culture = northern_marianas_islander
 		}
 	}
-	legacy_equivalent = american_state_legacy
+	#legacy_equivalent = american_state_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 10
@@ -2149,7 +2149,7 @@ commonwealth_state_reform = {
 			}
 		}
 	}
-	legacy_equivalent = american_state_legacy
+	#legacy_equivalent = american_state_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 10
@@ -2194,7 +2194,7 @@ new_england_state_reform = {
 		}
 		NOT = { has_country_flag = term_length_amendment }
 	}
-	legacy_equivalent = new_england_state_legacy
+	#legacy_equivalent = new_england_state_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
@@ -2279,13 +2279,13 @@ slave_state_reform = {
 			}
 		}
 	}
-	legacy_equivalent = slave_state_legacy
+	#legacy_equivalent = slave_state_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15
 	modifiers = {
 		embracement_cost = 0.20
-		global_unrest = -1
+		global_unrest = 0.50
 		production_efficiency = 0.1
 		max_absolutism = 30
 	}
@@ -2318,6 +2318,114 @@ slave_state_reform = {
 	}
 }
 
+grand_divisions_reform = {
+	icon = "government_reform_granddivisions"	#Tennessee Grand Divisions
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+				has_reform = grand_divisions_reform
+				have_had_reform = grand_divisions_reform
+			AND = {
+				capital_scope = {
+					OR = {
+						area = tennessee_area
+						area = blue_ridge_area
+						area = nickajack_area
+					}
+				}
+				OR = {
+					primary_culture = tennessean
+					hidden_trigger = {
+						primary_culture = appalachian_tennessean
+					}
+					hidden_trigger = {
+						primary_culture = midwestern_tennessean
+					}
+					primary_culture = west_tennessean
+					primary_culture = mountaineer
+					primary_culture = nickajack
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				has_reform = grand_divisions_reform
+				have_had_reform = grand_divisions_reform
+					AND = {
+					capital_scope = {
+						OR = {
+							area = tennessee_area
+							area = blue_ridge_area
+							area = nickajack_area
+						}
+					}
+					OR = {
+						primary_culture = tennessean
+						hidden_trigger = {
+							primary_culture = appalachian_tennessean
+						}
+						hidden_trigger = {
+							primary_culture = midwestern_tennessean
+						}
+						primary_culture = west_tennessean
+						primary_culture = mountaineer
+						primary_culture = nickajack
+					}
+				}
+			}
+		}
+	}
+	#legacy_equivalent = grand_divisions_legacy
+	valid_for_nation_designer = yes
+	valid_for_new_country = yes
+	nation_designer_cost = 15
+	modifiers = {
+		num_accepted_cultures = 2
+		governing_capacity_modifier = 0.10
+		min_autonomy_in_territories = -0.10
+	}
+	
+	#factions = {
+	#	superstates_amer_adm
+	#	superstates_amer_dip
+	#	superstates_amer_mil
+	#}
+	custom_attributes = {
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
+		disables_estate_nobles = yes
+		# locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			has_grand_divisions = yes
+		}
+	}
+	duration = 4
+
+	ai = {
+		factor = 10
+		modifier = {
+			factor = 2
+			OR = {
+				primary_culture = tennessean
+				hidden_trigger = {
+					primary_culture = appalachian_tennessean
+				}
+				hidden_trigger = {
+					primary_culture = midwestern_tennessean
+				}
+				primary_culture = west_tennessean
+				primary_culture = mountaineer
+				primary_culture = nickajack
+			}
+		}
+	}
+}
+
 #Starting Form for Canadian States and Territories
 
 pure_westminster_reform = {
@@ -2335,7 +2443,7 @@ pure_westminster_reform = {
 			}
 		}
 	}
-	legacy_equivalent = pure_westminster_legacy
+	#legacy_equivalent = pure_westminster_legacy
 	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 15
@@ -2388,7 +2496,7 @@ hybrid_westminster_reform = {
 			}
 		}
 	}
-	legacy_equivalent = hybrid_westminster_legacy
+	#legacy_equivalent = hybrid_westminster_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15
@@ -2444,7 +2552,7 @@ mexican_state_reform = {
 			}
 		}
 	}
-	legacy_equivalent = mexican_state_legacy
+	#legacy_equivalent_equivalent = mexican_state_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15
@@ -2501,7 +2609,7 @@ central_american_state_reform = {
 			}
 		}
 	}
-	legacy_equivalent = central_american_state_legacy
+	#legacy_equivalent_equivalent = central_american_state_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15
@@ -2538,7 +2646,7 @@ central_american_republic_reform = {
 			have_had_reform = central_american_republic_reform
 		}
 	}
-	legacy_equivalent = central_american_republic_legacy
+	#legacy_equivalent_equivalent = central_american_republic_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15
@@ -2593,7 +2701,7 @@ confederate_republic = {
 	#nation_designer_trigger = {
 	#	has_dlc = "American Dream"
 	#}
-	legacy_equivalent = confederate_republic_legacy
+	#legacy_equivalent_equivalent = confederate_republic_legacy
 	modifiers = {
 		infantry_power = 0.1
 		global_spy_defence = 0.2
@@ -2647,7 +2755,7 @@ texan_republic = {
 	#nation_designer_trigger = {
 	#	has_dlc = "American Dream"
 	#}
-	legacy_equivalent = confederate_republic_legacy
+	#legacy_equivalent_equivalent = confederate_republic_legacy
 	modifiers = {
 		governing_capacity = 100
 		reelection_cost = -0.10
@@ -2692,7 +2800,7 @@ micronesian_republic = {
 			primary_culture = micronesian
 		}
 	}
-	legacy_equivalent = micronesian_republic_legacy
+	#legacy_equivalent_equivalent = micronesian_republic_legacy
 	valid_for_nation_designer = yes
 	valid_for_new_country = yes
 	nation_designer_cost = 15

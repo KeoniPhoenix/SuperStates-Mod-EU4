@@ -1,0 +1,9 @@
+﻿l_english:
+  grand_division_subject: "Grand Division"
+  grand_division_subject_long_desc: "A Grand Division is a distinct region of our state that maintains their identity and autonomy while remaining under our banner."
+  grand_division_subject_is_our: "$NAME|Y$ is our Grand Division"
+  grand_division_subject_title: "Grand Division"
+  grand_division_subject_title_plural: "Grand Divisions"
+  is_grand_division_subject: "Is Grand Division"
+  is_grand_division_modifier: "Grand Division"
+  has_grand_divisions: "May create Grand Divisions"

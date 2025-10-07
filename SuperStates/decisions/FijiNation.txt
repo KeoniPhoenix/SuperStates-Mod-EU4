@@ -58,6 +58,7 @@ country_decisions = {
 			NOT = { exists = VIT }
 		}
 		effect = {
+			on_change_tag_effect = yes
 			change_tag = VIT
 			if = {
 				limit = {

@@ -6,6 +6,7 @@ add_core = MNE
 # add_core = MSS
 add_core = NBR
 add_core = ACD
+add_core = MDW
 #add_core = ARO
 culture = new_england_french
 religion = s_catholic

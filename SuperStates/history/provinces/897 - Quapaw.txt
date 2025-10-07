@@ -3,11 +3,12 @@
 owner = ZCT
 controller = ZCT
 add_core = ZCT
+add_core = COT
 culture = zacatecan
 religion = s_catholic
 capital = "Villanueva"
 is_city = yes #3280
-trade_goods = grain
+trade_goods = agave
 hre = no
 base_tax = 3
 base_production = 3

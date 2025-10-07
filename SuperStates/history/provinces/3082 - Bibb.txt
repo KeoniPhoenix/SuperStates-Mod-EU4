@@ -6,12 +6,13 @@ add_core = GRG
 culture = us_georgian
 religion = s_protestant
 capital = "Macon"
-trade_goods = cloth
+trade_goods = cotton
 hre = no
 base_tax = 3
 base_production = 2
 base_manpower = 3
 is_city = yes #15540
+fort_15th = yes
 discovered_by = north_american
 discovered_by = mesoamerican
 

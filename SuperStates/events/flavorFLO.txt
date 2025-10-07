@@ -37,15 +37,6 @@ country_event = {
 					primary_culture = miamian
 			}
 		}
-		#custom_tooltip = flo_evict_cubans_tooltip
-		every_owned_province = {
-			limit = {
-				culture = miamian
-				has_owner_culture = no
-			}
-			change_religion = ROOT
-			change_culture = ROOT
-		}
 		# every_owned_province = {
 			# limit = {
 				# culture = south_floridian
@@ -61,68 +52,90 @@ country_event = {
 				duration = 3650
 			}
 		}
-			
-		west_cuba_area = {
-			change_culture = cuban
-			if = {
+		custom_tooltip = flo_evict_cubans_tooltip
+		hidden_effect = {
+			every_owned_province = {
 				limit = {
-					any_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						religion = s_catholic
-					}					
+					culture = miamian
+					has_owner_culture = no
 				}
-				change_religion = s_catholic
-			}   
-			 		
-			# If no North American Catholics, convert to regular Catholic
-			else = {
-				change_religion = catholic
+				change_religion = ROOT
+				change_culture = ROOT
 			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 2
-			add_province_modifier = {
-				name = cubans_returned
-				duration = 3650
-			}
-			hidden_effect = {
+			west_cuba_area = {
+				limit = { 
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
+				}
+				change_culture = cuban
+				if = {
+					limit = {
+						any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+					}
+					change_religion = s_catholic
+				}   
+						
+				# If no North American Catholics, convert to regular Catholic
+				else = {
+					change_religion = catholic
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = expelled_minority
-					duration = 5475
+					name = cubans_returned
+					duration = 3650
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = expelled_minority
+						duration = 5475
+					}
 				}
 			}
-		}
-		east_cuba_area = {
-			change_culture = cuban
-			if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						religion = s_catholic
-					}				
+			east_cuba_area = {
+				limit = { 
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
 				}
-				change_religion = s_catholic
-			}
+				change_culture = cuban
+				if = {
+					limit = {
+						any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}				
+					}
+					change_religion = s_catholic
+				}
 
-			# If no North American Catholics, convert to regular Catholic
-			else = {
-				change_religion = catholic
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 2
-			add_province_modifier = {
-				name = cubans_returned
-				duration = 3650
-			}
-			hidden_effect = {
+				# If no North American Catholics, convert to regular Catholic
+				else = {
+					change_religion = catholic
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				add_province_modifier = {
-					name = expelled_minority
-					duration = 5475
+					name = cubans_returned
+					duration = 3650
+				}
+				hidden_effect = {
+					add_province_modifier = {
+						name = expelled_minority
+						duration = 5475
+					}
 				}
 			}
 		}
@@ -135,134 +148,130 @@ country_event = {
                 modifier = opinion_pleased
             }
         }
-		hidden_effect = {
-		remove_accepted_culture = miamian
-		add_accepted_culture = cuban
-		}
+		# add_country_modifier = { 
+		# 	name = cuban_integration
+		# 	duration = -1  
+		# 	desc = cuban_integration_tt
+		# 	hidden = yes
+		# }
+		#custom_tooltip = cuban_integration_tt
+		#hidden_effect = {
+			remove_accepted_culture = miamian
+			add_accepted_culture_or_dip_power = { culture = cuban free = yes }
+		#}
 	}
 	option = {	# Remove the Cubans from Cuba
 		name = "flavorFLO.1optb"
-		#custom_tooltip = flo_settle_cubans_tooltip
-		suncoast_area = {
-			change_culture = miamian
-			if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						religion = s_catholic
-					}					
+		custom_tooltip = flo_settle_cubans_tooltip
+		hidden_effect = {
+			suncoast_area = {
+				limit = { 
+					culture = south_floridian
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
 				}
-				change_religion = s_catholic
-			}   
-			 		
-			# If no North American Catholics, convert to regular Catholic
-			else = {
-				change_religion = catholic
-			}
-			add_base_tax = 2
-			add_province_modifier = {
-				name = cubans_expelled
-				duration = 3650
-			}
-			hidden_effect = {
-			add_province_modifier = {
-				name = expelled_minority
-				duration = 5475
-			}
-			}
-		}
-		south_florida_area = {
-			change_culture = miamian
-			if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						religion = s_catholic
-					}							
+				change_culture = miamian
+				if = {
+					limit = {
+						any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}					
+					}
+					change_religion = s_catholic
+				}   
+						
+				# If no North American Catholics, convert to regular Catholic
+				else = {
+					change_religion = catholic
 				}
-				change_religion = s_catholic
-			}   
-			 		
-			# If no North American Catholics, convert to regular Catholic
-			else = {
-				change_religion = catholic
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 2
-			add_province_modifier = {
-				name = cubans_expelled
-				duration = 3650
-			}
-			hidden_effect = {
-			add_province_modifier = {
-				name = expelled_minority
-				duration = 5475
-			}
-			}
-		}
-		
-		3019 = {
-			change_culture = miamian
-			if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							continent = north_america
-						}
-						religion = s_catholic
-					}					
+				add_base_tax = 1
+				add_province_modifier = {
+					name = cubans_expelled
+					duration = 3650
 				}
-				change_religion = s_catholic
-			}   
-			 		
-			# If no North American Catholics, convert to regular Catholic
-			else = {
-				change_religion = catholic
-			}
-			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 2
-			add_province_modifier = {
-				name = cubans_expelled
-				duration = 3650
-			}
-			hidden_effect = {
+				hidden_effect = {
 				add_province_modifier = {
 					name = expelled_minority
 					duration = 5475
 				}
+				}
 			}
-		}
-		
-		west_cuba_area = {
-		limit = {
-                owned_by = ROOT
-            }
-			change_culture = ROOT
-			change_religion = ROOT
-			hidden_effect = {
+			south_florida_area = {
+				limit = { 
+					culture = south_floridian
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
+				}
+				change_culture = miamian
+				if = {
+					limit = {
+						any_country = {
+							capital_scope = {
+								continent = north_america
+							}
+							religion = s_catholic
+						}							
+					}
+					change_religion = s_catholic
+				}   
+						
+				# If no North American Catholics, convert to regular Catholic
+				else = {
+					change_religion = catholic
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = cubans_expelled
+					duration = 3650
+				}
+				hidden_effect = {
 				add_province_modifier = {
 					name = expelled_minority
 					duration = 5475
 				}
+				}
 			}
-		}
-		
-		east_cuba_area = {
-		limit = {
-                owned_by = ROOT
-            }
-			change_culture = ROOT
-			change_religion = ROOT
-			hidden_effect = {
-				add_province_modifier = {
-					name = expelled_minority
-					duration = 5475
+				
+			west_cuba_area = {
+				limit = { 
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+				hidden_effect = {
+					add_province_modifier = {
+						name = expelled_minority
+						duration = 5475
+					}
+				}
+			}
+			
+			east_cuba_area = {
+				limit = { 
+					OR = {
+						owned_by = ROOT 
+						owned_by_subject_of = ROOT
+					}
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+				hidden_effect = {
+					add_province_modifier = {
+						name = expelled_minority
+						duration = 5475
+					}
 				}
 			}
 		}

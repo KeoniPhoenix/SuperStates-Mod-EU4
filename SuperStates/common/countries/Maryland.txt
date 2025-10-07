@@ -2,7 +2,8 @@
 
 graphical_culture = westerngfx
 
-color = { 213  201  62 }
+color = { 234  171  0 } # 213  201  62
+# Gold from its flag
 
 historical_idea_groups = {
 	defensive_ideas

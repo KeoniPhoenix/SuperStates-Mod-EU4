@@ -16,6 +16,7 @@ country_decisions = {
 			OR = {
 				primary_culture = north_dakotan
 				primary_culture = south_dakotan
+				primary_culture = us_dakotan
 			}
 			OR = {
 				ai = no
@@ -53,6 +54,7 @@ country_decisions = {
 			owns_core_province = 998 # Pierre
 		}
 		effect = {
+			on_change_tag_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 1825

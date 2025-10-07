@@ -6,7 +6,7 @@ add_core = LOU
 culture = louisianan
 religion = s_protestant
 capital= "Shreveport"
-trade_goods = cotton
+trade_goods = livestock
 is_city = yes #19940
 hre = no
 base_tax = 3
@@ -19,9 +19,9 @@ discovered_by = mesoamerican
 	religion = s_baptist
 }
 
-1399.1.1 = {
-	fort_15th = yes 
-}
+# 1399.1.1 = {
+	# fort_15th = yes 
+# }
 
 1444.11.11 = {
 	owner = LOU

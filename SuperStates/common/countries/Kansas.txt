@@ -1,8 +1,8 @@
-#Country Name: West Kansas
+#Country Name: Kansas
 
 graphical_culture = westerngfx
 
-color = { 148  188  78 }
+color = { 251  236  93 } # 148  188  78
 
 historical_idea_groups = {
 	defensive_ideas

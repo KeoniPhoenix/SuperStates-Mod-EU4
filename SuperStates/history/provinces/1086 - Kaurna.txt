@@ -3,14 +3,15 @@
 owner = WAU
 controller = WAU
 add_core = WAU
+add_core = DMP
 culture = western_australian
 religion = austral_catholic
 capital = "Broome"
 trade_goods = iron
 hre = no
 base_tax = 3
-base_production = 2
-base_manpower = 1
+base_production = 3
+base_manpower = 3
 is_city = yes #1890
 discovered_by = australian
 center_of_trade = 1

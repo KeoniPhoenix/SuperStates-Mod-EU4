@@ -3,7 +3,7 @@
 owner = XMS
 controller = XMS
 add_core = XMS
-add_core = WAU
+#add_core = WAU
 culture = christmas_islander
 religion = confucianism
 capital = "Flying Fish Cove"

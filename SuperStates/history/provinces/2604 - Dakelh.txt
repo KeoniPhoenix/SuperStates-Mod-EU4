@@ -6,7 +6,7 @@ add_core = NWH
 culture = new_hampshirite
 religion = s_catholic
 capital = "Concord"
-trade_goods = naval_supplies
+trade_goods = wool
 hre = no
 base_tax = 4
 base_production = 2
@@ -15,9 +15,9 @@ is_city = yes #4270
 discovered_by = north_american
 discovered_by = mesoamerican
 
-1399.1.1 = {
-	fort_15th = yes
-}
+# 1399.1.1 = {
+	# fort_15th = yes
+# }
 
 1528.1.1 = {
 	religion = catholic

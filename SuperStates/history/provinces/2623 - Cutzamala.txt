@@ -3,6 +3,7 @@
 owner = SSK
 controller = SSK
 add_core = SSK
+add_core = BFF
 culture = saskatchewanian
 religion = s_protestant
 capital = "Saskatoon" 

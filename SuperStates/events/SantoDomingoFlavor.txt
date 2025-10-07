@@ -15,6 +15,9 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	
 	trigger = {
+		NOT = {
+			has_country_flag = dominican_culture
+		}
 		490 = { 
 			is_capital = no
 			owned_by = ROOT
@@ -79,6 +82,7 @@ country_event = {
 	
 	option = {
 		name = "SantoDomingoFlavor.1opta"
+		set_country_flag = dominican_culture
 		santo_domingo_area = { 
 			change_culture = dominican 
 			add_core = SDM

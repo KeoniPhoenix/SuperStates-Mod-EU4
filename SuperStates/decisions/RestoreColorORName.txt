@@ -1,0 +1,153 @@
+country_decisions = {
+	restore_name_decision = {
+		major = yes
+		potential = {
+			has_country_flag = has_overriden_name_flag
+			OR = {
+				has_country_flag = has_eyalet_country_name
+				NOT = { 
+					had_country_flag = { 
+						flag = has_overriden_name_flag
+						days = 3650
+					}
+				}
+			}
+		}
+		
+		allow = {
+			OR = {
+				ai = no
+				is_subject = no
+			}
+			is_at_war = no 
+		}
+		effect = {
+			restore_country_name = yes
+			clr_country_flag = has_overriden_name_flag
+			clr_country_flag = has_eyalet_country_name
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = has_eyalet_country_name }
+			}
+		}
+	}
+	
+	restore_color_decision = {
+		major = yes
+		potential = {
+			has_country_flag = has_overriden_color_flag
+			OR = {
+				NOT = { 
+					had_country_flag = { 
+						flag = has_overriden_color_flag
+						days = 3650
+					}
+				}
+				has_country_flag = has_eyalet_color
+			}
+		}
+		
+		allow = {
+			is_subject = no 
+			is_at_war = no 
+		}
+		effect = {
+			restore_country_color = yes 
+			clr_country_flag = has_overriden_color_flag
+			clr_country_flag = has_eyalet_color
+			# SuperStates effects for color changes on culture swap event that take the color of a different tag.
+			# Added just in case you swap colors, change your mind, and then the releasable later appears.
+			if = {
+				limit = {
+					tag = TNN
+					FKL = {
+						has_country_flag = tnn_color_flag
+					}
+				}
+				FKL = {
+					restore_country_color = yes 
+					clr_country_flag = tnn_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = TNN
+					WTN = {
+						has_country_flag = tnn_color_flag
+					}
+				}
+				WTN = {
+					restore_country_color = yes 
+					clr_country_flag = tnn_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = KEN
+					TRN = {
+						has_country_flag = kentucky_color_flag
+					}
+				}
+				TRN = {
+					restore_country_color = yes 
+					clr_country_flag = kentucky_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = TEX
+					COM = {
+						has_country_flag = tex_color_flag
+					}
+				}
+				COM = {
+					restore_country_color = yes 
+					clr_country_flag = tex_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = ILI
+					CCK = {
+						has_country_flag = ili_color_flag
+					}
+				}
+				CCK = {
+					restore_country_color = yes 
+					clr_country_flag = ili_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = MYD
+					WML = {
+						has_country_flag = myd_color_flag
+					}
+				}
+				WML = {
+					restore_country_color = yes 
+					clr_country_flag = myd_color_flag
+				}
+			}
+			if = {
+				limit = {
+					tag = MYD
+					MMD = {
+						has_country_flag = myd_color_flag
+					}
+				}
+				MMD = {
+					restore_country_color = yes 
+					clr_country_flag = myd_color_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+}

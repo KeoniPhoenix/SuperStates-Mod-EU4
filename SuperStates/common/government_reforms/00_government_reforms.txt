@@ -1620,18 +1620,18 @@ mormon_theodemocracy_legacy = {
 	# government mechanics flags go here
 	icon = "mormon"
 	allow_normal_conversion = no
-	allow_convert = no
+	allow_convert = yes
 	legacy_government = yes
 	valid_for_new_country = no
-	valid_for_nation_designer = no
-	rulers_can_be_generals = no
+	valid_for_nation_designer = yes
+	rulers_can_be_generals = yes
 
 	royal_marriage = no
 
 	different_religion_acceptance = -20
 	different_religion_group_acceptance = -50
 
-	fixed_rank = 2
+	fixed_rank = 3
 	religion = yes
 	monastic = yes
 	modifiers = {
@@ -1643,9 +1643,8 @@ mormon_theodemocracy_legacy = {
 	}
 	conditional = {
 		allow = {
-			has_dlc = "Common Sense"
+				has_dlc = "Common Sense"
 		}
-
 		has_devotion = yes
 	}
 

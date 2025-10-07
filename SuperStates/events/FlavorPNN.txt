@@ -128,27 +128,65 @@ country_event = {
 	desc = "flavorPNN.3d"
 	picture = BIG_BOOK_eventPicture
 
+	major = yes
+	major_trigger = {
+		technology_group = north_american
+	}
+
 	trigger = {
 		OR = {
 			primary_culture = pennsylvanian
+			#primary_culture = western_pennsylvanian
+			primary_culture = alleghenite
+			primary_culture = clevelander
+			primary_culture = appalachian_pennsylvanian
+			primary_culture = appalachian_ohioan
+			primary_culture = great_laker_ohioan
 			primary_culture = ohioan
 			primary_culture = hoosier
 			tag = OHI
 			tag = PNN
 			tag = PHL
 			tag = INI
+			#tag = WST
 		}
 		has_institution = new_world_i
+		NOT = { current_age = age_of_discovery }
 		religion_years = { protestant = 20 }
 		NOT = { has_country_flag = amish_arrival }
-		europe = { has_discovered = ROOT }
+		OR = {
+			north_german_region = { has_discovered = ROOT }
+			south_german_region = { has_discovered = ROOT }
+			}
 		OR = {
 			hre_leagues_enabled = yes
 			SWI = {
 				exists = yes
 				OR = {
-					war_exhaustion = 5
-					stability = -2
+					war_exhaustion = 3
+					stability = -1
+				}
+				OR = {
+					religion = reformed
+					religion = protestant
+				}
+			}
+			TTL = {
+				exists = yes
+				OR = {
+					war_exhaustion = 3
+					stability = -1
+				}
+				OR = {
+					religion = reformed
+					religion = protestant
+				}
+			}
+			GNV = {
+				exists = yes
+				OR = {
+					war_exhaustion = 3
+					stability = -1
 				}
 				OR = {
 					religion = reformed
@@ -158,8 +196,19 @@ country_event = {
 			ALS = {
 				exists = yes
 				OR = {
-					war_exhaustion = 5
-					stability = -2
+					war_exhaustion = 3
+					stability = -1
+				}
+				OR = {
+					religion = reformed
+					religion = protestant
+				}
+			}
+			MLH = {
+				exists = yes
+				OR = {
+					war_exhaustion = 3
+					stability = -1
 				}
 				OR = {
 					religion = reformed
@@ -170,7 +219,7 @@ country_event = {
 			AND = {
 				capital_scope = { continent = europe }
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 50
+					value = 30
 					OR = {
 						region = north_german_region
 						region = south_german_region
@@ -192,6 +241,41 @@ country_event = {
 }
 	mean_time_to_happen = {
 		months = 30
+
+		modifier = {
+			factor = 0.70
+			AND = {
+				religion_group = christian
+				NOT = { religion = catholic }
+				NOT = { religion = s_catholic }
+				NOT = { religion = austral_catholic }
+			}
+		}
+		modifier = {
+			factor = 2
+				OR = {
+					religion = catholic
+					religion = s_catholic
+					religion = austral_catholic
+			}
+		}
+		modifier = {
+			factor = 5
+				any_known_country = {
+					technology_group = north_american
+					has_country_flag = amish_arrival
+				}
+		}
+		modifier = {
+			factor = 0.80
+				OR = {
+				primary_culture = ohioan
+				primary_culture = appalachian_ohioan
+				primary_culture = great_laker_ohioan
+				primary_culture = pennsylvanian
+				primary_culture = appalachian_pennsylvanian
+			}
+		}
 	}
 	
 	immediate = {
@@ -200,11 +284,23 @@ country_event = {
 	
 	option = { # We must remember our origins, and welcome these refugees with open arms.
 		name = flavorPNN.3opta
+		trigger = { # This option is scoped for Pennsylvania
+			NOT = { tag = OHI }
+			NOT = { tag = INI }
+			OR = {
+				tag = PNN
+				tag = PHL
+				primary_culture = pennsylvanian 
+				primary_culture = appalachian_pennsylvanian
+			}
+			owns = 2584
+			owns = 3138
+		}
 		add_country_modifier = {
 			name = "amish_accepted"
 			duration = 7300
 		}
-		3138 = { #Lancaster
+		3138 = { # Dauphin
 			add_base_tax = 2
 			add_base_production = 2
 			add_base_manpower = 2
@@ -218,38 +314,369 @@ country_event = {
 				duration = 7300
 			}
 		}
-		3139 = { #Lehigh
+		2584 = { # York
 			add_base_tax = 2
-			add_base_production = 2
-			add_base_manpower = 2
-			
-			change_culture = deitsch # Amish
-			change_religion = anabaptist
-			
-			set_province_flag = amish_migration_flag
-			add_province_modifier = {
-				name = "amish_migration"
-				duration = 7300
-			}
-		}
-		2584 = { #Dauphin
-			add_base_tax = 2
-			add_base_manpower = 1
-		}
-		2585 = { #Philadelphia
 			add_base_production = 1
-			add_base_tax = 1
-			add_base_manpower = 1
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
 		}
-		add_adm_power = -25
-		add_dip_power = -25
-		add_prestige = -10
+		#2584 = { 
+			#add_base_tax = 2
+			#add_base_manpower = 1
+		#}
+		#2585 = { 
+			#add_base_production = 1
+			#add_base_tax = 1
+			##add_base_manpower = 1
+		#}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_prestige = 10
+		set_country_flag = amish_accepted_flag
+	}
+	option = { # We must remember our origins, and welcome these refugees with open arms.
+		name = flavorPNN.3opta2
+		trigger = { # This option is scoped for Ohio
+			owns = 2580
+			NOT = { tag = INI }
+			NOT = { tag = PNN }
+			NOT = { tag = PHL }
+			OR = {
+				tag = OHI
+				primary_culture = clevelander
+				primary_culture = appalachian_ohioan
+				primary_culture = great_laker_ohioan
+				primary_culture = alleghenite
+				primary_culture = ohioan
+			}
+		}
+		add_country_modifier = {
+			name = "amish_accepted"
+			duration = 7300
+		}
+		2580 = { # Mahoning
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		2579 = { 
+			add_base_tax = 1
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			#change_culture = deitsch # Amish
+			#change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_prestige = 10
+		set_country_flag = amish_accepted_flag
+	}
+	option = { # We must remember our origins, and welcome these refugees with open arms.
+		name = flavorPNN.3opta3
+		trigger = { # This option is scoped for Indiana
+			owns = 2570
+			owns = 2569
+			NOT = { tag = OHI }
+			NOT = { tag = PNN }
+			NOT = { tag = PHL }
+			OR = {
+				tag = INI
+				primary_culture = hoosier
+			}
+		}
+		add_country_modifier = {
+			name = "amish_accepted"
+			duration = 7300
+		}
+		2570 = { # Saint Joseph
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		2569 = { # Allen
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_prestige = 10
+		set_country_flag = amish_accepted_flag
+	}
+	option = { # We must remember our origins, and welcome these refugees with open arms.
+		name = flavorPNN.3opta4
+		trigger = { # This option is a failsafe if someone else gets the event
+			NOT = { tag = OHI }
+			NOT = { tag = PNN }
+			NOT = { tag = PHL }
+			NOT = { tag = INI }
+			NOT = { primary_culture = pennsylvanian }
+			NOT = { primary_culture = appalachian_pennsylvanian }
+			NOT = { primary_culture = ohioan }
+			NOT = { primary_culture = appalachian_ohioan }
+			NOT = { primary_culture = great_laker_ohioan }
+			NOT = { primary_culture = alleghenite }
+			NOT = { primary_culture = clevelander }
+		}
+		add_country_modifier = {
+			name = "amish_accepted"
+			duration = 7300
+		}
+		random_owned_province = { 
+			limit = {
+				NOT =  { is_capital = yes }
+				is_in_capital_area = yes
+			}
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		random_owned_province = { 
+			limit = { 
+				region = capital
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 2
+			
+			change_culture = deitsch # Amish
+			change_religion = anabaptist
+			
+			set_province_flag = amish_migration_flag
+			add_province_modifier = {
+				name = "amish_migration"
+				duration = 7300
+			}
+		}
+		add_adm_power = 25
+		add_dip_power = 25
+		add_prestige = 10
 		set_country_flag = amish_accepted_flag
 	}
 	option = { # This is none of our business. Turn them away.
 		name = flavorPNN.3optb
 		add_prestige = 15
 		set_country_flag = amish_refused
+	}
+}
+
+
+# The Amish Among Us
+country_event = {
+	id = flavorPNN.4
+	title = "flavorPNN.4t"
+	desc = "flavorPNN.4d"
+	picture = FARMING_eventPicture
+
+	trigger = {
+		has_country_flag = amish_accepted_flag
+		NOT = { has_country_flag = amish_among_us_flag }
+		any_owned_province = {
+			OR = {
+				culture = deitsch
+				religion = anabaptist
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.50
+			accepted_culture = deitsch
+		}
+		modifier = {
+			factor = 0.10
+				OR = {
+					religion = anabaptist
+					primary_culture = deitsch
+				}
+		}
+	}
+	
+	immediate = {
+		set_country_flag = amish_among_us_flag
+	}
+	
+	option = { # The Amish have made a good name for themselves. Let them integrate into our society.
+		name = flavorPNN.4opta
+			add_country_modifier = {
+			name = "amish_integration"
+			duration = -1
+		}
+	if = {
+		limit = { 
+			NOT = { accepted_culture =  deitsch }
+		}
+			add_accepted_culture_or_dip_power = { culture = deitsch free = yes }
+	else = {
+			add_dip_power = 100
+		}
+	}
+
+		custom_tooltip = flavorPNN.4a.tt  # "We will accept the Amish with a free culture slot until it is revoked."
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = { # We cannot accept the Amish any longer.
+		name = flavorPNN.4optb
+		trigger = {
+			NOT = { primary_culture = deitsch }
+			NOT = { religion = anabaptist }
+		}
+		if = {
+			limit = {
+				has_country_modifier = amish_accepted
+			}
+				remove_country_modifier = amish_accepted
+		}
+		ROOT = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = deitsch
+						religion = anabaptist
+					}
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+				hidden_effect = {
+					if = {
+						limit = { has_province_modifier = amish_migration }
+							remove_province_modifier = amish_migration
+					}
+				}
+				spawn_rebels = {
+					size = 2
+					type = anabaptist_rebels
+					culture = deitsch
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { # The simple life always appealed to me, actually...
+		name = flavorPNN.4optc
+		trigger = {
+			NOT = { primary_culture = deitsch }
+			NOT = { religion = anabaptist }
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_country_modifier = amish_accepted }
+					remove_country_modifier = amish_accepted 
+			}
+		}
+		hidden_effect = {
+			set_ruler_culture = deitsch
+			set_ruler_religion = anabaptist
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_consort = yes }
+					set_consort_culture = deitsch
+					set_consort_religion = anabaptist
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_heir = yes }
+					set_heir_culture = deitsch
+					set_heir_religion = anabaptist
+			}
+		}
+			add_country_modifier = {
+				name = flipped_amish_modifier
+				duration = 7305
+			}
+			change_primary_culture = deitsch
+			change_religion = anabaptist
+			capital_scope = {
+				change_culture = deitsch
+				change_religion = anabaptist
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						culture = deitsch
+						religion = anabaptist
+					}
+				}
+				add_base_manpower = 2
+				add_base_production = 1
+				add_base_tax = 2
+			}
+			random_owned_province = {
+				limit = {
+					region = capital
+					NOT = { religion = anabaptist }
+				}
+				#add_reform_center = anabaptist
+				change_religion = anabaptist
+				if = {
+					limit = {
+						NOT = { culture = deitsch }
+					}
+					change_culture = deitsch
+				}
+			}
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -263,32 +690,216 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { #Move to Appalachian Pennsylvanian
+	option = { #Move to Appalachian Pennsylvanian and move capital
 		name = flavorPNN.1000a
-		if = {
-			limit = {
-				NOT = {
-					primary_culture = appalachian_pennsylvanian
-				}
+		trigger = {
+			owns = 2589
+			NOT = {
+				capital = 2589
 			}
-			change_primary_culture = appalachian_pennsylvanian
+			OR = {
+			num_of_owned_provinces_with = {
+				value = 7
+				province_group = pennsylvania_provincegroup
+				culture = western_pennsylvanian
+			}
+			num_of_owned_provinces_with = {
+				value = 7
+				province_group = pennsylvania_provincegroup
+				culture = appalachian_pennsylvanian
+			}
 		}
-		custom_tooltip = flavorPNN.1000a.tt
-		hidden_effect = {
-			remove_accepted_culture = western_pennsylvanian
-			remove_accepted_culture = pennsylvanian
-			every_owned_province = {
+		}
+			name = flavorPNN.1000a
+			if = {
 				limit = {
-					OR = {
-						culture = pennsylvanian
-						culture = western_pennsylvanian
+					NOT = {
+						primary_culture = appalachian_pennsylvanian
 					}
 				}
-				change_culture = appalachian_pennsylvanian
+				change_primary_culture = appalachian_pennsylvanian
+			}
+			change_country_color = { color = { 245 220 15 } }
+			set_country_flag = has_overriden_color_flag
+			set_capital = 2589 # Pittsburgh
+			custom_tooltip = flavorPNN.1000a.tt
+			hidden_effect = {
+				remove_accepted_culture = western_pennsylvanian
+				remove_accepted_culture = pennsylvanian
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = pennsylvanian
+							culture = western_pennsylvanian
+						}
+					}
+					change_culture = appalachian_pennsylvanian
+				}
+			}
+			ai_chance = {
+				factor = 1
 			}
 		}
+	option = { #Move to Appalachian Pennsylvanian
+	name = flavorPNN.1000b
+		trigger = {
+			OR = {
+			num_of_owned_provinces_with = {
+				value = 7
+				province_group = pennsylvania_provincegroup
+				culture = western_pennsylvanian
+			}
+			num_of_owned_provinces_with = {
+				value = 7
+				province_group = pennsylvania_provincegroup
+				culture = appalachian_pennsylvanian
+			}
+		}
+		}
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = appalachian_pennsylvanian
+					}
+				}
+				change_primary_culture = appalachian_pennsylvanian
+			}
+			change_country_color = { color = { 245 220 15 } }
+			set_country_flag = has_overriden_color_flag
+			custom_tooltip = flavorPNN.1000a.tt
+			hidden_effect = {
+				remove_accepted_culture = western_pennsylvanian
+				remove_accepted_culture = pennsylvanian
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = pennsylvanian
+							culture = western_pennsylvanian
+						}
+					}
+					change_culture = appalachian_pennsylvanian
+				}
+			}
+			ai_chance = {
+				factor = 1
+			}
+	}
+	option = { #Move to Great Laker Pennsylvanian and move capital
+	name = flavorPNN.1000c
+		trigger = {
+			owns = 2588
+			OR = {
+			num_of_owned_provinces_with = {
+				value = 4
+				province_group = pennsylvania_provincegroup
+				culture = clevelander
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				province_group = pennsylvania_provincegroup
+				culture = great_laker_pennsylvanian
+			}
+		}
+		}
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = great_laker_pennsylvanian
+					}
+				}
+				change_primary_culture = great_laker_pennsylvanian
+			}
+			2588 = { # Erie
+				add_base_production = 3
+				add_base_tax = 3
+				add_base_manpower = 3
+				center_of_trade = 1
+			}
+			set_capital = 2588
+			change_country_color = { color = { 199 15 46 } }
+			set_country_flag = has_overriden_color_flag
+			custom_tooltip = flavorPNN.1000c.tt
+			hidden_effect = {
+				remove_accepted_culture = western_pennsylvanian
+				remove_accepted_culture = pennsylvanian
+				remove_accepted_culture = clevelander
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = pennsylvanian
+							culture = western_pennsylvanian
+							culture = clevelander
+						}
+					}
+					change_culture = great_laker_pennsylvanian
+				}
+			}
+			ai_chance = {
+				factor = 1
+			}
+	}
+	option = { #Move to Great Laker Pennsylvanian
+	name = flavorPNN.1000d2
+		trigger = {
+			OR = {
+			num_of_owned_provinces_with = {
+				value = 4
+				province_group = pennsylvania_provincegroup
+				culture = clevelander
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				province_group = pennsylvania_provincegroup
+				culture = great_laker_pennsylvanian
+			}
+		}
+		}
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = great_laker_pennsylvanian
+					}
+				}
+				change_primary_culture = great_laker_pennsylvanian
+			}
+			if = {
+				limit = {
+					owns = 2588
+				}
+				2588 = { # Erie
+				add_base_production = 3
+				add_base_tax = 3
+				add_base_manpower = 3
+				center_of_trade = 1
+			}
+			}
+			change_country_color = { color = { 199 15 46 } }
+			set_country_flag = has_overriden_color_flag
+			custom_tooltip = flavorPNN.1000c.tt
+			hidden_effect = {
+				remove_accepted_culture = western_pennsylvanian
+				remove_accepted_culture = pennsylvanian
+				remove_accepted_culture = clevelander
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = pennsylvanian
+							culture = western_pennsylvanian
+							culture = clevelander
+						}
+					}
+					change_culture = great_laker_pennsylvanian
+				}
+			}
+			ai_chance = {
+				factor = 1
+			}
+	}
+	option = { # None of the above
+		name = flavorPNN.1000e
+
 		ai_chance = {
-			factor = 1
+			factor = 0
 		}
 	}
 }

@@ -1,0 +1,1645 @@
+deseret_slot_1 = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+		tag = DES
+    }
+    has_country_shield = yes
+
+	des_return_to_nauvoo = {
+		icon = mission_nauvoo
+		required_missions = { des_mormon_pioneers }
+		position = 7
+		
+		provinces_to_highlight = {
+			province_id = 3275
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				3275 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3275 = {
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = nauvoo_pioneers_accepted_tt
+					has_country_flag = nauvoo_pioneers_accepted
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = nauvoo_pioneers_accepted
+			}
+				custom_tooltip = nauvoo_pioneers_accepted_yes
+			}
+			else = {
+				custom_tooltip = nauvoo_pioneers_accepted_no
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.55 # Mormon settlement in Nauvoo
+				}
+				3275 = {
+					change_province_name = "Nauvoo"
+					hidden_effect = {
+						rename_capital = "Nauvoo"
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = nauvoo_pioneers_accepted
+				}
+					country_event = {
+						id = flavorUTA.55 # Mormon settlement in Nauvoo
+					}
+					3275 = {
+						change_province_name = "Nauvoo"
+						hidden_effect = {
+							rename_capital = "Nauvoo"
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = nauvoo_pioneers_rejected
+				}
+				custom_tooltip = nauvoo_pioneers_rejected_yes
+			}
+			else = {
+				custom_tooltip = nauvoo_pioneers_rejected_no
+			}
+			tooltip = {
+				3275 = {
+					add_core = ROOT
+					owner = {
+						reverse_add_casus_belli = {
+							type = cb_crusade
+							target = FROM
+							months = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					3275 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						has_country_flag = nauvoo_event_flag
+					}
+				}
+				country_event = {
+					id = flavorUTA.71 # City of Nauvoo
+				}
+				3275 = {
+					change_religion = ROOT
+					change_culture = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = nauvoo_pioneers_accepted }
+					}
+					3275 = {
+							add_core = ROOT
+							owner = {
+								reverse_add_casus_belli = {
+									type = cb_crusade
+									target = FROM
+									months = 60
+								}
+							}
+						}
+				}
+		}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	des_nauvoo_legions = {
+		icon = army_reforms
+		required_missions = { des_return_to_nauvoo }
+		position = 8
+		
+		provinces_to_highlight = {
+			
+		}
+		trigger = {
+				if = {
+					limit = {
+						has_dlc = "Cradle of Civilization"
+					}
+					army_professionalism = 0.50
+				}
+				else = {
+					army_tradition = 80
+				}
+		}
+		effect = {
+			#set_country_flag = nauvoo_legions_bonus
+			#custom_tooltip = nauvoo_legions_bonus_tt
+			add_country_modifier = {
+				name = uta_mormon_legions
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	des_first_president  = {
+		icon = mission_priesthood
+		required_missions = { des_continue_the_expedition }
+		position = 9
+		
+		provinces_to_highlight = {
+			province_id = 2586
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				2586 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2586 = {
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = restoration_pioneers_accepted_tt
+					has_country_flag = restoration_pioneers_accepted
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = restoration_pioneers_accepted
+			}
+				custom_tooltip = restoration_pioneers_accepted_yes
+			}
+			else = {
+				custom_tooltip = restoration_pioneers_accepted_no
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.64 # Mormon settlement in Lackawanna
+				}
+				2586 = {
+					change_province_name = "Susquehanna"
+					rename_capital = "Harmony"
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = restoration_pioneers_accepted
+				}
+					country_event = {
+						id = flavorUTA.64 # Mormon settlement in Lackawanna
+					}
+					2586 = {
+						change_province_name = "Susquehanna"
+						rename_capital = "Harmony"
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = restoration_pioneers_rejected
+				}
+				custom_tooltip = restoration_pioneers_rejected_yes
+			}
+			else = {
+				custom_tooltip = restoration_pioneers_rejected_no
+			}
+			tooltip = {
+				2586 = {
+					add_core = ROOT
+					owner = {
+						reverse_add_casus_belli = {
+							type = cb_crusade
+							target = FROM
+							months = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					2586 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						has_country_flag = restoration_event_flag
+					}
+				}
+				country_event = {
+					id = flavorUTA.73 # Translated Book of Mormon
+				}
+				2586 = {
+					change_religion = ROOT
+					change_culture = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = restoration_pioneers_accepted }
+					}
+						2586 = {
+							add_core = ROOT
+							owner = {
+								reverse_add_casus_belli = {
+									type = cb_crusade
+									target = FROM
+									months = 60
+								}
+							}
+						}
+				}
+		}
+		}
+	}
+}
+
+des_slot_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+		tag = DES
+    }
+	has_country_shield = yes
+
+	des_mormon_pioneers = {
+		icon = mission_settlers_north_america
+		required_missions = { uta_deseret_ascendant }
+		position = 6
+
+		provinces_to_highlight = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				province_id = 3257
+				province_id = 986
+				province_id = 3160
+			}
+		}
+
+		trigger = {
+			OR = {
+				3257 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				986 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				3160 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+		}
+			OR = {
+				diplomat = 2
+				dip = 5 # Ruler diplo power is at least 5
+		}
+		}
+		effect = {
+			country_event = { # Mormon Pioneers
+				id = flavorUTA.50
+			}
+			custom_tooltip = flavorDES.1tt
+
+			986 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			3160 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+
+			3257 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4859 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3258 = {
+				if = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	des_diahman = {
+		icon = mission_diahman
+		required_missions = { des_mormon_pioneers }
+		position = 7
+		
+		provinces_to_highlight = {
+			province_id = 2669
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+
+		trigger = {
+			OR = {
+				2669 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2669 = {
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = diahman_pioneers_accepted_tt
+					has_country_flag = diahman_pioneers_accepted
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = des_continue_expedition_tt
+			set_country_flag = des_continue_expedition
+			if = {
+				limit = {
+					has_country_flag = diahman_pioneers_accepted
+			}
+				custom_tooltip = diahman_pioneers_accepted_yes
+			}
+			else = {
+				custom_tooltip = diahman_pioneers_accepted_no
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.52 
+				}
+				2669 = {
+					change_province_name = "Adam-ondi-Ahman"
+					hidden_effect = {
+						rename_capital = "Adam-ondi-Ahman"
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = diahman_pioneers_accepted
+				}
+					country_event = {
+						id = flavorUTA.52
+					}
+					2669 = {
+						change_province_name = "Adam-ondi-Ahman"
+						hidden_effect = {
+							rename_capital = "Adam-ondi-Ahman"
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = diahman_pioneers_rejected
+				}
+				custom_tooltip = diahman_pioneers_rejected_yes
+			}
+			else = {
+				custom_tooltip = diahman_pioneers_rejected_no
+			}
+			tooltip = {
+				2669 = {
+					add_core = ROOT
+					owner = {
+						reverse_add_casus_belli = {
+							type = cb_crusade
+							target = FROM
+							months = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					2669 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						has_country_flag = diahman_event_flag
+					}
+				}
+				country_event = {
+					id = flavorUTA.70 # Adam and Eve
+				}
+				2669 = {
+					change_religion = ROOT
+					change_culture = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = diahman_pioneers_accepted }
+					}
+						2669 = {
+							add_core = ROOT
+							owner = {
+								reverse_add_casus_belli = {
+									type = cb_crusade
+									target = FROM
+									months = 60
+								}
+							}
+						}
+				}
+		}
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	des_continue_the_expedition = {
+		icon = mission_mormon_pioneers
+		required_missions = { des_diahman }
+		position = 8
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3275
+				province_id = 2669
+				province_id = 2579
+				province_id = 2597
+				province_id = 2586
+			}
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			3275 = { # Knox, IL
+				OR = {
+					religion = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			2669 = { # Buchanan
+				OR = {
+					religion = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			OR = {
+				2579 = { # Cuyahoga
+					religion = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2586 = { # Lackawanna
+					religion = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2597 = { # Monroe, NY
+					religion = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				AND = {
+					great_power_rank = 1
+					NOT = { great_power_rank = 5 }
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = continue_expedition_east_tt
+			set_country_flag = des_continue_expedition_east
+			set_country_flag = mormon_pioneers_flag_sacred
+			set_country_flag = mormon_pioneers_flag_kirtland
+			set_country_flag = mormon_pioneers_flag_restoration
+		}
+		ai_weight = {
+			factor = 100
+		}
+	}
+
+	des_recover_golden_plates = {
+		icon = mission_golden_plates
+		required_missions = { des_continue_the_expedition }
+		position = 9
+		
+		provinces_to_highlight = {
+			province_id = 2597
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				2597 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2597 = {
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = palmyra_pioneers_accepted_tt
+					has_country_flag = palmyra_pioneers_accepted
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = palmyra_pioneers_accepted
+			}
+				custom_tooltip = palmyra_pioneers_accepted_yes
+			}
+			else = {
+				custom_tooltip = palmyra_pioneers_accepted_no
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.61 # Mormons return to Palmyra
+				}
+				2597 = {
+					change_province_name = "Palmyra"
+					hidden_effect = {
+						rename_capital = "Palmyra"
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = palmyra_pioneers_accepted
+				}
+					country_event = {
+						id = flavorUTA.61 # Mormons return to Palmyra
+					}
+					2597 = {
+						change_province_name = "Palmyra"
+						hidden_effect = {
+							rename_capital = "Palmyra"
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_country_flag = palmyra_pioneers_rejected
+				}
+				custom_tooltip = palmyra_pioneers_rejected_yes
+			}
+			else = {
+				custom_tooltip = palmyra_pioneers_rejected_no
+			}
+			tooltip = {
+				2597 = {
+					add_core = ROOT
+					owner = {
+						reverse_add_casus_belli = {
+							type = cb_crusade
+							target = FROM
+							months = 60
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					2597 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						has_country_flag = palmyra_event_flag
+					}
+				}
+				country_event = {
+					id = flavorUTA.75 # Golden Plates Discovered!
+				}
+				2597 = {
+					change_religion = ROOT
+					change_culture = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = palmyra_pioneers_accepted }
+					}
+					2597 = {
+							add_core = ROOT
+							owner = {
+								reverse_add_casus_belli = {
+									type = cb_crusade
+									target = FROM
+									months = 60
+								}
+							}
+						}
+				}
+		}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+}
+
+des_slot_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+      tag = DES
+    }
+	has_country_shield = yes
+
+	des_rebuke_california = {
+		icon = confront_the_lombards
+		required_missions = { uta_deseret_ascendant uta_arizona_legions }
+		position = 6
+		
+		provinces_to_highlight = {
+			OR = {
+				#area = central_coast_area
+				area = san_diego_area
+				province_id = 3254
+				province_id = 3248
+				province_id = 944
+			}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					#area = central_coast_area
+					area = san_diego_area
+					province_id = 3254
+					province_id = 3248
+					province_id = 944
+				}
+			}
+			#944 = { country_or_non_sovereign_subject_holds = ROOT }
+			if = {
+				limit = {
+					exists = CAL
+				}
+				army_strength = {
+					who = CAL
+					value = 1.25
+				}
+			}
+			else_if = {
+				limit = {
+					exists = PCF
+				}
+				army_strength = {
+					who = PCF
+					value = 1.25
+				}
+			}
+			else = {
+				army_size_percentage = 0.85
+			}
+		}
+		effect = {
+			central_coast_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_valley_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige_or_monarch_power = {
+				amount = 20
+			}
+		}
+		ai_weight = {
+			factor = 500
+		}
+	}
+
+	des_climb_sierra_nevada = {
+		icon = mission_colonize_california
+		required_missions = { des_rebuke_california }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				area = central_coast_area
+				area = central_valley_area
+				province_id = 946
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = central_valley_area
+					area = central_coast_area
+					area = san_francisco_area
+				}
+			}
+			946 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = DES.allcalifornia.tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							owned_by = PCF
+							owned_by = CAL
+						}
+						OR = {
+							superregion = america_superregion
+							superregion = canada_superregion
+							superregion = central_america_superregion
+							province_group = hawaii_provincegroup
+							province_group = leeward_hawaii_provincegroup
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+		}
+			baja_california_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baja_california_sur_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			country_event = { # Californian Markets
+				id = flavorUTA.1002
+				tooltip = flavorDES.15.tt
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	des_slay_the_bear = {
+		icon = boh_humiliate_austria
+		required_missions = { des_climb_sierra_nevada }
+		position = 8
+		
+		provinces_to_highlight = {
+			OR = {
+				owned_by = CAL
+				owned_by = PCF
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				if = {
+					limit = {
+						any_province = {
+							is_core = CAL
+						}
+					}
+					NOT = { exists = CAL }
+				}
+				else_if = {
+					limit = {
+						any_province = {
+							is_core = PCF
+						}
+					}
+					NOT = { exists = PCF }
+				}
+				if = {
+					limit = {
+						exists = CAL
+					}
+					OR = {
+						CAL = { is_subject_of = ROOT }
+						AND = {
+								NOT = {
+										intermountain_west_region = {
+											owned_by = CAL
+										}
+								}
+								NOT = {
+									pacific_coast_region = {
+										owned_by = CAL
+									}
+							}
+							NOT = {
+								costa_oeste_region = {
+									owned_by = CAL
+								}
+							}
+							NOT = {
+								american_southwest_region = {
+									owned_by = CAL
+								}
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						exists = PCF
+					}
+					OR = {
+						PCF = { is_subject_of = ROOT }
+						AND = {
+								NOT = {
+										intermountain_west_region = {
+											owned_by = PCF
+										}
+								}
+								NOT = {
+									pacific_coast_region = {
+										owned_by = PCF
+									}
+							}
+							NOT = {
+								costa_oeste_region = {
+									owned_by = PCF
+								}
+						}
+						NOT = {
+							american_southwest_region = {
+								owned_by = PCF
+							}
+						}
+						}
+					}
+				}
+
+				else = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 20
+						province_group = california_provincegroup
+					}
+				}
+			}
+		}
+		effect = {
+			add_permanent_power_projection = { 
+				type = 25_permanent_power_projection
+				amount = 25 
+			}
+			add_country_modifier = {
+				name = broke_the_bear
+				duration = -1
+			}
+		}
+		ai_weight = {
+			factor = 75
+		}
+	}
+
+	des_first_temple = {
+		icon = mission_kirtland
+		required_missions = { des_continue_the_expedition }
+		position = 9
+		provinces_to_highlight = {
+			province_id = 2579 # Cuyahoga
+			OR = {
+				NOT = { religion = ROOT }
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		trigger = {
+			OR = {
+				2579 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2579 = {
+					religion = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = kirtland_pioneers_accepted_tt
+					has_country_flag = kirtland_pioneers_accepted
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = kirtland_pioneers_accepted
+			}
+				custom_tooltip = kirtland_pioneers_accepted_yes
+			}
+			else = {
+				custom_tooltip = kirtland_pioneers_accepted_no
+			}
+			tooltip = {
+				country_event = {
+					id = flavorUTA.58 # Mormons return to Kirtland
+				}
+				2579 = {
+					change_province_name = "Kirtland"
+					hidden_effect = {
+						rename_capital = "Kirtland"
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = kirtland_pioneers_accepted
+				}
+					country_event = {
+						id = flavorUTA.58 # Mormons return to Kirtland
+					}
+					2579 = {
+						change_province_name = "Kirtland"
+						hidden_effect = {
+							rename_capital = "Kirtland"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = kirtland_pioneers_rejected
+				}
+				custom_tooltip = kirtland_pioneers_rejected_yes
+			}
+			else = {
+				custom_tooltip = kirtland_pioneers_rejected_no
+			}
+			tooltip = {
+				2579 = {
+					add_core = ROOT
+					owner = {
+						reverse_add_casus_belli = {
+							type = cb_crusade
+							target = FROM
+							months = 60
+						}
+					}
+				}
+
+			}
+			if = {
+				limit = {
+					2579 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						has_country_flag = kirtland_event_flag
+					}
+				}
+				country_event = {
+					id = flavorUTA.72 # Rebuilding the First Temple
+				}
+				2579 = {
+					change_religion = ROOT
+					change_culture = ROOT
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = kirtland_pioneers_accepted }
+					}
+					2579 = {
+							add_core = ROOT
+							owner = {
+								reverse_add_casus_belli = {
+									type = cb_crusade
+									target = FROM
+									months = 60
+								}
+							}
+						}
+				}
+		}
+		}
+	}
+}
+
+des_slot_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    potential = {
+		tag = DES
+    }
+	has_country_shield = yes
+
+	des_phoenix_extinguished = {
+		icon = mission_phoenix_fall
+		required_missions = { uta_arizona_legions }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				area = baja_arizona_area
+				area = arizona_area
+				#area = gila_area
+				owned_by = ARZ
+				#owned_by = BAZ
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 936 # Phoenix
+			owns_or_non_sovereign_subject_of = 937 # Tucson
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				area = arizona_area
+			}
+			OR = {
+				NOT = { exists = ARZ }
+				ARZ = { is_subject_of = ROOT }
+			}
+		}
+		effect = {
+			set_country_flag = uta_navajo_warriors
+			custom_tooltip = uta_navajo_warriors_tt
+			add_adm_power = 100
+		}
+	}
+
+	des_past_sangre_de_cristo = {
+		icon = claim_the_borderlands
+		required_missions = { }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = denver_area
+				area = new_mexico_area
+				area = colorado_area
+				area = gila_area
+				province_id = 958
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 14
+				OR = {
+					area = denver_area
+					area = new_mexico_area
+					area = colorado_area
+					area = gila_area
+					province_id = 958
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.101
+			}
+			set_country_flag = des_apache_warriors
+			custom_tooltip = des_apache_warriors_tt
+			intermountain_west_region = {
+			limit = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+	des_rocky_mountain_empire = {
+		icon = despot_stefans_legacy
+		required_missions = { des_past_sangre_de_cristo }
+		position = 7
+		provinces_to_highlight = {
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			region = intermountain_west_region
+			culture_group = intermountain_western
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+				region = intermountain_west_region
+			}
+		}
+		effect = {
+			hidden_effect = {
+				unlock_estate_privilege = {
+					estate_privilege = estate_burghers_mountain_expansion
+				}
+			}
+			set_estate_privilege = estate_burghers_mountain_expansion
+			#set_country_flag = rocky_mountain_no_cost
+			#custom_tooltip = rocky_mountain_no_cost_tt
+			east_montana_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			montana_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		american_southwest_region = {
+			limit = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+	des_consolidate_california = {
+		icon = mission_found_havana
+		required_missions = { des_climb_sierra_nevada }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = baja_california_area
+				area = baja_california_sur_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = baja_california_area
+					area = baja_california_sur_area
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.1003
+			}
+			custom_tooltip = flavorUTA.1003.tt
+		}
+	}
+
+	des_secure_baja_california = {
+		icon = mission_develop_cordoba
+		required_missions = { des_consolidate_california }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = baja_california_area
+				area = baja_california_sur_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			baja_california_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baja_california_sur_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baja_california_provincegroup = {
+				type = all
+				NOT = {
+					nationalism = 1
+				}
+				NOT = {
+					local_autonomy = 0.1
+				}
+			}
+		}
+		effect = {
+			935 = {
+				add_latest_building = { 
+					builder = ROOT 
+					fort = yes 
+				}
+			}
+			country_event = {
+				id = flavorUTA.1004
+			}
+			custom_tooltip = pacific_baja_californian_tt2
+		}
+	}
+}
+
+des_slot_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    potential = {
+		tag = DES
+    }
+	has_country_shield = yes
+
+	des_mormon_language = {
+		icon = per_restore_the_avesta
+		required_missions = { }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				culture = south_utahn
+				culture = utahn
+				culture = nevadan
+				culture = las_vegan
+				culture = idahoan
+				culture = arizonan
+				culture = wyomingite
+				culture = coloradan
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			if = {
+				limit = {
+					any_province = {
+						culture = utahn
+					}
+				}
+				owns_all_provinces = {
+					culture = utahn
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = south_utahn
+					}
+				}
+				owns_all_provinces = {
+					culture = south_utahn
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = las_vegan
+					}
+				}
+				owns_all_provinces = {
+					culture = las_vegan
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = nevadan
+					}
+				}
+				owns_all_provinces = {
+					culture = nevadan
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = idahoan
+					}
+				}
+				owns_all_provinces = {
+					culture = idahoan
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = arizonan
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					culture = arizonan
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = wyomingite
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					culture = wyomingite
+				}
+			}
+			if = {
+				limit = {
+					any_province = {
+						culture = coloradan
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					culture = coloradan
+				}
+			}
+			else = {
+				num_accepted_cultures = 4
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					religion = mormon
+				}
+				country_event = {
+					id = flavorUTA.1000
+				}
+			}
+			custom_tooltip = DES_deseretan_culture_tt
+			change_dip = 1
+			change_adm = 1
+			add_splendor = 300
+		}
+	}
+
+	des_theodemocracy_for_the_people = {
+		icon = balance_the_estates
+		required_missions = { }
+		position = 6
+		trigger = {
+			stability = 3
+			reform_level = 6
+			monthly_adm = 10
+		}
+		effect = {
+			add_government_reform = council_of_fifty_reform
+			set_country_flag = council_of_fifty_reform_flag
+		}
+	}
+
+	des_sonora = {
+		icon = mission_arabian_fort
+		required_missions = { des_climb_sierra_nevada }
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = sonora_area
+				area = sinaloa_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mission_completed = des_consolidate_california
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = sonora_area
+					area = sinaloa_area
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = flavorUTA.1005 # Republic of Sonora
+			}
+			custom_tooltip = flavorUTA.1005.tt
+		}
+	}
+
+	des_sonora_final = {
+		icon = mission_empire
+		required_missions = { des_sonora }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				area = sonora_area
+				area = sinaloa_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sonora_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sinaloa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = sonora_to_subject_flag
+			}
+				custom_tooltip = sonora_to_subject_yes
+			}
+			else = {
+				custom_tooltip = sonora_to_subject_no
+			}
+			tooltip = {
+				if = {
+					limit = {
+						NOT = {
+							exists = LBC
+						}
+					}
+					sonora_area = {
+						add_core = ROS
+						cede_province = ROS
+					}
+					sinaloa_area = {
+						add_core = ROS
+						cede_province = ROS
+					}
+					chihuahua_area = {
+						add_permanent_claim = ROS
+					}
+				}
+				else = {
+					sonora_area = {
+						add_core = LBC
+						cede_province = LBC
+					}
+					sinaloa_area = {
+						add_core = LBC
+						cede_province = LBC
+					}
+					chihuahua_area = {
+						add_permanent_claim = ROS
+					}
+				}
+			}
+			hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						LBC = {
+							is_subject_of = ROOT
+						}
+						ROS = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+				sonora_area = {
+					if = {
+						limit = {
+							LBC = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = LBC
+						cede_province = LBC
+						remove_core = ROOT
+					}
+					else_if = {
+						limit = {
+							ROS = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = ROS
+						cede_province = ROS
+						remove_core = ROOT
+					}
+				}
+				sinaloa_area = {
+					if = {
+						limit = {
+							LBC = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = LBC
+						cede_province = LBC
+						remove_core = ROOT
+					}
+					else_if = {
+						limit = {
+							ROS = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = ROS
+						cede_province = ROS
+						remove_core = ROOT
+					}
+				}
+				chihuahua_area = {
+					if = {
+						limit = {
+							LBC = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = LBC
+						cede_province = LBC
+						remove_core = ROOT
+						add_permanent_claim = LBC
+					}
+					else_if = {
+						limit = {
+							ROS = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								has_country_flag = sonora_to_subject_flag
+							}
+						}
+						add_core = ROS
+						cede_province = ROS
+						remove_core = ROOT
+						add_permanent_claim = ROS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = sonora_to_subject_flag
+				}
+				sonora_area = {
+					owned_by = ROOT
+				}
+				sinaloa_area = {
+					owned_by = ROOT
+				}
+			}
+			custom_tooltip = sonora_direct_yes
+		}
+		else = {
+			custom_tooltip = sonora_direct_no
+		}
+		tooltip = {
+			add_adm_power = 100
+			sonora_area = {
+				change_culture = pacific_baja_californian
+			}
+			sinaloa_area = {
+				change_culture = pacific_baja_californian
+			}
+		}
+		hidden_effect = {
+			add_adm_power = 100
+			sonora_area = {
+				change_culture = pacific_baja_californian
+			}
+			sinaloa_area = {
+				change_culture = pacific_baja_californian
+			}
+		}
+		}
+	}
+}

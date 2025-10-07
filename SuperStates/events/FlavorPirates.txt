@@ -98,6 +98,7 @@ country_event = {
 	}
 
 	immediate = {
+		set_global_flag = new_providence_fired
 		hidden_effect = {
 			482 = {
 				discover_country = NSS
@@ -838,6 +839,7 @@ country_event = {
 	}
 
 	immediate = {
+		set_global_flag = port_royal_happened
 		hidden_effect = {
 			487 = {
 				discover_country = PRY
@@ -1031,6 +1033,7 @@ country_event = {
 	}
 
 	immediate = {
+		set_global_flag = tortuga_happened
 		hidden_effect = {
 			4590 = {
 				discover_country = TOR
